@@ -4,15 +4,46 @@
 #+LATEX_CLASS: mimosis
 #+SETUPFILE: setup.org
 
+* Imporve writing in org-mode
++ Add title page and table of contents
++ Link reference also when belonging to different files
+  
 * Introduction
-** Singlet Model
-#+INCLUDE: "chapters/singlet_model.org" :only-contents nil
+** The SM of Particle Physics
+<<sec:SM>>
+*** Brief historical perspective
+*** The Higgs Mechanism
+<<sec::HiggsMechanism>>
+#+INCLUDE: "chapters/higgs_mechanism.org"
 
-** Another model
+*** The building blocks
+
+** Di-Higgs processes
+<<sec::DiHiggs>>
+*** The bb\tau\tau final state
+
+** Going beyond the SM
+*** Short-comings of the SM
+<<sec::SMShortComings>>
+*** Electro-weak phase transition
+#+INCLUDE: "chapters/ew_phase_transition.org"
+
+*** Singlet Model
+<<sec::SingletModel>>
+#+INCLUDE: "chapters/singlet_model.org"
+*** Another model
+<<sec::AnotherModel>>
+
+
 * The CMS Detector
-#+INCLUDE: "chapters/cms_detector.org" :only-contents nil
+#+INCLUDE: "chapters/cms_detector.org"
+
+* HGCAL
+
+* Interference studies
+
 * Higgs Analysis
-#+INCLUDE: "chapters/bbtt.org" :only-contents nil
+#+INCLUDE: "chapters/bbtt.org"
 
 
 * Bibliography :ignore:

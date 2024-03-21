@@ -1,0 +1,12 @@
+@Explain how the non-zero value of the Higgs field that permeates the Universe breaks electro-weak symmetry (related to the EWPT section)@
+
+At low energy the potential $V$ associated to the Higgs boson field $H$ in the SM Lagrangian can be expressed as:
+
+#+NAME: eq:sm_potential
+\begin{equation}
+\frac{1}{2} m_{H}^{2 }H^{2} + \lambda_{3}vH^{3} + \frac{\lambda_{4}}{4}H^{4}
+\end{equation}
+
+\noindent Continue here.
+
+Another paragraph show [[eq:sm_potential]].
