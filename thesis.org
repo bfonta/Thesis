@@ -1,0 +1,23 @@
+#  -*- mode: org; org-latex-title-command: ""; org-latex-toc-command: "" -*-
+#+TITLE: Thesis Title
+#+AUTHOR: Bruno Alves
+#+LATEX_CLASS: mimosis
+#+SETUPFILE: setup.org
+
+* Introduction
+** Singlet Model
+#+INCLUDE: "chapters/singlet_model.org" :only-contents nil
+
+** Another model
+* The CMS Detector
+#+INCLUDE: "chapters/cms_detector.org" :only-contents nil
+* Higgs Analysis
+#+INCLUDE: "chapters/bbtt.org" :only-contents nil
+
+
+* Bibliography :ignore:
+[[bibliographystyle:unsrt]]
+[[bibliography:
+~/dot-emacs/bibliography/references/higgs.bib,
+~/dot-emacs/bibliography/references/l1.bib,
+~/dot-emacs/bibliography/references/hgcal.bib]]

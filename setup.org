@@ -1,0 +1,2 @@
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \KOMAoptions{fontsize=12pt, headings=small}

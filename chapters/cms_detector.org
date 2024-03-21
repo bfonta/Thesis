@@ -1,0 +1,11 @@
+Detector in Tables [[tab_sad]] and [[tab_sad2]]
+
+#+NAME: tab_sad
+#+CAPTION: sad
+| dsd |   |
+|-----+---|
+
+#+NAME: tab_sad2
+#+CAPTION: sad
+| dsd |   |
+|-----+---|
