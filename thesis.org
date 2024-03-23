@@ -1,10 +1,9 @@
-#  -*- mode: org; org-latex-title-command: ""; org-latex-toc-command: "" -*-
 #+TITLE: Thesis Title
 #+AUTHOR: Bruno Alves
 #+LATEX_CLASS: mimosis
 #+SETUPFILE: setup.org
 
-* Imporve writing in org-mode
+* Improve writing in org-mode :ignore:
 + Add title page and table of contents
 + Link reference also when belonging to different files
   
@@ -24,7 +23,7 @@
 
 ** Going beyond the SM
 *** Short-comings of the SM
-<<sec::SMShortComings>>
+<<sec:SMShortComings>>
 *** Electro-weak phase transition
 #+INCLUDE: "chapters/ew_phase_transition.org"
 
@@ -44,7 +43,9 @@
 
 * Higgs Analysis
 #+INCLUDE: "chapters/bbtt.org"
-
+** Samples
+*** MC Generation
+#+INCLUDE: "chapters/mc_generation.org"
 
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]

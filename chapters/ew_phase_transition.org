@@ -4,7 +4,6 @@ Only around a hundred picoseconds after the Big Bang, as the temperature of the 
 It is currently unknown how the symmetry breaking takes place.
 While the SM predicts a smooth transition, a plethora of BSM models prefers a first-order phase transition.
 
-
 @ALERT@
 
 

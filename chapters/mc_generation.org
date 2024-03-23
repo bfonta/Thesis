@@ -1,0 +1,14 @@
++ Pythia: beams, hard-scattering, parton showering and hadronisation
++ jet matching and/or merging during hadronization
++ 
+
+* Tunes
+The underlying event (UE) consists of the beam-beam remnants (BBR) and the particles that arise from multiple-parton interactions (MPI).
+The BBR are what remains after a parton is scattered out of each of the two initial beam hadrons, while the MPI are additional soft or semi-hard parton-parton scatterings that occur within the same hadron-hadron collision [[cite:&CMS_Tunes]].
+
+A set of QCD parameters is derived in different ways (WHICH ONES??) to precisely describe aspects of the UE, such as the modelling of the hadronization, the initial and final state radiation and the BBR.
+A complex fitting procedure, using data collected by CDF and CMS at different energies is used, extracting the parameters known as CMS Pythia (CP) Tunes.
+
+
+* Additional bibliography :noexport:
++ [[https://indico.cern.ch/event/816226/contributions/3606740/attachments/1947228/3230794/Talk_Tuning_MPI.pdf][Tuning]]
