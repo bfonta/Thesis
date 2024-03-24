@@ -2,11 +2,14 @@
 #+AUTHOR: Bruno Alves
 #+LATEX_CLASS: mimosis
 #+SETUPFILE: setup.org
+#+EXCLUDE_TAGS: noexport
 
-* Improve writing in org-mode :ignore:
-+ Add title page and table of contents
-+ Link reference also when belonging to different files
-  
+* ToDo :noexport:
++ [ ] Test1
++ [ ] Test2
+
+
+
 * Introduction
 ** The SM of Particle Physics
 <<sec:SM>>
@@ -20,6 +23,11 @@
 ** Di-Higgs processes
 <<sec::DiHiggs>>
 *** The bb\tau\tau final state
+
+*** Combinations
+<<sec::Combinations>>
+#+INCLUDE: "chapters/combinations.org"
+
 
 ** Going beyond the SM
 *** Short-comings of the SM
@@ -37,9 +45,12 @@
 * The CMS Detector
 #+INCLUDE: "chapters/cms_detector.org"
 
+
 * HGCAL
+<<sec:Hgcal>>
 
 * Interference studies
+
 
 * Higgs Analysis
 #+INCLUDE: "chapters/bbtt.org"
@@ -48,9 +59,11 @@
 #+INCLUDE: "chapters/mc_generation.org"
 + include an event display of 2018
 
+
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]
 [[bibliography:
 ~/dot-emacs/bibliography/references/higgs.bib,
 ~/dot-emacs/bibliography/references/l1.bib,
-~/dot-emacs/bibliography/references/hgcal.bib]]
+~/dot-emacs/bibliography/references/hgcal.bib,
+~/dot-emacs/bibliography/references/mc_generation.bib]]
