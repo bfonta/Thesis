@@ -46,6 +46,7 @@
 ** Samples
 *** MC Generation
 #+INCLUDE: "chapters/mc_generation.org"
++ include an event display of 2018
 
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]
