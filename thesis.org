@@ -4,10 +4,8 @@
 #+SETUPFILE: setup.org
 #+EXCLUDE_TAGS: noexport
 
-* ToDo :noexport:
-+ [ ] Test1
-+ [ ] Test2
-
+* ToDo [0/0] :noexport: 
++ 
 
 
 * Introduction
@@ -22,7 +20,12 @@
 
 ** Di-Higgs processes
 <<sec::DiHiggs>>
+#+INCLUDE: "chapters/dihiggs.org"
 *** The bb\tau\tau final state
+
+*** Other final states
+<<sec::Combinations>>
+#+INCLUDE: "chapters/other_final_states.org"
 
 *** Combinations
 <<sec::Combinations>>
@@ -33,6 +36,7 @@
 *** Short-comings of the SM
 <<sec:SMShortComings>>
 *** Electro-weak phase transition
+<<sec:EWPT>>
 #+INCLUDE: "chapters/ew_phase_transition.org"
 
 *** Singlet Model
@@ -48,6 +52,7 @@
 
 * HGCAL
 <<sec:Hgcal>>
+
 
 * Interference studies
 

@@ -1,0 +1,4 @@
++ The measurement of Higgs properties at the LHC are in general challenging, given the low cross-sections involved
++ $k_{\lambda}$ is one of the least constrained properties of the Higgs
++ The shape of the Higgs potential is completely determined by $m_{H}$, $v$ and the self-coupling of the Higgs (see Eq. [[eq:sm_potential]])
++ Measurements of $\lambda_{3}$ (or equivalently $k_{\lambda}$) provide a unique consistency test of the SM and also valuable information conerning the shape of the scalar potential (some consequences are discussed in Section [[sec:EWPT]])

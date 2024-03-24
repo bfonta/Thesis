@@ -2,12 +2,3 @@
 
 Check $\frac{1}{2+x}$ and $\cos(y+2)$.
 
-
-* Subsection
-
-#+NAME: eq:dasds
-\begin{equation}
-\frac{1}{k}
-\end{equation}
-
-Equation [[eq:dasds]].

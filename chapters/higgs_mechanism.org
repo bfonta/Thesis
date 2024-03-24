@@ -4,9 +4,21 @@ At low energy the potential $V$ associated to the Higgs boson field $H$ in the S
 
 #+NAME: eq:sm_potential
 \begin{equation}
-\frac{1}{2} m_{H}^{2 }H^{2} + \lambda_{3}vH^{3} + \frac{\lambda_{4}}{4}H^{4}
+\frac{1}{2}m_{H}^{2}H^{2} + \lambda_{3}vH^{3} + \frac{\lambda_{4}}{4}H^{4}
 \end{equation}
 
 \noindent Continue here.
+
+#+NAME: eq:self_coupling
+\begin{equation}
+\lambda_{3}^{\text{SM}} = \frac{m_{H}^{2}}{2v^{2}} \simeq 0.13
+\end{equation}
+
+#+NAME: eq:dihiggs_coupling_relation
+\begin{equation}
+\lambda_{4} = \lambda_{3}
+\end{equation}
+
+
 
 Another paragraph show [[eq:sm_potential]].

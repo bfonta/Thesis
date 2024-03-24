@@ -1,0 +1,34 @@
+* bbbb
+** resolved
+
+** boosted
+
+** novel techniques
++ hemisphere mixing
+* \gamma\gamma\tau\tau
++ Analysis covers non-resonant via ggF and resonant HH and HY
++ CMS non-res result: $-13 (-11) < k_{\lambda} < 18 (16)$ and $\sigma_{HH} < 930 (740) fb$ or $\sigma_{HH} < 33 (26) \sigma_{HH}^{SM}$
++ Results are obtained by performing a fit to $m_{\gamma\gamma}$ in signal-enriched categories
+  + the signal and background components of the maximum likelihood fit are analytic functions of $m_{\gamma\gamma}$
+  + the background contiuum is modelled from data using the discrete profiling method
+  + the signal is modelled from simulation
++ The signal is fitted independently for different categories and data taking years with a double Crystal Ball function
++ The background also includes a $H\rightarrow \gamma\gamma$ contribution which is modelled just like the signal
++ The discrete profiling method considers multiple analytical functions, implementing by construction a systematic for the choice of the analytic function used
+  + the method minimizes the likelihood to choose a function for each category, also penalizing functions with many parameters
++ The dominant backgrounds are irreducible prompt $\gamma\gamma$ + jets and reducible $\gamma$ + jets (jets are misidentified as photons or $\tau$ leptons)
+  + sub-dominant backgrounds are taken from simulation
++ Multiple selection variables are used, including a mass window cut on the di-photon mass between 100 and 180 GeV
++ The taus are reconstructed in all possible channels
+  + a DY veto is applied: reject events compatible with $Z\rightarrow ll$ or $Z\rightarrow ll\gamma$ with a mass window cut around $m_{Z}$
++ BDT is used for non-res, using as input input features related to the events' kinematical properties
+  + It is $m_{\gamma\gamma}$-independent at first order, to avoid sculpting scultping the di-photon mass leading to fake excesses
++ Sequential boundaries are applied to the BDT's output to create categories of different signal purity; the splitting maximizes signal sensitivity
+  
+  
+* Additional bilbiography :noexport:
+** 4b novel techniques
++ [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-22-011&tp=an&id=2605&ancode=HIG-22-011][HIG-22-011]]
+** \gamma\gamma\tau\tau
++ HIG-22-012
++ [[https://www.stat.cmu.edu/stamps/files/nicholas_wardle_slides.pdf][The discrete profiling method]] (slides)
