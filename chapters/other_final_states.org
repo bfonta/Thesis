@@ -1,10 +1,46 @@
 * bbbb
-** resolved
+** Resolved
 
-** boosted
+** Boosted
 
-** novel techniques
-+ hemisphere mixing
+** ZZ, ZH and future techniques
++ The QCD multijet background completely dominates the 4b final state (>90%), but is challenging to model with simulation: it is not computationally feasible to generate large enough samples with enough precision in all corners of the phase-space
+  + the remaning background is mostly $t\bar{t}$
++ The development of a high-dimensional data-driven background model is thus necessary
++ The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have larger cross-sections, 31 and 8 times larger than HH, respectively.
++ Data-driven background models are often derived using the so-called "ABCD" method (just like for the $bb\tau\tau$ analysis later described in Section [[sec::bbtautau]]). The background is derived in a signal-free region, and thus requires an extrapolation to a different region of the phase-space. In order to validate the extrapolation, a validation region is usually employed. However, the definition of an additional region will necessarily deplete the signal region. Additionally, we cannot directly test the extrapolation, since the validation region will differ from the signal region inasmuch as it will not be signal-enriched. New methods to validate the background are thus welcome.
+
+*** Modelling the QCD background
++ The background model is defined using a sample with similar selections as in the analysis' signal region, but dropping one of the b-tag requirements on one of the four b-jet candidates.
++ Statistics are increased by lowering the b-tag WP used on the three jets
++ The analysis four-jet background is modelled by weighting the three-jet background with two sets of weights:
+  1. jet combinatorial model: account for additional jet activity
+  2. kinematic weighting: correct kinematic differences
++ The weights are derived in a di-jet mass sideband
+  
+*** Hemisphere Mixing
++ The existence of synthetic datasets enables to fully validate the extrapolation to a signal-enriched region, and enables to estimate the variance of the background prediction coming from the finite dataset size
++ The method first creates a library of hemispheres, by dividing jets in four-b-tagged based on a plane orthogonal to the transverse thrust axis: jets on either side are assigned to one of the two hemispheres
++ A set of variables is calculated for each hemisphere: mass, longitudinal momentum and transverse momentums perpendicular and parallel to the thrust axis
++ A second pass on data assigns a pair to each hemisphere by minimizing the distance of two hemisphere in terms of a normalized sum of the hemisphere summary variables
++ A check ensures the two hemispheres belong to different events
++ The nearest-neighbour hemispheres are rotated in $\phi$ to match the direction of the tranvserse thrust axis of the input event
++ *Improvement 1*: consider the 3-tagged dataset for the second pass, ensuring more statistics and avoid a possible bias caused by the presence of signal events when considering the 4-tagged dataset
++ *Improvement 2*: avoid mixing $t\bar{t}$ hemispheres with QCD hemispheres: use the HCR architecture to calculate the probability for an event to be multijet
+
+#+NAME: fig:hcr_architecture
+#+ATTR_LATEX: :width 1.\textwidth
+#+CAPTION: HCR architecture.
+[[~/org/PhD/Thesis/figures/HCR_architecture.pdf]]
+
+This is a reference [[fig:hcr_architecture]].
+
+*** Hierarchical combinatoric residual network (HCR)
++ Used as classifier for the $ZH/ZZ\rightarrow bbbb$ analysis
++ Used to define the background model
++ Used to construct the synthetic datasets
+
+
 * \gamma\gamma\tau\tau
 + Analysis covers non-resonant via ggF and resonant HH and HY
 + CMS non-res result: $-13 (-11) < k_{\lambda} < 18 (16)$ and $\sigma_{HH} < 930 (740) fb$ or $\sigma_{HH} < 33 (26) \sigma_{HH}^{SM}$
@@ -26,7 +62,7 @@
 + Sequential boundaries are applied to the BDT's output to create categories of different signal purity; the splitting maximizes signal sensitivity
   
   
-* Additional bilbiography :noexport:
+* Additional bibliography :noexport:
 ** 4b novel techniques
 + [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-22-011&tp=an&id=2605&ancode=HIG-22-011][HIG-22-011]]
 ** \gamma\gamma\tau\tau

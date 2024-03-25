@@ -1,0 +1,3 @@
+* Additional bibliography :noexport:
+** bbH
++ [[https://cms.cern/news/missing-piece-higgs-production][CMS News]]

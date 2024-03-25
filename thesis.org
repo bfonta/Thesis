@@ -21,6 +21,8 @@
 ** Di-Higgs processes
 <<sec::DiHiggs>>
 #+INCLUDE: "chapters/dihiggs.org"
+*** Production
+#+INCLUDE: "chapters/production.org"
 *** The bb\tau\tau final state
 
 *** Other final states
@@ -55,15 +57,16 @@
 
 
 * Interference studies
+#+INCLUDE: "chapters/interference.org"
 
-
-* Higgs Analysis
+* The analysis of double Higgs decay to two b quarks and two tau leptons
 #+INCLUDE: "chapters/bbtt.org"
+<<sec::bbtautau>>
 ** Samples
 *** MC Generation
 #+INCLUDE: "chapters/mc_generation.org"
 + include an event display of 2018
-
+  
 
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]
