@@ -10,36 +10,51 @@
 + The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have larger cross-sections, 31 and 8 times larger than HH, respectively.
 + Data-driven background models are often derived using the so-called "ABCD" method (just like for the $bb\tau\tau$ analysis later described in Section [[sec::bbtautau]]). The background is derived in a signal-free region, and thus requires an extrapolation to a different region of the phase-space. In order to validate the extrapolation, a validation region is usually employed. However, the definition of an additional region will necessarily deplete the signal region. Additionally, we cannot directly test the extrapolation, since the validation region will differ from the signal region inasmuch as it will not be signal-enriched. New methods to validate the background are thus welcome.
 
-*** Modelling the QCD background
-+ The background model is defined using a sample with similar selections as in the analysis' signal region, but dropping one of the b-tag requirements on one of the four b-jet candidates.
-+ Statistics are increased by lowering the b-tag WP used on the three jets
-+ The analysis four-jet background is modelled by weighting the three-jet background with two sets of weights:
-  1. jet combinatorial model: account for additional jet activity
-  2. kinematic weighting: correct kinematic differences
-+ The weights are derived in a di-jet mass sideband
-  
-*** Hemisphere Mixing
-+ The existence of synthetic datasets enables to fully validate the extrapolation to a signal-enriched region, and enables to estimate the variance of the background prediction coming from the finite dataset size
-+ The method first creates a library of hemispheres, by dividing jets in four-b-tagged based on a plane orthogonal to the transverse thrust axis: jets on either side are assigned to one of the two hemispheres
-+ A set of variables is calculated for each hemisphere: mass, longitudinal momentum and transverse momentums perpendicular and parallel to the thrust axis
-+ A second pass on data assigns a pair to each hemisphere by minimizing the distance of two hemisphere in terms of a normalized sum of the hemisphere summary variables
-+ A check ensures the two hemispheres belong to different events
-+ The nearest-neighbour hemispheres are rotated in $\phi$ to match the direction of the tranvserse thrust axis of the input event
-+ *Improvement 1*: consider the 3-tagged dataset for the second pass, ensuring more statistics and avoid a possible bias caused by the presence of signal events when considering the 4-tagged dataset
-+ *Improvement 2*: avoid mixing $t\bar{t}$ hemispheres with QCD hemispheres: use the HCR architecture to calculate the probability for an event to be multijet
+*** Hierarchical combinatoric residual network (HCR)
++ Used as classifier for the $ZH/ZZ\rightarrow bbbb$ analysis
++ Used to define the background model
++ Used to construct the synthetic datasets
 
 #+NAME: fig:hcr_architecture
 #+ATTR_LATEX: :width 1.\textwidth
 #+CAPTION: HCR architecture.
 [[~/org/PhD/Thesis/figures/HCR_architecture.pdf]]
 
-This is a reference [[fig:hcr_architecture]].
+The architecture (Fig. [[fig:hcr_architecture]]) comprises a series of convolutions and residual connections
 
-*** Hierarchical combinatoric residual network (HCR)
-+ Used as classifier for the $ZH/ZZ\rightarrow bbbb$ analysis
-+ Used to define the background model
-+ Used to construct the synthetic datasets
+*** Modelling the QCD background
++ The background model is defined using a sample with similar selections as in the analysis' signal region, but dropping one of the b-tag requirements on one of the four b-jet candidates.
++ Statistics are increased by lowering the b-tag WP used on the three jets
++ The analysis four-jet background is modelled by weighting the three-jet background with two sets of weights:
+  1. jet combinatorial model: account for additional jet activity. The parameters of the model (Eq. 4 in HIG-22-011) are determined by a combined fit to the jet and b-tagged het multiplicity distributions in the sidebands
+  2. kinematic weighting: correct kinematic differences
++ The weights are derived in a di-jet mass sideband
+  
+*** Hemisphere Mixing
++ The existence of synthetic datasets enables to fully validate the extrapolation to a signal-enriched region, and enables to estimate the variance of the background prediction coming from the finite dataset size
++ The method first creates a library of hemispheres, by dividing jets in four-b-tagged based on a plane orthogonal to the transverse thrust axis: jets on either side are assigned to one of the two hemispheres
+  + The thrust axis is defined as the axis on which the sum of the absolute values of the projections of the pT of the jets is maximal
++ A set of variables is calculated for each hemisphere: mass, longitudinal momentum and transverse momentums perpendicular and parallel to the thrust axis
++ A second pass on data assigns a pair to each hemisphere by minimizing the distance of two hemisphere in terms of a normalized sum of the hemisphere summary variables
++ A check ensures the two hemispheres belong to different events
++ The nearest-neighbour hemispheres are rotated in $\phi$ to match the direction of the tranvserse thrust axis of the input event
++ *Improvement 1*: consider the 3-tagged dataset for the second pass, ensuring more statistics and avoid a possible bias caused by the presence of signal events when considering the 4-tagged dataset
++ *Improvement 2*: avoid mixing $t\bar{t}$ hemispheres with QCD hemispheres: use the HCR architecture to calculate the probability P(M) for an event to be multijet. This is done event-by-event. FOr each event, a random number X is generated between 0 and 1. If X > P(M) the event is rejected.
++ For the validation of the background model, we have to ensure the size of the synthetic dataset is comparable to the one used for the model. The hemisphere dataset is then sub-samples, and 15 separate mixed models are created, given the available statistics.
++ *Systematics:* The 15 models are all used to derive the systematic uncertainties of the background modelling in three steps:
+  1. Differences between each mixed model, arising from limited statistics, are quantified by using their average
+  2. Compare background model with mixed models in the signal region
+  3. Check if a spurious signal can be mimicked by the background model, by adding an unconstrained signal template to the fit and comparing it with the background-only fit. The two are found to be in agreement, and no significant improvement of the model fit is observed.
 
+*** Final fit
++ The final fit is validated using the synthetic datasets, without statistical fluctuations, nad ysing one of the mixed models as the four-tag data. Systematics behaved as expected and the result was compatible with a zero signal strength
+
+*** Projections
++ Four projection scenarios are considered for the evolution of background uncertainties
+  + constant background uncertainties
+  + scaling variance terms by $1/\sqrt{\mathcal{L}}$ while keeping the extrapolation uncertainty constant
+  + naive $1/\sqrt{\mathcal{L}}$ scaling of the limits
+  + no background systematics
 
 * \gamma\gamma\tau\tau
 + Analysis covers non-resonant via ggF and resonant HH and HY
@@ -66,5 +81,5 @@ This is a reference [[fig:hcr_architecture]].
 ** 4b novel techniques
 + [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-22-011&tp=an&id=2605&ancode=HIG-22-011][HIG-22-011]]
 ** \gamma\gamma\tau\tau
-+ HIG-22-012
++ HIG-22-012 ([[https://cds.cern.ch/record/2893031?ln=en][CDS]])
 + [[https://www.stat.cmu.edu/stamps/files/nicholas_wardle_slides.pdf][The discrete profiling method]] (slides)
