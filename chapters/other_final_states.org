@@ -1,6 +1,6 @@
 * bbbb
 ** Resolved
-
++ 
 ** Boosted
 
 ** ZZ, ZH and future techniques
@@ -13,14 +13,14 @@
 *** Hierarchical combinatoric residual network (HCR)
 + Used as classifier for the $ZH/ZZ\rightarrow bbbb$ analysis
 + Used to define the background model
-+ Used to construct the synthetic datasets
++ Used to remove the ttbar background from the synthetic datasets (see "Improvement #2" below)
 
-#+NAME: fig:hcr_architecture
-#+ATTR_LATEX: :width 1.\textwidth
-#+CAPTION: HCR architecture.
-[[~/org/PhD/Thesis/figures/HCR_architecture.pdf]]
+# #+NAME: fig:hcr_architecture
+# #+ATTR_LATEX: :width 1.\textwidth
+# #+CAPTION: HCR architecture.
+# [[~/org/PhD/Thesis/figures/HCR_architecture.pdf]]
 
-The architecture (Fig. [[fig:hcr_architecture]]) comprises a series of convolutions and residual connections
+The architecture comprises a series of convolutions and residual connections
 
 *** Modelling the QCD background
 + The background model is defined using a sample with similar selections as in the analysis' signal region, but dropping one of the b-tag requirements on one of the four b-jet candidates.
@@ -38,7 +38,7 @@ The architecture (Fig. [[fig:hcr_architecture]]) comprises a series of convoluti
 + A second pass on data assigns a pair to each hemisphere by minimizing the distance of two hemisphere in terms of a normalized sum of the hemisphere summary variables
 + A check ensures the two hemispheres belong to different events
 + The nearest-neighbour hemispheres are rotated in $\phi$ to match the direction of the tranvserse thrust axis of the input event
-+ *Improvement 1*: consider the 3-tagged dataset for the second pass, ensuring more statistics and avoid a possible bias caused by the presence of signal events when considering the 4-tagged dataset
++ *Improvement 1*: consider the 3-tagged dataset for the second pass (instead of the 4-tagged dataset), ensuring more statistics and avoid a possible bias caused by the presence of signal events when considering the 4-tagged dataset
 + *Improvement 2*: avoid mixing $t\bar{t}$ hemispheres with QCD hemispheres: use the HCR architecture to calculate the probability P(M) for an event to be multijet. This is done event-by-event. FOr each event, a random number X is generated between 0 and 1. If X > P(M) the event is rejected.
 + For the validation of the background model, we have to ensure the size of the synthetic dataset is comparable to the one used for the model. The hemisphere dataset is then sub-samples, and 15 separate mixed models are created, given the available statistics.
 + *Systematics:* The 15 models are all used to derive the systematic uncertainties of the background modelling in three steps:
@@ -47,7 +47,7 @@ The architecture (Fig. [[fig:hcr_architecture]]) comprises a series of convoluti
   3. Check if a spurious signal can be mimicked by the background model, by adding an unconstrained signal template to the fit and comparing it with the background-only fit. The two are found to be in agreement, and no significant improvement of the model fit is observed.
 
 *** Final fit
-+ The final fit is validated using the synthetic datasets, without statistical fluctuations, nad ysing one of the mixed models as the four-tag data. Systematics behaved as expected and the result was compatible with a zero signal strength
++ The final fit is validated using the synthetic datasets, without statistical fluctuations, and using one of the mixed models as the four-tag data. Systematics behaved as expected and the result was compatible with a zero signal strength
 
 *** Projections
 + Four projection scenarios are considered for the evolution of background uncertainties
@@ -79,7 +79,8 @@ The architecture (Fig. [[fig:hcr_architecture]]) comprises a series of convoluti
   
 * Additional bibliography :noexport:
 ** 4b novel techniques
-+ [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-22-011&tp=an&id=2605&ancode=HIG-22-011][HIG-22-011]]
++ [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-20-005&tp=an&id=2316&ancode=HIG-20-005][HIG-20-005]] (4b resolved)
++ [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-22-011&tp=an&id=2605&ancode=HIG-22-011][HIG-22-011]] (ZZ/ZH->4b)
 ** \gamma\gamma\tau\tau
 + HIG-22-012 ([[https://cds.cern.ch/record/2893031?ln=en][CDS]])
 + [[https://www.stat.cmu.edu/stamps/files/nicholas_wardle_slides.pdf][The discrete profiling method]] (slides)
