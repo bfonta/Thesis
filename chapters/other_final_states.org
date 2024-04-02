@@ -1,9 +1,10 @@
 * bbbb
 ** Resolved
-+ 
+
 ** Boosted
 
 ** ZZ, ZH and future techniques
++ QCD simulations lack of precision and statistics for a robust bkg estimate, therefore a data-driven background modeling is needed
 + The QCD multijet background completely dominates the 4b final state (>90%), but is challenging to model with simulation: it is not computationally feasible to generate large enough samples with enough precision in all corners of the phase-space
   + the remaning background is mostly $t\bar{t}$
 + The development of a high-dimensional data-driven background model is thus necessary
@@ -56,6 +57,7 @@ The architecture comprises a series of convolutions and residual connections
   + naive $1/\sqrt{\mathcal{L}}$ scaling of the limits
   + no background systematics
 
+
 * \gamma\gamma\tau\tau
 + Analysis covers non-resonant via ggF and resonant HH and HY
 + CMS non-res result: $-13 (-11) < k_{\lambda} < 18 (16)$ and $\sigma_{HH} < 930 (740) fb$ or $\sigma_{HH} < 33 (26) \sigma_{HH}^{SM}$
@@ -81,6 +83,7 @@ The architecture comprises a series of convolutions and residual connections
 ** 4b novel techniques
 + [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-20-005&tp=an&id=2316&ancode=HIG-20-005][HIG-20-005]] (4b resolved)
 + [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-22-011&tp=an&id=2605&ancode=HIG-22-011][HIG-22-011]] (ZZ/ZH->4b)
+  + [[https://indico.cern.ch/event/1275872/][DeepDive QCD modelling]]
 ** \gamma\gamma\tau\tau
 + HIG-22-012 ([[https://cds.cern.ch/record/2893031?ln=en][CDS]])
 + [[https://www.stat.cmu.edu/stamps/files/nicholas_wardle_slides.pdf][The discrete profiling method]] (slides)

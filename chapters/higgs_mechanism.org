@@ -11,7 +11,7 @@ At low energy the potential $V$ associated to the Higgs boson field $H$ in the S
 
 #+NAME: eq:self_coupling
 \begin{equation}
-\lambda_{3}^{\text{SM}} = \frac{m_{H}^{2}}{2v^{2}} \simeq 0.13
+\lambda_{HHH}^{\text{SM}} = \frac{m_{H}^{2}}{2v^{2}} \simeq 0.13
 \end{equation}
 
 #+NAME: eq:dihiggs_coupling_relation
@@ -22,3 +22,11 @@ At low energy the potential $V$ associated to the Higgs boson field $H$ in the S
 
 
 Another paragraph show [[eq:sm_potential]].
+
+
+
+* Additional bibliography :noexport:
++ [[https://www-nature-com.ezproxy.cern.ch/articles/s42254-021-00341-2][Higgs prospects review]]
++ [[https://journals.aps.org/prd/pdf/10.1103/PhysRevD.101.075023][Determining the shape of the Higgs potential at future colliders]]
++ [[https://journals.aps.org/prd/pdf/10.1103/PhysRevD.97.075008][Probing baryogenesis through the Higgs boson self-coupling]]
++ [[https://link.springer.com/article/10.1140/epjh/s13129-023-00053-4][The end of the particle era]]
