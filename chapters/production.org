@@ -1,3 +1,20 @@
+
+#+NAME: fig:hcr_architecture
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Branching fractions for the decay of a HH pair to a selected group of final states indicated on the top and left of t The three decay channels currently showcasing the highest sensitivity ("silver bullets") are indicated in dashed gray. No single channel dominates the sensitivity of di-Higgs combinations.
+[[~/org/PhD/Thesis/figures/HH_production_diagram.pdf]]
+
+#+NAME: fig:HH_prod_energy
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: HH production cross section as a function of the center of mass energy for the six largest HH production channels at /pp/ colliders. The thickness of the lines corresponds to the scale and PDF uncertainties added linearly. Gluon fusion dominates for the entire energy range. The figure is taken from [[cite:&HH_xsec_running]].
+[[~/org/PhD/Thesis/figures/HH_production_energy.pdf]]
+
+#+NAME: fig:HH_prod_kl
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: HH production cross section as a function of the coupling modifier $\klrat$ for several production mechanisms. The dashed and solid lines denote respectively the LO and NLO predictions and the bands indicate the PDF and scale uncertainties added linearly. The figure is taken from [[cite:&HH_xsec_running]].
+[[~/org/PhD/Thesis/figures/HH_production_kl.pdf]]
+
+
 * Additional bibliography :noexport:
 ** bbH
 + [[https://cms.cern/news/missing-piece-higgs-production][CMS News]]

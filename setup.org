@@ -4,3 +4,12 @@
 
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{margin=.5in}
+
+#+LATEX_HEADER: \usepackage[nolist,nohyperlinks]{acronym}
+
+#+LATEX_HEADER: \newcommand{\kl}{k_{\lambda}}
+#+LATEX_HEADER: \newcommand{\klc}{\lambda_{\text{HHH}}}
+#+LATEX_HEADER: \newcommand{\kvv}{k_{\text{2V}}}
+#+LATEX_HEADER: \newcommand{\klrat}{k_{\lambda} = \lambda_{\text{HHH}} / \lambda_{\text{HHH}}^{\text{SM}}}
+#+LATEX_HEADER: \newcommand{\xshh}{\sigma_{\text{HH}}}
+#+LATEX_HEADER: \newcommand{\xshhsm}{\sigma_{\text{HH}}^{\text{SM}}}
