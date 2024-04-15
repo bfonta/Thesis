@@ -8,6 +8,26 @@
 + Measurements of $\lambda_{3}$ (or equivalently $k_{\lambda}$) provide a unique consistency test of the SM and also valuable information concerning the shape of the scalar potential (some consequences are discussed in Section [[sec:EWPT]])
 + The most up-to-date Run2 HH combination constrains the observed (expected) HH cross-section to $\xshh < 3.4 (2.5) \xshhsm$, where the sensitivity is dominated by the $4b$, $bb\tau\tau$ and $bb\gamma\gamma$ channels. The limit is also interpreted as a function of the $\kl$ and $\k2v$ coupling modifiers, measuring $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively. Importantly, the latter result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
 
+#+NAME: fig:H_production_diagrams
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Feynman diagrams for the leading Higgs boson production processes. /a)/ gluon fusion /b)/ \ac{VBF} /c)/ associated production with a W or Z (V) boson /d)/ associated production with a top or bottom quark pair /e)/ associated production with a single top quark. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/H_production_diagrams.pdf]]
+
+#+NAME: fig:HH_decay_diagrams
+#+ATTR_LATEX: :width .7\textwidth
+#+CAPTION: Feynman diagrams for the leading Higgs boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ $Z\gamma$. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/H_decay_diagrams.pdf]]
+
+# #+NAME: fig:BSM_production_diagrams
+# #+ATTR_LATEX: :width .5\textwidth
+# #+CAPTION: Feynman diagrams for the leading BSM HH pair production processes introduced by the \ac{EFT} approach. Three new couplings are thus introduced: $c_{2}$, $c_{2g}$ and $c_{2}$. /k)/ gluon fusion HH ("triangle") /l)/ gluon-fusion HH ("box") /m,n,o)/ \ac{VBF} HH.
+# [[~/org/PhD/Thesis/figures/BSM_HH_production_diagrams.pdf]]
+
+#+NAME: fig:HH_production_diagrams
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Feynman diagrams for the leading H boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ $Z\gamma$. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/HH_production_diagrams.pdf]]
+
 #+NAME: fig:HH_nonres_comb_xsec
 #+ATTR_LATEX: :width .9\textwidth
 #+CAPTION: Upper limits at 95% confidence level on the SM signal strength $\mu = \xshh / \xshhsm$. The inner (green) band and the outer (yellow) bands indicate the regions containing 68% and 95%, respectively, of the limits on $\mu$ expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Figure taken from [[cite:&summary_hig_twiki]].
@@ -46,8 +66,8 @@ Test acronym \ac{PU}!!!
 + discuss coupling modifiers
 + deviations may lead to diffs. in HH production and kinematics
 + small SM HH cross-section because of the interference between the triangle nad box diagrams
-
-*** Effective Field Theories  
+  
+*** Effective Field Theories
 + Probe effects from resonances with very high mass at lower energy scales
 + BSM effects on ggF HH production can be studied
   + through EFT model with three new couplings
@@ -56,4 +76,6 @@ Test acronym \ac{PU}!!!
   + based on test statistic measuring kinematics’ similarities
   + allow extrapolation between different points
     
+
+
 ** Resonant2
