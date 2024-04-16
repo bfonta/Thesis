@@ -14,6 +14,19 @@
 #+CAPTION: HH production cross section as a function of the coupling modifier $\klrat$ for several production mechanisms. The dashed and solid lines denote respectively the LO and NLO predictions and the bands indicate the PDF and scale uncertainties added linearly. The figure is taken from [[cite:&HH_xsec_running]].
 [[~/org/PhD/Thesis/figures/HH_production_kl.pdf]]
 
+#+NAME: tab:HH_production_xsec
+#+CAPTION: NNLL matched to NNLO cross sections for gg → hh with a central scale μ0 = Mhh/2 with $\mh = 125.09 \GeV$ computed in the HEFT approximation. The uncertainties from top quark mass effects are not included in this table. Uncertainties are evaluated using the PDF4LHC recommendation and are based on the
+| $\sqrt{s}$ | $\sigma_{\text{NNLO FTapprox}}$ |
+|------------+-------------------------|
+|          7 |                   6.572 |
+|          8 |                   9.441 |
+|         13 |                   31.05 |
+|       13.6 |                   34.43 |
+|         14 |                   36.69 |
+|         27 |                   139.9 |
+|        100 |                    1224 |
+|            |                         |
+
 
 * Additional bibliography :noexport:
 ** bbH

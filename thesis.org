@@ -2,6 +2,7 @@
 #+AUTHOR: Bruno Alves
 #+LATEX_CLASS: mimosis
 #+SETUPFILE: setup.org
+#+SETUPFILE: definitions.org
 #+EXCLUDE_TAGS: noexport
 
 #+LATEX: \input{acro_list}

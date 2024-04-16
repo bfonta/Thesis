@@ -1,12 +1,26 @@
 * Motivation for di-Higgs searches
+In the SM, the Higgs self-coupling is uniquely determined by the structure of the scalar potential in [[eq:sm_potential]].
+Experimentally measuring $\klc$ and $\klfour$ is thus a crucial test of the mechanism of electroweak symmetry breaking [[cite:&deFlorian:2227475]].
+A direct measurement of $\klc$ requires double Higgs boson production while $\klfour$ is first probed in the production of 3 Higgs bosons.
+
+The phenomenology of multi-Higgs boson final states will provide complementary information to that found from single Higgs physics at the LHC.
+Due to the generally small inclusive cross sections and a difficult signal vs. background discrimination, the best motivated multi-Higgs final states at the \ac{LHC} are Higgs boson pair final states, of which gluon fusion is the dominant production mode.
+
+Many models of physics beyond the Standard Model with \ac{SM}-compatible single Higgs boson signal strengths can exhibit a di-Higgs phenomenology vastly different from the \ac{SM} expectation.
+In this sense, a successful discovery of Higgs boson pair production at the LHC and the subsequent measurement of potential deviations from the \ac{SM} constitute an important avenue in the search for physics beyond the \ac{SM}.
+
+To facilitate such a measurement, it is crucial to establish the Higgs boson pair production cross section in the \ac{SM} to the best theoretical accuracy possible and to provide \ac{BSM} benchmarks that reflect the phenomenology of Higgs boson pairs at the LHC in a consistent and concise fashion.
+
+Both the \ac{CMS} and the \ac{ATLAS} experiments at the \ac{LHC} are involved in a comprehensive study of diHiggs processes.
+
 + The measurement of Higgs properties at the LHC are in general challenging, given the low cross-sections involved
 + The production of Higgs boson pairs (HH) at the LHC is the main handle for the measurement of the Higgs boson interaction with itself and is thus a fundamental test of the Standard Model theory as well as for determining the Higgs potential.
 
 ** Non-resonant
 + $k_{\lambda}$ is one of the least constrained properties of the Higgs
-+ The shape of the Higgs potential is completely determined by $m_{H}$, $v$ and the self-coupling of the Higgs (see Eq. [[eq:sm_potential]])
++ The shape of the Higgs potential is completely determined by $\mh_{}$, $v$ and the self-coupling of the Higgs (see [[eq:sm_potential]])
 + Measurements of $\lambda_{3}$ (or equivalently $k_{\lambda}$) provide a unique consistency test of the SM and also valuable information concerning the shape of the scalar potential (some consequences are discussed in Section [[sec:EWPT]])
-+ The most up-to-date Run2 HH combination constrains the observed (expected) HH cross-section to $\xshh < 3.4 (2.5) \xshhsm$, where the sensitivity is dominated by the $4b$, $bb\tau\tau$ and $bb\gamma\gamma$ channels. The limit is also interpreted as a function of the $\kl$ and $\k2v$ coupling modifiers, measuring $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively. Importantly, the latter result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
++ The most up-to-date Run2 HH combination constrains the observed (expected) HH cross-section to $\xshh < 3.4\;(2.5)\;\xshhsm$, where the sensitivity is dominated by the $4b$, $bb\tau\tau$ and $bb\gamma\gamma$ channels. The limit is also interpreted as a function of the $\kl$ and $\k2v$ coupling modifiers, measuring $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively. Importantly, the latter result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
 
 #+NAME: fig:H_production_diagrams
 #+ATTR_LATEX: :width .9\textwidth
@@ -14,32 +28,32 @@
 [[~/org/PhD/Thesis/figures/H_production_diagrams.pdf]]
 
 #+NAME: fig:HH_decay_diagrams
-#+ATTR_LATEX: :width .7\textwidth
+#+ATTR_LATEX: :width .6\textwidth
 #+CAPTION: Feynman diagrams for the leading Higgs boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ $Z\gamma$. Taken from [[cite:&higgs_10_years]].
 [[~/org/PhD/Thesis/figures/H_decay_diagrams.pdf]]
 
 # #+NAME: fig:BSM_production_diagrams
 # #+ATTR_LATEX: :width .5\textwidth
-# #+CAPTION: Feynman diagrams for the leading BSM HH pair production processes introduced by the \ac{EFT} approach. Three new couplings are thus introduced: $c_{2}$, $c_{2g}$ and $c_{2}$. /k)/ gluon fusion HH ("triangle") /l)/ gluon-fusion HH ("box") /m,n,o)/ \ac{VBF} HH.
+# #+CAPTION: Feynman diagrams for the leading \ac{BSM} HH pair production processes introduced by the \ac{EFT} approach. Three new couplings are thus introduced: $c_{2}$, $c_{2g}$ and $c_{2}$. /k)/ gluon fusion HH ("triangle") /l)/ gluon-fusion HH ("box") /m,n,o)/ \ac{VBF} HH.
 # [[~/org/PhD/Thesis/figures/BSM_HH_production_diagrams.pdf]]
 
 #+NAME: fig:HH_production_diagrams
 #+ATTR_LATEX: :width .9\textwidth
-#+CAPTION: Feynman diagrams for the leading H boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ $Z\gamma$. Taken from [[cite:&higgs_10_years]].
+#+CAPTION: Feynman diagrams for the leading H boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ Z$\gamma$. Taken from [[cite:&higgs_10_years]].
 [[~/org/PhD/Thesis/figures/HH_production_diagrams.pdf]]
 
 #+NAME: fig:HH_nonres_comb_xsec
-#+ATTR_LATEX: :width .9\textwidth
+#+ATTR_LATEX: :width .8\textwidth
 #+CAPTION: Upper limits at 95% confidence level on the SM signal strength $\mu = \xshh / \xshhsm$. The inner (green) band and the outer (yellow) bands indicate the regions containing 68% and 95%, respectively, of the limits on $\mu$ expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Figure taken from [[cite:&summary_hig_twiki]].
 [[~/org/PhD/Thesis/figures/limits_HH_SM_Mar2023.pdf]]
 
 #+NAME: fig:HH_nonres_comb_kl
-#+ATTR_LATEX: :width .9\textwidth
+#+ATTR_LATEX: :width .85\textwidth
 #+CAPTION: 95% confidence intervals on $\kl$ superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval. The quoted expected upper limits are evaluated with the postfit values of the uncertainties.
 [[~/org/PhD/Thesis/figures/exclusion_kl_Mar2023.pdf]]
 
 #+NAME: fig:HH_nonres_comb_c2v
-#+ATTR_LATEX: :width .9\textwidth
+#+ATTR_LATEX: :width .85\textwidth
 #+CAPTION: 95% confidence intervals on $\kvv$ superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval.
 [[~/org/PhD/Thesis/figures/exclusion_C2V_Mar2023.pdf]]
 
@@ -53,26 +67,23 @@
 #+CAPTION: Combined expected and observed 95% CL upper limits on the HH production cross-section for different values of $\kvv$, assuming the SM values for the modifiers of Higgs boson couplings to top quarks and vector bosons. The green and yellow bands represent the 1$\sigma$ and 2$\sigma$ extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross-section (its 1$\sigma$ uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95% CL. Taken from [[cite:&higgs_10_years]].
 [[~/org/PhD/Thesis/figures/scan_k2v_nature.pdf]]
 
-Test acronym \ac{PU}!!!
-
-\ac{PU}
 
 *** Measurement of the Higgs boson self-interaction
 + SM closure
 + can explain baryogenesis
 + vacuum stability
 
-*** Test BSM w/ anomalous couplings
+*** Test \ac{BSM} w/ anomalous couplings
 + discuss coupling modifiers
 + deviations may lead to diffs. in HH production and kinematics
 + small SM HH cross-section because of the interference between the triangle nad box diagrams
   
 *** Effective Field Theories
 + Probe effects from resonances with very high mass at lower energy scales
-+ BSM effects on ggF HH production can be studied
++ \ac{BSM} effects on ggF HH production can be studied
   + through EFT model with three new couplings
 
-+ Explore sensitivity to BSM EFT couplings with EFT benchmark points
++ Explore sensitivity to \ac{BSM} \ac{EFT} couplings with \ac{EFT} benchmark points
   + based on test statistic measuring kinematics’ similarities
   + allow extrapolation between different points
     

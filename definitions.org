@@ -1,0 +1,8 @@
+#+LATEX_HEADER: \newcommand{\klc}{\lambda_{\text{HHH}}}
+#+LATEX_HEADER: \newcommand{\klfour}{\lambda_{\text{HHHH}}}
+#+LATEX_HEADER: \newcommand{\klrat}{k_{\lambda} = \lambda_{\text{HHH}} / \lambda_{\text{HHH}}^{\text{SM}}}
+#+LATEX_HEADER: \newcommand{\kl}{k_{\lambda}}
+#+LATEX_HEADER: \newcommand{\kvv}{k_{\text{2V}}}
+#+LATEX_HEADER: \newcommand{\mh}{m_{H}}
+#+LATEX_HEADER: \newcommand{\xshhsm}{\sigma_{\text{HH}}^{\text{SM}}}
+#+LATEX_HEADER: \newcommand{\xshh}{\sigma_{\text{HH}}}
