@@ -1,11 +1,10 @@
+<<sec:EWPT>>
+
 As discussed in Section [[sec:SM]], the existence of the Higgs field breaks electro-weak symmetry.
 However, at extremely high temperatures, it is energetically favourable for the Higgs field to be zero everywhere.
 Only around a hundred picoseconds after the Big Bang, as the temperature of the Universe drops beneath a threshold, is the symmetry broken.
 It is currently unknown how the symmetry breaking takes place.
 While the SM predicts a smooth transition, a plethora of BSM models prefers a first-order phase transition.
-
-@ALERT@
-
 
 - possibility of the existence of false vacua, where our Universe may lie ("metastable")
 - discuss consequences, namely vaccum decay, creating vaccum bubbles, possibly (but unlikely) destroying the Universe as we know it

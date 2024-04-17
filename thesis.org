@@ -13,64 +13,64 @@
 
 
 * Introduction
-** The SM of Particle Physics
+** The Standard Model of Particle Physics
 <<sec:SM>>
 *** Brief historical perspective
+*** The building blocks of the SM
 *** The Higgs Mechanism
-<<sec::HiggsMechanism>>
 #+INCLUDE: "chapters/higgs_mechanism.org"
-
-*** The building blocks
-
-** Di-Higgs processes
-<<sec::DiHiggs>>
-#+INCLUDE: "chapters/dihiggs.org"
+*** Experimental status of Higgs boson physics
+** Higgs boson pair production in the SM
+#+INCLUDE: "chapters/dihiggs/dihiggs.org"
 *** Production
-#+INCLUDE: "chapters/production.org"
-*** The bb\tau\tau final state
-
-*** Other final states
-<<sec::Combinations>>
-#+INCLUDE: "chapters/other_final_states.org"
-
-*** Combinations
-<<sec::Combinations>>
-#+INCLUDE: "chapters/combinations.org"
-
+#+INCLUDE: "chapters/dihiggs/production.org"
+*** Decay
+#+INCLUDE: "chapters/dihiggs/decay.org"
 
 ** Going beyond the SM
 *** Short-comings of the SM
-<<sec:SMShortComings>>
+#+INCLUDE: "chapters/short_comings.org"
 *** Electro-weak phase transition
-<<sec:EWPT>>
 #+INCLUDE: "chapters/ew_phase_transition.org"
 *** Singlet Model
-<<sec::SingletModel>>
 #+INCLUDE: "chapters/singlet_model.org"
-*** Another model
-<<sec::AnotherModel>>
+*** Non-resonant BSM HH Production
+#+INCLUDE: "chapters/dihiggs/nonres_BSM_hh.org"
+*** Resonant BSM HH Production
+#+INCLUDE: "chapters/dihiggs/res_BSM_hh.org"
+
+**** Motivaton for the bb\tau\tau analysis
 
 
+** Experimental status of SM HH Physics
+*** Selection of significant analysis or techniques
+**** ZZ, ZH and future techniques
+#+INCLUDE: "chapters/dihiggs/zz_and_zh.org"
+**** \gamma\gamma\tau\tau
+#+INCLUDE: "chapters/dihiggs/gammagammatautau.org"
+*** Combinations
+#+INCLUDE: "chapters/dihiggs/combinations.org"
 * The CMS Detector
 #+INCLUDE: "chapters/cms_detector.org"
 
-
-* HGCAL
-<<sec:Hgcal>>
-
+* The High Granularity Calorimeter
 
 * Interference studies
 #+INCLUDE: "chapters/interference.org"
 
 * The analysis of double Higgs decay to two b quarks and two tau leptons
 #+INCLUDE: "chapters/bbtt.org"
-<<sec::bbtautau>>
 ** Samples
 *** MC Generation
 #+INCLUDE: "chapters/mc_generation.org"
 + include an event display of 2018
-  
-
+** Triggers
+** Backgrounds
+** Selection
+*** \tau\tau pair
+*** bb pair
+** Categorization
+** Signal discrimination from background
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]
 [[bibliography:

@@ -1,0 +1,42 @@
+<<sec:production>>
+
+The measurement of Higgs properties at the LHC are in general challenging, given the low cross-sections involved
+
+gluon fusion is the dominant production mode.
+
+#+NAME: fig:H_production_diagrams
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Feynman diagrams for the leading Higgs boson production processes. /a)/ gluon fusion /b)/ \ac{VBF} /c)/ associated production with a W or Z (V) boson /d)/ associated production with a top or bottom quark pair /e)/ associated production with a single top quark. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/H_production_diagrams.pdf]]
+
+#+NAME: fig:HH_production_diagrams
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Feynman diagrams for the leading H boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ Z$\gamma$. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/HH_production_diagrams.pdf]]
+
+#+NAME: fig:HH_prod_energy
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: HH production cross section as a function of the center of mass energy for the six largest HH production channels at /pp/ colliders. The thickness of the lines corresponds to the scale and PDF uncertainties added linearly. Gluon fusion dominates for the entire energy range. The figure is taken from [[cite:&HH_xsec_running]].
+[[~/org/PhD/Thesis/figures/HH_production_energy.pdf]]
+
+#+NAME: fig:HH_prod_kl
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: HH production cross section as a function of the coupling modifier $\klrat$ for several production mechanisms. The dashed and solid lines denote respectively the LO and NLO predictions and the bands indicate the PDF and scale uncertainties added linearly. The figure is taken from [[cite:&HH_xsec_running]].
+[[~/org/PhD/Thesis/figures/HH_production_kl.pdf]]
+
+#+NAME: tab:HH_production_xsec
+#+CAPTION: Inclusive gluon fusion cross-sections for HH production for different centre-of-mass energies in the \ac{NNLO} \ac{FT} approximation, for $\mh=\SI{125}{\GeV}$, with the central scale set to $\mhh/2$ (see [[cite:&higgs_xsec_top_effects]]). PDF, $\alpha_{S}$, scale and top mass $m_{t}$ uncertainties are also showcased. Taken from [[cite:&lhc_wg4_twiki]].
+#+ATTR_LATEX: :placement [!h] :center t :align c|c|c|c
+| $\sqrt{s}$ (\si{\TeV}) | $\sigma^{\text{FTapprox}}_{\text{NNLO}}$ (\si{\femto\barn}) | PDF + $\alpha_{S}$ unc. | Scale + $m_{t}$ unc. |
+|------------------------+--------------------------------------------------+-----------------+-------------------|
+|                      7 |                                            6.572 | \pm4.3%           | $-$               |
+|                      8 |                                            9.441 | \pm3.9%           | $-$               |
+|                     13 |                                            31.05 | \pm3.0%           | $-23\% +6\%$      |
+|                   13.6 |                                            34.43 | \pm3.0%           | $-23\% +6\%$      |
+|                     14 |                                            36.69 | \pm3.0%           | $-23\% +6\%$      |
+|                     27 |                                            139.9 | \pm2.5%           | $-22\% +5\%$      |
+|                    100 |                                             1224 | \pm2.4%           | $-21\% +4\%$      |
+
+* Additional bibliography :noexport:
+** bbH
++ [[https://cms.cern/news/missing-piece-higgs-production][CMS News]]

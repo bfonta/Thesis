@@ -1,9 +1,3 @@
-* bbbb
-** Resolved
-
-** Boosted
-
-** ZZ, ZH and future techniques
 + QCD simulations lack of precision and statistics for a robust bkg estimate, therefore a data-driven background modeling is needed
 + The QCD multijet background completely dominates the 4b final state (>90%), but is challenging to model with simulation: it is not computationally feasible to generate large enough samples with enough precision in all corners of the phase-space
   + the remaning background is mostly $t\bar{t}$
@@ -11,7 +5,12 @@
 + The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have larger cross-sections, 31 and 8 times larger than HH, respectively.
 + Data-driven background models are often derived using the so-called "ABCD" method (just like for the $bb\tau\tau$ analysis later described in Section [[sec::bbtautau]]). The background is derived in a signal-free region, and thus requires an extrapolation to a different region of the phase-space. In order to validate the extrapolation, a validation region is usually employed. However, the definition of an additional region will necessarily deplete the signal region. Additionally, we cannot directly test the extrapolation, since the validation region will differ from the signal region inasmuch as it will not be signal-enriched. New methods to validate the background are thus welcome.
 
-*** Hierarchical combinatoric residual network (HCR)
+#+NAME: fig:hcr_architecture
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Branching fractions for the decay of a HH pair to a selected group of final states indicated on the top and left sides. The three decay channels currently showcasing the highest sensitivity ("silver bullets") are indicated in dashed gray. No single channel dominates the sensitivity of di-Higgs combinations. The four coloured markers represent the \ac{CMS} published analysis so far. Additional decay channels are currently being explored, together with ttHH production.
+[[~/org/PhD/Thesis/figures/HH_production_diagram.pdf]]
+
+* Hierarchical combinatoric residual network (HCR)
 + Used as classifier for the $ZH/ZZ\rightarrow bbbb$ analysis
 + Used to define the background model
 + Used to remove the ttbar background from the synthetic datasets (see "Improvement #2" below)
@@ -23,7 +22,7 @@
 
 The architecture comprises a series of convolutions and residual connections
 
-*** Modelling the QCD background
+* Modelling the QCD background
 + The background model is defined using a sample with similar selections as in the analysis' signal region, but dropping one of the b-tag requirements on one of the four b-jet candidates.
 + Statistics are increased by lowering the b-tag WP used on the three jets
 + The analysis four-jet background is modelled by weighting the three-jet background with two sets of weights:
@@ -31,7 +30,7 @@ The architecture comprises a series of convolutions and residual connections
   2. kinematic weighting: correct kinematic differences
 + The weights are derived in a di-jet mass sideband
   
-*** Hemisphere Mixing
+* Hemisphere Mixing
 + The existence of synthetic datasets enables to fully validate the extrapolation to a signal-enriched region, and enables to estimate the variance of the background prediction coming from the finite dataset size
 + The method first creates a library of hemispheres, by dividing jets in four-b-tagged based on a plane orthogonal to the transverse thrust axis: jets on either side are assigned to one of the two hemispheres
   + The thrust axis is defined as the axis on which the sum of the absolute values of the projections of the pT of the jets is maximal
@@ -47,43 +46,18 @@ The architecture comprises a series of convolutions and residual connections
   2. Compare background model with mixed models in the signal region
   3. Check if a spurious signal can be mimicked by the background model, by adding an unconstrained signal template to the fit and comparing it with the background-only fit. The two are found to be in agreement, and no significant improvement of the model fit is observed.
 
-*** Final fit
+* Final fit
 + The final fit is validated using the synthetic datasets, without statistical fluctuations, and using one of the mixed models as the four-tag data. Systematics behaved as expected and the result was compatible with a zero signal strength
 
-*** Projections
+* Projections
 + Four projection scenarios are considered for the evolution of background uncertainties
   + constant background uncertainties
   + scaling variance terms by $1/\sqrt{\mathcal{L}}$ while keeping the extrapolation uncertainty constant
   + naive $1/\sqrt{\mathcal{L}}$ scaling of the limits
   + no background systematics
 
-
-* \gamma\gamma\tau\tau
-+ Analysis covers non-resonant via ggF and resonant HH and HY
-+ CMS non-res result: $-13 (-11) < k_{\lambda} < 18 (16)$ and $\sigma_{HH} < 930 (740) fb$ or $\sigma_{HH} < 33 (26) \sigma_{HH}^{SM}$
-+ Results are obtained by performing a fit to $m_{\gamma\gamma}$ in signal-enriched categories
-  + the signal and background components of the maximum likelihood fit are analytic functions of $m_{\gamma\gamma}$
-  + the background contiuum is modelled from data using the discrete profiling method
-  + the signal is modelled from simulation
-+ The signal is fitted independently for different categories and data taking years with a double Crystal Ball function
-+ The background also includes a $H\rightarrow \gamma\gamma$ contribution which is modelled just like the signal
-+ The discrete profiling method considers multiple analytical functions, implementing by construction a systematic for the choice of the analytic function used
-  + the method minimizes the likelihood to choose a function for each category, also penalizing functions with many parameters
-+ The dominant backgrounds are irreducible prompt $\gamma\gamma$ + jets and reducible $\gamma$ + jets (jets are misidentified as photons or $\tau$ leptons)
-  + sub-dominant backgrounds are taken from simulation
-+ Multiple selection variables are used, including a mass window cut on the di-photon mass between 100 and 180 GeV
-+ The taus are reconstructed in all possible channels
-  + a DY veto is applied: reject events compatible with $Z\rightarrow ll$ or $Z\rightarrow ll\gamma$ with a mass window cut around $m_{Z}$
-+ BDT is used for non-res, using as input input features related to the events' kinematical properties
-  + It is $m_{\gamma\gamma}$-independent at first order, to avoid sculpting scultping the di-photon mass leading to fake excesses
-+ Sequential boundaries are applied to the BDT's output to create categories of different signal purity; the splitting maximizes signal sensitivity
-  
-  
 * Additional bibliography :noexport:
 ** 4b novel techniques
 + [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-20-005&tp=an&id=2316&ancode=HIG-20-005][HIG-20-005]] (4b resolved)
 + [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-22-011&tp=an&id=2605&ancode=HIG-22-011][HIG-22-011]] (ZZ/ZH->4b)
   + [[https://indico.cern.ch/event/1275872/][DeepDive QCD modelling]]
-** \gamma\gamma\tau\tau
-+ HIG-22-012 ([[https://cds.cern.ch/record/2893031?ln=en][CDS]])
-+ [[https://www.stat.cmu.edu/stamps/files/nicholas_wardle_slides.pdf][The discrete profiling method]] (slides)

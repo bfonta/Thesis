@@ -1,6 +1,7 @@
 #+LATEX_HEADER: \usepackage{hyperref}
 #+LATEX_HEADER: \KOMAoptions{fontsize=12pt, headings=small}
 #+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{siunitx}
 
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{margin=.5in}

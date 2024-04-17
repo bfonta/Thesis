@@ -1,0 +1,22 @@
+<<sec::NonResBSMHH>>
+
+Many models of physics beyond the Standard Model with \ac{SM}-compatible single Higgs boson signal strengths can exhibit a di-Higgs phenomenology vastly different from the \ac{SM} expectation.
+In this sense, a successful discovery of Higgs boson pair production at the LHC and the subsequent measurement of potential deviations from the \ac{SM} constitute an important avenue in the search for physics beyond the \ac{SM}.
+
+To facilitate such a measurement, it is crucial to establish the Higgs boson pair production cross section in the \ac{SM} to the best theoretical accuracy possible and to provide \ac{BSM} benchmarks that reflect the phenomenology of Higgs boson pairs at the LHC in a consistent and concise fashion.
+
+
+
+Test \ac{BSM} w/ anomalous couplings
++ discuss coupling modifiers
++ deviations may lead to diffs. in HH production and kinematics
++ small SM HH cross-section because of the interference between the triangle nad box diagrams
+
+* Effective Field Theories
++ Probe effects from resonances with very high mass at lower energy scales
++ \ac{BSM} effects on ggF HH production can be studied
+  + through EFT model with three new couplings
+
++ Explore sensitivity to \ac{BSM} \ac{EFT} couplings with \ac{EFT} benchmark points
+  + based on test statistic measuring kinematics’ similarities
+  + allow extrapolation between different points

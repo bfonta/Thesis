@@ -1,1 +1,3 @@
+<<sec::SingletModel>>
+
 This is the singlet model [[cite:&jona_soutenance]] and [[cite:&hgcal_tdr]].

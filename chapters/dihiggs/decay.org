@@ -1,0 +1,10 @@
+<<sec:Decay>>
+
+#+NAME: fig:HH_decay_diagrams
+#+ATTR_LATEX: :width .6\textwidth
+#+CAPTION: Feynman diagrams for the leading Higgs boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ $Z\gamma$. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/H_decay_diagrams.pdf]]
+
+* The bb\tau\tau final state
+
+* Other final states

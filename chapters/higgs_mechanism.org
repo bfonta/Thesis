@@ -1,28 +1,31 @@
+<<sec:HiggsMechanism>>
+
 @Explain how the non-zero value of the Higgs field that permeates the Universe breaks electro-weak symmetry (related to the EWPT section)@
 
 At low energy the potential $V$ associated to the Higgs boson field $H$ in the SM Lagrangian can be expressed as:
 
 #+NAME: eq:sm_potential
 \begin{equation}
-\frac{1}{2}m_{H}^{2}H^{2} + \lambda_{3}vH^{3} + \frac{\lambda_{4}}{4}H^{4}
+\frac{1}{2}\mh^{2}H^{2} + \klthree{}vH^{3} + \frac{\klfour}{4}H^{4}
 \end{equation}
 
 \noindent Continue here.
 
 #+NAME: eq:self_coupling
 \begin{equation}
-\lambda_{HHH}^{\text{SM}} = \frac{m_{H}^{2}}{2v^{2}} \simeq 0.13
+\klthree^{\text{SM}} = \frac{\mh^{2}}{2v^{2}} \simeq 0.13
 \end{equation}
 
 #+NAME: eq:dihiggs_coupling_relation
 \begin{equation}
-\lambda_{4} = \lambda_{3}
+\klthree = \klfour
 \end{equation}
 
-
-
-Another paragraph show [[eq:sm_potential]].
-
++ The Higgs mechanism is the most economical way to endow fundamental particles with mass while  the SM gauge invariant and predictive
++ the higgs is the only known scalar field in the theory
++ it does not arise from a local gauge invariance propert of the SM Lagrangian
++ mention the "generation of mass", which breaks the symmetry between the three lepton families
++ the Higgs might be connected to inflation, to dark matter production, to baryogenesis and to vacuum instability
 
 
 * Additional bibliography :noexport:
