@@ -1,9 +1,14 @@
-#+LATEX_HEADER: \newcommand{\klthree}{\lambda_{\text{HHH}}}
+#+LATEX_HEADER: \newcommand{\cg}{c_{g}}
+#+LATEX_HEADER: \newcommand{\ctwog}{c_{2g}}
+#+LATEX_HEADER: \newcommand{\ctwo}{c_{2}}
 #+LATEX_HEADER: \newcommand{\klfour}{\lambda_{\text{HHHH}}}
 #+LATEX_HEADER: \newcommand{\klrat}{k_{\lambda} = \lambda_{\text{HHH}} / \lambda_{\text{HHH}}^{\text{SM}}}
+#+LATEX_HEADER: \newcommand{\klthree}{\lambda_{\text{HHH}}}
 #+LATEX_HEADER: \newcommand{\kl}{k_{\lambda}}
+#+LATEX_HEADER: \newcommand{\kt}{k_{t}}
 #+LATEX_HEADER: \newcommand{\kvv}{k_{\text{2V}}}
-#+LATEX_HEADER: \newcommand{\mh}{m_{\text{H}}}
 #+LATEX_HEADER: \newcommand{\mhh}{m_{\text{HH}}}
+#+LATEX_HEADER: \newcommand{\mh}{m_{\text{H}}}
+#+LATEX_HEADER: \newcommand{\ttbar}{t\bar{t}}
 #+LATEX_HEADER: \newcommand{\xshhsm}{\sigma_{\text{HH}}^{\text{SM}}}
 #+LATEX_HEADER: \newcommand{\xshh}{\sigma_{\text{HH}}}

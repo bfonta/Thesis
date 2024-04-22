@@ -6,7 +6,7 @@ In this sense, a successful discovery of Higgs boson pair production at the LHC 
 To facilitate such a measurement, it is crucial to establish the Higgs boson pair production cross section in the \ac{SM} to the best theoretical accuracy possible and to provide \ac{BSM} benchmarks that reflect the phenomenology of Higgs boson pairs at the LHC in a consistent and concise fashion.
 
 #+NAME: fig:kl_c_EFT
-#+CAPTION: HH mass distribution for different $\kl$ values, highlighting the strong impact of a deviation from the expected SM values.
+#+CAPTION: HH mass distribution for different $\kl$ values, highlighting the strong impact of a deviation from the expected SM values. Larger $|\kl|$ values correspond to scenarios where the HH "triangle" diagram dominates.
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/kl.pdf]]

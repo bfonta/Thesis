@@ -1,5 +1,7 @@
 <<sec:Combinations>>
 
+@mention impact of bb\tau\tau@
+
 + The $k_\lambda$ can be additionally constrained exploiting NLO electro-weak corrections to single-H which depend on $k_\lambda$.
 + Single-H cross-sections are quite sensitive to $k_{\lambda}$ variations, especially in the VH and ttH production modes ($\pm 10\%$ in the latter)
 + Complementarity: searches for HH generally provide weaker contraints on the Higgs boson coupling to fermions and vector bosons, when compared to single-H, due to the lower production cross-section. HH, on the other hand, provide stronger constraints on $k_{\lambda}$.

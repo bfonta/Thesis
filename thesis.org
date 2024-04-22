@@ -43,11 +43,17 @@
 
 
 ** Experimental status of SM HH Physics
-*** Selection of significant analysis or techniques
-**** ZZ, ZH and future techniques
-#+INCLUDE: "chapters/dihiggs/zz_and_zh.org"
-**** \gamma\gamma\tau\tau
+#+INCLUDE: "chapters/dihiggs/hh_exp_status.org"
+*** 4b
+#+INCLUDE: "chapters/dihiggs/bbbb.org"
+*** bb\gamma\gamma
+#+INCLUDE: "chapters/dihiggs/bbgammagamma.org"
+*** bb\tau\tau
+#+INCLUDE: "chapters/dihiggs/bbtautau.org"
+*** \gamma\gamma\tau\tau
 #+INCLUDE: "chapters/dihiggs/gammagammatautau.org"
+*** ZZ, ZH and future techniques
+#+INCLUDE: "chapters/dihiggs/zz_and_zh.org"
 *** Combinations
 #+INCLUDE: "chapters/dihiggs/combinations.org"
 * The CMS Detector
@@ -59,7 +65,7 @@
 #+INCLUDE: "chapters/interference.org"
 
 * The analysis of double Higgs decay to two b quarks and two tau leptons
-#+INCLUDE: "chapters/bbtt.org"
+#+INCLUDE: "chapters/bbtt_analysis.org"
 ** Samples
 *** MC Generation
 #+INCLUDE: "chapters/mc_generation.org"
