@@ -1,6 +1,6 @@
 #+TITLE: Thesis Title
 #+AUTHOR: Bruno Alves
-#+LATEX_CLASS: mimosis
+#+LATEX_CLASS: article
 #+SETUPFILE: setup.org
 #+SETUPFILE: definitions.org
 #+EXCLUDE_TAGS: noexport

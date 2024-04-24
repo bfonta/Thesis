@@ -1,9 +1,14 @@
+* The problem
+
+
+
+
 + QCD simulations lack of precision and statistics for a robust bkg estimate, therefore a data-driven background modeling is needed
 + The QCD multijet background completely dominates the 4b final state (>90%), but is challenging to model with simulation: it is not computationally feasible to generate large enough samples with enough precision in all corners of the phase-space
   + the remaning background is mostly $t\bar{t}$
 + The development of a high-dimensional data-driven background model is thus necessary
 + The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have larger cross-sections, 31 and 8 times larger than HH, respectively.
-+ Data-driven background models are often derived using the so-called "ABCD" method (just like for the $bb\tau\tau$ analysis later described in Section [[sec::bbtautau]]). The background is derived in a signal-free region, and thus requires an extrapolation to a different region of the phase-space. In order to validate the extrapolation, a validation region is usually employed. However, the definition of an additional region will necessarily deplete the signal region. Additionally, we cannot directly test the extrapolation, since the validation region will differ from the signal region inasmuch as it will not be signal-enriched. New methods to validate the background are thus welcome.
++ Data-driven background models are often derived using the so-called "ABCD" method (just like for the $bb\tau\tau$ analysis). The background is derived in a signal-free region, and thus requires an extrapolation to a different region of the phase-space. In order to validate the extrapolation, a validation region is usually employed. However, the definition of an additional region will necessarily deplete the signal region. Additionally, we cannot directly test the extrapolation, since the validation region will differ from the signal region inasmuch as it will not be signal-enriched. New methods to validate the background are thus welcome.
 
 #+NAME: fig:hcr_architecture
 #+ATTR_LATEX: :width .9\textwidth

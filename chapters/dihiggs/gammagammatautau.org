@@ -25,7 +25,7 @@ Events not belonging to one of those two categories are discarded.
 The final results are obtained performing a simultaneous maximum likelihood fit to $m_{\gamma\gamma}$ in the two signal-enriched categories.
 As expected by a SM behaviour, the analysis observed very few \gamma\gamma\tau\tau candidates.
 However, it delivers observed (expected) $\kl$ 95% confidence level upper limits, $-13\;(-11) < k_{\lambda} < 18\;(16)$, and on the HH proton-proton cross-section, $\sigma_{\text{HH}} < 930\;(740)\;\si{\femto\barn}$ or $\sigma_{\text{HH}} < 33\;(26)\;\sigma_{\text{HH}}^{\text{SM}}$.
-The limits are around one order of magnitude worse than the ones obtained by the most sensitive channels (see [[sec:bbbb]], for instance).
+The limits are around one order of magnitude worse than the ones obtained by the most sensitive channels.
 
 #+NAME: fig:ggtt_results
 #+CAPTION: Results of the \gamma\gamma\tau\tau nonresonant analysis. /Left)/ distribution of the BDT scores used for the event categorization from data and predictions from MC simulation. /Right)/ Data points and signal-plus-background models for the most sensitive analysis category, where the lower panel in each plot shows the residual signal yield after subtraction of the background. Taken from [[cite:&gammagammatautau]].
