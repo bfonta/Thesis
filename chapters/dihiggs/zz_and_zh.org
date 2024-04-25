@@ -1,6 +1,6 @@
-* The problem
-
-
+* The problem with QCD jets
+Many analysis in CMS include quark- or gluon- induced jets in their final state particles.
+This is also the case for some HH analysis, including the most sensitive ones (since they include a pair of b-jets) [[cite:&bbgg_cms]], [[cite:&higgs_bbtautau_nonres]], [[cite:&bbbb_resolved_cms]], [[cite:&bbbb_boosted_cms]].
 
 
 + QCD simulations lack of precision and statistics for a robust bkg estimate, therefore a data-driven background modeling is needed
