@@ -24,6 +24,12 @@ gluon fusion is the dominant production mode.
 #+CAPTION: HH production cross section as a function of the coupling modifier $\klrat$ for several production mechanisms. The dashed and solid lines denote respectively the LO and NLO predictions and the bands indicate the PDF and scale uncertainties added linearly. The figure is taken from [[cite:&HH_xsec_running]].
 [[~/org/PhD/Thesis/figures/HH_production_kl.pdf]]
 
+#+NAME: fig:HH_prod_kl
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Cumulative cross section for the production of a Higgs boson as a function of the lowest Higgs boson transverse momentum. The cross section due to \ac{ggF} (green), \ac{VBF} (red), vector boson associated (blue) and top-quark pair associated (magenta) production mode are shown in absolute values (left) and relative size (right). Taken from [[cite:&xsec_evolution_pt]].
+[[~/org/PhD/Thesis/figures/hh_xsec_evoluton_pt.pdf]]
+
+
 #+NAME: tab:HH_production_xsec
 #+CAPTION: Inclusive gluon fusion cross-sections for HH production for different centre-of-mass energies in the \ac{NNLO} \ac{FT} approximation, for $\mh=\SI{125}{\GeV}$, with the central scale set to $\mhh/2$ (see [[cite:&higgs_xsec_top_effects]]). PDF, $\alpha_{S}$, scale and top mass $m_{t}$ uncertainties are also showcased. Taken from [[cite:&lhc_wg4_twiki]].
 #+ATTR_LATEX: :placement [!h] :center t :align c|c|c|c

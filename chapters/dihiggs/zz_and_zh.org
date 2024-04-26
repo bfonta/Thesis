@@ -1,65 +1,72 @@
-* The problem with QCD jets
+* The \zzzhbbbb{} analysis
+The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have cross-sections 31 and 8 times larger than the \ac{SM} ones, respectively, and are therefore expected to be observed before the \bbbb{} process.
+The recently published resolved \zzzhbbbb{} analysis [[cite:&zz_zh_bbbb]] uses a series of advanced background estimation techniques to successfully validate a \ac{QCD} estimate using synthetic datasets ([[sec:qcd_bkgd_problem]]).
+
+In order to model the \ac{QCD} background, a control region is defined by requiring three b-tagged jets instead of four.
+In order to reproduce the \ac{SR}, the dataset thus obtained is weighted by two sets of weights to account for additional jet activity and subsisting kinematic mismatches.
+The weights are derived in a di-jet mass sideband.
+
+The analysis introduces a \ac{DNN} architecture especially designed to handle the b-quark pairing combinatorics: the \ac{HCR} network.
+A detailed explanation is outside the scope of this work, but suffices to say that it is used to discriminate signal from background, to define the background model kinematic weights, and to differentiate \ac{QCD} from $\ttbar{}$ in the technique of [[sec:hemisphere_mixing]].
+
+The final fit is validated using the synthetic dataset, without statistical fluctuations, and using one of the mixed models as the four-tag data. Systematics behaved as expected and the result was compatible with a zero signal strength.
+The observed (expected) 95% CL upper limits on the production cross sections correspond to 3.8 (3.8) and 5.0 (2.9) times the \ac{SM} prediction, for the \zzbbbb{} and \zhbbbb{} processes, respectively.
+The analysis indicates that ZH will likely be ovserved first.
+
+* The problem with \ac{QCD} simulation
+<<sec:qcd_bkgd_problem>>
+
 Many analysis in CMS include quark- or gluon- induced jets in their final state particles.
-This is also the case for some HH analysis, including the most sensitive ones (since they include a pair of b-jets) [[cite:&bbgg_cms]], [[cite:&higgs_bbtautau_nonres]], [[cite:&bbbb_resolved_cms]], [[cite:&bbbb_boosted_cms]].
+This is also the case for some HH analysis, including the most sensitive ones (since they include a pair of b-jets) [[cite:&higgs_bbtautau_nonres;&bbgg_cms;&bbbb_resolved_cms;&bbbb_boosted_cms]].
+\ac{QCD} backgrounds are often significant, and sometimes dominant, as in \bbbb{} analysis, where the second most common source of background, $\ttbar$, is almost an order of magnitude less common.
+Unfortunately, currently available \ac{QCD} simulations lack the required precision and statistics for a robust background estimate, particulary in the higher energy distribution tails.
+
+Data-driven methods are therefore usually employed to model the \ac{QCD} background.
+These usualy take the form of "ABCD-like" methods, where \acp{CR} are defined in such a way as to ensure orthogonality with respect to the \ac{SR}.
+Some variants exist, such as (possibly high-dimensional) "alphabet" [[cite:&corcodilos_thesis]] and "fake factor" [[cite:&fake_factor_method;&higgs_bbtautau_hy]] methods, but the general principles, especially in the context of this work, are similar.
+The basic idea is to find fully uncorrelated variables upon which the \ac{SR} selection depends on, and invert the cuts to obtain signal-free regions.
+The latter can be used to estimate both the shape and the normalization of the \ac{QCD} background in the \ac{SR}, without using it directly.
+
+To give an example, in the most recent \bbtt{} non-resonant analysis [[cite:&higgs_bbtautau_nonres]], the \tau isolation and the relative sign of the charges of the two leptons are used to create three \acp{CR} around the analysis \ac{SR} (opposite-charged leptons and well isolated \tau's). Defining B, C and D as three \acp{CR} where B has equally charged leptons and tight isolation, C has opposite charged leptons and loose isolation, and D has both cuts inverted, the shape of the \ac{SR} can be inferred either by B or C and the normalization by B/D or C/D, respectively.
+In the resolved \bbbb{} analysis [[cite:&bbbb_resolved_cms]], instead, the control regions are defined based on the invariant mass of the two Higgses and on the number of b-tagged jets.
+The \ac{SR}, having 4 b-jets, has its \ac{QCD} background modeled from events in \acp{CR} with 3-bjets.
+It is assumed that kinematic properties are similar between \acp{CR} and the \ac{SR}. 
+
+In all cases, the background is derived in a signal-free region, and thus requires an extrapolation to a different region of the phase-space.
+In order to validate the extrapolation, a \ac{VR} is usually employed.
+However, the definition of an additional region will necessarily deplete the signal region.
+Additionally, the extrapolation cannot be directly tested, since the \ac{VR} differs from the signal region inasmuch as it will not be signal-enriched.
+Finally, both \acp{CR} and \acp{VR} often have low statistics, and become a dominant source of systematic uncertainties.
+Indeed, finite data in \acp{VR} imply an "inherent limitation on the capability to validate the performance of the background model" [[cite:&zz_zh_bbbb]].
+There is therefore a need to develop new methods to estimate and validate the \ac{QCD} background estimation that are not sensitive to low statistics.
+In addition, it would be beneficial to directly test the ABCD extrapolation in the \ac{SR}.
 
 
-+ QCD simulations lack of precision and statistics for a robust bkg estimate, therefore a data-driven background modeling is needed
-+ The QCD multijet background completely dominates the 4b final state (>90%), but is challenging to model with simulation: it is not computationally feasible to generate large enough samples with enough precision in all corners of the phase-space
-  + the remaning background is mostly $t\bar{t}$
-+ The development of a high-dimensional data-driven background model is thus necessary
-+ The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have larger cross-sections, 31 and 8 times larger than HH, respectively.
-+ Data-driven background models are often derived using the so-called "ABCD" method (just like for the $bb\tau\tau$ analysis). The background is derived in a signal-free region, and thus requires an extrapolation to a different region of the phase-space. In order to validate the extrapolation, a validation region is usually employed. However, the definition of an additional region will necessarily deplete the signal region. Additionally, we cannot directly test the extrapolation, since the validation region will differ from the signal region inasmuch as it will not be signal-enriched. New methods to validate the background are thus welcome.
+* Hemisphere mixing
+<<sec:hemisphere_mixing>>
 
-#+NAME: fig:hcr_architecture
-#+ATTR_LATEX: :width .9\textwidth
-#+CAPTION: Branching fractions for the decay of a HH pair to a selected group of final states indicated on the top and left sides. The three decay channels currently showcasing the highest sensitivity ("silver bullets") are indicated in dashed gray. No single channel dominates the sensitivity of di-Higgs combinations. The four coloured markers represent the \ac{CMS} published analysis so far. Additional decay channels are currently being explored, together with ttHH production.
-[[~/org/PhD/Thesis/figures/HH_production_diagram.pdf]]
+The hemisphere mixing technique [[cite:&hemisphere_mixing]] first creates a library of "hemispheres", which arise from the splitting of events along the plane orthogonal to the transverse thrust axis.
+The transverse thrust axis is in turn defined as the axis where the sum of the absolute values of the $\pt$ projections of the all the jets in the event is maximal.
+The splitting is done using a sample of events with four b-tagged jets, thus "pure" in signal events.
+For each hemisphere a set of four variables is calculated: mass, longitudinal momentum, and transverse momentum perpendicular and parallel to the thrust axis.
+A second pass on data mixes pairs of hemispheres by minimizing the distance of two hemispheres in terms of a normalized sum of the summary variables.
+The two hemispheres must belong to different events.
 
-* Hierarchical combinatoric residual network (HCR)
-+ Used as classifier for the $ZH/ZZ\rightarrow bbbb$ analysis
-+ Used to define the background model
-+ Used to remove the ttbar background from the synthetic datasets (see "Improvement #2" below)
+The paper here discussed [[cite:&zz_zh_bbbb]] contributes with two improvements to the original hemisphere mixing technique.
+Firstly, the mixing step is performed with 3-tagged data in order to increase statistics and make (4-tagged) signal contamination negligible.
+Statistics are also increased by lowering the b-tag \ac{WP} used on the three jets.
+Secondly, the non-negligible presence of $\ttbar{}$ events is mitigated by removing such events from the mixing stage.
+This is done event-by-event via a classification with the \ac{HCR} network, which calculates the probability P(M) for each event to be multijet, where a random number X is generated between 0 and 1. If $\text{X} > \text{P(M)}$, the event is rejected.
 
-# #+NAME: fig:hcr_architecture
-# #+ATTR_LATEX: :width 1.\textwidth
-# #+CAPTION: HCR architecture.
-# [[~/org/PhD/Thesis/figures/HCR_architecture.pdf]]
+For the validation of the background model, we have to ensure the size of the synthetic dataset is comparable to the one used for the model.
+The hemisphere dataset is thus sub-sampled, and 15 separate mixed models are formed, given the available statistics.
+Systematic uncertainties of the \ac{QCD} modeling are determined using the synthetic dataset in three different ways:
+1. Differences between mixed models, arising from limited statistics, are quantified by using their average;
+2. The background model is compared with the mixed models in the signal region;
+3. An unconstrained signal template is added to the signal + background fit to verify if a spurious signal can be mimicked by the background model. This fit is compared with a background-only fit and found to be in agreement.
 
-The architecture comprises a series of convolutions and residual connections
-
-* Modelling the QCD background
-+ The background model is defined using a sample with similar selections as in the analysis' signal region, but dropping one of the b-tag requirements on one of the four b-jet candidates.
-+ Statistics are increased by lowering the b-tag WP used on the three jets
-+ The analysis four-jet background is modelled by weighting the three-jet background with two sets of weights:
-  1. jet combinatorial model: account for additional jet activity. The parameters of the model (Eq. 4 in HIG-22-011) are determined by a combined fit to the jet and b-tagged het multiplicity distributions in the sidebands
-  2. kinematic weighting: correct kinematic differences
-+ The weights are derived in a di-jet mass sideband
-  
-* Hemisphere Mixing
-+ The existence of synthetic datasets enables to fully validate the extrapolation to a signal-enriched region, and enables to estimate the variance of the background prediction coming from the finite dataset size
-+ The method first creates a library of hemispheres, by dividing jets in four-b-tagged based on a plane orthogonal to the transverse thrust axis: jets on either side are assigned to one of the two hemispheres
-  + The thrust axis is defined as the axis on which the sum of the absolute values of the projections of the pT of the jets is maximal
-+ A set of variables is calculated for each hemisphere: mass, longitudinal momentum and transverse momentums perpendicular and parallel to the thrust axis
-+ A second pass on data assigns a pair to each hemisphere by minimizing the distance of two hemisphere in terms of a normalized sum of the hemisphere summary variables
-+ A check ensures the two hemispheres belong to different events
-+ The nearest-neighbour hemispheres are rotated in $\phi$ to match the direction of the tranvserse thrust axis of the input event
-+ *Improvement 1*: consider the 3-tagged dataset for the second pass (instead of the 4-tagged dataset), ensuring more statistics and avoid a possible bias caused by the presence of signal events when considering the 4-tagged dataset
-+ *Improvement 2*: avoid mixing $t\bar{t}$ hemispheres with QCD hemispheres: use the HCR architecture to calculate the probability P(M) for an event to be multijet. This is done event-by-event. FOr each event, a random number X is generated between 0 and 1. If X > P(M) the event is rejected.
-+ For the validation of the background model, we have to ensure the size of the synthetic dataset is comparable to the one used for the model. The hemisphere dataset is then sub-samples, and 15 separate mixed models are created, given the available statistics.
-+ *Systematics:* The 15 models are all used to derive the systematic uncertainties of the background modelling in three steps:
-  1. Differences between each mixed model, arising from limited statistics, are quantified by using their average
-  2. Compare background model with mixed models in the signal region
-  3. Check if a spurious signal can be mimicked by the background model, by adding an unconstrained signal template to the fit and comparing it with the background-only fit. The two are found to be in agreement, and no significant improvement of the model fit is observed.
-
-* Final fit
-+ The final fit is validated using the synthetic datasets, without statistical fluctuations, and using one of the mixed models as the four-tag data. Systematics behaved as expected and the result was compatible with a zero signal strength
-
-* Projections
-+ Four projection scenarios are considered for the evolution of background uncertainties
-  + constant background uncertainties
-  + scaling variance terms by $1/\sqrt{\mathcal{L}}$ while keeping the extrapolation uncertainty constant
-  + naive $1/\sqrt{\mathcal{L}}$ scaling of the limits
-  + no background systematics
+Importantly, and despite not yet being used in the most recent \bbbb{} results, a principled and precise way of measuring the most important systematics directly in the \ac{SR} is now available.
+We note that, given appropirate modifications, a similar method could be extended to the \bbtt{} analysis.
 
 * Additional bibliography :noexport:
 ** 4b novel techniques

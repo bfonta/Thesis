@@ -1,3 +1,4 @@
+#+LATEX_HEADER: \newcommand{\pt}{p_{T}}
 #+LATEX_HEADER: \newcommand{\cg}{c_{g}}
 #+LATEX_HEADER: \newcommand{\ctwog}{c_{2g}}
 #+LATEX_HEADER: \newcommand{\ctwo}{c_{2}}
@@ -12,3 +13,11 @@
 #+LATEX_HEADER: \newcommand{\ttbar}{t\bar{t}}
 #+LATEX_HEADER: \newcommand{\xshhsm}{\sigma_{\text{HH}}^{\text{SM}}}
 #+LATEX_HEADER: \newcommand{\xshh}{\sigma_{\text{HH}}}
+
+
+#+LATEX_HEADER: \newcommand{\bbbb}{HH $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\bbtt}{HH $\rightarrow$ bb$\tau\tau$}
+#+LATEX_HEADER: \newcommand{\bbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\zzbbbb}{ZZ $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\zhbbbb}{ZH $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\zzzhbbbb}{ZZ\slash ZH $\rightarrow$ bbbb}
