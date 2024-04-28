@@ -21,11 +21,11 @@ The most recent results from the CMS collaboration on measurements of non-resona
 #+INCLUDE: "chapters/dihiggs/gammagammatautau.org"
 ** Modelling the QCD background with the Hemisphere Mixing technique
 #+INCLUDE: "chapters/dihiggs/zz_and_zh.org"
-** Combination with single Higgs
-#+INCLUDE: "chapters/dihiggs/combinations.org"
-# * Run3 and Beyond
-# #+INCLUDE: "dis_procedings/run3_beyond.org"
+** Single and double Higgs combination
+#+INCLUDE: "dis_proceedings/single_double_combinations.org"
 
+* Run 3 and beyond
+#+INCLUDE: "dis_proceedings/run3_beyond.org"
 
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]

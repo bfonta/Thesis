@@ -2,47 +2,38 @@
 The analysis covers non-resonant production via \ac{ggF} and the HH (spin 0 and 2) and HY \ac{BSM} resonant production modes.
 The latter particle refers to an additional BSM scalar Y, considering both H(bb)Y(\tau\tau) and H(\tau\tau)Y(bb) signatures.
 Despite the minuscule HH branching ratio of 0.028%, the analysis presents interesting specificities worth discussing.
-Given the scope of this work, in the following we discuss the nonresonant analysis only.
+In this work we focus on the nonresonant analysis only.
 
 The analysis exploits di-$\gamma$ triggers only, as triggering on the \tau's is found to have a negligible impact.
 Standard photon and lepton selections are applied.
-The dominant backgrounds are peaking single-H and nonresonant \gamma+jets, \gamma\gamma+jets, $\ttbar+\gamma$, $\ttbar+\gamma\gamma$, V\gamma.
+The dominant backgrounds are peaking single-H and nonresonant \gamma+jets, \gamma\gamma+jets, $\ttbar+\gamma$, $\ttbar+\gamma\gamma$ and V\gamma.
 Minor backgrounds are taken from simulation.
-The signal is fitted independently for different categories and data taking years with a double Crystal Ball function.
-The background also includes a $H\rightarrow \gamma\gamma$ contribution which is modelled just like the signal.
+The signal is fitted independently for different categories and data taking years with a double \ac{CB} function.
+The background also includes a \hgg{} contribution which is modelled just like the signal.
 The background continuum, instead, uses the discrete profiling method [[cite:&discrete_profiling]], which considers multiple analytical functions and penalizes functions with many parameters.
 
 Interestingly, \tau’s are reconstructed in all its 6 decay modes ($ee$, $\mu\mu$, $e\mu$, $e\tau_{h}$, $\mu\tau_{h}$ and $\tau_{h}\tau_{h}$), and additionally the single $\tau_{h}$ and $\tau_{h}+\text{track}$ channels are considered when no electorn or muon pass the selection.
-Multiple selections are used, including a DY window mass veto to events cmpatible with $Z\rightarrow ll$ or $Z\rightarrow ll\gamma$ close to the mass of the Z.
+Multiple selections are used, including a DY window mass veto to events compatible with \zll{} or \zllg{} close to the mass of the Z.
 
 A \ac{BDT} is used, considering as input features related to the events' kinematical properties.
-To avoid artificially creating a peaking structure in the di-\gamma mass ($m_{\gamma\gamma}$), which is used in the final fit, the \ac{BDT} is made independent of $m_{\gamma\gamma}$ at first order.
-This is achieved by not using $m_{\gamma\gamma}$ as an input to the \ac{BDT} and by dividing the $\pt$ of photon candidates by $m_{\gamma\gamma}$.
+To avoid artificially creating a peaking structure in the di-\gamma mass ($\mgg$), which is used in the final fit, the \ac{BDT} is made independent of $\mgg$ at first order.
+This is achieved by not using $\mgg$ as an input to the \ac{BDT} and by dividing the $\pt$ of photon candidates by $\mgg$.
 Sequential boundaries are applied to the \ac{BDT}'s output to create two categories of different signal purities.
 The splitting maximizes signal sensitivity.
 Events not belonging to one of those two categories are discarded.
 
-The final results are obtained performing a simultaneous maximum likelihood fit to $m_{\gamma\gamma}$ in the two signal-enriched categories.
+The final results are obtained performing a simultaneous maximum likelihood fit to $\mgg$ in the two signal-enriched categories.
 As expected by a SM behaviour, the analysis observed very few \gamma\gamma\tau\tau candidates.
-However, it delivers observed (expected) $\kl$ 95% confidence level upper limits, $-13\;(-11) < k_{\lambda} < 18\;(16)$, and on the HH proton-proton cross-section, $\sigma_{\text{HH}} < 930\;(740)\;\si{\femto\barn}$ or $\sigma_{\text{HH}} < 33\;(26)\;\sigma_{\text{HH}}^{\text{SM}}$.
+However, it delivers observed (expected) $\kl$ 95% \ac{CL} upper limits, $-13\;(-11) < k_{\lambda} < 18\;(16)$, and on the HH proton-proton cross-section, $\sigma_{\text{HH}} < 930\;(740)\;\si{\femto\barn}$ or $\sigma_{\text{HH}} < 33\;(26)\;\sigma_{\text{HH}}^{\text{SM}}$.
 The limits are around one order of magnitude worse than the ones obtained by the most sensitive channels.
 
 #+NAME: fig:ggtt_results
-#+CAPTION: Results of the \gamma\gamma\tau\tau nonresonant analysis. /Left)/ distribution of the BDT scores used for the event categorization from data and predictions from MC simulation. /Right)/ Data points and signal-plus-background models for the most sensitive analysis category, where the lower panel in each plot shows the residual signal yield after subtraction of the background. Taken from [[cite:&gammagammatautau]].
+#+CAPTION: Results of the \gamma\gamma\tau\tau nonresonant analysis. /Left)/ Distribution of the BDT scores used for the event categorization from data and predictions from MC simulation. /Right)/ Data points and signal-plus-background models for the most sensitive analysis category, where the lower panel in each plot shows the residual signal yield after subtraction of the background. Taken from [[cite:&gammagammatautau]].
 #+BEGIN_figure
-#+ATTR_LATEX: :width .55\textwidth :center
+#+ATTR_LATEX: :width .555\textwidth :center
 [[~/org/PhD/Thesis/figures/ggtt_BDT.pdf]]
-#+ATTR_LATEX: :width .45\textwidth :center
+#+ATTR_LATEX: :width .445\textwidth :center
 [[~/org/PhD/Thesis/figures/ggtt_result.pdf]]
-#+END_figure
-
-#+NAME: fig:ggtt_EFT
-#+CAPTION: /Left)/ Expected and observed upper limits on the nonresonant HH production cross section at the 95% CL, obtained for different values of $\kl$. /Right)/ Expected and observed upper limits on the nonresonant HH production cross section at the 95% CL, for different \ac{BSM} benchmark scenarios, for different values of the $\kl$, $\kt$, $\ctwog$, $\cg$ and $\ctwo$ couplings. Taken from [[cite:&gammagammatautau]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/ggtt_EFT.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/ggtt_scan.pdf]]
 #+END_figure
 
 * Additional bibliography :noexport:

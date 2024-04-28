@@ -3,7 +3,7 @@ The ZZ and ZH processes represent standard candles to validate the HH analyses, 
 The recently published resolved \zzzhbbbb{} analysis [[cite:&zz_zh_bbbb]] uses a series of advanced background estimation techniques to successfully validate a \ac{QCD} estimate using synthetic datasets ([[sec:qcd_bkgd_problem]]).
 
 In order to model the \ac{QCD} background, a control region is defined by requiring three b-tagged jets instead of four.
-In order to reproduce the \ac{SR}, the dataset thus obtained is weighted by two sets of weights to account for additional jet activity and subsisting kinematic mismatches.
+The dataset thus obtained, so as to reproduce the \ac{SR}, is weighted by two sets of weights, ti account for additional jet activity and subsisting kinematic mismatches.
 The weights are derived in a di-jet mass sideband.
 
 The analysis introduces a \ac{DNN} architecture especially designed to handle the b-quark pairing combinatorics: the \ac{HCR} network.
@@ -13,7 +13,7 @@ The final fit is validated using the synthetic dataset, without statistical fluc
 The observed (expected) 95% CL upper limits on the production cross sections correspond to 3.8 (3.8) and 5.0 (2.9) times the \ac{SM} prediction, for the \zzbbbb{} and \zhbbbb{} processes, respectively.
 The analysis indicates that ZH will likely be ovserved first.
 
-* The problem with \ac{QCD} simulation
+* The problem with \ac{QCD} simulations
 <<sec:qcd_bkgd_problem>>
 
 Many analysis in CMS include quark- or gluon- induced jets in their final state particles.
@@ -46,7 +46,7 @@ In addition, it would be beneficial to directly test the ABCD extrapolation in t
 <<sec:hemisphere_mixing>>
 
 The hemisphere mixing technique [[cite:&hemisphere_mixing]] first creates a library of "hemispheres", which arise from the splitting of events along the plane orthogonal to the transverse thrust axis.
-The transverse thrust axis is in turn defined as the axis where the sum of the absolute values of the $\pt$ projections of the all the jets in the event is maximal.
+The latter is in turn defined as the axis where the sum of the absolute values of the $\pt$ projections of the all the jets in the event is maximal.
 The splitting is done using a sample of events with four b-tagged jets, thus "pure" in signal events.
 For each hemisphere a set of four variables is calculated: mass, longitudinal momentum, and transverse momentum perpendicular and parallel to the thrust axis.
 A second pass on data mixes pairs of hemispheres by minimizing the distance of two hemispheres in terms of a normalized sum of the summary variables.
