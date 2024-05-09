@@ -77,6 +77,10 @@
 *** bb pair
 ** Categorization
 ** Signal discrimination from background
+
+* Future
+#+INCLUDE: "chapters/future.org"
+
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]
 [[bibliography:
