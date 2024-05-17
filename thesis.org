@@ -12,7 +12,7 @@
 
 
 
-* Introduction
+* Introduction to Higgs boson pair production
 ** The Standard Model of Particle Physics
 <<sec:SM>>
 *** Brief historical perspective
@@ -20,27 +20,12 @@
 *** The Higgs Mechanism
 #+INCLUDE: "chapters/higgs_mechanism.org"
 *** Experimental status of Higgs boson physics
-** Higgs boson pair production in the SM
+** Higgs boson pair phenomenology in the SM
 #+INCLUDE: "chapters/dihiggs/dihiggs.org"
 *** Production
 #+INCLUDE: "chapters/dihiggs/production.org"
 *** Decay
 #+INCLUDE: "chapters/dihiggs/decay.org"
-
-** Going beyond the SM
-*** Short-comings of the SM
-#+INCLUDE: "chapters/short_comings.org"
-*** Electro-weak phase transition
-#+INCLUDE: "chapters/ew_phase_transition.org"
-*** Singlet Model
-#+INCLUDE: "chapters/singlet_model.org"
-*** Non-resonant BSM HH Production
-#+INCLUDE: "chapters/dihiggs/nonres_BSM_hh.org"
-*** Resonant BSM HH Production
-#+INCLUDE: "chapters/dihiggs/res_BSM_hh.org"
-
-**** Motivaton for the bb\tau\tau analysis
-
 
 ** Experimental status of SM HH Physics
 #+INCLUDE: "chapters/dihiggs/hh_exp_status.org"
@@ -56,30 +41,106 @@
 #+INCLUDE: "chapters/dihiggs/zz_and_zh.org"
 *** Combinations
 #+INCLUDE: "chapters/dihiggs/combinations.org"
-* The CMS Detector
+** Going beyond the SM
+*** SM shortcomings
+#+INCLUDE: "chapters/short_comings.org"
+**** Electro-weak phase transition
+#+INCLUDE: "chapters/ew_phase_transition.org"
+*** Non-resonant BSM HH Production
+#+INCLUDE: "chapters/dihiggs/nonres_BSM_hh.org"
+*** Resonant BSM HH Production
+#+INCLUDE: "chapters/dihiggs/res_BSM_hh.org"
+
+**** Motivaton for the bb\tau\tau analysis
+
+
+* The CMS Detector at the LHC
+** The Large Hadron Collider
+** The CMS Detector
 #+INCLUDE: "chapters/cms_detector.org"
+** Identification and reconstruction of physics objects
+** The CMS trigger system
+*** Level-1
+*** HLT
 
-* The High Granularity Calorimeter
+* Trigger primitives reconstruction for the Level-1 trigger
+** The High Luminosity LHC
+#+INCLUDE: "chapters/cms_upgrades.org"
+** The High Granularity Calorimeter
 
-* Interference studies
-#+INCLUDE: "chapters/interference.org"
+** The dataflow of HGCAL trigger primitives
+** Cluster splitting and possible solutions
+** Development of a simplified HGCal geometry and event processing chain
 
-* The analysis of double Higgs decay to two b quarks and two tau leptons
+* \reshhbbtt{}: strategy definition
 #+INCLUDE: "chapters/bbtt_analysis.org"
-** Samples
+** Data, MC and signal samples
 *** MC Generation
 #+INCLUDE: "chapters/mc_generation.org"
 + include an event display of 2018
+*** Activities as Monte Carlo contact
 ** Triggers
-** Backgrounds
+*** Legacy triggers
+*** Additional triggers
+*** Analysis trigger regions
+** Physics objects
+*** Electrons
+*** Muons
+*** Hadronic \tau's
+*** Jets
+**** b-jets
+*** Missing transverse energy
 ** Selection
 *** \tau\tau pair
 *** bb pair
+**** HH b-tagging network
 ** Categorization
-** Signal discrimination from background
+*** Resolved jets
+*** Boosted jets
+** \tau\tau mass regression
+** QCD background estimation
+#+INCLUDE: "chapters/qcd_estimation.org"
+** Monte Carlo corrections
+*** Pileup reweighting
+*** Pileup jet identification
+*** Jet energy smearing
+*** Legacy trigger scale factors
+*** Additional trigger scale factors
+*** DeepTau scale factors for hadronic \tau's
+*** Lepton scale factors
 
-* Future
+* \reshhbbtt{}: limit extracion
+** Signal discrimination from background
+** Systematic uncertainties
+*** Normalization uncertainties
+*** Shape uncertainties
+** Statistical treatment
+*** The maximum likelihood method
+*** Hypothesis testing with the modified frequentist approach
+** Results
+*** Final limits
+*** Comparison with other resonant \bbtt{} results
+** Future prospects for resonant and non-resonant HH searches
 #+INCLUDE: "chapters/future.org"
+*** \reshybbtt{}
+*** Run3
+*** HL-LHC
+*** Future accelerators
+
+* Effects of finite width and interference in resonant HH production
+*** The Singlet Model
+#+INCLUDE: "chapters/singlet_model.org"
+*** Methodology
+*** Results
+#+INCLUDE: "chapters/interference.org"
+
+
+* Conclusions
+
+* Appendix
+** General control distributions
+** MET SF control distributions
+
 
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]

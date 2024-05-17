@@ -6,7 +6,7 @@ The production of Higgs boson pairs is one of such cases, given its extreme rari
 
 As seen in [[sec:HiggsMechanism]], one of the central pieces of the SM is the Higgs potential (see [[eq:sm_potential]]), where the triple and quartic Higgs couplings play a significant role.
 In the \ac{SM}, the Higgs $\klthree$ parameter drives the strength of the Higgs boson self-coupling, and is uniquely determined by the structure of the scalar potential in [[eq:sm_potential]], and represents the potential's last missing piece from an experimental point of view.
-Indeed, the potential is completely determined by the mass of the Higgs $\mh$, the vacuum expectation value $v=(\sqrt{2}G__{}_{}_{}{F}^{-1/2})^{}}$^{}, and $\klthree$, where $\mh$ and fermi's constant $G__{}_{}_{}{F}$ have already been measured.
+Indeed, the potential is completely determined by the mass of the Higgs $\mh$, the vacuum expectation value $v=(\sqrt{2}G{F}^{-1/2})$, and $\klthree$, where $\mh$ and fermi's constant $G_{F}$ have already been measured.
 
 Measurements of $\klthree$ (or equivalently $\kl$) and $\klfour$ therefore provide a unique consistency test of the \ac{SM}, representing a fundamental and crucial test of the \ac{EWSB} mechanism [[cite:&deFlorian:2227475]].
 Furthermore, and as discussed in [[sec:EWPT]], a Higgs potential deviating from its SM expectation can have dramatic consequences for the understanding and destiny of the Universe.
@@ -16,7 +16,7 @@ Both the \ac{CMS} and the \ac{ATLAS} experiments at the \ac{LHC} are involved in
 A direct measurement of $\klthree$ requires double Higgs boson production while $\klfour$ is first probed in the production of 3 Higgs bosons.
 These quantities can also be measured indirectly, as detailed in [[sec:Combinations]].
 $\kl$ is currently one of the least constrained properties of the Higgs boson.
-
+ 
 # #+NAME: fig:BSM_production_diagrams
 # #+ATTR_LATEX: :width .5\textwidth
 # #+CAPTION: Feynman diagrams for the leading \ac{BSM} HH pair production processes introduced by the \ac{EFT} approach. Three new couplings are thus introduced: $c_{2}$, $c_{2g}$ and $c_{2}$. /k)/ gluon fusion HH ("triangle") /l)/ gluon-fusion HH ("box") /m,n,o)/ \ac{VBF} HH.

@@ -23,6 +23,8 @@
 
 #+LATEX_HEADER: \newcommand{\bbbb}{HH $\rightarrow$ bbbb}
 #+LATEX_HEADER: \newcommand{\bbtt}{HH $\rightarrow$ bb$\tau\tau$}
+#+LATEX_HEADER: \newcommand{\reshhbbtt}{X $\rightarrow$ HH $\rightarrow$ bb$\tau\tau$}
+#+LATEX_HEADER: \newcommand{\reshybbtt}{X $\rightarrow$ HY $\rightarrow$ $\tau\tau$bb}
 #+LATEX_HEADER: \newcommand{\bbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\bbzz}{HH $\rightarrow$ bbZZ}
 #+LATEX_HEADER: \newcommand{\zzfourl}{H $\rightarrow$ ZZ $\rightarrow$ 4l}
