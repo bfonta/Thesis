@@ -1,0 +1,15 @@
+* Pixels
++ New Layer 1 at 29mm from the beamline
+* Muons 
+* HCAL
++ in HCAL hybrid photodiodes were replaces by SiPMs (in Run1)
++ HCAL brings new depth and timing information
+* Bril
++ lumi measurements are challenging
++ uncertainty of 1.4% in 2022
+* L1
++ Folded event building in Run3
++ GPUs in Run3 (and replace CUDA by Alpaka)
++ using PNet in HLT
++ special paths for LLPs
++ scouting

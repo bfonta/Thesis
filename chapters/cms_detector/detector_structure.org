@@ -1,0 +1,31 @@
+They are designed to be versatile and capable of detecting a wide range of physics processes across various energies.
+The CMS experiment was officially proposed in 1992 with the primary goal of discovering the \textbf{Higgs boson}.
+Key to this objective were the channels $H \rightarrow ZZ \rightarrow 4\ell$ and $H \rightarrow \gamma\gamma$, which required an excellent electromagnetic calorimeter for effective electron and photon detection, with an energy resolution constant term equal to or less than \textbf{0.5\%}.
+
+The architecture of the CMS detector is depicted in Figure 2.7.
+It is a cylindrical apparatus with a length of $21.6\,m$ and a diameter of $14.6\,m$, comprising a central section known as the barrel, and two forward sections termed endcaps.
+The precise demarcation between these regions varies according to the specific subdetectors in question.
+
+To fulfill its versatile objectives, the CMS detector is outfitted with an intricate configuration of concentric detection layers.
+Each layer is tailored to identify the various particles produced by collision events.
+At the heart of this configuration, the pixel and strip tracker detectors, which encircle the interaction point, ascertain the location of collision vertices.
+These detectors further delineate the trajectories and momenta of charged particles emanating from the collisions.
+Encasing these trackers, the electromagnetic and hadron calorimeters gauge the energy imparted to their active material by electrons, photons, and hadrons, thereby facilitating precise energy quantification.
+Enveloping the calorimeters, the CMS superconducting solenoid stands as the experiment's most salient characteristic.
+The outermost layer is formed by the muon tracking chambers, which encompass the entire CMS volume.
+
+Redundancy in the data from the various subdetectors is intentional, to maximize the accuracy of measurements for all types of final-state particles.
+The subsequent sections detail the individual components of the CMS detector.
+The application of this data in the offline reconstruction of physics objects is elaborated in Section 2.4.
+
+#+NAME: fig:ggtt_results
+#+CAPTION: Cutaway 3D model of the CMS detector. This perspective makes visible all the sub-detectors at a glance. Taken from [[cite:&cms_cutaway_diagrams]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/cutaway_diagram.pdf]]
+#+END_figure
+
+A high-efficiency central tracking system was another fundamental requirement.
+The tracker is essential for momentum measurement, particle identification, and vertex reconstruction.
+To achieve precise momentum measurement, a powerful magnet was necessary, leading to the use of superconducting technology.
+The CMS detector's structure and components are designed to meet these stringent requirements.

@@ -5,8 +5,6 @@
 #+SETUPFILE: definitions.org
 #+EXCLUDE_TAGS: noexport
 
-#+LATEX: \input{acro_list}
-
 * ToDo [0/0] :noexport: 
 + 
 
@@ -56,33 +54,50 @@
 
 * The CMS Detector at the LHC
 ** The Large Hadron Collider
+*** Design
+*** Operations
+*** Experiments
 ** The CMS Detector
-#+INCLUDE: "chapters/cms_detector.org"
-** Identification and reconstruction of physics objects
+#+INCLUDE: "chapters/cms_detector/cms_detector.org"
+*** Coordinate system
+#+INCLUDE: "chapters/cms_detector/coordinate_system.org"
+*** Detector structure
+#+INCLUDE: "chapters/cms_detector/detector_structure.org"
 ** The CMS trigger system
 *** Level-1
 *** HLT
 
-* Trigger primitives reconstruction for the Level-1 trigger
+** Offline iddentification and reconstruction of physics objects
+*** Particle-flow
+*** Electrons
+*** Muons
+*** Hadronic \tau's
+*** Jets
+*** Missing transverse energy
+** Monte Carlo generation
+#+INCLUDE: "chapters/mc_generation.org"
++ include an event display of 2018
+*** Activities as Monte Carlo contact
+
+* Trigger primitives reconstruction for the HL-LHC HGCAL Level-1 trigger
 ** The High Luminosity LHC
-#+INCLUDE: "chapters/cms_upgrades.org"
+#+INCLUDE: "chapters/cms_detector/cms_upgrades.org"
 ** The High Granularity Calorimeter
 
 ** The dataflow of HGCAL trigger primitives
 ** Cluster splitting and possible solutions
 ** Development of a simplified HGCal geometry and event processing chain
 
-* \reshhbbtt{}: strategy definition
+
+* \reshhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/bbtt_analysis.org"
 ** Data, MC and signal samples
-*** MC Generation
-#+INCLUDE: "chapters/mc_generation.org"
-+ include an event display of 2018
-*** Activities as Monte Carlo contact
+
 ** Triggers
 *** Legacy triggers
 *** Additional triggers
 *** Analysis trigger regions
+*** Note on the inclusion method
 ** Physics objects
 *** Electrons
 *** Muons
@@ -109,11 +124,28 @@
 *** DeepTau scale factors for hadronic \tau's
 *** Lepton scale factors
 
-* \reshhbbtt{}: limit extracion
+* \reshhbbtt{}: Limit extracion
 ** Signal discrimination from background
 ** Systematic uncertainties
 *** Normalization uncertainties
+**** Luminosity
+**** Electrons and muon isolation and identification efficiencies
+**** L1 prefiring
+**** Pile-up reweighting uncertainty
+**** QCD estimation uncertainty
+**** Theoretical HH cross-section
+**** Final state branching fraction
+**** Cross-sections of simulated processes
 *** Shape uncertainties
+**** Hadronic \tau's energy scale
+**** Energy scale corrections for electrons and muons faking taus
+**** Jet energy scale
+**** Jet energy resolution
+**** Scale factors for tau identification with DeepTau
+**** Legacy trigger scale factors
+**** Additional trigger scale factors
+**** B-taggging scale factors
+**** Scale factors for pile-up jet identification
 ** Statistical treatment
 *** The maximum likelihood method
 *** Hypothesis testing with the modified frequentist approach
@@ -128,19 +160,23 @@
 *** Future accelerators
 
 * Effects of finite width and interference in resonant HH production
-*** The Singlet Model
+** The Singlet Model
 #+INCLUDE: "chapters/singlet_model.org"
-*** Methodology
-*** Results
+** Methodology
+** Results
 #+INCLUDE: "chapters/interference.org"
 
 
 * Conclusions
 
+
 * Appendix
 ** General control distributions
 ** MET SF control distributions
 
+
+* List of acronyms
+#+LATEX: \input{acro_list}
 
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]
@@ -148,4 +184,5 @@
 ~/dot-emacs/bibliography/references/higgs.bib,
 ~/dot-emacs/bibliography/references/l1.bib,
 ~/dot-emacs/bibliography/references/hgcal.bib,
-~/dot-emacs/bibliography/references/mc_generation.bib]]
+~/dot-emacs/bibliography/references/mc_generation.bib,
+~/dot-emacs/bibliography/references/detector.bib]]

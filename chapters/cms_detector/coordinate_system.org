@@ -1,0 +1,119 @@
+The CMS experiment adopts a right-handed coordinate system, with the origin placed at the nominal collision point.
+The x-axis points toward the centre of the LHC ring, the y-axis points vertically upward, and the z-axis thus points towards the Jura mountains.
+The structure of the detector makes it natural to use a polar coordinate system.
+The azimuthal angle $\phi$ is measured in the $x - y$ plane from the x-axis, the radial coordinate is given by $r$, and the polar angle $\theta$ is measured from the z-axis in the $y - z$ plane.
+A schematic representation of the CMS coordinate system is shown in Fig. 2.5.
+The relation between the Cartesian and the CMS coordinates is given by:
+
+#+NAME: eq:xyzcoords
+\begin{equation}
+\begin{cases}
+x = r \sin \theta \cos \phi \\
+y = r \sin \theta \sin \phi \\
+z = r \cos \theta
+\end{cases}
+\end{equation}
+
+While this coordinate system is well suited for expressing the orientation of the detector and macroscopic observables, it is not ideal for describing proton-proton collisions.
+A proton-proton collision is actually a parton-parton collision.
+Protons, not being fundamental particles, are made of different constituents, named partons.
+Consider a scenario where two protons collide head-on.
+The four-momentum of the two partons can be written as:
+
+#+NAME: eq:momenta
+\begin{equation}
+\begin{cases}
+p^{\mu}_1 = (x_1E, 0, 0, x_1p) \\
+p^{\mu}_2 = (x_2E, 0, 0, -x_2p) \\
+\end{cases}
+\end{equation}
+
+In these four-vectors, $E$ and $p$ denote the energy and momentum of the proton, respectively.
+The $x$ and $y$ components are null as protons are primarily accelerated longitudinally at high energies, leading to negligible transverse momentum for the partons inside them.
+Consequently, the $x_1$ and $x_2$ variables can be interpreted as the fractions of energy that the partons carry away from the original protons.
+After the collision, the resulting momentum is given by:
+
+#+NAME: eq:pmomenta
+\begin{equation}
+(p_1 + p_2)^{\mu} = ((x_1 + x_2)E, 0, 0, (x_1 - x_2)p)
+\end{equation}
+
+The CMS frame is not the centre-of-mass frame of the collision.
+The relativistic $\beta$ factor, in the high-energy limit where $E \approx p$, results to be:
+
+#+NAME: eq:beta
+\begin{equation}
+\beta = \frac{x_1 - x_2}{x_1 + x_2}
+\end{equation}
+
+The $x_1$ and $x_2$ quantities are unknown and change from event to event, consequently also the related Lorentz-boost is unknown.
+It is thus beneficial to use variables that are Lorentz-invariant for boosts along the longitudinal direction.
+The par excellence observables are the transverse momentum $p_T$ and transverse mass $m_T$:
+
+#+NAME: eq:transverse_momenta
+\begin{equation}
+\begin{cases}
+p^2_T = p^2_x + p^2_y \\
+m^2_T = m^2 + p^2_x + p^2_y = E^2 - p^2_z \\
+\end{cases}
+\end{equation}
+
+
+From these variables, the transverse energy is defined as:
+#+NAME: eq:transverse energy
+\begin{equation}
+E^2_T = m^2 + p^2_T
+\end{equation}
+
+which is equal to the transverse momentum for massless particles.
+Another variable is the rapidity $y$:
+
+#+NAME: eq:rapidity
+\begin{equation}
+y = \frac{1}{2} \ln \left( \frac{E + p_z}{E - p_z} \right)
+\end{equation}
+
+A Lorentz-boost along the z-axis shifts the rapidity by a constant term that depends on the boost itself.
+The rapidity itself is thus not Lorentz-invariant; its difference is.
+One of the advantages of using the rapidity is that particle production is roughly constant as a function of $y$.
+For ultra-relativistic particles, the rapidity is usually converted to the pseudorapidity $\eta$:
+
+
+#+NAME: eq:pseudo-rapidity
+\begin{equation}
+y \approx \frac{1}{2} \ln \left( \frac{E(1 + \cos \theta)}{E(1 - \cos \theta)} \right)
+= -\frac{1}{2} \ln \left( \tan \left( \frac{\theta}{2} \right) \right)
+\equiv \eta
+\end{equation}
+
+The pseudorapidity is a pure geometrical variable, depending only on the angle $\theta$.
+It can be also used to define a Lorentz-invariant spatial separation between two particles:
+
+#+NAME: eq:deltar
+\begin{equation}
+\Delta R = \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}
+\end{equation}
+
+Based on the $\eta$ coordinate, the detector is divided into a central part called barrel, and two forward parts called endcaps.
+The exact $\eta$ value marking the transition between the two regions depends on the specific sub-detector.
+
+#+NAME: fig:pseudorapidity
+#+CAPTION: Schmeatic of different pseudorapidity values and its polar angle $\theta$ counterparts. Courtesy of Izaak Neutelings [[cite:&izaak_neutelings]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/pseudorapidity_diagram.pdf]]
+#+END_figure
+
+#+NAME: fig:cords_cms
+#+CAPTION: The coordinate system of the CMS detector, with the \ac{IP} at its origin. The relative geographical location of \ac{CMS} is also provided. Courtesy of Izaak Neutelings [[cite:&izaak_neutelings]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/coordinates_left.pdf]]
+#+END_figure
+
+#+NAME: fig:cords_lhc
+#+CAPTION: Schematic illustration of the standard coordinate system at the CMS detector, represented relative to the \ac{LHC} and the other three main LHC experiments. Courtesy of Izaak Neutelings [[cite:&izaak_neutelings]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/coordinates_cms.pdf]]
+#+END_figure

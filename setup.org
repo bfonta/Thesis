@@ -3,9 +3,9 @@
 #+LATEX_HEADER: \usepackage{siunitx}
 
 #+LATEX_HEADER: \usepackage{geometry}
-#+LATEX_HEADER: \geometry{margin=.5in}
+#+LATEX_HEADER: \geometry{margin=1in}
 
-#+LATEX_HEADER: \usepackage[nolist,nohyperlinks]{acronym}
+#+LATEX_HEADER: \usepackage[nohyperlinks,printonlyused]{acronym}
 
 #+LATEX_HEADER: \usepackage{cleveref}
 #+LATEX_HEADER: \crefname{figure}{fig.}{figs.}
