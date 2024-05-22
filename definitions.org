@@ -16,6 +16,8 @@
 #+LATEX_HEADER: \newcommand{\xshhsm}{\sigma_{\text{HH}}^{\text{SM}}}
 #+LATEX_HEADER: \newcommand{\xshh}{\sigma_{\text{HH}}}
 
+#+LATEX_HEADER: \newcommand{\tauh}{$\tau_{\text{h}}$}
+
 #+LATEX_HEADER: \newcommand{\zll}{Z $\rightarrow$ ll}
 #+LATEX_HEADER: \newcommand{\zllg}{Z $\rightarrow$ ll$\gamma$}
 
