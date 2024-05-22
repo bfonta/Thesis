@@ -147,8 +147,9 @@
 **** B-taggging scale factors
 **** Scale factors for pile-up jet identification
 ** Statistical treatment
-*** The maximum likelihood method
 *** Hypothesis testing with the modified frequentist approach
+#+INCLUDE: "chapters/statistics/hypothesis.org"
+*** The maximum likelihood method
 ** Results
 *** Final limits
 *** Comparison with other resonant \bbtt{} results
