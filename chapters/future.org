@@ -12,7 +12,7 @@ This opens up a potentially large phase-space for boosted $H\rightarrow bb/cc/a\
 Run 3 will extend \ac{PNet}'s tasks, with jet flavour classification, $\tau\tau$ identification and jet mass regression.
 
 Additionally, an improved trigger strategy has been implemented, considering both data scouting and parking cite:&parking_scouting_run3_cms, and with the inclusion of \ac{PNet} b-tagging directly in the trigger.
-New triggers will benefit \bbtt{} analysis with the added 4j+2b and 4j+1b+1\tauh{} paths.
+New triggers will benefit \bbtt{} analysis with the added 4j+2b and 4j+1b+1\tauh{} paths (the latter in 2024 only).
 The inclusion of \ac{PNet} \tau-tagging at trigger level is being envisaged, and might be done still during Run3.
 We also expect that some HH analysis might benefit from the inclusion of synthetic datasets, as discussed in [[sec:hemisphere_mixing]].
 The first \ac{CMS} Run3 HH results will soon be available.
