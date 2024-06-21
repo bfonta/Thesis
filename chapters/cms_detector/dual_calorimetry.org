@@ -1,0 +1,42 @@
+* Hadron calorimeter issues
++ hadron component has many components, may $\pi^{0}$
++ the shower shape cannot be well defined, while EM showers have well defined shapes
++ many fluctuations, increase of EM component with energy, since as the enery increase one has more stages to which the decya particles can convert into EM components
+  + the em shower fraction is mainly carried by $\pi^{0}$
++ invisible energy motly caused by free protons and neutrons from nuclei
+  + limits the resolution
+  + about 30/40% of the non-em shower energy component
++ response: detected signal per unit of energy deposit
+  + response to EM and HAD is independent and generally different
+  + overcompensation (HAD response larger than EM response) is possible with a lot of uranium, for instance
+
+** Compensation
++ e/h=1 -> compensation
++ one can tune the active-to-passive ratio to control the compensation
+  + adding uranium or hydrogen increases 'h', for instance
++ photoelectric effect has a Z^5 dependence in high-Z absorbers
++ does not guarantee higher resolution
++ high-Z required
++ low sampling fration required
++ high-res em and high-res hadron calorimeter are mutually exclusive (slide 15)
+
+* Dual read-out calorimeter
++ correction event-by-event
++ consists on cherenkov + scintillation (Cherenkov only measures the EM component)
++ enables better reconstruction of total shower energy and fraction of EM energy
+
+  
+* RD52 results
++ PID improves, above 99% electron efficiency
++ observed 10% (50%) of the energy of a EM shower fits within 1mm (1cm) around the shower axis!
+
+* IDEA
++ tried dual calorimeter with crystals: with PMT the light yield was too low, so Cherenkov did not work
++ currently around 50M fibers (less than 100M originally considered) in the calorimeter
++ fancy DNNs show that a very significant performance boost comes from additional dual read-out calorimetry variables
+
+
+* Additional bibliography :noexport:
++ [[https://indico.cern.ch/event/1423661/][CERN Seminar]] (Friday 7 June 2024)
++ Dual calorimetry in future colliders: https://ar5iv.labs.arxiv.org/html/2204.00098
++ [[https://cds.cern.ch/record/1563671/files/arXiv:1307.5538.pdf][RD52]]
