@@ -1,18 +1,15 @@
 #+TITLE: Di-Higgs Searches at CMS
-#+AUTHOR: Bruno Alves \small{for the CMS Collaboration}
+#+AUTHOR: 
 #+EMAIL: bruno.alves@cern.ch 
-#+LATEX_CLASS: article
+#+LATEX_CLASS: pos
 #+SETUPFILE: setup_dis.org
 #+SETUPFILE: definitions.org
 #+EXCLUDE_TAGS: noexport
 
+#+LATEX_HEADER: \abstract{The production of Higgs boson pairs (HH) at the LHC is the main handle for the measurement of the Higgs boson interaction with itself and is thus a fundamental test of the Standard Model theory as well as for determining the Higgs potential. The most recent results from the CMS collaboration on measurements of non-resonant HH production using different final states and their combination using the data set collected by the CMS experiment at a centre of mass energy of 13 TeV will be presented.}
+
 #+LATEX: \input{acro_list}
 
-\begin{abstract}
-\noindent The production of Higgs boson pairs (HH) at the LHC is the main handle for the measurement of the Higgs boson interaction with itself and is thus a fundamental test of the Standard Model theory as well as for determining the Higgs potential.
-The most recent results from the CMS collaboration on measurements of non-resonant HH production using different final states and their combination using the data set collected by the CMS experiment at a centre of mass energy of 13 TeV will be presented.
-\end{abstract}
-  
 * Introduction
 #+INCLUDE: "dis_proceedings/intro.org"
 

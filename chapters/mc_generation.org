@@ -9,6 +9,27 @@ The BBR are what remains after a parton is scattered out of each of the two init
 A set of QCD parameters is derived in different ways (WHICH ONES??) to precisely describe aspects of the UE, such as the modelling of the hadronization, the initial and final state radiation and the BBR.
 A complex fitting procedure, using data collected by CDF and CMS at different energies is used, extracting the parameters known as CMS Pythia (CP) Tunes.
 
+* Monte Carlo and data processing in \ac{CMS}
+** Data processing chain
++ @Follow section 2.5 of Alessandro's thesis@
+  
+** Pile-up production
+There are two ways to produce samples with simulation of pile-up: premix and classical mixing [[cite:&pileup_production]].
+
+Classical mixing implies a previous production of a \ac{MB} sample (with a datatier "GEN-SIM").
+It contains the event at generator level and the interaction of the particles with the detector material.
+For the generation of the sample with \ac{PU} (which happens in the =DIGI-RECO= step), a root =wmLHEGS/GS= request is digitized (namely the interaction of the particles with the detector material are used to simulate the signals in the detector cells) together with the PU sample.
+The =DIGI-RECO= step needs the PU input dataset and the pile-up scenario, namely according to which distribution the pile-up should be simulated (and added to the root request).
+Since the =DIGI= step is quite consuming and happens for both root request and \ac{MB} sample, classical mixing is generally more time and CPU consuming.
+
+Premix is different because the \ac{PU} sample is digitized separately (at the time of the production of the premix library).
+A \ac{MB} sample (datatier =GEN-SIM=) is produced in the same way as before, but it is here used for the production of a SingleNeutrino sample (basically nothing in the final state) which is interfaced with the simulation of the \ac{PU} according to a certain scenario and using the \ac{MB} sample.
+The output of the SingleNeutrino sample is a =GEN-SIM-DIGI= sample (already digitized).
+For root requests using premix \ac{PU} simulation, the =DIGI= step is run only on them, while the \ac{PU} simulation is added after this step.
+Since the =DIGI= step is run only once, premix requests are much faster and less CPU consuming than classical mixing requests.
+
 
 * Additional bibliography :noexport:
 + [[https://indico.cern.ch/event/816226/contributions/3606740/attachments/1947228/3230794/Talk_Tuning_MPI.pdf][Tuning]]
++ [[https://cms-pdmv.gitbook.io/project/untitled-4#what-is-the-difference-between-premix-and-classical-mixing][Classical mixing vs premixing]]
+  

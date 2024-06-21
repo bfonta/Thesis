@@ -1,12 +1,7 @@
 #+OPTIONS: toc:nil        (no default TOC at all)
 
 #+LATEX_HEADER: \usepackage{hyperref}
-#+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{siunitx}
-
-#+LATEX_HEADER: \usepackage{geometry}
-#+LATEX_HEADER: \geometry{margin=.5in}
-
 #+LATEX_HEADER: \usepackage[nolist,nohyperlinks]{acronym}
 
 #+LATEX_HEADER: \usepackage{cleveref}
@@ -16,3 +11,12 @@
 #+LATEX_HEADER: \Crefname{equation}{Eq.}{Eqs.}
 #+LATEX_HEADER: \crefname{table}{table}{tables}
 #+LATEX_HEADER: \Crefname{table}{Table}{Tables}
+
+#+LATEX_HEADER: \emailAdd{@EMAIL@}
+#+LATEX_HEADER: \author*[a]{Bruno Alves}
+#+LATEX_HEADER: \affiliation[a]{École Polytechnique, Route de Saclay, 91128 Palaiseau Cedex, France}
+#+LATEX_HEADER: \onbehalf{for the CMS Collaboration}
+#+LATEX_HEADER: \FullConference{31st International Workshop on Deep Inelastic Scattering (DIS2024) \\ 8–12 April 2024 \\ Grenoble, France \\}
+
+
+  

@@ -124,7 +124,9 @@
 *** DeepTau scale factors for hadronic \tau's
 *** Lepton scale factors
 
-* \reshhbbtt{}: Limit extracion
+** Control regions
+#+INCLUDE: "chapters/control_regions.org"
+* \reshhbbtt{}: Limit extraction
 ** Signal discrimination from background
 ** Systematic uncertainties
 *** Normalization uncertainties
