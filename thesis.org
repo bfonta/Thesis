@@ -16,7 +16,7 @@
 *** Brief historical perspective
 *** The building blocks of the SM
 *** The Higgs Mechanism
-#+INCLUDE: "chapters/higgs_mechanism.org"
+#+INCLUDE: "chapters/intro_hh/higgs_mechanism.org"
 *** Experimental status of Higgs boson physics
 ** Higgs boson pair phenomenology in the SM
 #+INCLUDE: "chapters/dihiggs/dihiggs.org"
@@ -41,9 +41,9 @@
 #+INCLUDE: "chapters/dihiggs/combinations.org"
 ** Going beyond the SM
 *** SM shortcomings
-#+INCLUDE: "chapters/short_comings.org"
+#+INCLUDE: "chapters/intro_hh/short_comings.org"
 **** Electro-weak phase transition
-#+INCLUDE: "chapters/ew_phase_transition.org"
+#+INCLUDE: "chapters/intro_hh/ew_phase_transition.org"
 *** Non-resonant BSM HH Production
 #+INCLUDE: "chapters/dihiggs/nonres_BSM_hh.org"
 *** Resonant BSM HH Production
@@ -81,7 +81,7 @@
 
 * Trigger primitives reconstruction for the HL-LHC HGCAL Level-1 trigger
 ** The High Luminosity LHC
-#+INCLUDE: "chapters/cms_detector/cms_upgrades.org"
+#+INCLUDE: "chapters/hgcal/cms_upgrades.org"
 ** The High Granularity Calorimeter
 
 ** The dataflow of HGCAL trigger primitives
@@ -90,7 +90,7 @@
 
 
 * \reshhbbtt{}: Strategy definition
-#+INCLUDE: "chapters/bbtt_analysis.org"
+#+INCLUDE: "chapters/dihiggs/bbtt_analysis.org"
 ** Data, MC and signal samples
 
 ** Triggers
@@ -114,7 +114,7 @@
 *** Boosted jets
 ** \tau\tau mass regression
 ** QCD background estimation
-#+INCLUDE: "chapters/qcd_estimation.org"
+#+INCLUDE: "chapters/dihiggs/qcd_estimation.org"
 ** Monte Carlo corrections
 *** Pileup reweighting
 *** Pileup jet identification
@@ -125,7 +125,7 @@
 *** Lepton scale factors
 
 ** Control regions
-#+INCLUDE: "chapters/control_regions.org"
+#+INCLUDE: "chapters/dihiggs/control_regions.org"
 * \reshhbbtt{}: Limit extraction
 ** Signal discrimination from background
 ** Systematic uncertainties
@@ -156,7 +156,7 @@
 *** Final limits
 *** Comparison with other resonant \bbtt{} results
 ** Future prospects for resonant and non-resonant HH searches
-#+INCLUDE: "chapters/future.org"
+#+INCLUDE: "chapters/intro_hh/future.org"
 *** \reshybbtt{}
 *** Run3
 *** HL-LHC
@@ -164,10 +164,10 @@
 
 * Effects of finite width and interference in resonant HH production
 ** The Singlet Model
-#+INCLUDE: "chapters/singlet_model.org"
+#+INCLUDE: "chapters/interf_studies/singlet_model.org"
 ** Methodology
 ** Results
-#+INCLUDE: "chapters/interference.org"
+#+INCLUDE: "chapters/interf_studies/interference.org"
 
 
 * Conclusions
