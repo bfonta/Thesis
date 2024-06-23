@@ -1,0 +1,101 @@
+<<sec:hgcal_intro>>
+
+\Ac{CMS} [[cite:&cms_collab]] is thus developing the \ac{HGCAL} [[cite:&hgcalTDR]]: a novel endcap sampling calorimeter with an extremely fine granularity.
+About \num{6} million channels will enable particle identification and high resolution measurements of the position, energy and time of high-energy collision products.
+Examples include the measurement of narrow and merged jets, \ac{PU} energy, and performing calorimetric tracking for the first time.
+Given its location and number of active sensors, data rates of \SI{\sim 100}{\tera\byte\per\second} are expected.
+The latter is a novel endcap calorimeter with fine transverse and longitudinal granularity, capable of fully exploiting the physics events produced under the expected tight time budget and extreme radiation conditions.
+The proposed design of \ac{HGCAL} includes two sections measuring the properties of different types of particles.
+The \ac{EM} section covers the first 26 layers, closer to the interaction point.
+There, \ac{Si} sensors organized in hexagonal modules act as active material, in order to sustain the expected radiation.
+Layers of \ac{Si} are interleaved with absorbers.
+The following 21 layers, comprising the \ac{HAD} section, are split into 8 \ac{Si}-only layers followed by 14 hybrid layers, with \ac{Si} closer to the beamline and cost effective plastic scintillator at lower \ac{eta} values (see \cref{fig:hgcal}). 
+Each endcap weighs \SI{215}{\tonne} and measures \SI{2}{\meter} (\SI{2.3}{\meter}) in the longitudinal (radial) direction.
+Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on standard servers.
+\Ac{L1} performs an online selection of interesting physics processes, whose cross sections are typically orders of magnitude lower than the total proton-proton cross section.
+We present and discuss several techniques to minimize or completely remove the splitting.
+We conclude by discussing future steps, some of which are already in progress.
+
+These proceedings describe the \ac{HGCAL} \ac{L1} reconstruction chain, from raw energy deposits to the creation of \acp{TP}, which are detector-specific inputs to the \ac{L1}.
+Special emphasis is placed on the study of cluster splitting, which represents a known and so far unstudied shortcoming of the \ac{TP} chain.
+The \ac{phi} in the transverse plane, the radial coordinate $R$ and the $z$-axis lying parallel to the beam-line form the binned projective \coordsa{} coordinate system used in this work [[cite:&cms_collab]].
+Since $\tan(\theta) = R/z$, where $\theta$ is measured from the $z$-axis, for a constant angle $\theta$ corresponds a constant \rz{}.
+Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
+The latter's scintillation light is read out by direct on-tile \ac{Si} photo-multipliers (\cref{fig:hgcal}). Stainless steel and \ch{Cu} are used as absorbers.
+\ac{Si} sensors are available in three types with varying thicknesses (120, 200 and 300 \si{\micro\meter}), capacitances and sizes, to widthstand different radiation conditions according to their physical location.
+The size of each \ac{Si} sensor is \SI{0.52}{\cm\squared} (for \SI{120}{\micro\meter} \ac{Si} sensors) and \SI{1.18}{\cm\squared} (\qty{200} and \SI{300}{\micro\meter}).
+Scintillators range in size from \qtyrange{4}{30}{\cm\squared}, and the number of \ac{Si} (scintillator) channels is \num{\sim 6} million (\num{\sim 240} thousand).
+In total, \SI{\sim 620}{\meter\squared} of \ac{Si} and \SI{\sim 400}{\meter\squared} of plastic scintillator are employed.
+The full system operates at a temperature of \SI{-35}{\celsius} maintained by a \ch{CO2} cooling system.
+
+#+NAME: fig:hgcal
+#+ATTR_LATEX: :width 1.\textwidth
+#+CAPTION: Schematic views of \ac{HGCAL}. \textit{a)} Longitudinal profile of positive endcap with highlighted \ac{eta} range and \ac{EM} and \ac{HAD} sections /b)/ Transversal view of a \ac{Si}-only layer, with different colors representing different sensor thicknesses /c)/ Same as \textit{b} for a hybrid layer /d)/ 3D view of \ac{HGCAL}.
+[[~/org/PhD/Thesis/figures/hgcal/hgcal_mod.png]]
+
+
+* Alessandro :noexport:
+The existing ECAL and HCAL forward calorimeters were designed for an integrated luminosity of 500 $\rm fb^{-1}$, which is expected to be exceeded shortly after the beginning of the HL-LHC. Beyond this point, the physics performance will degrade to an unacceptable level \cite{Contardo:2015bmq}. The CMS experiment thus foresees the complete replacement of the endcap calorimeters with a profoundly different calorimeter. It is clear from simulations that the new sub-detector will have to withstand a fluence of $10^{16}~\rm n_{eq}/cm^2$ and a dose of 2 MGy (cfr Fig.~\ref{ch2:fig:dose}). R\&D activities have proven that the best material to meet these requirements is silicon, which can cope with fluences up to $1.5\times10^{16}~\rm n_{eq}/cm^2$, 50\% higher than the one expected during phase-2. Hence, silicon was selected to be the active material of the new detector. In addition to radiation hardness, the new calorimeter must satisfy other requirements outlined below.
+\begin{itemize}
+	\item A dense calorimeter to ensure lateral containment of showers.
+	\item A fine lateral granularity to allow the separation of close-by showers and the observation of narrow jets. The consequent small cell size will reduce the energy equivalent of electronics noise increasing the S/N ratio. 
+	\item A fine longitudinal granularity in order to sample the longitudinal development of showers for good energy resolution, implementing pattern recognition algorithms, and improving PU rejection.
+	\item A precise timing measurement that will mainly help in PU rejection and identification of vertices.
+	\item The ability to effectively contribute to the L1 decision.
+\end{itemize}
+The result of all these requirements is the new High Granularity endcap CALorimeter (HGCAL) \cite{CMS:2017jpq}, a sampling calorimeter composed of an electromagnetic section (CE-E) and a hadronic section (CE-H), covering the $1.5<|\eta|<3.0$ region, and weighing 215 tonnes per endcap. The active material will be hexagonal silicon sensors in the more demanding radiation regions, i.e., the entire CE-E compartment and a large fraction of the CE-H sector. The choice of the hexagonal shape is to cover the entire area more efficiently. Instead, in the more outer region of the CE-H, where the dose and fluence will be lowered (dose less than 3 kGy and fluence limited to $8\cdot10^{13}~\rm n_{eq}/cm^2$), the active material will be replaced by cheaper highly-segmented plastic scintillator tile boards. The CE-E will extend for 26 layers, with a sequence of CuW, Cu, stainless steel, and Pb absorbers, for a total radiation length of 27.7$X_0$ and a nuclear length of $1.5\lambda$. On the other hand, the CE-H will extend for 21 layers, with stainless steel as absorber, for a total interaction length of $8.5\lambda$. Everything will be enclosed in a thermally shielded volume at $-35\degree$C, to ensure the proper functioning of the silicon sensors. A summary of the properties of the HGCAL is reported in Fig.~\ref{ch2:fig:HGCALsummary}. \\
+
+The 8-inch hexagonal silicon sensors will be deployed with three different thicknesses of $300$, $200$, and $120~\mu$m, in regions of increasing fluence. In order to optimise the charge collection and reduce the leakage current, it is advantageous to use thinner sensors in the regions of higher fluence. Each silicon sensor will be made of different cells for the readout with two different active areas: 0.52 $\rm cm^2$ for the $120~\mu$m active thickness sensors, and 1.18 $\rm cm^2$ for the $300$ and $200~\mu$m active thickness sensors. This will define two regions in the detector, namely a \textit{high-density} and \textit{low-density} region, depending on the size of the single readout diode. The transition region will be at a radius of $70 \rm ~cm^2$, corresponding to $|\eta|\simeq2.15$. The high-density, i.e., more granular region, is located at higher pseudorapidity, where it is expected a larger number of tracks entering to the HGCAL. 
+
+The silicon sensors will be placed inside \textit{modules}, mounted on one side to a baseplate, and on the other side to the hexaboard containing the front-end electronics and the printed circuit board. The baseplate is composed of CuW in the CE-E, contributing to the CE-E absorber, while in the CE-H the baseplate material is carbon fibre, with a negligible contribution to the CE-H absorber material. These modules are mounted on either side of a 6 mm thick Cu cooling plate that forms, combined with the CuW baseplate, one absorber layer. At a distance of 1.5 mm from the hexaboard, the motherboard groups the hexaboards in larger physical and logical units. A sequence of motherboard-silicon module-motherboard is sandwiched between two 2.1 mm thick lead planes clad with 0.3 mm stainless steel (SS) sheets, forming an alternative absorber layer. This composition leads to an alternate sequence of SS + Pb and CuW + Cu absorber layers, hence a different amount of absorbing material in front of an active layer depending on whether it is odd or even, as shown in Fig.~\ref{ch2:fig:CEEcass}. This structure has visible consequences in the longitudinal development of a shower, resulting in a different amount of energy released in the odd and even layers (cfr Sec.~\ref{ch7:phoCLUE3D}). The HGCAL will have a total of 6 million silicon channels read out independently, organised in 30,000 modules. These modules will be assembled and mounted into 60$\degree$ self-supporting units called \textit{cassettes}.\\
+
+\begin{table*}[!htb]
+	\centering
+	\caption{
+		Features of the silicon sensors in the layers deploying only silicon sensors. The silicon cell size defines two regions, namely the high-density and low-density region.
+		\label{ch2:tab:HGCALparameters}
+	}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{c|cc|c}
+		Region & \multicolumn{2}{c|}{Low-density} & High-density \\
+		\hline
+		Active thickness ($\mu$m) & \multicolumn{1}{c|}{300} & 200 & 120 \\
+		\hline
+		Cell size ($\rm cm^2$) & \multicolumn{1}{c|}{1.18} & 1.18 & 0.52 \\
+		\hline
+		Expected range of fluence ($\times 10^{15}\rm n_{eq}/cm^2$) & \multicolumn{1}{c|}{0.1-0.5} & 0.5-2.5 & 2-7 \\
+		\hline
+		Largest outer radius ($\rm cm$) &\multicolumn{1}{c|}{$\sim$ 180} & $\sim$ 100 & $\sim$ 70 \\
+		\hline
+		Smallest inner radius ($\rm cm$) &  \multicolumn{1}{c|}{$\sim$100} & $\sim$ 70 & $\sim$ 35 \\
+	\end{tabular}
+\end{table*}
+
+Where the dose permits in the CE-H, the silicon sensors will be replaced by plastic scintillators. Consequently, the CE-H is subdivided into two sections: the first 7 layers, where only silicon sensors are deployed; the remaining layers, where the inner part is composed of silicon sensors and the outer part is composed of scintillators. This configuration will result in the $|\eta|>2.4$ region of the HGCAL that will be covered exclusively by silicon sensors. The scintillating cells will have a variable size from 4 $\rm cm^2$ in the inner region to 30 $\rm cm^2$ in the outer region. The scintillation light will be read out directly by on-tile silicon photo-multipliers. The absorber in the CE-H consists of 10 planes of 41.5 mm thick SS plates, followed by another 10 planes with a thickness of 60.7 mm. The first absorber layer, dividing the CE-E from the CE-H, is instead 45 mm thick, also serving as a structural support of the entire CE-E. In total, there will be 240,000 scintillator channels organised in 4,000 boards. For layers featuring both types of active material, the inner silicon component and the outer scintillator component will be assembled into cassettes with an angular width of 30$\degree$, that are later joined together to form a 60$\degree$ unit.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{../Figures/Chapter2/OverviewDrawing_March2022}
+	\caption{
+		Overview of the features of the HGCAL and cross section view of the calorimeter. The CE-E and first layers of the CE-H sections will be made entirely of silicon sensors, while the last layers will be a mixture of silicon sensors and plastic scintillators. The electromagnetic calorimeter (CE-E) comprises 26 layers (27.7$X_0$, $1.5\lambda$), whereas the hadronic calorimeter (CE-H) comprises 7 silicon layers and others 14 layers made of silicon and scintillators ($\sim8.5\lambda$).
+		%The transition region between the two components is defined by the expected fluence, which should limited to $8\times10^{13}\rm n_{eq}/cm^2$, and the integrated dose, which should be less than 3 kGy.
+		\label{ch2:fig:HGCALsummary}}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Figures/Chapter2/CEEcass}
+	\caption{
+		Longitudinal structure of a fundamental unit of the CE-E. Each unit comprises two sampling layers.
+		\label{ch2:fig:CEEcass}}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{../Figures/Chapter2/ModuleStructure}
+	\caption{
+		(Left) Representation of the silicon sensors with two possible cell sizes. (Right) The left half-circle shows the layout of a layer where only silicon sensors are present. The radial changes in darkness of colour indicate the different silicon thickness: $300$, $200$, and $120~\mu$m. The solid black line marks the boundary between the high-density and low-density region. The succession of green and yellow colours delimit the 60$\degree$ cassettes. The right half-circle shows the layout of a layer where both silicon sensors and scintillators are present. The blue lines in the scintillator part and the red lines in the silicon part delimit the 30$\degree$ cassettes. Figure adapted from \cite{Bonanomi:2021yex}.
+		\label{ch2:fig:HGCALstructure}}
+\end{figure}
+
+In conclusion, the new endcap calorimeter will be the first large-scale silicon-based imaging calorimeter employed in a high-energy experiment. This detector will offer the unique capability of performing calorimetry with tracker-like granular information, enabling unprecedented accuracy using position, energy, and timing information. This will open a new era in calorimetry. Such a revolution on the hardware side must be accompanied by another similar revolution on the reconstruction side, both online and offline. The development and optimisation of the offline reconstruction is one of the topics of this thesis and will be discussed in Ch.~\ref{ch7} and Ch.~\ref{ch8}.

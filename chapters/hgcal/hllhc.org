@@ -1,0 +1,11 @@
+<<sec:hllhc>>
+
+The \ac{HL-LHC} will start taking data in 2029, achieving unprecedented instantaneous luminosities of \SI{\sim5e34}{\per\cm\squared\per\second} (more than twice of \ac{LHC}’s current value) and a \ac{PU} of up to 200 (currently \num{\sim 50} on average [[cite:&pileup_twiki]]).
+An integrated luminosity of \SI{\sim 3}{\per\atto\barn} should be reached over a period of 10 years [[cite:&hllhc]], while current CMS endcap calorimeters are designed to sustain up to \SI{500}{\per\femto\barn}.
+
+#+NAME: fig:hllhc
+#+ATTR_LATEX: :width 1.\textwidth
+#+CAPTION: The \ac{HL-LHC} project timeline. Run3 is currently on-going, and the \ac{HL-LHC} will start collecting data in 2029, following three years of LHC shutdown for detector upgrades.
+[[~/org/PhD/Thesis/figures/hgcal/hllhc.pdf]]
+
+A dramatic performance degradation is foreseeable for higher luminosities.

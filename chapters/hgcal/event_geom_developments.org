@@ -1,0 +1,9 @@
+<<sec:event_geom_developments>>
+
+I developed a unified set of \texttt{Python} classes from scratch to process HGCAL samples and produce a simplified version of the TC geometry, including both \ch{Si} and scintillator sections[fn::See an example in \url{https://github.com/bfonta/bye_splits/pull/26}.].
+The geometry and specific events are then deployed via dedicated interactive \texttt{Python} visualization libraries, of which I have written 2D and (a proof of concept of) 3D visualization, including how to potentially merge the visualizations from different libraries with Flask [[cite:&flask]].
+The investigation and writing of the geometry revealed some bugs in the official \ac{CMSSW} [[cite:&cmssw]] implementation.
+I have also learned how to deploy a web application with the 2D/3D visualizations using CERN's =Platform-as-a-Service= tool (powered by =OKD4= / =Open Shift 4=) via its convenient =S2I= service.
+This is useful for information sharing and ease of access.
+The framework, including the reconstruction chain, is currently being used and actively developed by a small team at LLR, and serves as an essential ground for the work of two other PhD candidates and two younger students.
+This work has been presented at PyHEP 2023 [[cite:&bruno_pyhep23]].

@@ -1,0 +1,72 @@
+The goal of \ac{TPG} is to provide valuable information to the CMS Level-1 (L1) trigger, within limited time and bandwidth budgets, via \acp{TP}.
+\acp{TP} are the building blocks of \acp{L1}.
+In HGCAL, they consist of module towers and cluster-related variables, such as energy, positions and shapes.
+\acp{TPG} includes all steps from data collection in the front-end (FE) chips at \SI{40}{\mega\hertz} to the production of \acp{TP} in the \ac{BE} electronics [[cite:&hgcalTDR]].
+It follows the principle of reducing data throughput as much and as soon as possible, exploiting pipelined algorithms whenever feasible.
+It must fit within a latency of \SI{\sim 5}{\micro\second}, taken from the total L1 \SI{12.5}{\micro\second} latency [[cite:&l1TDR]].
+It has to cope with power, cost, space and channel routing constraints [[cite:&jb_hdr]].
+
+In the \ac{FE}, trigger data processing is performed by \ac{HGCAL}'s dedicated read-out chips (\acp{HGCROC} [[cite:&hgcroc]]) at \SI{300}{\tera\byte\per\second}, and by \ac{ECON-T} chips at \SI{90}{\tera\byte\per\second} [[cite:&econ;&hgcalTDR]].
+The \ac{HGCROC} reduces the prohibitive data throughput by grouping 4 or 9 channels into \acp{TC}, where each \ac{Si} module comprises 48 \acp{TC}.
+Only \acp{TC} in odd-numbered layers are considered.
+Timing information cannot be exploited in the trigger path due to bandwidth constraints.
+The ECON-T concentrates, selects and/or aggregates TCs within a single module (3 or 6 \acp{HGCROC}) and builds \textit{module sums}, where the energies of TCs in a module are summed without applying any threshold.
+The data is then sent via \SI{1.28}{\giga\bit\per\second} e-links to lpGBT ASICs [[cite:&lpgbt]], serialized to \SI{10.24}{\giga\bit\per\second}, and sent via optical-links [[cite:&vtrxp]] to the off-detector \ac{BE}.
+
+My work is mostly concerned with the \ac{BE}, which is composed of two processing stages (\ac{S1} and \ac{S2}) running on Serenity boards [[cite:&serenity]] with 128-link Xilinx VU13P FPGAs.
+Their assigned latency budget is \SI{\sim 2.5}{\micro\second}.
+\acp{FPGA} in \ac{S1} cover \SI{\sim 2}{\percent} only of one endcap and, just like \ac{S2} boards, do not communicate with each other[fn::Handling boundaries thus requires data duplication.].
+The \ac{S1} receives \ac{ECON-T} data, unpacks and calibrates it.
+It then routes and sorts \acp{TC} in energy into projective \SI{2}{\azimuth{}} vs. \SI{42}{\rz} bins per \SI{120}{\degree} sector, where $\text{R}=(x^{2}+y^{2})^{1/2}$ in the plane perpendicular to the beamline and $\tan(\theta)=$ \si{\rz} (a constant \si{\rz} corresponds to a constant particle angle $\theta$).
+The sorting uses batcher odd-even sorting networks [[cite:&sort_net2;&calorPortales;&sort_net]], where on-the-fly truncation reduces the total number of comparators required.
+Modules sums are here partially summed into module towers, and time multiplexing [[cite:&zabi]] with a bunch-crossing period of 18 is applied before sending the data to \ac{S2}.
+\ac{S2} accumulates partial tower energies into (\rapidity{},$\,$\azimuth{} ) bins and builds clusters from \acp{TC}:
+
++ *Histogramming*:
+  TCs are mapped to a \coordsa{} space with (216, 42) bins.
+  This further reduces spatial granularity and facilitates vectorized/parallel processing in the firmware due to its grid-like structure.
+  Each bin contains the energy sum of all its \acp{TC}, together with their \tmip{}[fn:: \tmip{} is defined as $\text{mip}/\cos(\theta)$, where one mip stands for the energy deposited by a minimum ionizing particle [[cite:&PDG \S34.2.3]] .]-weighted ($x/z, y/z$) positions.
+
++ *Smoothing*:
+  An energy smearing step is applied to \coordsa{} bins to decrease overall variations in their energy distribution.
+  A kernel is applied, where to each bin's energy a fraction of the energy of its neighbors is added.
+  The kernels are shown in \cref{eq:smooth_kernel}, along \azimuth{} (left) and \si{\rz} (right):
+
+  #+NAME: eq:smooth_kernel
+  \begin{equation}
+      \left[
+        \renewcommand*{\arraystretch}{1.0}
+        \begin{array}{ccccccccccc}
+          ...&\frac{1}{16}&\frac{1}{8}&\frac{1}{4}&\frac{1}{2}&1&\frac{1}{2}&\frac{1}{4}&\frac{1}{8}&\frac{1}{16}&...
+        \end{array}
+      \right]
+      \hspace{2cm}
+      \left[
+        \renewcommand*{\arraystretch}{1.0}
+        \begin{array}{c}
+          \frac{1}{2} \\[.15cm]
+          1 \\[.15cm]
+          \frac{1}{2} \\
+        \end{array}
+      \right]
+  \end{equation}
+
+  Variations are more prominent along \azimuth{} since the binning is finer.
+  The kernel along \azimuth{} is \si{\rz}-dependent, as illustrated by the dots in \cref{eq:smooth_kernel}.
+  The \azimuth{} kernel collects the energy from more bins for lower \si{\rz} rows.
+  The energy of each bin is normalized to ensure no energy is artificially added to the event.
+
++ *Seeding*:
+  Seeds are local \tmip{} maxima in the histogram.
+  They are found via a seeding window which, for each bin, spans its immediately adjacent bins and checks whether their \tmip{} energy is lower.
+  If it is, and if its energy lies above a threshold, the bin is promoted to a seed.
+
++ *Clustering*:
+  \acp{TC} are associated to seeds and used to calculate cluster properties.
+  Every seed originates a cluster.
+  Contrary to previous steps, the clustering uses a $(x/z,\,y/z)$ projective space.
+  Two algorithms exist, one associating \acp{TC} to their closest seed (default), the other prioritizing association based on seed energy.
+
+During my PhD I have implemented from scratch the entire \ac{S2} reconstruction chain in a standalone =Python= code[fn:: \url{https://github.com/bfonta/bye_splits}]
+It was previously only available in =C++=, within CMSSW [[cite:&cmssw]].
+The code enables exponentially faster prototyping, testing and optimization, which are the basis of the following studies.
