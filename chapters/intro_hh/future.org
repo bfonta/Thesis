@@ -17,7 +17,6 @@ The inclusion of \ac{PNet} \tau-tagging at trigger level is being envisaged, and
 We also expect that some HH analysis might benefit from the inclusion of synthetic datasets, as discussed in [[sec:hemisphere_mixing]].
 The first \ac{CMS} Run3 HH results will soon be available.
 
-
 * Additional bibliography :noexport:
 + [[https://indico.cern.ch/event/1404329/contributions/5903658/attachments/2834334/4953058/Tau_Trigger_Apr_10th_BA-4.pdf][PNet for \tau's]] (TSG meeting)
 + Cite various parking data streams [[cite:&parking_scouting]]  

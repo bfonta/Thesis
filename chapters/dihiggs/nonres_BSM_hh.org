@@ -9,9 +9,9 @@ To facilitate such a measurement, it is crucial to establish the Higgs boson pai
 #+CAPTION: HH mass distribution for different $\kl$ values, highlighting the strong impact of a deviation from the expected SM values. Larger $|\kl|$ values correspond to scenarios where the HH "triangle" diagram dominates.
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/kl.pdf]]
+[[~/org/PhD/Thesis/figures/intro/kl.pdf]]
 #+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/c.pdf]]
+[[~/org/PhD/Thesis/figures/intro/c.pdf]]
 #+END_figure
 
 See [[fig:kl_c_EFT]] now!

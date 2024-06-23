@@ -1,4 +1,4 @@
-#+LATEX_HEADER: \newcommand{\pt}{p_{T}}
+#+LATEX_HEADER: \newcommand{\pt}{p_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\cg}{c_{g}}
 #+LATEX_HEADER: \newcommand{\ctwog}{c_{2g}}
 #+LATEX_HEADER: \newcommand{\ctwo}{c_{2}}
@@ -15,7 +15,6 @@
 #+LATEX_HEADER: \newcommand{\ttbar}{t\bar{t}}
 #+LATEX_HEADER: \newcommand{\xshhsm}{\sigma_{\text{HH}}^{\text{SM}}}
 #+LATEX_HEADER: \newcommand{\xshh}{\sigma_{\text{HH}}}
-
 #+LATEX_HEADER: \newcommand{\tauh}{$\tau_{\text{h}}$}
 
 #+LATEX_HEADER: \newcommand{\zll}{Z $\rightarrow$ ll}
@@ -33,3 +32,15 @@
 #+LATEX_HEADER: \newcommand{\zzbbbb}{ZZ $\rightarrow$ bbbb}
 #+LATEX_HEADER: \newcommand{\zhbbbb}{ZH $\rightarrow$ bbbb}
 #+LATEX_HEADER: \newcommand{\zzzhbbbb}{ZZ\slash ZH $\rightarrow$ bbbb}
+
+# HGCAL
+#+LATEX_HEADER: \newcommand{\tmip}{$\text{mip}_{\text{T}}$}
+#+LATEX_HEADER: \newcommand{\coordsa}{(\si{\azi}, \si{\rz})}
+#+LATEX_HEADER: \newcommand{\coordsb}{($u$, $v$)}
+#+LATEX_HEADER: \newcommand{\bsplits}{\texttt{bye\_splits}}
+#+LATEX_HEADER: \newcommand{\azimuth}{$\phi$}
+#+LATEX_HEADER: \newcommand{\rapidity}{$\eta$}
+#+LATEX_HEADER: \newcommand{\rz}{$R$/$z$}
+
+#+LATEX_HEADER: \newcommand{\up}[1]{\textsuperscript{#1}}
+#+LATEX_HEADER: \newcommand{\down}[1]{\textsubscript{#1}}

@@ -28,6 +28,8 @@ At low energy the potential $V$ associated to the Higgs boson field $H$ in the S
 + the Higgs might be connected to inflation, to dark matter production, to baryogenesis and to vacuum instability
 
 
+Higgs discovery [[cite:&CMS_Higgs_discovery1;&CMS_Higgs_discovery2;&ATLAS_Higgs_discovery]]
+
 * Additional bibliography :noexport:
 + [[https://www-nature-com.ezproxy.cern.ch/articles/s42254-021-00341-2][Higgs prospects review]]
 + [[https://journals.aps.org/prd/pdf/10.1103/PhysRevD.101.075023][Determining the shape of the Higgs potential at future colliders]]

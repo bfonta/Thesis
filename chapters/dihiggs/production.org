@@ -7,27 +7,27 @@ gluon fusion is the dominant production mode.
 #+NAME: fig:H_production_diagrams
 #+ATTR_LATEX: :width .9\textwidth
 #+CAPTION: Feynman diagrams for the leading Higgs boson production processes. /a)/ gluon fusion /b)/ \ac{VBF} /c)/ associated production with a W or Z (V) boson /d)/ associated production with a top or bottom quark pair /e)/ associated production with a single top quark. Taken from [[cite:&higgs_10_years]].
-[[~/org/PhD/Thesis/figures/H_production_diagrams.pdf]]
+[[~/org/PhD/Thesis/figures/intro/H_production_diagrams.pdf]]
 
 #+NAME: fig:HH_production_diagrams
 #+ATTR_LATEX: :width .9\textwidth
 #+CAPTION: Feynman diagrams for the leading H boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ Z$\gamma$. Taken from [[cite:&higgs_10_years]].
-[[~/org/PhD/Thesis/figures/HH_production_diagrams.pdf]]
+[[~/org/PhD/Thesis/figures/intro/HH_production_diagrams.pdf]]
 
 #+NAME: fig:HH_prod_energy
 #+ATTR_LATEX: :width .9\textwidth
 #+CAPTION: HH production cross section as a function of the center of mass energy for the six largest HH production channels at /pp/ colliders. The thickness of the lines corresponds to the scale and PDF uncertainties added linearly. Gluon fusion dominates for the entire energy range. The figure is taken from [[cite:&HH_xsec_running]].
-[[~/org/PhD/Thesis/figures/HH_production_energy.pdf]]
+[[~/org/PhD/Thesis/figures/intro/HH_production_energy.pdf]]
 
 #+NAME: fig:HH_prod_kl
 #+ATTR_LATEX: :width .9\textwidth
 #+CAPTION: HH production cross section as a function of the coupling modifier $\klrat$ for several production mechanisms. The dashed and solid lines denote respectively the LO and NLO predictions and the bands indicate the PDF and scale uncertainties added linearly. The figure is taken from [[cite:&HH_xsec_running]].
-[[~/org/PhD/Thesis/figures/HH_production_kl.pdf]]
+[[~/org/PhD/Thesis/figures/intro/HH_production_kl.pdf]]
 
 #+NAME: fig:HH_prod_kl
 #+ATTR_LATEX: :width .9\textwidth
 #+CAPTION: Cumulative cross section for the production of a Higgs boson as a function of the lowest Higgs boson transverse momentum. The cross section due to \ac{ggF} (green), \ac{VBF} (red), vector boson associated (blue) and top-quark pair associated (magenta) production mode are shown in absolute values (left) and relative size (right). Taken from [[cite:&xsec_evolution_pt]].
-[[~/org/PhD/Thesis/figures/hh_xsec_evoluton_pt.pdf]]
+[[~/org/PhD/Thesis/figures/intro/hh_xsec_evoluton_pt.pdf]]
 
 
 #+NAME: tab:HH_production_xsec

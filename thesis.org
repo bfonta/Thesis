@@ -79,15 +79,20 @@
 + include an event display of 2018
 *** Activities as Monte Carlo contact
 
+
 * Trigger primitives reconstruction for the HL-LHC HGCAL Level-1 trigger
 ** The High Luminosity LHC
+#+INCLUDE: "chapters/hgcal/hllhc.org"
+*** Future CMS subdetectors
 #+INCLUDE: "chapters/hgcal/cms_upgrades.org"
 ** The High Granularity Calorimeter
-
+#+INCLUDE: "chapters/hgcal/hgcal_intro.org"
 ** The dataflow of HGCAL trigger primitives
+#+INCLUDE: "chapters/hgcal/trigger_primitives_dataflow.org"
 ** Cluster splitting and possible solutions
+#+INCLUDE: "chapters/hgcal/cluster_splitting.org"
 ** Development of a simplified HGCal geometry and event processing chain
-
+#+INCLUDE: "chapters/hgcal/event_geom_developments.org"
 
 * \reshhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/dihiggs/bbtt_analysis.org"
@@ -126,6 +131,7 @@
 
 ** Control regions
 #+INCLUDE: "chapters/dihiggs/control_regions.org"
+
 * \reshhbbtt{}: Limit extraction
 ** Signal discrimination from background
 ** Systematic uncertainties
@@ -162,6 +168,7 @@
 *** HL-LHC
 *** Future accelerators
 
+
 * Effects of finite width and interference in resonant HH production
 ** The Singlet Model
 #+INCLUDE: "chapters/interf_studies/singlet_model.org"
@@ -188,4 +195,5 @@
 ~/dot-emacs/bibliography/references/l1.bib,
 ~/dot-emacs/bibliography/references/hgcal.bib,
 ~/dot-emacs/bibliography/references/mc_generation.bib,
+~/dot-emacs/bibliography/references/pure_software.bib,
 ~/dot-emacs/bibliography/references/detector.bib]]
