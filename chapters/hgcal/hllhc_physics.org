@@ -1,0 +1,45 @@
+<<sec:hllhc_physics>>
+
+A more powerful \ac{LHC} will increase the accurancy of current measurements and enhance the sensitivity to rare processes through both direct and indirect searches which occur below the current sensitivity level, and with more challenging signatures.
+The \ac{HL-LHC} is expected to provide high-precision measurements of the \ac{SM}, particular in Higgs physics: the Higgs boson (H) self-coupling, via direct and indirect measurements (see [[ref:sec:dihiggs]]), higgs couplings, flavour physics, BSM
+
+# EW processes
+The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
+This notably applies to W mass $\mw$ and weak mixing angle $\thw$ measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
+\num{\sim 2e6} W boson events will be collected per week, leading to a statistical sensitivity of about \SI{10}{\MeV} for the $W$ mass, and significantly lower for cross-section measurements.
+The added luminosity might also help solving the tension between old $\theta_{W}$ measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result [[cite:&weak_mixing_angle_cms]], which agree with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
+Concerning \ac{VBF} and \ac{VBS} processes, despite the overall lower cross-section, of about one order of magnitude with respect to the \ac{ggF} production, the presence of additional hard and forward jets enables a very significant reduction of the multijet background.
+This is particularly true for large rapidity separations $\Delta \dijetrap \gtrsim 4.5$ and di-jet invariant masses
+$\dijetmass \gtrsim \SI{700}{\GeV}$, where \ac{VBF} production dominates over \ac{ggF}.
+In \ac{VBS}, measurements of longitudinal scattering of two $V$ ($V=W,Z$) is particularly enticing, as it is still unknown whether the Higgs alone can avoid a divergent behaviour of the scattering amplitude at high energies, violating unitarity [[cite:&vbs2]].
+The longitudinal component of the $V$ bosons is in particular tightly connected to the Higgs mechanism and \ac{EWSB}, since massless particles only have transversal components.
+However, differential measurements of gauge boson polarization is harder given the reduced cross-section of the longitudinal-only components.
+Would unitarity be violated, particle probability would no longer be conserved: the calculated number of $V$-pairs produced in the interaction would exceed the incident flux [[cite:&thomson]].
+There is also the possibility for the longitudinal components of the $V$ bosons to be strongly coupled at \SI{\sim 1}{\TeV} center-of-mass energies [[cite:&vbs1]], allowing for instance the formation of resonance states in technicolor models.
+\ac{VBS} also forms the ideal field for anomalous gauge couplings measurements, especially quartic couplings.
+Finally, even rarer tri-boson processes ($\sigma$ \SI{\sim 0.1}{\pico\barn}) brings an extra handle on \ac{SM} testing.
+
+# Strong interactions
+The \ac{HL-LHC} will also enable an increase in the kinematic reach for jet and photon production.
+This will in turn reduce the associated experimental uncertainties, improving \ac{PDF} modeling.
+The shape of distributions of jets of various flavours will also be known with a higher precision, especially in the tails.
+
+# Top physics
+
+# Forward physics
+
+
+* Physics
++ [[cite:&hllhc_physics]]
++ EW processes
++ strong interactions
++ top physics inckuding effective coupling interpretations
++ proposed studies of forward physics that are possible with new forward detectors
+
+Moreover, the study of rare processes like the $\ttbar\ttbar$ production in leptonic final states will be of utmost importance to constrain the magnitude and Charge-Parity (CP) properties of the top Yukawa coupling, as well as probe 2HDM BSM models \cite{HL-HE-LHC_YR}. An important test of CP violation is represented by the /golden channel/ $\bspsiphi(1020)$, with an expected uncertainty on CP-violating phase $\phi_{\text{s}}\sim5-6\unit{mrad}$ in Phase-2 \cite{HL-HE-LHC_YR}. Further studies of BSM physics include the search for lepton flavour non-universality in the $\tautrimuon$ decay \cite{Muon_Phase2_TDR} and the search for long-lived particles \cite{HL-HE-LHC_YR}. This will be complemented by a deep study of the $H$ boson properties \cite{CMS-PAS-FTR-18-011}. 
+[[cite:&hllhc_physics]]
+
+Several of these measurements will be constrained by uncertainties in our knowledge of the proton's partonic inner structure, known as \acp{PDF}. Global \ac{PDF} fits of several \ac{HL-LHC} measurements will significantly reduce \ac{PDF} uncertainties and, consequently, improve measurements of \ac{SM} parameters, such as the weak mixing angle and the W boson mass. Anomalies in precision measurements within the SM sector can become significant when both experimental measurements and theoretical predictions achieve percent-level precision, especially when exploring high energy scales. These anomalies could provide insights into new physics effects from higher energy scales. @add mention to EFT parameters?@
+
+
+the mysterious dark matter and the world of supersymmetry are just among the long-awaited mysteries that the LHC may unveil [[cite:&hllhc_website]].

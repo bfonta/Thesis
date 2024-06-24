@@ -21,3 +21,5 @@ The first \ac{CMS} Run3 HH results will soon be available.
 + [[https://indico.cern.ch/event/1404329/contributions/5903658/attachments/2834334/4953058/Tau_Trigger_Apr_10th_BA-4.pdf][PNet for \tau's]] (TSG meeting)
 + Cite various parking data streams [[cite:&parking_scouting]]  
 + [[https://indico.cern.ch/event/1342837/contributions/5653121/attachments/2760253/4806661/20231120_DeepDive_HH.pdf][DeepDive_HH]], Marko Stamenkovic
++ [[cite:&hllhc_physics]] (pages 22 and 23)
++ mention briefly HE-LHC [[cite:&hllhc_physics]]

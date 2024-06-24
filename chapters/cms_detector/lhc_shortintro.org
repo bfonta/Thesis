@@ -1,0 +1,4 @@
+<<sec:lhc_intro>>
+
+The Large Hadron Collider (LHC) is one of the largest scientific instruments ever built.
+Since opening up a new energy frontier for exploration in 2010, it has gathered a global user community of about 9000 scientists working in fundamental particle physics and the physics of hadronic matter at extreme temperature and density [[cite:&hllhc]].

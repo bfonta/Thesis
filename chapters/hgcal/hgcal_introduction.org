@@ -1,5 +1,7 @@
 <<sec:hgcal_intro>>
 
+https://cernbox.cern.ch/pdf-viewer/public/cLosQkewmONZakQ/220606_Dauncey_DN-19-032-V2.pdf?contextRouteName=files-public-link&contextRouteParams.driveAliasAndItem=public%2FcLosQkewmONZakQ&items-per-page=100
+
 \Ac{CMS} [[cite:&cms_collab]] is thus developing the \ac{HGCAL} [[cite:&hgcalTDR]]: a novel endcap sampling calorimeter with an extremely fine granularity.
 About \num{6} million channels will enable particle identification and high resolution measurements of the position, energy and time of high-energy collision products.
 Examples include the measurement of narrow and merged jets, \ac{PU} energy, and performing calorimetric tracking for the first time.
@@ -35,7 +37,7 @@ The full system operates at a temperature of \SI{-35}{\celsius} maintained by a 
 
 
 * Alessandro :noexport:
-The existing ECAL and HCAL forward calorimeters were designed for an integrated luminosity of 500 $\rm fb^{-1}$, which is expected to be exceeded shortly after the beginning of the HL-LHC. Beyond this point, the physics performance will degrade to an unacceptable level \cite{Contardo:2015bmq}. The CMS experiment thus foresees the complete replacement of the endcap calorimeters with a profoundly different calorimeter. It is clear from simulations that the new sub-detector will have to withstand a fluence of $10^{16}~\rm n_{eq}/cm^2$ and a dose of 2 MGy (cfr Fig.~\ref{ch2:fig:dose}). R\&D activities have proven that the best material to meet these requirements is silicon, which can cope with fluences up to $1.5\times10^{16}~\rm n_{eq}/cm^2$, 50\% higher than the one expected during phase-2. Hence, silicon was selected to be the active material of the new detector. In addition to radiation hardness, the new calorimeter must satisfy other requirements outlined below.
+The existing ECAL and HCAL forward calorimeters were designed for an integrated luminosity of 500 $\rm fb^{-1}$, which is expected to be exceeded shortly after the beginning of the \ac{HL-LHC}. Beyond this point, the physics performance will degrade to an unacceptable level \cite{Contardo:2015bmq}. The CMS experiment thus foresees the complete replacement of the endcap calorimeters with a profoundly different calorimeter. It is clear from simulations that the new sub-detector will have to withstand a fluence of $10^{16}~\rm n_{eq}/cm^2$ and a dose of 2 MGy (cfr Fig.~\ref{ch2:fig:dose}). R\&D activities have proven that the best material to meet these requirements is silicon, which can cope with fluences up to $1.5\times10^{16}~\rm n_{eq}/cm^2$, 50\% higher than the one expected during phase-2. Hence, silicon was selected to be the active material of the new detector. In addition to radiation hardness, the new calorimeter must satisfy other requirements outlined below.
 \begin{itemize}
 	\item A dense calorimeter to ensure lateral containment of showers.
 	\item A fine lateral granularity to allow the separation of close-by showers and the observation of narrow jets. The consequent small cell size will reduce the energy equivalent of electronics noise increasing the S/N ratio. 

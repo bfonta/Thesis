@@ -1,0 +1,140 @@
+<<sec:lhc_design>>
+
+It is common practice to express charged and neutral particle contributions to radiation in terms of dose and \SI{1}{\MeV} neutron equivalent fluence, respectively.
+The term (absorbed) dose refers to the mean energy imparted by ionizing radiation to matter in a volume divided by the mass contained in the respective volume [[cite:&icru_report]].
+Any particle fluence can be reduced to an equivalent 1 MeV neutron fluence producing the same bulk damage in a specific semiconductor. The scaling is based on the hypothesis that generation of bulk damage is due to non-ionizing energy transfers to the lattice.
+
+In the \ac{LHC}, the total Dose and Fluence, cumulated over 10 years of operation, are expected to be about 100
+kGy and >1015 particles/cm2 respectively (in the LHC experiments) [[cite:&fibers_high_dose]]
+
+#+NAME: eq:lumi
+\begin{equation}
+\frac{\partial N}{\partial t} = L\sigma
+\end{equation}
+
+#+NAME: eq:inst_lumi
+\begin{equation}
+\mathcal{L} = F \cdot \frac{N_{\text{b}}^2 n_{\text{b}} f_{\text{rev}} \gamma}{4\pi \epsilon_n \beta^*}
+\end{equation}
+
+#+NAME: eq:lumi_form_fact
+\begin{equation}
+F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}{2}}
+\end{equation}
+
+#+NAME: pileup
+\begin{equation}
+<\mu> = \frac{L\sigma_{pp}^{\rm inelastic}}{n_bf_{\rm rev}}
+\end{equation}
+
+#+NAME: tab:LHCparameters
+#+CAPTION: Nominal design parameters of the LHC machine in proton-proton collisions configuration.
+#+ATTR_LATEX: :placement [!h] :center t :align c|c|c
+| Parameter        | Description                      | Value                  |
+|------------------+----------------------------------+------------------------|
+| $\sqrt{s}$       | centre-of-mass energy            | \SI{14}{\TeV}          |
+| $N_{\text{b}}$   | particles per bunch              | \num{1.15e11}          |
+| $n_{\text{b}}$   | number of bunches per beam       | \num{2808}             |
+| $f_{\text{rev}}$ | revolution frequency             | \SI{11.2}{\kilo\hertz} |
+| $\epsilon_n$            | transverse beam emittance        | \SI{3.75}{\micro\meter}     |
+| $\beta^*$            | beta function (focal length)     | \SI{0.55}{\meter}      |
+| $\Delta t_{\text{b}}$ | bunches spacing                  | \SI{25}{\nano\second}  |
+| $\theta_{\text{c}}$   | collision angle                  | \SI{285}{\micro\radian}     |
+| $\sigma_z$            | bunches transverse r.m.s at IP   | \SI{7.55}{\cm}         |
+| $\sigma_{xy}$         | bunches longitudinal r.m.s at IP | \SI{16.7}{\micro\meter}     |
+
+
+* Alessandro :noexport:
+The LHC \cite{Evans:2008zzb} is one of the several accelerators currently in operation at CERN. The CERN accelerator complex, illustrated in Fig.~\ref{ch2:fig:acc}, constitutes a sophisticated acceleration chain, where each machine sequentially boosts a beam of particles to a specific energy before transferring it to the subsequent machine in the chain. The life of proton beams for the LHC starts from a bottle of hydrogen gas, serving as a source of negative hydrogen ions. The initial step in the accelerator chain is the Linac4, responsible for accelerating the ions up to 160 MeV before entering the PS Booster. The ions undergo a stripping process during injection from the Linac4 into the PS Booster, leaving only the desired protons. Then, the PS Booster further accelerates these protons to an energy of 2 GeV. The protons advance along their path to the PS, where their energy increases to 26 GeV. The SPS accomplishes the final acceleration stage, which operates at up to 450 GeV. Ultimately, the beams are injected into the LHC, where they reach their final operational energy. The reason for having an acceleration chain, instead of directly injecting protons into the LHC and accelerating them to the desired energy, is driven by engineering and practical limitations. Once the proton beams attain the desired energy inside the LHC, they are ready for collisions in correspondence with the \textit{Fab Four}. Four experiments are located along the LHC circumference: ATLAS, ALICE, CMS, and LHCb. ATLAS and CMS are the two multi-purpose experiments with a broad physics programme, while LHCb and ALICE are more specialised in flavour physics and heavy-ion physics, respectively.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{../Figures/Chapter2/CERNaccelerators}\\
+	\caption{
+		Representation of the CERN accelerator complex. 
+		\label{ch2:fig:acc}}
+\end{figure}
+
+The two proton beams inside the LHC travel in opposite directions in separate beam pipes kept at ultra-high vacuum. Thousands of superconducting NbTi magnets are placed along the collider to guide the particle beams. These include 1232 dipole magnets, which bend the beam trajectory, and 392 quadrupole magnets, which focus the beams ensuring a narrow size of the bunches. When beams arrive at the interaction point, the insertion magnets, made by a combination of three quadrupoles, squeeze the beams closer together to increase the probability of interaction. The number of events per unit of time generated in a collider is given by:
+\begin{equation}
+	\label{ch2:eq:lumi}
+	\frac{\partial N}{\partial t} = L\sigma
+\end{equation}
+where $\sigma$ is the cross section (times the BR) of the physics process and $L$ is the instantaneous luminosity. While the former is a parameter related to the physics under study, the latter is a parameter of the machine. For the LHC, the design value is $L=10^{34}\rm~ cm^{-2}s^{-1}$. The time integral of Eq.~\ref{ch2:eq:lumi} introduces an important parameter qualifying a period of data taking, the \textit{integrated luminosity} $L_{\rm int}$:
+\begin{equation}
+	N = L_{\rm int}\sigma
+\end{equation}
+The luminosity depends only on the beam parameters and, for a Gaussian beam distribution, can be written as:
+\begin{equation}
+	 L = \frac{N_b^2 n_b f_{\textrm{rev}} \gamma_r}{4\pi\epsilon_n\beta^*}F
+\end{equation}
+where $N_b$ is the number of particles per bunch, $n_b$ the number of bunches present in the beam, $f_{\rm rev}$ is the beam revolution frequency, $\gamma_r$ is the corresponding relativistic gamma factor, and the product $\epsilon_n\beta^*$ is related to the beam optics. The $F$ term is introduced to account for the reduction of luminosity due to the crossing angle at the interaction point. The exploration of rare events in the LHC thus requires a high luminosity. However, this inevitably leads to the occurrence of multiple interactions for bunch crossing. This phenomenon is referred to as \textit{PileUp} (PU). The average number of collisions per bunch crossing is given by:
+\begin{equation}
+	<\mu> = \frac{L\sigma_{pp}^{\rm inelastic}}{n_bf_{\rm rev}}
+\end{equation}
+where $\sigma_{pp}^{\rm inelastic}$ is the inelastic proton-proton cross section. Figure \ref{ch2:fig:operations} shows the recorded PU distributions during the different data-taking periods.
+
+* Jona :noexport:
+The LHC has been designed as a double-purpose accelerator, guaranteeing the study of proton-proton as well as heavy-ion collisions. In the former configuration, it was designed to collide protons at a centre-of-mass energy of $\sqrt{s}=14\TeV$ with instantaneous luminosity $\mathcal{L}\sim10^{34}\cm^{-2}\unit{s}^{-1}$, while in the latter setup, it was devised to collide heavy nuclei at a centre-of-mass energy of $\sqrt{s}=2.76\TeV$ per nucleon with instantaneous luminosity $\mathcal{L}\sim10^{27}\cm^{-2}\unit{s}^{-1}$ \cite{Baconnier:257706,Pettersson:291782}. This multipurpose conception guarantees the possibility for physicists to probe a vast scientific program, encompassing the search for the Higgs boson, as well as the test of BSM scenarios and the search for particles yet to be theorized.
+
+The LHC is situated in the Large Electron-Positron (LEP) collider tunnel, of which it inherits the dimension, and it is located between $45\unit{m}$ and $170\unit{m}$ below ground level. The journey from the LHC conception to its operational start has been an endeavour spanning more than two decades, with its first proposal in 1984, its official recognition in 1994, and the start of data-taking in 2008. This journey is currently ongoing with the third operational run of the accelerator, and it is bound to continue with the machine upgrade to its high luminosity specifications and its operation foreseen until the early 2040s. A detailed description of the accelerator complex and operations is given in the following.
+
+\subsection{Accelerator complex}
+\label{CH2:LHC_accelerators}
+The LHC serves as the terminal component of a complex series of particle accelerators, which were established prior to the LHC and subsequently enhanced to satisfy its strict requirements. The initial phase of this accelerator sequence involves the extraction of protons from a hydrogen gas reservoir through the application of a strong electric field. These protons are subsequently directed into a Radio Frequency Quadrupole (RFQ), where they are bunched and accelerated to an energy of $750\keV$. Following this, the protons are conveyed to the Linear Accelerator (LINAC 2), which elevates the proton beam's energy to approximately $50\MeV$. Subsequently, the particles advance into the inaugural circular collider, the Proton Synchrotron Booster (PSB), encompassing a $150\unit{m}$ circumference, which boosts the beam's energy to $1.4\GeV$ and enhances the intensity of the proton bunches. Thereafter, the beam enters the Proton Synchrotron (PS) and, finally, the Super Proton Synchrotron (SPS), characterized by circular configurations spanning $620\unit{m}$ and $6912\unit{m}$, respectively. These components elevate the beam's energy to $26\GeV$ and $450\GeV$, sequentially. At this stage, the proton bunches are ready to be injected into the LHC accelerator. The complete accelerator complex is illustrated schematically in Figure \ref{fig:CCC-v2022}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/Ch2/LHC/CCC-v2022.png}
+    \caption{Schematic illustration of the CERN accelerator complex. The LHC is the last ring (dark blue line) in a complex chain of particle accelerators. The smaller machines are used in sequence to accelerate the proton beams that collide in the centre of the four main detectors (yellow dots) \cite{CCC-v2022}.}
+    \label{fig:CCC-v2022}
+\end{figure}
+
+The proton beams are transferred to the two LHC beam pipes via fast kicker magnets, which effectively divide the beam into counter-rotating parallel beamlines. Once in the LHC, the beams experience a progressive augmentation of their energy up to $7\TeV$ (this is the design energy; energies of $6.5\TeV$ and $6.8\TeV$ were used during Run-2 and Run-3, respectively), achieved through high-frequency accelerating cavities operated at $400\unit{MHz}$ and positioned within eight linear sections, each spanning $545\unit{m}$ along the ring's circumference. The proton bunches are kept in orbit by means of 1232 superconducting dipole magnets, each measuring $15\unit{m}$ of length and 35 tonnes of weight, systematically distributed across eight arcs, each extending $2.45\unit{km}$. The magnets are custom-designed and built in a Niobium-Titanium (NbTi) alloy, which exhibits superconductivity when cooled to a temperature of $1.9\unit{K}$ ($-271.25^{\circ}\unit{C}$) utilizing superfluid He-4. This ensures the production of an $8.3\unit{T}$ magnetic field generated by a current of about $11\unit{kA}$. The beam optics is then regulated by 392 quadrupole magnets, measuring 5 to 7 metres in length, that focus the particles and reduce the transversal section of the beams; additional octupole magnets are finally installed to control the beam's chromaticity (i.e. its energy spread). Upon stabilizing the beam dynamics and attaining the nominal energy, the proton bunches are further focused by special quadrupoles installed in front of the Interaction Points (IP) to squeeze the beams and increase the proton density at collision. The LHC presents four IPs, each equipped with a sophisticated particle detection apparatus to probe a vast array of physics processes.
+            
+The LHC has been designed for the collision of protons to overcome LEP's largest limitation: synchrotron radiation, which is the electromagnetic radiation emitted by particles moving on a curved path. The power dissipated by synchrotron radiation scales with the inverse of the fourth power of the particle's mass, i.e. $m^{-4}$, reducing its effect on protons by a factor $\sim10^{13}$ compared to electrons. This ensures the ability to reach a nominal proton beam energy of $7\TeV$ and a centre-of-mass energy of $\sqrt{s}=14\TeV$ at IP (this is the design energy; energies of $13\TeV$ and $13.6\TeV$ were used during Run-2 and Run-3, respectively). This comes at the cost of the proton being a composite particle and entailing a more complicated collision dynamic, which is largely dominated by the fraction of gluons in each proton; for this reason, the LHC is sometimes improperly referred to as a \textit{gluon collider}.
+
+A central parameter of the LHC machine is the instantaneous luminosity $\mathcal{L}$ at which collisions take place; it depends on the beam properties as \cite{Evans_2008}:
+
+\begin{equation}
+    \mathcal{L} = F \cdot \frac{N_{\text{b}}^2 n_{\text{b}} f_{\text{rev}} \gamma}{4\pi \epsilon_n \beta^*}
+    \label{eq:inst_lumi}
+\end{equation}
+
+where $N_{\text{b}}$ is the number of particles in each of the $n_{\text{b}}$ bunches per beam that revolve in the tunnel with a frequency $f_{\text{rev}}$, and $\gamma$ is the relativistic factor. The transverse emittance and the focal length of the beam at the IP are quantified by $\epsilon_n$ and the beta function $\beta^*$, respectively. Finally, $F$ is a factor defined as:
+
+\begin{equation}
+    F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}{2}}
+    \label{eq:lumi_form_fact}
+\end{equation}
+
+which accounts for the reduction of the instantaneous luminosity due to the IP geometry; it depends on the beam crossing angle $\theta_{\text{c}}$, and the longitudinal and transverse r.m.s. bunch sizes $\sigma_z$ and $\sigma_{xy}$ at collision. By definition $F\leq1$. The nominal design values of the LHC parameters are summarized in Table \ref{tab:LHCparameters} alongside their description. In the list, one additional parameter is specified: the spacing of the bunches $\Delta t_{\text{b}}$; this parameter fixes the interaction (or bunch crossing) rate to $40\unit{MHz}$.
+
+The instantaneous luminosity then regulates the number of events per unit of time as
+
+\begin{equation}
+    \frac{\partial N}{\partial t} = \mathcal{L} \cdot \sigma
+    \label{eq:events_rate}
+\end{equation}
+
+where $\sigma$ is the cross section of any given process; this renders it evident that a large instantaneous luminosity is essential to produce low cross section processes such as Higgs boson pair ($\HH$) production. When integrating the instantaneous luminosity over time, the so-called \textit{integrated luminosity} $L=\int\mathcal{L}dt$ is obtained, which measures the total amount of collisions produced. While instantaneous luminosity is measured in $\cm^{-2}\unit{s}^{-1}$, integrated luminosity is generally measured in units of inverse \textit{barn} (b), with $1\cm^2\equiv10^{24}\unit{b}$, and typical units being the inverse picobarn ($\pbinv$) and femtobarn ($\fbinv$).
+
+The achievement of a high instantaneous luminosity is crucial for probing rare processes, but at the same time, it introduces the possibility of several interactions happening simultaneously at each bunch crossing. This effect is referred to as \textit{pileup} (PU), and its average value can be computed from the cross section of inelastic proton-proton scattering $\sigma_{\text{pp}}^{\text{inel.}}$ to be:
+
+\begin{equation}
+    \langle\text{PU}\rangle = \frac{\mathcal{L}\cdot\sigma_{\text{pp}}^{\text{inel.}}}{n_{\text{b}}f_{\text{rev}}}
+    \label{eq_meanPU}
+\end{equation}
+
+At the centre-of-mass energy of $13\TeV$, the inelastic proton-proton scattering has a measured cross section $\sigma_{\text{pp}}^{\text{inel.}}=68.6\pm0.5(\text{syst})\pm1.6(\text{lumi})\unit{mb}$ \cite{Inelastic2018}, leading to an average PU $\sim22$ in LHC design conditions. As further detailed in the following, the operational conditions of the LHC machine have steadily increased over the years of operation; the LHC nominal instantaneous luminosity has been largely exceeded, with the current values being as high as $2-2.5$ times the design one, leading to the current average PU level of $52$, with peak PU exceeding $80$. The evolution of the PU differential distributions over the past data-taking years is presented in Figure \ref{fig:pu_plots}.
+        
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/Ch2/LHC/pileup_allYears_run2and3.pdf}
+    \caption{Distribution of the average number of interactions per crossing (pileup) for proton-proton collisions in 2015 (purple), 2016 (orange), 2017 (light blue), 2018 (navy blue), 2022 (brown), and 2023 (light purple); the overall mean values and the minimum bias cross sections are also shown. These plots use only data that passed the \textit{golden} certification (i.e., all CMS sub-detectors were flagged to meet the requirements for any use in physics analysis), and the \textit{LHC standard} values for the minimum bias cross sections, which are taken from the theoretical prediction from Pythia and should be used to compare to other LHC experiments \cite{LUMI_PUB}.}
+    \label{fig:pu_plots}
+\end{figure}
+
+This progressive increase in the harshness of the collision conditions requires a continuous improvement of the online data selection system, which is performed by the Level-1 and High-Level triggers detailed in Section \ref{CH2:TRIDAS}; important work has been conducted as part of this Thesis to attain this for the 2022 and 2023 data-taking periods, as detailed in Chapter \ref{CH3}. 
+        
+The number of simultaneous collisions per bunch crossing is foreseen to largely increase at the High-Luminosity LHC (HL-LHC) where average PU is foreseen to reach levels as high as $\langle\text{PU}\rangle=200$. This PU growth will pose great challenges for the trigger system, which will have to identify interesting signal events among the overwhelming amount of PU. As part of this Thesis, extensive work has been done in view of these conditions, as described in Chapter \ref{CH4}.

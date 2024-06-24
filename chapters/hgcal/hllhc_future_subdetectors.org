@@ -1,3 +1,5 @@
+<<sec:hllhc_future_subdetectors.org>>
+
 * Pixels
 + New Layer 1 at 29mm from the beamline
 * Muons 

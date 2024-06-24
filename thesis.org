@@ -5,11 +5,6 @@
 #+SETUPFILE: definitions.org
 #+EXCLUDE_TAGS: noexport
 
-* ToDo [0/0] :noexport: 
-+ 
-
-
-
 * Introduction to Higgs boson pair production
 ** The Standard Model of Particle Physics
 <<sec:SM>>
@@ -54,9 +49,13 @@
 
 * The CMS Detector at the LHC
 ** The Large Hadron Collider
+#+INCLUDE: "chapters/cms_detector/lhc_shortintro.org"
 *** Design
+#+INCLUDE: "chapters/cms_detector/lhc_design.org"
 *** Operations
+#+INCLUDE: "chapters/cms_detector/lhc_operations.org"
 *** Experiments
+#+INCLUDE: "chapters/cms_detector/lhc_experiments.org"
 ** The CMS Detector
 #+INCLUDE: "chapters/cms_detector/cms_detector.org"
 *** Coordinate system
@@ -80,19 +79,23 @@
 *** Activities as Monte Carlo contact
 
 
-* Trigger primitives reconstruction for the HL-LHC HGCAL Level-1 trigger
+* Trigger primitives reconstruction for the HGCAL Level-1 trigger
 ** The High Luminosity LHC
 #+INCLUDE: "chapters/hgcal/hllhc.org"
+*** Physics motivation
+#+INCLUDE: "chapters/hgcal/hllhc_physics.org"
 *** Future CMS subdetectors
-#+INCLUDE: "chapters/hgcal/cms_upgrades.org"
+#+INCLUDE: "chapters/hgcal/hllhc_future_subdetectors.org"
 ** The High Granularity Calorimeter
-#+INCLUDE: "chapters/hgcal/hgcal_intro.org"
+#+INCLUDE: "chapters/hgcal/hgcal_introduction.org"
 ** The dataflow of HGCAL trigger primitives
 #+INCLUDE: "chapters/hgcal/trigger_primitives_dataflow.org"
-** Cluster splitting and possible solutions
-#+INCLUDE: "chapters/hgcal/cluster_splitting.org"
 ** Development of a simplified HGCal geometry and event processing chain
 #+INCLUDE: "chapters/hgcal/event_geom_developments.org"
+
+** Cluster splitting and possible solutions
+#+INCLUDE: "chapters/hgcal/cluster_splitting.org"
+
 
 * \reshhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/dihiggs/bbtt_analysis.org"
@@ -132,6 +135,7 @@
 ** Control regions
 #+INCLUDE: "chapters/dihiggs/control_regions.org"
 
+
 * \reshhbbtt{}: Limit extraction
 ** Signal discrimination from background
 ** Systematic uncertainties
@@ -163,11 +167,12 @@
 *** Comparison with other resonant \bbtt{} results
 ** Future prospects for resonant and non-resonant HH searches
 #+INCLUDE: "chapters/intro_hh/future.org"
-*** \reshybbtt{}
 *** Run3
++ mention \reshybbtt{} analysis
 *** HL-LHC
++ mention \reshybbtt{} analysis
 *** Future accelerators
-
++ mention \reshybbtt{} analysis
 
 * Effects of finite width and interference in resonant HH production
 ** The Singlet Model
@@ -193,7 +198,6 @@
 [[bibliography:
 ~/dot-emacs/bibliography/references/higgs.bib,
 ~/dot-emacs/bibliography/references/l1.bib,
-~/dot-emacs/bibliography/references/hgcal.bib,
 ~/dot-emacs/bibliography/references/mc_generation.bib,
 ~/dot-emacs/bibliography/references/pure_software.bib,
 ~/dot-emacs/bibliography/references/detector.bib]]

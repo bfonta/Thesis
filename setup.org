@@ -3,6 +3,7 @@
 #+LATEX_HEADER: \usepackage{siunitx}
 #+LATEX_HEADER: \usepackage{chemformula}
 #+LATEX_HEADER: \usepackage{mathtools}
+#+LATEX_HEADER: \usepackage{xcolor}
 
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{margin=1in}
@@ -10,11 +11,11 @@
 #+LATEX_HEADER: \usepackage[nohyperlinks,printonlyused]{acronym}
 
 #+LATEX_HEADER: \usepackage{cleveref}
-#+LATEX_HEADER: \crefname{figure}{fig.}{figs.}
+#+LATEX_HEADER: \crefname{figure}{Fig.}{Figs.}
 #+LATEX_HEADER: \Crefname{figure}{Fig.}{Figs.}
-#+LATEX_HEADER: \crefname{equation}{eq.}{eqs.}
+#+LATEX_HEADER: \crefname{equation}{Eq.}{Eqs.}
 #+LATEX_HEADER: \Crefname{equation}{Eq.}{Eqs.}
-#+LATEX_HEADER: \crefname{table}{table}{tables}
+#+LATEX_HEADER: \crefname{table}{Table}{Tables}
 #+LATEX_HEADER: \Crefname{table}{Table}{Tables}
 
 #+LATEX_HEADER: \DeclareSIUnit \rap {\eta}
@@ -23,4 +24,6 @@
 #+LATEX_HEADER: \DeclareSIUnit \barn {b}
 #+LATEX_HEADER: \DeclareSIUnit \radl {X_0}
 #+LATEX_HEADER: \DeclareSIUnit \nucintl {\lambda_0}
-#+LATEX_HEADER: \DeclareSIUnit \bit {b}    
+#+LATEX_HEADER: \DeclareSIUnit \bit {b}
+#+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}}
+#+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}}
