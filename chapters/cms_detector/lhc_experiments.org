@@ -1,5 +1,12 @@
 <<sec:lhc_experiments>>
 
+\paragraph{\ac{LHCb}}
+
+Instead of surrounding the entire collision point with an enclosed detector as do \ac{ATLAS} and \ac{CMS}, the \ac{LHCb} experiment uses a series of subdetectors to detect mainly forward particles – those thrown forwards by the collision in one direction.
+The first subdetector is mounted close to the collision point, with the others following one behind the other over a length of 20 metres. [[cite:&hllhc_website]]
+
+The LHCb experiment [1] is designed to exploit the large bb production cross section at the LHC in order to perform a wide range of precision studies of CP violating phenomena. The copious production of Bd, Bs and Bc mesons and b-baryons, together with the unique particle-identification capabilities the LHCb detector, will allow the experiment to perform sensitive measurements of CP violating asymmetries in a variety of channels that are beyond the reach of the current generation of CP-violation experiments. [[cite:&lhcb_collab]]
+
 * Jona :noexport:
 As reported in Figure \ref{fig:CCC-v2022}, the LHC accelerator presents four interaction points where the beamlines converge and the proton beams collide. Being placed in the tunnel facility excavated for the LEP collider, the LHC IPs inherit the numbering of the previous accelerator, i.e. IP1, IP2, IP5, and IP8. In all four IPs, collisions happen at the heart of detectors, which can be seen as the cathedrals of modern high-energy physics. As detailed in the following, four main experiments are placed in the LHC underground caverns, complemented by five additional detectors at IP 1, 5, and 8.
     

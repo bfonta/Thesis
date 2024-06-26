@@ -16,14 +16,22 @@ Both the \ac{CMS} and the \ac{ATLAS} experiments at the \ac{LHC} are involved in
 A direct measurement of $\klthree$ requires double Higgs boson production while $\klfour$ is first probed in the production of 3 Higgs bosons.
 These quantities can also be measured indirectly, as detailed in [[sec:Combinations]].
 $\kl$ is currently one of the least constrained properties of the Higgs boson.
- 
+
+
+The fusion of gluons via a heavy-quark (mainly top-quark) loop is the most important production mecha-
+nism of Higgs boson pairs at hadron colliders within the SM [[cite:&hllhc_physics]].
+
+
+
 # #+NAME: fig:BSM_production_diagrams
 # #+ATTR_LATEX: :width .5\textwidth
 # #+CAPTION: Feynman diagrams for the leading \ac{BSM} HH pair production processes introduced by the \ac{EFT} approach. Three new couplings are thus introduced: $c_{2}$, $c_{2g}$ and $c_{2}$. /k)/ gluon fusion HH ("triangle") /l)/ gluon-fusion HH ("box") /m,n,o)/ \ac{VBF} HH.
 # [[~/org/PhD/Thesis/figures/BSM_HH_production_diagrams.pdf]]
 
-* To do :noexport: [0/1]
+* To do :noexport:
 - [ ] cover [[cite:&hllhc_physics]] physics briefly discussed in [[ref:sec:hllhc]]
   
 * Additional bibliography :noexport:
 + [[https://github.com/bfonta/HHStatAnalysis/blob/master/AnalyticalModels/python/plot_differential.py][Produce differential BSM distributions]] (using ~HHReweightingPlots~ folder in =lxplus9=, release ~CMSSW_14_1_0_pre2~)
++ Andre david artigo [[cite:&andre_david_higgs_ten_years]]
+  

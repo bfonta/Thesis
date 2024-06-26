@@ -6,6 +6,12 @@
 The underlying event (UE) consists of the beam-beam remnants (BBR) and the particles that arise from multiple-parton interactions (MPI).
 The BBR are what remains after a parton is scattered out of each of the two initial beam hadrons, while the MPI are additional soft or semi-hard parton-parton scatterings that occur within the same hadron-hadron collision [[cite:&CMS_Tunes]].
 
+Underlying event (UE), defined as a accompanying activity to hard proton-proton scattering process,
+is an unavoidable background to collider observables for most measurements and searches. The UE
+activity is not constant on an event-by-event basis, so the contribution from UE cannot be subtracted.
+However by using measurements sensitive to UE activity, the modelling of it in Monte Carlo (MC) event
+generators is tuned. Multiple parton interactions (MPI) are one of the most important contributors to UE. [[cite:&hllhc_physics]]
+
 A set of QCD parameters is derived in different ways (WHICH ONES??) to precisely describe aspects of the UE, such as the modelling of the hadronization, the initial and final state radiation and the BBR.
 A complex fitting procedure, using data collected by CDF and CMS at different energies is used, extracting the parameters known as CMS Pythia (CP) Tunes.
 

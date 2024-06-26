@@ -1,0 +1,8 @@
+<<sec:hllhc_detector_upgrades>>
+
+\paragraph{\ac{LHCb}}
+
+mention VELO
+
+* Additional bibliography :noexport:
++ Velo: https://www.youtube.com/watch?v=hsLXi9QTxUo
