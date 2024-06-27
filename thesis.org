@@ -49,19 +49,19 @@
 
 * The CMS Detector at the LHC
 ** The Large Hadron Collider
-#+INCLUDE: "chapters/cms_detector/lhc_shortintro.org"
+#+INCLUDE: "chapters/detector/lhc_shortintro.org"
 *** Design
-#+INCLUDE: "chapters/cms_detector/lhc_design.org"
+#+INCLUDE: "chapters/detector/lhc_design.org"
 *** Operations
-#+INCLUDE: "chapters/cms_detector/lhc_operations.org"
+#+INCLUDE: "chapters/detector/lhc_operations.org"
 *** Experiments
-#+INCLUDE: "chapters/cms_detector/lhc_experiments.org"
+#+INCLUDE: "chapters/detector/lhc_experiments.org"
 ** The CMS Detector
-#+INCLUDE: "chapters/cms_detector/cms_detector.org"
+#+INCLUDE: "chapters/detector/detector.org"
 *** Coordinate system
-#+INCLUDE: "chapters/cms_detector/coordinate_system.org"
+#+INCLUDE: "chapters/detector/coordinate_system.org"
 *** Detector structure
-#+INCLUDE: "chapters/cms_detector/detector_structure.org"
+#+INCLUDE: "chapters/detector/detector_structure.org"
 ** The CMS trigger system
 *** Level-1
 *** HLT
@@ -85,7 +85,7 @@
 *** Physics motivation
 #+INCLUDE: "chapters/hgcal/hllhc_physics.org"
 *** Detector ugrades
-#+INCLUDE: "chapters/hgcal/hllhc_dete.org"
+#+INCLUDE: "chapters/hgcal/hllhc_detector_upgrades.org"
 *** Future CMS subdetectors
 #+INCLUDE: "chapters/hgcal/hllhc_future_subdetectors.org"
 ** The High Granularity Calorimeter
@@ -185,7 +185,7 @@
 
 
 * Conclusions
-
+#+INCLUDE: "chapters/conclusions.org"
 
 * Appendix
 ** General control distributions

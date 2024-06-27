@@ -18,6 +18,8 @@ These quantities can also be measured indirectly, as detailed in [[sec:Combinati
 $\kl$ is currently one of the least constrained properties of the Higgs boson.
 
 
+The Higgs self-coupling plays a central role in the spontaneous breaking of electroweak symmetry, and governs a pure elementary scalar interaction – one that has never been observed in nature.
+
 The fusion of gluons via a heavy-quark (mainly top-quark) loop is the most important production mecha-
 nism of Higgs boson pairs at hadron colliders within the SM [[cite:&hllhc_physics]].
 

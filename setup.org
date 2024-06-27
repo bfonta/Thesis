@@ -22,6 +22,7 @@
 #+LATEX_HEADER: \DeclareSIUnit \azi {\phi}
 #+LATEX_HEADER: \DeclareSIUnit \rz {R/z}
 #+LATEX_HEADER: \DeclareSIUnit \barn {b}
+#+LATEX_HEADER: \DeclareSIUnit \invfb {\per\femto\barn}
 #+LATEX_HEADER: \DeclareSIUnit \radl {X_0}
 #+LATEX_HEADER: \DeclareSIUnit \nucintl {\lambda_0}
 #+LATEX_HEADER: \DeclareSIUnit \bit {b}

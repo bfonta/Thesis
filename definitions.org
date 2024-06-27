@@ -1,8 +1,13 @@
 # Physics
-#+LATEX_HEADER: \newcommand{\bbbb}{HH $\rightarrow$ bbbb}
-#+LATEX_HEADER: \newcommand{\bbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\bbtt}{HH $\rightarrow$ bb$\tau\tau$}
-#+LATEX_HEADER: \newcommand{\bbzz}{HH $\rightarrow$ bbZZ}
+#+LATEX_HEADER: \newcommand{\hhbbbb}{HH $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\hhbbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\hhbbtt}{HH $\rightarrow$ bb$\tau\tau$}
+#+LATEX_HEADER: \newcommand{\hhbbzz}{HH $\rightarrow$ bbZZ}
+#+LATEX_HEADER: \newcommand{\bbbb}{bbbb}
+#+LATEX_HEADER: \newcommand{\bbgg}{bb$\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\bbtt}{bb$\tau\tau$}
+#+LATEX_HEADER: \newcommand{\bbzz}{bbZZ}
+#+LATEX_HEADER: \newcommand{\bbll}{bbll+$E^{\text{miss}}_{\text{T}}$}
 #+LATEX_HEADER: \newcommand{\bspsiphi}{B_{s} \rightarrow J/\psi \phi}
 #+LATEX_HEADER: \newcommand{\cg}{c_{g}}
 #+LATEX_HEADER: \newcommand{\ctwog}{c_{2g}}
@@ -50,9 +55,7 @@
 #+LATEX_HEADER: \newcommand{\tmip}{$\text{mip}_{\text{T}}$}
 
 # Text
-#+LATEX_HEADER: \newcommand{\runone}{Run-1}
-#+LATEX_HEADER: \newcommand{\runtwo}{Run-2}
-#+LATEX_HEADER: \newcommand{\runtrhee}{Run-3}
+#+LATEX_HEADER: \newcommand{\run}[1]{Run-#1}
 #+LATEX_HEADER: \newcommand{\down}[1]{\textsubscript{#1}}
 #+LATEX_HEADER: \newcommand{\up}[1]{\textsuperscript{#1}}
 

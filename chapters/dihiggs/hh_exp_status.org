@@ -7,3 +7,5 @@ Finally, in [[sec:Combinations]], we discuss the most recent HH combinations in 
 + B2G Summary plots: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsB2G
 + Cite ATLAS new combination [[cite:&atlas_hh_comb]]
 + Cite H+HH ATLAS comb [[cite:&ATLASHplusHHcomb]]
++ [[cite:&hllhc_physics]]
+  

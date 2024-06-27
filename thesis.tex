@@ -1,4 +1,4 @@
-% Created 2024-06-26 Wed 21:05
+% Created 2024-06-27 Thu 19:50
 % Intended LaTeX compiler: xelatex
 \RequirePackage{fix-cm}
 \PassOptionsToPackage{svgnames}{xcolor}
@@ -100,15 +100,21 @@
 \DeclareSIUnit \azi {\phi}
 \DeclareSIUnit \rz {R/z}
 \DeclareSIUnit \barn {b}
+\DeclareSIUnit \invfb {\per\femto\barn}
 \DeclareSIUnit \radl {X_0}
 \DeclareSIUnit \nucintl {\lambda_0}
 \DeclareSIUnit \bit {b}
 \DeclareSIUnit \nequiv {n_{eq}}
 \DeclareSIUnit \nequiv {n_{eq}}
-\newcommand{\bbbb}{HH $\rightarrow$ bbbb}
-\newcommand{\bbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
-\newcommand{\bbtt}{HH $\rightarrow$ bb$\tau\tau$}
-\newcommand{\bbzz}{HH $\rightarrow$ bbZZ}
+\newcommand{\hhbbbb}{HH $\rightarrow$ bbbb}
+\newcommand{\hhbbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
+\newcommand{\hhbbtt}{HH $\rightarrow$ bb$\tau\tau$}
+\newcommand{\hhbbzz}{HH $\rightarrow$ bbZZ}
+\newcommand{\bbbb}{bbbb}
+\newcommand{\bbgg}{bb$\gamma\gamma$}
+\newcommand{\bbtt}{bb$\tau\tau$}
+\newcommand{\bbzz}{bbZZ}
+\newcommand{\bbll}{bbll+$E^{\text{miss}}_{\text{T}}$}
 \newcommand{\bspsiphi}{B_{s} \rightarrow J/\psi \phi}
 \newcommand{\cg}{c_{g}}
 \newcommand{\ctwog}{c_{2g}}
@@ -152,9 +158,7 @@
 \newcommand{\rapidity}{$\eta$}
 \newcommand{\rz}{$R$/$z$}
 \newcommand{\tmip}{$\text{mip}_{\text{T}}$}
-\newcommand{\runone}{Run-1}
-\newcommand{\runtwo}{Run-2}
-\newcommand{\runtrhee}{Run-3}
+\newcommand{\run}[1]{Run-#1}
 \newcommand{\down}[1]{\textsubscript{#1}}
 \newcommand{\up}[1]{\textsuperscript{#1}}
 \author{Bruno Alves}
@@ -174,16 +178,16 @@
 
 
 \section{Introduction to Higgs boson pair production}
-\label{sec:org81c7d66}
+\label{sec:org8f3a301}
 \subsection{The Standard Model of Particle Physics}
-\label{sec:orgf820feb}
+\label{sec:org39259cb}
 \label{sec:SM}
 \subsubsection{Brief historical perspective}
-\label{sec:orga53ef7e}
+\label{sec:org147ee97}
 \subsubsection{The building blocks of the SM}
-\label{sec:orgca8e97b}
+\label{sec:orga9e0daa}
 \subsubsection{The Higgs Mechanism}
-\label{sec:orgccab5b9}
+\label{sec:orgdfd4d61}
 \label{sec:HiggsMechanism}
 
 @Explain how the non-zero value of the Higgs field that permeates the Universe breaks electro-weak symmetry (related to the EWPT section)@
@@ -218,9 +222,9 @@ At low energy the potential \(V\) associated to the Higgs boson field \(H\) in t
 
 Higgs discovery \cite{CMS_Higgs_discovery1,CMS_Higgs_discovery2,ATLAS_Higgs_discovery}
 \subsubsection{Experimental status of Higgs boson physics}
-\label{sec:org2be81cc}
+\label{sec:org6b6444c}
 \subsection{Higgs boson pair phenomenology in the SM}
-\label{sec:org08f759d}
+\label{sec:org60fc133}
 \label{sec:dihiggs}
 
 As mentioned in \cref{sec:SM}, the \ac{SM} has proven an immensely successful theory.
@@ -240,8 +244,14 @@ A direct measurement of \(\klthree\) requires double Higgs boson production whil
 These quantities can also be measured indirectly, as detailed in \cref{sec:Combinations}.
 \(\kl\) is currently one of the least constrained properties of the Higgs boson.
 
+
+The Higgs self-coupling plays a central role in the spontaneous breaking of electroweak symmetry, and governs a pure elementary scalar interaction – one that has never been observed in nature.
+
+The fusion of gluons via a heavy-quark (mainly top-quark) loop is the most important production mecha-
+nism of Higgs boson pairs at hadron colliders within the SM \cite{hllhc_physics}.
+
 \subsubsection{Production}
-\label{sec:org5710b2b}
+\label{sec:org6e12979}
 \label{sec:production}
 
 The measurement of Higgs properties at the LHC are in general challenging, given the low cross-sections involved
@@ -296,7 +306,7 @@ gluon fusion is the dominant production mode.
 
 \end{table}
 \subsubsection{Decay}
-\label{sec:org7aaa323}
+\label{sec:orge393b3c}
 \label{sec:Decay}
 
 \begin{figure}[htbp]
@@ -305,32 +315,38 @@ gluon fusion is the dominant production mode.
 \caption{\label{fig:HH_decay_diagrams}Feynman diagrams for the leading Higgs boson decay channels into: \emph{g)} heavy vector boson pairs \emph{h)} fermion anti-fermion pairs \emph{i)} photon pairs \emph{j)} \(Z\gamma\). Taken from \cite{higgs_10_years}.}
 \end{figure}
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/higgs_couplings_line.pdf}
+\caption{\label{fig:HH_decay_diagrams}The measured coupling modifiers of the Higgs boson to fermions and heavy gauge bosons, as functions of fermion or gauge boson mass, where υ is the vacuum expectation value of the Higgs field. For gauge bosons, the square root of the coupling modifier is plotted, to keep a linear proportionality to the mass, as predicted in the \ac{SM}. The p-value with respect to the SM prediction is 37.5\%. Taken from \cite{higgs_10_years}.}
+\end{figure}
+
 \begin{enumerate}
 \item The bb\(\tau \tau\) final state
-\label{sec:orga1c4821}
+\label{sec:org21b6cd0}
 
 \item Other final states
-\label{sec:org8242931}
+\label{sec:orgfb3145b}
 \end{enumerate}
 
 \subsection{Experimental status of SM HH Physics}
-\label{sec:orgb825e03}
+\label{sec:org69e75ae}
 The \ac{CMS} experiment has explored a rich and diverse HH programme during Run2, and will continue to do so in Run3.
 In the following, we list some selected analysis which stand out due to its relative sensitivity, to some useful technique, or to some interesting peculiarity.
 The list is necessarily incomplete, subjective and biased, but we hope it provides a taste for all HH efforts undertook by \ac{CMS}.
 Finally, in \cref{sec:Combinations}, we discuss the most recent HH combinations in \ac{CMS}.
 
 \subsubsection{4b}
-\label{sec:orgea7e127}
+\label{sec:org92dc813}
 \label{sec:bbbb}
 \subsubsection{bb\(\gamma \gamma\)}
-\label{sec:orgca956e4}
+\label{sec:orgecc8a9c}
 \label{sec::bbgg}
 \subsubsection{bb\(\tau \tau\)}
-\label{sec:org9ba3362}
+\label{sec:org7248e24}
 \label{sec::bbtautau}
 \subsubsection{\(\gamma \gamma \tau \tau\)}
-\label{sec:org7b90a0b}
+\label{sec:orgf9fa9cd}
 \ac{CMS} has recently explored the extremely rare \(\gamma \gamma \tau \tau\) decay channel, for the first time, using full Run2 data.
 The analysis covers non-resonant production via \ac{ggF} and the HH (spin 0 and 2) and HY \ac{BSM} resonant production modes.
 The latter particle refers to an additional BSM scalar Y, considering both H(bb)Y(\(\tau \tau\)) and H(\(\tau \tau\))Y(bb) signatures.
@@ -366,10 +382,10 @@ The limits are around one order of magnitude worse than the ones obtained by the
 \caption{\label{fig:ggtt_results}Results of the \(\gamma \gamma \tau \tau\) nonresonant analysis. \emph{Left)} Distribution of the BDT scores used for the event categorization from data and predictions from MC simulation. \emph{Right)} Data points and signal-plus-background models for the most sensitive analysis category, where the lower panel in each plot shows the residual signal yield after subtraction of the background. Taken from \cite{gammagammatautau}.}
 \end{figure}
 \subsubsection{ZZ, ZH and future techniques}
-\label{sec:orgf0c218c}
+\label{sec:orgea2f5be}
 \begin{enumerate}
 \item The \zzzhbbbb{} analysis
-\label{sec:orgb7d1a8c}
+\label{sec:orgcd63449}
 The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have cross-sections 31 and 8 times larger than the \ac{SM} ones, respectively, and are therefore expected to be observed before the \bbbb{} process.
 The recently published resolved \zzzhbbbb{} analysis \cite{zz_zh_bbbb} uses a series of advanced background estimation techniques to successfully validate a \ac{QCD} estimate using synthetic datasets (\cref{sec:qcd_bkgd_problem}).
 
@@ -385,7 +401,7 @@ The observed (expected) 95\% CL upper limits on the production cross sections co
 The analysis indicates that ZH will likely be ovserved first.
 
 \item The problem with \ac{QCD} simulations
-\label{sec:org76fdf68}
+\label{sec:org1a5436d}
 \label{sec:qcd_bkgd_problem}
 
 Many analysis in CMS include quark- or gluon- induced jets in their final state particles.
@@ -415,7 +431,7 @@ In addition, it would be beneficial to directly test the ABCD extrapolation in t
 
 
 \item Hemisphere mixing
-\label{sec:org54b944e}
+\label{sec:orgaa3536d}
 \label{sec:hemisphere_mixing}
 
 The hemisphere mixing technique \cite{hemisphere_mixing} first creates a library of ``hemispheres'', which arise from the splitting of events along the plane orthogonal to the transverse thrust axis.
@@ -444,7 +460,7 @@ Importantly, and despite not yet being used in the most recent \bbbb{} results, 
 We note that, given appropirate modifications, a similar method could be extended to the \bbtt{} analysis.
 \end{enumerate}
 \subsubsection{Combinations}
-\label{sec:orgc0aaf79}
+\label{sec:org7585f95}
 \label{sec:Combinations}
 
 @mention impact of bb\(\tau \tau\)@
@@ -453,43 +469,60 @@ The most up-to-date Run2 HH combination constrains the observed (expected) HH cr
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=.8\textwidth]{/home/bruno/org/PhD/Thesis/figures/limits_HH_SM_Mar2023.pdf}
+\includegraphics[width=.8\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/limits_HH_SM_Mar2023.pdf}
 \caption{\label{fig:HH_nonres_comb_xsec}Upper limits at 95\% confidence level on the SM signal strength \(\mu = \xshh / \xshhsm\). The inner (green) band and the outer (yellow) bands indicate the regions containing 68\% and 95\%, respectively, of the limits on \(\mu\) expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Figure taken from \cite{summary_hig_twiki}.}
 \end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.85\textwidth]{/home/bruno/org/PhD/Thesis/figures/exclusion_kl_Mar2023.pdf}
-\caption{\label{fig:HH_nonres_comb_kl}95\% confidence intervals on \(\kl\) superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval. The quoted expected upper limits are evaluated with the postfit values of the uncertainties.}
+\begin{figure}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/exclusion_kl_Mar2023.pdf}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/exclusion_C2V_Mar2023.pdf}
+\caption{\label{fig:HH_nonres_comb_c2v}95\% confidence intervals on \(\kl\) (left) and \(\kvv\) (right) superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Taken from}
 \end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.85\textwidth]{/home/bruno/org/PhD/Thesis/figures/exclusion_C2V_Mar2023.pdf}
-\caption{\label{fig:HH_nonres_comb_c2v}95\% confidence intervals on \(\kvv\) superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval.}
+\begin{figure}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/scan_kl_nature.pdf}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/scan_k2v_nature.pdf}
+\caption{\label{fig:scan_comb_cms_nature}Combined expected and observed 95\% CL upper limits on the HH production cross-section for different values of \(\kl\) (left) and \(\kvv\) (right), assuming the SM values for the modifiers of Higgs boson couplings to top quarks and vector bosons. The green and yellow bands represent the 1\(\sigma\) and 2\(\sigma\) extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross-section (its 1\(\sigma\) uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95\% CL. Taken from \cite{higgs_10_years}.}
 \end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.9\textwidth]{/home/bruno/org/PhD/Thesis/figures/scan_kl_nature.pdf}
-\caption{\label{fig:scan_kl_nature}Combined expected and observed 95\% CL upper limits on the HH production cross-section for different values of \(\kl\), assuming the SM values for the modifiers of Higgs boson couplings to top quarks and vector bosons. The green and yellow bands represent the 1\(\sigma\) and 2\(\sigma\) extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross-section (its 1\(\sigma\) uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95\% CL. Taken from \cite{higgs_10_years}.}
+\begin{figure}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/atlas_combination_kl.pdf}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/atlas_combination_k2v.pdf}
+\caption{\label{fig:scan_comb_atlas}Observed (solid lines) and expected (dashed lines) 95\% CL exclusion limits on the HH production cross-sections of the inclusive \ac{ggF} and \ac{VBF} processes as a function of \(\kl\) (left) and the \ac{VBF} process as a function of \(\kvv\) (right), for the \bbgg{} (purple), \bbtt{} (green), multilepton (cyan), \bbbb{} (blue) and \bbll{} (brown) decay channels and their combination (black). The expected limits assume no HH production or no \ac{VBF} HH production, respectively. The \ac{ggF} HH production cross-section is assumed to be as predicted by the SM in the right plot. The red line shows the theory prediction for the \ac{ggF} and \ac{VBF} HH production cross-section as a function of \(\kl\) (left), and the predicted \ac{VBF} HH cross-section as a function of \(\kvv\) (right). The bands surrounding the red cross-section lines indicate the theoretical uncertainties on the predicted cross-sections. Taken from \cite{atlas_hh_comb}.}
 \end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.9\textwidth]{/home/bruno/org/PhD/Thesis/figures/scan_k2v_nature.pdf}
-\caption{\label{fig:scan_k2v_nature}Combined expected and observed 95\% CL upper limits on the HH production cross-section for different values of \(\kvv\), assuming the SM values for the modifiers of Higgs boson couplings to top quarks and vector bosons. The green and yellow bands represent the 1\(\sigma\) and 2\(\sigma\) extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross-section (its 1\(\sigma\) uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95\% CL. Taken from \cite{higgs_10_years}.}
-\end{figure}    
+
+\begin{figure}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/limits_ggF_HH_SM_atlas.pdf}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/limits_VBF_HH_SM_atlas.pdf}
+\caption{\label{fig:limits_comb_atlas}Observed and expected 95\% CL upper limits on the signal strength for the inclusive \ac{ggF} HH (left) and \ac{VBF} HH production (right) from the \bbtt{}, \bbgg{}, \bbbb{}, multilepton and \bbll{} decay channels, and their statistical combination. The \ac{ggF} or \ac{VBF} HH production cross-section is fixed to the SM predicted value for \(\mh=125\,\si{\GeV}\) when deriving limits on the respective signal strength. The expected limit, along with the ±1σ and ±2σ bands, is calculated under the assumption of no HH process and with all NPs profiled to the observed data. Taken from \cite{atlas_hh_comb}.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=.431\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/direct_indirect1.pdf}
+\includegraphics[width=.569\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/direct_indirect2.pdf}
+\caption{\label{fig:direct_vs_indirect_cms}Constraints on \(\kl\) and \(\kvv\) from the production of Higgs boson pairs (left). Constraint on the Higgs boson self-coupling modifier \(\kl\) from single and pair production of Higgs boson(s) (right). Taken from \cite{higgs_10_years}.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/kl_vs_k2v_atlas_comb.pdf}
+\caption{\label{fig:kl_vs_k2v_atlas}Expected 95\% CL contours in the \(\kvv{}–kl{}\) plane, corresponding to the individual decay channels and their combination, are illustrated using dashed lines. The observed contour from the combined results is depicted by a solid black line. The \ac{SM} prediction is marked by a star, and the combined best-fit value is indicated by a cross. Taken from \cite{atlas_hh_comb}.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/eft_atlas_comb.pdf}
+\caption{\label{fig:kl_vs_k2v_atlas}Observed and expected 95\% CL combined upper limits on the cross-section for the \ac{SM} and seven \ac{BSM} HEFT benchmarks in the ggF process, describing representative signal kinematics and \(\mhh\) shape features obtained by varying multiple \ac{HEFT} coefficients. The expected limits from the \bbtt{}, \bbgg{} and \bbbb{} decay channels are presented as well. Theoretical predictions, estimated using specific sets of coefficient values defined in the benchmarks, are shown as red cross dots. Taken from \cite{atlas_hh_comb}.}
+\end{figure}
 \subsection{Going beyond the SM}
-\label{sec:org1640e1f}
+\label{sec:orgb06aa25}
 \subsubsection{SM shortcomings}
-\label{sec:org4548893}
+\label{sec:org0fd8c2c}
 \label{sec:SMShortComings}
 
 CP violation / matter-antimatter asymmetry \cite{cp_violation1,cp_violation2,cp_violation3}
 \begin{enumerate}
 \item Electro-weak phase transition
-\label{sec:org78b1315}
+\label{sec:org3046c0d}
 \label{sec:EWPT}
 
 As discussed in Section \cref{sec:SM}, the existence of the Higgs field breaks electro-weak symmetry.
@@ -511,7 +544,7 @@ While the SM predicts a smooth transition, a plethora of BSM models prefers a fi
 As Eq. \cref{eq:sm_potential} shows,
 \end{enumerate}
 \subsubsection{Non-resonant BSM HH Production}
-\label{sec:org21b38ad}
+\label{sec:orgbdff940}
 \label{sec::NonResBSMHH}
 
 Many models of physics beyond the Standard Model with \ac{SM}-compatible single Higgs boson signal strengths can exhibit a di-Higgs phenomenology vastly different from the \ac{SM} expectation.
@@ -536,7 +569,7 @@ Test \ac{BSM} w/ anomalous couplings
 
 \begin{enumerate}
 \item Effective Field Theories
-\label{sec:org6da852b}
+\label{sec:orge83c3d4}
 \begin{itemize}
 \item Probe effects from resonances with very high mass at lower energy scales
 \item \ac{BSM} effects on ggF HH production can be studied
@@ -552,25 +585,25 @@ Test \ac{BSM} w/ anomalous couplings
 \end{itemize}
 \end{enumerate}
 \subsubsection{Resonant BSM HH Production}
-\label{sec:org709c55e}
+\label{sec:org49508b6}
 \label{sec::ResBSMHH}
 
 \begin{enumerate}
 \item Motivaton for the bb\(\tau \tau\) analysis
-\label{sec:orgdb2d43a}
+\label{sec:org273d2ba}
 \end{enumerate}
 
 
 \section{The CMS Detector at the LHC}
-\label{sec:org8680c33}
+\label{sec:org3121be7}
 \subsection{The Large Hadron Collider}
-\label{sec:org40b350c}
+\label{sec:org97243f8}
 \label{sec:lhc_intro}
 
 The Large Hadron Collider (LHC) is one of the largest scientific instruments ever built.
 Since opening up a new energy frontier for exploration in 2010, it has gathered a global user community of about 9000 scientists working in fundamental particle physics and the physics of hadronic matter at extreme temperature and density \cite{hllhc}.
 \subsubsection{Design}
-\label{sec:org4adb4d5}
+\label{sec:org4fef473}
 \label{sec:lhc_design}
 
 It is common practice to express charged and neutral particle contributions to radiation in terms of dose and \SI{1}{\MeV} neutron equivalent fluence, respectively.
@@ -620,10 +653,10 @@ Parameter & Description & Value\\[0pt]
 
 \end{table}
 \subsubsection{Operations}
-\label{sec:org631202d}
+\label{sec:org3b6969a}
 \label{sec:lhc_operatoins}
 \subsubsection{Experiments}
-\label{sec:orgb21d827}
+\label{sec:org7224d2f}
 \label{sec:lhc_experiments}
 
 \paragraph\{\ac{LHCb}\}
@@ -632,8 +665,10 @@ Instead of surrounding the entire collision point with an enclosed detector as d
 The first subdetector is mounted close to the collision point, with the others following one behind the other over a length of 20 metres. \cite{hllhc_website}
 
 The LHCb experiment [1] is designed to exploit the large bb production cross section at the LHC in order to perform a wide range of precision studies of CP violating phenomena. The copious production of Bd, Bs and Bc mesons and b-baryons, together with the unique particle-identification capabilities the LHCb detector, will allow the experiment to perform sensitive measurements of CP violating asymmetries in a variety of channels that are beyond the reach of the current generation of CP-violation experiments. \cite{lhcb_collab}
+
+\cite{bb_pairs1,bbpairs2}
 \subsection{The CMS Detector}
-\label{sec:orgc233b2b}
+\label{sec:org17c3aff}
 Detector in Tables \cref{tab_sad} and \cref{tab_sad2}
 
 \begin{table}[htbp]
@@ -656,7 +691,7 @@ dsd & \\[0pt]
 
 \end{table}
 \subsubsection{Coordinate system}
-\label{sec:org59af8f1}
+\label{sec:org980dbae}
 The CMS experiment adopts a right-handed coordinate system, with the origin placed at the nominal collision point.
 The x-axis points toward the centre of the LHC ring, the y-axis points vertically upward, and the z-axis thus points towards the Jura mountains.
 The structure of the detector makes it natural to use a polar coordinate system.
@@ -771,7 +806,7 @@ The exact \(\eta\) value marking the transition between the two regions depends 
 \caption{\label{fig:cords_lhc}Schematic illustration of the standard coordinate system at the CMS detector, represented relative to the \ac{LHC} and the other three main LHC experiments. Courtesy of Izaak Neutelings \cite{izaak_neutelings}.}
 \end{figure}
 \subsubsection{Detector structure}
-\label{sec:org791b9db}
+\label{sec:orgcf008b6}
 They are designed to be versatile and capable of detecting a wide range of physics processes across various energies.
 The CMS experiment was officially proposed in 1992 with the primary goal of discovering the \textbf{Higgs boson}.
 Key to this objective were the channels \(H \rightarrow ZZ \rightarrow 4\ell\) and \(H \rightarrow \gamma\gamma\), which required an excellent electromagnetic calorimeter for effective electron and photon detection, with an energy resolution constant term equal to or less than \textbf{0.5\%}.
@@ -802,28 +837,28 @@ The tracker is essential for momentum measurement, particle identification, and 
 To achieve precise momentum measurement, a powerful magnet was necessary, leading to the use of superconducting technology.
 The CMS detector's structure and components are designed to meet these stringent requirements.
 \subsection{The CMS trigger system}
-\label{sec:org6808817}
+\label{sec:org087dc6f}
 \subsubsection{Level-1}
-\label{sec:org553f35b}
+\label{sec:org8194ebd}
 \subsubsection{HLT}
-\label{sec:org8d31efb}
+\label{sec:org4af2f70}
 
 \subsection{Offline iddentification and reconstruction of physics objects}
-\label{sec:org134a1e7}
+\label{sec:org19d269c}
 \subsubsection{Particle-flow}
-\label{sec:orgb4814ef}
+\label{sec:org0cfa092}
 \subsubsection{Electrons}
-\label{sec:org253d2a1}
+\label{sec:orgaa792a4}
 \subsubsection{Muons}
-\label{sec:orgeb229fd}
+\label{sec:orgac79eae}
 \subsubsection{Hadronic \(\tau\)'s}
-\label{sec:orgb507fa7}
+\label{sec:org160c37e}
 \subsubsection{Jets}
-\label{sec:org2cc8f44}
+\label{sec:orgde795d2}
 \subsubsection{Missing transverse energy}
-\label{sec:org3f59fbf}
+\label{sec:orgf40c820}
 \subsection{Monte Carlo generation}
-\label{sec:org6bd1609}
+\label{sec:org629fb65}
 \begin{itemize}
 \item Pythia: beams, hard-scattering, parton showering and hadronisation
 \item jet matching and/or merging during hadronization
@@ -831,7 +866,7 @@ The CMS detector's structure and components are designed to meet these stringent
 \end{itemize}
 
 \subsubsection{Tunes}
-\label{sec:org02f655c}
+\label{sec:org57a00f8}
 The underlying event (UE) consists of the beam-beam remnants (BBR) and the particles that arise from multiple-parton interactions (MPI).
 The BBR are what remains after a parton is scattered out of each of the two initial beam hadrons, while the MPI are additional soft or semi-hard parton-parton scatterings that occur within the same hadron-hadron collision \cite{CMS_Tunes}.
 
@@ -845,17 +880,17 @@ A set of QCD parameters is derived in different ways (WHICH ONES??) to precisely
 A complex fitting procedure, using data collected by CDF and CMS at different energies is used, extracting the parameters known as CMS Pythia (CP) Tunes.
 
 \subsubsection{Monte Carlo and data processing in \ac{CMS}}
-\label{sec:org38b3548}
+\label{sec:org65e6e76}
 \begin{enumerate}
 \item Data processing chain
-\label{sec:org1e72fa7}
+\label{sec:org4ba2541}
 \begin{itemize}
 \item @Follow section 2.5 of Alessandro's thesis@
 \item create items with parton showering, hadronization, underlying event modelling\ldots{}
 \end{itemize}
 
 \item Pile-up production
-\label{sec:orgbed80c1}
+\label{sec:orgce19303}
 There are two ways to produce samples with simulation of pile-up: premix and classical mixing \cite{pileup_production}.
 
 Classical mixing implies a previous production of a \ac{MB} sample (with a datatier ``GEN-SIM'').
@@ -873,7 +908,7 @@ Since the \texttt{DIGI} step is run only once, premix requests are much faster a
 
 
 \subsubsection{Improvements for the HL-LHC}
-\label{sec:org3b545b6}
+\label{sec:org2f2be97}
 \begin{itemize}
 \item \cite{hllhc_physics}
 \item quest for higher precision and accuracy, but also by practical issues, such as the need for generating very
@@ -886,13 +921,13 @@ the input parameters needed in order to study uncertainties.
 \end{itemize}
 
 \subsubsection{Activities as Monte Carlo contact}
-\label{sec:org18d15ec}
+\label{sec:orgc597df1}
 
 
 \section{Trigger primitives reconstruction for the HGCAL Level-1 trigger}
-\label{sec:orgab8ac7e}
+\label{sec:orge6c494f}
 \subsection{The High Luminosity LHC}
-\label{sec:orgb97cdf1}
+\label{sec:org14721b0}
 \label{sec:hllhc}
 
 The so-called \ac{LHC} Phase-1 has been running since 2011, spanning three independent data runs, the last of which, Run 3, is currently approaching its end of life, at the end of 2025.
@@ -913,7 +948,7 @@ An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be
 A dramatic performance degradation is foreseeable for higher luminosities.
 
 \subsubsection{Lumi measurements can improve due to:}
-\label{sec:org6c49dda}
+\label{sec:org7265112}
 \begin{itemize}
 \item \cite{hllhc_physics}
 \item high precision luminosity detectors are needed to provide high-granularity bunch-by-bunch luminosity measurements, with very good linearity and stability.
@@ -922,20 +957,20 @@ A dramatic performance degradation is foreseeable for higher luminosities.
 \end{itemize}
 
 \subsubsection{Physics motivation}
-\label{sec:orga30cab1}
+\label{sec:org9404539}
 \label{sec:hllhc_physics}
 
 A more powerful \ac{LHC} will increase the accurancy of current measurements and enhance the sensitivity to rare processes through both direct and indirect searches which occur below the current sensitivity level, and with more challenging signatures.
-The \ac{HLLHC} is expected to provide high-precision measurements of the \ac{SM}, particular in Higgs physics: the Higgs boson (H) self-coupling, via direct and indirect measurements (see \cref{sec:dihiggs}), higgs couplings, flavour physics, BSM
+The \ac{HL-LHC} is expected to provide high-precision measurements of the \ac{SM}, particular in Higgs physics: the Higgs boson (H) self-coupling, via direct and indirect measurements (see \cref{sec:dihiggs}), higgs couplings, flavour physics, BSM
 
 A virtuous cycle often takes place between data collection and improvements in simulation and theory calculations.
-In the following we provide a brief and necessarily incomplete overview of some of the physics motivations to build the \ac{HLLHC}.
+In the following we provide a brief and necessarily incomplete overview of some of the physics motivations to build the \ac{HL-LHC}.
 A detailed description is out of the scope of this work.
 
 
 \paragraph{EW processes}
 
-The increase in luminosity provided by the \ac{HLLHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
+The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
 This notably applies to W mass \(\mw\) and weak mixing angle \(\thw\) measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
 \num{\sim 2e6} W boson events will be collected per week, leading to a statistical sensitivity of about \SI{10}{\MeV} for the \(W\) mass, and significantly lower for cross-section measurements.
 The added luminosity might also help solving the tension between old \(\theta_{W}\) measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result \cite{weak_mixing_angle_cms}, which agree with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
@@ -952,89 +987,94 @@ Finally, even rarer tri-boson processes (\(\sigma\)\SI{\sim 0.1}{\pico\barn}) br
 
 \paragraph{Strong interactions}
 
-The \ac{HLLHC} will enable an increase in the kinematic reach for jet and photon production.
+The \ac{HL-LHC} will enable an increase in the kinematic reach for jet and photon production.
 This will in turn reduce the associated experimental uncertainties, improving \ac{PDF} modeling.
 High-\(\pt\) b-jets are sensitive to higher-order corrections, parton shower modeling and \acp{PDF}.
 Therefore, investigating the b-jet contribution to the total jet cross section enables to test the available theoretical predictions.
 The shape of the distributions of jets of various flavours will also be known with a higher precision, especially in the tails.
 On the photon side, diphotons with high invariant mass are ideal probes to test the \ac{SM} and search for \ac{BSM}. In particular, prompt photons do not interact with other final state particles, enabling a precise study of \ac{QCD} \cite{diphoton_cdf}.
-The \ac{HLLHC} will enable a more precise knowledge of photon related cross-sections.
-For the first time, the \ac{HLLHC} will make possible the measurement of quantum correlations between partons in the proton by precisely studying differential distributions.
+The \ac{HL-LHC} will enable a more precise knowledge of photon related cross-sections.
+For the first time, the \ac{HL-LHC} will make possible the measurement of quantum correlations between partons in the proton by precisely studying differential distributions.
 This brings an improvement in \ac{DPS} modeling, which has been so far very limited.
 \ac{DPS} can be as relevant as the single proton scattering for same-sign \(WW\) final states involving \(b\bar{b}\) or \(c\bar{c}\) quark pairs.
 
 \paragraph{Top physics}
 The heaviest particle in the \ac{SM} plays an important role in \ac{EWSB} and in \ac{BSM} searches.
-With the \ac{HLLHC} we will be able to improve the precision of the \(\mt\) measurement, and to study \(t\bar{t}\) differential distributions in more detail, reaching \(\mtt\sim 7\,\si{\TeV}\) and \(\pt\sim 2.5\,\si{\TeV}\).
+With the \ac{HL-LHC} we will be able to improve the precision of the \(\mt\) measurement, and to study \(t\bar{t}\) differential distributions in more detail, reaching \(\mtt\sim 7\,\si{\TeV}\) and \(\pt\sim 2.5\,\si{\TeV}\).
 This will provide benefits for \ac{PDF} measurements.
 One can also explore \ac{BSM} for \(\mtt > 7\,\si{\TeV}\) due to the low \ac{SM} background.
 An interesting link might be drawn between the results of \ac{LHCb} and \ac{ATLAS}/\ac{CMS}, given the increase in \(\eta\) reach up to \num{\sim 4}.
-There will be as well the possibility to observe \(t\bar{t}t\bar{t}\) production for the first time, despite its small cross-section of \(\mathcal{O}(10)\,\si{\per\femto\barn}\).
+There will be as well the possibility to observe the rare \(t\bar{t}t\bar{t}\) production for the first time, despite its small cross-section of \(\mathcal{O}(10)\,\si{\per\femto\barn}\).
 \(t\bar{t}t\bar{t}\) can be used to constrain some of the Wilson coefficients associated to \ac{EFT} dimension-6 operators, to further study the top Yukawa coupling, since it can occur via de mediation fo a Higgs boson \cite{tttt}, and even to assess the presence of the non-\ac{SM} top quark dipole moment.
 
 \paragraph{Forward physics}
 
-Assuming concepts similar to the current \ac{CTPPS} \cite{ctpps_tdr} and \ac{AFP} \cite{afp_tdr} detectors are extended in the \ac{HLLHC} phase, \ac{CEP} \(pp \rightarrow p\,(\gamma\gamma\rightarrow X)\,p\) phenomena, among which light-by-light scattering (\(X = \gamma\gamma\)), will be further explored \ac{CEP}.
-Other processes include \(X = \mu\mu,\,\tau\tau,\,Z,\,H,\,WW,\,ZZ,\,\cdots\) \cite{ctpps_varela}.
+Assuming concepts similar to the current \ac{CTPPS} \cite{ctpps_tdr} and \ac{AFP} \cite{afp_tdr} detectors are extended in the \ac{HL-LHC} phase, \ac{CEP} \(pp \rightarrow p\,(\gamma\gamma\rightarrow X)\,p\) phenomena, among which light-by-light scattering (\(X = \gamma\gamma\)), will be further explored \ac{CEP}.
+Other processes include, for instance, \(X = \mu\mu,\,\tau\tau,\,Z,\,H,\,WW,\,ZZ\), and enable the study of anomalous gauge couplings and the magnetic moment of the \(\tau\), among other studies \cite{ctpps_varela,ctpps_pitt}.
 \ac{CEP} processes carry particular interest since they bring production of charged particles initiated only by photons, into what amounts to using the \ac{LHC} as a \(\gamma\gamma\) collider.
 In parallel, a whole plethora of \ac{QCD}-related measurements can be performed in \acp{CEP}.
-The \ac{HLLHC} will push \ac{CEP} processes to higher masses and lower cross-sections, increasing their discovery potential.
+The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross-sections, increasing their discovery potential.
 
 
+\paragraph{Higgs boson pairs}
+
+One hundred thousand Higgs boson pairs are expected to be produced during the \ac{HL-LHC} phase.
+This will enable the most precise measurement ever of the triple and quartic Higgs couplings, with the possibility of observing the former for the first time after combining \ac{CMS} and \ac{ATLAS} datasets.
+Upcoming nonresonant HH searches will bring further constraints on \(\kl\) as well as on other couplings not discussed in this report.
+Yet unexplored HH production modes and decay channels are being studied.
 
 
-\begin{enumerate}
-\item Physics
-\label{sec:orgf7a6904}
-\begin{itemize}
-\item \cite{hllhc_physics}
-\item EW processes
-\item strong interactions
-\item top physics inckuding effective coupling interpretations
-\item proposed studies of forward physics that are possible with new forward detectors
-\end{itemize}
+At present, none of the analyses used to search for the production of H0(125) pairs is statistically limited \cite{andre_david_higgs_ten_years}.
+\ac{ggF} theory uncertainties might soon become important.
+\cref{fig:hh_nonres_projections} allows the comparison of early \run{2} results with current full \run{2} upper cross-section limits.
+An improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
+The improvement over the luminosity baseline is due to improvements which span multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels, made possible by the gradual increase in available number of events.
 
-Moreover, the study of rare processes like the \(\ttbar\ttbar\) production in leptonic final states will be of utmost importance to constrain the magnitude and Charge-Parity (CP) properties of the top Yukawa coupling, as well as probe 2HDM BSM models \cite{HL-HE-LHC_YR}. An important test of CP violation is represented by the \emph{golden channel} \(\bspsiphi(1020)\), with an expected uncertainty on CP-violating phase \(\phi_{\text{s}}\sim5-6\unit{mrad}\) in Phase-2 \cite{HL-HE-LHC_YR}. Further studies of BSM physics include the search for lepton flavour non-universality in the \(\tautrimuon\) decay \cite{Muon_Phase2_TDR} and the search for long-lived particles \cite{HL-HE-LHC_YR}. This will be complemented by a deep study of the \(H\) boson properties \cite{CMS-PAS-FTR-18-011}. 
-\cite{hllhc_physics}
+New techniques, including better estimates of \ac{QCD} background and new machine learning methods, will make existing results quickly obsolete.
+The usage of \ac{PNet} \cite{particle_net} for \(\tau\)-initiated jets and the application of transformer technology to jet tagging \cite{particle_transformer} might have a strong impact.
+Additionally, an improved trigger strategy has been implemented, considering both data scouting and parking \cite{parking_scouting_run3_cms}, and including \ac{PNet} b-tagging and \(\tau\)-tagging at trigger level.
+We also expect that some HH analysis might benefit from the inclusion of synthetic datasets.
 
-Several of these measurements will be constrained by uncertainties in our knowledge of the proton's partonic inner structure, known as \acp{PDF}. Global \ac{PDF} fits of several \ac{HLLHC} measurements will significantly reduce \ac{PDF} uncertainties and, consequently, improve measurements of \ac{SM} parameters, such as the weak mixing angle and the W boson mass. Anomalies in precision measurements within the SM sector can become significant when both experimental measurements and theoretical predictions achieve percent-level precision, especially when exploring high energy scales. These anomalies could provide insights into new physics effects from higher energy scales. @add mention to EFT parameters?@
+On top of the recent \(\kvv=0\) exclusion, and assuming \(\kl=1\), \ac{CMS} might measure nonresonant HH via a multi-channel combination by the end of the \ac{HL-LHC} \cite{higgs_10_years}, possibly in combination with \ac{ATLAS}.
 
-
-the mysterious dark matter and the world of supersymmetry are just among the long-awaited mysteries that the LHC may unveil \cite{hllhc_website}.
-\end{enumerate}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/hh_nonres_projections.pdf}
+\caption{\label{fig:hh_nonres_projections}Evolution of the expected and observed upper limits on the HH production cross-section. The figure compares results from early \ac{LHC} \run{2} data (\SI{35.9}{\invfb}) with full \ac{LHC} \run{2} data (\SI{138}{\invfb}), and with projections for the \ac{HL-LHC} (\SI{3000}{\invfb}). At the end of the \ac{HL-LHC} it should be possible to challenge the \ac{SM} prediction (red line) with the result of a combined analysis of multiple final states. Taken from \cite{higgs_10_years}.}
+\end{figure}
 \subsubsection{Detector ugrades}
-\label{sec:orgb95e15d}
+\label{sec:org5ea827e}
 \label{sec:hllhc_detector_upgrades}
 
 \paragraph\{\ac{LHCb}\}
 
 mention VELO
 \subsubsection{Future CMS subdetectors}
-\label{sec:org68d1763}
+\label{sec:org513081c}
 \label{sec:hllhc_future_subdetectors.org}
 
 \begin{enumerate}
 \item Pixels
-\label{sec:org6471f22}
+\label{sec:org1128ad3}
 \begin{itemize}
 \item New Layer 1 at 29mm from the beamline
 \end{itemize}
 \item Muons
-\label{sec:org2368efb}
+\label{sec:org6073f23}
 \item HCAL
-\label{sec:orgef18fcc}
+\label{sec:orgbc2c7a4}
 \begin{itemize}
 \item in HCAL hybrid photodiodes were replaces by SiPMs (in Run1)
 \item HCAL brings new depth and timing information
 \end{itemize}
 \item Bril
-\label{sec:orgdfa6a61}
+\label{sec:org324484a}
 \begin{itemize}
 \item lumi measurements are challenging
 \item uncertainty of 1.4\% in 2022
 \end{itemize}
 \item L1
-\label{sec:org73e84f3}
+\label{sec:org963ef05}
 \begin{itemize}
 \item Folded event building in Run3
 \item GPUs in Run3 (and replace CUDA by Alpaka)
@@ -1044,7 +1084,7 @@ mention VELO
 \end{itemize}
 \end{enumerate}
 \subsection{The High Granularity Calorimeter}
-\label{sec:org1021cfb}
+\label{sec:orga7e5831}
 \label{sec:hgcal_intro}
 
 \url{https://cernbox.cern.ch/pdf-viewer/public/cLosQkewmONZakQ/220606\_Dauncey\_DN-19-032-V2.pdf?contextRouteName=files-public-link\&contextRouteParams.driveAliasAndItem=public\%2FcLosQkewmONZakQ\&items-per-page=100}
@@ -1083,7 +1123,7 @@ The full system operates at a temperature of \SI{-35}{\celsius} maintained by a 
 \caption{\label{fig:hgcal}Schematic views of \ac{HGCAL}. \textit{a)} Longitudinal profile of positive endcap with highlighted \ac{eta} range and \ac{EM} and \ac{HAD} sections \emph{b)} Transversal view of a \ac{Si}-only layer, with different colors representing different sensor thicknesses \emph{c)} Same as \textit{b} for a hybrid layer \emph{d)} 3D view of \ac{HGCAL}.}
 \end{figure}
 \subsection{The dataflow of HGCAL trigger primitives}
-\label{sec:org1be989e}
+\label{sec:orga69ae33}
 The goal of \ac{TPG} is to provide valuable information to the CMS Level-1 (L1) trigger, within limited time and bandwidth budgets, via \acp{TP}.
 \acp{TP} are the building blocks of \acp{L1}.
 In HGCAL, they consist of module towers and cluster-related variables, such as energy, positions and shapes.
@@ -1159,7 +1199,7 @@ During my PhD I have implemented from scratch the entire \ac{S2} reconstruction 
 It was previously only available in \texttt{C++}, within CMSSW \cite{cmssw}.
 The code enables exponentially faster prototyping, testing and optimization, which are the basis of the following studies.
 \subsection{Development of a simplified HGCal geometry and event processing chain}
-\label{sec:org2876373}
+\label{sec:org6899379}
 \label{sec:event_geom_developments}
 
 I developed a unified set of \texttt{Python} classes from scratch to process HGCAL samples and produce a simplified version of the TC geometry, including both \ch{Si} and scintillator sections\footnote{See an example in \url{https://github.com/bfonta/bye_splits/pull/26}.}.
@@ -1171,7 +1211,7 @@ The framework, including the reconstruction chain, is currently being used and a
 This work has been presented at PyHEP 2023 \cite{bruno_pyhep23}.
 
 \subsection{Cluster splitting and possible solutions}
-\label{sec:org6ee5497}
+\label{sec:orgf72d8c2}
 \label{sec:cluster_splitting}
 
 The projective \coordsa{} bins do not have a fixed size in the cartesian \((x,y)\) plane.
@@ -1203,7 +1243,7 @@ With this sample, we observe cluster splits in \SI{\sim 1}{\percent} of the even
 \end{figure}
 
 \subsubsection{Bye-splits iterative algorithm}
-\label{sec:org30daa66}
+\label{sec:org52c5c84}
 Splits are overwhelmingly located in the high-\rapidity{} region, where bins are smaller in the cartesian space and \ac{TC} counts are less homogeneous along \azimuth{}.
 Indeed, while a \ac{TC} shift of one \azimuth{} bin may create a split, a \ac{TC} shifting one \si{\rz} bin is captured by the seeding window, creating no split.
 In addition, the number of \azimuth{} bins is larger, naturally increasing the odds of \ac{TC} counts non-uniformity.
@@ -1275,7 +1315,7 @@ The algorithm was presented in \cite{bruno_chep23}.
 Alternative approaches were also looked at, all of which have an impact on resources but reducing cluster splitting dramatically: increasing the size of the seeding window, modifying the smoothing kernel and using the energy prioritization clustering algorithm.
 
 \subsubsection{Using detector coordinates}
-\label{sec:org8e0ef87}
+\label{sec:orgf74a8e1}
 \ac{HGCAL}'s geometry uses non-cartesian coordinates to cover the hexagonal tessellation of its \ch{Si} modules and sensors.
 Any mismatch between algorithmic and detector coordinates implies a non-trivial interface.
 Therefore, besides creating cluster splits, \coordsa{} bins increase the complexity of routing \acp{TC} to bins, which is further complicated by the \coordsa{} varying bin area.
@@ -1336,140 +1376,140 @@ Interestingly, we observe an almost complete removal of cluster splits, without 
 
 
 \section{\reshhbbtt{}: Strategy definition}
-\label{sec:org30f0e62}
+\label{sec:org68979df}
 \label{sec::bbtautau}
 \subsection{Data, MC and signal samples}
-\label{sec:org24ab229}
+\label{sec:orgf83ad01}
 
 \subsection{Triggers}
-\label{sec:org38af26e}
+\label{sec:org4cf5161}
 \subsubsection{Legacy triggers}
-\label{sec:orgf6d1de2}
+\label{sec:orga1333eb}
 \subsubsection{Additional triggers}
-\label{sec:org63f921a}
+\label{sec:org866aec2}
 \subsubsection{Analysis trigger regions}
-\label{sec:org73757a9}
+\label{sec:org8014eb1}
 \subsubsection{Note on the inclusion method}
-\label{sec:org9e3cb9d}
+\label{sec:org1e1cef9}
 \subsection{Physics objects}
-\label{sec:orgf27be0e}
+\label{sec:org2be9257}
 \subsubsection{Electrons}
-\label{sec:orgcdf220e}
+\label{sec:org30a3330}
 \subsubsection{Muons}
-\label{sec:orge1c6d99}
+\label{sec:orgd0ac68d}
 \subsubsection{Hadronic \(\tau\)'s}
-\label{sec:orgb105521}
+\label{sec:orgcd221f1}
 \subsubsection{Jets}
-\label{sec:org37e8175}
+\label{sec:orgb92323c}
 \begin{enumerate}
 \item b-jets
-\label{sec:orgd20f72a}
+\label{sec:orgdc38adc}
 \end{enumerate}
 \subsubsection{Missing transverse energy}
-\label{sec:orgb0888bc}
+\label{sec:orgf699723}
 \subsection{Selection}
-\label{sec:org19d9d48}
+\label{sec:org3f7d248}
 \subsubsection{\(\tau \tau\) pair}
-\label{sec:org42b25d0}
+\label{sec:org93ebee1}
 \subsubsection{bb pair}
-\label{sec:org065c829}
+\label{sec:orgd95615f}
 \begin{enumerate}
 \item HH b-tagging network
-\label{sec:org6f744f2}
+\label{sec:orgfd7987b}
 \end{enumerate}
 \subsection{Categorization}
-\label{sec:org332951f}
+\label{sec:org9c78e93}
 \subsubsection{Resolved jets}
-\label{sec:org38b1dd3}
+\label{sec:org14461f0}
 \subsubsection{Boosted jets}
-\label{sec:orgd75e206}
+\label{sec:org718eb74}
 \subsection{\(\tau \tau\) mass regression}
-\label{sec:org802480a}
+\label{sec:orgadb1034}
 \subsection{QCD background estimation}
-\label{sec:orge21eccc}
+\label{sec:org9b561bc}
 \subsubsection{Validation}
-\label{sec:org5ce48c8}
+\label{sec:orgb75e123}
 \begin{itemize}
 \item Varying the DeepTau working points used, thus modifying the C and D regions, and comparing the C/D ratio yield with the one obtained with the nominal C and D DeepTau working points.
 \item Define a sideband region by inverting the \(m_{\tau\tau}\) and \(m_{bb}\) mass cuts, and compare the QCD estimate with direct data-MC subtraction in the sideband
 \item It is also possible to define additional validation regions, one ``signal-like'' and the other ``background-like'' to mimic the transfer factor that will be applied to the signal regions
 \end{itemize}
 \subsection{Monte Carlo corrections}
-\label{sec:orgc1263f1}
+\label{sec:org4c7b009}
 \subsubsection{Pileup reweighting}
-\label{sec:org6749aca}
+\label{sec:org8206f70}
 \subsubsection{Pileup jet identification}
-\label{sec:orgb6314cb}
+\label{sec:org4bca3db}
 \subsubsection{Jet energy smearing}
-\label{sec:org3a3bf34}
+\label{sec:org217daf5}
 \subsubsection{Legacy trigger scale factors}
-\label{sec:orgdd51202}
+\label{sec:orgd3da46d}
 \subsubsection{Additional trigger scale factors}
-\label{sec:org34b0224}
+\label{sec:org8d4ff1f}
 \subsubsection{DeepTau scale factors for hadronic \(\tau\)'s}
-\label{sec:org2b1ea98}
+\label{sec:org3c8fc52}
 \subsubsection{Lepton scale factors}
-\label{sec:org067b2b1}
+\label{sec:org7b2088a}
 
 \subsection{Control regions}
-\label{sec:orga5cb467}
+\label{sec:org3e201aa}
 As we can see in @insert figure reference@ for the \ac{DY} \ac{CR}, the data/MC agreement improves significantly when requiring a strong b-tag identification \ac{WP}.
 This is due to bad modelization of the light jets coming with the \ac{DY} simulation, which has also been observed in the nonresonant \bbtt{} analysis \cite{higgs_bbtautau_nonres}.
 Ultimately, the categories which matter are the ones being fitted, here the one where the \texttt{DeepJet} requirement is applied.
 
 
 \section{\reshhbbtt{}: Limit extraction}
-\label{sec:orgd9768eb}
+\label{sec:org06f24e1}
 \subsection{Signal discrimination from background}
-\label{sec:org91a0b15}
+\label{sec:org0416778}
 \subsection{Systematic uncertainties}
-\label{sec:orgfed3a74}
+\label{sec:org7b61266}
 \subsubsection{Normalization uncertainties}
-\label{sec:org8d513f2}
+\label{sec:orga230e9f}
 \begin{enumerate}
 \item Luminosity
-\label{sec:org83c907c}
+\label{sec:orgc2d8af9}
 \item Electrons and muon isolation and identification efficiencies
-\label{sec:orgbbc8293}
+\label{sec:org3d965f2}
 \item L1 prefiring
-\label{sec:org8aad313}
+\label{sec:org71dac48}
 \item Pile-up reweighting uncertainty
-\label{sec:orgc70221e}
+\label{sec:orge7cc9a0}
 \item QCD estimation uncertainty
-\label{sec:orgf3ca5a8}
+\label{sec:org714efb8}
 \item Theoretical HH cross-section
-\label{sec:orgd7659c6}
+\label{sec:orgd620ed1}
 \item Final state branching fraction
-\label{sec:org4a89f74}
+\label{sec:orged50a74}
 \item Cross-sections of simulated processes
-\label{sec:orgd0b0c73}
+\label{sec:org1f5f331}
 \end{enumerate}
 \subsubsection{Shape uncertainties}
-\label{sec:orgf576437}
+\label{sec:orga62c370}
 \begin{enumerate}
 \item Hadronic \(\tau\)'s energy scale
-\label{sec:org02578de}
+\label{sec:org76b5149}
 \item Energy scale corrections for electrons and muons faking taus
-\label{sec:orgcac64fe}
+\label{sec:org85ab32c}
 \item Jet energy scale
-\label{sec:org3418732}
+\label{sec:org2181667}
 \item Jet energy resolution
-\label{sec:org00ff595}
+\label{sec:orga6e0585}
 \item Scale factors for tau identification with DeepTau
-\label{sec:orgc155542}
+\label{sec:org3fd00fe}
 \item Legacy trigger scale factors
-\label{sec:org7705207}
+\label{sec:org498b2b8}
 \item Additional trigger scale factors
-\label{sec:orgd9823f7}
+\label{sec:orge406d32}
 \item B-taggging scale factors
-\label{sec:org719a89e}
+\label{sec:org838594b}
 \item Scale factors for pile-up jet identification
-\label{sec:org51f0e51}
+\label{sec:orgd18b712}
 \end{enumerate}
 \subsection{Statistical treatment}
-\label{sec:org3f034ba}
+\label{sec:org1735411}
 \subsubsection{Hypothesis testing with the modified frequentist approach}
-\label{sec:org58de3e8}
+\label{sec:org314033c}
 In statistics, the term \emph{hypothesis} indicates a given set of predicted probabilities, against which one compares observed data.
 The hypothesis generally assumed as true is traditionally called the \emph{null hypothesis}, or \(H_{0}\), while the hypothesis we are comparing with the null are dubbed \emph{alternative}, or \(H_{1}\), \(H_{2}\), \(H_{3}\), \ldots{}
 Hypothesis denote \acp{PDF2} \(f\) which depend on the data measured \(x = (x_1,x_2,x_3,...)\) and eventually on free parameters \(\theta = (\theta_1,\theta_2,\theta_3,...)\) which are in turn estimated from data.
@@ -1495,15 +1535,15 @@ When
 
 \cite{glen_cowan}
 \subsubsection{The maximum likelihood method}
-\label{sec:org956ed87}
+\label{sec:orgdb13512}
 \subsection{Results}
-\label{sec:org1dc0b90}
+\label{sec:org44719e9}
 \subsubsection{Final limits}
-\label{sec:orga9ccc35}
+\label{sec:org4f33190}
 \subsubsection{Comparison with other resonant \bbtt{} results}
-\label{sec:org8c64d3d}
+\label{sec:orgf683b9a}
 \subsection{Future prospects for resonant and non-resonant HH searches}
-\label{sec:orgbdb6c55}
+\label{sec:org55e8c2d}
 \label{sec::future}
 
 The near future promises further constraints on \(\kl\) and on \ac{EFT} couplings in the context of nonresonant HH searches.
@@ -1524,48 +1564,63 @@ We also expect that some HH analysis might benefit from the inclusion of synthet
 The first \ac{CMS} Run3 HH results will soon be available.
 
 \subsubsection{Run3}
-\label{sec:org310814a}
+\label{sec:org018a667}
 \begin{itemize}
 \item mention \reshybbtt{} analysis
 \end{itemize}
 \subsubsection{HL-LHC}
-\label{sec:orge767f18}
+\label{sec:org27f0f4a}
 \begin{itemize}
 \item mention \reshybbtt{} analysis
 \end{itemize}
 \subsubsection{Future accelerators}
-\label{sec:orgf2ac908}
+\label{sec:org00fbe7c}
 \begin{itemize}
 \item mention \reshybbtt{} analysis
 \end{itemize}
 
 \section{Effects of finite width and interference in resonant HH production}
-\label{sec:org77bef73}
+\label{sec:org7b1b07d}
 \subsection{The Singlet Model}
-\label{sec:org858f66e}
+\label{sec:org3b6337c}
 \label{sec::SingletModel}
 
 This is the singlet model \cite{jona_soutenance} and \cite{hgcal_tdr}.
 \subsection{Methodology}
-\label{sec:org8877ab8}
+\label{sec:org4f1e8b0}
 \subsection{Results}
-\label{sec:org562987f}
+\label{sec:org2d2a1a6}
 
 
 \section{Conclusions}
-\label{sec:orga91ec2a}
-
+\label{sec:org00d6635}
+After the discovery of the H0(125) particle, the first ten years of experimental measurements of this particle and searches for
+other such scalar particles has revolutionized the field of particle physics.
+Regardless of theory, the H0(125) remains a singular particle that exhibits couplings to both fermions and bosons as long as they have mass.
+To date, all its properties remain compatible with those predicted by the Standard Model of particle physics.
+This does not mean that the H0(125) particle is the SM Higgs boson; it only reflects the fact that more precise measurements
+of the H0(125) and new, different, H0(125) measurements are needed, as it is a promising gateway to phenomena beyond the
+Standard Model.
+The great strides made in one decade of experimental physics with the H0(125) particle would not have been possible without continued improvements and upgrades to the detectors, be it their tracking systems, their trigger systems, or the calibration and reconstruction software algorithms.
+These have enabled us to peer into the interaction of the H0(125) particle with second generation particles and produce spectacular results coming from the study of the production of H0(125) boson pairs.
+The H0(125) particle is a new tool in the toolbox of fundamental physics.
+While it remains the sole representative of what could be a host of scalar particles, the H0(125) particle has been seen to have a broad reach and the coming decades and future accelerators are needed to understand its role in nature and whether it can provide hints for a theory that overcomes the shortcoming of the Standard Model, perhaps through a
+global interpretation in the framework of an effective field theory that can capture deviations from large classes of concrete
+alternatives to the Standard Model.
+Experimentalists and theorists alike stand ready to take on the challenge.
+They only require the resources to produce large numbers of H0(125) bosons, detect them, and analyze and interpret those data.
+\cite{andre_david_higgs_ten_years}
 
 \section{Appendix}
-\label{sec:org4015eb3}
+\label{sec:orgc92ff8f}
 \subsection{General control distributions}
-\label{sec:orgfdbe94f}
+\label{sec:org67ce8e6}
 \subsection{MET SF control distributions}
-\label{sec:org66fc936}
+\label{sec:org764c870}
 
 
 \section{List of acronyms}
-\label{sec:orgf7dd2e3}
+\label{sec:org94f4ea5}
 \input{acro_list}
 
 \bibliographystyle{unsrt}

@@ -1,16 +1,16 @@
 <<sec:hllhc_physics>>
 
 A more powerful \ac{LHC} will increase the accurancy of current measurements and enhance the sensitivity to rare processes through both direct and indirect searches which occur below the current sensitivity level, and with more challenging signatures.
-The \ac{HLLHC} is expected to provide high-precision measurements of the \ac{SM}, particular in Higgs physics: the Higgs boson (H) self-coupling, via direct and indirect measurements (see [[ref:sec:dihiggs]]), higgs couplings, flavour physics, BSM
+The \ac{HL-LHC} is expected to provide high-precision measurements of the \ac{SM}, particular in Higgs physics: the Higgs boson (H) self-coupling, via direct and indirect measurements (see [[ref:sec:dihiggs]]), higgs couplings, flavour physics, BSM
 
 A virtuous cycle often takes place between data collection and improvements in simulation and theory calculations.
-In the following we provide a brief and necessarily incomplete overview of some of the physics motivations to build the \ac{HLLHC}.
+In the following we provide a brief and necessarily incomplete overview of some of the physics motivations to build the \ac{HL-LHC}.
 A detailed description is out of the scope of this work.
 
 
 \paragraph{EW processes}
 
-The increase in luminosity provided by the \ac{HLLHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
+The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
 This notably applies to W mass $\mw$ and weak mixing angle $\thw$ measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
 \num{\sim 2e6} W boson events will be collected per week, leading to a statistical sensitivity of about \SI{10}{\MeV} for the $W$ mass, and significantly lower for cross-section measurements.
 The added luminosity might also help solving the tension between old $\theta_{W}$ measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result [[cite:&weak_mixing_angle_cms]], which agree with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
@@ -27,20 +27,20 @@ Finally, even rarer tri-boson processes (\sigma\SI{\sim 0.1}{\pico\barn}) brings
 
 \paragraph{Strong interactions}
 
-The \ac{HLLHC} will enable an increase in the kinematic reach for jet and photon production.
+The \ac{HL-LHC} will enable an increase in the kinematic reach for jet and photon production.
 This will in turn reduce the associated experimental uncertainties, improving \ac{PDF} modeling.
 High-$\pt$ b-jets are sensitive to higher-order corrections, parton shower modeling and \acp{PDF}.
 Therefore, investigating the b-jet contribution to the total jet cross section enables to test the available theoretical predictions.
 The shape of the distributions of jets of various flavours will also be known with a higher precision, especially in the tails.
 On the photon side, diphotons with high invariant mass are ideal probes to test the \ac{SM} and search for \ac{BSM}. In particular, prompt photons do not interact with other final state particles, enabling a precise study of \ac{QCD} [[cite:&diphoton_cdf]].
-The \ac{HLLHC} will enable a more precise knowledge of photon related cross-sections.
-For the first time, the \ac{HLLHC} will make possible the measurement of quantum correlations between partons in the proton by precisely studying differential distributions.
+The \ac{HL-LHC} will enable a more precise knowledge of photon related cross-sections.
+For the first time, the \ac{HL-LHC} will make possible the measurement of quantum correlations between partons in the proton by precisely studying differential distributions.
 This brings an improvement in \ac{DPS} modeling, which has been so far very limited.
 \ac{DPS} can be as relevant as the single proton scattering for same-sign $WW$ final states involving $b\bar{b}$ or $c\bar{c}$ quark pairs.
 
 \paragraph{Top physics}
 The heaviest particle in the \ac{SM} plays an important role in \ac{EWSB} and in \ac{BSM} searches.
-With the \ac{HLLHC} we will be able to improve the precision of the $\mt$ measurement, and to study $t\bar{t}$ differential distributions in more detail, reaching $\mtt\sim 7\,\si{\TeV}$ and $\pt\sim 2.5\,\si{\TeV}$.
+With the \ac{HL-LHC} we will be able to improve the precision of the $\mt$ measurement, and to study $t\bar{t}$ differential distributions in more detail, reaching $\mtt\sim 7\,\si{\TeV}$ and $\pt\sim 2.5\,\si{\TeV}$.
 This will provide benefits for \ac{PDF} measurements.
 One can also explore \ac{BSM} for $\mtt > 7\,\si{\TeV}$ due to the low \ac{SM} background.
 An interesting link might be drawn between the results of \ac{LHCb} and \ac{ATLAS}/\ac{CMS}, given the increase in $\eta$ reach up to \num{\sim 4}.
@@ -49,25 +49,41 @@ $t\bar{t}t\bar{t}$ can be used to constrain some of the Wilson coefficients asso
 
 \paragraph{Forward physics}
 
-Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and \ac{AFP} [[cite:&afp_tdr]] detectors are extended in the \ac{HLLHC} phase, \ac{CEP} $pp \rightarrow p\,(\gamma\gamma\rightarrow X)\,p$ phenomena, among which light-by-light scattering ($X = \gamma\gamma$), will be further explored \ac{CEP}.
+Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and \ac{AFP} [[cite:&afp_tdr]] detectors are extended in the \ac{HL-LHC} phase, \ac{CEP} $pp \rightarrow p\,(\gamma\gamma\rightarrow X)\,p$ phenomena, among which light-by-light scattering ($X = \gamma\gamma$), will be further explored \ac{CEP}.
 Other processes include, for instance, $X = \mu\mu,\,\tau\tau,\,Z,\,H,\,WW,\,ZZ$, and enable the study of anomalous gauge couplings and the magnetic moment of the $\tau$, among other studies [[cite:&ctpps_varela;&ctpps_pitt]].
 \ac{CEP} processes carry particular interest since they bring production of charged particles initiated only by photons, into what amounts to using the \ac{LHC} as a $\gamma\gamma$ collider.
 In parallel, a whole plethora of \ac{QCD}-related measurements can be performed in \acp{CEP}.
-The \ac{HLLHC} will push \ac{CEP} processes to higher masses and lower cross-sections, increasing their discovery potential.
+The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross-sections, increasing their discovery potential.
 
 
 \paragraph{Higgs boson pairs}
 
 One hundred thousand Higgs boson pairs are expected to be produced during the \ac{HL-LHC} phase.
 This will enable the most precise measurement ever of the triple and quartic Higgs couplings, with the possibility of observing the former for the first time after combining \ac{CMS} and \ac{ATLAS} datasets.
-The
+Upcoming nonresonant HH searches will bring further constraints on $\kl$ as well as on other couplings not discussed in this report.
+Yet unexplored HH production modes and decay channels are being studied.
+
+
+At present, none of the analyses used to search for the production of H0(125) pairs is statistically limited [[cite:&andre_david_higgs_ten_years]].
+\ac{ggF} theory uncertainties might soon become important.
+ref:fig:hh_nonres_projections allows the comparison of early \run{2} results with current full \run{2} upper cross-section limits.
+An improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
+The improvement over the luminosity baseline is due to improvements which span multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels, made possible by the gradual increase in available number of events.
+
+New techniques, including better estimates of \ac{QCD} background and new machine learning methods, will make existing results quickly obsolete.
+The usage of \ac{PNet} [[cite:&particle_net]] for \tau-initiated jets and the application of transformer technology to jet tagging [[cite:&particle_transformer]] might have a strong impact.
+Additionally, an improved trigger strategy has been implemented, considering both data scouting and parking cite:&parking_scouting_run3_cms, and including \ac{PNet} b-tagging and \tau-tagging at trigger level.
+We also expect that some HH analysis might benefit from the inclusion of synthetic datasets.
+
+On top of the recent $\kvv=0$ exclusion, and assuming $\kl=1$, \ac{CMS} might measure nonresonant HH via a multi-channel combination by the end of the \ac{HL-LHC} [[cite:&higgs_10_years]], possibly in combination with \ac{ATLAS}.
+
+#+NAME: fig:hh_nonres_projections
+#+ATTR_LATEX: :width .5\textwidth
+#+CAPTION: Evolution of the expected and observed upper limits on the HH production cross-section. The figure compares results from early \ac{LHC} \run{2} data (\SI{35.9}{\invfb}) with full \ac{LHC} \run{2} data (\SI{138}{\invfb}), and with projections for the \ac{HL-LHC} (\SI{3000}{\invfb}). At the end of the \ac{HL-LHC} it should be possible to challenge the \ac{SM} prediction (red line) with the result of a combined analysis of multiple final states. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/intro/hh_nonres_projections.pdf]]
 
 
 
-
-
-* Physics
-+ [[cite:&hllhc_physics]]
-
+* Jona :noexport:
 Moreover, the study of rare processes like the $\ttbar\ttbar$ production in leptonic final states will be of utmost importance to constrain the magnitude and Charge-Parity (CP) properties of the top Yukawa coupling, as well as probe 2HDM BSM models \cite{HL-HE-LHC_YR}. An important test of CP violation is represented by the /golden channel/ $\bspsiphi(1020)$, with an expected uncertainty on CP-violating phase $\phi_{\text{s}}\sim5-6\unit{mrad}$ in Phase-2 \cite{HL-HE-LHC_YR}. Further studies of BSM physics include the search for lepton flavour non-universality in the $\tautrimuon$ decay \cite{Muon_Phase2_TDR} and the search for long-lived particles \cite{HL-HE-LHC_YR}. This will be complemented by a deep study of the $H$ boson properties \cite{CMS-PAS-FTR-18-011}. 
 [[cite:&hllhc_physics]]
