@@ -1,4 +1,4 @@
-<<sec:EWPT>>
+<<sec:ewpt>>
 
 As discussed in Section [[sec:SM]], the existence of the Higgs field breaks electro-weak symmetry.
 However, at extremely high temperatures, it is energetically favourable for the Higgs field to be zero everywhere.
@@ -22,3 +22,7 @@ As Eq. [[eq:sm_potential]] shows,
 + [[https://ep-news.web.cern.ch/content/deciphering-electro-weak-phase-transition-current-and-future-colliders][Papa's outreach article]]
 + [[https://journals.aps.org/prd/pdf/10.1103/PhysRevD.15.2929][Fate of the false vaccum]], Sidney Coleman
 + [[https://static.ias.edu/pitp/archive/2011files/PhysRevD.21.3305.pdf][Grav. effects on and of vaccum decay]], S. Coleman and Frank de Luccia (with nice quote on page 21)
++ Nice overview in [[cite:&hllhc_physics]] (3.6.2), which ends with "Higgs boson pair production
+plays a crucial role on understanding the nature of the electroweak symmetry breaking phase transition,
+which might imply potentially observable effects if there are new states modifying the potential so that
+the matter-antimatter asymmetry can be explained via electroweak baryogenesis."

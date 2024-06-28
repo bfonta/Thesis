@@ -1,3 +1,5 @@
+<<sec:cms_detector>>
+
 Detector in Tables [[tab_sad]] and [[tab_sad2]]
 
 #+NAME: tab_sad

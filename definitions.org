@@ -16,9 +16,8 @@
 #+LATEX_HEADER: \newcommand{\dijetrap}{y_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\emiss}{E^{\text{miss}}_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\hgg}{H $\rightarrow$ $\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\klfour}{\lambda_{\text{HHHH}}}
 #+LATEX_HEADER: \newcommand{\klrat}{\kappa_{\lambda} = \lambda_{\text{HHH}} / \lambda_{\text{HHH}}^{\text{SM}}}
-#+LATEX_HEADER: \newcommand{\klthree}{\lambda_{\text{HHH}}}
+#+LATEX_HEADER: \newcommand{\lh}[1]{\lambda_{\text{\repeatn{#1}{H}}}}
 #+LATEX_HEADER: \newcommand{\kl}{\kappa_{\lambda}}
 #+LATEX_HEADER: \newcommand{\kt}{\kappa_{t}}
 #+LATEX_HEADER: \newcommand{\kvv}{\kappa_{\text{2V}}}
@@ -29,10 +28,10 @@
 #+LATEX_HEADER: \newcommand{\mt}{m_{t}}
 #+LATEX_HEADER: \newcommand{\mtt}{m_{t\bar{t}}}
 #+LATEX_HEADER: \newcommand{\mw}{m_{\text{W}}}
+#+LATEX_HEADER: \newcommand{\sint}{\sin\theta_{W}}
 #+LATEX_HEADER: \newcommand{\pt}{p_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\reshhbbtt}{X $\rightarrow$ HH $\rightarrow$ bb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\reshybbtt}{X $\rightarrow$ HY $\rightarrow$ $\tau\tau$bb}
-#+LATEX_HEADER: \newcommand{\tauh}{$\tau_{\text{h}}$}
 #+LATEX_HEADER: \newcommand{\tautrimuon}{\tau \rightarrow \mu\mu\mu}
 #+LATEX_HEADER: \newcommand{\thw}{\theta_{\text{W}}}
 #+LATEX_HEADER: \newcommand{\ttbar}{t\bar{t}}
@@ -44,6 +43,10 @@
 #+LATEX_HEADER: \newcommand{\zzbbbb}{ZZ $\rightarrow$ bbbb}
 #+LATEX_HEADER: \newcommand{\zzfourl}{H $\rightarrow$ ZZ $\rightarrow$ 4l}
 #+LATEX_HEADER: \newcommand{\zzzhbbbb}{ZZ\slash ZH $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\tth}{$t\bar{t}\text{H}$}
+#+LATEX_HEADER: \newcommand{\vh}{$V\text{H}$}
+#+LATEX_HEADER: \newcommand{\bb}{$b\bar{b}$}
+
 
 # HGCAL
 #+LATEX_HEADER: \newcommand{\azimuth}{$\phi$}
@@ -59,3 +62,6 @@
 #+LATEX_HEADER: \newcommand{\down}[1]{\textsubscript{#1}}
 #+LATEX_HEADER: \newcommand{\up}[1]{\textsuperscript{#1}}
 
+# Particles
+#+LATEX_HEADER: \newcommand{\jpsi}{$J/\psi$}
+#+LATEX_HEADER: \newcommand{\tauh}{$\tau_{\text{h}}$}

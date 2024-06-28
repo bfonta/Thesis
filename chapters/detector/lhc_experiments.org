@@ -1,11 +1,31 @@
 <<sec:lhc_experiments>>
 
-\paragraph{\ac{LHCb}}
+In the following we provide a summary of some of the most emblematic physics experiments at the \ac{LHC}, before describing the \ac{CMS} detector in ref:sec:cms_detector.
 
-Instead of surrounding the entire collision point with an enclosed detector as do \ac{ATLAS} and \ac{CMS}, the \ac{LHCb} experiment uses a series of subdetectors to detect mainly forward particles – those thrown forwards by the collision in one direction.
-The first subdetector is mounted close to the collision point, with the others following one behind the other over a length of 20 metres. [[cite:&hllhc_website]]
+\paragraph{ATLAS}
+General-purpose detector. [[cite:&atlas_collab]]
 
-The LHCb experiment [1] is designed to exploit the large bb production cross section at the LHC in order to perform a wide range of precision studies of CP violating phenomena. The copious production of Bd, Bs and Bc mesons and b-baryons, together with the unique particle-identification capabilities the LHCb detector, will allow the experiment to perform sensitive measurements of CP violating asymmetries in a variety of channels that are beyond the reach of the current generation of CP-violation experiments. [[cite:&lhcb_collab]]
+\paragraph{LHCb}
+
+Instead of surrounding the entire collision point with an enclosed detector as \ac{ATLAS} and \ac{CMS} do, the \ac{LHCb} experiment [[cite:&lhcb_collab]], located at \ac{IP} 8, employs a single-arm forward spectrometer.
+The experiment includes large aperture subdetectors (\SIrange{10}{300}{\milli\radian}) placed perpendicularly to the beam axis.
+Given that \ac{LHCb}'s main purpose is the study of $b$-flavoured baryons as probes for \ac{NP}, this distinctive design can be readily explained: the decay particles of $b$ hadrons tend to travel close to the line of the beam pipe.
+The design thus exploits to exploit the large $bb$ production cross section at the \ac{LHC}.
+Phenomena studied by \ac{LHCb} include rare B-meson decays, the possible existence of \ac{CP} violating assymetries in $b$ and $c$ hadron decays, the precise measurement of the three interior angles of the \ac{CKM} matrix, $B_{s}$ mixing, or tests for lepton flavour universality, among many others [[cite:&lhcb_hllhc_tdr]].
+
+Given the asymmetric geometry of LHCb, to maximally exploit the volume of the underground cavern, the LHC optics is modified  with a displacement of the collision point by \SI{11.25}{\m} from the centre.
+Starting from the collision point, and moving outwards through \SI{21}{\m} and \SI{5.6}{\tonne} of subdetectors, \ac{LHCb} presents an array of semi-circular silicon-based detectors composing the \ac{VELO}, followed by the first \ac{RICH} detector, focused on low-momentum tracks.
+We note that particle identification is essential to distinguish pion, kaon and proton tracks, notably in flavour physics [[cite:&lhcb_hllhc_tdr]].
+Several layers of the tracker systems follow, separated by a warm dipole magnet [[cite:&lhcb_collab_tracker_tdr]], and a second \ac{RICH} detector lies just behind the tracker, to measure high-momentum tracks.
+We then find a Shashlik electromagnetic calorimeter and a hadronic calorimeter composed of iron and scintillator tiles.
+The muon system finalizes the design, enabling impactful measurements such as the study of $B_{s}^{0}\rightarrow\mu\mu$ decays.
+
+\ac{LHCb} is also the sole \ac{LHC} experiment capable to run both in collider and fixed-target mode [[cite:&lhcb_fixed_target]].
+The \ac{SMOG} provides a mean to inject noble gases (\ch{He}, \ch{Ar}, \ch{Ne}) into \ac{VELO}.
+Despite smaller \bb{} cross-sections and worse signal-to-background ratio, fixed-target experiments bring average $b$ flight lengths of a few~\si{\cm}, compared to a few~\si{\mm} in the collider mode, due to larger Lorentz boosts.
+The larger momenta of the final state particles in the lab also implies simpler triggering and tagging.
+Some result bforuhg forward by \ac{SMOG} include fixed-target \jpsi{} and $D^{0}$ production, and direct measurements of antiproton production [[cite:&antimatter_prod_fixed_target_lhcb]], which is relevant for \ac{DM} searches.
+
 
 [[cite:&bb_pairs1;&bbpairs2]]
 

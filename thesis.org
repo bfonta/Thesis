@@ -11,38 +11,41 @@
 *** Brief historical perspective
 *** The building blocks of the SM
 *** The Higgs Mechanism
-#+INCLUDE: "chapters/intro_hh/higgs_mechanism.org"
+#+INCLUDE: "chapters/intro/higgs_mechanism.org"
 *** Experimental status of Higgs boson physics
+
 ** Higgs boson pair phenomenology in the SM
-#+INCLUDE: "chapters/dihiggs/dihiggs.org"
+#+INCLUDE: "chapters/intro/dihiggs.org"
 *** Production
-#+INCLUDE: "chapters/dihiggs/production.org"
+#+INCLUDE: "chapters/intro/production.org"
 *** Decay
-#+INCLUDE: "chapters/dihiggs/decay.org"
+#+INCLUDE: "chapters/intro/decay.org"
 
 ** Experimental status of SM HH Physics
-#+INCLUDE: "chapters/dihiggs/hh_exp_status.org"
+#+INCLUDE: "chapters/intro/hh_exp_status.org"
 *** 4b
-#+INCLUDE: "chapters/dihiggs/bbbb.org"
+#+INCLUDE: "chapters/intro/bbbb.org"
 *** bb\gamma\gamma
-#+INCLUDE: "chapters/dihiggs/bbgammagamma.org"
+#+INCLUDE: "chapters/intro/bbgammagamma.org"
 *** bb\tau\tau
-#+INCLUDE: "chapters/dihiggs/bbtautau.org"
+#+INCLUDE: "chapters/intro/bbtautau.org"
 *** \gamma\gamma\tau\tau
-#+INCLUDE: "chapters/dihiggs/gammagammatautau.org"
+#+INCLUDE: "chapters/intro/gammagammatautau.org"
 *** ZZ, ZH and future techniques
-#+INCLUDE: "chapters/dihiggs/zz_and_zh.org"
+#+INCLUDE: "chapters/intro/zz_and_zh.org"
+*** Indirect searches
+#+INCLUDE: "chapters/intro/indirect_searches.org"
 *** Combinations
-#+INCLUDE: "chapters/dihiggs/combinations.org"
+#+INCLUDE: "chapters/intro/combinations.org"
 ** Going beyond the SM
 *** SM shortcomings
-#+INCLUDE: "chapters/intro_hh/short_comings.org"
+#+INCLUDE: "chapters/intro/short_comings.org"
 **** Electro-weak phase transition
-#+INCLUDE: "chapters/intro_hh/ew_phase_transition.org"
+#+INCLUDE: "chapters/intro/ew_phase_transition.org"
 *** Non-resonant BSM HH Production
-#+INCLUDE: "chapters/dihiggs/nonres_BSM_hh.org"
+#+INCLUDE: "chapters/intro/nonres_BSM_hh.org"
 *** Resonant BSM HH Production
-#+INCLUDE: "chapters/dihiggs/res_BSM_hh.org"
+#+INCLUDE: "chapters/intro/res_BSM_hh.org"
 
 **** Motivaton for the bb\tau\tau analysis
 
@@ -66,7 +69,7 @@
 *** Level-1
 *** HLT
 
-** Offline iddentification and reconstruction of physics objects
+** Offline identification and reconstruction of physics objects
 *** Particle-flow
 *** Electrons
 *** Muons
@@ -100,7 +103,7 @@
 
 
 * \reshhbbtt{}: Strategy definition
-#+INCLUDE: "chapters/dihiggs/bbtt_analysis.org"
+#+INCLUDE: "chapters/intro/bbtt_analysis.org"
 ** Data, MC and signal samples
 
 ** Triggers
@@ -124,7 +127,7 @@
 *** Boosted jets
 ** \tau\tau mass regression
 ** QCD background estimation
-#+INCLUDE: "chapters/dihiggs/qcd_estimation.org"
+#+INCLUDE: "chapters/intro/qcd_estimation.org"
 ** Monte Carlo corrections
 *** Pileup reweighting
 *** Pileup jet identification
@@ -135,7 +138,7 @@
 *** Lepton scale factors
 
 ** Control regions
-#+INCLUDE: "chapters/dihiggs/control_regions.org"
+#+INCLUDE: "chapters/intro/control_regions.org"
 
 
 * \reshhbbtt{}: Limit extraction
@@ -143,7 +146,7 @@
 ** Systematic uncertainties
 *** Normalization uncertainties
 **** Luminosity
-**** Electrons and muon isolation and identification efficiencies
+**** Electrons and muon isolation and identificaton efficiencies
 **** L1 prefiring
 **** Pile-up reweighting uncertainty
 **** QCD estimation uncertainty
@@ -168,7 +171,7 @@
 *** Final limits
 *** Comparison with other resonant \bbtt{} results
 ** Future prospects for resonant and non-resonant HH searches
-#+INCLUDE: "chapters/intro_hh/future.org"
+#+INCLUDE: "chapters/intro/future.org"
 *** Run3
 + mention \reshybbtt{} analysis
 *** HL-LHC
@@ -202,4 +205,6 @@
 ~/dot-emacs/bibliography/references/l1.bib,
 ~/dot-emacs/bibliography/references/mc_generation.bib,
 ~/dot-emacs/bibliography/references/pure_software.bib,
+~/dot-emacs/bibliography/references/physics.bib,
 ~/dot-emacs/bibliography/references/detector.bib]]
+

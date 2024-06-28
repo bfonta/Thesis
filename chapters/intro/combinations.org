@@ -1,4 +1,4 @@
-<<sec:Combinations>>
+<<sec:combinations>>
 
 @mention impact of bb\tau\tau@
 
@@ -10,7 +10,7 @@ The most up-to-date Run2 HH combination constrains the observed (expected) HH cr
 [[~/org/PhD/Thesis/figures/intro/limits_HH_SM_Mar2023.pdf]]
 
 #+NAME: fig:HH_nonres_comb_c2v
-#+CAPTION: 95% confidence intervals on $\kl$ (left) and $\kvv$ (right) superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Taken from 
+#+CAPTION: 95% confidence intervals on $\kl$ (left) and $\kvv$ (right) superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Results are taken from the references marked next to each individual measurement. 
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/exclusion_kl_Mar2023.pdf]]
@@ -71,6 +71,32 @@ The most up-to-date Run2 HH combination constrains the observed (expected) HH cr
 
 
 
+On top of the HH searches already mentioned, $\kl$ can be additionally constrained by exploiting \ac{NLO} \ac{EW} corrections to single Higgs processes, which also depend on $\kl$.
+Single Higgs cross-sections can indeed be quite sensitive to $\kl$ variations, especially in the \vh{} and \tth{} production modes, where up to 10% differences are expected.
+Additionally, there is a strong complementarity between direct and indirect searches [[cite:&indirect_searches2]].
+HH searches generally provide weaker contraints on the Higgs boson coupling to fermions and vector bosons, due to the lower production cross-section with respect to single Higgs.
+On the other hand, double Higgs processes provide stronger constraints on $\kl$.
+
+The main challenge of the combination recently performed by \ac{CMS} [[cite:&CMSHplusHHcomb]] consists on estimating and efficiently removing overlaps between signal regions of different analysis.
+The mitigation of double-counting and minimization of overlaps, together with the combination of event categories from both single and double-Higgs analysis, lead to stronger $\kl$ constraints.
+The analysis with the most sensitive production modes are included.
+Whenever overlaps exist, one of two approaches is taken: either additional selections are applied, or the least sensitive category or analysis is removed.
+As an example, the \bbzz{} analysis is removed in favour of \zzfourl{} due to the former's relatively low sensitivity to $\kl$.
+Concerning systematics, their modelling in HH processes is generally simpler when compared to single H, due to the limited statistics of HH.
+
+\ac{CMS} observed exclusion intervals at 95% \ac{CL} of $-0.4 < \kl < 6.3$, assuming other Higgs couplings to follow the \ac{SM}, or $-1.4 < k_{\lambda} < 6.1$ otherwise.
+For comparison, \ac{ATLAS} observed $-0.4 < \kl < 6.3$, assuming \ac{SM} couplings, or $-1.4 < k_{\lambda} < 6.1$ otherwise [[cite:&ATLASHplusHHcomb]].
+We show ($\kl$, $\kt$) and ($\kv$, $\kvv$) scans in [[fig:combination_2d_scans]], where the complementarity between the two types of processes is clearly highlighted.
+\ac{CMS} was also able to once again [[cite:&higgs_10_years]] exclude $\kvv=0$ at more than 5\sigma, this time without fixing $\kv=1$.
+
+#+NAME: fig:combination_2d_scans
+#+CAPTION: Observed two-dimensional likelihood scans of ($\kl$, $\kt$) (left) and ($\kv$, $\kvv$) (right). The strong complementarity between the single and double Higgs processes is well illustrated. The remaining coupling modifiers are set to their \ac{SM} value. Taken from [[cite:&CMSHplusHHcomb]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/combination_single_double_kl_kt.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/combination_single_double_k2v_kv.pdf]]
+#+END_figure
 
 * Additional bibliography :noexport:
 + [[https://cms-results.web.cern.ch/cms-results/public-results/preliminary-results/HIG-23-006/index.html][HIG-23-006]]

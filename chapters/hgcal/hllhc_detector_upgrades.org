@@ -4,5 +4,8 @@
 
 mention VELO
 
+[[cite:&lhcb_hllhc_tdr;&lhcb_hllhc_interest]]
+
+
 * Additional bibliography :noexport:
 + Velo: https://www.youtube.com/watch?v=hsLXi9QTxUo

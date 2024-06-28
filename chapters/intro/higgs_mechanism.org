@@ -6,19 +6,19 @@ At low energy the potential $V$ associated to the Higgs boson field $H$ in the S
 
 #+NAME: eq:sm_potential
 \begin{equation}
-\frac{1}{2}\mh^{2}H^{2} + \klthree{}vH^{3} + \frac{\klfour}{4}H^{4}
+\frac{1}{2}\mh^{2}H^{2} + \lh{3}vH^{3} + \frac{\lh{4}}{4}H^{4}
 \end{equation}
 
 \noindent Continue here.
 
 #+NAME: eq:self_coupling
 \begin{equation}
-\klthree^{\text{SM}} = \frac{\mh^{2}}{2v^{2}} \simeq 0.13
+\lh{3}^{\text{SM}} = \frac{G_{F}}{\sqrt{2}}\mh^{2} = \frac{\mh^{2}}{2v^{2}} \simeq 0.13
 \end{equation}
 
 #+NAME: eq:dihiggs_coupling_relation
 \begin{equation}
-\klthree = \klfour
+\lh{3} = \lh{4}
 \end{equation}
 
 + The Higgs mechanism is the most economical way to endow fundamental particles with mass while  the SM gauge invariant and predictive

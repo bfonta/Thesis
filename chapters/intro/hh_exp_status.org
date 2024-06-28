@@ -1,7 +1,7 @@
 The \ac{CMS} experiment has explored a rich and diverse HH programme during Run2, and will continue to do so in Run3.
 In the following, we list some selected analysis which stand out due to its relative sensitivity, to some useful technique, or to some interesting peculiarity.
 The list is necessarily incomplete, subjective and biased, but we hope it provides a taste for all HH efforts undertook by \ac{CMS}.
-Finally, in [[sec:Combinations]], we discuss the most recent HH combinations in \ac{CMS}.
+Finally, in [[sec:combinations]], we discuss the most recent HH combinations in \ac{CMS}.
 
 * Additional bibliography :noexport:
 + B2G Summary plots: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsB2G

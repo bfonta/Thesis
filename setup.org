@@ -4,6 +4,8 @@
 #+LATEX_HEADER: \usepackage{chemformula}
 #+LATEX_HEADER: \usepackage{mathtools}
 #+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{pgffor}
+#+LATEX_HEADER: \newcommand{\repeatn}[2]{\foreach \i in {1, ..., #1} {#2}}
 
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{margin=1in}

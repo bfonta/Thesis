@@ -1,6 +1,13 @@
 <<sec:hgcal_intro>>
 
-https://cernbox.cern.ch/pdf-viewer/public/cLosQkewmONZakQ/220606_Dauncey_DN-19-032-V2.pdf?contextRouteName=files-public-link&contextRouteParams.driveAliasAndItem=public%2FcLosQkewmONZakQ&items-per-page=100
+Following the \ac{HL-LHC} description in ref:sec:hllhc, it should be clear that the running conditions during data collection will happen in a much harsher and crowded environment, with respect to the \ac{LHC}.
+This is particularly true for the \ac{CMS} endcap regions, given the extremely large radiation expected closer to the beam axis.
+The \ac{ECAL} and \ac{HCAL} forward calorimeters were designed to sustain an integrated luminosity of \SI{500}{\invfb}.
+Given the \num{\sim 6} to \num{8} times larger luminosities expected for the \ac{HL-LHC}, a degration of the physics performance after @refer to some lumi projectin over time for the HL-LHC@ unavoidable [[cite:&hgcal_technical_proposal]].
+
+@copiar descricoes the artigos meus GPU@
+
+The CMS experiment thus foresees the complete replacement of the endcap calorimeters with a profoundly different calorimeter. It is clear from simulations that the new sub-detector will have to withstand a fluence of $10^{16}~\rm n_{eq}/cm^2$ and a dose of 2 MGy (cfr Fig.~\ref{ch2:fig:dose}). R&D activities have proven that the best material to meet these requirements is silicon, which can cope with fluences up to $1.5\times10^{16}~\rm n_{eq}/cm^2$, 50\% higher than the one expected during phase-2. Hence, silicon was selected to be the active material of the new detector. In addition to radiation hardness, the new calorimeter must satisfy other requirements outlined below.
 
 \Ac{CMS} [[cite:&cms_collab]] is thus developing the \ac{HGCAL} [[cite:&hgcalTDR]]: a novel endcap sampling calorimeter with an extremely fine granularity.
 About \num{6} million channels will enable particle identification and high resolution measurements of the position, energy and time of high-energy collision products.
@@ -101,3 +108,7 @@ Where the dose permits in the CE-H, the silicon sensors will be replaced by plas
 \end{figure}
 
 In conclusion, the new endcap calorimeter will be the first large-scale silicon-based imaging calorimeter employed in a high-energy experiment. This detector will offer the unique capability of performing calorimetry with tracker-like granular information, enabling unprecedented accuracy using position, energy, and timing information. This will open a new era in calorimetry. Such a revolution on the hardware side must be accompanied by another similar revolution on the reconstruction side, both online and offline. The development and optimisation of the offline reconstruction is one of the topics of this thesis and will be discussed in Ch.~\ref{ch7} and Ch.~\ref{ch8}.
+
+
+* Additional bibliography :noexport:
++ JB reference: https://cernbox.cern.ch/pdf-viewer/public/cLosQkewmONZakQ/220606_Dauncey_DN-19-032-V2.pdf?contextRouteName=files-public-link&contextRouteParams.driveAliasAndItem=public%2FcLosQkewmONZakQ&items-per-page=100

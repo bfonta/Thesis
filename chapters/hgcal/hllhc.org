@@ -16,7 +16,7 @@ An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be
 
 A dramatic performance degradation is foreseeable for higher luminosities.
 
-* Lumi measurements can improve due to:
+* Lumi measurements can improve due to :noexport:
 + [[cite:&hllhc_physics]]
 + high precision luminosity detectors are needed to provide high-granularity bunch-by-bunch luminosity measurements, with very good linearity and stability.
 + Advanced, multiple and redundant VdM scans and refined VdM analysis techniques can lead to substantial improvements.
