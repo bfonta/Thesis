@@ -1,16 +1,16 @@
-After the discovery of the H0(125) particle, the first ten years of experimental measurements of this particle and searches for
+After the discovery of the Higgs boson particle, the first ten years of experimental measurements of this particle and searches for
 other such scalar particles has revolutionized the field of particle physics.
-Regardless of theory, the H0(125) remains a singular particle that exhibits couplings to both fermions and bosons as long as they have mass.
+Regardless of theory, the Higgs boson remains a singular particle that exhibits couplings to both fermions and bosons as long as they have mass.
 To date, all its properties remain compatible with those predicted by the Standard Model of particle physics.
-This does not mean that the H0(125) particle is the SM Higgs boson; it only reflects the fact that more precise measurements
-of the H0(125) and new, different, H0(125) measurements are needed, as it is a promising gateway to phenomena beyond the
+This does not mean that the Higgs boson particle is the SM Higgs boson; it only reflects the fact that more precise measurements
+of the Higgs boson and new, different, Higgs boson measurements are needed, as it is a promising gateway to phenomena beyond the
 Standard Model.
-The great strides made in one decade of experimental physics with the H0(125) particle would not have been possible without continued improvements and upgrades to the detectors, be it their tracking systems, their trigger systems, or the calibration and reconstruction software algorithms.
-These have enabled us to peer into the interaction of the H0(125) particle with second generation particles and produce spectacular results coming from the study of the production of H0(125) boson pairs.
-The H0(125) particle is a new tool in the toolbox of fundamental physics.
-While it remains the sole representative of what could be a host of scalar particles, the H0(125) particle has been seen to have a broad reach and the coming decades and future accelerators are needed to understand its role in nature and whether it can provide hints for a theory that overcomes the shortcoming of the Standard Model, perhaps through a
+The great strides made in one decade of experimental physics with the Higgs boson particle would not have been possible without continued improvements and upgrades to the detectors, be it their tracking systems, their trigger systems, or the calibration and reconstruction software algorithms.
+These have enabled us to peer into the interaction of the Higgs boson particle with second generation particles and produce spectacular results coming from the study of the production of Higgs boson pairs.
+The Higgs boson particle is a new tool in the toolbox of fundamental physics.
+While it remains the sole representative of what could be a host of scalar particles, the Higgs boson particle has been seen to have a broad reach and the coming decades and future accelerators are needed to understand its role in nature and whether it can provide hints for a theory that overcomes the shortcoming of the Standard Model, perhaps through a
 global interpretation in the framework of an effective field theory that can capture deviations from large classes of concrete
 alternatives to the Standard Model.
 Experimentalists and theorists alike stand ready to take on the challenge.
-They only require the resources to produce large numbers of H0(125) bosons, detect them, and analyze and interpret those data.
+They only require the resources to produce large numbers of Higgs bosons, detect them, and analyze and interpret those data.
 [[cite:&andre_david_higgs_ten_years]]

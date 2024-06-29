@@ -1,13 +1,11 @@
 <<sec:hgcal_intro>>
 
 Following the \ac{HL-LHC} description in ref:sec:hllhc, it should be clear that the running conditions during data collection will happen in a much harsher and crowded environment, with respect to the \ac{LHC}.
-This is particularly true for the \ac{CMS} endcap regions, given the extremely large radiation expected closer to the beam axis.
+This is particularly true for the \ac{CMS} endcap regions, given the extremely large radiation levels expected closer to the beam axis.
 The \ac{ECAL} and \ac{HCAL} forward calorimeters were designed to sustain an integrated luminosity of \SI{500}{\invfb}.
 Given the \num{\sim 6} to \num{8} times larger luminosities expected for the \ac{HL-LHC}, a degration of the physics performance after @refer to some lumi projectin over time for the HL-LHC@ unavoidable [[cite:&hgcal_technical_proposal]].
 
-@copiar descricoes the artigos meus GPU@
-
-The CMS experiment thus foresees the complete replacement of the endcap calorimeters with a profoundly different calorimeter. It is clear from simulations that the new sub-detector will have to withstand a fluence of $10^{16}~\rm n_{eq}/cm^2$ and a dose of 2 MGy (cfr Fig.~\ref{ch2:fig:dose}). R&D activities have proven that the best material to meet these requirements is silicon, which can cope with fluences up to $1.5\times10^{16}~\rm n_{eq}/cm^2$, 50\% higher than the one expected during phase-2. Hence, silicon was selected to be the active material of the new detector. In addition to radiation hardness, the new calorimeter must satisfy other requirements outlined below.
+The CMS experiment thus foresees the complete replacement of the endcap calorimeters with a profoundly different calorimeter. It is clear from simulations that the new sub-detector will have to withstand a fluence of $10^{16}~\rm n_{eq}/cm^2$ and a dose of 2 MGy (cfr Fig.~\ref{ch2:fig:dose}). R&D activities have proven that the best material to meet these requirements is silicon, which can cope with fluences up to $1.5\times10^{16}~\rm n_{eq}/cm^2$, 50% higher than the one expected during phase-2. Hence, silicon was selected to be the active material of the new detector. In addition to radiation hardness, the new calorimeter must satisfy other requirements outlined below.
 
 \Ac{CMS} [[cite:&cms_collab]] is thus developing the \ac{HGCAL} [[cite:&hgcalTDR]]: a novel endcap sampling calorimeter with an extremely fine granularity.
 About \num{6} million channels will enable particle identification and high resolution measurements of the position, energy and time of high-energy collision products.
@@ -25,17 +23,6 @@ Ac{HGCAL} will be integrated with the online firmware trigger system put in plac
 We present and discuss several techniques to minimize or completely remove the splitting.
 We conclude by discussing future steps, some of which are already in progress.
 
-These proceedings describe the \ac{HGCAL} \ac{L1} reconstruction chain, from raw energy deposits to the creation of \acp{TP}, which are detector-specific inputs to the \ac{L1}.
-Special emphasis is placed on the study of cluster splitting, which represents a known and so far unstudied shortcoming of the \ac{TP} chain.
-The \ac{phi} in the transverse plane, the radial coordinate $R$ and the $z$-axis lying parallel to the beam-line form the binned projective \coordsa{} coordinate system used in this work [[cite:&cms_collab]].
-Since $\tan(\theta) = R/z$, where $\theta$ is measured from the $z$-axis, for a constant angle $\theta$ corresponds a constant \rz{}.
-Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
-The latter's scintillation light is read out by direct on-tile \ac{Si} photo-multipliers (\cref{fig:hgcal}). Stainless steel and \ch{Cu} are used as absorbers.
-\ac{Si} sensors are available in three types with varying thicknesses (120, 200 and 300 \si{\micro\meter}), capacitances and sizes, to widthstand different radiation conditions according to their physical location.
-The size of each \ac{Si} sensor is \SI{0.52}{\cm\squared} (for \SI{120}{\micro\meter} \ac{Si} sensors) and \SI{1.18}{\cm\squared} (\qty{200} and \SI{300}{\micro\meter}).
-Scintillators range in size from \qtyrange{4}{30}{\cm\squared}, and the number of \ac{Si} (scintillator) channels is \num{\sim 6} million (\num{\sim 240} thousand).
-In total, \SI{\sim 620}{\meter\squared} of \ac{Si} and \SI{\sim 400}{\meter\squared} of plastic scintillator are employed.
-The full system operates at a temperature of \SI{-35}{\celsius} maintained by a \ch{CO2} cooling system.
 
 #+NAME: fig:hgcal
 #+ATTR_LATEX: :width 1.\textwidth
@@ -43,6 +30,115 @@ The full system operates at a temperature of \SI{-35}{\celsius} maintained by a 
 [[~/org/PhD/Thesis/figures/hgcal/hgcal_mod.png]]
 
 
+* GPU1 :noexport:
+[[cite:&refCUDA1]]
+
+The High Luminosity LHC (HL-LHC) will start taking data in 2029, achieving unprecedented
+instantaneous luminosities of ∼5 × 1034 cm2 s−1 (more than twice LHC’s current value) and a
+pileup of up to 200. An integrated luminosity of ∼3 ab−1 will be reached over 10 years [1, 2].
+In order to cope with the above, a major upgrade of the CMS endcap calorimeters [3, 4]
+is being prepared. The novel High Granularity Calorimeter (HGCAL) [2] is an extremely
+challenging project, requiring the development of reconstruction code capable of fully exploiting
+the increased granularity under the expected extreme conditions.
+The biggest contributor to CPU usage is event reconstruction, of which currently ∼5% is
+used by HGCAL [5]. CMS plans to port part of its reconstruction to Graphics Processing
+Units (GPUs), which represent one of the most promising hardware accelerator technologies on
+the market. GPUs are a key element when one considers taking advantage of heterogeneous
+architectures available on traditional and High-Performance Computing grid sites, including the
+upgraded Worldwide LHC Computing Grid. GPUs also promote the development of algorithms
+with better computing performance, and profit from a potentially favourable cost when compared
+to CPUs, per unit capacity. CMS is planning to adopt a heterogeneous High Level Trigger (HLT)
+farm already in Run 3 (2022–2025), where ∼30% of the workflow will be offloaded to GPUs (50%
+and 80% by the end of Run 4 and 5, respectively) [6]. 
+
+HGCAL will be a sampling calorimeter. The proposed design includes an electromagnetic section
+of silicon sensors as active material in the first 28 layers. A hadronic section comprises 8 silicon-
+only layers followed by 14 silicon-scintillator hybrid layers, where the scintillation light is read
+out by silicon photo-multipliers. Both sections are interleaved with absorber layers. HGCAL
+will comprise ∼620 m2 of silicon and ∼400 m2 of plastic scintillators for a total of, respectively,
+∼6 million and ∼240 thousand channels. Three subdetectors form HGCAL’s hybrid detection
+technology: the first 28 layers made exclusively of silicon (CE-E) and the silicon and scintillator
+parts of the hadronic section (CE-HSi and CE-HSci). The reconstruction model envisioned for
+HGCAL is intended to be fast and flexible, comprising a sequence of modules/stages which
+transform raw data into physics objects. After the initial generation, simulation, digitization [5]
+and calibration steps, energy deposits (hits) are clustered by CLUE, a fully-parallelizable density-
+based clustering algorithm [8], in order to form two-dimensional objects. In a nutshell, CLUE
+assigns an energy density and a separation distance to all hits, which are later used to classify
+each hit as either a seed, a follower (based on the hit’s nearest highest density), or an outlier.
+Clusters are built by traversing the tree of followers of each seed, assigning the index of the
+seed to all its followers. This work includes the calculation of the cluster energy and cartesian
+positions, which are computed in the device (section 3.1). In addition, a heterogeneous approach
+for navigating through the detector’s geometrical/topological information is devised and used
+within CLUE (section 3.2).
+
+* GPU2 :noexport:
+[[cite:&refCUDA2]]
+
+The operation of the High Luminosity LHC (HL-LHC) is expected to commence in 2027,
+achieving instantaneous luminosities of ∼5 × 10 34 cm2 s−1 , more than two times LHC’s cur-
+rent value. Over 10 years it will reach an integrated luminosity of ∼3 ab−1 , with potentially
+up to 200 proton collisions (pileup) per bunch crossing. The goals of the HL-LHC include
+measuring the Higgs boson (self) couplings, vector boson fusion and vector boson scattering
+processes (also involving the Higgs boson), and B physics processes, among others [1].
+In accordance with this programme, the upgrade of the CMS detector [2] foresees a High
+Granularity Calorimeter (HGCAL) [3] to replace the current endcap calorimeters. One of the
+challenges posed to CMS by the new calorimeter is writing reconstruction code allowing its
+full exploitation.
+Present projections show a gap between projected CPU needs and availability at the start
+of the HL-LHC (Run4), as displayed in Fig. 1. The biggest contributor to CPU usage is event
+reconstruction (see Fig. 2), of which currently ∼6% is used by HGCAL. CMS plans to port
+some parts of its reconstruction to Graphics Processing Units (GPUs), which represent one of
+the most promising accelerator technologies on the market. Its adoption would allow access
+to accelerators, which become more and more present on High-Performance Computing and
+traditional grid sites. It would also be in line with the direction taken by CMS to adopt a
+heterogeneous HLT farm already in Run 3. Finally, it potentially reduces the cost of the
+computing capacity necessary to satisfy the CMS physics programme, since computation on
+GPUs might be cheaper than on CPUs.
+
+
+The HGCAL will be a sampling calorimeter. The proposed design includes, as active ma-
+terial, silicon (Si) sensors in the front 28 layers of its electromagnetic section (CE-E). The
+hadronic section (CE-H) comprises 8 Si-only layers followed by 14 Si-scintillator hybrid lay-
+ers, where the scintillation light is read out by Si photo-multipliers (see Fig. 3). The Si sensors
+are further subdivided into three types with varying thicknesses (120, 200 and 300 μm), ca-
+pacitances and sizes, to withstand different fluence conditions. The absorbers will be made of
+CuW, Pb and Cu in the CE-E and stainless steel and Cu in the CE-H, and its thicknesses will
+vary across layers. The electromagnetic radiation and hadronic interaction lengths of CE-E
+are 25 X 0 and 1.3 λ respectively, while the hadronic interaction length of CE-H is 8.2 λ. In
+total, the full HGCAL system has ∼620 m 2 of Si and ∼400 m 2 of plastic scintillators. The
+size of each Si sensor is 0.5 cm 2 to 1.0 cm 2 (120 μm Si sensors are smaller). Scintillators
+will range in size from 4 to 30 cm 2 , and the number of Si (scintillator) channels is ∼6 million
+(∼240 thousand). Each endcap weighs ∼215 t and measures ∼2 m (∼2.3 m) in longitudinal
+(radial) direction. The full system operates at a temperature of −35 ◦C maintained by a CO 2
+cooling system [3].
+Due to HGCAL’s hybrid detection technology, three subdetectors are considered inde-
+pendently for both the CPU and GPU implementation of the reconstruction algorithms:
+• CE-E: comprises the first 28 layers made exclusively of Si;
+• CE-HSi : covers the Si part of the CE-H section;
+• CE-H Sci : covers the scintillator part of the CE-H section.
+
+The current reconstruction model envisioned for HGCAL, part of CMSSW and succinctly
+depicted in Fig. 4, is intended to be fast and flexible. It comprises a series of modules which
+transform raw data into physics objects. After the first stages described in [4], one obtains
+UncalibRecHits. They represent energy deposits whose amplitude is expressed in terms of the
+average number of minimum ionizing particles (MIPs), after being converted from analog-to-
+digital converter (ADC) counts by the previous Digi step, and taking the sensor thickness into
+account. This paper covers the following step, i.e., rescaling the hits to produce a CMSSW
+collection of RecHits (see Section Section 4). Continuing along the chain, the software then
+clusters the RecHits into two-dimensional layer clusters, using CLUE [8]. Finally, taking the
+clusters as its input, The Iterative CLustering (TICL) framework [9] produces 3D objects and
+showers using a mixture of pattern recognition, energy regression and particle identification
+techniques. In parallel, a heterogeneous way of navigating through geometrical and topolog-
+ical information within the detector (such as information regarding Si sensors or plastic tiles)
+is being investigated, in order to accelerate and facilitate its access by different algorithms
+in the chain. The constant need to retrieve the x and y coordinates (in HGCAL’s transversal
+plane) in CLUE is an example of these navigation challenges
+
+* Possible references
++ [[cite:&cms_offline_computing]]
++ [[cite:&hgcalTDR]]
+
+  
 * Alessandro :noexport:
 The existing ECAL and HCAL forward calorimeters were designed for an integrated luminosity of 500 $\rm fb^{-1}$, which is expected to be exceeded shortly after the beginning of the \ac{HL-LHC}. Beyond this point, the physics performance will degrade to an unacceptable level \cite{Contardo:2015bmq}. The CMS experiment thus foresees the complete replacement of the endcap calorimeters with a profoundly different calorimeter. It is clear from simulations that the new sub-detector will have to withstand a fluence of $10^{16}~\rm n_{eq}/cm^2$ and a dose of 2 MGy (cfr Fig.~\ref{ch2:fig:dose}). R\&D activities have proven that the best material to meet these requirements is silicon, which can cope with fluences up to $1.5\times10^{16}~\rm n_{eq}/cm^2$, 50\% higher than the one expected during phase-2. Hence, silicon was selected to be the active material of the new detector. In addition to radiation hardness, the new calorimeter must satisfy other requirements outlined below.
 \begin{itemize}
@@ -109,6 +205,3 @@ Where the dose permits in the CE-H, the silicon sensors will be replaced by plas
 
 In conclusion, the new endcap calorimeter will be the first large-scale silicon-based imaging calorimeter employed in a high-energy experiment. This detector will offer the unique capability of performing calorimetry with tracker-like granular information, enabling unprecedented accuracy using position, energy, and timing information. This will open a new era in calorimetry. Such a revolution on the hardware side must be accompanied by another similar revolution on the reconstruction side, both online and offline. The development and optimisation of the offline reconstruction is one of the topics of this thesis and will be discussed in Ch.~\ref{ch7} and Ch.~\ref{ch8}.
 
-
-* Additional bibliography :noexport:
-+ JB reference: https://cernbox.cern.ch/pdf-viewer/public/cLosQkewmONZakQ/220606_Dauncey_DN-19-032-V2.pdf?contextRouteName=files-public-link&contextRouteParams.driveAliasAndItem=public%2FcLosQkewmONZakQ&items-per-page=100

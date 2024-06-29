@@ -1,3 +1,15 @@
+These proceedings describe the \ac{HGCAL} \ac{L1} reconstruction chain, from raw energy deposits to the creation of \acp{TP}, which are detector-specific inputs to the \ac{L1}.
+Special emphasis is placed on the study of cluster splitting, which represents a known and so far unstudied shortcoming of the \ac{TP} chain.
+The \ac{phi} in the transverse plane, the radial coordinate $R$ and the $z$-axis lying parallel to the beam-line form the binned projective \coordsa{} coordinate system used in this work [[cite:&cms_collab]].
+Since $\tan(\theta) = R/z$, where $\theta$ is measured from the $z$-axis, for a constant angle $\theta$ corresponds a constant \rz{}.
+Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
+The latter's scintillation light is read out by direct on-tile \ac{Si} photo-multipliers (\cref{fig:hgcal}). Stainless steel and \ch{Cu} are used as absorbers.
+\ac{Si} sensors are available in three types with varying thicknesses (120, 200 and 300 \si{\micro\meter}), capacitances and sizes, to widthstand different radiation conditions according to their physical location.
+The size of each \ac{Si} sensor is \SI{0.52}{\cm\squared} (for \SI{120}{\micro\meter} \ac{Si} sensors) and \SI{1.18}{\cm\squared} (\qty{200} and \SI{300}{\micro\meter}).
+Scintillators range in size from \qtyrange{4}{30}{\cm\squared}, and the number of \ac{Si} (scintillator) channels is \num{\sim 6} million (\num{\sim 240} thousand).
+In total, \SI{\sim 620}{\meter\squared} of \ac{Si} and \SI{\sim 400}{\meter\squared} of plastic scintillator are employed.
+The full system operates at a temperature of \SI{-35}{\celsius} maintained by a \ch{CO2} cooling system.
+
 The goal of \ac{TPG} is to provide valuable information to the CMS Level-1 (L1) trigger, within limited time and bandwidth budgets, via \acp{TP}.
 \acp{TP} are the building blocks of \acp{L1}.
 In HGCAL, they consist of module towers and cluster-related variables, such as energy, positions and shapes.
@@ -70,3 +82,6 @@ Modules sums are here partially summed into module towers, and time multiplexing
 During my PhD I have implemented from scratch the entire \ac{S2} reconstruction chain in a standalone =Python= code[fn:: \url{https://github.com/bfonta/bye_splits}]
 It was previously only available in =C++=, within CMSSW [[cite:&cmssw]].
 The code enables exponentially faster prototyping, testing and optimization, which are the basis of the following studies.
+
+* Additional bibliography :noexport:
++ JB reference: https://cernbox.cern.ch/pdf-viewer/public/cLosQkewmONZakQ/220606_Dauncey_DN-19-032-V2.pdf?contextRouteName=files-public-link&contextRouteParams.driveAliasAndItem=public%2FcLosQkewmONZakQ&items-per-page=100

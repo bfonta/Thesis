@@ -133,7 +133,9 @@
 *** Pileup jet identification
 *** Jet energy smearing
 *** Legacy trigger scale factors
-*** Additional trigger scale factors
+*** Single tau trigger scale factors
+*** MET trigger scale factors
+#+INCLUDE: "chapters/analysis1/met_trigger_scale_factors.org"
 *** DeepTau scale factors for hadronic \tau's
 *** Lepton scale factors
 
