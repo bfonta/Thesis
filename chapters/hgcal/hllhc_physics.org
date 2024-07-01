@@ -62,6 +62,7 @@ ref:fig:hh_nonres_projections allows the comparison of early \run{2} results wit
 An improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
 The improvement over the luminosity baseline is due to improvements which span multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels, made possible by the gradual increase in available number of events.
 
+@150 Million Higgs and 120k HH@
 One hundred thousand Higgs boson pairs are expected to be produced during the \ac{HL-LHC} phase.
 This will enable the most precise measurement of the triple and quartic Higgs couplings ever, with the possibility of observing the former for the first time, most likely after combining \ac{CMS} and \ac{ATLAS} datasets.
 The precision of \ac{EFT} couplings will also benefit from the increased number of events.

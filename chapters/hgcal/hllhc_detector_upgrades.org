@@ -6,6 +6,13 @@ mention VELO
 
 [[cite:&lhcb_hllhc_tdr;&lhcb_hllhc_interest]]
 
+\paragraph{SHiP}
+
+\paragraph{LBNF/DUNE}
+
+\paragraph{ALICE}
+
 
 * Additional bibliography :noexport:
 + Velo: https://www.youtube.com/watch?v=hsLXi9QTxUo
++ https://indico.cern.ch/event/1418024/contributions/5960937/attachments/2883360/5052485/JM%20CMS%20Jun%202024.pdf

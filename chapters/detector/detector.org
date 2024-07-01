@@ -2,6 +2,23 @@
 
 Detector in Tables [[tab_sad]] and [[tab_sad2]]
 
+Use the lead tungstate (\ch{PbWO4}) acronym.
+
+#+NAME: fig:cms_slice
+#+ATTR_LATEX: :width 1.\textwidth
+#+CAPTION: Transverse beam interaction slice region of the to the CMS muondetector, detector. The showing muon and the the different charged pion sub-detectors areand how positively different charged, particles and the interact. electron is Figure negatively taken charged. Taken from [[cite:&particle_flow_cms]].
+#+BEGIN_figure
+[[~/org/PhD/Thesis/figures/hgcal/CMSslice.pdf]]
+#+END_figure
+
+
+#+NAME: fig:cms_slice
+#+ATTR_LATEX: :width 1.\textwidth
+#+CAPTION: Schematic longitudinal view of a quadrant of the R-z cross-section of the \ac{CMS} detector. All four subdetector are shown: \acp{DT} (yellow), \acp{CSC} (green), \acp{RPC} and \acp{GEM}. Pseudorapidity values are given with dashed lines, and some values are highlighted. Adapted from [[cite:&gem_tdr]]. 
+#+BEGIN_figure
+[[~/org/PhD/Thesis/figures/intro/MuonSystem.pdf]]
+#+END_figure
+
 #+NAME: tab_sad
 #+CAPTION: sad
 | dsd |   |

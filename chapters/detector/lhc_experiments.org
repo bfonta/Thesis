@@ -2,8 +2,24 @@
 
 In the following we provide a summary of some of the most emblematic physics experiments at the \ac{LHC}, before describing the \ac{CMS} detector in ref:sec:cms_detector.
 
+\paragraph{NA62}
+The NA62 experiment operates a 27X0 (1.25 m) deep LKr calorimeter at CERN’s SPS, which earlier served the predecessor experiment NA48 [4].
+Its em energy resolution was measured with electrons at high energies (10–80 GeV).
+[[cite:&wigmans2]]
+
 \paragraph{ATLAS}
-General-purpose detector. [[cite:&atlas_collab]]
++ General-purpose detector. [[cite:&atlas_collab]]
++  The ATLAS electromagnetic calorimeter
+[103] uses a lead/liquid argon sampling technique, with an ‘accordion’ geometry,
+and is located outside of the inner solenoid. The liquid argon technique was chosen
+for its immunity to radiation, its intrinsic stability and linearity of response, and its
+relative ease of longitudinal and transverse segmentation. Its more modest intrinsic
+resolution is a limiting factor at medium and low energies. The calorimeter features three segments in depth, the first one having an extremely fine segmentation in pseudorapidity (0.003) to allow separation between prompt photons and photons from π0 decays up to pT ~ 70 GeV/c, the interesting range for the Higgs boson search in the γγ decay mode.
+The calorimeter is preceded by a presampler, located in the same cryostat, to
+correct for the loss of energy of electrons and converted photons in the inner detector
+material, in the solenoid and cryostat front walls (see Table 6.5). The barrel part,
+consisting of two cylinders, and the two end-cap wheels provide uniform azimuthal
+coverage despite being built of 16 (8) modules per cylinder (wheel) (Fig. 6.46). [[cite:&calorimetry_fabjan]]
 
 \paragraph{LHCb}
 
@@ -11,7 +27,7 @@ Instead of surrounding the entire collision point with an enclosed detector as \
 The experiment includes large aperture subdetectors (\SIrange{10}{300}{\milli\radian}) placed perpendicularly to the beam axis.
 Given that \ac{LHCb}'s main purpose is the study of $b$-flavoured baryons as probes for \ac{NP}, this distinctive design can be readily explained: the decay particles of $b$ hadrons tend to travel close to the line of the beam pipe.
 The design thus exploits to exploit the large $bb$ production cross section at the \ac{LHC}.
-Phenomena studied by \ac{LHCb} include rare B-meson decays, the possible existence of \ac{CP} violating assymetries in $b$ and $c$ hadron decays, the precise measurement of the three interior angles of the \ac{CKM} matrix, $B_{s}$ mixing, or tests for lepton flavour universality, among many others [[cite:&lhcb_hllhc_tdr]].
+Phenomena studied by \ac{LHCb} include rare B-meson decays, the possible existence of \ac{CP} violating asymmetries in $b$ and $c$ hadron decays, the precise measurement of the three interior angles of the \ac{CKM} matrix, $B_{s}$ mixing, or tests for lepton flavour universality, among many others [[cite:&lhcb_hllhc_tdr]].
 
 Given the asymmetric geometry of LHCb, to maximally exploit the volume of the underground cavern, the LHC optics is modified  with a displacement of the collision point by \SI{11.25}{\m} from the centre.
 Starting from the collision point, and moving outwards through \SI{21}{\m} and \SI{5.6}{\tonne} of subdetectors, \ac{LHCb} presents an array of semi-circular silicon-based detectors composing the \ac{VELO}, followed by the first \ac{RICH} detector, focused on low-momentum tracks.

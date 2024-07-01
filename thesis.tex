@@ -1,4 +1,4 @@
-% Created 2024-06-29 Sat 12:59
+% Created 2024-07-01 Mon 20:33
 % Intended LaTeX compiler: xelatex
 \RequirePackage{fix-cm}
 \PassOptionsToPackage{svgnames}{xcolor}
@@ -107,7 +107,8 @@
 \DeclareSIUnit \nucintl {\lambda_0}
 \DeclareSIUnit \bit {b}
 \DeclareSIUnit \nequiv {n_{eq}}
-\DeclareSIUnit \nequiv {n_{eq}}
+\DeclareSIUnit \inch {inch}
+\sisetup{range-phrase = \text{--}}
 \newcommand{\bbll}{bbll+$E^{\text{miss}}_{\text{T}}$}
 \newcommand{\cg}{c_{g}}
 \newcommand{\ctwog}{c_{2g}}
@@ -175,6 +176,8 @@
 \newcommand{\mumu}{$\tau_{\mu}\tau_{\text{h}}$}
 \newcommand{\eleele}{$\tau_{\mu}\tau_{\text{h}}$}
 \newcommand{\elemu}{$\tau_{\mu}\tau_{\text{h}}$}
+\newcommand{\rescat}[1]{\textbf{res#1b}}
+\newcommand{\boostcat}{\textbf{boosted}}
 \newcommand{\jpsi}{$J/\psi$}
 \newcommand{\tauh}{$\tau_{\text{h}}$}
 \author{Bruno Alves}
@@ -185,25 +188,24 @@
  pdftitle={Thesis Title},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 30.0.50 (Org mode 9.6.15)}, 
+ pdfcreator={Emacs 31.0.50 (Org mode 9.7.5)}, 
  pdflang={English}}
 \begin{document}
 
 \maketitle
 \tableofcontents
 
-
 \section{Introduction to Higgs boson pair production}
-\label{sec:org94bac0b}
+\label{sec:org13bf56a}
 \subsection{The Standard Model of Particle Physics}
-\label{sec:orgd10bb18}
+\label{sec:orgbbb363f}
 \label{sec:SM}
 \subsubsection{Brief historical perspective}
-\label{sec:org409a16c}
+\label{sec:orgd3f82a8}
 \subsubsection{The building blocks of the SM}
-\label{sec:org31c7d57}
+\label{sec:orgf846fe9}
 \subsubsection{The Higgs Mechanism}
-\label{sec:org03f6d8b}
+\label{sec:orgb7a83d6}
 \label{sec:HiggsMechanism}
 
 @Explain how the non-zero value of the Higgs field that permeates the Universe breaks electro-weak symmetry (related to the EWPT section)@
@@ -238,10 +240,9 @@ At low energy the potential \(V\) associated to the Higgs boson field \(H\) in t
 
 Higgs discovery \cite{CMS_Higgs_discovery1,CMS_Higgs_discovery2,ATLAS_Higgs_discovery}
 \subsubsection{Experimental status of Higgs boson physics}
-\label{sec:org8a00765}
-
+\label{sec:org84a2454}
 \subsection{Higgs boson pair phenomenology in the SM}
-\label{sec:orge22166a}
+\label{sec:orga31ca75}
 \label{sec:dihiggs}
 
 As mentioned in \cref{sec:SM}, the \ac{SM} has proven an immensely successful theory.
@@ -267,8 +268,14 @@ The Higgs self-coupling plays a central role in the spontaneous breaking of elec
 The fusion of gluons via a heavy-quark (mainly top-quark) loop is the most important production mecha-
 nism of Higgs boson pairs at hadron colliders within the SM \cite{hllhc_physics}.
 
+\begin{figure}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_RhoZ.pdf}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_RhoPhi.pdf}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_3D.pdf}
+\caption{\label{fig:event_display_res2b_2016}\ac{CMS} event display for a \hhbbtt{} event in 2016. Three views are shown, namely \(R\) vs \(z\) (top left), \(R\) vs \(\phi\) (top right), and 3D in cartesian coordinates (bottom). Red and blue represent, respectively, \ac{ECAL} and \ac{HCAL} energy deposits, where the magnitude is proxied the dimension of each bar. Tracks are represented in green. The event passed the \rescat{2} selection. The selection of the analysis categories is defined in \cref{sec:categorization}.}
+\end{figure}
 \subsubsection{Production}
-\label{sec:orgebdcf3b}
+\label{sec:org0d501c1}
 \label{sec:production}
 
 The measurement of Higgs properties at the LHC are in general challenging, given the low cross-sections involved
@@ -309,21 +316,21 @@ gluon fusion is the dominant production mode.
 \begin{table}[!h]
 \centering
 \begin{tabular}{c|c|c|c}
-\(\sqrt{s}\) (\si{\TeV}) & \(\sigma^{\text{FTapprox}}_{\text{NNLO}}\) (\si{\femto\barn}) & PDF + \(\alpha_{S}\) unc. & Scale + \(m_{t}\) unc.\\[0pt]
+\(\sqrt{s}\) (\si{\TeV}) & \(\sigma^{\text{FTapprox}}_{\text{NNLO}}\) (\si{\femto\barn}) & PDF + \(\alpha_{S}\) unc. & Scale + \(m_{t}\) unc.\\
 \hline
-7 & 6.572 & \textpm{}4.3\% & \(-\)\\[0pt]
-8 & 9.441 & \textpm{}3.9\% & \(-\)\\[0pt]
-13 & 31.05 & \textpm{}3.0\% & \(-23\% +6\%\)\\[0pt]
-13.6 & 34.43 & \textpm{}3.0\% & \(-23\% +6\%\)\\[0pt]
-14 & 36.69 & \textpm{}3.0\% & \(-23\% +6\%\)\\[0pt]
-27 & 139.9 & \textpm{}2.5\% & \(-22\% +5\%\)\\[0pt]
-100 & 1224 & \textpm{}2.4\% & \(-21\% +4\%\)\\[0pt]
+7 & 6.572 & \textpm{}4.3\% & \(-\)\\
+8 & 9.441 & \textpm{}3.9\% & \(-\)\\
+13 & 31.05 & \textpm{}3.0\% & \(-23\% +6\%\)\\
+13.6 & 34.43 & \textpm{}3.0\% & \(-23\% +6\%\)\\
+14 & 36.69 & \textpm{}3.0\% & \(-23\% +6\%\)\\
+27 & 139.9 & \textpm{}2.5\% & \(-22\% +5\%\)\\
+100 & 1224 & \textpm{}2.4\% & \(-21\% +4\%\)\\
 \end{tabular}
 \caption{\label{tab:HH_production_xsec}Inclusive gluon fusion cross-sections for HH production for different centre-of-mass energies in the \ac{NNLO} \ac{FT} approximation, for \(\mh=\SI{125}{\GeV}\), with the central scale set to \(\mhh/2\) (see \cite{higgs_xsec_top_effects}). PDF, \(\alpha_{S}\), scale and top mass \(m_{t}\) uncertainties are also showcased. Taken from \cite{lhc_wg4_twiki}.}
 
 \end{table}
 \subsubsection{Decay}
-\label{sec:org3df4326}
+\label{sec:org46c88d6}
 \label{sec:Decay}
 
 \begin{figure}[htbp]
@@ -337,30 +344,27 @@ gluon fusion is the dominant production mode.
 \includegraphics[width=.6\textwidth]{/home/bruno/org/PhD/Thesis/figures/intro/higgs_couplings_line.pdf}
 \caption{\label{fig:HH_coupling_modifiers}The measured coupling modifiers of the Higgs boson to fermions and heavy gauge bosons, as functions of fermion or gauge boson mass, where υ is the vacuum expectation value of the Higgs field. For gauge bosons, the square root of the coupling modifier is plotted, to keep a linear proportionality to the mass, as predicted in the \ac{SM}. The p-value with respect to the SM prediction is 37.5\%. Taken from \cite{higgs_10_years}.}
 \end{figure}
-
 \begin{enumerate}
 \item The bb\(\tau \tau\) final state
-\label{sec:orga4a5949}
+\label{sec:orge557fbb}
 
 \item Other final states
-\label{sec:orga404ef7}
+\label{sec:orgea238d4}
 \end{enumerate}
-
 \subsection{Experimental status of SM HH Physics}
-\label{sec:org425a921}
+\label{sec:org9b2322b}
 The \ac{CMS} experiment has explored a rich and diverse HH programme during Run2, and will continue to do so in Run3.
 In the following, we list some selected analysis which stand out due to its relative sensitivity, to some useful technique, or to some interesting peculiarity.
 The list is necessarily incomplete, subjective and biased, but we hope it provides a taste for all HH efforts undertook by \ac{CMS}.
 Finally, in \cref{sec:combinations}, we discuss the most recent HH combinations in \ac{CMS}.
-
 \subsubsection{4b}
-\label{sec:orgae43e4e}
+\label{sec:orge2ec56d}
 \label{sec:bbbb}
 \subsubsection{bb\(\gamma \gamma\)}
-\label{sec:orgf1f7949}
+\label{sec:orgadd80c5}
 \label{sec::bbgg}
 \subsubsection{bb\(\tau \tau\)}
-\label{sec:orgf99dfec}
+\label{sec:org62ae14f}
 \label{sec::bbtautau}
 
 
@@ -368,7 +372,7 @@ Finally, in \cref{sec:combinations}, we discuss the most recent HH combinations 
 \item Mention H(bb)Y(tt)
 \end{itemize}
 \subsubsection{\(\gamma \gamma \tau \tau\)}
-\label{sec:org1efeb7a}
+\label{sec:orgf1e5ecc}
 \ac{CMS} has recently explored the extremely rare \(\gamma \gamma \tau \tau\) decay channel, for the first time, using full Run2 data.
 The analysis covers non-resonant production via \ac{ggF} and the HH (spin 0 and 2) and HY \ac{BSM} resonant production modes.
 The latter particle refers to an additional BSM scalar Y, considering both H(bb)Y(\(\tau \tau\)) and H(\(\tau \tau\))Y(bb) signatures.
@@ -404,10 +408,10 @@ The limits are around one order of magnitude worse than the ones obtained by the
 \caption{\label{fig:ggtt_results}Results of the \(\gamma \gamma \tau \tau\) nonresonant analysis. \emph{Left)} Distribution of the BDT scores used for the event categorization from data and predictions from MC simulation. \emph{Right)} Data points and signal-plus-background models for the most sensitive analysis category, where the lower panel in each plot shows the residual signal yield after subtraction of the background. Taken from \cite{gammagammatautau}.}
 \end{figure}
 \subsubsection{ZZ, ZH and future techniques}
-\label{sec:orge8a9a93}
+\label{sec:orgaf58df2}
 \begin{enumerate}
 \item The \zzzhbbbb{} analysis
-\label{sec:org1867263}
+\label{sec:org4e06be1}
 The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have cross-sections 31 and 8 times larger than the \ac{SM} ones, respectively, and are therefore expected to be observed before the \bbbb{} process.
 The recently published resolved \zzzhbbbb{} analysis \cite{zz_zh_bbbb} uses a series of advanced background estimation techniques to successfully validate a \ac{QCD} estimate using synthetic datasets (\cref{sec:qcd_bkgd_problem}).
 
@@ -421,9 +425,8 @@ A detailed explanation is outside the scope of this work, but suffices to say th
 The final fit is validated using the synthetic dataset, without statistical fluctuations, and using one of the mixed models as the four-tag data. Systematics behaved as expected and the result was compatible with a zero signal strength.
 The observed (expected) 95\% CL upper limits on the production cross sections correspond to 3.8 (3.8) and 5.0 (2.9) times the \ac{SM} prediction, for the \zzbbbb{} and \zhbbbb{} processes, respectively.
 The analysis indicates that ZH will likely be ovserved first.
-
 \item The problem with \ac{QCD} simulations
-\label{sec:org036a5ea}
+\label{sec:orgd4439ba}
 \label{sec:qcd_bkgd_problem}
 
 Many analysis in CMS include quark- or gluon- induced jets in their final state particles.
@@ -450,10 +453,8 @@ Finally, both \acp{CR} and \acp{VR} often have low statistics, and become a domi
 Indeed, finite data in \acp{VR} imply an ``inherent limitation on the capability to validate the performance of the background model'' \cite{zz_zh_bbbb}.
 There is therefore a need to develop new methods to estimate and validate the \ac{QCD} background estimation that are not sensitive to low statistics.
 In addition, it would be beneficial to directly test the ABCD extrapolation in the \ac{SR}.
-
-
 \item Hemisphere mixing
-\label{sec:org44c675a}
+\label{sec:orgb509fd5}
 \label{sec:hemisphere_mixing}
 
 The hemisphere mixing technique \cite{hemisphere_mixing} first creates a library of ``hemispheres'', which arise from the splitting of events along the plane orthogonal to the transverse thrust axis.
@@ -482,7 +483,7 @@ Importantly, and despite not yet being used in the most recent \bbbb{} results, 
 We note that, given appropirate modifications, a similar method could be extended to the \bbtt{} analysis.
 \end{enumerate}
 \subsubsection{Indirect searches}
-\label{sec:org76cc3ed}
+\label{sec:org31299a9}
 \label{sec:indirect_searches}
 
 An alternative method was developed to extract information on the trilinear Higgs coupling without using Higgs boson pair production.
@@ -515,7 +516,7 @@ Single and double Higgs processes are extremely complementary \cite{indirect_sea
 \caption{\label{fig:single_higgs_indirect_decay}Examples of single Higgs boson decay processes contributing to the Higgs boson self-coupling. The diagrams in the top (bottom) row refer to \ac{NLO} \(\gamma\gamma\) (\(VV\)) decays. Taken from \cite{indirect_searches1}.}
 \end{figure}
 \subsubsection{Combinations}
-\label{sec:orgae00503}
+\label{sec:org7f00be9}
 \label{sec:combinations}
 
 @mention impact of bb\(\tau \tau\)@
@@ -595,15 +596,15 @@ We show (\(\kl\), \(\kt\)) and (\(\kv\), \(\kvv\)) scans in \cref{fig:combinatio
 \caption{\label{fig:combination_2d_scans}Observed two-dimensional likelihood scans of (\(\kl\), \(\kt\)) (left) and (\(\kv\), \(\kvv\)) (right). The strong complementarity between the single and double Higgs processes is well illustrated. The remaining coupling modifiers are set to their \ac{SM} value. Taken from \cite{CMSHplusHHcomb}.}
 \end{figure}
 \subsection{Going beyond the SM}
-\label{sec:orgb53807f}
+\label{sec:org9bac781}
 \subsubsection{SM shortcomings}
-\label{sec:org8d72ead}
+\label{sec:org0ec8295}
 \label{sec:SMShortComings}
 
 CP violation / matter-antimatter asymmetry \cite{cp_violation1,cp_violation2,cp_violation3}
 \begin{enumerate}
 \item Electro-weak phase transition
-\label{sec:org7e8a75a}
+\label{sec:org5f9fe36}
 \label{sec:ewpt}
 
 As discussed in Section \cref{sec:SM}, the existence of the Higgs field breaks electro-weak symmetry.
@@ -625,7 +626,7 @@ While the SM predicts a smooth transition, a plethora of BSM models prefers a fi
 As Eq. \cref{eq:sm_potential} shows,
 \end{enumerate}
 \subsubsection{Non-resonant BSM HH Production}
-\label{sec:orgd476f04}
+\label{sec:org3b486b7}
 \label{sec::NonResBSMHH}
 
 Many models of physics beyond the Standard Model with \ac{SM}-compatible single Higgs boson signal strengths can exhibit a di-Higgs phenomenology vastly different from the \ac{SM} expectation.
@@ -647,10 +648,9 @@ Test \ac{BSM} w/ anomalous couplings
 \item deviations may lead to diffs. in HH production and kinematics
 \item small SM HH cross-section because of the interference between the triangle nad box diagrams
 \end{itemize}
-
 \begin{enumerate}
 \item Effective Field Theories
-\label{sec:org3ad562a}
+\label{sec:org298426d}
 \begin{itemize}
 \item Probe effects from resonances with very high mass at lower energy scales
 \item \ac{BSM} effects on ggF HH production can be studied
@@ -666,25 +666,22 @@ Test \ac{BSM} w/ anomalous couplings
 \end{itemize}
 \end{enumerate}
 \subsubsection{Resonant BSM HH Production}
-\label{sec:org71832c6}
+\label{sec:orgc8c0df7}
 \label{sec::ResBSMHH}
-
 \begin{enumerate}
 \item Motivaton for the bb\(\tau \tau\) analysis
-\label{sec:orga49a6d0}
+\label{sec:org7e6d3fa}
 \end{enumerate}
-
-
 \section{The CMS Detector at the LHC}
-\label{sec:org26924a7}
+\label{sec:orgca88d19}
 \subsection{The Large Hadron Collider}
-\label{sec:orga35f91c}
+\label{sec:orgb6b9a07}
 \label{sec:lhc_intro}
 
 The Large Hadron Collider (LHC) is one of the largest scientific instruments ever built.
 Since opening up a new energy frontier for exploration in 2010, it has gathered a global user community of about 9000 scientists working in fundamental particle physics and the physics of hadronic matter at extreme temperature and density \cite{hllhc}.
 \subsubsection{Design}
-\label{sec:org85293a4}
+\label{sec:org70060d1}
 \label{sec:lhc_design}
 
 It is common practice to express charged and neutral particle contributions to radiation in terms of dose and \SI{1}{\MeV} neutron equivalent fluence, respectively.
@@ -717,24 +714,31 @@ F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}
 \begin{table}[!h]
 \centering
 \begin{tabular}{c|c|c}
-Parameter & Description & Value\\[0pt]
+Parameter & Description & Value\\
 \hline
-\(\sqrt{s}\) & centre-of-mass energy & \SI{14}{\TeV}\\[0pt]
-\(N_{\text{b}}\) & particles per bunch & \num{1.15e11}\\[0pt]
-\(n_{\text{b}}\) & number of bunches per beam & \num{2808}\\[0pt]
-\(f_{\text{rev}}\) & revolution frequency & \SI{11.2}{\kilo\hertz}\\[0pt]
-\(\epsilon_n\) & transverse beam emittance & \SI{3.75}{\micro\meter}\\[0pt]
-\(\beta^*\) & beta function (focal length) & \SI{0.55}{\meter}\\[0pt]
-\(\Delta t_{\text{b}}\) & bunches spacing & \SI{25}{\nano\second}\\[0pt]
-\(\theta_{\text{c}}\) & collision angle & \SI{285}{\micro\radian}\\[0pt]
-\(\sigma_z\) & bunches transverse r.m.s at IP & \SI{7.55}{\cm}\\[0pt]
-\(\sigma_{xy}\) & bunches longitudinal r.m.s at IP & \SI{16.7}{\micro\meter}\\[0pt]
+\(\sqrt{s}\) & centre-of-mass energy & \SI{14}{\TeV}\\
+\(N_{\text{b}}\) & particles per bunch & \num{1.15e11}\\
+\(n_{\text{b}}\) & number of bunches per beam & \num{2808}\\
+\(f_{\text{rev}}\) & revolution frequency & \SI{11.2}{\kilo\hertz}\\
+\(\epsilon_n\) & transverse beam emittance & \SI{3.75}{\micro\meter}\\
+\(\beta^*\) & beta function (focal length) & \SI{0.55}{\meter}\\
+\(\Delta t_{\text{b}}\) & bunches spacing & \SI{25}{\nano\second}\\
+\(\theta_{\text{c}}\) & collision angle & \SI{285}{\micro\radian}\\
+\(\sigma_z\) & bunches transverse r.m.s at IP & \SI{7.55}{\cm}\\
+\(\sigma_{xy}\) & bunches longitudinal r.m.s at IP & \SI{16.7}{\micro\meter}\\
 \end{tabular}
 \caption{\label{tab:LHCparameters}Nominal design parameters of the LHC machine in proton-proton collisions configuration.}
 
 \end{table}
+
+Goal for Run 3 is to approx. double the luminosity for ATLAS and CMS
+
+\begin{figure}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/detector/CERNaccelerators.pdf}
+\caption{\label{fig:econt_algorithms}Representation of the CERN accelerator complex. The LHC is the last ring (dark blue line) in a complex chain of particle accelerators. The smaller machines are used in sequence to accelerate the proton beams that collide in the centre of the four main detectors. Taken from \cite{lhc_complex}.}
+\end{figure}
 \subsubsection{Operations}
-\label{sec:org98bf9a2}
+\label{sec:org6479af6}
 \label{sec:lhc_operatoins}
 
 .
@@ -744,13 +748,31 @@ Parameter & Description & Value\\[0pt]
 \includegraphics[width=.475\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/lhc/pileup_allYears.pdf}
 \end{figure}
 \subsubsection{Experiments}
-\label{sec:org86911df}
+\label{sec:orgbed4280}
 \label{sec:lhc_experiments}
 
 In the following we provide a summary of some of the most emblematic physics experiments at the \ac{LHC}, before describing the \ac{CMS} detector in \cref{sec:cms_detector}.
 
+\paragraph{NA62}
+The NA62 experiment operates a 27X0 (1.25 m) deep LKr calorimeter at CERN’s SPS, which earlier served the predecessor experiment NA48 [4].
+Its em energy resolution was measured with electrons at high energies (10–80 GeV).
+\cite{wigmans2}
+
 \paragraph{ATLAS}
-General-purpose detector. \cite{atlas_collab}
+\begin{itemize}
+\item General-purpose detector. \cite{atlas_collab}
+\item The ATLAS electromagnetic calorimeter
+\end{itemize}
+{[}103] uses a lead/liquid argon sampling technique, with an ‘accordion’ geometry,
+and is located outside of the inner solenoid. The liquid argon technique was chosen
+for its immunity to radiation, its intrinsic stability and linearity of response, and its
+relative ease of longitudinal and transverse segmentation. Its more modest intrinsic
+resolution is a limiting factor at medium and low energies. The calorimeter features three segments in depth, the first one having an extremely fine segmentation in pseudorapidity (0.003) to allow separation between prompt photons and photons from π0 decays up to pT \textasciitilde{} 70 GeV/c, the interesting range for the Higgs boson search in the γγ decay mode.
+The calorimeter is preceded by a presampler, located in the same cryostat, to
+correct for the loss of energy of electrons and converted photons in the inner detector
+material, in the solenoid and cryostat front walls (see Table 6.5). The barrel part,
+consisting of two cylinders, and the two end-cap wheels provide uniform azimuthal
+coverage despite being built of 16 (8) modules per cylinder (wheel) (Fig. 6.46). \cite{calorimetry_fabjan}
 
 \paragraph{LHCb}
 
@@ -758,7 +780,7 @@ Instead of surrounding the entire collision point with an enclosed detector as \
 The experiment includes large aperture subdetectors (\SIrange{10}{300}{\milli\radian}) placed perpendicularly to the beam axis.
 Given that \ac{LHCb}'s main purpose is the study of \$b\$-flavoured baryons as probes for \ac{NP}, this distinctive design can be readily explained: the decay particles of \(b\) hadrons tend to travel close to the line of the beam pipe.
 The design thus exploits to exploit the large \(bb\) production cross section at the \ac{LHC}.
-Phenomena studied by \ac{LHCb} include rare B-meson decays, the possible existence of \ac{CP} violating assymetries in \(b\) and \(c\) hadron decays, the precise measurement of the three interior angles of the \ac{CKM} matrix, \(B_{s}\) mixing, or tests for lepton flavour universality, among many others \cite{lhcb_hllhc_tdr}.
+Phenomena studied by \ac{LHCb} include rare B-meson decays, the possible existence of \ac{CP} violating asymmetries in \(b\) and \(c\) hadron decays, the precise measurement of the three interior angles of the \ac{CKM} matrix, \(B_{s}\) mixing, or tests for lepton flavour universality, among many others \cite{lhcb_hllhc_tdr}.
 
 Given the asymmetric geometry of LHCb, to maximally exploit the volume of the underground cavern, the LHC optics is modified  with a displacement of the collision point by \SI{11.25}{\m} from the centre.
 Starting from the collision point, and moving outwards through \SI{21}{\m} and \SI{5.6}{\tonne} of subdetectors, \ac{LHCb} presents an array of semi-circular silicon-based detectors composing the \ac{VELO}, followed by the first \ac{RICH} detector, focused on low-momentum tracks.
@@ -776,15 +798,32 @@ Some result bforuhg forward by \ac{SMOG} include fixed-target \jpsi{} and \(D^{0
 
 \cite{bb_pairs1,bbpairs2}
 \subsection{The CMS Detector}
-\label{sec:org022e093}
+\label{sec:org13a188d}
 \label{sec:cms_detector}
 
 Detector in Tables \cref{tab_sad} and \cref{tab_sad2}
 
+Use the lead tungstate (\ch{PbWO4}) acronym.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.9\linewidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/CMSslice.pdf}
+\end{center}
+\caption{\label{fig:cms_slice}Transverse beam interaction slice region of the to the CMS muondetector, detector. The showing muon and the the different charged pion sub-detectors areand how positively different charged, particles and the interact. electron is Figure negatively taken charged. Taken from \cite{particle_flow_cms}.}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.9\linewidth]{/home/bruno/org/PhD/Thesis/figures/intro/MuonSystem.pdf}
+\end{center}
+\caption{\label{fig:cms_slice}Schematic longitudinal view of a quadrant of the R-z cross-section of the \ac{CMS} detector. All four subdetector are shown: \acp{DT} (yellow), \acp{CSC} (green), \acp{RPC} and \acp{GEM}. Pseudorapidity values are given with dashed lines, and some values are highlighted. Adapted from \cite{gem_tdr}.}
+\end{figure}
+
 \begin{table}[htbp]
 \centering
 \begin{tabular}{ll}
-dsd & \\[0pt]
+dsd & \\
 \hline
 \end{tabular}
 \caption{\label{tab_sad}sad}
@@ -794,14 +833,14 @@ dsd & \\[0pt]
 \begin{table}[htbp]
 \centering
 \begin{tabular}{ll}
-dsd & \\[0pt]
+dsd & \\
 \hline
 \end{tabular}
 \caption{\label{tab_sad2}sad}
 
 \end{table}
 \subsubsection{Coordinate system}
-\label{sec:org7ff022b}
+\label{sec:org056019d}
 The CMS experiment adopts a right-handed coordinate system, with the origin placed at the nominal collision point.
 The x-axis points toward the centre of the LHC ring, the y-axis points vertically upward, and the z-axis thus points towards the Jura mountains.
 The structure of the detector makes it natural to use a polar coordinate system.
@@ -916,7 +955,7 @@ The exact \(\eta\) value marking the transition between the two regions depends 
 \caption{\label{fig:cords_lhc}Schematic illustration of the standard coordinate system at the CMS detector, represented relative to the \ac{LHC} and the other three main LHC experiments. Courtesy of Izaak Neutelings \cite{izaak_neutelings}.}
 \end{figure}
 \subsubsection{Detector structure}
-\label{sec:org9a38483}
+\label{sec:orgb475826}
 They are designed to be versatile and capable of detecting a wide range of physics processes across various energies.
 The CMS experiment was officially proposed in 1992 with the primary goal of discovering the \textbf{Higgs boson}.
 Key to this objective were the channels \(H \rightarrow ZZ \rightarrow 4\ell\) and \(H \rightarrow \gamma\gamma\), which required an excellent electromagnetic calorimeter for effective electron and photon detection, with an energy resolution constant term equal to or less than \textbf{0.5\%}.
@@ -947,36 +986,34 @@ The tracker is essential for momentum measurement, particle identification, and 
 To achieve precise momentum measurement, a powerful magnet was necessary, leading to the use of superconducting technology.
 The CMS detector's structure and components are designed to meet these stringent requirements.
 \subsection{The CMS trigger system}
-\label{sec:orgbea4ed9}
+\label{sec:orgd0e9bce}
 \subsubsection{Level-1}
-\label{sec:org5b1fa84}
+\label{sec:org62bc174}
 \subsubsection{HLT}
-\label{sec:orge4dfe76}
-
+\label{sec:org5e0816e}
 \subsection{Offline identification and reconstruction of physics objects}
-\label{sec:orgfc20b84}
+\label{sec:org9959dde}
 \subsubsection{Particle-flow}
-\label{sec:org265f6ac}
+\label{sec:org2a0e7f0}
 \subsubsection{Electrons}
-\label{sec:org43b69c4}
+\label{sec:org64854c5}
 \subsubsection{Muons}
-\label{sec:org25d4540}
+\label{sec:orgcb3aa17}
 \subsubsection{Hadronic \(\tau\)'s}
-\label{sec:org11f53e6}
+\label{sec:org355cf4d}
 \subsubsection{Jets}
-\label{sec:orgcea6313}
+\label{sec:org163f62d}
 \subsubsection{Missing transverse energy}
-\label{sec:orge0a7158}
+\label{sec:org054e127}
 \subsection{Monte Carlo generation}
-\label{sec:org9b66a3c}
+\label{sec:org203e02e}
 \begin{itemize}
 \item Pythia: beams, hard-scattering, parton showering and hadronisation
 \item jet matching and/or merging during hadronization
 \item 
 \end{itemize}
-
 \subsubsection{Tunes}
-\label{sec:orgfff1994}
+\label{sec:org1c8906f}
 The underlying event (UE) consists of the beam-beam remnants (BBR) and the particles that arise from multiple-parton interactions (MPI).
 The BBR are what remains after a parton is scattered out of each of the two initial beam hadrons, while the MPI are additional soft or semi-hard parton-parton scatterings that occur within the same hadron-hadron collision \cite{CMS_Tunes}.
 
@@ -988,19 +1025,17 @@ generators is tuned. Multiple parton interactions (MPI) are one of the most impo
 
 A set of QCD parameters is derived in different ways (WHICH ONES??) to precisely describe aspects of the UE, such as the modelling of the hadronization, the initial and final state radiation and the BBR.
 A complex fitting procedure, using data collected by CDF and CMS at different energies is used, extracting the parameters known as CMS Pythia (CP) Tunes.
-
 \subsubsection{Monte Carlo and data processing in \ac{CMS}}
-\label{sec:orga71ee25}
+\label{sec:org32733ff}
 \begin{enumerate}
 \item Data processing chain
-\label{sec:orgbcdb8fe}
+\label{sec:orgc77bc61}
 \begin{itemize}
 \item @Follow section 2.5 of Alessandro's thesis@
 \item create items with parton showering, hadronization, underlying event modelling\ldots{}
 \end{itemize}
-
 \item Pile-up production
-\label{sec:org17e99de}
+\label{sec:org6b573d1}
 There are two ways to produce samples with simulation of pile-up: premix and classical mixing \cite{pileup_production}.
 
 Classical mixing implies a previous production of a \ac{MB} sample (with a datatier ``GEN-SIM'').
@@ -1015,10 +1050,8 @@ The output of the SingleNeutrino sample is a \texttt{GEN-SIM-DIGI} sample (alrea
 For root requests using premix \ac{PU} simulation, the \texttt{DIGI} step is run only on them, while the \ac{PU} simulation is added after this step.
 Since the \texttt{DIGI} step is run only once, premix requests are much faster and less CPU consuming than classical mixing requests.
 \end{enumerate}
-
-
 \subsubsection{Improvements for the HL-LHC}
-\label{sec:orga17b4da}
+\label{sec:orgea09777}
 \begin{itemize}
 \item \cite{hllhc_physics}
 \item quest for higher precision and accuracy, but also by practical issues, such as the need for generating very
@@ -1029,25 +1062,21 @@ the input parameters needed in order to study uncertainties.
 \item cite MC generators: Herwig \cite{herwig1,herwig2,herwig3}, Pythia \cite{pythia1,pythia2}, Sherpa \cite{sherpa1}
 \item from now up to the end of the \ac{HL-LHC} program we can anticipate continuous progress due to the \ac{LHC} running and accumulated data, which will provide continuous feedback to the theoretical work in the field. Developments in the following directions are to be expected: precision for inclusive observables, logarithmic accuracy, technical improvements for fast and efficient generation of events, and improvements in the modeling of hadronization and underlying event [pages 15 and 16 provide more details]
 \end{itemize}
-
 \subsubsection{Activities as Monte Carlo contact}
-\label{sec:org1f45c8b}
-
-
+\label{sec:org0c819b9}
 \section{Trigger primitives reconstruction for the HGCAL Level-1 trigger}
-\label{sec:org73ad929}
+\label{sec:orgb2595e7}
 \subsection{The High Luminosity LHC}
-\label{sec:orgc3015d7}
+\label{sec:orgd5895cc}
 \label{sec:hllhc}
 
-The so-called \ac{LHC} Phase-1 has been running since 2011, spanning three independent data runs, the last of which, Run 3, is currently approaching its end of life, at the end of 2025.
-Phase-2 will soon follow, incorporating the brand new \ac{HL-LHC}, which will start taking data in 2029, extending \ac{HEP} studies well into the future (see \cref{fig:hllhc}) \cite{hllhc}.
-
-The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SIrange{\sim5e34}{7.5e34}{\per\cm\squared\per\second}.
+The first phase of the \ac{LHC} has been running since 2010, spanning three independent data runs, the last of which, Run 3, is currently approaching its end of life, in the last quarter of 2025.
+Phase-2 will soon follow, incorporating the brand new \ac{HL-LHC}, which will start taking data in 2029, extending \ac{HEP} studies well into the future (see \cref{fig:hllhc}) \cite{hllhc_evolution_paper1,hllhc_evolution_paper2}.
+The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SIrange{\sim5e34}{7.5e34}{\per\cm\squared\per\second} \cite{hllhc}.
 This is more than twice the \ac{LHC}’s current value.
 These conditions correspond, in the ultimate HL-LHC configuration, to a \ac{PU} of up to 200, a fluence of up to \SI{1e16}{\nequiv\per\cm\squared}, and a \ac{TID} reaching \SI{2}{\mega\gray}.
 For comparison, the \ac{LHC} currently brings \num{\sim 50} \ac{PU} interactions on average \cite{pileup_twiki}, a dose of the order of \SI{1e5}{\gray} and a fluence of \SI{\sim 1e15}{\nequiv\per\cm\squared} \cite{lhc_fluences} (see \cref{sec:lhc_design}).
-An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of 10 years \cite{hllhc}, while current \ac{CMS} endcap calorimeters are designed to sustain a more modest value of up to \SI{500}{\per\femto\barn}.
+An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of around 10 years \cite{hllhc}, while current \ac{CMS} endcap calorimeters are designed to sustain a more modest value of up to \SI{500}{\per\femto\barn}.
 
 \begin{figure}[htbp]
 \centering
@@ -1055,11 +1084,15 @@ An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be
 \caption{\label{fig:hllhc}The \ac{HL-LHC} project timeline. Run3 is currently on-going, and the \ac{HL-LHC} will start collecting data in 2029, following three years of \ac{LHC} shutdown for detector upgrades.}
 \end{figure}
 
-A dramatic performance degradation is foreseeable for higher luminosities.
+The operational scenario of the \ac{HL-LHC} is continuosly evolving, with some uncertainties still present.
+Given past delays and current unknowns, it is still soon to definitely confirm current operational plans.
 
-
+\begin{figure}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/lhc/lumi_evolution_hllhc.pdf}
+\caption{\label{fig:lumi_plans_hllhc}Planned peak and integrated luminosities during the \ac{HL-LHC}. Three data-taking runs are foreseen, interspersed by three \acp{LS}. Two scenarios with different \ac{YETS} durations are shown, where shorter stops have the potential for significant integrated luminosity increases. The schedule was last updated in January 2022. Taken from \cite{hllhc_evolution_paper2}.}
+\end{figure}
 \subsubsection{Physics motivation}
-\label{sec:org9ec67e8}
+\label{sec:orgb607cd0}
 \label{sec:hllhc_physics}
 
 A more powerful \ac{LHC} will increase the accurancy of current measurements and enhance the sensitivity to rare processes through both direct and indirect searches which occur below the current sensitivity level, and with more challenging signatures.
@@ -1124,6 +1157,7 @@ The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross-se
 An improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
 The improvement over the luminosity baseline is due to improvements which span multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels, made possible by the gradual increase in available number of events.
 
+@150 Million Higgs and 120k HH@
 One hundred thousand Higgs boson pairs are expected to be produced during the \ac{HL-LHC} phase.
 This will enable the most precise measurement of the triple and quartic Higgs couplings ever, with the possibility of observing the former for the first time, most likely after combining \ac{CMS} and \ac{ATLAS} datasets.
 The precision of \ac{EFT} couplings will also benefit from the increased number of events.
@@ -1146,7 +1180,7 @@ If we also take a positive and historical stand, considering how \ac{LHC} experi
 \caption{\label{fig:hh_nonres_projections}Evolution of the expected and observed upper limits on the HH production cross-section. The figure compares results from early \ac{LHC} \run{2} data (\SI{35.9}{\invfb}) with full \ac{LHC} \run{2} data (\SI{138}{\invfb}), and with projections for the \ac{HL-LHC} (\SI{3000}{\invfb}). At the end of the \ac{HL-LHC} it should be possible to challenge the \ac{SM} prediction (red line) with the result of a combined analysis of multiple final states. Taken from \cite{higgs_10_years}.}
 \end{figure}
 \subsubsection{Detector ugrades}
-\label{sec:org5bffc71}
+\label{sec:orgf13993f}
 \label{sec:hllhc_detector_upgrades}
 
 \paragraph\{\ac{LHCb}\}
@@ -1154,32 +1188,37 @@ If we also take a positive and historical stand, considering how \ac{LHC} experi
 mention VELO
 
 \cite{lhcb_hllhc_tdr,lhcb_hllhc_interest}
-\subsubsection{Future CMS subdetectors}
-\label{sec:orge1b0259}
-\label{sec:hllhc_future_subdetectors.org}
 
+\paragraph{SHiP}
+
+\paragraph{LBNF/DUNE}
+
+\paragraph{ALICE}
+\subsubsection{Future CMS subdetectors}
+\label{sec:orgfe6fb26}
+\label{sec:hllhc_future_subdetectors.org}
 \begin{enumerate}
 \item Pixels
-\label{sec:orgc445baa}
+\label{sec:orgfeb6f77}
 \begin{itemize}
 \item New Layer 1 at 29mm from the beamline
 \end{itemize}
 \item Muons
-\label{sec:orgd9afb69}
+\label{sec:org550ba2c}
 \item HCAL
-\label{sec:org5c66ea2}
+\label{sec:org7f966b0}
 \begin{itemize}
 \item in HCAL hybrid photodiodes were replaces by SiPMs (in Run1)
 \item HCAL brings new depth and timing information
 \end{itemize}
 \item Bril
-\label{sec:org7c8b0ff}
+\label{sec:org184152f}
 \begin{itemize}
 \item lumi measurements are challenging
 \item uncertainty of 1.4\% in 2022
 \end{itemize}
 \item L1
-\label{sec:orgeacfbd5}
+\label{sec:orgef400e8}
 \begin{itemize}
 \item Folded event building in Run3
 \item GPUs in Run3 (and replace CUDA by Alpaka)
@@ -1189,54 +1228,237 @@ mention VELO
 \end{itemize}
 \end{enumerate}
 \subsection{The High Granularity Calorimeter}
-\label{sec:org03db42c}
+\label{sec:org0647040}
 \label{sec:hgcal_intro}
 
-Following the \ac{HL-LHC} description in \cref{sec:hllhc}, it should be clear that the running conditions during data collection will happen in a much harsher and crowded environment, with respect to the \ac{LHC}.
-This is particularly true for the \ac{CMS} endcap regions, given the extremely large radiation levels expected closer to the beam axis.
-The \ac{ECAL} and \ac{HCAL} forward calorimeters were designed to sustain an integrated luminosity of \SI{500}{\invfb}.
-Given the \num{\sim 6} to \num{8} times larger luminosities expected for the \ac{HL-LHC}, a degration of the physics performance after @refer to some lumi projectin over time for the HL-LHC@ unavoidable \cite{hgcal_technical_proposal}.
+Running conditions during the data collection of \ac{HL-LHC} will take place in a environment much harsher and crowded when compared to the \ac{LHC}.
+This is particularly true for the \ac{CMS} endcap regions, given the large radiation levels expected closer to the beam axis.
+At the same time, the forward \ac{ECAL} and \ac{HCAL} were designed to sustain an integrated luminosity of \SI{500}{\invfb}.
+Given the \num{\sim 6} to \num{8} times larger luminosities expected during the entirety of the \ac{HL-LHC} period, a drastic degration of the physics performance seems unavoidable \cite{hgcal_technical_proposal}.
+Unfortunately, scintillation-based solutions are very sensitive to ionizing radiation.
+The formation of color centres during irradiation has already lead to a stark \(\eta\text{-dependent}\) reduction of the transparency of existing endcap \ch{PbWO4} crystals, often by values above 90\%.
+Despite the possible recover from the opaqueness caused by photons, through spontaneous annealing, or thermal annealing at \SI{200}{\celsius} \cite{annealing_calorimeter}, irreversible damage is caused by fast hadrons, mostly charged pions of \SI{\sim 1}{\GeV} \cite{wigmans,wigmans2}.
+The endcap calorimeters would become unusable during the \ac{HL-LHC}, and negative effects would be evident almost from the start (see \cref{fig:lumi_plans_hllhc}).
 
-The CMS experiment thus foresees the complete replacement of the endcap calorimeters with a profoundly different calorimeter. It is clear from simulations that the new sub-detector will have to withstand a fluence of \(10^{16}~\rm n_{eq}/cm^2\) and a dose of 2 MGy (cfr Fig.\textasciitilde{}\cref{ch2:fig:dose}). R\&D activities have proven that the best material to meet these requirements is silicon, which can cope with fluences up to \(1.5\times10^{16}~\rm n_{eq}/cm^2\), 50\% higher than the one expected during phase-2. Hence, silicon was selected to be the active material of the new detector. In addition to radiation hardness, the new calorimeter must satisfy other requirements outlined below.
+The CMS experiment thus foresees the complete replacement of its endcap calorimeters, introducing the challenging \ac{HGCAL} project \cite{hgcalTDR} (see \cref{tab:HGCALparameters}).
+The \ac{HGCAL} will be a sampling calorimeter, with fine transverse and longitudinal granularity, capable of fully exploiting the physics events produced under the expected extreme radiation conditions.
+It will proeminently feature \ac{Si} as active material in the regions closer to the \(pp\) interaction point, and thus more impacted by incoming radiation.
+This approach departs from others more established technologies, for instance the use of liquified noble gases, as done in \ac{ATLAS}.
+\ac{Si} was chosen for its ability to cope with fluences 50\% higher than the ones expected by the end of Phase-2.
 
-\Ac{CMS} \cite{cms_collab} is thus developing the \ac{HGCAL} \cite{hgcalTDR}: a novel endcap sampling calorimeter with an extremely fine granularity.
-About \num{6} million channels will enable particle identification and high resolution measurements of the position, energy and time of high-energy collision products.
-Examples include the measurement of narrow and merged jets, \ac{PU} energy, and performing calorimetric tracking for the first time.
-Given its location and number of active sensors, data rates of \SI{\sim 100}{\tera\byte\per\second} are expected.
-The latter is a novel endcap calorimeter with fine transverse and longitudinal granularity, capable of fully exploiting the physics events produced under the expected tight time budget and extreme radiation conditions.
-The proposed design of \ac{HGCAL} includes two sections measuring the properties of different types of particles.
-The \ac{EM} section covers the first 26 layers, closer to the interaction point.
-There, \ac{Si} sensors organized in hexagonal modules act as active material, in order to sustain the expected radiation.
-Layers of \ac{Si} are interleaved with absorbers.
-The following 21 layers, comprising the \ac{HAD} section, are split into 8 \ac{Si}-only layers followed by 14 hybrid layers, with \ac{Si} closer to the beamline and cost effective plastic scintillator at lower \ac{eta} values (see \cref{fig:hgcal}). 
-Each endcap weighs \SI{215}{\tonne} and measures \SI{2}{\meter} (\SI{2.3}{\meter}) in the longitudinal (radial) direction.
-Ac\{HGCAL\} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} \cite{l1TDR}, which precedes the \ac{HLT} running on standard servers.
-\Ac{L1} performs an online selection of interesting physics processes, whose cross sections are typically orders of magnitude lower than the total proton-proton cross section.
-We present and discuss several techniques to minimize or completely remove the splitting.
-We conclude by discussing future steps, some of which are already in progress.
+The proposed novel design includes an \ac{EM} electromagnetic section of silicon sensors as active material in the first \num{26} layers, as one can see in \cref{fig:hgcal_side_view}.
+In total, \ac{HGCAL} has \num{\sim 6} million \ac{Si} sensors, or channels, with three different thicknesses of \num{300}, \num{200}, and \SI{120}{\micro\meter}, ordered by the fluence impinging on them.
+In order to optimise the charge collection and reduce the leakage current, it is advantageous to use thinner sensors in the regions of higher fluence.
 
+Sensors will be split in two different density regions, depending on their active area size.
+The \emph{high density} region comprises \SI{0.52}{\centi\meter\squared}, \SI{120}{\micro\meter} thick cells, and is located closer to the beam axis.
+Instead, the \emph{low density} region, located at \(|\eta| \lesssim 2.15\) (\(R \lesssim 70\si{\centi\meter}\)), will be made of \SI{1.18}{\centi\meter\squared} active sensors, with thicknesses of \num{300} or \SI{200}{\micro\meter}, depending on their location.
+Their physical layout can be inspected in \cref{fig:hgcal_side_view}.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/hgcal_mod.png}
-\caption{\label{fig:hgcal}Schematic views of \ac{HGCAL}. \textit{a)} Longitudinal profile of positive endcap with highlighted \ac{eta} range and \ac{EM} and \ac{HAD} sections \emph{b)} Transversal view of a \ac{Si}-only layer, with different colors representing different sensor thicknesses \emph{c)} Same as \textit{b} for a hybrid layer \emph{d)} 3D view of \ac{HGCAL}.}
+The sensors are arranged within \SI{8}{\inch} hexagonal \ac{Si} modules, which are mounted on one side to a baseplate, and on the other side to the hexaboard containing the front-end electronics and the \ac{PCB}. The baseplate is composed of CuW in the \ac{CE-E}, contributing to the \ac{CE-E} absorber,
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/HGCALSideView.pdf}
+\end{center}
+\caption{\label{fig:hgcal_side_view}The longitudinal profile of the positive endcap \ac{HGCAL} in its latest design version. The first \num{26} layers, in blue, refer to the \ac{CE-E}. The \ac{CE-H} follows, in green, and some hybrid layers lie deeper in the calorimeter, where purple refers to the region with plastic scintillator tiles. The active material alternates with absorber material, which varies according to the detector location, as described in the text. Adapted from \cite{hgcal_web}, which is partially based on \cite{hgcalTDR}.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/DoseAbsorbedHGCAL.pdf}
+\end{center}
+\caption{\label{fig:dose_abosrbed_hgcal}Distribution of the absorbed dose over the \ac{CMS} detector after an integrated luminosity of \SI{3}{\atto\barn}. Used \ac{CMS} \texttt{FLUKA} geometry, version 3.7.0.0. Taken from \cite{hgcalTDR}.}
 \end{figure}
 
 
+The extremely high granulairty will enable particle identification and high resolution measurements of the position, energy and time of high-energy collision products.
+The granularity is such that \ac{HGCAL} will be the first calorimeter ever able to perform tracking.
+The high segmentation also enables the precise measurement of narrow and merged jets, and of \ac{PU} energy, for instance.
+
+\cite{bruno_chep23}
+
+
+
+
+
+
+
+
+
+
+
+
+
+There, \ac{Si} sensors organized in hexagonal modules act as active material, in order to sustain the expected radiation.
+\cite{refCUDA1}
+
+A \ac{HAD} section comprises \num{8} silicon-only layers followed by \num{14} hybrid layers composed of both silicon and \ac{Sci} plastic tiles, where the scintillation light is read out by \acp{SiPM}.
+Both sections are interleaved with absorber layers.
+\ac{HGCAL} will comprise \SI{\sim 620}{\meter\squared} of \ac{Si} and \SI{\sim 400}{\meter\squared} of plastic scintillators for a total of, respectively, \num{\sim 1} million and \num{\sim 240} thousand channels.
+Three subdetectors form HGCAL’s hybrid detection technology: the first \num{28} layers made exclusively of silicon (\ac{CE-E}) and the silicon and scintillator parts of the hadronic section (CE-HSi and CE-HSci).
+
+The following 21 layers, comprising the \ac{HAD} section, are split into 8 \ac{Si}-only layers followed by 14 hybrid layers, with \ac{Si} closer to the beamline and cost effective plastic scintillator at lower \ac{eta} values (see \cref{fig:hgcal_side_view})
+\begin{enumerate}
+\item Sensor thicnkess
+\label{sec:orgca4b33a}
+radiation induced traps in the bulk silicon significantly reduce the charge collected.
+In addition, the sensor leakage current linearly with fluence, resulting in increased noise and, combined with the very high
+bias voltages, leads to substantial power dissipation within the sensors themselves.
+These observations motivated the investigation of thinner sensors. \cite{hgcalTDR}
+\item Satisfy requirements
+\label{sec:org49e7590}
+The new calorimeter addresses many of the requirements imposed by the \ac{HL-LHC}:
+\item Neutron moderator
+\label{sec:org2c53e9d}
+Despite \ac{Si}'s radiation hardeness, fast enough photons and hadrons can cause damage in the sensors.
+Starting by the dominant ``soft'' damage, two negative effects can occur.
+The first type, bit flips, can occur whenever a high energy track passes closer to a capacitor.
+If the latter is empty, the original ``0'' might be read as a ``1''.
+This type of errors can be reversed by software corrections and/or redundancy, or simply by resetting the state of the sensor.
+The second type, namely the creation of charge traps between the valence and conduction bands, has the effect of lowering the resolution of the semiconductor device.
+Soft damage can be usually reversed by temperature annealing.
+The so-called displacement damage, instead, occurs when a high energy particle, like a photon, neutron or proton knocks an atom from its lattice site. Eventually the resulting vacancies stabilize, creating long-lasting defects.
+To avoid the deterioration of the crucial (and expensive) \ac{Si} sensors, the \ac{PM} neutron moderator will be added in front of the \ac{CE-E}, to reduce the number of fast neutrons coming from the tracker \cite{calorimetry_fabjan,radiation_damage_silicon2,radiation_damage_silicon}
+\item Table parameters
+\label{sec:orgdb86575}
+\begin{table}[!h]
+\centering
+\begin{tabular}{c|c}
+Parameter & Value\\
+\hline
+\(\eta\) coverage & \(1.5 \lesssim \eta \lesssim 3.0\)\\
+Area of \ac{Si} sensors & \SI{620}{\meter\squared}\\
+Area of \ac{Sci} tiles & \SI{400}{\meter\squared}\\
+Endcap radial length & \SI{2.3}{\meter}\\
+Endcap longitudinal length & \SI{2}{\meter}\\
+Endcap weight & \SI{215}{\tonne}\\
+Temperature & \SI{-35}{\celsius}\\
+Number of modules & \num{30000}\\
+Number of \ac{Si} channels & \num{6000}\\
+Number of plastic tile boards & \num{4000}\\
+\end{tabular}
+\caption{\label{tab:HGCALparameters}Defining HGCAL properties.}
+
+\end{table}
+\item Table parameters 2
+\label{sec:orgeb439c6}
+\begin{table}[!h]
+\centering
+\begin{tabular}{c|c|c|c}
+Tickness [\si{\micro\meter}] & 120 & 200 & 300\\
+\hline
+Cell size [\si{\centi\meter}] & 0.52 & 1.18 & 1.18\\
+Expected fluences [\(\times10^{15}\) \unit{\nequiv\per\cm\squared}] & \numrange{2}{7} & \numrange{0.5}{2.5} & \numrange{0.1}{0.5}\\
+\end{tabular}
+\caption{\label{tab:Si_sensors_parameters}Features of the silicon sensors in the layers deploying only silicon sensors. The silicon cell size defines two regions, namely the high-density and low-density region.}
+
+\end{table}
+
+\begin{figure}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/HGCAL3DView.pdf}
+\caption{\label{fig:hgcal_3d_view}Schmetic 3D view of one endcap of the \ac{HGCAL}. Different detector structural layers can be seen, such as the \ac{CE-E} and \ac{CE-H} calorimeters, the \ac{ETL} located just in front of the \ac{CE-E}, and some sections required for structural reasons. The \ac{PM}, or neutron moderator, reduces the number of neutron coming from the tracker. The two dashed lines give a rough idea on the location of one pair of cooling supply and return tubes, which are connected to the layers, and are placed every \SI{30}{\celsius}. The picture on the right provides a side view of the same endcap. Adapted from \cite{hgcalTDR}.}
+\end{figure}
+\item Diamond semdiconductors
+\label{sec:orgf568b6d}
+\begin{itemize}
+\item Although the specific ionization in diamond detectors is around three times smaller
+\end{itemize}
+than in silicon, larger detector thickness, small dielectric constant, high break down
+voltage and negligible leakage current make them the most viable replacement for
+silicon in the highest radiation fields \cite{calorimetry_fabjan}
+\begin{itemize}
+\item altneratives to silicon in niche applications are silicon carbide, GaAs and GaN.
+\end{itemize}
+\item Reconstruction code
+\label{sec:org4667400}
+Given its location and number of active sensors, data rates of \SI{\sim 100}{\tera\byte\per\second} are expected.
+
+This requires the development of reconstruction code capable of fully exploiting the increased granularity under the expected extreme conditions.
+The biggest contributor to CPU usage is event reconstruction, of which currently ∼5\% is
+used by HGCAL [5]. CMS plans to port part of its reconstruction to Graphics Processing
+Units (GPUs), which represent one of the most promising hardware accelerator technologies on
+the market. GPUs are a key element when one considers taking advantage of heterogeneous
+architectures available on traditional and High-Performance Computing grid sites, including the
+upgraded Worldwide LHC Computing Grid. GPUs also promote the development of algorithms
+with better computing performance, and profit from a potentially favourable cost when compared
+to CPUs, per unit capacity. CMS is planning to adopt a heterogeneous High Level Trigger (HLT)
+farm already in Run 3 (2022–2025), where ∼30\% of the workflow will be offloaded to GPUs (50\%
+and 80\% by the end of Run 4 and 5, respectively) [6]. 
+
+The reconstruction model envisioned for \ac{HGCAL} is intended to be fast and flexible, comprising a sequence of modules/stages which transform raw data into physics objects.
+After the initial generation, simulation, digitization [5]
+and calibration steps, energy deposits (hits) are clustered by CLUE, a fully-parallelizable density-
+based clustering algorithm [8], in order to form two-dimensional objects. In a nutshell, CLUE
+assigns an energy density and a separation distance to all hits, which are later used to classify
+each hit as either a seed, a follower (based on the hit’s nearest highest density), or an outlier.
+Clusters are built by traversing the tree of followers of each seed, assigning the index of the
+seed to all its followers. This work includes the calculation of the cluster energy and cartesian
+positions, which are computed in the device (section 3.1). In addition, a heterogeneous approach
+for navigating through the detector’s geometrical/topological information is devised and used
+within CLUE (section 3.2).
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/layer_structure.pdf}
+\end{center}
+\caption{\label{fig:hgcal_side_view}Representation of the silicon sensors with two possible cell sizes. layout of a layer where only silicon sensors are present. The radial changes in darkness of colour indicate the different silicon thickness: 300, 200, and 120 μm. The solid black line marks the boundary between the high-density and low-density region. The succession of green and yellow colours delimit the 60◦ cassettes. The right half-circle shows the layout of a layer where both silicon sensors and scintillators are present. The blue lines in the scintillator part and the red lines in the silicon part delimit the \SI{30}{\degree} cassettes. Taken from \cite{tarabini_thesis}.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/CEEcass.pdf}
+\end{center}
+\begin{center}
+\includegraphics[width=.5\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/CEEcass.pdf}
+\end{center}
+\caption{\label{fig:hgcal_long_structure}Longitudinal structure of a fundamental unit of the \ac{CE-E}. Each unit comprises two sampling layers. ADD HAD one!!!!}
+\end{figure}
+
+
+Wigmans \cite{wigmans2,wigmans}
+\end{enumerate}
+\subsubsection{Random}
+\label{sec:orgb36b9c8}
+\begin{itemize}
+\item \cite{hlttdr} (I wrote Section 12.3)
+\item Maximize granularity to fully exploit CMS Particle Flow reconstruction
+\item fine lateral granularity for two-shower separation + narrow jets observation and minimize pileup contribution to energy measurement
+\item fine longitudinal granularity for electromagnetic energy resolution (H->gg for instance), pattern recognition and discrimination against pileup
+\item Fully utilise timing, firs time in calorimetry High-precision timing is considered one of very few options to mitigate pileup performance degradation \cite{wigmans2} resolutions of up to \SI{\sim 20}{\pico\second} \cite{calorimetry_fabjan}
+\begin{itemize}
+\item The elapsed time for an LHC bunch crossing has an rms spread of 170 picoseconds, which means that the 50–100 ps time resolution commonly achieved in the time-of-flight systems used for particle identification purposes is not adequate for solving this problem. One expects to need time resolutions of at least 20–30 ps to make a significant difference in this respect. A major complicating factor is that this performance has to be achieved in a very-high-rate environment.
+\end{itemize}
+\item Use information at trigger level
+\item The expected energy resolution for this device ranges from 19.9\%/√E for 300 μm silicon to 24.3\%/√E for 100 μm silicon. \cite{wigmans2}
+\item ``Cassettes'': multiple modules mounted on cooling plates with electronics and absorbers
+\item Important considerations for a calorimeter include
+\begin{itemize}
+\item Physics performance
+\item The cost
+\item The size, which may affect the cost of other components of the detector system
+\end{itemize}
+• The expected lifetime, in view of radiation and other environmental conditions
+\end{itemize}
 \subsubsection{Possible references}
-\label{sec:org0b8aabe}
+\label{sec:org6f2dde8}
 \begin{itemize}
 \item \cite{cms_offline_computing}
 \item \cite{hgcalTDR}
 \end{itemize}
 \subsection{The dataflow of HGCAL trigger primitives}
-\label{sec:org26bf1d9}
+\label{sec:org66b00c4}
+Ac\{HGCAL\} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} \cite{l1TDR}, which precedes the \ac{HLT} running on standard servers.
+\Ac{L1} performs an online selection of interesting physics processes, whose cross sections are typically orders of magnitude lower than the total proton-proton cross section.
+
+
+
 These proceedings describe the \ac{HGCAL} \ac{L1} reconstruction chain, from raw energy deposits to the creation of \acp{TP}, which are detector-specific inputs to the \ac{L1}.
 Special emphasis is placed on the study of cluster splitting, which represents a known and so far unstudied shortcoming of the \ac{TP} chain.
 The \ac{phi} in the transverse plane, the radial coordinate \(R\) and the \$z\$-axis lying parallel to the beam-line form the binned projective \coordsa{} coordinate system used in this work \cite{cms_collab}.
 Since \(\tan(\theta) = R/z\), where \(\theta\) is measured from the \$z\$-axis, for a constant angle \(\theta\) corresponds a constant \rz{}.
 Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
-The latter's scintillation light is read out by direct on-tile \ac{Si} photo-multipliers (\cref{fig:hgcal}). Stainless steel and \ch{Cu} are used as absorbers.
+The latter's scintillation light is read out by direct on-tile \ac{Si} photo-multipliers. Stainless steel and \ch{Cu} are used as absorbers.
 \ac{Si} sensors are available in three types with varying thicknesses (120, 200 and 300 \si{\micro\meter}), capacitances and sizes, to widthstand different radiation conditions according to their physical location.
 The size of each \ac{Si} sensor is \SI{0.52}{\cm\squared} (for \SI{120}{\micro\meter} \ac{Si} sensors) and \SI{1.18}{\cm\squared} (\qty{200} and \SI{300}{\micro\meter}).
 Scintillators range in size from \qtyrange{4}{30}{\cm\squared}, and the number of \ac{Si} (scintillator) channels is \num{\sim 6} million (\num{\sim 240} thousand).
@@ -1250,6 +1472,52 @@ In HGCAL, they consist of module towers and cluster-related variables, such as e
 It follows the principle of reducing data throughput as much and as soon as possible, exploiting pipelined algorithms whenever feasible.
 It must fit within a latency of \SI{\sim 5}{\micro\second}, taken from the total L1 \SI{12.5}{\micro\second} latency \cite{l1TDR}.
 It has to cope with power, cost, space and channel routing constraints \cite{jb_hdr}.
+
+\begin{figure}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/TCs_geometry.pdf}
+\caption{\label{fig:tcs_geometry}Schematic illustration of the three-fold diamond configuration of an hexagonal \SI{8}{\inch} module, used to associate single \ac{Si} sensors to groups of sensors used for triggering, or \acp{TC}. Low density modules (left) associate four sensors to each trigger cell, while high density modules create \acp{TC} with nine channels each. All modules have exactly \num{48} \acp{TC}. The actual physical dimensions of the \acp{TC} vary given the boundaries of the hexagonal modules. Taken from \cite{hgcalTDR}.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/l1chain.pdf}
+\end{center}
+\caption{\label{fig:l1chain}Simplified schematic of the dataflow of \acp{TP} in HGCAL, following the processing in a Si layer through the \ac{FE} and \ac{BE}, and up to the \ac{L1}, including expected approximate bandwidths. Trigger decisions at this stage will impact the \ac{HLT} and, consequently, physics analysis. Taken from \cite{bruno_chep23}}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.9\linewidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/stage2chain.pdf}
+\end{center}
+\caption{\label{fig:stage2chain}Schematic flowchart of S2’s reconstruction chain. TCs from S1 are unpacked and processed in a pipelined fashion up to the creation of cluster-related variables, which are fed to L1. The description of the steps can be found in the text. Taken from \cite{bruno_chep23}.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.9\linewidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/daq_system_overview.pdf}
+\end{center}
+\caption{\label{fig:daq_system_overview}Schematic flowchart of S2’s reconstruction chain. TCs from S1 are unpacked and processed in a pipelined fashion up to the creation of cluster-related variables, which are fed to L1. The description of the steps can be found in the text. Taken from \cite{bruno_chep23}.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/HGCROC_ECONT.pdf}
+\caption{\label{fig:hgcroc_econt}Taken from \cite{bruno_chep23}.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/econt_algorithms.pdf}
+\caption{\label{fig:econt_algorithms}Taken from \cite{bruno_chep23}.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/SimplifiedGeometry.pdf}
+\caption{\label{fig:econt_algorithms}Taken from \cite{bruno_chep23}.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1.\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/flowchart.pdf}
+\caption{\label{fig:econt_algorithms}Caption}
+\end{figure}
 
 In the \ac{FE}, trigger data processing is performed by \ac{HGCAL}'s dedicated read-out chips (\acp{HGCROC} \cite{hgcroc}) at \SI{300}{\tera\byte\per\second}, and by \ac{ECON-T} chips at \SI{90}{\tera\byte\per\second} \cite{econ,hgcalTDR}.
 The \ac{HGCROC} reduces the prohibitive data throughput by grouping 4 or 9 channels into \acp{TC}, where each \ac{Si} module comprises 48 \acp{TC}.
@@ -1318,7 +1586,7 @@ During my PhD I have implemented from scratch the entire \ac{S2} reconstruction 
 It was previously only available in \texttt{C++}, within CMSSW \cite{cmssw}.
 The code enables exponentially faster prototyping, testing and optimization, which are the basis of the following studies.
 \subsection{Development of a simplified HGCal geometry and event processing chain}
-\label{sec:org7d04a06}
+\label{sec:org95cab0d}
 \label{sec:event_geom_developments}
 
 I developed a unified set of \texttt{Python} classes from scratch to process HGCAL samples and produce a simplified version of the TC geometry, including both \ch{Si} and scintillator sections\footnote{See an example in \url{https://github.com/bfonta/bye_splits/pull/26}.}.
@@ -1328,9 +1596,8 @@ I have also learned how to deploy a web application with the 2D/3D visualization
 This is useful for information sharing and ease of access.
 The framework, including the reconstruction chain, is currently being used and actively developed by a small team at LLR, and serves as an essential ground for the work of two other PhD candidates and two younger students.
 This work has been presented at PyHEP 2023 \cite{bruno_pyhep23}.
-
 \subsection{Cluster splitting and possible solutions}
-\label{sec:org27bdb85}
+\label{sec:org80b19e3}
 \label{sec:cluster_splitting}
 
 The projective \coordsa{} bins do not have a fixed size in the cartesian \((x,y)\) plane.
@@ -1360,9 +1627,8 @@ With this sample, we observe cluster splits in \SI{\sim 1}{\percent} of the even
 \includegraphics[width=.495\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/split_smooth_after_mod.png}
 \caption{\label{fig:split}Example of a cluster split for a single event in the \coordsa{} space, where colors represent energy deposited per bin in \tmip{} units. The orange cross shows the position of the generated photon. The top (bottom) row shows the same event before (after) applying the smoothing step. The left (right) column displays the event not considering (considering) the \bsplits{} algorithm, where the red (black) crosses show the position of the reconstructed clusters. Generated and reconstructed clusters become superimposed after running \bsplits{}.}
 \end{figure}
-
 \subsubsection{Bye-splits iterative algorithm}
-\label{sec:org3910475}
+\label{sec:orgc7440db}
 Splits are overwhelmingly located in the high-\rapidity{} region, where bins are smaller in the cartesian space and \ac{TC} counts are less homogeneous along \azimuth{}.
 Indeed, while a \ac{TC} shift of one \azimuth{} bin may create a split, a \ac{TC} shifting one \si{\rz} bin is captured by the seeding window, creating no split.
 In addition, the number of \azimuth{} bins is larger, naturally increasing the odds of \ac{TC} counts non-uniformity.
@@ -1432,9 +1698,8 @@ This implies that \bsplits{} does not impact firmware resources, while bringing 
 It is thus a strong candidate for the final design of the reconstruction chain\footnote{Adapted versions of \bsplits{} are currently also being considered to address \ac{TC} assignment to \azimuth{} bins at the \ac{ECON-T}/\ac{S1} interface.}. 
 The algorithm was presented in \cite{bruno_chep23}.
 Alternative approaches were also looked at, all of which have an impact on resources but reducing cluster splitting dramatically: increasing the size of the seeding window, modifying the smoothing kernel and using the energy prioritization clustering algorithm.
-
 \subsubsection{Using detector coordinates}
-\label{sec:orgb947cce}
+\label{sec:orga18be99}
 \ac{HGCAL}'s geometry uses non-cartesian coordinates to cover the hexagonal tessellation of its \ch{Si} modules and sensors.
 Any mismatch between algorithmic and detector coordinates implies a non-trivial interface.
 Therefore, besides creating cluster splits, \coordsa{} bins increase the complexity of routing \acp{TC} to bins, which is further complicated by the \coordsa{} varying bin area.
@@ -1492,81 +1757,83 @@ Interestingly, we observe an almost complete removal of cluster splits, without 
 \includegraphics[width=.49\textwidth]{/home/bruno/org/PhD/Thesis/figures/hgcal/uv_multiplicity_eta.png}
 \caption{\label{fig:uv_dist}Energy response (left) and \(\phi\) resolution (right) for the \coordsa{} (blue) and \coordsb{} (orange) reconstruction chains. In green we display the same quantities obtained with all \acp{TC} (the position is weighted by \ac{TC} energy). \emph{Bottom)} Average number of seeds as a function of energy (left) and \(|\eta|\) (right). The CS chain naturally removes cluster splits.}
 \end{figure}
-
-
 \section{\reshhbbtt{}: Strategy definition}
-\label{sec:orgf8cddb7}
+\label{sec:org55acf68}
 \label{sec::bbtautau}
 \subsection{Data, MC and signal samples}
-\label{sec:orgba6981f}
-
+\label{sec:orgc0a0c05}
+<sec:samples>>
+\subsubsection{MC reweighting}
+\label{sec:org21833f2}
+Copy Alessandro
 \subsection{Triggers}
-\label{sec:orgb268c6e}
+\label{sec:org9d8e543}
 \subsubsection{Legacy triggers}
-\label{sec:org19046d9}
+\label{sec:orgdd13f70}
 \subsubsection{Additional triggers}
-\label{sec:org5319f7a}
+\label{sec:org720be00}
 \subsubsection{Analysis trigger regions}
-\label{sec:org1098b74}
+\label{sec:orgd37fe09}
 \subsubsection{Note on the inclusion method}
-\label{sec:org8327505}
+\label{sec:org961a9e2}
 \subsection{Physics objects}
-\label{sec:orgfef7f0a}
+\label{sec:org173c4db}
 \subsubsection{Electrons}
-\label{sec:org45d18e8}
+\label{sec:org24bf9d1}
 \subsubsection{Muons}
-\label{sec:org8f3e477}
+\label{sec:org0f4bf70}
 \subsubsection{Hadronic \(\tau\)'s}
-\label{sec:org53c890c}
+\label{sec:orgc1aa987}
 \subsubsection{Jets}
-\label{sec:orgd95f389}
+\label{sec:orgd3e4d16}
 \begin{enumerate}
 \item b-jets
-\label{sec:org04df8ea}
+\label{sec:orged8bbb0}
 \end{enumerate}
 \subsubsection{Missing transverse energy}
-\label{sec:orga23398c}
+\label{sec:org2654579}
 \subsection{Selection}
-\label{sec:orgf715f56}
+\label{sec:org6d9e0d6}
 \subsubsection{\(\tau \tau\) pair}
-\label{sec:org3476bd0}
+\label{sec:orgbbf2766}
 \subsubsection{bb pair}
-\label{sec:orgc6a8597}
+\label{sec:org553edee}
 \begin{enumerate}
 \item HH b-tagging network
-\label{sec:org4ae1ce4}
+\label{sec:orgdaf6efc}
 \end{enumerate}
 \subsection{Categorization}
-\label{sec:org350c51e}
+\label{sec:orgaae8baa}
+\label{sec:categorization}
 \subsubsection{Resolved jets}
-\label{sec:org5855a12}
+\label{sec:org38ce2a6}
 \subsubsection{Boosted jets}
-\label{sec:org3f0c3f5}
+\label{sec:org4264d77}
 \subsection{\(\tau \tau\) mass regression}
-\label{sec:org290f74c}
+\label{sec:org0df521e}
 \subsection{QCD background estimation}
-\label{sec:orgb7c0ee4}
+\label{sec:org2c991b7}
 \subsubsection{Validation}
-\label{sec:org5ebdd79}
+\label{sec:org9538d05}
 \begin{itemize}
 \item Varying the DeepTau working points used, thus modifying the C and D regions, and comparing the C/D ratio yield with the one obtained with the nominal C and D DeepTau working points.
 \item Define a sideband region by inverting the \(m_{\tau\tau}\) and \(m_{bb}\) mass cuts, and compare the QCD estimate with direct data-MC subtraction in the sideband
 \item It is also possible to define additional validation regions, one ``signal-like'' and the other ``background-like'' to mimic the transfer factor that will be applied to the signal regions
 \end{itemize}
 \subsection{Monte Carlo corrections}
-\label{sec:orga67b824}
+\label{sec:org002e1d5}
 \subsubsection{Pileup reweighting}
-\label{sec:orgd3c4944}
+\label{sec:org8829c64}
 \subsubsection{Pileup jet identification}
-\label{sec:org7949fe6}
+\label{sec:orgaf01b30}
 \subsubsection{Jet energy smearing}
-\label{sec:org4f72511}
+\label{sec:orgc898b20}
 \subsubsection{Legacy trigger scale factors}
-\label{sec:orgbfe789a}
+\label{sec:org04c0f6e}
 \subsubsection{Single tau trigger scale factors}
-\label{sec:org2f33b5b}
+\label{sec:org63466fc}
 \subsubsection{MET trigger scale factors}
-\label{sec:org852d869}
+\label{sec:org75a181e}
 \paragraph{MET trigger inefficiency in 2017}
 
 We can see that in 2017 the trigger does not becomes fully efficient for high \(\metnomu\) values.
@@ -1586,69 +1853,66 @@ Indeed, looking at the recomputed efficiency and SF plot in \cref{fig:eff_mumu_2
 \caption{\label{fig:eff_mumu_2017}\(\metnomu\) data and MC trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2017. The left (right) plot was obtained in the \mumu (\mutau{}) channel as described in the text. The \mumu{} channel is used for validation, while \mumu is used to extract the analysis \acp{SF}. \acp{SF} are extracted from the ratio of the data and MC sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for \(\metnomu\) values above \SI{350}{\GeV}.}
 \end{figure}
 \subsubsection{DeepTau scale factors for hadronic \(\tau\)'s}
-\label{sec:org95a14e1}
+\label{sec:orgd8f033f}
 \subsubsection{Lepton scale factors}
-\label{sec:org3edbb10}
-
+\label{sec:org92be5cf}
 \subsection{Control regions}
-\label{sec:org028cc66}
+\label{sec:org98a602c}
 As we can see in @insert figure reference@ for the \ac{DY} \ac{CR}, the data/MC agreement improves significantly when requiring a strong b-tag identification \ac{WP}.
 This is due to bad modelization of the light jets coming with the \ac{DY} simulation, which has also been observed in the nonresonant \bbtt{} analysis \cite{higgs_bbtautau_nonres}.
 Ultimately, the categories which matter are the ones being fitted, here the one where the \texttt{DeepJet} requirement is applied.
-
-
 \section{\reshhbbtt{}: Limit extraction}
-\label{sec:orgccec1ff}
+\label{sec:orgc3ebd4c}
 \subsection{Signal discrimination from background}
-\label{sec:org6bc9375}
+\label{sec:org01807ab}
 \subsection{Systematic uncertainties}
-\label{sec:orge521a2f}
+\label{sec:orgb7ce063}
 \subsubsection{Normalization uncertainties}
-\label{sec:orgce5950d}
+\label{sec:orgdc03715}
 \begin{enumerate}
 \item Luminosity
-\label{sec:org4c98e9c}
+\label{sec:org63eb2a0}
 \item Electrons and muon isolation and identificaton efficiencies
-\label{sec:org1727312}
+\label{sec:org8d4dce5}
 \item L1 prefiring
-\label{sec:orgf029d1e}
+\label{sec:org2d5343c}
 \item Pile-up reweighting uncertainty
-\label{sec:orgd0d6967}
+\label{sec:orgdfeb18d}
 \item QCD estimation uncertainty
-\label{sec:org93f4d4d}
+\label{sec:org0d85a02}
 \item Theoretical HH cross-section
-\label{sec:org1064d46}
+\label{sec:org519bc04}
 \item Final state branching fraction
-\label{sec:org2e2ace9}
+\label{sec:orga606417}
 \item Cross-sections of simulated processes
-\label{sec:orgc2a35b5}
+\label{sec:orgf6585ef}
 \end{enumerate}
 \subsubsection{Shape uncertainties}
-\label{sec:orgcf9d32b}
+\label{sec:org360a2d1}
 \begin{enumerate}
 \item Hadronic \(\tau\)'s energy scale
-\label{sec:orgd030528}
+\label{sec:org0ed0b90}
 \item Energy scale corrections for electrons and muons faking taus
-\label{sec:org8ddd14d}
+\label{sec:org295902f}
 \item Jet energy scale
-\label{sec:orge3b3ed8}
+\label{sec:orga251ef3}
 \item Jet energy resolution
-\label{sec:org1f93e43}
+\label{sec:org16ba0c7}
 \item Scale factors for tau identification with DeepTau
-\label{sec:org32136b2}
+\label{sec:org11eec3e}
 \item Legacy trigger scale factors
-\label{sec:org0772b32}
+\label{sec:org70c02d8}
 \item Additional trigger scale factors
-\label{sec:org8721ea6}
+\label{sec:orgcf3866b}
 \item B-taggging scale factors
-\label{sec:orgb1f6700}
+\label{sec:org1f30fa7}
 \item Scale factors for pile-up jet identification
-\label{sec:org5efaf66}
+\label{sec:orge18192a}
 \end{enumerate}
 \subsection{Statistical treatment}
-\label{sec:orgdcc534d}
+\label{sec:orgca81a01}
 \subsubsection{Hypothesis testing with the modified frequentist approach}
-\label{sec:orge7081ee}
+\label{sec:orgca0ca98}
 In statistics, the term \emph{hypothesis} indicates a given set of predicted probabilities, against which one compares observed data.
 The hypothesis generally assumed as true is traditionally called the \emph{null hypothesis}, or \(H_{0}\), while the hypothesis we are comparing with the null are dubbed \emph{alternative}, or \(H_{1}\), \(H_{2}\), \(H_{3}\), \ldots{}
 Hypothesis denote \acp{PDF2} \(f\) which depend on the data measured \(x = (x_1,x_2,x_3,...)\) and eventually on free parameters \(\theta = (\theta_1,\theta_2,\theta_3,...)\) which are in turn estimated from data.
@@ -1674,15 +1938,15 @@ When
 
 \cite{glen_cowan}
 \subsubsection{The maximum likelihood method}
-\label{sec:orgdc8517e}
+\label{sec:org41b5a66}
 \subsection{Results}
-\label{sec:org1f52be5}
+\label{sec:orgb864d16}
 \subsubsection{Final limits}
-\label{sec:org1d9e24d}
+\label{sec:orgadbb0a4}
 \subsubsection{Comparison with other resonant \bbtt{} results}
-\label{sec:orged2088e}
+\label{sec:org63be340}
 \subsection{Future prospects for resonant and non-resonant HH searches}
-\label{sec:org7145f11}
+\label{sec:org1971e62}
 \label{sec::future}
 
 The near future promises further constraints on \(\kl\) and on \ac{EFT} couplings in the context of nonresonant HH searches.
@@ -1701,38 +1965,34 @@ New triggers will benefit \bbtt{} analysis with the added 4j+2b and 4j+1b+1\tauh
 The inclusion of \ac{PNet} \(\tau\)-tagging at trigger level is being envisaged, and might be done still during Run3.
 We also expect that some HH analysis might benefit from the inclusion of synthetic datasets, as discussed in \cref{sec:hemisphere_mixing}.
 The first \ac{CMS} Run3 HH results will soon be available.
-
 \subsubsection{Run3}
-\label{sec:org09c9a12}
+\label{sec:orgfee008a}
 \begin{itemize}
 \item mention \reshybbtt{} analysis
 \end{itemize}
 \subsubsection{HL-LHC}
-\label{sec:org8a158e6}
+\label{sec:orga9e3032}
 \begin{itemize}
 \item mention \reshybbtt{} analysis
 \end{itemize}
 \subsubsection{Future accelerators}
-\label{sec:org722b6be}
+\label{sec:org9d062ce}
 \begin{itemize}
 \item mention \reshybbtt{} analysis
 \end{itemize}
-
 \section{Effects of finite width and interference in resonant HH production}
-\label{sec:org2681502}
+\label{sec:org1207050}
 \subsection{The Singlet Model}
-\label{sec:org74f648e}
+\label{sec:org9af38a8}
 \label{sec::SingletModel}
 
 This is the singlet model \cite{jona_soutenance} and \cite{hgcal_tdr}.
 \subsection{Methodology}
-\label{sec:org6294005}
+\label{sec:org83e257e}
 \subsection{Results}
-\label{sec:orgd4a24f3}
-
-
+\label{sec:org0646b54}
 \section{Conclusions}
-\label{sec:org2a3a05d}
+\label{sec:org7a01b31}
 After the discovery of the Higgs boson particle, the first ten years of experimental measurements of this particle and searches for
 other such scalar particles has revolutionized the field of particle physics.
 Regardless of theory, the Higgs boson remains a singular particle that exhibits couplings to both fermions and bosons as long as they have mass.
@@ -1749,19 +2009,15 @@ alternatives to the Standard Model.
 Experimentalists and theorists alike stand ready to take on the challenge.
 They only require the resources to produce large numbers of Higgs bosons, detect them, and analyze and interpret those data.
 \cite{andre_david_higgs_ten_years}
-
 \section{Appendix}
-\label{sec:org3713412}
+\label{sec:orgef05834}
 \subsection{General control distributions}
-\label{sec:orgbba3919}
+\label{sec:org518a33e}
 \subsection{MET SF control distributions}
-\label{sec:org9522d91}
-
-
+\label{sec:orgf06a326}
 \section{List of acronyms}
-\label{sec:org55a88e7}
+\label{sec:org12cd39c}
 \input{acro_list}
-
 \bibliographystyle{unsrt}
 \bibliography{../../../dot-emacs/bibliography/references/higgs,../../../dot-emacs/bibliography/references/l1,../../../dot-emacs/bibliography/references/mc_generation,../../../dot-emacs/bibliography/references/pure_software,../../../dot-emacs/bibliography/references/physics,../../../dot-emacs/bibliography/references/detector}
 \end{document}

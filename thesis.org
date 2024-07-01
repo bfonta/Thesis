@@ -105,6 +105,7 @@
 * \reshhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/intro/bbtt_analysis.org"
 ** Data, MC and signal samples
+#+INCLUDE: "chapters/analysis1/samples.org"
 
 ** Triggers
 *** Legacy triggers
@@ -123,6 +124,7 @@
 *** bb pair
 **** HH b-tagging network
 ** Categorization
+#+INCLUDE: "chapters/analysis1/categorization.org"
 *** Resolved jets
 *** Boosted jets
 ** \tau\tau mass regression

@@ -43,6 +43,14 @@ F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}
 | $\sigma_z$            | bunches transverse r.m.s at IP   | \SI{7.55}{\cm}         |
 | $\sigma_{xy}$         | bunches longitudinal r.m.s at IP | \SI{16.7}{\micro\meter}     |
 
+Goal for Run 3 is to approx. double the luminosity for ATLAS and CMS
+
+#+NAME: fig:econt_algorithms
+#+CAPTION:  Representation of the CERN accelerator complex. The LHC is the last ring (dark blue line) in a complex chain of particle accelerators. The smaller machines are used in sequence to accelerate the proton beams that collide in the centre of the four main detectors. Taken from [[cite:&lhc_complex]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/CERNaccelerators.pdf]]
+#+END_figure
 
 * Alessandro :noexport:
 The LHC \cite{Evans:2008zzb} is one of the several accelerators currently in operation at CERN. The CERN accelerator complex, illustrated in Fig.~\ref{ch2:fig:acc}, constitutes a sophisticated acceleration chain, where each machine sequentially boosts a beam of particles to a specific energy before transferring it to the subsequent machine in the chain. The life of proton beams for the LHC starts from a bottle of hydrogen gas, serving as a source of negative hydrogen ions. The initial step in the accelerator chain is the Linac4, responsible for accelerating the ions up to 160 MeV before entering the PS Booster. The ions undergo a stripping process during injection from the Linac4 into the PS Booster, leaving only the desired protons. Then, the PS Booster further accelerates these protons to an energy of 2 GeV. The protons advance along their path to the PS, where their energy increases to 26 GeV. The SPS accomplishes the final acceleration stage, which operates at up to 450 GeV. Ultimately, the beams are injected into the LHC, where they reach their final operational energy. The reason for having an acceleration chain, instead of directly injecting protons into the LHC and accelerating them to the desired energy, is driven by engineering and practical limitations. Once the proton beams attain the desired energy inside the LHC, they are ready for collisions in correspondence with the \textit{Fab Four}. Four experiments are located along the LHC circumference: ATLAS, ALICE, CMS, and LHCb. ATLAS and CMS are the two multi-purpose experiments with a broad physics programme, while LHCb and ALICE are more specialised in flavour physics and heavy-ion physics, respectively.

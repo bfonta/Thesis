@@ -72,6 +72,8 @@
 #+LATEX_HEADER: \newcommand{\mumu}{$\tau_{\mu}\tau_{\text{h}}$}
 #+LATEX_HEADER: \newcommand{\eleele}{$\tau_{\mu}\tau_{\text{h}}$}
 #+LATEX_HEADER: \newcommand{\elemu}{$\tau_{\mu}\tau_{\text{h}}$}
+#+LATEX_HEADER: \newcommand{\rescat}[1]{\textbf{res#1b}}
+#+LATEX_HEADER: \newcommand{\boostcat}{\textbf{boosted}}
 
 # Particles
 #+LATEX_HEADER: \newcommand{\jpsi}{$J/\psi$}

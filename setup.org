@@ -29,4 +29,5 @@
 #+LATEX_HEADER: \DeclareSIUnit \nucintl {\lambda_0}
 #+LATEX_HEADER: \DeclareSIUnit \bit {b}
 #+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}}
-#+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}}
+#+LATEX_HEADER: \DeclareSIUnit \inch {inch}
+#+LATEX_HEADER: \sisetup{range-phrase = \text{--}}

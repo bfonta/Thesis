@@ -1,20 +1,27 @@
 <<sec:hllhc>>
 
-The so-called \ac{LHC} Phase-1 has been running since 2011, spanning three independent data runs, the last of which, Run 3, is currently approaching its end of life, at the end of 2025.
-Phase-2 will soon follow, incorporating the brand new \ac{HL-LHC}, which will start taking data in 2029, extending \ac{HEP} studies well into the future (see ref:fig:hllhc) [[cite:&hllhc]].
-
-The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SIrange{\sim5e34}{7.5e34}{\per\cm\squared\per\second}.
+The first phase of the \ac{LHC} has been running since 2010, spanning three independent data runs, the last of which, Run 3, is currently approaching its end of life, in the last quarter of 2025.
+Phase-2 will soon follow, incorporating the brand new \ac{HL-LHC}, which will start taking data in 2029, extending \ac{HEP} studies well into the future (see ref:fig:hllhc) [[cite:&hllhc_evolution_paper1;&hllhc_evolution_paper2]].
+The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SIrange{\sim5e34}{7.5e34}{\per\cm\squared\per\second} [[cite:&hllhc]].
 This is more than twice the \ac{LHC}’s current value.
 These conditions correspond, in the ultimate HL-LHC configuration, to a \ac{PU} of up to 200, a fluence of up to \SI{1e16}{\nequiv\per\cm\squared}, and a \ac{TID} reaching \SI{2}{\mega\gray}.
 For comparison, the \ac{LHC} currently brings \num{\sim 50} \ac{PU} interactions on average [[cite:&pileup_twiki]], a dose of the order of \SI{1e5}{\gray} and a fluence of \SI{\sim 1e15}{\nequiv\per\cm\squared} [[cite:&lhc_fluences]] (see [[ref:sec:lhc_design]]).
-An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of 10 years [[cite:&hllhc]], while current \ac{CMS} endcap calorimeters are designed to sustain a more modest value of up to \SI{500}{\per\femto\barn}.
+An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of around 10 years [[cite:&hllhc]], while current \ac{CMS} endcap calorimeters are designed to sustain a more modest value of up to \SI{500}{\per\femto\barn}.
 
 #+ATTR_LATEX: :width 1.\textwidth
 #+CAPTION: The \ac{HL-LHC} project timeline. Run3 is currently on-going, and the \ac{HL-LHC} will start collecting data in 2029, following three years of \ac{LHC} shutdown for detector upgrades.
 #+NAME: fig:hllhc
 [[~/org/PhD/Thesis/figures/hgcal/hllhc.pdf]]
 
-A dramatic performance degradation is foreseeable for higher luminosities.
+The operational scenario of the \ac{HL-LHC} is continuosly evolving, with some uncertainties still present.
+Given past delays and current unknowns, it is still soon to definitely confirm current operational plans.
+
+#+NAME: fig:lumi_plans_hllhc
+#+CAPTION: Planned peak and integrated luminosities during the \ac{HL-LHC}. Three data-taking runs are foreseen, interspersed by three \acp{LS}. Two scenarios with different \ac{YETS} durations are shown, where shorter stops have the potential for significant integrated luminosity increases. The schedule was last updated in January 2022. Taken from [[cite:&hllhc_evolution_paper2]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/lhc/lumi_evolution_hllhc.pdf]]
+#+END_figure
 
 
 * Lumi measurements can improve due to :noexport:
@@ -23,12 +30,13 @@ A dramatic performance degradation is foreseeable for higher luminosities.
 + Advanced, multiple and redundant VdM scans and refined VdM analysis techniques can lead to substantial improvements.
 + Novel techniques, such as the measurement of fiducial Z boson production rates exploiting in-situ efficiency determination, provide handles for advancement of the integrated luminosity uncertainty towards the 1% target
 
-* ToDo [1/3] :noexport:
-+ [ ] discuss new physics that the hllhc will allow
+* ToDo [0/2] :noexport:
++ [ ] briefly mention FCC? https://fccis.web.cern.ch/conceptual-design-report-volumes
 + [ ] technological challenges: "Among these are cutting-edge 11–12 Tesla superconducting magnets, compact
 superconducting cavities for beam rotation with ultra-precise phase control, new technology and physical
 processes for beam collimation and 100 metre-long high-power superconducting links with negligible energy
 dissipation, all of which required several years of dedicated R&D effort on a global international level." [[cite:&hllhc]]
+
 
 * Jona :noexport:
 The High-Luminosity LHC (HL-LHC) is scheduled to start in 2029, and it will constitute the Phase-2 of the LHC operations. It is designed to operate at a centre-of-mass energy of $14\TeV$ while delivering an instantaneous luminosity in the range of $5-7.5\cdot10^{34}\cm^{-2}\unit{s}^{-1}$. These conditions correspond, in the ultimate HL-LHC configuration, to a number of simultaneous collisions per bunch crossing of $\mathcal{O}(200)$, a fluence of up to $10^{16}\text{n}_{\text{eq}}\cm^{-2}$, and a dose reaching $2\unit{MGy}$. In these unprecedented running conditions, a remarkable integrated luminosity of $4000\fbinv$ is expected to be collected over the anticipated ten years of data-taking.

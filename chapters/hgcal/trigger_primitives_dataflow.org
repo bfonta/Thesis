@@ -1,9 +1,15 @@
+
+Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on standard servers.
+\Ac{L1} performs an online selection of interesting physics processes, whose cross sections are typically orders of magnitude lower than the total proton-proton cross section.
+
+
+
 These proceedings describe the \ac{HGCAL} \ac{L1} reconstruction chain, from raw energy deposits to the creation of \acp{TP}, which are detector-specific inputs to the \ac{L1}.
 Special emphasis is placed on the study of cluster splitting, which represents a known and so far unstudied shortcoming of the \ac{TP} chain.
 The \ac{phi} in the transverse plane, the radial coordinate $R$ and the $z$-axis lying parallel to the beam-line form the binned projective \coordsa{} coordinate system used in this work [[cite:&cms_collab]].
 Since $\tan(\theta) = R/z$, where $\theta$ is measured from the $z$-axis, for a constant angle $\theta$ corresponds a constant \rz{}.
 Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
-The latter's scintillation light is read out by direct on-tile \ac{Si} photo-multipliers (\cref{fig:hgcal}). Stainless steel and \ch{Cu} are used as absorbers.
+The latter's scintillation light is read out by direct on-tile \ac{Si} photo-multipliers. Stainless steel and \ch{Cu} are used as absorbers.
 \ac{Si} sensors are available in three types with varying thicknesses (120, 200 and 300 \si{\micro\meter}), capacitances and sizes, to widthstand different radiation conditions according to their physical location.
 The size of each \ac{Si} sensor is \SI{0.52}{\cm\squared} (for \SI{120}{\micro\meter} \ac{Si} sensors) and \SI{1.18}{\cm\squared} (\qty{200} and \SI{300}{\micro\meter}).
 Scintillators range in size from \qtyrange{4}{30}{\cm\squared}, and the number of \ac{Si} (scintillator) channels is \num{\sim 6} million (\num{\sim 240} thousand).
@@ -17,6 +23,62 @@ In HGCAL, they consist of module towers and cluster-related variables, such as e
 It follows the principle of reducing data throughput as much and as soon as possible, exploiting pipelined algorithms whenever feasible.
 It must fit within a latency of \SI{\sim 5}{\micro\second}, taken from the total L1 \SI{12.5}{\micro\second} latency [[cite:&l1TDR]].
 It has to cope with power, cost, space and channel routing constraints [[cite:&jb_hdr]].
+
+#+NAME: fig:tcs_geometry
+#+CAPTION: Schematic illustration of the three-fold diamond configuration of an hexagonal \SI{8}{\inch} module, used to associate single \ac{Si} sensors to groups of sensors used for triggering, or \acp{TC}. Low density modules (left) associate four sensors to each trigger cell, while high density modules create \acp{TC} with nine channels each. All modules have exactly \num{48} \acp{TC}. The actual physical dimensions of the \acp{TC} vary given the boundaries of the hexagonal modules. Taken from [[cite:&hgcalTDR]]. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/TCs_geometry.pdf]]
+#+END_figure
+
+#+NAME: fig:l1chain
+#+CAPTION: Simplified schematic of the dataflow of \acp{TP} in HGCAL, following the processing in a Si layer through the \ac{FE} and \ac{BE}, and up to the \ac{L1}, including expected approximate bandwidths. Trigger decisions at this stage will impact the \ac{HLT} and, consequently, physics analysis. Taken from [[cite:&bruno_chep23]]
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/hgcal/l1chain.pdf]]
+#+END_figure
+
+#+NAME: fig:stage2chain
+#+ATTR_LATEX: :width 1.\textwidth
+#+CAPTION: Schematic flowchart of S2’s reconstruction chain. TCs from S1 are unpacked and processed in a pipelined fashion up to the creation of cluster-related variables, which are fed to L1. The description of the steps can be found in the text. Taken from [[cite:&bruno_chep23]].
+#+BEGIN_figure
+[[~/org/PhD/Thesis/figures/hgcal/stage2chain.pdf]]
+#+END_figure
+
+#+NAME: fig:daq_system_overview
+#+ATTR_LATEX: :width 1.\textwidth
+#+CAPTION: Schematic flowchart of S2’s reconstruction chain. TCs from S1 are unpacked and processed in a pipelined fashion up to the creation of cluster-related variables, which are fed to L1. The description of the steps can be found in the text. Taken from [[cite:&bruno_chep23]].
+#+BEGIN_figure
+[[~/org/PhD/Thesis/figures/hgcal/daq_system_overview.pdf]]
+#+END_figure
+
+#+NAME: fig:hgcroc_econt
+#+CAPTION: Taken from [[cite:&bruno_chep23]]. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/HGCROC_ECONT.pdf]]
+#+END_figure
+
+#+NAME: fig:econt_algorithms
+#+CAPTION: Taken from [[cite:&bruno_chep23]]. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/econt_algorithms.pdf]]
+#+END_figure
+
+#+NAME: fig:econt_algorithms
+#+CAPTION: Taken from [[cite:&bruno_chep23]]. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/SimplifiedGeometry.pdf]]
+#+END_figure
+
+#+NAME: fig:econt_algorithms
+#+CAPTION: Caption 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/flowchart.pdf]]
+#+END_figure
 
 In the \ac{FE}, trigger data processing is performed by \ac{HGCAL}'s dedicated read-out chips (\acp{HGCROC} [[cite:&hgcroc]]) at \SI{300}{\tera\byte\per\second}, and by \ac{ECON-T} chips at \SI{90}{\tera\byte\per\second} [[cite:&econ;&hgcalTDR]].
 The \ac{HGCROC} reduces the prohibitive data throughput by grouping 4 or 9 channels into \acp{TC}, where each \ac{Si} module comprises 48 \acp{TC}.
