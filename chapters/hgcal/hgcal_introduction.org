@@ -33,15 +33,16 @@ The sensors are arranged within \SI{8}{\inch} hexagonal \ac{Si} modules, which a
 [[~/org/PhD/Thesis/figures/hgcal/HGCALSideView.pdf]]
 #+END_figure
 
-#+NAME: fig:dose_abosrbed_hgcal
-#+CAPTION: Distribution of the absorbed dose over the \ac{CMS} detector after an integrated luminosity of \SI{3}{\atto\barn}. Used \ac{CMS} =FLUKA= geometry, version 3.7.0.0. Taken from [[cite:&hgcalTDR]].
+#+NAME: fig:dose_fluence_hgcal
+#+CAPTION: $R$ vs. $z$ projection of the distribution of the absorbed dose in \si{\gray} (top) and fluence in \si{\nequiv} (bottom) for one endcap of the \ac{HGCAL} and half the tracker, after an exposure to \SI{4}{\invab}. Produced with the \ac{BRIL} "Simulation Plotting Tool" [[cite:&bril_tool]]  with \ac{CMS} =FLUKA= geometry, version 3.7.0.0.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth
 [[~/org/PhD/Thesis/figures/hgcal/DoseAbsorbedHGCAL.pdf]]
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/hgcal/FluenceHGCAL.pdf]]
 #+END_figure
 
-
-The extremely high granulairty will enable particle identification and high resolution measurements of the position, energy and time of high-energy collision products.
+The extremely high granularity will enable particle identification and high resolution measurements of the position, energy and time of high-energy collision products.
 The granularity is such that \ac{HGCAL} will be the first calorimeter ever able to perform tracking.
 The high segmentation also enables the precise measurement of narrow and merged jets, and of \ac{PU} energy, for instance.
 
@@ -117,7 +118,7 @@ To avoid the deterioration of the crucial (and expensive) \ac{Si} sensors, the \
 | Expected fluences [$\times10^{15}$ \unit{\nequiv\per\cm\squared}] | \numrange{2}{7} | \numrange{0.5}{2.5} | \numrange{0.1}{0.5} |
 
 #+NAME: fig:hgcal_3d_view
-#+CAPTION: Schmetic 3D view of one endcap of the \ac{HGCAL}. Different detector structural layers can be seen, such as the \ac{CE-E} and \ac{CE-H} calorimeters, the \ac{ETL} located just in front of the \ac{CE-E}, and some sections required for structural reasons. The \ac{PM}, or neutron moderator, reduces the number of neutron coming from the tracker. The two dashed lines give a rough idea on the location of one pair of cooling supply and return tubes, which are connected to the layers, and are placed every \SI{30}{\celsius}. The picture on the right provides a side view of the same endcap. Adapted from [[cite:&hgcalTDR]].
+#+CAPTION: Schematic 3D view of one endcap of the \ac{HGCAL}. Different subdetectors can be seen, such as the \ac{CE-E}, the \ac{CE-H} and the \ac{ETL}. Other sections are required for structural reasons, as for instance the brackets, on the right-most region of the right plot, which are meant to attach the \ac{HGCAL} to the muon chambers. The \ac{PM}, or neutron moderator, placed just in front of the \ac{CE-E}, reduces the number of neutron coming from the tracker. The two dashed lines give a rough idea on the location of one pair of cooling supply and return tubes, which are connected to the layers, and are placed every \SI{30}{\celsius}. The picture on the right provides a side view of the same endcap. Adapted from [[cite:&hgcalTDR]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/HGCAL3DView.pdf]]
