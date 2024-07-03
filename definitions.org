@@ -62,6 +62,7 @@
 
 # Text
 #+LATEX_HEADER: \newcommand{\run}[1]{Run-#1}
+#+LATEX_HEADER: \newcommand{\phase}[1]{Phase-#1}
 #+LATEX_HEADER: \newcommand{\down}[1]{\textsubscript{#1}}
 #+LATEX_HEADER: \newcommand{\up}[1]{\textsuperscript{#1}}
 #+LATEX_HEADER: \newcommand{\logicor}[1]{\texttt{logical~OR}}

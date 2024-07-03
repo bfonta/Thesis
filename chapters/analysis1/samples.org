@@ -1,4 +1,7 @@
-<sec:samples>>
+<<sec:samples>>
 
 * MC reweighting
 Copy Alessandro
+
+* Additonal bibliography
++ maybe useful with some object definition [[cite:&signal_processing]]

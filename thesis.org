@@ -109,6 +109,7 @@
 
 ** Triggers
 *** Legacy triggers
+#+INCLUDE: "chapters/analysis1/legacy_triggers.org"
 *** Additional triggers
 *** Analysis trigger regions
 *** Note on the inclusion method

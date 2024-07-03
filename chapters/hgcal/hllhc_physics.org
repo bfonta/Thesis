@@ -49,8 +49,8 @@ $t\bar{t}t\bar{t}$ can be used to constrain some of the Wilson coefficients asso
 
 \paragraph{Forward physics}
 
-Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and \ac{AFP} [[cite:&afp_tdr]] detectors are extended in the \ac{HL-LHC} phase, \ac{CEP} $pp \rightarrow p\,(\gamma\gamma\rightarrow X)\,p$ phenomena, among which light-by-light scattering ($X = \gamma\gamma$), will be further explored \ac{CEP}.
-Other processes include, for instance, $X = \mu\mu,\,\tau\tau,\,Z,\,H,\,WW,\,ZZ$, and enable the study of anomalous gauge couplings and the magnetic moment of the $\tau$, among other studies [[cite:&ctpps_varela;&ctpps_pitt]].
+Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the \ac{AFP} [[cite:&afp_tdr]] are extended in the \ac{HL-LHC} phase, \ac{CEP} $pp \rightarrow p\,(\gamma\gamma\rightarrow \text{X})\,p$ phenomena, among which light-by-light scattering ($\text{X} = \gamma\gamma$), will be further explored \ac{CEP}.
+Other processes include, for instance, $\text{X} = \mu\mu,\,\tau\tau,\,Z,\,H,\,WW,\,ZZ$, and enable the study of anomalous gauge couplings and the magnetic moment of the $\tau$, among other studies [[cite:&ctpps_varela;&ctpps_pitt]].
 \ac{CEP} processes carry particular interest since they bring production of charged particles initiated only by photons, into what amounts to using the \ac{LHC} as a $\gamma\gamma$ collider.
 In parallel, a whole plethora of \ac{QCD}-related measurements can be performed in \acp{CEP}.
 The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross-sections, increasing their discovery potential.
@@ -58,15 +58,14 @@ The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross-se
 
 \paragraph{Higgs boson pairs}
 
-ref:fig:hh_nonres_projections allows the comparison of early \run{2} results with current full \run{2} upper cross-section limits.
+ref:fig:hh_nonres_projections allows the comparison of early HH \run{2} results with current full \run{2} upper cross-section limits.
 An improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
-The improvement over the luminosity baseline is due to improvements which span multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels, made possible by the gradual increase in available number of events.
+The improvement over the luminosity baseline is due to multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels, made possible by the gradual increase in available number of events.
 
-@150 Million Higgs and 120k HH@
-One hundred thousand Higgs boson pairs are expected to be produced during the \ac{HL-LHC} phase.
+\num{150} million Higgs bosons and \num{120} thousand Higgs boson pairs are expected to be produced during the \ac{HL-LHC} phase.
 This will enable the most precise measurement of the triple and quartic Higgs couplings ever, with the possibility of observing the former for the first time, most likely after combining \ac{CMS} and \ac{ATLAS} datasets.
 The precision of \ac{EFT} couplings will also benefit from the increased number of events.
-The sensitivity will in general benefit from the extension of the phase-space, which adds relevance to yet unexplored HH production modes and decay channels, to be added to future multi-channel combinations [[cite:&higgs_10_years]].
+The sensitivity will in general take advantage from the extension of the phase-space, which adds relevance to yet unexplored HH production modes and decay channels, to be added to future multi-channel combinations [[cite:&higgs_10_years]].
 At present, none of the analyses used to search for the production of Higgs boson pairs is statistically limited [[cite:&andre_david_higgs_ten_years]].
 However, \ac{ggF} theory uncertainties might soon become important.
 

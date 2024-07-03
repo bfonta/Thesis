@@ -10,6 +10,12 @@
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{margin=1in}
 
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \newcommand{\specialterms}[1]{\@for\next:=#1\do {\@namedef{specialterm@\detokenize\expandafter{\next}}{}}}
+#+LATEX_HEADER: \newcommand\term[1]{\@ifundefined{specialterm@\detokenize{#1}}{#1}{\emph{#1}\global\expandafter\let\csname specialterm@\detokenize{#1}\endcsname\relax}}
+#+LATEX_HEADER: \makeatother
+#+LATEX_HEADER: \specialterms{foo}
+
 #+LATEX_HEADER: \usepackage[nohyperlinks,printonlyused]{acronym}
 
 #+LATEX_HEADER: \usepackage{cleveref}
@@ -19,6 +25,8 @@
 #+LATEX_HEADER: \Crefname{equation}{Eq.}{Eqs.}
 #+LATEX_HEADER: \crefname{table}{Table}{Tables}
 #+LATEX_HEADER: \Crefname{table}{Table}{Tables}
+#+LATEX_HEADER: \crefname{section}{Section}{Sections}
+#+LATEX_HEADER: \Crefname{section}{Section}{Sections}
 
 #+LATEX_HEADER: \DeclareSIUnit \rap {\eta}
 #+LATEX_HEADER: \DeclareSIUnit \azi {\phi}
@@ -29,6 +37,6 @@
 #+LATEX_HEADER: \DeclareSIUnit \radl {X_0}
 #+LATEX_HEADER: \DeclareSIUnit \nucintl {\lambda_0}
 #+LATEX_HEADER: \DeclareSIUnit \bit {b}
-#+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}}
-#+LATEX_HEADER: \DeclareSIUnit \inch {inch}
+#+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}/cm^2}
+#+LATEX_HEADER: \DeclareSIUnit \inch {''}
 #+LATEX_HEADER: \sisetup{range-phrase = \text{--}}

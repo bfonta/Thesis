@@ -1,5 +1,8 @@
 <<sec:hllhc_detector_upgrades>>
 
+\paragraph{ATLAS}
+In preparation for the increased LHC luminosities foreseen for the future, ATLAS will replace the ASICs5 that handle the calorimeter signals by more radiation hard ones. [[cite:&wigmans_new_developments]]
+ 
 \paragraph{\ac{LHCb}}
 
 mention VELO
@@ -12,7 +15,13 @@ mention VELO
 
 \paragraph{ALICE}
 
+\paragraph{CMS}
+List all subdetector upgrades in \ac{CMS}.
 
++ =MTD= [[cite:&mtd_tdr;&mtd_timing_plot]]
++ ...
++ =HGCAL= is detailed in the next section
+  
 * Additional bibliography :noexport:
 + Velo: https://www.youtube.com/watch?v=hsLXi9QTxUo
 + https://indico.cern.ch/event/1418024/contributions/5960937/attachments/2883360/5052485/JM%20CMS%20Jun%202024.pdf

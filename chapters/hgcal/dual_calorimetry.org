@@ -40,3 +40,5 @@
 + [[https://indico.cern.ch/event/1423661/][CERN Seminar]] (Friday 7 June 2024)
 + Dual calorimetry in future colliders: https://ar5iv.labs.arxiv.org/html/2204.00098
 + [[https://cds.cern.ch/record/1563671/files/arXiv:1307.5538.pdf][RD52]]
++ [[cite:&wigmans_dual_readout]]
+  
