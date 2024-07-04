@@ -1,0 +1,68 @@
+<<sec:cms_trigger_system.org>>
+
+With proton beams crossing every \SI{25}{\nano\second}, and considering the average \ac{PU} measured during \phase{1}, around \num{1e9} $pp$ interactions are expected every second.
+Given a \SI{\sim 1}{\mega\byte} per zero-supressed event, a \SI{\sim 40}{\tera\byte\per\second} throughput would follow.
+Meanwhile, the maximum rate which can be realistically archived by the \ac{CMS} online computer farm sits at \SI{\sim 100}{\kilo\hertz}.
+This implies a necessary throughput reduction by a factor of \num{1e7}.
+
+
+
+two steps: all data is stored for 3.2 μs, equivalent to 128 beam crossings, or any primary decision to discard data from a particular beam crossing.
+All processing is based on custom electronics, after which no more than 100 kHz of the stored events are forwarded to the High Level Trigger, which relies on custom processors.
+
+both the collision and the overall data rates are much higher than the rate at which one can
+write data to mass storage
+[[cite:&trigger_tdr_phase1_vol1;&trigger_tdr_phase1_vol2]]
+
+With a proton-proton interaction rate of about 40 MHz, the CMS detector produces a large amount of data that should be stored for offline analyses.
+This leads to an overwhelming volume of data that cannot be feasibly stored, as the full detector information amounts to approximately 1 Mb per event, and there is no technology nowadays able to read out and store such vast volumes of data.
+if read out at the nominal LHC bunch crossing rate of $40\unit{MHz}$, they would produce a total throughput of $\sim40\unit{Tb/s}$. At the present day, technology falls short of efficiently reading and storing such formidable data quantities.
+
+Figure \ref{fig:xs_summary} shows the summary of the cross section measurements of SM processes at CMS; as it can be appreciated, the process with the highest cross section is single W boson production with $\sigma(W|\sqrt{s}=13TeV)=1.8\cdot10^5pb$.
+This value stands six orders of magnitude below the inclusive proton-proton interaction cross section that towers at $\sigma(pp)\sim10^{11}pb$.
+However, most of the collisions occurring at the LHC are not of interest to the LHC physics programme. online event selection to reduce the data acquisition rate by a factor if $\sim10^5$.
+This is the goal of the CMS Trigger system.
+After the trigger selection, the data is sent to storage by the Data Acquisition System (DAQ). The Trigger and DAQ are generally jointly referred to as the TriDAS project \cite{TriDAS-TDR}.
+
+The main purpose of the data acquisition system (DAQ) is to provide the data pathway and time decoupling between the synchronous detector readout and data reduction, the asyn-
+chronous selection of interesting events in the HLT, their local storage at the experiment site, and the transfer to Tier-0 for offline permanent storage and analysis. [[cite:&hlttdr]]
+
+The CMS experiment therefore demands the task of identifying events worthy of saving to the Trigger and Data Acquisition System (TriDAS) \cite{CMS:2000mvk,Sphicas:2002gg}. The trigger system is organised into two layers, the \textit{Level-1 trigger}, which reduces the rate from 40 MHz to 100 kHz with a latency time, i.e., time available for data processing, of 3.8~$\mu s$, and the \textit{High-Level Trigger} (HLT), which reduces further the rate down to 1 kHz with a latency time of 300 ms.
+
+
+The \ac{L1} performs an online selection of interesting physics processes, whose cross sections are typically orders of magnitude lower than the total proton-proton cross section.
+
+\paragraph{Frontend electronics}
+
+\paragraph{Backend electronics}
+
+
+#+NAME: fig:cms_xsec_summary
+#+CAPTION: Summary of the cross section measurements of Standard Model processes at CMS. The process, centre-of-mass energy of the measurement, and the associated publication are reported on the left of the panel; the integrated luminosity used for each result is reported on the right. Values are to be compared to the total proton-proton interaction cross section of about \SI{1e11}{\pico\barn}.Taken from [[cite:&summary_smp_twiki]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/CMSCrossSectionsSummary.pdf]]
+#+END_figure
+
+* Alessandro :noexport:
+With a proton-proton interaction rate of about 40 MHz, the CMS detector produces a large amount of data that should be stored for offline analyses. This leads to an overwhelming volume of data that cannot be feasibly stored, as the full detector information amounts to approximately 1 Mb per event, and there is no technology nowadays able to read out and store such vast volumes of data. However, most of the collisions occurring at the LHC are not of interest to the LHC physics programme. The CMS experiment therefore demands the task of identifying events worthy of saving to the Trigger and Data Acquisition System (TriDAS) \cite{CMS:2000mvk,Sphicas:2002gg}. The trigger system is organised into two layers, the \textit{Level-1 trigger}, which reduces the rate from 40 MHz to 100 kHz with a latency time, i.e., time available for data processing, of 3.8~$\mu s$, and the \textit{High-Level Trigger} (HLT), which reduces further the rate down to 1 kHz with a latency time of 300 ms.
+
+The L1 trigger takes the raw data from the front-end readout electronic and has to take in few microseconds a decision about the event. It resembles a reader swiftly scanning newspaper headlines to spot captivating stories. Given its need for quick decision-making, the L1 trigger is positioned close to the detector, and it is mounted on custom hardware, such as Field Programmable Gate Arrays (FPGAs) and Application Specific Integrated Circuits (ASICs), for direct and rapid access to the detector information. The small amount of time allocated to the L1 trigger prevents a detailed event reconstruction. Instead, the L1 trigger produces the so-called \textit{L1 candidates}, based on low-granular detector information and reconstruction of low-resolution physics objects. These L1 candidates rely only on the calorimeters and muon chambers, with the tracker excluded from the L1 reconstruction. The ECAL and HCAL information is combined in \textit{trigger towers} to reconstruct jets, hadronic-taus, $e/\gamma$ objects, and evaluate the energy sums. Since the tracker information cannot be used, electrons and photons are reconstructed as the same object. On the one hand, the calorimeter information forms the \textit{Calo Trigger}. On the other hand, the redundancy of the muon system is used to define the \textit{Global Muon Trigger}, combining data from DTs, CSCs, and RPCs. The Calo and Global Muon Trigger are then merged into the \textit{Global Trigger}, used by the L1 trigger system to accept or discard the event.
+
+Events meeting the L1 trigger requirements proceed to the HLT trigger, which operates within a software computing farm with 32,000 CPU cores. The HLT works with a dataset that has already been enriched with interesting physics events, thanks to the previous L1 trigger sel [[https://gitlab.cern.ch/tdr/notes/AN-21-082/-/merge_requests/56/diffs]] ection, thereby reducing the number of events that should be discarded. Unlike the L1 trigger, the HLT can work with the same raw data as offline reconstruction and include the tracker information previously excluded at the L1 stage. It also employs more sophisticated algorithms akin to those used offline. To meet time constraints, the HLT reconstruction is carried out only around an L1 seed, significantly reducing the computational time. The output of the HLT is then streamed to the Tier-0 at CERN, where it is prepared for offline reconstruction and organised into \textit{primary datasets} (PDs). These PDs constitute collections of HLT paths, representing the selected events that the CMS collaboration will further process and analyse. 
+
+* Jona :noexport:
+The full information from all CMS subdetectors amounts to $\sim1\unit{Mb}$ per event; therefore, if read out at the nominal LHC bunch crossing rate of $40\unit{MHz}$, they would produce a total throughput of $\sim40\unit{Tb/s}$. At the present day, technology falls short of efficiently reading and storing such formidable data quantities. However, a substantial portion of these collisions yields low-energy proton-proton interactions, which hold no relevance to the CMS physics program, which targets hard scattering processes. Figure \ref{fig:xs_summary} shows the summary of the cross section measurements of SM processes at CMS; as it can be appreciated, the process with the highest cross section is single $\PW$ boson production with $\sigma(W|\sqrt{s}=13\TeV)=1.8\cdot10^5\unit{pb}$. This value stands six orders of magnitude below the inclusive proton-proton interaction cross section that towers at $\sigma(pp)\sim10^{11}\unit{pb}$. The knowledge of this huge discrepancy can be exploited to perform an online event selection with the goal of reducing the data acquisition rate by $\sim10^5$. This procedure is the so-called \textit{triggering process}, and the CMS Trigger system performs it. After the trigger selection, the data is sent to storage by the Data Acquisition System (DAQ). The Trigger and DAQ are generally jointly referred to as the TriDAS project \cite{TriDAS-TDR}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[angle=90,origin=c,width=0.99\textwidth]{figures/Ch2/TriDAS/CMSCrossSectionSummaryBarChart.pdf}
+    \caption{Summary of the cross section measurements of Standard Model processes at CMS. The process, centre-of-mass energy of the measurement, and the associated publication are reported on the left of the panel; the integrated luminosity used for each result is reported on the right \cite{CMS_XS_pub}. Values are to be compared to the total proton-proton interaction cross section of about $10^{11}\unit{pb}$.}
+    \label{fig:xs_summary}
+\end{figure}
+
+The trigger system acts as the bridge linking online data-taking and offline data analysis, the latter being impossible without the former. Therefore, to fulfil the ambitious CMS physics program, the trigger system must adhere to both the technical constraints set by the online hardware system and the stringent efficiency benchmarks and background suppression expected on the side of the analyses. Moreover, adaptability to varied data conditions and resilience against the instantaneous luminosity and PU challenges posed by the LHC are paramount prerequisites for the system. These are the all-important and exacting guidelines that underpin the trigger system design.
+    
+To achieve the best flexibility of the trigger system, the CMS experiment adopts a two-tiered approach in which the event selection is based on the kinematic properties of the particles produced in an LHC bunch crossing. The two steps have to fulfil very different requirements and are implemented in different kinds of hardware and with different levels of sophistication. The first selection is performed by the Level-1 (L1) trigger, which is composed of dedicated hardware that processes the information from calorimeters and muon systems only with reduced granularity; the L1 has at its disposal a maximum processing time (the so-called \textit{latency}) of $3.8\mus$ and selects the most interesting events for a rate up to $100\unit{kHz}$. The second selection is performed by the High-Level Trigger (HLT), which exploits the full detector granularity on commercial CPU and GPU processors; the HLT has a latency of $\sim200\unit{ms}$ and selects the most interesting events for a rate up to $1\unit{kHz}$. The events thus selected are acquired by the DAQ system and sent for permanent storage in the tapes of the CERN Tier-0 (the core of the so-called \textit{grid}). As it can be appreciated, the triggering process needs to perform a real-time reduction of the data by a factor $4\cdot10^4$ while retaining the most interesting events for physics analysis.
+
+The TriDAS system is detailed in the following, with particular attention given to the Level-1 trigger, especially its calorimeter-based part, as it is a central topic of this Thesis.

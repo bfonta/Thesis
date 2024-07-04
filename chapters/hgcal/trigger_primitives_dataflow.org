@@ -1,6 +1,16 @@
 <<sec:trigger_primitives_dataflow>>
 
-Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on standard servers.
+
++ Talk about trigger and how important it is
++ mention online and offline
++ give overview about the full cms trigger system, including current one
++ explain the processing of hgcal trigger primitives, include quantitiative estimates
+
+Following the present established design [9, 10], the CMS trigger and data acquisition system will continue to feature two trigger levels, with only one synchronous hardware-based Level-1 Trigger, consisting of custom electronic boards and operating on dedicated data streams, and a second level, the High Level Trigger (HLT), using software algorithms running asynchronously [[cite:&hlttdr]]
+
+A completely redesigned Level-1 trigger system [11], making use of tracking information and particle-flow algorithms, will select events at a rate up to 750 kHz (to be compared with a maximum Level-1 accept rate of 100 kHz for Phase-1) to maintain the efficiency of the signal selection to the level of the Phase-1 performance while enabling or enhancing the selection of possible new physics leading to unconventional signatures [[cite:&hlttdr]]
+
+\Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on standard servers.
 \Ac{L1} performs an online selection of interesting physics processes, whose cross sections are typically orders of magnitude lower than the total proton-proton cross section.
 
 These proceedings describe the \ac{HGCAL} \ac{L1} reconstruction chain, from raw energy deposits to the creation of \acp{TP}, which are detector-specific inputs to the \ac{L1}.
@@ -71,14 +81,14 @@ The "three-fold diamond" configuration was chosen because it allows the convenie
 [[~/org/PhD/Thesis/figures/hgcal/econt_algorithms.pdf]]
 #+END_figure
 
-#+NAME: fig:econt_algorithms
+#+NAME: fig:si_sci_custom_geoms
 #+CAPTION: Taken from [[cite:&bruno_chep23]]. 
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/SimplifiedGeometry.pdf]]
 #+END_figure
 
-#+NAME: fig:econt_algorithms
+#+NAME: fig:geom_impl_flow
 #+CAPTION: Caption 
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center

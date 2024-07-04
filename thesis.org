@@ -25,11 +25,11 @@
 #+INCLUDE: "chapters/intro/hh_exp_status.org"
 *** 4b
 #+INCLUDE: "chapters/intro/bbbb.org"
-*** bb\gamma\gamma
+*** \bbgg{}
 #+INCLUDE: "chapters/intro/bbgammagamma.org"
-*** bb\tau\tau
+*** \bbtt{}
 #+INCLUDE: "chapters/intro/bbtautau.org"
-*** \gamma\gamma\tau\tau
+*** \ggtt{}
 #+INCLUDE: "chapters/intro/gammagammatautau.org"
 *** ZZ, ZH and future techniques
 #+INCLUDE: "chapters/intro/zz_and_zh.org"
@@ -47,7 +47,7 @@
 *** Resonant BSM HH Production
 #+INCLUDE: "chapters/intro/res_BSM_hh.org"
 
-**** Motivaton for the bb\tau\tau analysis
+**** Motivaton for the \bbtt{} analysis
 
 
 * The CMS Detector at the LHC
@@ -66,14 +66,16 @@
 *** Detector structure
 #+INCLUDE: "chapters/detector/detector_structure.org"
 ** The CMS trigger system
+#+INCLUDE: "chapters/detector/cms_trigger_system.org"
 *** Level-1
+#+INCLUDE: "chapters/detector/l1.org"
 *** HLT
-
+#+INCLUDE: "chapters/detector/hlt.org"
 ** Offline identification and reconstruction of physics objects
 *** Particle-flow
 *** Electrons
 *** Muons
-*** Hadronic \tau's
+*** Hadronic $\tau$'s
 *** Jets
 *** Missing transverse energy
 ** Monte Carlo generation
@@ -116,19 +118,19 @@
 ** Physics objects
 *** Electrons
 *** Muons
-*** Hadronic \tau's
+*** Hadronic $\tau$'s
 *** Jets
 **** b-jets
 *** Missing transverse energy
 ** Selection
-*** \tau\tau pair
+*** $\tau\tau$ pair
 *** bb pair
 **** HH b-tagging network
 ** Categorization
 #+INCLUDE: "chapters/analysis1/categorization.org"
 *** Resolved jets
 *** Boosted jets
-** \tau\tau mass regression
+** $\tau\tau$ mass regression
 ** QCD background estimation
 #+INCLUDE: "chapters/intro/qcd_estimation.org"
 ** Monte Carlo corrections
@@ -139,7 +141,7 @@
 *** Single tau trigger scale factors
 *** MET trigger scale factors
 #+INCLUDE: "chapters/analysis1/met_trigger_scale_factors.org"
-*** DeepTau scale factors for hadronic \tau's
+*** DeepTau scale factors for hadronic $\tau$'s
 *** Lepton scale factors
 
 ** Control regions
@@ -159,7 +161,7 @@
 **** Final state branching fraction
 **** Cross-sections of simulated processes
 *** Shape uncertainties
-**** Hadronic \tau's energy scale
+**** Hadronic $\tau$'s energy scale
 **** Energy scale corrections for electrons and muons faking taus
 **** Jet energy scale
 **** Jet energy resolution
@@ -208,6 +210,7 @@
 [[bibliography:
 ~/dot-emacs/bibliography/references/higgs.bib,
 ~/dot-emacs/bibliography/references/l1.bib,
+~/dot-emacs/bibliography/references/mtd.bib,
 ~/dot-emacs/bibliography/references/mc_generation.bib,
 ~/dot-emacs/bibliography/references/pure_software.bib,
 ~/dot-emacs/bibliography/references/physics.bib,

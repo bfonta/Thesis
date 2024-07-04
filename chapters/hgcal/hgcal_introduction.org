@@ -50,8 +50,10 @@ The exact choice of the area is also connected to the size of \acp{TC}, as discu
 #+NAME: fig:hgcal_long_structure1
 #+CAPTION: Illustration of the longitudinal structure of the \ac{Si}-only \ac{CE-H} (top) and \ac{CE-E} (bottom) sections. Each \ac{CE-E} unit comprises two sampling layers. The \ch{CuW} baseplate provides rigidity and cooling. The \ch{Pb}+\ac{SS} absorber in the last \ac{CE-E} cassette is replaced by a \SI{1}{\mm} \ch{Cu} cover. The components are not drawn to scale.
 #+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
+#+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/LongitudinalStructure1.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/LongitudinalStructure2.pdf]]
 #+END_figure
 
 Different thicknesses are considered (\num{300}, \num{200}, and \SI{120}{\micro\meter}) given the compromise between signal and noise in a semiconductor.
@@ -74,7 +76,8 @@ Concerning the \ac{Si} sensors, their baseplate is made of carbon fibre, with a 
 The scintillators cover an area of \SI{\sim 400}{\meter\squared} for a total of \num{\sim 240} thousand channels.
 Individual tiles are of varying dimensions due to the triangular shape of the cassettes.
 Tiles closer to the beam axis have an area of \SI{\sim 4}{\cm\squared}, while tiles near the outer edges occupy \SI{\sim 32}{\cm\squared}.
-Cassettes placed in the \ac{HAD} section are quite similar to the ones in the \ac{CE-E}, except for two important details: they are much larger, and thus span a \SI{30}{\degree} angle instead of \SI{60}{\degree}, and have modules mounted only on a single side.
+Cassettes placed in the \ac{HAD} section are quite similar to the ones in the \ac{CE-E}, except for some important details: they are much larger, and thus span a \SI{30}{\degree} angle instead of \SI{60}{\degree} to faciliate the final assembly, and have modules mounted only on a single side.
+They also include an additional \ch{Cu} cover meant to provide protection during the horizontal insertion.
 Stainless steel is used as absorber material.
 This configuration amounts to a total of \SI{10}{\nucintl}, \SI{1.3}{\nucintl} for the \ac{CE-E} and \SI{8.5}{\nucintl} for the \ac{CE-H}.
 The rest comes from the \ac{PM}.
@@ -84,7 +87,7 @@ The layout of the \ac{CE-H} section can be seen in [[ref:fig:hgcal_long_structur
 #+CAPTION: Illustration of the longitudinal structure of the mixed \ac{CE-H} section. The \ch{CuW} baseplate provides rigidity and cooling. The \ac{Sci} cells nearer the beam line are significantly smaller than those at the outer edge. The tileboard includes the \acp{SiPM}. The silicon section is extremely similar to the one present in the \ac{CE-E} and \ac{Si} \ac{CE-H}. The components are not drawn to scale.
 #+BEGIN_figure
 #+ATTR_LATEX: :width .9\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/LongitudinalStructure2.pdf]]
+[[~/org/PhD/Thesis/figures/hgcal/LongitudinalStructure3.pdf]]
 #+END_figure
 
 Despite \ac{Si}'s radiation hardness, photons and hadrons still cause damage in the sensors.
@@ -110,7 +113,7 @@ Once detector elements have been assembled, cooling manifolds, pipes, gas supply
 #+END_figure
 
 #+NAME: fig:dose_fluence_hgcal
-#+CAPTION: $R-z$ projection of the distribution of the absorbed dose in \si{\gray} (top) and fluence in \si{\nequiv} (bottom) for one endcap of the \ac{HGCAL} and half the tracker, after an exposure to \SI{4}{\invab}. Produced with the \ac{BRIL} "Simulation Plotting Tool" [[cite:&bril_tool]]  with \ac{CMS} =FLUKA= geometry, version 3.7.0.0.
+#+CAPTION: $R$-$z$ projection of the distribution of the absorbed dose in \si{\gray} (top) and fluence in \si{\nequiv} (bottom) for the positive endcap of the \ac{HGCAL} and half the tracker, after an exposure to \SI{4}{\invab}. Produced with the \ac{BRIL} "Simulation Plotting Tool" [[cite:&bril_tool]]  with \ac{CMS} =FLUKA= geometry, version 3.7.0.0 [[cite:&fluka1;&fluka2]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth
 [[~/org/PhD/Thesis/figures/hgcal/DoseAbsorbedHGCAL.pdf]]
@@ -412,3 +415,5 @@ The HGCAL geometry described above is known as geometry v16; it was finalised in
 and it is the one used for the development of the L1 τh trigger described in Section 4.2. A further
 update is already foreseen for the coming years.
 
+* Additional bilbiography :noexport:
++ [[https://indico.cern.ch/event/1334651/contributions/5622989/attachments/2741546/4769493/HGCal_10232023.pdf][CE-H cassettes]]

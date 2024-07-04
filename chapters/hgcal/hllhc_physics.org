@@ -1,12 +1,12 @@
 <<sec:hllhc_physics>>
 
-A more powerful \ac{LHC} will increase the accurancy of current measurements and enhance the sensitivity to rare processes through both direct and indirect searches which occur below the current sensitivity level, and with more challenging signatures.
+A more powerful \ac{LHC} is expected to open up a large physics program, by increasing the accurancy of current measurements and enhancing the sensitivity to rare processes through both direct and indirect searches, with more and more challenging signatures, which occur below the current sensitivity level.
 The \ac{HL-LHC} is expected to provide high-precision measurements of the \ac{SM}, particular in Higgs physics: the Higgs boson (H) self-coupling, via direct and indirect measurements (see [[ref:sec:dihiggs]]), higgs couplings, flavour physics, BSM
 
 A virtuous cycle often takes place between data collection and improvements in simulation and theory calculations.
 In the following we provide a brief and necessarily incomplete overview of some of the physics motivations to build the \ac{HL-LHC}.
 A detailed description is out of the scope of this work.
-
+  
 
 \paragraph{EW processes}
 
@@ -23,7 +23,7 @@ However, differential measurements of gauge boson polarization is harder given t
 Would unitarity be violated, particle probability would no longer be conserved: the calculated number of $V$ pairs produced in the interaction would exceed the incident flux [[cite:&thomson]].
 There is also the possibility for the longitudinal components of the $V$ bosons to be strongly coupled at \SI{\sim 1}{\TeV} center-of-mass energies [[cite:&vbs1]], allowing for instance the formation of resonance states in technicolor models.
 \ac{VBS} also forms the ideal field for anomalous gauge couplings measurements, especially quartic couplings.
-Finally, even rarer tri-boson processes (\sigma\SI{\sim 0.1}{\pico\barn}) brings an extra handle on \ac{SM} testing.
+Finally, even rarer tri-boson processes ($\sigma$\SI{\sim 0.1}{\pico\barn}) brings an extra handle on \ac{SM} testing.
 
 \paragraph{Strong interactions}
 

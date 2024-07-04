@@ -4,9 +4,9 @@ Detector in Tables [[tab_sad]] and [[tab_sad2]]
 
 Use the lead tungstate (\ch{PbWO4}) acronym.
 
-#+NAME: fig:cms_slice
+#+NAME: fig:muon_system_slice
 #+ATTR_LATEX: :width 1.\textwidth
-#+CAPTION: Transverse beam interaction slice region of the to the CMS muondetector, detector. The showing muon and the the different charged pion sub-detectors areand how positively different charged, particles and the interact. electron is Figure negatively taken charged. Taken from [[cite:&particle_flow_cms]].
+#+CAPTION: Transverse beam interaction slice region of the to the CMS muon detector, detector. The showing muon and the the different charged pion sub-detectors areand how positively different charged, particles and the interact. electron is Figure negatively taken charged. Taken from [[cite:&particle_flow_cms]].
 #+BEGIN_figure
 [[~/org/PhD/Thesis/figures/hgcal/CMSslice.pdf]]
 #+END_figure

@@ -31,6 +31,7 @@
 #+LATEX_HEADER: \newcommand{\bbzz}{bbZZ}
 #+LATEX_HEADER: \newcommand{\bb}{$b\bar{b}$}
 #+LATEX_HEADER: \newcommand{\bspsiphi}{B_{s} \rightarrow J/\psi \phi}
+#+LATEX_HEADER: \newcommand{\ggtt}{$\gamma\gamma\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hgg}{H $\rightarrow$ $\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\hhbbbb}{HH $\rightarrow$ bbbb}
 #+LATEX_HEADER: \newcommand{\hhbbgg}{HH $\rightarrow$ bb$\gamma\gamma$}

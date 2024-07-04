@@ -19,7 +19,7 @@ The most up-to-date Run2 HH combination constrains the observed (expected) HH cr
 #+END_figure
 
 #+NAME: fig:scan_comb_cms_nature
-#+CAPTION: Combined expected and observed 95% CL upper limits on the HH production cross-section for different values of $\kl$ (left) and $\kvv$ (right), assuming the SM values for the modifiers of Higgs boson couplings to top quarks and vector bosons. The green and yellow bands represent the 1$\sigma$ and 2$\sigma$ extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross-section (its 1$\sigma$ uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95% CL. Taken from [[cite:&higgs_10_years]].
+#+CAPTION: Combined expected and observed 95% CL upper limits on the HH production cross-section for different values of $\kl$ (left) and $\kvv$ (right), assuming the SM values for the modifiers of Higgs boson couplings to top quarks and vector bosons. The green and yellow bands represent the \SI{1}{\sigma} and \SI{2}{\sigma} extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross-section (its \SI{1}{\sigma} uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95% CL. Taken from [[cite:&higgs_10_years]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/scan_kl_nature.pdf]]
@@ -62,7 +62,7 @@ The most up-to-date Run2 HH combination constrains the observed (expected) HH cr
 [[~/org/PhD/Thesis/figures/intro/kl_vs_k2v_atlas_comb.pdf]]
 #+END_figure
 
-#+NAME: fig:kl_vs_k2v_atlas
+#+NAME: fig:xsec_atlas
 #+CAPTION: Observed and expected 95% CL combined upper limits on the cross-section for the \ac{SM} and seven \ac{BSM} HEFT benchmarks in the ggF process, describing representative signal kinematics and $\mhh$ shape features obtained by varying multiple \ac{HEFT} coefficients. The expected limits from the \bbtt{}, \bbgg{} and \bbbb{} decay channels are presented as well. Theoretical predictions, estimated using specific sets of coefficient values defined in the benchmarks, are shown as red cross dots. Taken from [[cite:&atlas_hh_comb]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
@@ -87,7 +87,7 @@ Concerning systematics, their modelling in HH processes is generally simpler whe
 \ac{CMS} observed exclusion intervals at 95% \ac{CL} of $-0.4 < \kl < 6.3$, assuming other Higgs couplings to follow the \ac{SM}, or $-1.4 < k_{\lambda} < 6.1$ otherwise.
 For comparison, \ac{ATLAS} observed $-0.4 < \kl < 6.3$, assuming \ac{SM} couplings, or $-1.4 < k_{\lambda} < 6.1$ otherwise [[cite:&ATLASHplusHHcomb]].
 We show ($\kl$, $\kt$) and ($\kv$, $\kvv$) scans in [[fig:combination_2d_scans]], where the complementarity between the two types of processes is clearly highlighted.
-\ac{CMS} was also able to once again [[cite:&higgs_10_years]] exclude $\kvv=0$ at more than 5\sigma, this time without fixing $\kv=1$.
+\ac{CMS} was also able to once again [[cite:&higgs_10_years]] exclude $\kvv=0$ at more than \SI{5}{\sigma}, this time without fixing $\kv=1$.
 
 #+NAME: fig:combination_2d_scans
 #+CAPTION: Observed two-dimensional likelihood scans of ($\kl$, $\kt$) (left) and ($\kv$, $\kvv$) (right). The strong complementarity between the single and double Higgs processes is well illustrated. The remaining coupling modifiers are set to their \ac{SM} value. Taken from [[cite:&CMSHplusHHcomb]].

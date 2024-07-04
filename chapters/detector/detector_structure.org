@@ -18,7 +18,7 @@ Redundancy in the data from the various subdetectors is intentional, to maximize
 The subsequent sections detail the individual components of the CMS detector.
 The application of this data in the offline reconstruction of physics objects is elaborated in Section 2.4.
 
-#+NAME: fig:ggtt_results
+#+NAME: fig:cutaway_cms
 #+CAPTION: Cutaway 3D model of the CMS detector. This perspective makes visible all the sub-detectors at a glance. Taken from [[cite:&cms_cutaway_diagrams]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
