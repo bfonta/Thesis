@@ -2,7 +2,6 @@
 
 #+NAME: fig:lhc_lumi_results
 #+CAPTION: (Left) Delivered luminosity as a function of the time for all data-takingperiods. (Right) Average number of interactions per bunch crossing for all data-taking periods. The overall mean values and the inelastic pp cross sections are also shown. For both plots, since the 2023 data taking is still ongoing at the time of writing of this manuscript, the related information is partial.
-.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/lhc/int_lumi_cumulative_pp.pdf]]

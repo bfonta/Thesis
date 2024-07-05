@@ -13,6 +13,21 @@ A completely redesigned Level-1 trigger system [11], making use of tracking info
 \Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on standard servers.
 \Ac{L1} performs an online selection of interesting physics processes, whose cross sections are typically orders of magnitude lower than the total proton-proton cross section.
 
+The event size increases to approximately 8.5 MB.
+The Phase-2 HLT will analyse the full L1T output of up to 750 kHz
+translates into an overall data throughput in excess of 50 Tb/s.
+30-fold increase with respect to the current system
+he greatest difference of Phase-2 online reconstruction with respect to the current one is the
+reconstruction of energy deposits and charged particle tracks in the High-Granularity Calorimeter
+(HGCAL) and the Phase-2 Tracker, which are respectively completely new and redesigned and for
+the upgraded detector. These subdetectors have very high granularity, and their objects reconstruc-
+tion is usually based on iterative procedures: Kalman filter with deterministic annealing for the
+tracking and a pair of two algorithms, CLUsters of Energy (CLUE) and The Iterative CLustering
+(TICL) [4] for the HGCAL reconstruction. T
+ [[cite:&hlt_phase2_thiago]]
+
+@reintroduce TPs, which were already mentioned in [[ref:sec:cms_trigger_system.org]]@
+
 These proceedings describe the \ac{HGCAL} \ac{L1} reconstruction chain, from raw energy deposits to the creation of \acp{TP}, which are detector-specific inputs to the \ac{L1}.
 Special emphasis is placed on the study of cluster splitting, which represents a known and so far unstudied shortcoming of the \ac{TP} chain.
 The \ac{phi} in the transverse plane, the radial coordinate $R$ and the $z$-axis lying parallel to the beam-line form the binned projective \coordsa{} coordinate system used in this work [[cite:&cms_collab]].
@@ -101,6 +116,21 @@ Only \acp{TC} in odd-numbered layers are considered.
 Timing information cannot be exploited in the trigger path due to bandwidth constraints.
 The ECON-T concentrates, selects and/or aggregates TCs within a single module (3 or 6 \acp{HGCROC}) and builds \textit{module sums}, where the energies of TCs in a module are summed without applying any threshold.
 The data is then sent via \SI{1.28}{\giga\bit\per\second} e-links to lpGBT ASICs [[cite:&lpgbt]], serialized to \SI{10.24}{\giga\bit\per\second}, and sent via optical-links [[cite:&vtrxp]] to the off-detector \ac{BE}.
+
+#+NAME: fig:l1_trigger_design_phase2
+#+CAPTION: Diagram of the \ac{CMS} \ac{L1} \phase{2} trigger design, to be compared with [[fig:l1_trigger_design_phase1]]. The calorimeter trigger is represented on the left and composed of a \ac{BCT} and a \ac{GCT}. The track finder in the center transmits tracking information to the \ac{CT}, the \ac{GTT}, and the \ac{GMT}. The muon trigger architecture is represented on the right and composed of three muon track finders: \ac{EMTF}, \ac{OMTF}, and \ac{BMTF}. The \ac{CT} in the center is composed of 2 layers for \ac{PF} processing. The \ac{GT} receives all trigger information for the final decision. For each architecture component, the information about the \ac{TMUX}, the \ac{RS} in \ac{eta} or \ac{phi}, the \ac{FS}, and the number of \acp{FPGA} are specified. Taken from [[cite:&l1TDR]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/L1TriggerDesignPhase2.pdf]]
+#+END_figure
+
+#+NAME: fig:tps_to_physics
+#+CAPTION: Summary diagram showcasing the interdependence of \acp{TP}, including the ones coming from \ac{HGCAL}, and physics, including HH processes. We can see the links between \acp{TP}, trigger objects, \ac{L1} algorithms and physics channels. \Acp{TP} include crystals, towers and clusters from calorimeters (\ac{ECAL}, \ac{HCAL}, \ac{HF} and \ac{HGCAL}), stubs and clusters from the muon detectors (\ac{DT}, \ac{RPC}, \ac{CSC}, \ac{GEM} and \ac{iRPC}), as well as \ac{L1} tracks from the track finder. The trigger objects types produced by the \phase{2} \ac{L1} trigger system are represented: standalone, track-matched, tracker-based and \ac{PF}/\ac{PUPPI}-based. Taken from [[cite:&l1TDR]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/TPtoPhysics.pdf]]
+#+END_figure
+
 
 My work is mostly concerned with the \ac{BE}, which is composed of two processing stages (\ac{S1} and \ac{S2}) running on Serenity boards [[cite:&serenity]] with 128-link Xilinx VU13P FPGAs.
 Their assigned latency budget is \SI{\sim 2.5}{\micro\second}.

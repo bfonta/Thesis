@@ -19,6 +19,7 @@ mention VELO
 List all subdetector upgrades in \ac{CMS}.
 
 + =MTD= [[cite:&mtd_tdr;&mtd_timing_plot]]
++ =\ac{HGCAL Nose}= very forward portion of the endcap calorimeter covering pseudorapidity values between 3 and 4.2, locate in front of the \ac{HF}, very similar to \ac{HGCAL} \SI{4.6}{\mega\gray} maximum absorbed dose and \SI{2e16}{\nequiv}, both twice as large as \ac{HGCAL}'s values, good for VBS scattering measurement of longitudinally polarized channels (two very forwards jets), also good for VBF production of H and HH
 + ...
 + =HGCAL= is detailed in the next section
   

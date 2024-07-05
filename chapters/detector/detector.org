@@ -16,13 +16,12 @@ Use the lead tungstate (\ch{PbWO4}) acronym.
 #+ATTR_LATEX: :width 1.\textwidth
 #+CAPTION: Schematic longitudinal view of a quadrant of the R-z cross-section of the \ac{CMS} detector. All four subdetector are shown: \acp{DT} (yellow), \acp{CSC} (green), \acp{RPC} and \acp{GEM}. Pseudorapidity values are given with dashed lines, and some values are highlighted. Adapted from [[cite:&gem_tdr]]. 
 #+BEGIN_figure
-[[~/org/PhD/Thesis/figures/intro/MuonSystem.pdf]]
+[[~/org/PhD/Thesis/figures/detector/MuonSystemSlice.pdf]]
 #+END_figure
 
 #+NAME: tab_sad
 #+CAPTION: sad
 | dsd |   |
-|-----+---|
 
 #+NAME: tab_sad2
 #+CAPTION: sad
