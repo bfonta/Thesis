@@ -67,10 +67,6 @@
 #+INCLUDE: "chapters/detector/detector_structure.org"
 ** The CMS Trigger System
 #+INCLUDE: "chapters/detector/cms_trigger_system.org"
-*** Level-1
-#+INCLUDE: "chapters/detector/l1.org"
-*** HLT
-#+INCLUDE: "chapters/detector/hlt.org"
 ** Offline identification and reconstruction of physics objects
 *** Particle-flow
 *** Electrons

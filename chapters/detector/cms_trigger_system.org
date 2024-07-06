@@ -16,7 +16,17 @@ In the first level, or \ac{L1}, the trigger reduces the \ac{LHC} rate from \SI{4
 In the second level, the \ac{HLT}, a further reduction down to \SI{1}{\kilo\hertz} with a \SI{300}{\milli\second} is performed.
 Latency here refers to the time taken for the data to be processed, from the moment the hard-collison takes place, on to a final decision at \ac{HLT} level on whether the event should be kept for storage.
 
-* The \ac{L1} trigger
+* The Level-1 trigger
+<<sec:l1>>
+
+he L1 system uses only coarsely segmented data from calorimeter and muon detectors, while
+holding all the high-resolution data in pipeline memories in the front-end electronics. The HLT is
+provided by a subset of the on-line processor farm which, in turn, passes a fraction of these events
+to the remainder of the on-line farm for more complete processing.
+
+
+
+
 The first trigger level is implemented in custom electronics and \acp{FPGA}, and uses reduced granularity to achieve a lower latency.
 The data is stored for \SI{3.8}{\micro\second}, equivalent to \num{152} beam crossings.
 Each event forwarded to the \ac{HLT} takes \SI{\sim 2}{\mega\byte} which implies, at a rate of \SI{100}{\kilo\hertz}, a bandwidth of \SI{200}{\giga\byte\per\second} supported by the \ac{DAQ}.
@@ -82,6 +92,7 @@ the workload for development and maintenance.
 \paragraph{Backend electronics}
 
 * HLT
+<<sec:hlt>>
 
 Receiving as input the \acp{TP} provided by the \ac{L1}, the \ac{HLT} performs further selection, exploiting the full detector granularity on commercial CPU and GPU processors.
 Its target rate and latency are, respectively, \SI{1}{\kilo\hertz}\SI{\sim 200}{\milli\second}.
