@@ -97,23 +97,18 @@ It can be also used to define a Lorentz-invariant spatial separation between two
 Based on the $\eta$ coordinate, the detector is divided into a central part called barrel, and two forward parts called endcaps.
 The exact $\eta$ value marking the transition between the two regions depends on the specific sub-detector.
 
-#+NAME: fig:pseudorapidity
-#+CAPTION: Schmeatic of different pseudorapidity values and its polar angle $\theta$ counterparts. Courtesy of Izaak Neutelings [[cite:&izaak_neutelings]].
+#+NAME: fig:coordinates
+#+CAPTION: (Top left) Schematic of different pseudorapidity values and their correspondence with the polar angle $\theta$. (Top right) Schematic illustration of the standard coordinate system at the CMS detector, represented relative to the \ac{LHC} and the other three main LHC experiments. (Bottom) The coordinate system of the \ac{CMS} detector, with the \ac{IP} at its origin. The relative geographical location of \ac{CMS} is also provided.  Courtesy of Izaak Neutelings [[cite:&izaak_neutelings]].
 #+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
+#+ATTR_LATEX: :width .4\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/pseudorapidity_diagram.pdf]]
-#+END_figure
-
-#+NAME: fig:cords_cms
-#+CAPTION: The coordinate system of the CMS detector, with the \ac{IP} at its origin. The relative geographical location of \ac{CMS} is also provided. Courtesy of Izaak Neutelings [[cite:&izaak_neutelings]].
-#+BEGIN_figure
+#+ATTR_LATEX: :width .6\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/coordinates_cms.pdf]]
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/coordinates_left.pdf]]
 #+END_figure
 
-#+NAME: fig:cords_lhc
-#+CAPTION: Schematic illustration of the standard coordinate system at the CMS detector, represented relative to the \ac{LHC} and the other three main LHC experiments. Courtesy of Izaak Neutelings [[cite:&izaak_neutelings]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/detector/coordinates_cms.pdf]]
-#+END_figure
+#+NAME: eq:rxy
+\begin{equation}
+R = \sqrt{x^2 + y^2}
+\end{equation}

@@ -5,6 +5,7 @@
 + mention online and offline
 + give overview about the full cms trigger system, including current one
 + explain the processing of hgcal trigger primitives, include quantitiative estimates
++ discussn frotend and backedn electronics from [[cite:&jb_hdr]] and compare with [[ref:sec:l1]]
 
 Following the present established design [9, 10], the CMS trigger and data acquisition system will continue to feature two trigger levels, with only one synchronous hardware-based Level-1 Trigger, consisting of custom electronic boards and operating on dedicated data streams, and a second level, the High Level Trigger (HLT), using software algorithms running asynchronously [[cite:&hlttdr]]
 
@@ -53,6 +54,11 @@ It must fit within a latency of \SI{\sim 5}{\micro\second}, taken from the total
 It has to cope with power, cost, space and channel routing constraints [[cite:&jb_hdr]].
 
 The "three-fold diamond" configuration was chosen because it allows the convenient definition of symmetric groups of neighbouring cells to form trigger primitives, as shown in ref:fig:tcs_geometry, and the subdivision of the module into symmetric domains for the readout chips, simplifying the layout of the module readout \ac{PCB} [[cite:&l1TDR]].
+
+\paragraph{Frontend electronics}
+
+\paragraph{Backend electronics}
+
 
 #+NAME: fig:tcs_geometry
 #+CAPTION: Illustration of the three-fold diamond configuration of an hexagonal \SI{8}{\inch} module, used to associate single \ac{Si} cells to groups of cells used for triggering, or \acp{TC}. Low density modules (left) associate four sensors to each trigger cell, while high density modules (right) create \acp{TC} with nine channels each. All modules have exactly \num{48} \acp{TC}, effectively removing a layer of complexity when processing \acp{TC}. The actual physical dimensions of the \acp{TC} vary given the boundaries of the hexagonal modules. Taken from [[cite:&hgcalTDR]]. 
@@ -192,6 +198,8 @@ The code enables exponentially faster prototyping, testing and optimization, whi
 
 ** Random
 + [[cite:&hlttdr]] (I wrote Section 12.3)
++ ECON-D does zero suppression
++ split between on detector electronics and outside FPGAs is also related tothe cost and limitation of optical links available [[cite:&zabi]]
   
 ** Reconstruction code
 Given its location and number of active sensors, data rates of \SI{\sim 100}{\tera\byte\per\second} are expected.
@@ -220,6 +228,14 @@ positions, which are computed in the device (section 3.1). In addition, a hetero
 for navigating through the detector’s geometrical/topological information is devised and used
 within CLUE (section 3.2).
 
+
+* why is the data throughput between Stage1 and Stage2 larger than the one between the ECON-T and Stage1
+The data throughput is larger because of the duplication needed to handle sector boundaries and because the data need to be inflated:
++ the addresses need to be encoded on a larger number of bits because the Stage 1 covers larger detector regions than the ECON-T
++ the energies need also to be encoded on a larger number of bits to absorb different energy scales used in different regions of the detector in the ECON-T
++ the numbers you are referring to are for the system using the Threshold data reduction I suppose (I don't think we have numbers for the current system). So in that case, since we have a fixed size format between S1 and S2 we need to allocate more bandwidth in order to absorb fluctuations and limit truncation in the S1. To be noted that something similar will also apply with BC even though its data is fixed size. This is due to the fact that BC provides a fixed number of TCs per module, but not a fixed number of TCs per bin. While the Stage 2 needs a fixed data size per bin. So we need to allocate more bandwidth per bin than necessary.
+
 * Additional bibliography :noexport:
 + JB reference: https://cernbox.cern.ch/pdf-viewer/public/cLosQkewmONZakQ/220606_Dauncey_DN-19-032-V2.pdf?contextRouteName=files-public-link&contextRouteParams.driveAliasAndItem=public%2FcLosQkewmONZakQ&items-per-page=100
 + Mentin my proceedings [[cite:&bruno_chep23]]
+  

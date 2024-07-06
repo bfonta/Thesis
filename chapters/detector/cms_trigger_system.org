@@ -1,48 +1,41 @@
 <<sec:cms_trigger_system.org>>
 
-With proton beams crossing every \SI{25}{\nano\second}, and considering the average \ac{PU} measured during \phase{1} (see [[ref:fig:lhc_lumi_results]]), around \num{e9} $pp$ interactions are expected every second.
-Given \SI{\sim 1}{\mega\bit} zero-supressed events, a \SI{\sim 40}{\tera\bit\per\second} throughput would follow.
-Meanwhile, the maximum rate which can be realistically archived in real time by the \ac{CMS} online computer farm sits at \SI{\sim 1}{\kilo\hertz}, which already represents a significant improvement with respect to \run{1}.
-Collision and the overall data rates are thus much higher than the rate at which data can be written to mass storage.
-This implies a necessary throughput reduction by a factor of \num{e4} [[cite:&trigger_tdr_phase1_vol1;&trigger_tdr_phase1_vol2;&trigger_tdr_phase1_vol1;&trigger_tdr_phase1_vol2;&hlt_performance]].
+With proton beams crossing every \SI{25}{\nano\second}, and considering the average \ac{PU} measured during \phase{1} (see [[ref:fig:lhc_lumi_results]]), around \num{e9} \ac{pp} interactions are expected every second.
+Given \SI{\sim 1}{\mega\bit} zero-supressed events, a \SI{\sim 40}{\tera\bit\per\second} throughput follows.
+Meanwhile, the maximum rate which can be realistically archived in real time by the \ac{CMS} online computer farm sits at \SI{\sim 1}{\kilo\hertz}, which already represents a ten-fold improvement with respect to \run{1}.
+Collision and data rates are thus much higher than the rate at which data can be written to mass storage.
+This implies a throughput reduction by a factor of \num{e4}.
+However, among all events produced in \ac{CMS}, only a small fraction carries physical significance.
+Most events are related to well known physical interactions which are not meant to be covered by the \ac{LHC} programme.
+As seen in [[ref:fig:cms_xsec_summary]], the processes studied by \ac{CMS} span at least \num{14} orders of magnitude.
+Only processes with cross-sections of \SI{e7}{\femto\barn} or lower require a significant part of the luminosity which the \ac{LHC} is able to provide.
+The large reduction factor, being absolutely crucial given current technological limitations, can therefore be justified on physics grounds.
 
-However, among all events produced at \ac{CMS}, only a small minority might carry physical significance.
-Most events are related to well known physics processes which are not meant to be covered by the \ac{LHC} programme.
-As seen in [[ref:fig:cms_xsec_summary]], the processes studied at \ac{CMS} span at least \num{14} orders of magnitude.
-Only processes with cross-sections of \SI{10e7}{\femto\barn} or lower require a significant part of the luminosity which the \ac{LHC} is able to provide.
-The data reduction factor, being absolutely crucial due to current technological limitations, can also be justified on physics grounds only.
-The reduction forms the basis of the trigger system at \ac{CMS}, which adopts a two-tiered approach.
-In the first level, or \ac{L1}, the trigger reduces the \ac{LHC} rate from \SI{40}{\mega\hertz} to \SI{100}{\kilo\hertz} with a \SI{3.8}{\micro\second} latency.
-In the second level, the \ac{HLT}, a further reduction down to \SI{1}{\kilo\hertz} with a \SI{300}{\milli\second} is performed.
-Latency here refers to the time taken for the data to be processed, from the moment the hard-collison takes place, on to a final decision at \ac{HLT} level on whether the event should be kept for storage.
+The needed data reduction is the reason for existence of the \ac{CMS} trigger system: only events deemed interesting are selected for futher processing.
+The \ac{CMS} trigger adopts a two-tiered approach.
+In the first level, or \ac{L1}, the trigger constrains the \ac{LHC} rate from \SI{40}{\mega\hertz} to \SI{100}{\kilo\hertz}, with a \SI{3.8}{\micro\second} latency.
+In the second level, the \ac{HLT}, a further reduction down to \SI{1}{\kilo\hertz} with a \SI{\sim 300}{\milli\second} latency is performed.
+Latency here refers to the time taken for the data to be processed in a particular trigger system.
+It includes the time taken to read the data from the detectors, the algorithmic time, the \ac{L1A} signal distribution time, and further delays introduced by potential limitations at the level of buffer capacity [[cite:&trigger_tdr_phase1_vol1;&l1TDR;&trigger_tdr_phase1_vol2;&l1_performance;&hlt_performance;&zabi]].
 
 * The Level-1 trigger
 <<sec:l1>>
 
-he L1 system uses only coarsely segmented data from calorimeter and muon detectors, while
-holding all the high-resolution data in pipeline memories in the front-end electronics. The HLT is
-provided by a subset of the on-line processor farm which, in turn, passes a fraction of these events
-to the remainder of the on-line farm for more complete processing.
-
-
-
-
-The first trigger level is implemented in custom electronics and \acp{FPGA}, and uses reduced granularity to achieve a lower latency.
-The data is stored for \SI{3.8}{\micro\second}, equivalent to \num{152} beam crossings.
-Each event forwarded to the \ac{HLT} takes \SI{\sim 2}{\mega\byte} which implies, at a rate of \SI{100}{\kilo\hertz}, a bandwidth of \SI{200}{\giga\byte\per\second} supported by the \ac{DAQ}.
-
+The first trigger level is implemented in custom electronics and \acp{FPGA}, and uses coarsely segmented data from calorimeter and muon datectors to ensure a low latency.
+All high-resolution data are nevertheless held in pipeline memories in the \ac{FE} electronics, waiting for a \ac{L1A} signal to be issued.
+The data is stored for \SI{3.8}{\micro\second}, equivalent to \num{152} beam crossings, including \SI{\sim 1}{\micro\second} dedicated to trigger algorithms.
+Each event forwarded to the \ac{HLT} takes \SI{\sim 2}{\mega\byte} which implies, at a rate of \SI{100}{\kilo\hertz}, a bandwidth usage of \SI{200}{\giga\byte\per\second} supported by the \ac{DAQ} system.
 The \ac{L1} trigger receives as input the raw data from the \ac{FE} readout electronics.
-Some of \ac{L1}'s first stages are handled literally on the detector, to allow for direct access and thus faster processing.
-The remaining stages are usually taken care of by racks of \acp{FPGA} still located in the experimental cavern.
+The first processing stages are handled literally on the detector, to allow for direct access and thus faster processing.
+The remaining stages are taken care of by racks of \acp{FPGA} located in the experimental cavern.
 The small time budget implies a compromise on the quality of the reconstruction, which is a recurrent theme in all trigger-related matters.
-
-In order to make a quick decision, the \ac{L1} produces so-called /\ac{L1} candidates/, based on low-granular detector information coming from the calorimeter and muon systems.
-The tracker does not participate in \ac{L1} trigger decisions during \phase{1}.
-
-@define trigger primitives here@
+The muon and calorimeter trigger paths produce data called \acp{TP}, which are merged into the \ac{GT}, and used to issue a \ac{L1A} decision.
+\Acp{TP} from the \ac{GEM} muon subdetector are currently being validated, but are not yet used.
+The tracker does not participate in \ac{L1} trigger decisions in \phase{1}.
+The \ac{L1} rate has been increased to \SI{\sim 110}{\kilo\hertz} during \run{3} to favour the introduction of new parking techniques, discussed in [[ref:sec:parking_scouting]].
 
 #+NAME: fig:l1_trigger_design_phase1
-#+CAPTION: (Left) Diagram of the \phase{1} \ac{CMS} \ac{L1} during \run{2}. No \ac{L1} tracking is present. (Right) Fractions of the \SI{100}{\kilo\hertz} rate allocation for single- and multi-object triggers and cross triggers in a typical \ac{CMS} physics menu during \run{2}. Adapted from [[cite:&l1_performance]]. 
+#+CAPTION: (Left) Diagram of the \phase{1} \ac{CMS} \ac{L1} during \run{2}. No \ac{L1} tracking is present. \Acp{TP} are generated from the \ac{DT}, \ac{RPC} and \ac{CSC} muon systems and from the \ac{HF}, \ac{ECAL} and \ac{HBHE} calorimetric subdetectors (where the latter refers to the \ac{HCAL}). The two separate paths are merged into the \ac{GT}, which make a \ac{L1A} decision on whether each particular event should be kept. \Acp{TP} from \acp{GEM} are currently being validated, but are not yet used. (Right) Fractions of the \SI{100}{\kilo\hertz} rate allocation for single- and multi-object triggers and cross triggers in a typical \ac{CMS} physics menu during \run{2}. Adapted from [[cite:&l1_performance]]. 
 #+BEGIN_figure
 #+ATTR_LATEX: :width .4\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/L1TriggerDesignPhase1.pdf]]
@@ -52,51 +45,52 @@ The tracker does not participate in \ac{L1} trigger decisions during \phase{1}.
 
 \paragraph{Calorimeter Trigger}
 
-The ECAL and HCAL information is combined in trigger towers to reconstruct jets, hadronic-taus, e/γ objects, and evaluate the energy sums.
-Since the tracker information cannot be used, 
-
-The calorimeter trigger is also split in two layers.
-The first one receives, calibrates, and sorts the \acp{TP} sent to the trigger by the \ac{ECAL} and \ac{HCAL}.
-The second layer uses these calibrated trigger primitives to reconstruct and calibrate the physics objects
-such as electrons/photons, tau leptons, jets, and energy sums.
-The calorimeter trigger follows a time-multiplexed trigger design [[cite:&zabi]].
-Each main processing node has access to a whole event with a granularity of ∆η×∆φ of 0.087×0.087 radians (where phi is azimuthal angle) in most of the calorimeter acceptance (a slightly coarser granularity is used at high |η|).
-A demultiplexer (DeMux) board then reorders, reserializes, and formats the events for the global
-trigger processing.
-Because the volume of incoming data and the algorithm latency are fixed, the position of all data within the system is fully deterministic and no complex scheduling mechanism is required.
-The benefits of time multiplexing include removal of regional boundaries for the object reconstruction and full granularity when computing energy sums.
-The multiplicity of processing nodes provides the flexibility to add nodes as required by complex trigger algorithms.
-These algorithms are fully pipelined and start processing as soon as the minimum amount of data is received.
+Like the \ac{CMS} trigger system, the calorimeter trigger is split in two layers.
+The first one receives, calibrates, and sorts the \acp{TP} provided by the \ac{HF}, \ac{ECAL} and \ac{HCAL} subdetectors.
+The second layer reconstructs and calibrates physics objects such as electrons and photons, tau leptons, jets, and energy sums.
+It should be noted that the calorimeter trigger cannot distinguish photons from electrons; they all correspond to energy deposits named /candidates/, which are formed based on information contained in groups of \num{25} crystals, the \acp{TT}.
+\ac{L1} reconstruction algorithms work with a granularity dictated by the \acp{TT}, and use discrimination quantities such as the ratio of \ac{HCAL} to \ac{ECAL} energies, or the shape of energy deposits as seen by data-aggregating sliding windows.
+The calorimeter trigger takes advantage of the \ac{TMT} mechanism, which allows the treatment of all event data in a single processing board, in contrast with the parallelism that is usually required.
+It works by converting the parallel processing in a $\Delta T$ time period of spatially decoupled regions of the detector into the sequential processing of the full detector in $N\Delta T$ time, where $N$ corresponds to the "depth" of the \ac{TMT}, equating to the number of available boards with enough memory to process one event in full.
+The benefit of using the \ac{TMT} is the removal of event region boundaries, enabling the reconstruction of a full event at once.
+It was found that the tradeoff between the additional time required to organize the data in series and the time saved thanks to the faster global processing is largely favourable [[cite:&zabi]].
+A \ac{DeMux} board then reorders, reserializes, and formats the events for the \ac{GT} processing.
+The running algorithms are fully pipelined and start processing data as soon as it is received.
 
 \paragraph{Muon Trigger}
 
-On the other hand,
-the redundancy of the muon system is used to define the Global Muon Trigger, combining
-data from DTs, CSCs, and RPCs. The Calo and Global Muon Trigger are then merged
-into the Global Trigger, used by the L1 trigger system to accept or discard the event.
-
-The muon trigger system includes three muon track finders (MTF) which reconstruct muons in
-the barrel (BMTF), overlap (OMTF), and endcap (EMTF) regions of the detector, and the global
-muon trigger (μGMT, pronounced micro-GMT) for final muon selection. The μGT finally col-
-lects muons and calorimeter objects and executes every algorithm in the menu in parallel for
-the final trigger decision.
+The redundancy of the muon system in terms of \acp{DT}, \acp{CSC} and \acp{RPC} is used to robustly define the \ac{GMT}.
+\Acp{TP} are sent out to three muon track finders which reconstruct muons in the barrel, overla[ and endcap regions of the detector, and the \ac{GMT} for final muon selection.
+The μGT finally collects muons and calorimeter objects and executes every algorithm in the menu in parallel for the final trigger decision.
 In the upgraded trigger, the BMTF, μGMT, μGT, and Layer-2 use the same type of processor
-card. The OMTF and EMTF electronic boards similarly share a common design, whereas Layer-
-1, TwinMux, and CPPF each use a different design. All processor cards, however, use a Xilinx
-Virtex-7 Field Programmable Gate Array (FPGA). Thus many firmware and control software
-components, e.g., data readout and link monitoring, can be reused by several systems, reducing
-the workload for development and maintenance.
+card.
+The OMTF and EMTF electronic boards similarly share a common design, whereas Layer-1, TwinMux, and CPPF each use a different design.
+All processor cards, however, use a Xilinx Virtex-7 Field Programmable Gate Array (FPGA).
+Thus many firmware and control software components, e.g., data readout and link monitoring, can be reused by several systems, reducing the workload for development and maintenance.
 
-\paragraph{Frontend electronics}
+In the muon trigger, the objects are μ candidates constructed based on tracks built from the hits in the muon
+chambers.
 
-\paragraph{Backend electronics}
+Finalize with \ac{GT}.
 
 * HLT
 <<sec:hlt>>
 
+- how many cpus
++ throughput
+
+
+
+The HLT is provided by a subset of the on-line processor farm @how many cpus (32,000 CPU?)@ which, in turn, passes a fraction of these events to the remainder of the on-line farm for more complete processing.
+
+The \ac{HLT} farms receives the event data via a processing chain composed of \acp{BU}, which gather data from multiple subdetectors, and \acp{FU}, which decompress, resconstruct and filter the events.
+The full granulairty information is available.
+
 Receiving as input the \acp{TP} provided by the \ac{L1}, the \ac{HLT} performs further selection, exploiting the full detector granularity on commercial CPU and GPU processors.
 Its target rate and latency are, respectively, \SI{1}{\kilo\hertz}\SI{\sim 200}{\milli\second}.
-The selected events are acquired by the \ac{DAQ} and sent for permanent on-tape storage, managed by the \ac{WLCG} [[cite:&wlcg1]].
+The selected events are acquired by the \ac{DAQ} and streamed to the Tier-0 at \ac{CERN}, where it is prepared for offline reconstruction and organised into \acp{PD}.
+The latter are defined based on collections of \ac{HLT} trigger paths, as for instance muon or $e/\gamma$ triggers.
+The reconstructed data is eventually sent for permanent on-tape storage, managed by the \ac{WLCG} [[cite:&wlcg1]].
 
 The CMS HLT performs online event selection using the full reconstruction software framework of CMS called CMSSW
 The task of the HLT is to reduce the data rate by a factor of 100, in order to fulfill the requirement of an output rate below 1 kHz.
@@ -109,18 +103,16 @@ Thanks to the advancements in the CMS software framework that can leverage more 
 Using the full detector readout, with full granularity
 reconstruction for the HCAL, ECAL, Pixel Local Reconstruction, Pixel Only Track (used to seed the full tracking and standalone for scouting) and Vertex Reconstruction have been offloaded to GPUs. As a result, the HLT timing and throughput improved by 40% and 80%, respectively. Power consumption is also reduced by 30%.
 
-The output of the HLT is then streamed to the Tier-0 at CERN, where it
-is prepared for offline reconstruction and organised into primary datasets (PDs). These
-PDs constitute collections of HLT paths, representing the selected events that the CMS
-collaboration will further process and analyse.
-
-
 Ongoing GPU developmental efforts on multiple fronts, such as migration from traditional CMS data formats to Structure of Arrays (SOAs) for better utilization of CPUs and GPUs, rewriting other algorithms (e.g. Particle Flow) to run on GPUs and porting of Heterogeneous code to Alpaka performance portability library [15][16] to reduce code duplication and dependency on a particular architecture.
 [[cite:&hlt_run3_gpus]]
 
 increase data throughput from \SI{1}{\kilo\hertz} to \SI{5}{\kilo\hertz} [[cite:&hlt_run3_gpus]]
 
+The \ac{CMS} \ac{HLT} system is constantly subject to optimizations and updates, in order to improve algorithmic efficiency to potentially increasing rates, while maintaing an excellent physics performance, despite the increasingly more challeging running conditions [[cite:&performance_calorimeter_trigger;&performance_muon_trigger]]. @could add more references@
 
+
+* Parking and scouting
+<<sec:parking_scouting>>
 
 * Alessandro :noexport:
 With a proton-proton interaction rate of about 40 MHz, the CMS detector produces a large amount of data that should be stored for offline analyses. This leads to an overwhelming volume of data that cannot be feasibly stored, as the full detector information amounts to approximately 1 Mb per event, and there is no technology nowadays able to read out and store such vast volumes of data. However, most of the collisions occurring at the LHC are not of interest to the LHC physics programme. The CMS experiment therefore demands the task of identifying events worthy of saving to the Trigger and Data Acquisition System (TriDAS) \cite{CMS:2000mvk,Sphicas:2002gg}. The trigger system is organised into two layers, the \textit{Level-1 trigger}, which reduces the rate from 40 MHz to 100 kHz with a latency time, i.e., time available for data processing, of 3.8~$\mu s$, and the \textit{High-Level Trigger} (HLT), which reduces further the rate down to 1 kHz with a latency time of 300 ms.

@@ -29,3 +29,72 @@ A high-efficiency central tracking system was another fundamental requirement.
 The tracker is essential for momentum measurement, particle identification, and vertex reconstruction.
 To achieve precise momentum measurement, a powerful magnet was necessary, leading to the use of superconducting technology.
 The CMS detector's structure and components are designed to meet these stringent requirements.
+
+\myparagraph{Electromagnetic calorimeter}
+
+The CMS ECAL is a scintillating lead-tungstate crystal calorimeter, with a silicon strip preshower detector in the forward region that provides precise measurements of the energy and the time-of-arrival of electrons and photons.
+The electromagnetic calorimeter (ECAL) of the CMS detector provides a highly efficient and accurate reconstruction of photons and electrons over a wide range of energies from low-energy electrons (5 GeV) typ-
+ical of multilepton events, to electroweak-scale energies (Higgs and W/Z bosons), up to the
+TeV scale typical of high-mass resonance searches. The ECAL also measures energy deposits
+from hadrons and the electromagnetic component of jets contributing to jet energy and missing
+transverse momentum (pmissT ) measurements. The ECAL provides precise time-of-arrival mea-
+surements of electromagnetic showers, used in the rejection of backgrounds with a broad time
+distribution, such as electronic noise and pp interactions in preceding and subsequent bunch
+crossings. Precise time measurements can be used to identify new particles with long lifetimes,
+typically larger than 1 ns, predicted by certain theories beyond the standard model [[cite:&performance_calorimeter_trigger]].
+
+
+\myparagraph{Muon Chambers}
+
+\Ac{CMS} is specifically optimized for muon measurements, which is performed by \acp{DT} in the barrel region and \acp{CSC} in the forward region.
+\Acp{RPC} are also available for triggering and redundancy.
+The entire system is based on gaseous detectors, and is located outside the solenoid, where the distance to the \ac{PV} is large enough so that only muons are expected.
+Indeed, muons produced at the \ac{LHC}, with energies ranging from a few \si{\MeV} to several \si{\GeV}, are the closest a particle becomes from being a \ac{MIP} (see [[ref:fig:muon_dedx]]), and thus traverse large quantities of matter remaining mostly undisturbed.
+In particular, they are not stopped by the calorimeters.
+We note that muons have a mass \num{\sim 200} times larger than the electrons, rendering bremsstrahlung effect comparatively minor.
+The barrel section of the muon chambers is composed of four muon stations interleaved with the iron of the yoke, which provide mechanical support.
+The \SI{\sim 1.8}{\tesla} magnetic return flux can thus be used to measure muon momenta, independently from the tracker.
+A dedicated muon based trigger is thus possible, and combined muon position and $\pt$ measurements with the tracker becomes a very powerful tool.
+However, the extreme proximity to the return yoke also creates negative effects, namely the presence of \ac{EM} showers induced by muon bremsstrahlung, which degrades momentum resolution.
+A highly redundant muon system is therefore found ideal to preserve physics performance.
+We can indeed find \acp{RPC} present both in the barrel, together with \acp{DT}, and in the endcaps, together with \acp{CSC}.
+The redundancy also plays a role in reducing the impact from acceptance blind spots introduced by the support mechanisms and cabling of such large detectors cite:&trigger_tdr_phase1_vol1.
+The structure of the muon chambers, including future upgrades, is shown in [[ref:fig:cms_muon_slice]].
+
+#+NAME: fig:muon_dedx
+#+CAPTION: Mass stopping power for positive muons in \ch{Cu} as a function of $\beta\gamma \equiv \text{p}/\text{M}$ or energy, with $\text{p}$ being the momentum and $\text{M}$ the energy, over \num{12} orders of magnitude in energy. Muons produced at the \ac{LHC} behave similarly to \acp{MIP}. Solid curves indicate the total stopping power. Vertical bands indicate boundaries between different approximations. The mass stopping power in the radiative region is not simply a function of $\beta\gamma$. Further discussion available in [[cite:&PDG Chpt. 34]], where the figure was taken.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/StoppingPower.pdf]]
+#+END_figure
+
+\paragraph{Drift Tubes:}
+Present in the barrel section, they consist on drift chambers with the goal of providing position resolutions of the order of \SI{100}{\micro\meter}.
+A single \SI{4}{\cm}-wide tube contains a stretched wire within a gas volume.
+When a charged particle passes through the gas, it knocks electrons off the gas atoms.
+The electrons drift along the electric field's direction, reaching the anode and producing a signal.
+The \acp{DT} ensure a constant drift velocity along the entire drift path, which enables the identification of the two-dimensional point in space where the charged particle, a muon in this context, crossed.
+Each \ac{DT} module range from \num{2}\times\SI{2.5}{\meter\squared} to \num{4}\times\SI{2.5}{\meter\squared} in size, and is composed of two or three \acp{SL}.
+Each module contains in turn four \ch{Al} layers of staggered \acp{DT}.
+A \ac{SL} thus provides four two-dimensional points to measure the muon's position.
+\Acp{SL} within a module are aligned in two perpendicular directions, which allows a three-dimensional measurement of the position of the muon track.
+
+\paragraph{Cathode Strip Chambers:}
+Stationed in the endcaps, these detectors are multiwire proportional chambers with a segmented cathode readout.
+
+\Acp{CSC} consist of arrays of positively-charged wires perpendicular to negatively-charged \ch{Cu} strips, all within a gas volume.
+When muons pass through, they knock electrons off the gas atoms.
+Both displaced electrons and ions follow the electric fields, creating signals in the wires and strips, respectively.
+The relative positioning of wires and strips enables a 2D position measurement for each passing muon.
+The existence of six layers per \ac{CSC} module significantly increases the precision of the measurement.
+
+The charges induced in the cathode strips are used to obtain a precise coordinate along the wires.
+Each chamber includes six detecting layers where the strips run radially.
+The resolution for one layer is in the \num{80} to \SI{450}{\micro\meter} range, and approaches \SI{50}{\micro\meter} when combined.
+
+https://cms.cern/detector/detecting-muons
+
+\paragraph{Resistive Plate Chambers:}
+They are present in both the barrel and in the endcap.
+All muon stations are equipped with at least one \ac{RPC}, but two are present in inner barrel regions to compensate for the lower resolution of low $\pt$ muons.
+The low $\pt$ reach of the \ac{CMS} muon trigger is \SI{\sim 4}{\GeV} in the barrel and \SI{\sim 2}{\GeV} in the endcaps.

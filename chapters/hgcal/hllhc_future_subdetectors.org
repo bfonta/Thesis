@@ -1,17 +1,38 @@
 <<sec:hllhc_future_subdetectors.org>>
 
-* Pixels
+List all subdetector upgrades in \ac{CMS}.
+
+\paragraph{Pixels}
 + New Layer 1 at 29mm from the beamline
-* Muons 
-* HCAL
+
+\paragraph{MTD}
+[[cite:&mtd_tdr;&mtd_timing_plot]]
+
+\paragraph{HGCAL Nose}
+very forward portion of the endcap calorimeter covering pseudorapidity values between 3 and 4.2, locate in front of the \ac{HF}, very similar to \ac{HGCAL} \SI{4.6}{\mega\gray} maximum absorbed dose and \SI{2e16}{\nequiv}, both twice as large as \ac{HGCAL}'s values, good for VBS scattering measurement of longitudinally polarized channels (two very forwards jets), also good for VBF production of H and HH
+
+\paragraph{HGCAL}
+A detailed description is provided in [[ref:sec:hgcal_intro]].
+
+\paragraph{HCAL}
 + in HCAL hybrid photodiodes were replaces by SiPMs (in Run1)
 + HCAL brings new depth and timing information
-* Bril
-+ lumi measurements are challenging
-+ uncertainty of 1.4% in 2022
-* L1
+
+\paragraph{Muons}
+
+\paragraph{GEM}
+After the introduction of GE1/1 superchambers in \run{3}, two additional GEM detector types will be installed before the start of the \ac{HL-LHC}. The first, named GE2/1, consists on superchambers similar to the already installed GE1/1 superchambers, but larger, covering \num{20} degrees in \ac{phi}. The \ac{eta} coverage will also be slightly extended, from \num{2.15} to \num{2.4}. The second type, called \ac{ME0}, refers to superchambers located closer to the beamline, at $2.0 < |\eta| < 2.8$, which also span \num{20} degrees in \ac{phi} [[cite:&gem_trigger_data_format;&gem_tdr]].
+It will be installed on the back of \ac{HGCAL}.
+
+\paragraph{L1}
 + Folded event building in Run3
 + GPUs in Run3 (and replace CUDA by Alpaka)
 + using PNet in HLT
 + special paths for LLPs
 + scouting
+
+\paragraph{BRIL}
++ lumi measurements are challenging
++ uncertainty of 1.4% in 2022
+
+\paragraph{...}
