@@ -64,6 +64,8 @@
 # Text
 #+LATEX_HEADER: \newcommand{\run}[1]{Run-#1}
 #+LATEX_HEADER: \newcommand{\phase}[1]{Phase-#1}
+#+LATEX_HEADER: \newcommand{\ip}[1]{IP#1}
+#+LATEX_HEADER: \newcommand{\longshut}[1]{Long Shutdown #1}
 #+LATEX_HEADER: \newcommand{\down}[1]{\textsubscript{#1}}
 #+LATEX_HEADER: \newcommand{\up}[1]{\textsuperscript{#1}}
 #+LATEX_HEADER: \newcommand{\logicor}[1]{\texttt{logical~OR}}
@@ -78,6 +80,7 @@
 #+LATEX_HEADER: \newcommand{\boostcat}{\textbf{boosted}}
 
 # Particles
+#+LATEX_HEADER: \newcommand{\egamma}{$e/\gamma$}
 #+LATEX_HEADER: \newcommand{\jpsi}{$J/\psi$}
 #+LATEX_HEADER: \newcommand{\tauh}{$\tau_{\text{h}}$}
 
