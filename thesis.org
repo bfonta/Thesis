@@ -205,6 +205,7 @@
 [[bibliographystyle:unsrt]]
 [[bibliography:
 ~/dot-emacs/bibliography/references/higgs.bib,
+~/dot-emacs/bibliography/references/gpu.bib,
 ~/dot-emacs/bibliography/references/l1.bib,
 ~/dot-emacs/bibliography/references/mtd.bib,
 ~/dot-emacs/bibliography/references/mc_generation.bib,

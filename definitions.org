@@ -19,6 +19,7 @@
 #+LATEX_HEADER: \newcommand{\mt}{m_{t}}
 #+LATEX_HEADER: \newcommand{\mw}{m_{\text{W}}}
 #+LATEX_HEADER: \newcommand{\pt}{p_{\text{T}}}
+#+LATEX_HEADER: \newcommand{\htvar}{H_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\sint}{\sin\theta_{W}}
 #+LATEX_HEADER: \newcommand{\thw}{\theta_{\text{W}}}
 #+LATEX_HEADER: \newcommand{\httt}{H_{\text{T}}}
@@ -66,6 +67,7 @@
 #+LATEX_HEADER: \newcommand{\phase}[1]{Phase-#1}
 #+LATEX_HEADER: \newcommand{\ip}[1]{IP#1}
 #+LATEX_HEADER: \newcommand{\longshut}[1]{Long Shutdown #1}
+#+LATEX_HEADER: \newcommand{\bphys}{B-Physics}
 #+LATEX_HEADER: \newcommand{\down}[1]{\textsubscript{#1}}
 #+LATEX_HEADER: \newcommand{\up}[1]{\textsuperscript{#1}}
 #+LATEX_HEADER: \newcommand{\logicor}[1]{\texttt{logical~OR}}

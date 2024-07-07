@@ -200,6 +200,7 @@ The code enables exponentially faster prototyping, testing and optimization, whi
 + [[cite:&hlttdr]] (I wrote Section 12.3)
 + ECON-D does zero suppression
 + split between on detector electronics and outside FPGAs is also related tothe cost and limitation of optical links available [[cite:&zabi]]
++ mention briefly the updates at the level of the HLT for Phase-2
   
 ** Reconstruction code
 Given its location and number of active sensors, data rates of \SI{\sim 100}{\tera\byte\per\second} are expected.
