@@ -10,13 +10,6 @@ Each \ac{GEM} chamber is made of three \ac{GEM} foils, and in total \num{36} sup
 The greatest benefit of the early installation of the GE1/1 is to improve the \ac{L1}
 muon trigger during \ac{LHC} running before the installation of a new silicon tracker and its associated trigger [[cite:&gem_trigger_data_format;&gem_tdr]].
   
-#+NAME: fig:muon_system_slice
-#+ATTR_LATEX: :width 1.\textwidth
-#+CAPTION: Transverse beam interaction slice region of the to the CMS muon detector, detector. The showing muon and the the different charged pion sub-detectors areand how positively different charged, particles and the interact. electron is Figure negatively taken charged. Taken from [[cite:&particle_flow_cms]].
-#+BEGIN_figure
-[[~/org/PhD/Thesis/figures/hgcal/CMSslice.pdf]]
-#+END_figure
-
 #+NAME: fig:cms_muon_slice
 #+ATTR_LATEX: :width 1.\textwidth
 #+CAPTION: Schematic longitudinal view of a quadrant of the R-z cross-section of the \ac{CMS} detector during the \ac{HL-LHC}. All muon subdetector are shown, including future additions: \acp{DT} (yellow), \acp{CSC} (green), \acp{RPC} and \acp{GEM}. Additions on the muon side feature the GE2/1 and \ac{ME0} superchambers, which are part of \acp{GEM}, and the \acp{iRPC}. \ac{ME0} will be installed on the back of \ac{HGCAL}. Pseudorapidity values are given with dashed lines, and some values are highlighted. Adapted from [[cite:&gem_tdr]]. 

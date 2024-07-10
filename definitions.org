@@ -34,10 +34,13 @@
 #+LATEX_HEADER: \newcommand{\bspsiphi}{B_{s} \rightarrow J/\psi \phi}
 #+LATEX_HEADER: \newcommand{\ggtt}{$\gamma\gamma\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hgg}{H $\rightarrow$ $\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\hhbbbbtt}{HH $\rightarrow$ bbbb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hhbbbb}{HH $\rightarrow$ bbbb}
 #+LATEX_HEADER: \newcommand{\hhbbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\hhbbtt}{HH $\rightarrow$ bb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hhbbzz}{HH $\rightarrow$ bbZZ}
+#+LATEX_HEADER: \newcommand{\hhhbbbbbb}{HHH $\rightarrow$ bbbbbb}
+#+LATEX_HEADER: \newcommand{\hhhbbbbtt}{HHH $\rightarrow$ bbbb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\reshhbbtt}{X $\rightarrow$ HH $\rightarrow$ bb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\reshybbtt}{X $\rightarrow$ HY $\rightarrow$ $\tau\tau$bb}
 #+LATEX_HEADER: \newcommand{\tautrimuon}{\tau \rightarrow \mu\mu\mu}
@@ -65,6 +68,7 @@
 # Text
 #+LATEX_HEADER: \newcommand{\run}[1]{Run-#1}
 #+LATEX_HEADER: \newcommand{\phase}[1]{Phase-#1}
+#+LATEX_HEADER: \newcommand{\tier}[1]{Tier-#1}
 #+LATEX_HEADER: \newcommand{\ip}[1]{IP#1}
 #+LATEX_HEADER: \newcommand{\longshut}[1]{Long Shutdown #1}
 #+LATEX_HEADER: \newcommand{\bphys}{B-Physics}

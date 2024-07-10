@@ -1,29 +1,46 @@
 <<sec:lhc_experiments>>
 
+tunnel facility excavated for the LEP collider
+
 In the following we provide a summary of some of the most emblematic physics experiments at the \ac{LHC}, before describing the \ac{CMS} detector in ref:sec:cms_detector.
-
-\paragraph{NA62}
-The NA62 experiment operates a 27X0 (1.25 m) deep LKr calorimeter at CERN’s SPS, which earlier served the predecessor experiment NA48 [4].
-Its em energy resolution was measured with electrons at high energies (10–80 GeV).
-[[cite:&wigmans2]]
-
-\paragraph{ALICE}
-+ mention the triggerless readout system [[cite:&alice1;&alice2]]
+As shown in [[ref:fig:cern_acc_complex]], the \ac{LHC} presents four \acp{IP} where the proton beams currently converge in underground experimental caverns (1, 2, 5 and 8).
+Other \acp{IP} were used by the old \ac{LEP} experiments: the \ac{ALEPH} at \ip{4} and the \ac{OPAL} at \ip{6}.
+\Acp{IP} for \ac{L3} (\ip{2}) and \ac{DELPHI} (\ip{8}) were reused by \ac{ALICE} and the \ac{LHCb}, respectively [[cite:&lhc_operation]].
 
 \paragraph{ATLAS}
-+ General-purpose detector. [[cite:&atlas_collab]]
-+ "trigger-level analysis”" mode, similar to scouting, and "delayed stream" similar to parking [[cite:&atlas_delayed_stream]]
-+ The ATLAS electromagnetic calorimeter
-[103] uses a lead/liquid argon sampling technique, with an ‘accordion’ geometry,
-and is located outside of the inner solenoid. The liquid argon technique was chosen
-for its immunity to radiation, its intrinsic stability and linearity of response, and its
-relative ease of longitudinal and transverse segmentation. Its more modest intrinsic
-resolution is a limiting factor at medium and low energies. The calorimeter features three segments in depth, the first one having an extremely fine segmentation in pseudorapidity (0.003) to allow separation between prompt photons and photons from π0 decays up to pT ~ 70 GeV/c, the interesting range for the Higgs boson search in the γγ decay mode.
-The calorimeter is preceded by a presampler, located in the same cryostat, to
-correct for the loss of energy of electrons and converted photons in the inner detector
-material, in the solenoid and cryostat front walls (see Table 6.5). The barrel part,
-consisting of two cylinders, and the two end-cap wheels provide uniform azimuthal
-coverage despite being built of 16 (8) modules per cylinder (wheel) (Fig. 6.46). [[cite:&calorimetry_fabjan]]
+\Ac{ATLAS} [[cite:&atlas_collab]] is, with \ac{CMS}, one of the two general-purpose detectors at the \ac{LHC}.
+It sits at a total length of \SI{46}{\meter}, a diameter of \SI{25}{\meter}, and a weight of \SI{7e3}{\tonne}.
+It comprises a series of concentric and hermetic detection layers to measure the different kinds of particles produced at the \ac{PV}.
+The \ac{ID} is the first of such detectors, devised to measure the direction, momentum and charge of charged particles.
+It includes a Pixel Detector, a \ac{SCT}, and a \ac{TRT}.
+The \num{\sim 92e6} \ac{Si} pixels are located just \SI{3.3}{\cm} away from the beamline, spread across four detection layers, and reach a \SI{10}{\micro\meter} precision.
+The \ac{SCT} follows, containing \num{\sim 6e6} strips, for a total of \SI{60}{\meter\squared} of silicon material.
+It reaches a precision of \SI{25}{\micro\meter}.
+The last component of the \ac{ID} is the \ac{TRT}, which uses the different drift-tube gaseous technology, similar to what is present in the \ac{CMS} muon chambers.
+The \ac{TRT} exploits the production of transition radiation to extract information on the particle type.
+Since the radiation is proportional to the particle mass, lighter particles will emit more photons.
+Separating electrons from hadrons thus becomes possible.
+A central \ac{NbTi} solenoid magnet surrounds the \ac{ID}, and provides the \SI{2}{\tesla} needed to bend the trajectories of charged tracks.
+Encircling the solenoid, a homogeneous liquid \ch{Ar} calorimeter serves as electromagnetic calorimeter [[cite:&calorimetry_fabjan]]. 
+The usage of noble liquids is a common choice in calorimeters due to their radiation resistant properties, ease of replacement, and good response uniformity.
+\ch{Ar} in particular, despite the not-so-short radiation length, is cheap, and thus easily replaceable in the advent of contamination.
+It also provides an intrinsically stable and linear energy response, and is relatively easy to segment in the longitudinal and transversal directions.
+The \ac{ATLAS} calorimeter notably features an "accordion" geometry with a honeycomb pattern, and works by ionisation.
+This particular geometry is motivated by the desire to eliminate projective azimuthal cracks [[cite:&accordion_atlas]].
+It is interesting to note that around half the signal comes in the form of scintillation light due to the recombination of electron-ion pairs.
+However, scintillation readouts is not included due to technical and geometrical challenges when extracting both charge and light signals.
+An excellent energy resolution can nevertheless be achieved [[cite:&fabiola_calorimetry]].
+The calorimeter features three segments in depth, the first having an extremely fine segmentation of 0.003 along \ac{eta}, to clearly separate prompt from $\pi^{0}$ photons up to $\pt\sim\!70\si{\GeV}$.
+This was optimized for the \hgg{} analysis.
+The calorimeter is preceded by a presampler which corrects the electron and positron energy loss due to upstream material, which includes the solenoid.
+To keep the argon liquid, the calorimeters are kept at \SI{-184}{\degree}.
+A tile \ac{HAD} calorimeter follows, made of alternating steel absorber and active \ac{Sci} plastic layers, read out by \acp{PMT}.
+Around \num{420000} tiles are present, weighting almost \SI{2900}{\tonne}.
+Next, the outer regions of \ac{ATLAS} are taken by a large muon spectrometer.
+Five different subdetectors provide precise (\SI{\sim 100}{\micro\meter}) and fast (\SI{\sim 2.5}{\micro\second}) muon momentum measurements: \acp{MDT}, \acp{RPC}, \acp{TGC}, \acp{sTGC} and Micromegas.
+The muon trajectories are deviated thanks to additional magnets, including two endcap magnets and the largest toroidal magnetic ever built, located in the center of the experiment, which took almost a year to install.
+The magnets provide up to \SI{3.5}{\tesla}, and are located in between the muon subdetectors.
+Finally, a brief mention to the two-tiered trigger system: \ac{ATLAS} has implemented "trigger-level analysis" and "delayed stream" modes, which are similar to the \ac{CMS} scouting and parking strategies, respectively, discussed in [[ref:sec:cms_trigger_system]] [[cite:&atlas_delayed_stream]].
 
 \paragraph{LHCb}
 
@@ -48,16 +65,19 @@ Some result bforuhg forward by \ac{SMOG} include fixed-target \jpsi{} and $D^{0}
 
 + mention "turbo" mode similar to scouting [[cite:&lhcb_turbo]]
 
+\paragraph{NA62}
+The NA62 experiment operates a 27X0 (1.25 m) deep LKr calorimeter at CERN’s SPS, which earlier served the predecessor experiment NA48 [4].
+Its em energy resolution was measured with electrons at high energies (10–80 GeV).
+[[cite:&wigmans2]]
+
+\paragraph{ALICE}
++ mention the triggerless readout system [[cite:&alice1;&alice2]]
 
 [[cite:&bb_pairs1;&bbpairs2]]
 
 * Jona :noexport:
-As reported in Figure \ref{fig:CCC-v2022}, the LHC accelerator presents four interaction points where the beamlines converge and the proton beams collide. Being placed in the tunnel facility excavated for the LEP collider, the LHC IPs inherit the numbering of the previous accelerator, i.e. IP1, IP2, IP5, and IP8. In all four IPs, collisions happen at the heart of detectors, which can be seen as the cathedrals of modern high-energy physics. As detailed in the following, four main experiments are placed in the LHC underground caverns, complemented by five additional detectors at IP 1, 5, and 8.
     
 \begin{itemize}
-    \item \textbf{A Toroidal LHC ApparatuS (ATLAS)} \\
-    The ATLAS experiment \cite{ATLAS_2008} is located at IP1; it is one of the two general-purpose detectors used in the discovery of the Higgs boson, and it was designed to perform a large array of physics studies and searches. The conceptual layout of the ATLAS detector draws an analogy with the layers of an onion, encompassing a series of subdetectors organized in sequential cylindrical strata, each designed to detect different types of particles. The innermost layers are the inner tracker and the transition radiation tracker, which feature mixed silicon- and gaseous-based technology. The following layer is a solenoid magnet providing a $2\unit{T}$ axial field parallel to the beam line. The subsequent layers are the two sampling calorimeters: the inner liquid-argon electromagnetic calorimeter, with its characteristic accordion structure, and the outer hadronic steel and scintillating tiles calorimeter. The final layer is constituted by the muon gaseous chambers, which cover the entire detector surface. The whole detector is encapsulated by several toroidal magnets, which provide a magnetic field up to $4\unit{T}$ around the solenoid and give ATLAS its name. The ATLAS detector is the largest of those at the LHC, tallying a total length of $46\unit{m}$, a diameter of $25\unit{m}$, and a weight of $7\cdot10^{3}$ tonnes.
-
     \item \textbf{Large Hadron Collider forward (LHCf)} \\
     The LHCf experiment \cite{LHCf_2008} is located at IP1 and shares the experimental cavern of ATLAS; its goal is the perfection of the hadron interaction models used in the study of extremely high-energy cosmic rays. It comprises two identical detectors located $\pm140\unit{m}$ from the collision point. This setup ensures the collection of data at zero-degree collision angle via the two imaging calorimeters made of tungsten plates, plastic scintillators, and position-sensitive sensors. This experiment is the smallest on the LHC accelerator, with each detector weighting $\sim40\unit{kg}$ for a total volume of $30\times80\times10\cm^{3}$.
 

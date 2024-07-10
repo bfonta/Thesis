@@ -1,0 +1,140 @@
+<<sec:offline_reco>>
+
+Reconstruction is the operation of constructing physics quantities from the raw data collected
+in the experiment.
+As described in [[ref:sec:cms_detector]], similarly to other \ac{HEP} experiments, \ac{CMS} follows a design consisting on surrounding the \ac{pp} interaction point by consecutive and inter-dependent detector layers in the barrel and endcap regions.
+As depicted in [[ref:fig:muon_system_slice]], particles produced at the hard collision might traverse, in order, a tracker, calorimeters, the solenoid and muon chambers, and interact differently according to their nature.
+
+The first steps with reconstruction in \ac{CMS} foresaw a somewhat rigid structure, where to a "local", detector level reconstruction, followed a "global" step still concerned only with single subdetectors, such as the tracker, calorimeters and muon chambers.
+Only the final steps, the "combination" envisaged a fully \ac{CMS}-wide reconstruction.
+
+A reconstruction relying only a few subdetectors per particle will necessarily provide a lower performance than a holistic approach.
+One could for instance reconstruct jets using solely their calorimetric energy deposits.
+As the energy resolution of the \ac{CMS} \ac{HCAL} is \SI{\sim 100}{\percent}$/\sqrt{E}$, this will lead to a poor reconstruction.
+
+
+[[cite:&old_cms_performance]]. 
+
+
+* Particle-flow
+[[cite:&particle_flow]] [[cite:&plow_milos]]
+
+Inspired by what had been done at \ac{LEP}, specifically \ac{ALEPH}, \ac{CMS} decided to adopt a different reconstruction paradigm for the first time in hadron colliders.
+Previous reconstruction ideas, based on the layered-structure present in all \ac{HEP} experiments, focused more on single physics objects, each identified by its subdetector counterpart:
+
++ muons are identified mostly based on information from the muon chambers;
++ electrons and isolated photons are measured by the \ac{ECAL};
++ jets, \ac{MET} and their properties are all measured in the \ac{ECAL} and \ac{HCAL};
++ b- and $\tau$-jet tagging exploits information from the tracker.
+
+  https://cds.cern.ch/record/2842374/files/DP2022_060.pdf
+  https://arxiv.org/pdf/1706.04965
+  https://cds.cern.ch/record/922757/files/lhcc-2006-001.pdf
+  https://lss.fnal.gov/archive/2023/conf/fermilab-conf-23-024-cms.pdf
+  https://cds.cern.ch/record/2678077/files/epjconf_quarks2018_02016.pdf https://indico.cern.ch/event/1394609/contributions/5862603/attachments/2835962/4955916/PF%20overview%20Phase2%20SW%20days.pdf
+  https://indico.bnl.gov/event/19985/contributions/78229/attachments/48591/82604/PFCMS_MAN_230713.pdf
+  
+Its the enhanced energy, position and time resolution stemming from the correlation between the above elements that characterizes the \ac{PF} approach.
+
+Some limitations are nevertheless present, and caused concern on the successful implementation of \ac{PF}, especially given the complex \ac{pp} or \ch{Pb}-\ch{Pb} environment.
+The fact that the calorimeters are placed inside the magnetic field reduces the probability of a charged particle pre-showering, facilitating the matching between tracks and energy deposits in the calorimeter.
+However, the existence of a significant amount of tracker material limits this approach.
+Additionally, the moderately granular \ac{HCAL} has a modest energy and position resolution.
+Despite not being designed with this idea in mind, \ac{CMS} seriously benefitted from it, with very substantial improvements in calorimetric resolution and response, as shown in [[ref:fig:pflow_gains]].
+Among the features that enabled a successfull \ac{PF} reconstruction at \ac{CMS}, we mention the following:
+
++ its highly-segmented tracker, producing trajectories of charged particles up to \ac{pt} \SI{\sim 1}{\TeV}, and with an efficiency of \SI{\sim 90}{\percent}, down to \SI{\sim 500}{\MeV};
++ its granular \ac{EM} calorimeter, providing a clear separation between neighbouring particles, the capability of matching calorimetric deposits with tracks, and the discrimination of different particles in jets, namely charged hadrons, neutral hadrons and photons, up to \ac{pt} \SI{\sim 1}{\TeV};
++ its strong magnetic fields, disentangling contributions from charged and neutral particles; the \SI{4.9}{\tesla\meter} bending power can be compared to \ac{ATLAS}, to the \ac{ALEPH} experiment [[cite:&aleph]] at \ac{LEP}, or to Tevatron experiments, all with less than \SI{3}{\tesla\meter}.
++ very precise muon detectors.
+  
+The jet energy is on average measured at a \SI{65}{\percent} level in the tracjer, \SI{25}{\percent} in the \ac{ECAL}, and \SI{10}{\percent} in \ac{HCAL}.
+
+#+NAME: fig:muon_system_slice
+#+CAPTION: Transverse beam interaction slice region of the to the CMS muon detector, detector. The showing muon and the the different charged pion sub-detectors areand how positively different charged, particles and the interact. electron is Figure negatively taken charged. Taken from [[cite:&particle_flow]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/detector/CMSslice.pdf]]
+#+END_figure
+
+@Explain local reco@
+
+A linking algorithm proceeds to connect \ac{PF} elements coming from different subdetectors into /\ac{PF}-blocks/, using only its $(\eta,\phi)$ nearest neighbours to reduce time complexity.
+Once a link has been found, depending on selection criteria associated to the particles being linked, a distance, or quality metric is associated to it.
+Links are established in a very detector and particle-dependent way:
+
++ *Track - cluster link*:
++ *Photons from electron bremsstrahlung*: 
++ *Cluster - cluster link*:
++ *Track - track link*:
++ *Track - muon link*:
+
+In each PF block, the identification and reconstruction sequence proceeds in the following or-
+der.
+First, muon candidates are identified and reconstructed as described in Section 4.2, and the corresponding PF elements (tracks and clusters) are removed from the PF block.
+The electron identification and reconstruction follows, as explained in Section 4.3, with the aim of collecting the energy of all bremsstrahlung photons.
+Energetic and isolated photons, converted or unconverted, are identified in the same step. The corresponding tracks and ECAL or preshower clusters are excluded from further consideration.
+
+@Resolve blocks into particles@
+
+@Post-processing@
+
+@discuss that it works well and show plot@
+
+#+NAME: fig:pflow_diagram
+#+CAPTION: Illustration of the processing steps of the \ac{PF} reconstruction. Energy deposits in the calorimeter and particle trajectories in the tracker, or "tracks", represent its building blocks. Calorimetric and track information is only merged at a later stage into blocks, from which candidates are created. The term "producer" refers to a \ac{CMSSW} processing element which produces output collections from a set of input collections.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/detector/PFlowDiagram.pdf]]
+#+END_figure
+
+
+#+NAME: fig:pflow_gains
+#+CAPTION: Jet energy response and resolution of Calor and \ac{PF} jets, as a function of the momentum of the reference jet $p_{\text{T}}^{\text{Ref}}$. The reference jet is defined as the result of the jet algorithm applied to all stable particles produced by the event generator, excluding neutrinos. Taken from [[cite:&particle_flow]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth
+[[~/org/PhD/Thesis/figures/detector/PFJetResponse.pdf]]
+#+ATTR_LATEX: :width .5\textwidth
+[[~/org/PhD/Thesis/figures/detector/PFJetResolution.pdf]]
+#+END_figure
+
+
+* Electrons
+* Muons
+* Hadronic $\tau$'s
+* Jets
+* Missing transverse energy
+
+* Alessandro :noexport:
+Essentially, six types of particles can be observed in a detector at a collider, and each of
+them has a characteristic signature based on few sub-detectors, as sketched in Fig. 2.13.
+Photons, being neutral, do not leave any signal in the tracker and go straight to the ECAL,
+where they are completely absorbed and deposit all their energy. Electrons (or positrons)
+are somehow photons’ cousins, with a similar signature. The difference is in being nega-
+tively (positively) charged; hence, their trajectory bends in the magnetic field, and they
+leave hits in the tracker. Charged hadrons, such as pions and kaons, leave a signal in the
+tracker and can initiate a shower in the ECAL, but they are then completely absorbed in
+the HCAL. Neutral hadrons feature the same signature of their charged brothers, without
+leaving hits in the tracker. Muons and neutrinos cross the detector with little or no in-
+teractions. While neutrinos escape undetected, and their presence could only be inferred
+from missing energy, muons produce hits both in the inner tracker and in the outer muon
+chambers and deposit small energy in the calorimeters. This apparent simplicity could
+lead to the implementation of a reconstruction framework that only relies on a few sub-
+detectors per particle, and indeed this has been the approach in many hadron colliders.
+For instance, one can reconstruct jets only relying on their
+ deposits in the calorimeters.
+As the energy resolution of the CMS HCAL is 100%/√E, this will lead to a poor re-
+construction. An improved energy measurement could come from trying to separate the
+individual jet particles and asking for help from the tracker, which has a better energy
+resolution. This effect can be seen in Fig. 2.14 and will be discussed later. Hence, event
+reconstruction can be significantly improved by correlating the information from all detec-
+tors to identify each final-state particle. This is the particle-flow (PF) approach [89]. This
+approach had already been used successfully at LEP, but CMS is the first experiment at
+a hadron collider employing this strategy. The CMS detector was not conceived with PF
+in mind, but it turned out to be well-suited for this purpose. It has a large magnetic field
+that effectively separates energy deposits of charged and neutral particles in jets. The fine
+granular tracker can efficiently reconstruct tracks, and the highly segmented ECAL allows
+for distinguishing energy deposits from nearby particles. The hermetic HCAL, while less segmented than the ECAL, can still separate deposits from charged and neutral hadrons.
+The low-material budget in front of the calorimeters reduces the likelihood of particles
+initiating showers before reaching them. Lastly, the excellent muon system efficiently and
+reliably reconstructs muons with high purity.

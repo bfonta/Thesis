@@ -1,4 +1,4 @@
-<<sec:cms_trigger_system.org>>
+<<sec:cms_trigger_system>>
 
 With proton beams crossing every \SI{25}{\nano\second}, and considering the average \ac{PU} measured during \phase{1} (see [[ref:fig:lhc_lumi_results]]), around \num{e9} \ac{pp} interactions are expected every second.
 Given \SI{\sim 1}{\mega\bit} zero-supressed events, a \SI{\sim 40}{\tera\bit\per\second} throughput follows.
@@ -75,34 +75,32 @@ Kinematical quantities of the candidates are exploited, such as the invariant ma
 * The High Level Trigger
 <<sec:hlt>>
 
-The HLT is provided by a subset of thousands of commercial \ac{CPU} and \ac{GPU} processors of the online farm located at the \ip{5}, running the full reconstruction software framework of \ac{CMS}, \ac{CMSSW}.
+The HLT is provided by a subset of the thousands of commercial \acp{CPU} and \acp{GPU} which constitute the online farm located at the \ip{5}, running the full reconstruction software framework of \ac{CMS}, \ac{CMSSW}.
 The goal of the \ac{HLT} is to reduce the rate from \num{100} to \SI{\sim 1}{\kilo\hertz}, while keeping the most interesting events.
 More than \num{400} trigger paths are available, targeting a broad range of physics signatures.
-Given the tight time budget of \SI{\sim 300}{\milli\second} per event, the reconstruction is performed starting from previously selected \ac{L1} seeds, which correspond to events that issued a \ac{L1A}.
+Given the tight event time budget of \SI{\sim 300}{\milli\second}, the reconstruction is performed starting from previously selected \ac{L1} seeds, which correspond to events that issued a \ac{L1A}.
 The \ac{HLT} farm processes the data starting with \acp{BU}, which gather data from multiple subdetectors, and later with \acp{FU}, which decompress, resconstruct and filter the events.
-The full granularity information is available, together with tracker information, which was absent in \ac{L1}.
-The selected events are acquired by the \ac{DAQ} and streamed to the Tier-0 at \ac{CERN}, where it is prepared for offline reconstruction and organised into \acp{PD}.
+The full granularity information is available, together with tracker information, which is absent from the \ac{L1}.
+The selected events are acquired by the \ac{DAQ} and streamed to the Tier-0 at CERN, where are prepared for offline reconstruction and organised into \acp{PD}.
 The latter are defined based on collections of \ac{HLT} trigger paths, as for instance muon or $e/\gamma$ triggers.
-The reconstructed data is eventually sent for permanent on-tape storage, managed by the \ac{WLCG} [[cite:&wlcg1]].
+The reconstructed data is eventually sent for permanent on-tape storage in \tier{0} and \tier{1} sites, managed by the \ac{WLCG} [[cite:&wlcg1]].
 
-In \run{3}, the added usage of \acp{GPU} at the \ac{HLT} improved the performance of some triggers, including an improved track seeding, which lead to an increase of the data throughput from \num{1} to \SI{5}{\kilo\hertz}.
-This is due to several advancements in \ac{CMSSW}, which can now leverage more parallelism while exploiting a new heterogeneous architecture.
-The reconstruction of several subdetectors has been offloaded to \acp{GPU}, including the \ac{HCAL}, \ac{ECAL} and some parts of the reconstruction of pixels and vertices.
+In \run{3}, the addition of \ac{GPU} processing at the \ac{HLT} improved the performance of some triggers, which lead to an increase of the data throughput from \num{1} to \SI{5}{\kilo\hertz}.
+This was due to several advancements in \ac{CMSSW}, which can now leverage more parallelism while exploiting a new heterogeneous architecture.
+\Ac{CMSSW} can now transparently switch between \ac{CPU} and \ac{GPU} implementations [[cite:&hlt_cpu_gpu_2023]].
+The reconstruction of several subdetectors has been offloaded to \acp{GPU}, including the \ac{ECAL} [[cite:&hlt_ecal_gpu]], \ac{HCAL} [[cite:&hlt_hadron_pf]], and some parts of the reconstruction of pixels and vertices, including an improved track seeding.
 As a consequence, the \ac{HLT} timing and throughput improved by 40% and 80%, respectively, and the computing power consumption was reduced by 30%.
-Other potential improvements are currently being explored, such as the migration from traditional \ac{CMS} data formats to \acp{SoA} for better utilization of \acp{CPU} and \ac{GPU}, the rewriting of other algorithms having \ac{GPU} parallelism in mind, and the porting of heterogeneous code to the Alpaka performance portability library [[cite:&alpaka1;&alpaka3;&alpaka2]] to reduce code duplication and dependency on a particular vendor architecture [[cite:&hlt_run3_gpus]].
+Other potential improvements are currently being explored, such as the migration from traditional \ac{CMS} data formats to \acp{SoA} for better \ac{CPU} and \ac{GPU} utilization, the rewriting of other algorithms having \ac{GPU} parallelism in mind, and the porting of heterogeneous code to the Alpaka portability library [[cite:&alpaka1;&alpaka2;&alpaka3;&hlt_alpaka]] to reduce code duplication and dependency on the architecture of a particular vendor [[cite:&hlt_run3_gpus]].
 
-The \ac{CMS} \ac{HLT} system is constantly subject to optimizations and updates, in order to improve algorithmic efficiency to potentially increasing rates, while maintaing an excellent physics performance, despite the increasingly more challeging running conditions [[cite:&performance_calorimeter_trigger;&performance_muon_trigger]].
+The \ac{CMS} \ac{HLT} system is constantly subject to updates and optimizations, in order to improve algorithmic efficiency and increase allowed rates, while maintaining an excellent physics performance, despite the increasingly more challeging running conditions [[cite:&performance_calorimeter_trigger;&performance_muon_trigger]].
 
 * Parking and Scouting
 <<sec:parking_scouting>>
 
-The quest for ever higher event rates with the current technology, and the experimental benefits that can be derived, has lead \ac{CMS} to explore the non-standard use of triggers.
-There are various constraints imposed on the trigger system and on the data processing framework which limit the number of events that can be selected, recorded and analyzed.
-Some examples include the \SI{\sim 100}{\kilo\hertz} \ac{L1} acquisition rate, which is limited by dead time, the \ac{HLT} latency, which is constrained by the available number and speed of processing cores, or the available permanent storage space, which is distributed across disks and tape, the former providing faster access but reduced storage size.
-The absolute and relative cost of all these components also has a strong impact on the overall capacity and structure of the computing farm.
-
-+ mention expected improvements
-+ finalize with future benefits on H physics, specifically hh and hhh
+The quest for ever higher event rates given current technology limitations and experimental benefits that can be derived, has lead \ac{CMS} to explore the non-standard use of triggers.
+There are various constraints imposed on the trigger system and data processing framework which limit the number of events that can be selected, recorded and analyzed.
+Some examples include the \SI{\sim 100}{\kilo\hertz} \ac{L1} acquisition rate, which is limited by the need to avoid losing recording time if the readout system is not ready for a new event, the \ac{HLT} latency, which is constrained by the available number and speed of processing cores, or the available permanent storage space, which is distributed across disks and tape, the former providing faster access but reduced storage size.
+The absolute and relative cost of all these components has a strong impact on the overall capacity and structure of the computing farm.
 
 #+NAME: fig:parking_scouting
 #+CAPTION: A schematic view of the typical \run{2} data flow during 2018, showing the data acquisition strategy with scouting and parking data streams, along with the standard data stream. A value of $\mathcal{L}_{\text{inst}} = 1.2 \times 10^{34}\,\si{\cm\squared\per\second}$ over a typical 2018 fill, corresponding to an average pileup of \num{38}, is considered. The average collision rate lies below the \SI{40}{\mega\hertz} frequency due to occasional but required gaps between consecutive bunch trains. The parking and scouting data streams have been significantly extended during \run{3}. Taken from [[cite:&parking_scouting1]].
@@ -119,18 +117,25 @@ The essential idea of data parking is to record as much data as possible, and pr
 One of the positive effects of this strategy is to lower the kinematical thresholds used by algorithms, and thus increase the acceptance to low-mass physics signals.
 To sustain the high rates which necessarily arise from lower thresholds, the data is written directly to tape, usually during the latest stages of an \ac{LHC} fill when the rate is substantially decreased due to lower instantaneous luminosities.
 
-\ac{CMS} has exploited parking strategies since its inception to explore \ac{NP} in \ac{VBF}, Higgs, \bphys{} or \ac{SUSY} scenarios.
-During \run3{} an enhanced B-parking program has been envisaged, with the goal of collecting dimuon and dielectron final states from h hadron decays, in the wake of what has been done in \run{2}.
+\ac{CMS} has exploited parking strategies since its inception to explore \ac{NP} in \ac{VBF}, Higgs, \bphys{} and \ac{SUSY} scenarios.
+During \run{3} an enhanced B-parking program has been envisaged, with the goal of collecting dimuon and dielectron final states from b hadron decays, in the wake of what had been done in \run{2}.
 The physics goal is strongly centered around searches for \ac{LFV}.
 Additionally, three new parking strategies have been introduced:
 
-+ *VBF*: The VBF production mode of the Higgs boson drives the sensitivity of some of its decay modes. It also brings an important constraing power to \ac{EFT} coupling measurements, and provides unique acess to \k2v{} in dihiggs processes. VBF trigger offer an alternative to raise thresholds to keep rates under control: the selection of the two forward jets.
++ *VBF*: The VBF production mode of the Higgs boson drives the sensitivity of some of its decay modes. It also brings an important constraing power to \ac{EFT} coupling measurements, and provides unique acess to $\kvv$ in di-Higgs processes. \Ac{VBF} triggers offer an alternative to raise thresholds to keep rates under control: the selection of the two forward jets.
 
 + *\acp{LLP}*: Particles with long lifetimes are central to many current \ac{BSM} scenarios, and but imply large displacements relative to the \ac{PV}, which renders its final states often inadequate to be measured by standard trigger techniques. A group of dedicated paths has thus been introduced, targeting displaced jets and dijets, taking into account their time delay with resppect to prompt decays.
 
-+ *HH*: As discussed in [[ref:sec:dihiggs]], the study of the Higgs boson self-coupling is one of, if not the most important measurement to be pursued at the \ac{LHC} in the foreseeable future. \ac{CMS} has successfully deployed the \ac{PNet} b-tagging discriminant at \ac{HLT} level, which made possible the loosening of jet $\pt$ thresholds, $\htvar$ selections and b-tagging requirements. The \ac{PNet} addition brought a wonderful signal efficiency improvement of
-  https://cds.cern.ch/record/2868787/
-  @update above with DPS note from Louis@
++ *HH*: As discussed in [[ref:sec:dihiggs]], the study of the Higgs boson self-coupling is one of the most relevant, if not the most important measurement to be pursued at the \ac{LHC} in the foreseeable future. \ac{CMS} has successfully deployed the \ac{PNet} b-tagging discriminant at \ac{HLT} level, which made possible the loosen jet $\pt$ thresholds, $\htvar$ selections and b-tagging requirements. These updates were combined with a reduction of the $\htvar$ requirement at \ac{L1}. Di-Higgs and triple-Higgs analysis benefit enormously, with signal efficiency improvements as shown in [[ref:fig:hh_parking_improv]].
+
+#+NAME: fig:hh_parking_improv
+#+CAPTION: Trigger efficiencies as a function of the invariant di-Higgs mass $\mhh$ for simulated \hhbbbb{}  samples considering the full \run{2}, 2022 and 2023 data-taking periods (left) and for \hhbbtt{} in 2023 only (right). $\kl=1$ is used for both figures. Very significant efficiency increases are also observed in the \hhhbbbbbb{} and \hhhbbbbtt{} analysis. Taken from [[cite:&parking_hh_twiki]]; also available in [[cite:&parking_scouting_run3_cms]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/parking_bbbb_accept_gain.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/parking_bbtt_accept_gain.pdf]]
+#+END_figure
 
 \paragraph{Scouting:}
 The offline reconstruction in \ac{CMS} notably increases the quality of the collected dataset.

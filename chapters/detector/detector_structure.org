@@ -29,11 +29,15 @@ A high-efficiency central tracking system was another fundamental requirement.
 The tracker is essential for momentum measurement, particle identification, and vertex reconstruction.
 To achieve precise momentum measurement, a powerful magnet was necessary, leading to the use of superconducting technology.
 The CMS detector's structure and components are designed to meet these stringent requirements.
-In the following, we describe all subdetectors in detail.
+In the following, we describe all subdetectors in detail, ordered by distance to the \ac{PV}.
 
 \myparagraph{Electromagnetic calorimeter}
 
 @TODO@
+The lead tungstate (PbWO4) electromagnetic calorimeter of the CMS experiment is located
+inside the 3.8 T solenoid magnet and consists of 61200 crystals in the barrel section and 7324
+crystals in each of the two endcaps, for a total of 75848 channels.
+
 The CMS ECAL is a scintillating lead-tungstate crystal calorimeter, with a silicon strip preshower detector in the forward region that provides precise measurements of the energy and the time-of-arrival of electrons and photons.
 The electromagnetic calorimeter (ECAL) of the CMS detector provides a highly efficient and accurate reconstruction of photons and electrons over a wide range of energies from low-energy electrons (5 GeV) typical of multilepton events, to electroweak-scale energies (Higgs and W/Z bosons), up to the
 TeV scale typical of high-mass resonance searches. The ECAL also measures energy deposits
@@ -44,6 +48,19 @@ distribution, such as electronic noise and pp interactions in preceding and subs
 crossings. Precise time measurements can be used to identify new particles with long lifetimes,
 typically larger than 1 ns, predicted by certain theories beyond the standard model [[cite:&performance_calorimeter_trigger]].
 
+\myparagraph{Magnet}
+
+The large, \SI{220}{\tonne} \ch{Nb}-\ch{Ti} superconducting solenoid magnet is the defining feature of the \ac{CMS} design, delivering an axial and uniform magnetic field of \SI{3.8}{\tesla} over a \SI{12.5}{\meter} length and a \SI{3.15}{\meter} radius [[cite:&magnet_cms]].
+The radius is large enough to acommodate both \ac{EM} and \ac{HAD} calorimeters, reducing the material budget in front the calorimeters.
+This eliminates charged particle preshowers in the coil material, facilitating the matching between energy deposits and tracks.
+At normal incidence, the bending power of \SI{4.9}{\tesla\meter} a provides a strong separation between energy deposits of charged and neutral particles.
+As an example, a \SI{20}{\GeV} $\pt$ charged particle deviates \SI{\sim 5}{\cm} in the transverse plane at the surface of \ac{ECAL} (at \SI{1.29}{\meter} from the \ac{PV}), which is enough to distinguish it from a photon coming from the same direction.
+The precise bending is estimating using a 3D magnetic field map, with an accuracy of less than \SI{0.1}{\percent} [[cite:&particle_flow]].
+We can roughly get the right numbers by applying the $R=p/qB$ formula, where $R$ is the radius of the trajectory in the transverse plane, $q$ the particle's charge and $B$ the value of a constant magnetic field.
+
+The magnet is cooled by liquid \ch{He}, and must thus operate at \SI{-269}{\degree}.
+It is for this reason enclosed in a vacuum vessel made of two stainless steel cylinders.
+In order to contain the magnetic flux, the solenoid is surrounded by a return yoke, which is conveniently interleaved with the muon chambers to additionally provide structural support and increase muons momentum resolution.
 
 \myparagraph{Muon Chambers}
 

@@ -67,13 +67,8 @@
 #+INCLUDE: "chapters/detector/detector_structure.org"
 ** The CMS Trigger System
 #+INCLUDE: "chapters/detector/cms_trigger_system.org"
-** Offline identification and reconstruction of physics objects
-*** Particle-flow
-*** Electrons
-*** Muons
-*** Hadronic $\tau$'s
-*** Jets
-*** Missing transverse energy
+** Offline Reconstruction
+#+INCLUDE: "chapters/detector/offline_reco.org"
 ** Monte Carlo generation
 #+INCLUDE: "chapters/mc_generation.org"
 + include an event display of 2018
@@ -206,7 +201,7 @@
 [[bibliography:
 ~/dot-emacs/bibliography/references/higgs.bib,
 ~/dot-emacs/bibliography/references/gpu.bib,
-~/dot-emacs/bibliography/references/l1.bib,
+~/dot-emacs/bibliography/references/trigger.bib,
 ~/dot-emacs/bibliography/references/mtd.bib,
 ~/dot-emacs/bibliography/references/mc_generation.bib,
 ~/dot-emacs/bibliography/references/pure_software.bib,

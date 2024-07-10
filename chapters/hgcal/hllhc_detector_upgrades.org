@@ -14,7 +14,25 @@ mention VELO
 \paragraph{LBNF/DUNE}
 
 \paragraph{ALICE}
-  
+
+\paragraph{Trigger}
++ mention scouting as explained by Jona
++ CMS is planning to adopt a heterogeneous High Level Trigger (HLT) farm already in Run 3 (2022–2025), where ∼30% of the workflow will be offloaded to GPUs (50% and 80% by the end of Run 4 and 5, respectively) [[cite:&refCUDA1]]
++ One of the challenges posed to CMS by the new calorimeter is writing reconstruction code allowing its
+full exploitation. Present projections show a gap between projected CPU needs and availability at the start of the HL-LHC (Run4), as displayed in Fig. 1. The biggest contributor to CPU usage is event
+reconstruction (see Fig. 2), of which currently ∼6% is used by HGCAL. CMS plans to port
+some parts of its reconstruction to Graphics Processing Units (GPUs), which represent one of
+the most promising accelerator technologies on the market. Its adoption would allow access
+to accelerators, which become more and more present on High-Performance Computing and
+traditional grid sites. It would also be in line with the direction taken by CMS to adopt a
+heterogeneous HLT farm already in Run 3. Finally, it potentially reduces the cost of the
+computing capacity necessary to satisfy the CMS physics programme, since computation on
+GPUs might be cheaper than on CPUs. [[cite:&refCUDA2]]
+
+\paragraph{High Level Trigger}
+
+
 * Additional bibliography :noexport:
 + Velo: https://www.youtube.com/watch?v=hsLXi9QTxUo
 + https://indico.cern.ch/event/1418024/contributions/5960937/attachments/2883360/5052485/JM%20CMS%20Jun%202024.pdf
++ [[cite:&cms_offline_computing]]
