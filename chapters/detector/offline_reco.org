@@ -2,8 +2,8 @@
 
 Reconstruction is the operation of constructing physics quantities from the raw data collected
 in the experiment.
-As described in [[ref:sec:cms_detector]], similarly to other \ac{HEP} experiments, \ac{CMS} follows a design consisting on surrounding the \ac{pp} interaction point by consecutive and inter-dependent detector layers in the barrel and endcap regions.
-As depicted in [[ref:fig:muon_system_slice]], particles produced at the hard collision might traverse, in order, a tracker, calorimeters, the solenoid and muon chambers, and interact differently according to their nature.
+As described in [[#sec:cms_detector]], similarly to other \ac{HEP} experiments, \ac{CMS} follows a design consisting on surrounding the \ac{pp} interaction point by consecutive and inter-dependent detector layers in the barrel and endcap regions.
+As depicted in [[fig:muon_system_slice]], particles produced at the hard collision might traverse, in order, a tracker, calorimeters, the solenoid and muon chambers, and interact differently according to their nature.
 
 The first steps with reconstruction in \ac{CMS} foresaw a somewhat rigid structure, where to a "local", detector level reconstruction, followed a "global" step still concerned only with single subdetectors, such as the tracker, calorimeters and muon chambers.
 Only the final steps, the "combination" envisaged a fully \ac{CMS}-wide reconstruction.
@@ -19,33 +19,25 @@ As the energy resolution of the \ac{CMS} \ac{HCAL} is \SI{\sim 100}{\percent}$/\
 * Particle-flow
 [[cite:&particle_flow]] [[cite:&plow_milos]]
 
-Inspired by what had been done at \ac{LEP}, specifically \ac{ALEPH}, \ac{CMS} decided to adopt a different reconstruction paradigm for the first time in hadron colliders.
-Previous reconstruction ideas, based on the layered-structure present in all \ac{HEP} experiments, focused more on single physics objects, each identified by its subdetector counterpart:
+Inspired by what had been done at \ac{LEP}, specifically \ac{ALEPH}, and for the first time in hadron colliders, \ac{CMS} decided to adopt a different reconstruction paradigm.
+Previous reconstruction ideas, based on the layered-structure present in all \ac{HEP} experiments, focused more on single physics objects, identified by their subdetector counterpart:
 
 + muons are identified mostly based on information from the muon chambers;
 + electrons and isolated photons are measured by the \ac{ECAL};
 + jets, \ac{MET} and their properties are all measured in the \ac{ECAL} and \ac{HCAL};
-+ b- and $\tau$-jet tagging exploits information from the tracker.
-
-  https://cds.cern.ch/record/2842374/files/DP2022_060.pdf
-  https://arxiv.org/pdf/1706.04965
-  https://cds.cern.ch/record/922757/files/lhcc-2006-001.pdf
-  https://lss.fnal.gov/archive/2023/conf/fermilab-conf-23-024-cms.pdf
-  https://cds.cern.ch/record/2678077/files/epjconf_quarks2018_02016.pdf https://indico.cern.ch/event/1394609/contributions/5862603/attachments/2835962/4955916/PF%20overview%20Phase2%20SW%20days.pdf
-  https://indico.bnl.gov/event/19985/contributions/78229/attachments/48591/82604/PFCMS_MAN_230713.pdf
++ $\tau\text{-}$ and b-jet tagging exploits information from the tracker.
   
-Its the enhanced energy, position and time resolution stemming from the correlation between the above elements that characterizes the \ac{PF} approach.
-
-Some limitations are nevertheless present, and caused concern on the successful implementation of \ac{PF}, especially given the complex \ac{pp} or \ch{Pb}-\ch{Pb} environment.
-The fact that the calorimeters are placed inside the magnetic field reduces the probability of a charged particle pre-showering, facilitating the matching between tracks and energy deposits in the calorimeter.
+Its the enhanced energy, position and time resolution stemming from the optimized combination of the above elements that defines the \ac{PF} approach.
+Some limitations are nevertheless present, and caused concern on the successful implementation of \ac{PF}, especially given the complex \ac{pp} and \ch{Pb}-\ch{Pb} environments.
+The fact that the calorimeters are placed inside the magnetic field reduces the probability of a charged particle to pre-shower, facilitating the matching between tracks and energy deposits in the calorimeter.
 However, the existence of a significant amount of tracker material limits this approach.
 Additionally, the moderately granular \ac{HCAL} has a modest energy and position resolution.
-Despite not being designed with this idea in mind, \ac{CMS} seriously benefitted from it, with very substantial improvements in calorimetric resolution and response, as shown in [[ref:fig:pflow_gains]].
-Among the features that enabled a successfull \ac{PF} reconstruction at \ac{CMS}, we mention the following:
+Despite not being designed having \ac{PF} in mind, \ac{CMS} seriously benefitted from it, with very substantial improvements in calorimetric resolution and response, as shown in [[fig:pflow_gains]].
+Among the features that enabled a successfull \ac{PF} reconstruction at \ac{CMS}, we mention:
 
-+ its highly-segmented tracker, producing trajectories of charged particles up to \ac{pt} \SI{\sim 1}{\TeV}, and with an efficiency of \SI{\sim 90}{\percent}, down to \SI{\sim 500}{\MeV};
-+ its granular \ac{EM} calorimeter, providing a clear separation between neighbouring particles, the capability of matching calorimetric deposits with tracks, and the discrimination of different particles in jets, namely charged hadrons, neutral hadrons and photons, up to \ac{pt} \SI{\sim 1}{\TeV};
-+ its strong magnetic fields, disentangling contributions from charged and neutral particles; the \SI{4.9}{\tesla\meter} bending power can be compared to \ac{ATLAS}, to the \ac{ALEPH} experiment [[cite:&aleph]] at \ac{LEP}, or to Tevatron experiments, all with less than \SI{3}{\tesla\meter}.
++ a highly-segmented tracker, producing trajectories of charged particles up to \ac{pt} \SI{\sim 1}{\TeV}, and with an efficiency of \SI{\sim 90}{\percent}, down to \SI{\sim 500}{\MeV};
++ a granular \ac{EM} calorimeter, providing a clear separation between neighbouring particles, the capability of matching calorimetric deposits with tracks, and the discrimination of different particles in jets, namely charged hadrons, neutral hadrons and photons, up to \ac{pt} \SI{\sim 1}{\TeV};
++ a strong magnetic fields, disentangling contributions from charged and neutral particles; the \SI{4.9}{\tesla\meter} bending power can be compared to \ac{ATLAS}, to the \ac{ALEPH} experiment [[cite:&aleph]] at \ac{LEP}, or to Tevatron experiments, all with less than \SI{3}{\tesla\meter}.
 + very precise muon detectors.
   
 The jet energy is on average measured at a \SI{65}{\percent} level in the tracjer, \SI{25}{\percent} in the \ac{ECAL}, and \SI{10}{\percent} in \ac{HCAL}.
@@ -58,6 +50,43 @@ The jet energy is on average measured at a \SI{65}{\percent} level in the tracje
 #+END_figure
 
 @Explain local reco@
+(super) clustering, track finding, lepton ID
++ Performance degradation at large pT due to track merging / hit confusion
++ Much improved now after years of development (cluster splitting, DNN, etc.)
++ Large E charged hadrons are anyway well-measured in calorimeters
+
+secondaries are a major complication of CMS PFA
+
+The reconstruction of charged particles consists on recreating the particles' trajectories from individual hits and extract their properties with some fitting technique.
+Tracking algorithms thus benefit from more information coming from hits, specifically very loose requirements on minimum hit energy and multiplicity.
+This idea is of course central to online reconstruction as well, as will be discussed in [[#sec:trigger_primitives_dataflow]].
+The additional hit multiplicity unfortunately also amplifies the number of misreconstruted tracks by up to \SI{\sim 80}{\percent}.
+Despite their average low energy, the additional hits are randomly associated into tracks to which a high momentum can be assigned, degrading the overall \ac{PF} resolution.
+To solve this issue, an iterative tracking algorithm was devised, where a combinatorial track finder based on \acp{KF} [[cite:&tracker_kf]] is sequentially applied multiple times.
+At every iteration a set of hits is selected based on quality criteria imposed on track and hits.
+Selected hits are masked and not considered in further iterations.
+The hit density decrease enables one to loosen the applied quality criteria to improve the overall efficiency without affecting the track purity, measuring tracks with $\pt$ as small as \SI{200}{\MeV}.
+Stable purity values are ensured by ever more refined algorithms at each ensuing iteration, which separately target tracks with low hit multiplicity, displaced tracks, nuclear interactions in the tracker material, or the core of high-$\pt$ jets.
+The last iterations specifically focus on the reconstruction of muon tracks, by exploting the hits the muon detectors.
+
+Given the significant material budget in the tracker, most electrons lose a sizeable fraction of their energy via bremsstrahlung emissions.
+This creates a series of calorimeter energy clusters in the \ac{ECAL}, originated by all emitted photons plus on cluster from the electron or positron.
+This forms an \ac{ECAL} /supercluster/.
+The success of the \ac{PF} reconstruction resides on how complete the measurement of the full electron shower energy is, simultaneously avoiding the inclusion of unrelated energy deposits coming from other showers or \ac{PU}.
+However, position and energy resolutions are hindered by isolation thresholds, required mostly due to overlaps of superclusters and energy deposits from hadronic activity.
+The energy radiated by low $\pt$ electrons is also hard to supercluster, given the spread of the produced bremsstrahlung clusters.
+Additionally, track combinatorics create increased issues in unambiguosly identifying superclusters with specific tracker hits.
+It is for all the reasons above that \ac{PF} electrons take an enormous advantage from the inclusion of the tracker in reconstruction algorithms.
+A tracker-based electron seeding method was developped starting from the iterative tracking algorithm already described.
+However, it was found that \acp{GSF} provide better trajectory fits when the particle radiates.
+For the tracks to form an electron seed, matching criteria are imposed between the track and \ac{ECAL} clusters.
+The benefits arising from the holistic \ac{PF} approach can be appreciated in [[fig:pflow_gains]] (left), where very significant increases in efficiencies are due to the tracker-based electron seeding, both for electrons and pions within b-jets.
+The tracker-based approach is also able to associate converted bremsstrahlung photons back to their parent electron, which minimized double counting.
+
+The presence of muon chambers for additional tracking enables a clear separation of muons from other charged particles, taking into account that muons are the only type of detectable particle which traverse the calorimeters without being absorbed.
+The interplay between tracker and muon detectors results in three different muon reconstruction types:
+- 
+
 
 A linking algorithm proceeds to connect \ac{PF} elements coming from different subdetectors into /\ac{PF}-blocks/, using only its $(\eta,\phi)$ nearest neighbours to reduce time complexity.
 Once a link has been found, depending on selection criteria associated to the particles being linked, a distance, or quality metric is associated to it.
@@ -75,6 +104,15 @@ First, muon candidates are identified and reconstructed as described in Section 
 The electron identification and reconstruction follows, as explained in Section 4.3, with the aim of collecting the energy of all bremsstrahlung photons.
 Energetic and isolated photons, converted or unconverted, are identified in the same step. The corresponding tracks and ECAL or preshower clusters are excluded from further consideration.
 
+#+NAME: fig:pflow_gains
+#+CAPTION: (Left) Jet energy response of Calo and \ac{PF} jets, as a function of the momentum of the reference jet, $p_{\text{T}}^{\text{Ref}}$. The reference jet is defined as the result of the jet algorithm applied to all stable particles produced by the event generator, excluding neutrinos. (Right) Electron seeding efficiency for electrons (triangles) and pions (circles) as a function of $\pt$, from a simulated event sample enriched in b quark jets with $\si{80} < \pt < 170\!\si{\GeV}$, and with at least one semileptonic b hadron decay. One can compare the efficiencies between the \ac{ECAL} based seeding with (solid symbols) and without the tracker-based seeding (hollow symbols). Taken from [[cite:&particle_flow]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/PFElectronSeedingGain.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/PFJetResponse.pdf]]
+#+END_figure
+
 @Resolve blocks into particles@
 
 @Post-processing@
@@ -86,16 +124,6 @@ Energetic and isolated photons, converted or unconverted, are identified in the 
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth
 [[~/org/PhD/Thesis/figures/detector/PFlowDiagram.pdf]]
-#+END_figure
-
-
-#+NAME: fig:pflow_gains
-#+CAPTION: Jet energy response and resolution of Calor and \ac{PF} jets, as a function of the momentum of the reference jet $p_{\text{T}}^{\text{Ref}}$. The reference jet is defined as the result of the jet algorithm applied to all stable particles produced by the event generator, excluding neutrinos. Taken from [[cite:&particle_flow]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth
-[[~/org/PhD/Thesis/figures/detector/PFJetResponse.pdf]]
-#+ATTR_LATEX: :width .5\textwidth
-[[~/org/PhD/Thesis/figures/detector/PFJetResolution.pdf]]
 #+END_figure
 
 

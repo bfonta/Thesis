@@ -153,11 +153,3 @@ The scouting stream in the on-going \run{3} has strongly benefitted from the inc
 The data-scouting bandwidth is currently \SI{\sim 30}{\kilo\hertz}, ten times higher than the standard data stream.
 This implies the exploration of lower kinematic thresholds, with the increase in physics sensitivity which follows.
 
-#+NAME: fig:l1_trigger_design_phase1
-#+CAPTION: (Left) Diagram of the \phase{1} \ac{CMS} \ac{L1} during \run{2}. No \ac{L1} tracking is present. \Acp{TP} are generated from the \ac{DT}, \ac{RPC} and \ac{CSC} muon systems and from the \ac{HF}, \ac{ECAL} and \ac{HBHE} calorimetric subdetectors (where the latter refers to the \ac{HCAL}). The two separate paths are merged into the \ac{GT}, which make a \ac{L1A} decision on whether each particular event should be kept. \Acp{TP} from \acp{GEM} are currently being validated, but are not yet used. (Right) Fractions of the \SI{100}{\kilo\hertz} rate allocation for single- and multi-object triggers and cross triggers in a typical \ac{CMS} physics menu during \run{2}. Adapted from [[cite:&l1_performance]]. 
-#+BEGIN_figure
-#+ATTR_LATEX: :width .4\textwidth :center
-[[~/org/PhD/Thesis/figures/detector/L1TriggerDesignPhase1.pdf]]
-#+ATTR_LATEX: :width .6\textwidth :center
-[[~/org/PhD/Thesis/figures/detector/L1TriggerFractions.pdf]]
-#+END_figure

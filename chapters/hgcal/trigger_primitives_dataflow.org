@@ -1,4 +1,6 @@
-<<sec:trigger_primitives_dataflow>>
+:PROPERTIES:
+:CUSTOM_ID: sec:trigger_primitives_dataflow
+:END:
 
 
 + Talk about trigger and how important it is

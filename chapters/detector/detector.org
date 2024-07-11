@@ -1,6 +1,6 @@
-<<sec:cms_detector>>
-
-Detector in Tables [[tab_sad]] and [[tab_sad2]]
+:PROPERTIES:
+:CUSTOM_ID: sec:cms_detector
+:END:
 
 Use the lead tungstate (\ch{PbWO4}) acronym.
 
@@ -17,12 +17,5 @@ muon trigger during \ac{LHC} running before the installation of a new silicon tr
 [[~/org/PhD/Thesis/figures/detector/MuonSystemSlice.pdf]]
 #+END_figure
 
-#+NAME: tab_sad
-#+CAPTION: sad
-| dsd |   |
-
-#+NAME: tab_sad2
-#+CAPTION: sad
-| dsd |   |
-|-----+---|
-
+\myparagraph{Tracker}
+Required to be fast and rad-hard, large material budget

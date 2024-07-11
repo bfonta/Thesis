@@ -8,7 +8,7 @@ As seen in [[sec:HiggsMechanism]], one of the central pieces of the SM is the Hi
 In the \ac{SM}, the Higgs $\lh{3}$ parameter drives the strength of the Higgs boson self-coupling, and is uniquely determined by the structure of the scalar potential in [[eq:sm_potential]], and represents the potential's last missing piece from an experimental point of view.
 Indeed, the potential is completely determined by the mass of the Higgs $\mh$, the vacuum expectation value $v=(\sqrt{2}G_{F}^{-1/2})$, and $\lh{3}$, where $\mh$ and fermi's constant $G_{F}$ have already been measured.
 
-Measurements of $\lh{3}$ (or equivalently $\kl$) and $\lh{4}$ therefore provide a unique consistency test of the \ac{SM}, representing a fundamental and crucial test of the \ac{EWSB} mechanism [[cite:&deFlorian:2227475]].
+Measurements of $\lh{3}$ (or equivalently $\kl$) and $\lh{4}$ therefore provide a unique consistency test of the \ac{SM}, representing a fundamental and crucial test of the \ac{EWSB} mechanism [[cite:&YellowReport4]].
 Furthermore, and as discussed in [[sec:ewpt]], a Higgs potential deviating from its SM expectation can have dramatic consequences for the understanding and destiny of the Universe.
 Finally, as covered in [[sec:ewpt]], non-SM $\lh{3}$ might allow a \ac{SFO-EWPT} transition, which corresponds to the third Sakharov condition necessary for achieving the matter-antimatter asymmetry we observe today.
 
