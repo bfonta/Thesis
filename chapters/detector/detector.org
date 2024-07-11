@@ -19,3 +19,6 @@ muon trigger during \ac{LHC} running before the installation of a new silicon tr
 
 \myparagraph{Tracker}
 Required to be fast and rad-hard, large material budget
+
+\myparagraph{ECAL}
+@mention the two preshower layers@

@@ -50,43 +50,84 @@ The jet energy is on average measured at a \SI{65}{\percent} level in the tracje
 #+END_figure
 
 @Explain local reco@
-(super) clustering, track finding, lepton ID
+
 + Performance degradation at large pT due to track merging / hit confusion
 + Much improved now after years of development (cluster splitting, DNN, etc.)
 + Large E charged hadrons are anyway well-measured in calorimeters
 
 secondaries are a major complication of CMS PFA
 
-The reconstruction of charged particles consists on recreating the particles' trajectories from individual hits and extract their properties with some fitting technique.
-Tracking algorithms thus benefit from more information coming from hits, specifically very loose requirements on minimum hit energy and multiplicity.
-This idea is of course central to online reconstruction as well, as will be discussed in [[#sec:trigger_primitives_dataflow]].
-The additional hit multiplicity unfortunately also amplifies the number of misreconstruted tracks by up to \SI{\sim 80}{\percent}.
-Despite their average low energy, the additional hits are randomly associated into tracks to which a high momentum can be assigned, degrading the overall \ac{PF} resolution.
-To solve this issue, an iterative tracking algorithm was devised, where a combinatorial track finder based on \acp{KF} [[cite:&tracker_kf]] is sequentially applied multiple times.
+\myparagraph{Tracks}
+
+Reconstructing charged particles consists on recreating their trajectories from individual hits, and extracting particle properties from those trajectories.
+Therefore, all tracking algorithms excel when considering loose requirements on hit multiplicity and hit energy tresholds.
+The same idea central to online reconstruction too, as will be discussed in [[#sec:trigger_primitives_dataflow]].
+The additional hit multiplicity unfortunately also brings more misreconstruted tracks, by up to \SI{\sim 80}{\percent}.
+Despite their low energy, additional hits tend to be randomly associated into tracks to which a high momentum can be assigned, degrading the overall \ac{PF} resolution.
+To solve this issue, an iterative tracking algorithm was devised, where a combinatorial track finder based on \acp{KF} [[cite:&tracker_kf]] is sequentially applied \num{\sim 10} times.
 At every iteration a set of hits is selected based on quality criteria imposed on track and hits.
-Selected hits are masked and not considered in further iterations.
-The hit density decrease enables one to loosen the applied quality criteria to improve the overall efficiency without affecting the track purity, measuring tracks with $\pt$ as small as \SI{200}{\MeV}.
-Stable purity values are ensured by ever more refined algorithms at each ensuing iteration, which separately target tracks with low hit multiplicity, displaced tracks, nuclear interactions in the tracker material, or the core of high-$\pt$ jets.
-The last iterations specifically focus on the reconstruction of muon tracks, by exploting the hits the muon detectors.
+Selected hits are masked and not considered in sunsequent iterations.
+The progressive decrease of hit density in the event enables one to loosen the applied quality criteria to lower and lower values, and thus to improve the overall efficiency without affecting track purity.
+Tracks with $\pt$ as small as \SI{200}{\MeV} can be measured.
+Given the lower energy of hits after each iteration, the purity is kept stable by running more and more refined algorithms at each ensuing iteration.
+The algorithms separately target tracks with low hit multiplicity, displaced tracks, nuclear interactions in the tracker material, or the core of high-$\pt$ jets.
+The last iterations specifically focus on the reconstruction of muon tracks, by exploting hits in the muon detectors.
+
+The presence of muon chambers for additional tracking enables a clear separation between muons and other charged particles.
+This happens in light of the low probability for a particle, other than a muon, to reach the muon detectors without being absorbed in the calorimeters.
+The interplay between tracker and muon detectors produces three different muon reconstruction types:
+- *Standalone Muons:* \ac{DT} and \ac{CSC} hits are clustered into tracks, which serve as seeds for pattern recognition algorithms that also exploit the \acp{RPC}; \acp{GEM} are not used, since the benefit outside the tracker acceptance is minor, except for calibrations;
+- *Global Muons:* if geometrically compatible, standalone muons are matched to tracks in the inner tracker, increasing the momentum resolution for tracks with $\pt \gtrsim 200\si{\GeV}$;
+- *Tracker Muons:* tracks satsifying $\pt > 0.5\si{\GeV}$ and $p > 2.5\si{\GeV}$ in the inner tracker where a geometrical match exists with at least one muon segment.
+The tracker muon reconstruction is more efficient than the global one when muon segments are present in a single muon detector plane.
+This happens more often for muons with $\pt \lesssim 10\si{\GeV}$, due to scattering on the steel return yoke.
+Ocasionally, and despite the calorimetric density of \ac{CMS}, some energetic charged hadrons can reach the muon systems and be reconstructed as muons.
+The desired balance between muon identification efficiency and purity must therefore be agreed on.
+Only \SI{\sim 1}{\percent} of muons within the acceptance of the muon detectors is reconstructed as a standalone muon, and they consistenly have the worse resolution.
+This once again highlights the advantages brough forward by the \ac{PF} approach.
 
 Given the significant material budget in the tracker, most electrons lose a sizeable fraction of their energy via bremsstrahlung emissions.
-This creates a series of calorimeter energy clusters in the \ac{ECAL}, originated by all emitted photons plus on cluster from the electron or positron.
-This forms an \ac{ECAL} /supercluster/.
-The success of the \ac{PF} reconstruction resides on how complete the measurement of the full electron shower energy is, simultaneously avoiding the inclusion of unrelated energy deposits coming from other showers or \ac{PU}.
+A series of calorimeter energy clusters in thus created in the \ac{ECAL}, originated by all emitted photons cluster and and additional one from the electron or positron.
+All the clusters together form an \ac{ECAL} /supercluster/.
+The success of the \ac{PF} reconstruction resides on how complete the measurement of the full electron shower energy is, while avoiding the inclusion of unrelated energy deposits coming from other showers or \ac{PU}.
 However, position and energy resolutions are hindered by isolation thresholds, required mostly due to overlaps of superclusters and energy deposits from hadronic activity.
-The energy radiated by low $\pt$ electrons is also hard to supercluster, given the spread of the produced bremsstrahlung clusters.
-Additionally, track combinatorics create increased issues in unambiguosly identifying superclusters with specific tracker hits.
-It is for all the reasons above that \ac{PF} electrons take an enormous advantage from the inclusion of the tracker in reconstruction algorithms.
-A tracker-based electron seeding method was developped starting from the iterative tracking algorithm already described.
-However, it was found that \acp{GSF} provide better trajectory fits when the particle radiates.
+The energy radiated by low $\pt$ electrons is also hard to supercluster, given the position spread of the produced bremsstrahlung clusters.
+Additionally, track combinatorics lead to extra challenges when trying to unambiguosly identify superclusters with specific tracker hits.
+It is for all the reasons above that \ac{PF} electrons take an enormous advantage from the inclusion of tracker information in reconstruction algorithms.
+A tracker-based electron seeding method was developed starting from the iterative tracking algorithm already described.
+The method uses \acp{GSF} [[cite:&gaussian_sum_filter]] rather than a \ac{KF}, since the former provide better trajectory fits when the particle radiates.
 For the tracks to form an electron seed, matching criteria are imposed between the track and \ac{ECAL} clusters.
 The benefits arising from the holistic \ac{PF} approach can be appreciated in [[fig:pflow_gains]] (left), where very significant increases in efficiencies are due to the tracker-based electron seeding, both for electrons and pions within b-jets.
-The tracker-based approach is also able to associate converted bremsstrahlung photons back to their parent electron, which minimized double counting.
+The same approach is also able to associate converted bremsstrahlung photons to their parent electron or positron, which minimizes double counting in later \ac{PF} steps.
 
-The presence of muon chambers for additional tracking enables a clear separation of muons from other charged particles, taking into account that muons are the only type of detectable particle which traverse the calorimeters without being absorbed.
-The interplay between tracker and muon detectors results in three different muon reconstruction types:
-- 
+\myparagraph{Clusters}
 
+The \ac{PF} clustering algorithm runs separately in each subdetector in the calorimeter, except for the noses: barrel and endcaps for the \ac{ECAL} and \ac{HCAL}, and the two preshower layers.
+The task is particularly challenging given constant overlaps between photons, neutral and charged hadrons, and electrons with their breamsstrahlung energy deposits.
+Clustering also plays an essential role in cases where the tracker underperforms: low efficiency or high track $\pt$.
+The algorithm starts by defining /seeds/, which correspond to detector elements with an energy larger than its neighbours and larger than a predefined threshold.
+Topological clusters are then built, centered on the seeds, based on the physical connection of neighbouring cells with energies larger than a given \ac{S-N} threshold.
+An interative algorithm based on a Gaussian-mixture model is used to reconstruct clusters inside the topological clusters.
+The algorithm postulates the existence of a fixed number of seeds, and associates one gaussian to each.
+The positions and energies of the clusters are obtained via a maximum likelihood fit.
+
+https://cds.cern.ch/record/922757/files/lhcc-2006-001.pdf
+https://cds.cern.ch/record/2842374/files/DP2022_060.pdf
+https://arxiv.org/pdf/1706.04965
+https://cds.cern.ch/record/2678077/files/epjconf_quarks2018_02016.pdf
+https://indico.bnl.gov/event/19985/contributions/78229/attachments/48591/82604/PFCMS_MAN_230713.pdf
+https://lss.fnal.gov/archive/2023/conf/fermilab-conf-23-024-cms.pdf
+https://indico.cern.ch/event/1394609/contributions/5862603/attachments/2835962/4955916/PF%20overview%20Phase2%20SW%20days.pdf
+
+
+
+
+
+
++ ECAL deposits
++ HCAL deposits
+
+\myparagraph{Linking}
 
 A linking algorithm proceeds to connect \ac{PF} elements coming from different subdetectors into /\ac{PF}-blocks/, using only its $(\eta,\phi)$ nearest neighbours to reduce time complexity.
 Once a link has been found, depending on selection criteria associated to the particles being linked, a distance, or quality metric is associated to it.
@@ -105,7 +146,7 @@ The electron identification and reconstruction follows, as explained in Section 
 Energetic and isolated photons, converted or unconverted, are identified in the same step. The corresponding tracks and ECAL or preshower clusters are excluded from further consideration.
 
 #+NAME: fig:pflow_gains
-#+CAPTION: (Left) Jet energy response of Calo and \ac{PF} jets, as a function of the momentum of the reference jet, $p_{\text{T}}^{\text{Ref}}$. The reference jet is defined as the result of the jet algorithm applied to all stable particles produced by the event generator, excluding neutrinos. (Right) Electron seeding efficiency for electrons (triangles) and pions (circles) as a function of $\pt$, from a simulated event sample enriched in b quark jets with $\si{80} < \pt < 170\!\si{\GeV}$, and with at least one semileptonic b hadron decay. One can compare the efficiencies between the \ac{ECAL} based seeding with (solid symbols) and without the tracker-based seeding (hollow symbols). Taken from [[cite:&particle_flow]].
+#+CAPTION: (Left) Jet energy response of Calo and \ac{PF} jets, as a function of the momentum of the reference jet, $p_{\text{T}}^{\text{Ref}}$. The reference jet is defined as the result of the jet algorithm applied to all stable particles produced by the event generator, excluding neutrinos. (Right) Electron seeding efficiency for electrons (triangles) and pions (circles) as a function of $\pt$, from a simulated event sample enriched in b quark jets with $\si{80} < \pt < 170\si{\GeV}$, and with at least one semileptonic b hadron decay. One can compare the efficiencies between the \ac{ECAL} based seeding with (solid symbols) and without the tracker-based seeding (hollow symbols). Taken from [[cite:&particle_flow]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/PFElectronSeedingGain.pdf]]

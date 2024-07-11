@@ -31,6 +31,12 @@ To achieve precise momentum measurement, a powerful magnet was necessary, leadin
 The CMS detector's structure and components are designed to meet these stringent requirements.
 In the following, we describe all subdetectors in detail, ordered by distance to the \ac{PV}.
 
+\myparagraph{Tracker}
+
+The tracking system was designed to provide coverage up to a pseudorapidity of $\eta \sim 2.4$.
+[[cite:&cms_tracker_tdr]]
+
+
 \myparagraph{Electromagnetic calorimeter}
 
 @TODO@
@@ -115,12 +121,12 @@ All muon stations are equipped with at least one \ac{RPC}, but two are present i
 The additional resolution extends the \ac{CMS} trigger low-$\pt$ reach to \SI{\sim 4}{\GeV} in the barrel and \SI{\sim 2}{\GeV} in the endcaps.
 
 \paragraph{Gas Electron Multipliers:}
-A first batch of 144 \ac{GEM} chambers was introduced in the \ac{CSM} muon system during \longshut{2}.
+A first batch of 144 \ac{GEM} chambers was introduced in the \ac{CMS} muon system during the \longshut{2}.
 They are located very close to the beampipe, subject to the highest radiation doses among all muon detectors.
 The \acp{GEM} system will improve the measurement of the polar muon bending angle, extending current trigger capabilities.
-The detectors have a \ac{GEM} foil, consisting of a \SI{50}{\micro\meter}-thick insulating polymer covered on both sides by thin \ch{Cu} conductive layers.
+It will also extend the muon coverage up to the forward $1.6 < \eta < 2.4$ region.
+Each \ac{GEM} chamber includes a stack of three \ac{GEM} foils, which consist of a \SI{50}{\micro\meter}-thick insulating polymer covered on both sides by thin \ch{Cu} conductive layers.
 A strong electric field is applied between the two conductors.
-Each \ac{GEM} chamber includes a stack of three \ac{GEM} foils.
 The chambers are filled with an \ch{Ar}/\ch{CO2} mixture, which is ionized by incident muons, and are segmented in strips along \phi{}.
 The electrons created during the ionisation process drift towards the foils create avalanches.
 The resulting electron avalanche induces a readout signal on the finely spaced strips.
