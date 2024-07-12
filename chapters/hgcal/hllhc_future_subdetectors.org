@@ -4,7 +4,9 @@ List all subdetector upgrades in \ac{CMS}.
 
 \paragraph{Pixels}
 + New Layer 1 at 29mm from the beamline
++ lighter and extended tracker (integrated into the Level-1 trigger) [[cite:&plow_milos]]
 
+  
 \paragraph{MTD}
 [[cite:&mtd_tdr;&mtd_timing_plot]]
 
