@@ -66,7 +66,7 @@ The latter correspond to the building blocks for all physics objects used in \ac
 
 Reconstructing charged particles consists on recreating their trajectories from individual hits, and extracting particle properties from those trajectories.
 It is therefore not a surprise that all tracking algorithms excel when considering loose requirements on hit multiplicity and hit energy tresholds.
-The same idea is central to online reconstruction too, as will be discussed in [[#sec:trigger_primitives_dataflow]].
+The same idea is central to online reconstruction too, as will be discussed in [[#sec:hgcal_trigger_primitives]].
 The additional hit multiplicity unfortunately also brings more misreconstruted tracks, by up to \SI{\sim 80}{\percent}.
 Despite their low energy, additional hits can be randomly assigned in such a way as to produce a high momentum track, degrading the overall \ac{PF} resolution.
 To solve this issue, an iterative tracking algorithm was devised, where a combinatorial track finder based on \acp{KF} [[cite:&tracker_kf]] is sequentially applied \num{\sim 10} times.

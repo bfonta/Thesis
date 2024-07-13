@@ -1,4 +1,6 @@
-<<sec:cms_trigger_system>>
+:PROPERTIES:
+:CUSTOM_ID: sec:cms_trigger_system
+:END:
 
 With proton beams crossing every \SI{25}{\nano\second}, and considering the average \ac{PU} measured during \phase{1} (see [[ref:fig:lhc_lumi_results]]), around \num{e9} \ac{pp} interactions are expected every second.
 Given \SI{\sim 1}{\mega\bit} zero-supressed events, a \SI{\sim 40}{\tera\bit\per\second} throughput follows.
@@ -19,7 +21,10 @@ Latency here refers to the time taken for the data to be processed in a particul
 It includes the time taken to read the data from the detectors, the algorithmic time, the \ac{L1A} signal distribution time, and further delays introduced by potential limitations at the level of buffer capacity [[cite:&trigger_tdr_phase1_vol1;&l1TDR;&trigger_tdr_phase1_vol2;&l1_performance;&hlt_performance;&zabi]].
 
 * The Level-1 trigger
-<<sec:l1>>
+:PROPERTIES:
+:CUSTOM_ID: sec:l1
+:END:
+
 
 The first trigger level is implemented in custom electronics and \acp{FPGA}, and uses coarsely segmented data from calorimeter and muon datectors to ensure a low latency.
 All high-resolution data are nevertheless held in pipeline memories in the \ac{FE} electronics, waiting for a \ac{L1A} signal to be issued.
@@ -73,7 +78,9 @@ The \ac{GT} collects all \ac{L1} muon and calorimeter candidates, and executes m
 Kinematical quantities of the candidates are exploited, such as the invariant mass of \egamma{} or $\mu$ objects, or the angular distance between two objects.
 
 * The High Level Trigger
-<<sec:hlt>>
+:PROPERTIES:
+:CUSTOM_ID: sec:hlt
+:END:
 
 The HLT is provided by a subset of the thousands of commercial \acp{CPU} and \acp{GPU} which constitute the online farm located at the \ip{5}, running the full reconstruction software framework of \ac{CMS}, \ac{CMSSW}.
 The goal of the \ac{HLT} is to reduce the rate from \num{100} to \SI{\sim 1}{\kilo\hertz}, while keeping the most interesting events.

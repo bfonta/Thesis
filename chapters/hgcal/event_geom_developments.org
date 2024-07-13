@@ -7,3 +7,17 @@ I have also learned how to deploy a web application with the 2D/3D visualization
 This is useful for information sharing and ease of access.
 The framework, including the reconstruction chain, is currently being used and actively developed by a small team at LLR, and serves as an essential ground for the work of two other PhD candidates and two younger students.
 This work has been presented at PyHEP 2023 [[cite:&bruno_pyhep23]].
+
+#+NAME: fig:geom_impl_flow
+#+CAPTION: Caption 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/flowchart.pdf]]
+#+END_figure
+
+#+NAME: fig:si_sci_custom_geoms
+#+CAPTION: Taken from [[cite:&bruno_chep23]]. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/SimplifiedGeometry.pdf]]
+#+END_figure
