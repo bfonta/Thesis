@@ -55,10 +55,11 @@ The first one receives, calibrates, and sorts the \acp{TP} provided by the \ac{H
 The second layer reconstructs and calibrates physics objects such as electrons and photons, tau leptons, jets, and energy sums.
 It should be noted that the calorimeter trigger cannot distinguish photons from electrons; they all correspond to energy deposits named /candidates/, which are formed based on information contained in groups of \num{25} crystals, the \acp{TT}.
 \ac{L1} reconstruction algorithms work with a granularity dictated by the \acp{TT}, and use discrimination quantities such as the ratio of \ac{HCAL} to \ac{ECAL} energies, or the shape of energy deposits as seen by data-aggregating sliding windows.
-The calorimeter trigger takes advantage of the \ac{TMT} mechanism, which allows the treatment of all event data in a single processing board, in contrast with the parallelism that is usually required.
-It works by converting the parallel processing in a $\Delta T$ time period of spatially decoupled regions of the detector into the sequential processing of the full detector in $N\Delta T$ time, where $N$ corresponds to the "depth" of the \ac{TMT}, equating to the number of available boards with enough memory to process one event in full.
+The calorimeter trigger takes advantage of the \ac{TMT}, spatially-pipelined mechanism, which enables the treatment of all event data in a single processing board, in contrast with the parallelism that is usually required [[cite:&time_multiplex]].
+It works by converting the parallel processing of spatially decoupled detector regions in a $\Delta T$ time period into the sequential processing of the full detector in $N\Delta T$ time.
+$N$ corresponds to the "depth" of the \ac{TMT}, which equates to the number of available boards with enough memory to process one event in full.
 The benefit of using the \ac{TMT} is the removal of event region boundaries, enabling the reconstruction of a full event at once.
-It was found that the tradeoff between the additional time required to organize the data in series and the time saved thanks to the faster global processing is largely favourable [[cite:&zabi]].
+It was found that the tradeoff between the delay from organizing the data in series and the increased throughoput and reduced buffering time brought by the \ac{TMT} is largely favourable [[cite:&zabi]].
 A \ac{DeMux} board then reorders, reserializes, and formats the events for the \ac{GT} processing.
 The running algorithms are fully pipelined and start processing data as soon as it is received.
 
@@ -97,8 +98,6 @@ This was due to several advancements in \ac{CMSSW}, which can now leverage more 
 \Ac{CMSSW} can now transparently switch between \ac{CPU} and \ac{GPU} implementations [[cite:&hlt_cpu_gpu_2023]].
 The reconstruction of several subdetectors has been offloaded to \acp{GPU}, including the \ac{ECAL} [[cite:&hlt_ecal_gpu]], \ac{HCAL} [[cite:&hlt_hadron_pf]], and some parts of the reconstruction of pixels and vertices, including an improved track seeding.
 As a consequence, the \ac{HLT} timing and throughput improved by 40% and 80%, respectively, and the computing power consumption was reduced by 30%.
-Other potential improvements are currently being explored, such as the migration from traditional \ac{CMS} data formats to \acp{SoA} for better \ac{CPU} and \ac{GPU} utilization, the rewriting of other algorithms having \ac{GPU} parallelism in mind, and the porting of heterogeneous code to the Alpaka portability library [[cite:&alpaka1;&alpaka2;&alpaka3;&hlt_alpaka]] to reduce code duplication and dependency on the architecture of a particular vendor [[cite:&hlt_run3_gpus]].
-
 The \ac{CMS} \ac{HLT} system is constantly subject to updates and optimizations, in order to improve algorithmic efficiency and increase allowed rates, while maintaining an excellent physics performance, despite the increasingly more challeging running conditions [[cite:&performance_calorimeter_trigger;&performance_muon_trigger]].
 
 * Parking and Scouting
@@ -146,9 +145,9 @@ Additionally, three new parking strategies have been introduced:
 
 \paragraph{Scouting:}
 The offline reconstruction in \ac{CMS} notably increases the quality of the collected dataset.
-On the negative side, it causes a significant growth in the required bandwidth and storage.
-It is thus not possible to save all events reconstructed by the \ac{HLT}.
-The trigger scouting strategy proposes to save some events using \ac{HLT} reconstruction only, which provides smaller event sizes at the cost of less event information.
+Unfortunately but unsurprisingly, it also brings a significant bandwidth and storage requirements growth.
+It is not possible to perform the offline reconstruction on all events processed and accepted by the \ac{HLT}.
+The trigger scouting strategy proposes to save some events using \ac{HLT} reconstruction only, which provides a smaller event size at the cost of data resolution.
 This effectively allows to save events that would otherwise be lost, or to enhance the sensitivity to low-energy processes by lowering \ac{HLT} thresholds.
 The strategy depends on the performance of the \ac{HLT} algorithm which must, as much as possible, approach the performance of the offline reconstruction quality.
 In the future there will always be the possibility to extend the current standard trigger to some specific scouting phase-space regions if some unexpected behaviour is observed.
@@ -158,5 +157,6 @@ This was considerably extended in \run{2}, with the addition of jet, muon and el
 As an example, studies of \ac{BSM} low-mass dimuon resonances were able to reach a threshold close to twice the muon mass [[cite:&dimuon_low_trigger]].
 The scouting stream in the on-going \run{3} has strongly benefitted from the inclusion of \ac{GPU} processors and related software infrastructure at \ac{HLT} level [[cite:&patatrack]].
 The data-scouting bandwidth is currently \SI{\sim 30}{\kilo\hertz}, ten times higher than the standard data stream.
-This implies the exploration of lower kinematic thresholds, with the increase in physics sensitivity which follows.
+This implies the exploration of lower kinematic thresholds, with the increase in physics sensitivity that results.
+There are plans to extend the scouting strategy to \ac{L1}, as will be discussed in [[#sec:phase2_trigger_system]].
 

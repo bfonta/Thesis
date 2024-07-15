@@ -2,73 +2,13 @@
 :CUSTOM_ID: sec:hgcal_trigger_primitives
 :END:
 
-+ Talk about trigger and how important it is
-+ mention online and offline
-+ give overview about the full cms trigger system, including current one
-+ explain the processing of hgcal trigger primitives, include quantitative estimates
-  + how are tcs physically arranged
-  + HGCROC
-  + 
-+ discuss frontend and backend electronics from [[cite:&jb_hdr]] and compare with [[#sec:l1]]
+The importance of the online and offline \ac{CMS} trigger systems was already covered in [[#sec:cms_trigger_system]].
+Here we detail the hardware and software infrastructure powering the \ac{HGCAL} \ac{L1} \ac{DAQ} and \ac{TPG} systems, the latter producing so-called \acp{TP}, which correspond to the building blocks for \ac{L1} decisions.
+The flow of \acp{TP} can be schematically visualized in [[fig:l1_trigger_design_phase2]], where \ac{HGCAL} is the second subdetector with the most allocated resources, due to its high granularity.
 
-
-The role of the HGCAL TPG system is to build objects that are used as primitives by the
-central L1 trigger.
-
-
-
-
-
-
-Following the present established design [9, 10], the CMS trigger and data acquisition system will continue to feature two trigger levels, with only one synchronous hardware-based Level-1 Trigger, consisting of custom electronic boards and operating on dedicated data streams, and a second level, the High Level Trigger (HLT), using software algorithms running asynchronously [[cite:&hlttdr]]
-
-A completely redesigned Level-1 trigger system [11], making use of tracking information and particle-flow algorithms, will select events at a rate up to 750 kHz (to be compared with a maximum Level-1 accept rate of 100 kHz for Phase-1) to maintain the efficiency of the signal selection to the level of the Phase-1 performance while enabling or enhancing the selection of possible new physics leading to unconventional signatures [[cite:&hlttdr]]
-
-\Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on standard servers.
-\Ac{L1} performs an online selection of interesting physics processes, whose cross sections are typically orders of magnitude lower than the total proton-proton cross section.
-
-The event size increases to approximately 8.5 MB.
-The Phase-2 HLT will analyse the full L1T output of up to 750 kHz
-translates into an overall data throughput in excess of 50 Tb/s.
-30-fold increase with respect to the current system
-he greatest difference of Phase-2 online reconstruction with respect to the current one is the
-reconstruction of energy deposits and charged particle tracks in the High-Granularity Calorimeter
-(HGCAL) and the Phase-2 Tracker, which are respectively completely new and redesigned and for
-the upgraded detector. These subdetectors have very high granularity, and their objects reconstruc-
-tion is usually based on iterative procedures: Kalman filter with deterministic annealing for the
-tracking and a pair of two algorithms, CLUsters of Energy (CLUE) and The Iterative CLustering
-(TICL) [4] for the HGCAL reconstruction. T
- [[cite:&hlt_phase2_thiago]]
-
-#+NAME: fig:tcs_geometry
-#+CAPTION: Illustration of the three-fold diamond configuration of an hexagonal \SI{8}{\inch} module, used to associate single \ac{Si} cells to \acp{TC}. Low density modules (left) associate four sensors to each trigger cell, while high density modules (right) create \acp{TC} with nine channels each. All modules have exactly \num{48} \acp{TC}, effectively removing a layer of complexity when processing \acp{TC}. The actual physical dimensions of the \acp{TC} vary given the boundaries of the hexagonal modules. 
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/TCs_geometry.pdf]]
-#+END_figure
-
-* sci
-Not entirely well defined.
-Trigger sum of 4 adjacent tiles
-
-* proceedings
 @reintroduce TPs, which were already mentioned in [[#sec:cms_trigger_system]]@
 
-These proceedings describe the \ac{HGCAL} \ac{L1} reconstruction chain, from raw energy deposits to the creation of \acp{TP}, which are detector-specific inputs to the \ac{L1}.
-Special emphasis is placed on the study of cluster splitting, which represents a known and so far unstudied shortcoming of the \ac{TP} chain.
-The \ac{phi} in the transverse plane, the radial coordinate $R$ and the $z$-axis lying parallel to the beam-line form the binned projective \coordsa{} coordinate system used in this work [[cite:&cms_collab]].
-Since $\tan(\theta) = R/z$, where $\theta$ is measured from the $z$-axis, for a constant angle $\theta$ corresponds a constant \rz{}.
-Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
-The latter's scintillation light is read out by direct on-tile \ac{Si} photo-multipliers. Stainless steel and \ch{Cu} are used as absorbers.
-\ac{Si} sensors are available in three types with varying thicknesses (120, 200 and 300 \si{\micro\meter}), capacitances and sizes, to widthstand different radiation conditions according to their physical location.
-The size of each \ac{Si} sensor is \SI{0.52}{\cm\squared} (for \SI{120}{\micro\meter} \ac{Si} sensors) and \SI{1.18}{\cm\squared} (\qty{200} and \SI{300}{\micro\meter}).
-Scintillators range in size from \qtyrange{4}{30}{\cm\squared}, and the number of \ac{Si} (scintillator) channels is \num{\sim 6} million (\num{\sim 240} thousand).
-In total, \SI{\sim 620}{\meter\squared} of \ac{Si} and \SI{\sim 400}{\meter\squared} of plastic scintillator are employed.
-The full system operates at a temperature of \SI{-35}{\celsius} maintained by a \ch{CO2} cooling system.
-
-The area of the \ac{Si} cells is constrained, among other factors, by the size of \acp{TC}.
-There is the need to maintain an integer number of \acp{TC} per module, both in the low- and high-density regimes.
-The next larger size allowed, despite significant cost benefits, would lead to an unnaceptable loss of physics performance.
+\Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on standard servers.
 
 The goal of \ac{TPG} is to provide valuable information to the CMS Level-1 (L1) trigger, within limited time and bandwidth budgets, via \acp{TP}.
 \acp{TP} are the building blocks of \acp{L1}.
@@ -78,20 +18,135 @@ It follows the principle of reducing data throughput as much and as soon as poss
 It must fit within a latency of \SI{\sim 5}{\micro\second}, taken from the total L1 \SI{12.5}{\micro\second} latency [[cite:&l1TDR]].
 It has to cope with power, cost, space and channel routing constraints [[cite:&jb_hdr]].
 
-The "three-fold diamond" configuration was chosen because it allows the convenient definition of symmetric groups of neighbouring cells to form trigger primitives, as shown in ref:fig:tcs_geometry, and the subdivision of the module into symmetric domains for the readout chips, simplifying the layout of the module readout \ac{PCB} [[cite:&l1TDR]].
+
+
++ explain the processing of hgcal trigger primitives, include quantitative estimates
+  + how are tcs physically arranged
+  + frontend (HGCROC, ECON-T, ECON-D, ...)  
++ discuss frontend and backend electronics from [[cite:&jb_hdr]] and compare with [[#sec:l1]]
+
+* The infrastructure of the backend trigger and data acquisition systems
+# Intro
+The \ac{HGCAL} \ac{BE} electronics consist on the \ac{DAQ}, \ac{TPG}, \ac{DCS} and \ac{DSS}.
+The first two form the so-called \ac{TDAQ}.
+The \ac{DAQ} system includes two parts, where the most proeminent features the configuration, control and data acquisition system.
+The second, smaller part holds the \ac{EMF} interface, which purpose is to propagate \ac{NZS} \ac{HGCAL} "regions of interest", as defined by extrapolated muon tracks in the muon detectors, aiming at reconstructing \ac{MIP} peaks for calibration without applying any threshold.
+
+The larger part of the \ac{DAQ} consists on \num{6} identical hardware copies, following the three-fold polar angle symmetry of the two endcaps.
+Each \SI{120}{\degree} sector hosts \num{16} =Serenity S= boards in two crates; these are called "DAQ boards" in the following.
+The interface to the smaller \ac{EMF} system has one =Serenity S= board per endcap, called "NZS board".
+
+# TPG
+The role of the HGCAL TPG system is to build objects that are used as primitives by the central L1 trigger.
+The \ac{TPG} system receives \ac{FE} data for every bunch crossing at \SI{40}{\mega\hertz}, and creates trigger “primitives” which are passed to the CMS central Level-1 Trigger (L1T) system to use in making the L1A trigger decisions. The
+DAQ and TPG systems receive data from the FE electronics through separate links and so are
+effectively independent systems as far as the BE electronics are concerned.
+
+# ATCA boards and crates
+The \ac{BE} across \ac{CMS} have been implemented on the \ac{ATCA} infrastructure [[cite:&atca_website]].
+\Ac{ATCA} boards will be placed on \ac{ATCA} crates, which can house up to 14 boards
+
+# DAQ
+Besides being responsible for data acquistion, the \ac{DAQ} system has other responsibilities.
+Being the entry point to the \ac{FE} electronics, the DAQ is also charged with synchronous fast control, asynchronous slow control, and transporting the timing information from \ac{CMS} to the \ac{FE}.
+
+# lpGBT
+The \ac{lpGBT} \ac{ASIC} [[cite:&lpgbt]] is the radiation-hard link driver standard to be used with \ac{HL-LHC} \ac{FE} electronics.
+It provides a two-way connection between the \ac{BE} and \ac{FE}, including clock distribution, control and configuration signals, and transmission of the information collected by the detector.
+The data is supplied to the \ac{lpGBT} inputs via up to \num{7} \acp{elink}, each providing 32-bit words at \SI{40}{\mega\hertz}, or \SI{1.28}{\giga\bit\per\second}.
+This corresponds to \SI{8.96}{\giga\bit\per\second} data rates between the \ac{FE} and the \ac{BE}.
+In \ac{HGCAL}, both the \ac{DAQ} and the \ac{TPG} communicate with the \ac{FE} via \acp{elink}, but only the \ac{DAQ} provides control and configuration.
+
+# vtrx and firefly
+The data is then forwarded to the \ac{BE} electronics, located at a distance of \SI{100}{\meter} from \ac{HGCAL}.
+The \ac{VTRx+} [[cite:&vtrxp]] module povides an optical communication interface between the \acp{lpGBT} and the computing boards.
+On top, CERN has developed a custom radiation resistant version of the easy-to-install =Firefly= optical transceivers [[cite:&versatile_link;&firefly]], optimised for use in the \ac{BE} electronics to communicate with the \ac{VTRx+} modules.
+
+# timing and control distribution systems
+The \ac{TCDS} interface is provided by one specialized \ac{ATCA} board per crate, named \ac{DTH400}.
+The \ac{DTH400} also provides an interface to the \ac{cDAQ}, outputting \SI{\sim 400}{\giga\bit\per\second} via ethernet \ac{D2S} links.
+The data is then transported to the surface into the memory of commercial servers.
+That \ac{DTH400} boards receives the \ac{CMS}-wide clock and control signals and distributes it to the remaining boards in the crate.
+The communication with the \ac{TCDS} is two-way: this notably gives the ability to request a \ac{BE} resynchronisation or reset, and to throttle the entire \ac{L1} system.
+Communication between the \ac{BE} and the \ac{cDAQ} is established via \SI{25}{\giga\bit\per\second} fiber optics running the \ac{CMS}-wide =SLinkRocket= protocol, which ensures a strict specification based on \SI{128}{\bit} words [[cite:&hlttdr]].
+
+# USC
+The \ac{BE} electronics will be located in the \ac{CMS} \ac{USC}, where space is extremely limited and has to be distributed across all subdetectors.
+The \ac{HGCAL} \ac{TDAQ} \ac{BE} has been assigned \num{8} racks, split into \num{3} and \num{5} to \ac{DAQ} and \ac{TPG}, respectively.
+Each rack fits two \ac{ATCA} crates, and sufficent power is provided to the \ac{ATCA} boards.
 
 #+NAME: fig:daq_system_overview
 #+ATTR_LATEX: :width 1.\textwidth
-#+CAPTION: Caption. Taken from.
+#+CAPTION: Layout of Stage 1 and Stage 2 boards for one HGCAL endcap. The full TPG system consists of two identical and independent copies of this layout. Taken from [[cite:&hgcal_backend_tdaq]].
 #+BEGIN_figure
 [[~/org/PhD/Thesis/figures/hgcal/daq_system_overview.pdf]]
 #+END_figure
 
-\paragraph{Frontend electronics}
 
-\paragraph{Backend electronics}
+#+NAME: fig:tcs_geometry
+#+CAPTION: Illustration of the three-fold diamond configuration of an hexagonal \SI{8}{\inch} module, used to associate single \ac{Si} cells to \acp{TC}. Low density modules (left) associate four sensors to each trigger cell, while high density modules (right) create \acp{TC} with nine channels each. All modules have exactly \num{48} \acp{TC}, effectively removing a layer of complexity when processing \acp{TC}. The actual physical dimensions of the \acp{TC} vary given the boundaries of the hexagonal modules. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/TCs_geometry.pdf]]
+#+END_figure
+
+* Frontend electronics
+
+The \ac{HGCAL} \ac{L1} reconstruction chain, including the \ac{TPG} reconstruction, starts at the location where data is collected, namely the \ac{Si} cells and \ac{Sci} tiles described in [[#sec:hgcal_intro]].
+From raw energy deposits to the creation of \acp{TP}, a complex chain of electronic components and data reduction and selection algorithms is defined.
+The architecture surrounding the /on-detector/ steps, i.e., the steps taking place very close to where the raw data is collected, constitutes the \ac{FE} electronics.
+The entry points of the reconstruction chain are the custom chips located on the hexaboards or tileboards, depending on the detector region.
+They are called \acp{HGCROC} [[cite:&hgcroc;&hgcroc_paper]], and are \ac{HGCAL}-specific \acp{ASIC} which collect, amplify and filter the produced ionization or scintillation charged currents at \SI{\sim 300}{\tera\byte\per\second} [[cite:&hgcalTDR]].
+The layout of a \ac{HGCROC} chip is shown in [[fig:hgcroc]].
+The chips aggregate the data into \acp{TC}, in what constitutes the first of many data reduction algorithms in the \ac{TPG}.
+Due to the similarity of the electronic and algorithms of the \ac{Si} and \ac{Sci} detector regions, and also taking into account differences in their development stage, we will focus on the \ac{Si} technology to simplify the overall description.
+\Acp{TC} are defined as groups of neighbouring sensor cells, and are meant to reduce the prohibitive data throughput by grouping \num{4} or \num{9} channels into a single \ac{TC}, depending on the \ac{Si} module granularity.
+Only \acp{TC} in odd-numbered layers are considered for further reduction.
+\Acp{TC} also decrease the algorithms' complexity, in the sense that all modules have exactly \num{48} \acp{TC}, and thus differences arising from low- and high-granularities do not have to be taken into account.
+In parallel, the full-granularity data is kept in circular buffers and is sent out via \SI{1.28}{\giga\bit\per\second} \ac{elinks} as soon as a \ac{L1A} signal arrives.
+Despite the chip's ability to also measure the \ac{ToA} of the charged pulses, timing information cannot be exploited in the trigger path due to bandwidth constraints.
+In addition to a standard \num{10} bit \ac{ADC} charge measuring mode, the \ac{HGCROC} switches to a \ac{ToT} mode as soon as a threshold on the deposited charge is reached, of the order of the preamplifier saturation threshold of \SI{\sim 100}{\femto\coulomb}.
+The time during which the preamplifier is saturated serves a proxy for the amount of deposited charge.
+During the saturation period, which can reach up to \SI{\sim 200}{\nano\second}, the chip is blind to new charge deposits.
+Once the saturation is over, the time is digitized with a \num{12} bit \ac{TDC}.
+Beyond the data paths, the chip also inlcludes a \ac{PLL}, which generates the clocks needed to operate the chip, and an \ac{I2C} interface.
+The latter enables the modification of all static parameters of the chip, which are triplicated to prevent \acp{SEE}, which are stochastic, localised and non-cumulative effects disrupting the chip's functioning.
 
 
+
+
+#+NAME: fig:hgcroc
+#+CAPTION: Block diagram of the \ac{HGCROC} [[cite:&hgcroc;&hgcroc_paper]]. It is composed of two data paths: the \ac{DAQ} path (in blue), connected to the \ac{ECON-D}, and the trigger path (in green), connected to the \ac{ECON-T}. It also includes a \ac{PLL}, which generates the clocks needed to operate the chip, and an \ac{I2C} interface, which enables the modification of all static parameters of the chip. Taken from [[cite:&bruno_chep23]]. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/HGCROC.pdf]]
+#+END_figure
+
+The ECON-T chip concentrates, selects and/or aggregates TCs within a single module (3 or 6 \acp{HGCROC}) and builds \textit{module sums}, where the energies of TCs in a module are summed without applying any threshold.
+at \SI{90}{\tera\byte\per\second} [[cite:&econ]].
+The data is then sent via \SI{1.28}{\giga\bit\per\second} e-links to lpGBT ASICs [[cite:&lpgbt]], serialized to \SI{10.24}{\giga\bit\per\second}, and sent via optical-links [[cite:&vtrxp]] to the off-detector \ac{BE}.
+
+
+
+
+
+
+
+The "three-fold diamond" configuration was chosen because it allows the convenient definition of symmetric groups of neighbouring cells to form trigger primitives, as shown in ref:fig:tcs_geometry, and the subdivision of the module into symmetric domains for the readout chips, simplifying the layout of the module readout \ac{PCB} [[cite:&l1TDR]].
+
+
+* Backend electronics
++ split between on detector electronics and outside FPGAs is also related tothe cost and limitation of optical links available [[cite:&zabi]]
+  
+* Reconstruction of Trigger Primitives
+
+/why is the data throughput between Stage1 and Stage2 larger than the one between the ECON-T and Stage1/
+
+The data throughput is larger because of the duplication needed to handle sector boundaries and because the data need to be inflated:
++ the addresses need to be encoded on a larger number of bits because the Stage 1 covers larger detector regions than the ECON-T
++ the energies need also to be encoded on a larger number of bits to absorb different energy scales used in different regions of the detector in the ECON-T
++ the numbers you are referring to are for the system using the Threshold data reduction I suppose (I don't think we have numbers for the current system). So in that case, since we have a fixed size format between S1 and S2 we need to allocate more bandwidth in order to absorb fluctuations and limit truncation in the S1. To be noted that something similar will also apply with BC even though its data is fixed size. This is due to the fact that BC provides a fixed number of TCs per module, but not a fixed number of TCs per bin. While the Stage 2 needs a fixed data size per bin. So we need to allocate more bandwidth per bin than necessary.
+  
 #+NAME: fig:l1chain
 #+CAPTION: Simplified schematic of the dataflow of \acp{TP} in HGCAL, starting (ending) in the top left  (bottom left) corner. The diagram follows the \ac{TP} processing in a Si layer through the \ac{FE} and \ac{BE}, and up to the \ac{L1}, including expected approximate bandwidths. Trigger decisions at this stage will impact the \ac{HLT} and, consequently, physics analysis. Taken from [[cite:&bruno_chep23]].
 #+BEGIN_figure
@@ -104,14 +159,6 @@ The "three-fold diamond" configuration was chosen because it allows the convenie
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.02\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/stage2chain.pdf]]
-#+END_figure
-
-
-#+NAME: fig:hgcroc_econt
-#+CAPTION: Taken from [[cite:&bruno_chep23]]. 
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/HGCROC_ECONT.pdf]]
 #+END_figure
 
 #+NAME: fig:econt_algorithms
@@ -127,20 +174,6 @@ Only \acp{TC} in odd-numbered layers are considered.
 Timing information cannot be exploited in the trigger path due to bandwidth constraints.
 The ECON-T concentrates, selects and/or aggregates TCs within a single module (3 or 6 \acp{HGCROC}) and builds \textit{module sums}, where the energies of TCs in a module are summed without applying any threshold.
 The data is then sent via \SI{1.28}{\giga\bit\per\second} e-links to lpGBT ASICs [[cite:&lpgbt]], serialized to \SI{10.24}{\giga\bit\per\second}, and sent via optical-links [[cite:&vtrxp]] to the off-detector \ac{BE}.
-
-#+NAME: fig:l1_trigger_design_phase2
-#+CAPTION: Diagram of the \ac{CMS} \ac{L1} \phase{2} trigger design, to be compared with [[fig:l1_trigger_design_phase1]]. The calorimeter trigger is represented on the left and composed of a \ac{BCT} and a \ac{GCT}. The track finder in the center transmits tracking information to the \ac{CT}, the \ac{GTT}, and the \ac{GMT}. The muon trigger architecture is represented on the right and composed of three muon track finders: \ac{EMTF}, \ac{OMTF}, and \ac{BMTF}. The \ac{CT} in the center is composed of 2 layers for \ac{PF} processing. The \ac{GT} receives all trigger information for the final decision. For each architecture component, the information about the \ac{TMUX}, the \ac{RS} in \ac{eta} or \ac{phi}, the \ac{FS}, and the number of \acp{FPGA} are specified. Taken from [[cite:&l1TDR]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/L1TriggerDesignPhase2.pdf]]
-#+END_figure
-
-#+NAME: fig:tps_to_physics
-#+CAPTION: Summary diagram showcasing the interdependence of \acp{TP}, including the ones coming from \ac{HGCAL}, and physics, including HH processes. We can see the links between \acp{TP}, trigger objects, \ac{L1} algorithms and physics channels. \Acp{TP} include crystals, towers and clusters from calorimeters (\ac{ECAL}, \ac{HCAL}, \ac{HF} and \ac{HGCAL}), stubs and clusters from the muon detectors (\ac{DT}, \ac{RPC}, \ac{CSC}, \ac{GEM} and \ac{iRPC}), as well as \ac{L1} tracks from the track finder. The trigger objects types produced by the \phase{2} \ac{L1} trigger system are represented: standalone, track-matched, tracker-based and \ac{PF}/\ac{PUPPI}-based. Taken from [[cite:&l1TDR]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/TPtoPhysics.pdf]]
-#+END_figure
 
 
 My work is mostly concerned with the \ac{BE}, which is composed of two processing stages (\ac{S1} and \ac{S2}) running on Serenity boards [[cite:&serenity]] with 128-link Xilinx VU13P FPGAs.
@@ -212,42 +245,11 @@ The code enables exponentially faster prototyping, testing and optimization, whi
 ** Random
 + [[cite:&hlttdr]] (I wrote Section 12.3)
 + ECON-D does zero suppression
-+ split between on detector electronics and outside FPGAs is also related tothe cost and limitation of optical links available [[cite:&zabi]]
-+ mention briefly the updates at the level of the HLT for Phase-2
   
-** Reconstruction code
-Given its location and number of active sensors, data rates of \SI{\sim 100}{\tera\byte\per\second} are expected.
 
-This requires the development of reconstruction code capable of fully exploiting the increased granularity under the expected extreme conditions.
-The biggest contributor to CPU usage is event reconstruction, of which currently ∼5% is
-used by HGCAL [5]. CMS plans to port part of its reconstruction to Graphics Processing
-Units (GPUs), which represent one of the most promising hardware accelerator technologies on
-the market. GPUs are a key element when one considers taking advantage of heterogeneous
-architectures available on traditional and High-Performance Computing grid sites, including the
-upgraded Worldwide LHC Computing Grid. GPUs also promote the development of algorithms
-with better computing performance, and profit from a potentially favourable cost when compared
-to CPUs, per unit capacity. CMS is planning to adopt a heterogeneous High Level Trigger (HLT)
-farm already in Run 3 (2022–2025), where ∼30% of the workflow will be offloaded to GPUs (50%
-and 80% by the end of Run 4 and 5, respectively) [6]. 
-
-The reconstruction model envisioned for \ac{HGCAL} is intended to be fast and flexible, comprising a sequence of modules/stages which transform raw data into physics objects.
-After the initial generation, simulation, digitization [5]
-and calibration steps, energy deposits (hits) are clustered by CLUE, a fully-parallelizable density-
-based clustering algorithm [8], in order to form two-dimensional objects. In a nutshell, CLUE
-assigns an energy density and a separation distance to all hits, which are later used to classify
-each hit as either a seed, a follower (based on the hit’s nearest highest density), or an outlier.
-Clusters are built by traversing the tree of followers of each seed, assigning the index of the
-seed to all its followers. This work includes the calculation of the cluster energy and cartesian
-positions, which are computed in the device (section 3.1). In addition, a heterogeneous approach
-for navigating through the detector’s geometrical/topological information is devised and used
-within CLUE (section 3.2).
-
-
-* why is the data throughput between Stage1 and Stage2 larger than the one between the ECON-T and Stage1
-The data throughput is larger because of the duplication needed to handle sector boundaries and because the data need to be inflated:
-+ the addresses need to be encoded on a larger number of bits because the Stage 1 covers larger detector regions than the ECON-T
-+ the energies need also to be encoded on a larger number of bits to absorb different energy scales used in different regions of the detector in the ECON-T
-+ the numbers you are referring to are for the system using the Threshold data reduction I suppose (I don't think we have numbers for the current system). So in that case, since we have a fixed size format between S1 and S2 we need to allocate more bandwidth in order to absorb fluctuations and limit truncation in the S1. To be noted that something similar will also apply with BC even though its data is fixed size. This is due to the fact that BC provides a fixed number of TCs per module, but not a fixed number of TCs per bin. While the Stage 2 needs a fixed data size per bin. So we need to allocate more bandwidth per bin than necessary.
+* sci
+Not entirely well defined.
+Trigger sum of 4 adjacent tiles
 
 * Additional bibliography :noexport:
 + JB reference: https://cernbox.cern.ch/pdf-viewer/public/cLosQkewmONZakQ/220606_Dauncey_DN-19-032-V2.pdf?contextRouteName=files-public-link&contextRouteParams.driveAliasAndItem=public%2FcLosQkewmONZakQ&items-per-page=100

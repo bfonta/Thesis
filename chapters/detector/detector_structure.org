@@ -40,6 +40,8 @@ The tracking system was designed to provide coverage up to a pseudorapidity of $
 \myparagraph{Electromagnetic calorimeter}
 
 @TODO@
++ check the current HF and compare it with HFNose
+
 The lead tungstate (PbWO4) electromagnetic calorimeter of the CMS experiment is located
 inside the 3.8 T solenoid magnet and consists of 61200 crystals in the barrel section and 7324
 crystals in each of the two endcaps, for a total of 75848 channels.
@@ -124,19 +126,23 @@ The additional resolution extends the \ac{CMS} trigger low-$\pt$ reach to \SI{\s
 A first batch of 144 \ac{GEM} chambers was introduced in the \ac{CMS} muon system during the \longshut{2}.
 They are located very close to the beampipe, subject to the highest radiation doses among all muon detectors.
 The \acp{GEM} system will improve the measurement of the polar muon bending angle, extending current trigger capabilities.
-It will also extend the muon coverage up to the forward $1.6 < \eta < 2.4$ region.
+It will also extend the muon coverage up to the forward $1.55 < \eta < 2.18$ region.
+The chambers come in two alternating sizes in order to maximize \ac{eta} coverage while fitting in the available space constrained by the support structure, as depicted in [[fig:gem_structure]].
 Each \ac{GEM} chamber includes a stack of three \ac{GEM} foils, which consist of a \SI{50}{\micro\meter}-thick insulating polymer covered on both sides by thin \ch{Cu} conductive layers.
 A strong electric field is applied between the two conductors.
-The chambers are filled with an \ch{Ar}/\ch{CO2} mixture, which is ionized by incident muons, and are segmented in strips along \phi{}.
+The chambers are filled with a 70:30 \ch{Ar}/\ch{CO2} mixture, which is ionized by incident muons, and are segmented in strips along \phi{}.
 The electrons created during the ionisation process drift towards the foils create avalanches.
 The resulting electron avalanche induces a readout signal on the finely spaced strips.
-The structure of the chambers and its location in the \ac{CMS} endcap can be seen in [[ref:fig:gem_structure]].
+The structure of the chambers and its location in the \ac{CMS} endcap can be seen in [[fig:gem_structure]].
 The CMS GEMs are the largest \ac{GEM} system ever installed, with an area of \SI{\sim 0.5}{\meter\squared} per chamber.
-They bring a spatial resolution of \num{30} to \SI{100}{\micro\meter} and a timing resolution of \SI{\sim 5}{\nano\second} [[cite:&gem_tdr]].
+They bring a combined spatial resolution of \SI{\sim 100}{\micro\meter} and a timing resolution of $\lesssim$ \SI{10}{\nano\second} [[cite:&gem_tdr]].
 
 #+NAME: fig:gem_structure
-#+CAPTION: (Left) Exploded mechanical design of the a triple-\ac{GEM} chamber, following the description in the texrt. (Right) Positioning of short and long chambers in \ac{CMS} endcap. During the \ac{HL-LHC}, \ac{GEM} detectors will be placed right at the back of \ac{HGCAL}. Adapted from [[cite:&gem_tdr]].
+#+CAPTION: (Left) Mechanical design blowup of the a triple-\ac{GEM} chamber, following the description in the texrt. (Right) Positioning of short and long chambers in the \ac{CMS} endcap. During the \ac{HL-LHC}, \ac{GEM} detectors will be placed right at the back of \ac{HGCAL}. Adapted from [[cite:&gem_tdr]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/detector/gem_structure.pdf]]
+[[~/org/PhD/Thesis/figures/detector/GEMstructure.pdf]]
 #+END_figure
+
+* Comments :noexport:
++ cross-cehck all the content with [[cite:&cms_run3_developments]]

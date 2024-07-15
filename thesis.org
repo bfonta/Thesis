@@ -78,12 +78,12 @@
 * Trigger primitives reconstruction for the HGCAL Level-1 trigger
 ** The High Luminosity LHC
 #+INCLUDE: "chapters/hgcal/hllhc.org"
-*** Physics motivation
+*** Physics Motivation
 #+INCLUDE: "chapters/hgcal/hllhc_physics.org"
-*** Overview on detector ugrades
+*** Overview on Detector Ugrades
 #+INCLUDE: "chapters/hgcal/hllhc_detector_upgrades.org"
-*** CMS upgrades
-#+INCLUDE: "chapters/hgcal/hllhc_future_subdetectors.org"
+*** Detector Upgrades in CMS
+#+INCLUDE: "chapters/hgcal/cms_detector_upgrades.org"
 *** The CMS Phase-2 Trigger System
 #+INCLUDE: "chapters/hgcal/phase2_trigger_system.org"
 ** The High Granularity Calorimeter
@@ -179,6 +179,7 @@
 *** Future accelerators
 + mention \reshybbtt{} analysis
 
+
 * Effects of finite width and interference in resonant HH production
 ** The Singlet Model
 #+INCLUDE: "chapters/interf_studies/singlet_model.org"
@@ -190,6 +191,7 @@
 * Conclusions
 #+INCLUDE: "chapters/conclusions.org"
 
+
 * Appendix
 ** General control distributions
 ** MET SF control distributions
@@ -197,6 +199,7 @@
 
 * List of acronyms
 #+LATEX: \input{acro_list}
+
 
 * Bibliography :ignore:
 [[bibliographystyle:unsrt]]
@@ -209,4 +212,5 @@
 ~/dot-emacs/bibliography/references/pure_software.bib,
 ~/dot-emacs/bibliography/references/physics.bib,
 ~/dot-emacs/bibliography/references/detector.bib]]
+
 

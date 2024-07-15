@@ -1,4 +1,6 @@
-<<sec:hgcal_intro>>
+:PROPERTIES:
+:CUSTOM_ID: sec:hgcal_intro
+:END:
 
 Running conditions during the \ac{HL-LHC} data collection will be much harsher and crowded than what the \ac{LHC} entails.
 This is particularly true for the \ac{CMS} endcap regions, given the large radiation levels expected closer to the beam axis.
