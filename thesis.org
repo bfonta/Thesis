@@ -96,6 +96,7 @@
 ** Cluster splitting and possible solutions
 #+INCLUDE: "chapters/hgcal/cluster_splitting.org"
 
+** Future
 
 * \reshhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/intro/bbtt_analysis.org"

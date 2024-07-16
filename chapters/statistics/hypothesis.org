@@ -1,3 +1,6 @@
++ Andrew: mention we consider the assymptotic limit and cite "the paper everybody cites"
+  
+
 In statistics, the term /hypothesis/ indicates a given set of predicted probabilities, against which one compares observed data.
 The hypothesis generally assumed as true is traditionally called the /null hypothesis/, or $H_{0}$, while the hypothesis we are comparing with the null are dubbed /alternative/, or $H_{1}$, $H_{2}$, $H_{3}$, ...
 Hypothesis denote \acp{PDF2} $f$ which depend on the data measured $x = (x_1,x_2,x_3,...)$ and eventually on free parameters $\theta = (\theta_1,\theta_2,\theta_3,...)$ which are in turn estimated from data.

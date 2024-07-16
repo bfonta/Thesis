@@ -1,5 +1,9 @@
 <<sec:event_geom_developments>>
 
+During my PhD I have implemented from scratch the entire \ac{S2} reconstruction chain in a standalone =Python= code[fn:: \url{https://github.com/bfonta/bye_splits}]
+It was previously only available in =C++=, within CMSSW [[cite:&cmssw]].
+The code enables exponentially faster prototyping, testing and optimization, which are the basis of the following studies.
+
 I developed a unified set of \texttt{Python} classes from scratch to process HGCAL samples and produce a simplified version of the TC geometry, including both \ch{Si} and scintillator sections[fn::See an example in \url{https://github.com/bfonta/bye_splits/pull/26}.].
 The geometry and specific events are then deployed via dedicated interactive \texttt{Python} visualization libraries, of which I have written 2D and (a proof of concept of) 3D visualization, including how to potentially merge the visualizations from different libraries with Flask [[cite:&flask]].
 The investigation and writing of the geometry revealed some bugs in the official \ac{CMSSW} [[cite:&cmssw]] implementation.
