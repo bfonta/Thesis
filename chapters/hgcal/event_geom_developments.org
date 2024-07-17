@@ -25,3 +25,17 @@ This work has been presented at PyHEP 2023 [[cite:&bruno_pyhep23]].
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/SimplifiedGeometry.pdf]]
 #+END_figure
+
+#+NAME: fig:pu200photon
+#+CAPTION: \num{200} \ac{PU} single photon event display using this work's custom \ac{HGCAL} geometry. The framework supports the inspection of any event in 3D. \Acp{TC} represented as transparent rectangles have an energy deposition below XXX. (Left) Individual clusters are identified with different colors. The central photon shower is clearly visible, together with some \ac{PU} clusters. The default reconstruction chain was used, with the =min_dist= clustering algorithm. (Right) The same event is displayed in terms of energy deposits in $\si{tmip}$ units.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/EventDisplayPu200Photon.pdf]]
+#+END_figure
+
+#+NAME: fig:pu0prongspi0
+#+CAPTION: \num{200} \ac{PU} single tau event display using this work's custom \ac{HGCAL} geometry. The tau particle decayed into three charged pions and one neutral pion. The framework supports the inspection of any event in 3D. \Acp{TC} represented as transparent rectangles have an energy deposition below XXX. (Left) Individual clusters are identified with different colors. The central photon shower is clearly visible, together with some \ac{PU} clusters. The default reconstruction chain was used, with the =min_dist= clustering algorithm. (Right) The same event is displayed in terms of energy deposits in $\si{tmip}$ units.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/EventDisplayPU2003ProngPi0.pdf]]
+#+END_figure

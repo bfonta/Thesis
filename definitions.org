@@ -62,8 +62,8 @@
 #+LATEX_HEADER: \newcommand{\coordsa}{(\si{\azi}, \si{\rz})}
 #+LATEX_HEADER: \newcommand{\coordsb}{($u$, $v$)}
 #+LATEX_HEADER: \newcommand{\rapidity}{$\eta$}
-#+LATEX_HEADER: \newcommand{\rz}{$R$/$z$}
-#+LATEX_HEADER: \newcommand{\tmip}{$\text{mip}_{\text{T}}$}
+#+LATEX_HEADER: \newcommand{\rz}{R/$z$}
+#+LATEX_HEADER: \newcommand{\tmip}{$\text{MIP}_{\text{T}}$}
 
 # Text
 #+LATEX_HEADER: \newcommand{\run}[1]{Run-#1}

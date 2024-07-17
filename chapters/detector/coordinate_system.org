@@ -1,3 +1,7 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:coordinate_system
+:END:
+
 The CMS experiment adopts a right-handed coordinate system, with the origin placed at the nominal collision point.
 The x-axis points toward the centre of the LHC ring, the y-axis points vertically upward, and the z-axis thus points towards the Jura mountains.
 The structure of the detector makes it natural to use a polar coordinate system.
