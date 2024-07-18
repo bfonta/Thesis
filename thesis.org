@@ -94,7 +94,7 @@
 #+INCLUDE: "chapters/hgcal/event_geom_developments.org"
 
 ** Cluster splitting and possible solutions
-#+INCLUDE: "chapters/hgcal/cluster_splitting.org"
+#+INCLUDE: "chapters/hgcal/cluster_splits.org"
 
 ** Future
 

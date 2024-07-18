@@ -1,30 +1,98 @@
-<<sec:event_geom_developments>>
+:PROPERTIES:
+:CUSTOM_ID: sec:event_geom_developments
+:END:
 
-During my PhD I have implemented from scratch the entire \ac{S2} reconstruction chain in a standalone =Python= code[fn:: \url{https://github.com/bfonta/bye_splits}]
-It was previously only available in =C++=, within CMSSW [[cite:&cmssw]].
-The code enables exponentially faster prototyping, testing and optimization, which are the basis of the following studies.
+In [[#sec:hgcal_trigger_primitives]] we introduced the processing steps taking place in \ac{S2}.
+They all run a series of algorithms not yet finalized, and which are therefore subject to constant updates and rewrites, in order to both improve physics performance and reduce latency.
+The algorithms depend on a large number of potentially tunable parameters.
+Additionally, several alternative algorithms might exist for the same step.
+A mechanism is thus needed to easily compare the performance of different algorithms within the same processing chain.
+The mechanism should also include an event-by-event comparison for debugging purposes.
+Moreover, the \ac{S2} processing chain is itself not yet finalized, and some processing steps might be added or removed according to evolving physics and computing needs.
+It is clear that a flexible, fast and easy-to-use framework is needed to perform all required studies and tests.
 
-I developed a unified set of \texttt{Python} classes from scratch to process HGCAL samples and produce a simplified version of the TC geometry, including both \ch{Si} and scintillator sections[fn::See an example in \url{https://github.com/bfonta/bye_splits/pull/26}.].
-The geometry and specific events are then deployed via dedicated interactive \texttt{Python} visualization libraries, of which I have written 2D and (a proof of concept of) 3D visualization, including how to potentially merge the visualizations from different libraries with Flask [[cite:&flask]].
-The investigation and writing of the geometry revealed some bugs in the official \ac{CMSSW} [[cite:&cmssw]] implementation.
-I have also learned how to deploy a web application with the 2D/3D visualizations using CERN's =Platform-as-a-Service= tool (powered by =OKD4= / =Open Shift 4=) via its convenient =S2I= service.
-This is useful for information sharing and ease of access.
-The framework, including the reconstruction chain, is currently being used and actively developed by a small team at LLR, and serves as an essential ground for the work of two other PhD candidates and two younger students.
-This work has been presented at PyHEP 2023 [[cite:&bruno_pyhep23]].
+A =C++= emulation of the entire firmware processing chain is available in \ac{CMSSW}.
+Despite not being a bit-level emulator, it reasonably replicates the future firmware processing chain, and has access to the official \ac{CMSSW} geometry, including \ac{HGCAL}, representing the still-evolving outcome of several years of software development within \ac{CMS}.
+However, the framework is complex to understand and use, it is not documented, and is therefore not user-friendly, which is particularly worrying for newcomers.
+Even after getting a good grasp of \ac{CMSSW}, writing a new algorithm is time-consuming, careful memory management might be required, and integration with the existing codebase is a relatively complex and long process.
+A plug-in or interface for parameter tuning is not supported, which creates the burden to write more boiler-plate code on the user side, even for simple, grid-like tuning strategies.
+Finally, debugging is quite complicated and morose.
+All of the above disadvantages hinder the progress of physicist and students in any studies they might wish to perform.
+These studies can involve new algorithms, optimization of current algorithms, or parameter tuning.
+
+In order to abstract most complexities away, I implemented from scratch the \ac{HGCAL} \ac{S2} processing chain in =Python= [[cite:&python]], version \num{3}.
+The implementation does more than simply porting the existing algorithms.
+It rewrites potential =Python= bottlenecks, usually =C++= =for= loops, using =numpy= for =C=-level performances [[cite:&numpy]].
+It also exploits a modern suite of standard and \ac{HEP}-related packages, such as =uproot= [[cite:&uproot]] and =RDataFrame= [[cite:&rdataframe]], among others.
+The framework, called \bsplits{} for reasons detailed in [[#sec:cluster_splitting]], enables exponentially faster prototyping, testing and optimization.
+It also powers the studies presented in [[#sec:cluster_splitting]].
+The framework is currently being used by multiple people at \ac{LLR}, serving as a foundational basis for a significant portion of their work.
+The code has been presented at the international PyHEP 2023 Workshop [[cite:&bruno_pyhep23]], including a live demonstration in a web application.
+The application was deployed using \ac{CERN}'s \ac{PaaS}, which is based on =OKD4= (=OpenShift4=), and conveniently enables a project to be directly built from a =git= repository via the \ac{S2I} service.
+The \ac{PaaS} also provides access to the \ac{CERN} network filesystem, where geometry and event data was stored.
+All in all, the application might become useful in the years to come for sharing information, for visualization, and for tuning parameters directly from the \ac{GUI}.
+Indeed, since everything is implemented in =Python=, connecting the visualization to the actual data processing becomes straightforward with the definition of simple code callbacks.
+The callbacks are activate after a button pressing, a dropdown menu selection, or similar.
+The geometry and specific events are deployed via interactive =Python= visualization libraries, with which I have written 2D and 3D visualization.
+Concerning the latter, I wrote a proof-of-concept that was later finalized by a different student, and was presented in the live demonstration mentioned above.
+I have also demonstrated how to potentially merge visualizations from different libraries using =Flask= [[cite:&flask]].
 
 #+NAME: fig:geom_impl_flow
-#+CAPTION: Caption 
+#+CAPTION: Architectural layout for the \ac{S2} reconstruction implementation in =Python=. It is roughly slit in two conceptual axis: the geometry and the event processors. The two axis are used simultaneously during \ac{TPG} data processing. The framework is simple and flexible enough to support the addition of algorithms in the future without much effort. A psuedo-cache mechanism is added to speed-up event processing and displaying. The user, or client, is able to use the two processors without understanding its internals. Adapted from [[cite:&bruno_pyhep23]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/flowchart.pdf]]
 #+END_figure
 
+The framework is conceptually split across two independent axis: geometry and event processing.
+
+* HGCAL coordinates
+
+
+
+
+* Geometry implementation
+
+A simplified \ac{HGCAL} geometry was implemented, including both \ch{Si} and \ac{Sci} sections.
+Implementing the full detailed \ac{HGCAL} geometry would not be useful, and would require an effort largely exceeding the scope of a thesis.
+The geometry is here used for visualization purposes only, and has no impact on the algorithms.
+It is also required for testing, but the ultimate validation must be done with a bit-level emulator, or directly in the final hardware system.
+Therefore, an approximated geometry is enough for all optimization and validation studies.
+Interestingly, the study and implementation of the \ac{HGCAL} geometry in =Python= revealed occasional bugs in the official \ac{CMSSW} implementation, which were accordingly addressed.
+
+The implementation includes only the detector's sensor topology.
+Information on materials and passive components is not present.
+Information on low and high granularity \ac{Si} modules is also not present, since the geometry concerns itself with \acp{TC}.
+Finer mesh details such as partial \ac{Si} wafers or variations in the spacing between sensors is not included.
+What the geometry includes is the position and representation of every detector element across the full range of the endcap, and its mapping to the correct geometry index for later association with event information.
+
+The \ac{Si} section is implemented as a series of rectangles representing \acp{TC}, arranged in a hexagonal fashion to mimick the \ac{Si} modules.
+Modules are drawn by shifting the position of a single "root" module following \ac{HGCAL} coordinates.
+
 #+NAME: fig:si_sci_custom_geoms
-#+CAPTION: Taken from [[cite:&bruno_chep23]]. 
+#+CAPTION: Comparison between the official \ac{CMSSW} \ac{HGCAL} geometry (top) and the geometry developed in this work (bottom). We show an example for \ac{CE-E} (left) and \ac{CE-H} (right) layers, with their zoomed-in and zoomed-out versions. Adapted from [[cite:&bruno_pyhep23]]. 
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/SimplifiedGeometry.pdf]]
+[[~/org/PhD/Thesis/figures/hgcal/SiSciGeometries.pdf]]
 #+END_figure
+
+#+NAME: fig:si_sci_custom_geoms
+#+CAPTION: Comparison between the official \ac{CMSSW} \ac{HGCAL} geometry (top) and the geometry developed in this work (bottom). We show an example for \ac{CE-E} (left) and \ac{CE-H} (right) layers, with their zoomed-in and zoomed-out versions. Adapted from [[cite:&bruno_pyhep23]]. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/SiSciGeometriesDetail.pdf]]
+#+END_figure
+
+Align the position of trigger cell and display elements in real data units (centimeters). Due to the diamond shaped visualization of trigger cells and to geometry-related shifts, it is not possible to perfectly align the center of each visualized trigger cell with its true center. Below we show two approaches:
+
+perfectly aligned diamond-shaped trigger cells within a hexagonal module
+sligthly mis-aligned module "thirds", being however closer to truth trigger cell position
+It has been decided to use the second method because, though less appealing visually, gives a better approximation of what the detector "sees".
+
+Most tile trigger cells are made of 2-by-2 tile cells. However, for some layers, an inner and outer ieta boundaries have trigger cells which are made of just 1-by-2 tile cells. To avoid overlaps the size of those cells is reduced to half using the corresponding hard-coded layer numbers.
+
+The successful validation required the application of a vertical shift to all layers in the CE-H section; positive for odd layers and negative for even layer
+The shift is required due to the usage of a wafer-centered geometry in the CE-H section, as opposed to a corner-centered geometry in the CE-E section.
 
 #+NAME: fig:pu200photon
 #+CAPTION: \num{200} \ac{PU} single photon event display using this work's custom \ac{HGCAL} geometry. The framework supports the inspection of any event in 3D. \Acp{TC} represented as transparent rectangles have an energy deposition below XXX. (Left) Individual clusters are identified with different colors. The central photon shower is clearly visible, together with some \ac{PU} clusters. The default reconstruction chain was used, with the =min_dist= clustering algorithm. (Right) The same event is displayed in terms of energy deposits in $\si{tmip}$ units.
@@ -39,3 +107,7 @@ This work has been presented at PyHEP 2023 [[cite:&bruno_pyhep23]].
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/EventDisplayPU2003ProngPi0.pdf]]
 #+END_figure
+
+
+* Even implementation
+I developed a unified set of \texttt{Python} classes from scratch to process HGCAL samples and produce a simplified version of the TC geometry, including both \ch{Si} and \ac{Sci} sections.
