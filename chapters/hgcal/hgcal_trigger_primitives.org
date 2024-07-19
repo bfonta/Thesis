@@ -29,7 +29,7 @@ The smallest detector units the \ac{TPG} is concerned with are \acp{TC}.
 As detailed in [[#sec:frontend_electronics]], for the \ac{Si} section, \acp{TC} are arranged in a "three-fold diamond" configuration where groups of \num{4} or \num{9} \ac{Si} cells form one \ac{TC}.
 This configuration was chosen because it allows the convenient definition of symmetric groups of neighbouring cells to form \acp{TP}, as shown in [[fig:tcs_geometry]].
 It also simplifies the layout of the \ac{Si} module readout \ac{PCB}, given the subdivision of the module into symmetric domains [[cite:&hgcalTDR]].
-In the \ac{Sci} section, \acp{TC} are always groups of $2\times2$ tiles, except close to boundaries, where some \acp{TC} containing less tiles can exist [[cite:&sci_specific]].
+In the \ac{Sci} section, \acp{TC} are always groups of $2\times2$ tiles, except close to boundaries, where some \acp{TC} containing less tiles exist [[cite:&sci_specific]].
 The number of \acp{TC} and \acp{elink} associated to the \ac{Sci} section increases with the detector's depth, reflecting the overall distribution of \ac{Si} to \ac{Sci} regions with increasing layer number (recall [[fig:hgcal_side_view]]).
 
 @nice sentence to wrap up intro@
@@ -186,6 +186,8 @@ The \ac{S1} thus receives \ac{ECON-T} data from multiple modules, but from a sin
 The data is unpacked, and a residual calibration is performed for each \ac{TC}, if needed.
 The \acp{TC} are routed and sorted in energy into projective \num{2} \azimuth{} vs. \num{42} \rz{} bins per \SI{120}{\degree} sector, where $\text{R}=(x^{2}+y^{2})^{1/2}$ and $\tan(\theta)=$ \si{\rz} (see [[#sec:coordinate_system]]).
 This choice of coordinates is chosen since a constant \si{\rz} corresponds to a constant particle angle $\theta$, where $R$ is defined in the plane perpendicular to the \ac{LHC} beamline.
+The cordinates are "projective" since 3D deposits are mapped to a 2D space.
+Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
 The sorting uses batcher odd-even sorting networks [[cite:&sort_net2;&calorPortales;&sort_net]], where on-the-fly truncation reduces the total number of comparators required and guarantees a fixed output bin size.
 In parallel, module sums are partially summed into module towers, which are formed separately for the \ac{CE-E} and \ac{CE-H}.
 Finally, the data is sent to \ac{S2} with a \SI{\sim 140}{\tera\bit\per\second} throughput after time-multiplexing it with a \num{18} \ac{BX} period [[cite:&hgcal_backend_tdaq]].
@@ -212,9 +214,15 @@ Partial tower energies are accumulated into (\rapidity{}, \azimuth{}) bins and c
 
 + *Histogramming*:
   \Acp{TC} are mapped to a \coordsa{} space with (216, 42) bins.
-  The binnning further reduces the spatial granularity and, due to its grid-like structure, facilitates vectorized and hence parallel processing in the firmware.
-  Each bin contains the energy sum of all its \acp{TC}, together with their \tmip-weighted $x/z$ and $y/z$ positions.
-  \tmip{} is defined as $\text{MIP}/\cos(\theta)$, where one \ac{MIP} stands for the energy deposited by a minimum ionizing particle [[cite:&PDG \S34.2.3]], and $\theta$ is the polar angle introduced in [[#sec:coordinate_system]].
+  The binning further reduces the spatial granularity and, due to its grid-like structure, facilitates vectorized and hence parallel processing in the firmware.
+  Each bin contains the energy sum of all its \acp{TC}, together with their \tmip-weighted $x/z$ and $y/z$ positions, where \tmip{} is defined as $\text{MIP}/\cos(\theta)$, with one \ac{MIP} being the energy deposited by a minimum ionizing particle [[cite:&PDG \S34.2.3]], and $\theta$ the polar angle introduced in [[#sec:coordinate_system]]:
+
+  #+NAME: eq:weighted_position
+  \begin{equation}
+  \frac{x}{z}\bigg\rvert_{\text{weighted}} = \sum_{i}^{\text{N}_{\text{TC}}}  \frac{\text{MIP}_{\text{T}}^{i}\,x^i}{z^i}
+  \kern 1.5cm
+  \frac{y}{z}\bigg\rvert_{\text{weighted}} = \sum_{i}^{\text{N}_{\text{TC}}}  \frac{\text{MIP}_{\text{T}}^{i}\,y^i}{z^i}
+  \end{equation}
 
 + *Smearing*:
   An energy smearing step is applied to the \coordsa{} bins to decrease overall variations in their energy distribution.

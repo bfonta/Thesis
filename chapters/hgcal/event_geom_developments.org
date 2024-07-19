@@ -38,7 +38,7 @@ Concerning the latter, I wrote a proof-of-concept that was later finalized by a 
 I have also demonstrated how to potentially merge visualizations from different libraries using =Flask= [[cite:&flask]].
 
 #+NAME: fig:geom_impl_flow
-#+CAPTION: Architectural layout for the \ac{S2} reconstruction implementation in =Python=. It is roughly slit in two conceptual axis: the geometry and the event processors. The two axis are used simultaneously during \ac{TPG} data processing. The framework is simple and flexible enough to support the addition of algorithms in the future without much effort. A psuedo-cache mechanism is added to speed-up event processing and displaying. The user, or client, is able to use the two processors without understanding its internals. Adapted from [[cite:&bruno_pyhep23]].
+#+CAPTION: Architectural layout for the \ac{S2} reconstruction implementation in =Python=. It is roughly slit in two conceptual axis: the geometry and the event processors. The two axis are used simultaneously during \ac{TPG} data processing. The framework is simple and flexible enough to support the addition of algorithms in the future without much effort. A pseudo-cache mechanism is added to speed-up event processing and displaying. The user, or client, is able to use the two processors without understanding its internals. Adapted from [[cite:&bruno_pyhep23]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/flowchart.pdf]]
@@ -48,26 +48,64 @@ The framework is conceptually split across two independent axis: geometry and ev
 
 * HGCAL coordinates
 
+\Ac{HGCAL} follows separate coordinates systems for the \ac{Si} and \ac{Sci} regions.
+Differences come about from the different detector configurations.
+The coordinates for both sections are shown in [[fig:hgcal_hexag_coords]].
+Note that the coordinates for \acp{TC} and sensor cells are numerically different due to the different cell multiplicity, but follow exactly the same logic.
 
+\myparagraph{Silicon coordinates}
 
+The \ac{Si} region is characterised by hexagonal-shaped modules and detector cells.
+There are thus two sets of /axial coordinates/ [[cite:&red_blob_games]] applied at the level of one full layer, where one coordinate position corresponds to one module, and at the level of the module, where one coordinate position corresponds to a single \ac{TC} (or \ac{Si} cell).
+Each sampling layer has its own coordinates, for both endcaps.
+Given the flat-top and pointy-top relative orientations of the hexagons within their respective phase-space, the two systems are not aligned.
+This further complicates the /navigation/ within such a coordinate system, which is by default more complex than a cartesian system.
+Each \ac{TC} (or cell) within a module is uniquely identified by a set of $u$ and $v$ indexes, and each module within a layer is uniquely identified by a set of $U$ and $V$ indexes.
+Multiple module orientations are possible, affecting the direction of the $(u,v)$ eigenvectors.
+In the remainder of this section we consider a single orientation for simplicity, as the logic is kept unchanged.
+Hexagonal coordinates in \ac{HGCAL} are further explored in [[#sec:using_detector_coordinates]].
+
+\myparagraph{Scintillator coordinates}
+
+The regions in the detector covered by scintillator material follow a simpler polar-like coordinate system, defined in terms of \ac{eta} and \ac{phi} rings in the transversal direction.
+The indexes do not linearly map to a physical distance, given the gradual increase of the tile sizes with increased distance from the center of the layer.
+\Acp{TC} comprise $2\times2$ groups of \ac{Sci} tiles, which follow the same (adapted) coordinate system.
+
+#+NAME: fig:hgcal_hexag_coords
+#+CAPTION: Coordinate system in \ac{HGCAL}, for the \ac{Si} (left and middle) and \ac{Sci} (right) sections. The \ac{Si} section has two coordinate systems, one at layer level (left), and another at module level (middle). The \coordsb{} in the middle figure are similar for \acp{TC} and \ac{Si} cells, but the multiplicity is different. The low graularity modules are shown, but the same coordinate system is used for high granularity ones. Note that module hexagons and cell hexagons have a different orientation. The \ac{Sci} section uses polar-like coordinates.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/HexagCoordsHGCAL.pdf]]
+#+END_figure
 
 * Geometry implementation
 
 A simplified \ac{HGCAL} geometry was implemented, including both \ch{Si} and \ac{Sci} sections.
-Implementing the full detailed \ac{HGCAL} geometry would not be useful, and would require an effort largely exceeding the scope of a thesis.
-The geometry is here used for visualization purposes only, and has no impact on the algorithms.
-It is also required for testing, but the ultimate validation must be done with a bit-level emulator, or directly in the final hardware system.
-Therefore, an approximated geometry is enough for all optimization and validation studies.
-Interestingly, the study and implementation of the \ac{HGCAL} geometry in =Python= revealed occasional bugs in the official \ac{CMSSW} implementation, which were accordingly addressed.
-
-The implementation includes only the detector's sensor topology.
+Implementing the full detailed \ac{HGCAL} geometry would require an effort largely exceeding the scope of the thesis.
+The custom geometry is used for visualization purposes only, and has no impact on the algorithms.
+Additionally, any final validation must be done by a bit-level emulator, or directly by the hardware system.
+An approximated geometry is therefore enough for all optimization and validation studies.
+The custom implementation includes only the detector's sensor topology.
 Information on materials and passive components is not present.
 Information on low and high granularity \ac{Si} modules is also not present, since the geometry concerns itself with \acp{TC}.
 Finer mesh details such as partial \ac{Si} wafers or variations in the spacing between sensors is not included.
-What the geometry includes is the position and representation of every detector element across the full range of the endcap, and its mapping to the correct geometry index for later association with event information.
+What is included is the position and representation of every detector element across the full range of the endcaps, and its mapping to the correct geometry index for later association with event information.
+Interestingly, the study and implementation of the \ac{HGCAL} geometry in =Python= revealed occasional bugs in the official \ac{CMSSW} implementation, which were accordingly addressed.
 
-The \ac{Si} section is implemented as a series of rectangles representing \acp{TC}, arranged in a hexagonal fashion to mimick the \ac{Si} modules.
-Modules are drawn by shifting the position of a single "root" module following \ac{HGCAL} coordinates.
+The \ac{Si} section is implemented as a series of diamond-shaped elements representing \acp{TC}, arranged in a hexagonal fashion to mimick the \ac{Si} modules.
+The structure replicates the three-fold configuration of \ac{Si} \acp{TC}.
+Modules are drawn by shifting the position of a single "root" module along \coordsc{} \ac{HGCAL} coordinates.
+Despite the perfect plane tesselation ensured by hexagonal coordinates, it is obvious that not all modules or \ac{TC} should be drawn (see [[fig:hgcal_hexag_coords]], left).
+The framework ensures non-existing modules are skipped.
+The real physical dimensions of the modules are carefully taken into account, such that the positions of \ac{TC} are displayed in real data units, in \si{\cm}.
+Due to the diamond-shaped \acp{TC} and to geometry-related shifts, the alignment of \acp{TC} relative to their true position, as provided by \ac{CMSSW}, becomes ambiguous.
+At least two approaches exists:
+
+1. perfectly align the \ac{TC} within a hexagonal module, which leads to a worse match of each \ac{TC} centre relative to their true center;
+2. sligthly misalign module "three-folds", leadng to a less appealing visualization that however better displays the true position of \acp{TC}.
+
+The second method is used because, though less visually appealing, produces element positions closer to the real ones.
+This geometrical limitation can be appreciated in [[fig:si_sci_custom_geoms_detail]]., where method #2 is applied.
 
 #+NAME: fig:si_sci_custom_geoms
 #+CAPTION: Comparison between the official \ac{CMSSW} \ac{HGCAL} geometry (top) and the geometry developed in this work (bottom). We show an example for \ac{CE-E} (left) and \ac{CE-H} (right) layers, with their zoomed-in and zoomed-out versions. Adapted from [[cite:&bruno_pyhep23]]. 
@@ -76,38 +114,62 @@ Modules are drawn by shifting the position of a single "root" module following \
 [[~/org/PhD/Thesis/figures/hgcal/SiSciGeometries.pdf]]
 #+END_figure
 
-#+NAME: fig:si_sci_custom_geoms
-#+CAPTION: Comparison between the official \ac{CMSSW} \ac{HGCAL} geometry (top) and the geometry developed in this work (bottom). We show an example for \ac{CE-E} (left) and \ac{CE-H} (right) layers, with their zoomed-in and zoomed-out versions. Adapted from [[cite:&bruno_pyhep23]]. 
+#+NAME: fig:si_sci_custom_geoms_detail
+#+CAPTION: (Left) Detail of the outer boundary of a \ac{Si} layer. The orange dots correspond to the original \ac{TC} positions, as provided by the \ac{CMSSW} geometry. The blue dots correspond to the position in the custom simplified geometry, enforcing \ac{TC} with equal sizes. The central "hole" in each module is intentionally created by shifting the "three-fold" configuration to get close matches between orange and blue dots, and thus a better visualization representation of events. (Right) Entire scintillator section of one particular mixed layer, where the internal \ac{Si} sensors are not represented. The true \ac{TC} position is represented in blue, and placed at the center of each \ac{TC} in red.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/SiSciGeometriesDetail.pdf]]
 #+END_figure
 
-Align the position of trigger cell and display elements in real data units (centimeters). Due to the diamond shaped visualization of trigger cells and to geometry-related shifts, it is not possible to perfectly align the center of each visualized trigger cell with its true center. Below we show two approaches:
+The \ac{Sci} is simpler to create, where most tile \acp{TC} are made of $2\times2$ cells.
+However, for some layers, an inner and outer ieta boundaries have \acp{TC} made of just $1\times2$ tile cells.
+To avoid overlaps, the size of those \acp{TC} is reduced to half using the corresponding hard-coded layer numbers.
+All \acp{TC} are displayed as annular sections, without gaps between adjacent \ac{TC}.
 
-perfectly aligned diamond-shaped trigger cells within a hexagonal module
-sligthly mis-aligned module "thirds", being however closer to truth trigger cell position
-It has been decided to use the second method because, though less appealing visually, gives a better approximation of what the detector "sees".
+The validation of the geometry is performed by overlaying true \ac{TC} positions as provided by \ac{CMSSW} with custom positions, as shown in [[fig:si_sci_custom_geoms_detail]].
+Both module-centered corner-centered geometries are present in different \ac{HGCAL} layers.
+The successful validation of the custom geometry thus required the addition of a relative vertical shift to some layers.
+After the correction, very good agreements are found across the entire detector.
 
-Most tile trigger cells are made of 2-by-2 tile cells. However, for some layers, an inner and outer ieta boundaries have trigger cells which are made of just 1-by-2 tile cells. To avoid overlaps the size of those cells is reduced to half using the corresponding hard-coded layer numbers.
+* Event implementation
 
-The successful validation required the application of a vertical shift to all layers in the CE-H section; positive for odd layers and negative for even layer
-The shift is required due to the usage of a wafer-centered geometry in the CE-H section, as opposed to a corner-centered geometry in the CE-E section.
+The processing of event data starts in \ac{CMSSW}, where the full \ac{S2} is run, for different "single particle guns", which correspond to simulations shooting a single particle through \ac{HGCAL}, simulating the full physical interactions with the detector's material.
+This step produces all required \ac{TC} and cluster information later required to validate the local =Python= framework.
+\Ac{CMSSW} also propagates generator-level information.
+In this thesis we focus on 0 \ac{PU} single-photon guns.
+The framework was nevertheless tested with \num{200} \ac{PU} and found to work as expected.
+The heavy files produced by \ac{CMSSW} are "skimmed" in the =ROOT= format, \ie{} only the relevant branches are kept, and some general selection is applied:
++ request a photon at generator level;
++ only photons that did not pair-convert before \ac{HGCAL}'s surface, also known as /uncoverted photons/, (photons traverse less than \SI{\sim 1}{\radl} before reaching \ac{HGCAL}) [[cite:&hgcal_web]];
++ positive endcap only for simplicity, given the endcap's mirror symmetry;
++ \ac{CE-E} only, as photons are not expected to leak to the \ac{CE-H};
++ \num{0.5} \tmip{} threshold to all \acp{TC};
++ cluster matching with the generated particles: $(\eta_{\text{cl}}-\eta_{\text{gen}})^2 + (\phi_{\text{cl}}-\phi_{\text{gen}})^2 < 0.05^2$
+
+Skimmed data is then read on an event-by-event basis, is further skimmed according to user-defined variables, and is stored under the =parquet= file format [[cite:&parquet]].
+From there, requested events are fed to the client-side of the framework, which might include user-defined algorithms, such as the \ac{L1} \ac{S2} algorithms, or the display applications already mentioned (see [[fig:geom_impl_flow]]).
+A caching system is implemented, where =parquet= events are read and stored for later use.
+This avoid re-reading the same events multiple times during algorithmic processing or data display, mitigating the main latency bottleneck of the framework.
+The speed improvement is particularly important for \num{200} \ac{PU} data.
+When absent from the =parquet= files, events are reprocessed from the skimmed data automatically.
+For display, event information is joined with geometry information.
+
+In [[fig:pu200photon]] and [[fig:pu0prongspi0]] we showcase 3D displays produced by the framework for particular events, for a \num{200} \ac{PU} photon and a \num{0} \ac{PU} tau lepton, respectively.
+On the left each cluster index is represented by a different color.
+On the right, the same event highlights color-coded energy deposits in all \acp{TC}, in \tmip{} units.
+For the tau decay, which includes three charged and one neutral pion, we can see energy deposits in the \ac{Sci} region too.
+The online version of the event displays is fully interactive.
 
 #+NAME: fig:pu200photon
-#+CAPTION: \num{200} \ac{PU} single photon event display using this work's custom \ac{HGCAL} geometry. The framework supports the inspection of any event in 3D. \Acp{TC} represented as transparent rectangles have an energy deposition below XXX. (Left) Individual clusters are identified with different colors. The central photon shower is clearly visible, together with some \ac{PU} clusters. The default reconstruction chain was used, with the =min_dist= clustering algorithm. (Right) The same event is displayed in terms of energy deposits in $\si{tmip}$ units.
+#+CAPTION: \num{200} \ac{PU} single photon event display using the custom \ac{HGCAL} geometry. The framework supports the inspection of any event in 3D. \Acp{TC} represented as transparent rectangles have were not clustered. (Left) Individual clusters are identified with different colors. The central photon shower is clearly visible, together with some \ac{PU} clusters. The default reconstruction chain was used, with the =min_dist= clustering algorithm. (Right) The same event is displayed in terms of energy deposits in \tmip{} units.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/EventDisplayPu200Photon.pdf]]
 #+END_figure
 
 #+NAME: fig:pu0prongspi0
-#+CAPTION: \num{200} \ac{PU} single tau event display using this work's custom \ac{HGCAL} geometry. The tau particle decayed into three charged pions and one neutral pion. The framework supports the inspection of any event in 3D. \Acp{TC} represented as transparent rectangles have an energy deposition below XXX. (Left) Individual clusters are identified with different colors. The central photon shower is clearly visible, together with some \ac{PU} clusters. The default reconstruction chain was used, with the =min_dist= clustering algorithm. (Right) The same event is displayed in terms of energy deposits in $\si{tmip}$ units.
+#+CAPTION: \num{200} \ac{PU} single tau event display using this work's custom \ac{HGCAL} geometry. The tau particle decayed into three charged pions and one neutral pion. The framework supports the inspection of any event in 3D. \Acp{TC} represented as transparent rectangles have were not clustered. (Left) Individual clusters are identified with different colors. The central photon shower is clearly visible, together with some \ac{PU} clusters. The default reconstruction chain was used, with the =min_dist= clustering algorithm. (Right) The same event is displayed in terms of energy deposits in \tmip{} units.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/EventDisplayPU2003ProngPi0.pdf]]
 #+END_figure
-
-
-* Even implementation
-I developed a unified set of \texttt{Python} classes from scratch to process HGCAL samples and produce a simplified version of the TC geometry, including both \ch{Si} and \ac{Sci} sections.
