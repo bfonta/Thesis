@@ -95,9 +95,8 @@
 
 ** Cluster splitting
 #+INCLUDE: "chapters/hgcal/cluster_splitting.org"
-
 ** Future
-
+#+INCLUDE: "chapters/hgcal/future.org"
 
 * \reshhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/intro/bbtt_analysis.org"
@@ -192,7 +191,6 @@
 
 * Conclusions
 #+INCLUDE: "chapters/conclusions.org"
-
 
 * Appendix
 ** General control distributions

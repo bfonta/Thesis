@@ -1,0 +1,9 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:future
+:END:
+
++ Perform pile-up/background studies
++ study same algorithms with pions, jets and taus
+  + a single cluster can be obtained even for a 3-pronged decay
+  + we have to determine how often cluster splits happen
++ assess if seeding requires scintillator

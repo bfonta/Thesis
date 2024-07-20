@@ -184,7 +184,7 @@ The current design allocates \SI{120}{\degree} of \ac{HGCAL} to each \ac{S2} boa
 
 The \ac{S1} thus receives \ac{ECON-T} data from multiple modules, but from a single \ac{BX}, into \num{14} \acp{FPGA} per \SI{120}{\degree} sector, where the number of boards is driven by the existing optical link multiplicity.
 The data is unpacked, and a residual calibration is performed for each \ac{TC}, if needed.
-The \acp{TC} are routed and sorted in energy into projective \num{2} \azimuth{} vs. \num{42} \rz{} bins per \SI{120}{\degree} sector, where $\text{R}=(x^{2}+y^{2})^{1/2}$ and $\tan(\theta)=$ \si{\rz} (see [[#sec:coordinate_system]]).
+The \acp{TC} are routed and sorted in energy into projective \num{2} \ac{phi} vs. \num{42} \rz{} bins per \SI{120}{\degree} sector, where $\text{R}=(x^{2}+y^{2})^{1/2}$ and $\tan(\theta)=$ \si{\rz} (see [[#sec:coordinate_system]]).
 This choice of coordinates is chosen since a constant \si{\rz} corresponds to a constant particle angle $\theta$, where $R$ is defined in the plane perpendicular to the \ac{LHC} beamline.
 The cordinates are "projective" since 3D deposits are mapped to a 2D space.
 Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
@@ -210,7 +210,7 @@ Secondly, the data has to be inflated since:
 + more bandwidth has always to be allocated to \ac{TC} bins in order to absorb fluctuations and limit truncation effects in the \ac{S1}. This is also true for the fixed-size \ac{BC} algorithm, since it provides a fixed number of \acp{TC} per module, not per bin.
 
 The \ac{S2} is designed to perform the main \ac{TPG} reconstruction work: building clusters and \acp{TT}.
-Partial tower energies are accumulated into (\rapidity{}, \azimuth{}) bins and clusters are built following the steps highlighted in [[fig:stage2chain]]:
+Partial tower energies are accumulated into (\rapidity{}, \ac{phi}) bins and clusters are built following the steps highlighted in [[fig:stage2chain]]:
 
 + *Histogramming*:
   \Acp{TC} are mapped to a \coordsa{} space with (216, 42) bins.
@@ -228,7 +228,7 @@ Partial tower energies are accumulated into (\rapidity{}, \azimuth{}) bins and c
   An energy smearing step is applied to the \coordsa{} bins to decrease overall variations in their energy distribution.
   A convolutional kernel is iteratively and independently slid along both directions.
   For each bin, the energy of all its neighours covered by the finitely-sized kernel is multiplied by the corresponding kernel weight, and the energy is updated.
-  The kernels are shown in \cref{eq:smooth_kernel}, along \azimuth{} (left) and \si{\rz} (right):
+  The kernels are shown in \cref{eq:smooth_kernel}, along \ac{phi} (left) and \si{\rz} (right):
 
   #+NAME: eq:smooth_kernel
   \begin{equation}
@@ -249,25 +249,29 @@ Partial tower energies are accumulated into (\rapidity{}, \azimuth{}) bins and c
       \right]
   \end{equation}
 
-  Variations are more prominent along \azimuth{} since the binning is finer.
-  The kernel along \azimuth{} is \si{\rz}-dependent, as illustrated by the dots in \cref{eq:smooth_kernel} (left).
-  The \azimuth{} kernel collects the energy from more bins for lower \si{\rz} rows.
+  Variations are more prominent along \ac{phi} since the binning is finer.
+  The kernel along \ac{phi} is \si{\rz}-dependent, as illustrated by the dots in \cref{eq:smooth_kernel} (left).
+  The \ac{phi} kernel collects the energy from more bins for lower \si{\rz} rows.
   The energy of each bin is normalized to ensure no energy is artificially added to the event.
 
 + *Seeding*:
   Seeds are local \tmip{} maxima in the histogram, and are so called since they indicate the starting point for clustering algorithms to gather \acp{TC}.
   Seeds are found via a seeding window which, for each bin, spans its immediately adjacent bins and checks whether their \tmip{} energy is lower than the central bin.
+  Circular boundary conditions are taken into account.
   If so, and if the energy from the central bin lies above a threshold, the bin is promoted to a seed.
   The threshold cut limits the collection of clusters from pure noise.
-  We define the /window size/ to be the size $k$ of the seeding window defined based on the number of $k^{\text{th}}\text{-order}$ neighbours it considers.
+  We define the /window size/ to be $k$ based on the number of $k^{\text{th}}\text{-order}$ neighbours considered by the seeding window.
   A size of \num{1} will consider the central bin plus its \num{8} closest neighbours, a size of \num{2} will consider $16+8+1=27$ bins, and so on.
+  The default \ac{S2} reconstruction uses $k=1$.
 
 + *Clustering*:
   \Acp{TC} are associated to seeds and used to calculate cluster properties.
   Every seed leads to exactly one cluster.
   Contrary to previous steps, which run on a \coordsa space, the clustering uses a $(x/z,\,y/z)$ projective space.
   Two different clustering algorithms are currently defined in the \ac{TPG}, and illustrated in [[fig:clustering_algos]].
-  A distance matching threshold is applied in both algorithms, to ensure no \ac{TC} is associated to very-distant seeds.
+  A distance matching threshold is applied in both algorithms, to ensure no \ac{TC} is associated to very distant seeds.
+  The distance is calculated in the same projective space.
+  The default matching radius slowly increases with detector's depth, from 0.015 in the first layer to 0.050 in the last \ac{CE-H} layers.
   The first and default =min_distance= algorithm associates \acp{TC} to their closest seed, based on the 2D distance in the projective space.
   The second algorithm, called =max_energy=, prioritizes an association based on seed energy, where the highest energy seed is associated to all \acp{TC} within its matching radius, the second-highest energy seeds is associated to the remaining \acp{TC} with its (different) matching radius, and so forth.
   If no \ac{TC} is left for the lowest-energy seeds, then the cluster will only contain one \ac{TC}, the seed.
