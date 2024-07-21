@@ -7,9 +7,9 @@ As shown in [[ref:fig:cern_acc_complex]], the \ac{LHC} presents four \acp{IP} wh
 Other \acp{IP} were used by the old \ac{LEP} experiments: the \ac{ALEPH} at \ip{4} and the \ac{OPAL} at \ip{6}.
 \Acp{IP} for \ac{L3} (\ip{2}) and \ac{DELPHI} (\ip{8}) were reused by \ac{ALICE} and the \ac{LHCb}, respectively [[cite:&lhc_operation]].
 
-\paragraph{ATLAS}
+\myparagraph{ATLAS}
 
-\Ac{ATLAS} [[cite:&atlas_collab]] is, with \ac{CMS}, one of the two general-purpose detectors at the \ac{LHC}.
+\noindent \Ac{ATLAS} [[cite:&atlas_collab]] is, with \ac{CMS}, one of the two general-purpose detectors at the \ac{LHC}.
 It sits at a total length of \SI{46}{\meter}, a diameter of \SI{25}{\meter}, and a weight of \SI{7e3}{\tonne}.
 It comprises a series of concentric and hermetic detection layers to measure the different kinds of particles produced at the \ac{PV}.
 The \ac{ID} is the first of such detectors, devised to measure the direction, momentum and charge of charged particles.
@@ -43,9 +43,9 @@ The muon trajectories are deviated thanks to additional magnets, including two e
 The magnets provide up to \SI{3.5}{\tesla}, and are located in between the muon subdetectors.
 Finally, a brief mention to the two-tiered trigger system: \ac{ATLAS} has implemented "trigger-level analysis" and "delayed stream" modes, which are similar to the \ac{CMS} scouting and parking strategies, respectively, discussed in [[ref:sec:cms_trigger_system]] [[cite:&atlas_delayed_stream]].
 
-\paragraph{LHCb}
+\myparagraph{LHCb}
 
-Instead of surrounding the entire collision point with an enclosed detector as \ac{ATLAS} and \ac{CMS} do, the \ac{LHCb} experiment [[cite:&lhcb_collab]], located at \ac{IP} 8, employs a single-arm forward spectrometer.
+\noindent Instead of surrounding the entire collision point with an enclosed detector as \ac{ATLAS} and \ac{CMS} do, the \ac{LHCb} experiment [[cite:&lhcb_collab]], located at \ac{IP} 8, employs a single-arm forward spectrometer.
 The experiment includes large aperture subdetectors (\SIrange{10}{300}{\milli\radian}) placed perpendicularly to the beam axis.
 Given that \ac{LHCb}'s main purpose is the study of $b$-flavoured baryons as probes for \ac{NP}, this distinctive design can be readily explained: the decay particles of $b$ hadrons tend to travel close to the line of the beam pipe.
 The design thus exploits to exploit the large $bb$ production cross section at the \ac{LHC}.
@@ -67,9 +67,9 @@ Some result bforuhg forward by \ac{SMOG} include fixed-target \jpsi{} and $D^{0}
 + mention "turbo" mode similar to scouting [[cite:&lhcb_turbo]]
 [[cite:&bb_pairs1;&bbpairs2]]
 
-\paragraph{ALICE}
+\myparagraph{ALICE}
 
-The \ac{ALICE} experiment [[cite:&alice]] is dedicated to heavy-ion physics, built to study strongly interacting \ac{QCD} matter at extreme energy densities, namely the \ac{QGP}.
+\noindent The \ac{ALICE} experiment [[cite:&alice]] is dedicated to heavy-ion physics, built to study strongly interacting \ac{QCD} matter at extreme energy densities, namely the \ac{QGP}.
 It mostly considers \ch{Pb} ions, but also features lighter ions, proton-nucleus runs, and runs at lower energy.
 Located \SI{56}{\meter} underground at \ip{2}, weighting \SI{10}{\kilo\tonne}, and measuring \SI{26}{\meter} long, \SI{16}{\meter} high, and \SI{16}{\meter} wide, its design sets it apart from the other three main \ac{LHC} experiments.
 Clearly, it must cope with the extreme particle multiplicity anticipated in central \ch{Pb}-\ch{Pb} collisions, which could be up to three orders of magnitude larger than in typical \ac{pp} interactions at the same energy.
@@ -86,25 +86,25 @@ The experiment is surrounded by a giant octagonal solenoid magnet, reused from t
 Interestingly, the magnet is not perfectly centered around the \ac{LHC} beam, since the electron-positron beam at \ac{LEP} had a slightly lower alignment.
 Steel elements are therefore inserted to partially compensate the off-axis effect.
 
-\paragraph{FASER}
+\myparagraph{FASER}
 
-\ac{FASER}
+\noindent \ac{FASER}
 
-\paragraph{SND@LHC}
+\myparagraph{SND@LHC}
 
-\ac{SND@LHC}
+\noindent \ac{SND@LHC}
 
-\paragraph{LHCf}
+\myparagraph{LHCf}
 
-\ac{LHCf}
+\noindent \ac{LHCf}
 
-\paragraph{TOTEM}
+\myparagraph{TOTEM}
 
-\ac{TOTEM}
+\noindent \ac{TOTEM}
 
-\paragraph{MoEDAL}
+\myparagraph{MoEDAL}
 
-The \ac{MoEDAL} experiment [[cite:&moedal]], and its \run{3} update \ac{MoEDAL}-\ac{MAPP}, is located at \ip{8}, sharing the \ac{LHCb} experimental cavern.
+\noindent The \ac{MoEDAL} experiment [[cite:&moedal]], and its \run{3} update \ac{MoEDAL}-\ac{MAPP}, is located at \ip{8}, sharing the \ac{LHCb} experimental cavern.
 It directly searches for the theorized magnetic monopole, together with other exotic particles that could indicate \ac{BSM}, such as "Q-balls", "dyons" (particles containing both electric and magnetic charges), particles with multiple charges, and even black hole remnants.
 The detector is composed of an array of of \num{10} sheets of plastic nuclear track detectors: an hypothetical new particle would break the molecular structure of the plastic during its traversal and reveal its trajectory by a series of holes.
 \Ac{MoEDAL} is positioned around the \ac{LHCb} \ac{VELO} subdetector, for a maximum surface area of \SI{25}{\meter\squared}.

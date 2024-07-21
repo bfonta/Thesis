@@ -8,7 +8,6 @@ The \ac{HL-LHC} is expected to provide high-precision measurements of the \ac{SM
 A virtuous cycle often takes place between data collection and improvements in simulation and theory calculations.
 In the following we provide a brief and necessarily incomplete overview of some of the physics motivations to build the \ac{HL-LHC}.
 A detailed description is out of the scope of this work.
-  
 
 \myparagraph{EW processes}
 
@@ -27,9 +26,9 @@ There is also the possibility for the longitudinal components of the $V$ bosons 
 \ac{VBS} also forms the ideal field for anomalous gauge couplings measurements, especially quartic couplings.
 Finally, even rarer tri-boson processes ($\sigma$\SI{\sim 0.1}{\pico\barn}) brings an extra handle on \ac{SM} testing.
 
-\paragraph{Strong interactions}
+\myparagraph{Strong interactions}
 
-The \ac{HL-LHC} will enable an increase in the kinematic reach for jet and photon production.
+\noindent The \ac{HL-LHC} will enable an increase in the kinematic reach for jet and photon production.
 This will in turn reduce the associated experimental uncertainties, improving \ac{PDF} modeling.
 High-$\pt$ b-jets are sensitive to higher-order corrections, parton shower modeling and \acp{PDF}.
 Therefore, investigating the b-jet contribution to the total jet cross section enables to test the available theoretical predictions.

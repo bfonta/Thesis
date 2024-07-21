@@ -91,4 +91,4 @@
 #+LATEX_HEADER: \newcommand{\jpsi}{$J/\psi$}
 #+LATEX_HEADER: \newcommand{\tauh}{$\tau_{\text{h}}$}
 
-#+LATEX_HEADER: \newcommand{\myparagraph}[1]{\paragraph{#1}~\vspace{.2cm}}
+#+LATEX_HEADER: \newcommand{\myparagraph}[1]{\paragraph{\large{#1}}~\vspace{.2cm}}

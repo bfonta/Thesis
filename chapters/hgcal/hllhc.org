@@ -41,7 +41,7 @@ Given past delays and current unknowns, it is still soon to definitely confirm c
 superconducting cavities for beam rotation with ultra-precise phase control, new technology and physical
 processes for beam collimation and 100 metre-long high-power superconducting links with negligible energy
 dissipation, all of which required several years of dedicated R&D effort on a global international level." [[cite:&hllhc]]
-
++ https://indico.cern.ch/event/1418024/contributions/5960937/attachments/2883360/5052485/JM%20CMS%20Jun%202024.pdf
 
 * Jona :noexport:
 
