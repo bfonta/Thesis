@@ -2,3 +2,6 @@
 
 The Large Hadron Collider (LHC) is one of the largest scientific instruments ever built.
 Since opening up a new energy frontier for exploration in 2010, it has gathered a global user community of about 9000 scientists working in fundamental particle physics and the physics of hadronic matter at extreme temperature and density [[cite:&hllhc]].
+
++ It first started up on 10 September 2008
++ The LHC consists of a 27-kilometre ring of superconducting magnets with a number of accelerating structures to boost the energy of the particles along the way.

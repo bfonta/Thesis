@@ -60,7 +60,7 @@ F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}
 Goal for Run 3 is to approx. double the luminosity for ATLAS and CMS
 
 #+NAME: fig:cern_acc_complex
-#+CAPTION:  Representation of the CERN accelerator complex. The LHC is the last ring (dark blue line) in a complex chain of particle accelerators. The smaller machines are used in sequence to accelerate the proton beams that collide in the centre of the four main detectors. Taken from [[cite:&lhc_complex]].
+#+CAPTION:  The CERN accelerator complex. The \ac{LHC} is a \SI{27}{\kilo\meter} ring shown at the top in dark blue. Its the last of a complex chain of particle accelerators. The smaller machines are used in sequence to accelerate the proton beams that collide at four \acp{IP}, corresponding to the centre of \ac{ALICE}, \ac{ATLAS}, \ac{CMS} and \ac{LHCb}. Taken from [[cite:&lhc_complex]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/CERNaccelerators.pdf]]

@@ -40,3 +40,9 @@
 #+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}/cm^2}
 #+LATEX_HEADER: \DeclareSIUnit \inch {''}
 #+LATEX_HEADER: \sisetup{range-phrase = \text{--}}
+
+# add clearpage before every section
+# https://stackoverflow.com/questions/71040968/org-mode-export-to-latex-page-break-at-each-section-and-subsection
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \newcommand{\sectionbreak}{\clearpage}
+#+LATEX_HEADER: \newcommand{\subsectionbreak}{\clearpage}

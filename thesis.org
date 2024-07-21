@@ -52,7 +52,7 @@
 
 * The CMS Detector at the LHC
 ** The Large Hadron Collider
-#+INCLUDE: "chapters/detector/lhc_shortintro.org"
+#+INCLUDE: "chapters/detector/lhc_intro.org"
 *** Design
 #+INCLUDE: "chapters/detector/lhc_design.org"
 *** Operations
@@ -73,6 +73,7 @@
 #+INCLUDE: "chapters/mc_generation.org"
 + include an event display of 2018
 *** Activities as Monte Carlo contact
++ test
 
 
 * Trigger primitives reconstruction for the HGCAL Level-1 trigger
@@ -97,6 +98,7 @@
 #+INCLUDE: "chapters/hgcal/cluster_splitting.org"
 ** Future
 #+INCLUDE: "chapters/hgcal/future.org"
+
 
 * \reshhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/intro/bbtt_analysis.org"
@@ -191,6 +193,7 @@
 
 * Conclusions
 #+INCLUDE: "chapters/conclusions.org"
+
 
 * Appendix
 ** General control distributions
