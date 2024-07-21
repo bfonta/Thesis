@@ -1,4 +1,6 @@
-<<sec:hllhc_detector_upgrades>>
+:PROPERTIES:
+:CUSTOM_ID: sec:hllhc_detector_upgrades
+:END:
 
 \paragraph{ATLAS}
 In preparation for the increased LHC luminosities foreseen for the future, ATLAS will replace the ASICs5 that handle the calorimeter signals by more radiation hard ones. [[cite:&wigmans_new_developments]]

@@ -1,4 +1,6 @@
-<<sec:hllhc>>
+:PROPERTIES:
+:CUSTOM_ID: sec:hllhc
+:END:
 
 The first phase of the \ac{LHC} has been running since 2010, spanning three data runs, the last of which, \run{3}, is currently approaching its end of life, in the last quarter of 2025.
 Phase-2 will soon follow with the new \ac{HL-LHC}, which will start taking data in 2029, extending \ac{HEP} studies well into the future (see ref:fig:hllhc) [[cite:&hllhc_evolution_paper1;&hllhc_evolution_paper2]].

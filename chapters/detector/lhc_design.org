@@ -38,7 +38,7 @@ F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}
 
 #+NAME: pileup
 \begin{equation}
-<\mu> = \frac{L\sigma_{pp}^{\rm inelastic}}{n_bf_{\rm rev}}
+<\mu> = \frac{L\sigma_{pp}^{\text{inelastic}}}{n_bf_{\text{rev}}}
 \end{equation}
 
 #+NAME: tab:LHCparameters
@@ -82,19 +82,19 @@ The two proton beams inside the LHC travel in opposite directions in separate be
 	\label{ch2:eq:lumi}
 	\frac{\partial N}{\partial t} = L\sigma
 \end{equation}
-where $\sigma$ is the cross section (times the BR) of the physics process and $L$ is the instantaneous luminosity. While the former is a parameter related to the physics under study, the latter is a parameter of the machine. For the LHC, the design value is $L=10^{34}\rm~ cm^{-2}s^{-1}$. The time integral of Eq.~\ref{ch2:eq:lumi} introduces an important parameter qualifying a period of data taking, the \textit{integrated luminosity} $L_{\rm int}$:
+where $\sigma$ is the cross section (times the BR) of the physics process and $L$ is the instantaneous luminosity. While the former is a parameter related to the physics under study, the latter is a parameter of the machine. For the LHC, the design value is $L=10^{34}\text{~ cm^{-2}s^{-1}}$. The time integral of Eq.~\ref{ch2:eq:lumi} introduces an important parameter qualifying a period of data taking, the \textit{integrated luminosity} $L_{\text{int}}$:
 \begin{equation}
-	N = L_{\rm int}\sigma
+	N = L_{\text{int}}\sigma
 \end{equation}
 The luminosity depends only on the beam parameters and, for a Gaussian beam distribution, can be written as:
 \begin{equation}
 	 L = \frac{N_b^2 n_b f_{\textrm{rev}} \gamma_r}{4\pi\epsilon_n\beta^*}F
 \end{equation}
-where $N_b$ is the number of particles per bunch, $n_b$ the number of bunches present in the beam, $f_{\rm rev}$ is the beam revolution frequency, $\gamma_r$ is the corresponding relativistic gamma factor, and the product $\epsilon_n\beta^*$ is related to the beam optics. The $F$ term is introduced to account for the reduction of luminosity due to the crossing angle at the interaction point. The exploration of rare events in the LHC thus requires a high luminosity. However, this inevitably leads to the occurrence of multiple interactions for bunch crossing. This phenomenon is referred to as \textit{PileUp} (PU). The average number of collisions per bunch crossing is given by:
+where $N_b$ is the number of particles per bunch, $n_b$ the number of bunches present in the beam, $f_{\text{rev}}$ is the beam revolution frequency, $\gamma_r$ is the corresponding relativistic gamma factor, and the product $\epsilon_n\beta^*$ is related to the beam optics. The $F$ term is introduced to account for the reduction of luminosity due to the crossing angle at the interaction point. The exploration of rare events in the LHC thus requires a high luminosity. However, this inevitably leads to the occurrence of multiple interactions for bunch crossing. This phenomenon is referred to as \textit{PileUp} (PU). The average number of collisions per bunch crossing is given by:
 \begin{equation}
-	<\mu> = \frac{L\sigma_{pp}^{\rm inelastic}}{n_bf_{\rm rev}}
+	<\mu> = \frac{L\sigma_{pp}^{\text{inelastic}}}{n_bf_{\text{rev}}}
 \end{equation}
-where $\sigma_{pp}^{\rm inelastic}$ is the inelastic proton-proton cross section. Figure \ref{ch2:fig:operations} shows the recorded PU distributions during the different data-taking periods.
+where $\sigma_{pp}^{\text{inelastic}}$ is the inelastic proton-proton cross section. Figure \ref{ch2:fig:operations} shows the recorded PU distributions during the different data-taking periods.
 
 * Jona :noexport:
 The LHC has been designed as a double-purpose accelerator, guaranteeing the study of proton-proton as well as heavy-ion collisions. In the former configuration, it was designed to collide protons at a centre-of-mass energy of $\sqrt{s}=14\TeV$ with instantaneous luminosity $\mathcal{L}\sim10^{34}\cm^{-2}\unit{s}^{-1}$, while in the latter setup, it was devised to collide heavy nuclei at a centre-of-mass energy of $\sqrt{s}=2.76\TeV$ per nucleon with instantaneous luminosity $\mathcal{L}\sim10^{27}\cm^{-2}\unit{s}^{-1}$ \cite{Baconnier:257706,Pettersson:291782}. This multipurpose conception guarantees the possibility for physicists to probe a vast scientific program, encompassing the search for the Higgs boson, as well as the test of BSM scenarios and the search for particles yet to be theorized.

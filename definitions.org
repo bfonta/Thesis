@@ -73,8 +73,8 @@
 #+LATEX_HEADER: \newcommand{\ip}[1]{IP#1}
 #+LATEX_HEADER: \newcommand{\longshut}[1]{Long Shutdown #1}
 #+LATEX_HEADER: \newcommand{\bphys}{B-Physics}
-#+LATEX_HEADER: \newcommand{\down}[1]{\textsubscript{#1}}
-#+LATEX_HEADER: \newcommand{\up}[1]{\textsuperscript{#1}}
+# #####+LATEX_HEADER: \newcommand{\down}[1]{\textsubscript{#1}}
+# #####+LATEX_HEADER: \newcommand{\up}[1]{\textsuperscript{#1}}
 #+LATEX_HEADER: \newcommand{\logicor}[1]{\texttt{logical~OR}}
 #+LATEX_HEADER: \newcommand{\logicand}[1]{\texttt{logical~AND}}
 #+LATEX_HEADER: \newcommand{\eletau}{$\tau_{\mu}\tau_{\text{h}}$}

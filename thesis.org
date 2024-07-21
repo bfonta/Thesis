@@ -1,9 +1,12 @@
 #+TITLE: Thesis Title
 #+AUTHOR: Bruno Alves
-#+LATEX_CLASS: article
+#+LATEX_CLASS: mimosis
 #+SETUPFILE: setup.org
 #+SETUPFILE: definitions.org
 #+EXCLUDE_TAGS: noexport
+
+# #### default spacing is 14pt
+#+LATEX: \fontsize{12pt}{13pt}\selectfont
 
 * Introduction to Higgs boson pair production
 ** The Standard Model of Particle Physics
@@ -95,10 +98,9 @@
 #+INCLUDE: "chapters/hgcal/event_geom_developments.org"
 
 ** Cluster splitting
-#+INCLUDE: "chapters/hgcal/cluster_splitting.org"
-** Future
-#+INCLUDE: "chapters/hgcal/future.org"
-
+#+INCLUDE: "chapters/hgcal/cluster_splits.org"
+** Discussion and future directions
+#+INCLUDE: "chapters/hgcal/hgcal_discussion.org"
 
 * \reshhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/intro/bbtt_analysis.org"

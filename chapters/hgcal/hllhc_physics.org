@@ -1,4 +1,6 @@
-<<sec:hllhc_physics>>
+:PROPERTIES:
+:CUSTOM_ID: sec:hllhc_physics
+:END:
 
 A more powerful \ac{LHC} is expected to open up a large physics program, by increasing the accurancy of current measurements and enhancing the sensitivity to rare processes through both direct and indirect searches, with more and more challenging signatures, which occur below the current sensitivity level.
 The \ac{HL-LHC} is expected to provide high-precision measurements of the \ac{SM}, particular in Higgs physics: the Higgs boson (H) self-coupling, via direct and indirect measurements (see [[ref:sec:dihiggs]]), higgs couplings, flavour physics, BSM
@@ -8,9 +10,9 @@ In the following we provide a brief and necessarily incomplete overview of some 
 A detailed description is out of the scope of this work.
   
 
-\paragraph{EW processes}
+\myparagraph{EW processes}
 
-The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
+\noindent The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
 This notably applies to W mass $\mw$ and weak mixing angle $\thw$ measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
 \num{\sim 2e6} W boson events will be collected per week, leading to a statistical sensitivity of about \SI{10}{\MeV} for the $W$ mass, and significantly lower for cross-section measurements.
 The added luminosity might also help solving the tension between old $\theta_{W}$ measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result [[cite:&weak_mixing_angle_cms]], which agree with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
@@ -38,8 +40,9 @@ For the first time, the \ac{HL-LHC} will make possible the measurement of quantu
 This brings an improvement in \ac{DPS} modeling, which has been so far very limited.
 \ac{DPS} can be as relevant as the single proton scattering for same-sign $WW$ final states involving $b\bar{b}$ or $c\bar{c}$ quark pairs.
 
-\paragraph{Top physics}
-The heaviest particle in the \ac{SM} plays an important role in \ac{EWSB} and in \ac{BSM} searches.
+\myparagraph{Top physics}
+
+\noindent The heaviest particle in the \ac{SM} plays an important role in \ac{EWSB} and in \ac{BSM} searches.
 With the \ac{HL-LHC} we will be able to improve the precision of the $\mt$ measurement, and to study $t\bar{t}$ differential distributions in more detail, reaching $\mtt\sim 7\,\si{\TeV}$ and $\pt\sim 2.5\,\si{\TeV}$.
 This will provide benefits for \ac{PDF} measurements.
 One can also explore \ac{BSM} for $\mtt > 7\,\si{\TeV}$ due to the low \ac{SM} background.
@@ -47,18 +50,18 @@ An interesting link might be drawn between the results of \ac{LHCb} and \ac{ATLA
 There will be as well the possibility to observe the rare $t\bar{t}t\bar{t}$ production for the first time, despite its small cross-section of $\mathcal{O}(10)\,\si{\per\femto\barn}$.
 $t\bar{t}t\bar{t}$ can be used to constrain some of the Wilson coefficients associated to \ac{EFT} dimension-6 operators, to further study the top Yukawa coupling constrain, including its magnitude and \ac{CP} properties, since it can occur via de mediation fo a Higgs boson [[cite:&tttt]], and even to assess the presence of the non-\ac{SM} top quark dipole moment.
 
-\paragraph{Forward physics}
+\myparagraph{Forward physics}
 
-Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the \ac{AFP} [[cite:&afp_tdr]] are extended in the \ac{HL-LHC} phase, \ac{CEP} $pp \rightarrow p\,(\gamma\gamma\rightarrow \text{X})\,p$ phenomena, among which light-by-light scattering ($\text{X} = \gamma\gamma$), will be further explored \ac{CEP}.
+\noindent Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the \ac{AFP} [[cite:&afp_tdr]] are extended in the \ac{HL-LHC} phase, \ac{CEP} $pp \rightarrow p\,(\gamma\gamma\rightarrow \text{X})\,p$ phenomena, among which light-by-light scattering ($\text{X} = \gamma\gamma$), will be further explored \ac{CEP}.
 Other processes include, for instance, $\text{X} = \mu\mu,\,\tau\tau,\,Z,\,H,\,WW,\,ZZ$, and enable the study of anomalous gauge couplings and the magnetic moment of the $\tau$, among other studies [[cite:&ctpps_varela;&ctpps_pitt]].
 \ac{CEP} processes carry particular interest since they bring production of charged particles initiated only by photons, into what amounts to using the \ac{LHC} as a $\gamma\gamma$ collider.
 In parallel, a whole plethora of \ac{QCD}-related measurements can be performed in \acp{CEP}.
 The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross-sections, increasing their discovery potential.
 
 
-\paragraph{Higgs boson pairs}
+\myparagraph{Higgs boson pairs}
 
-ref:fig:hh_nonres_projections allows the comparison of early HH \run{2} results with current full \run{2} upper cross-section limits.
+\noindent ref:fig:hh_nonres_projections allows the comparison of early HH \run{2} results with current full \run{2} upper cross-section limits.
 An improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
 The improvement over the luminosity baseline is due to multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels, made possible by the gradual increase in available number of events.
 

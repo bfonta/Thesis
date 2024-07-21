@@ -7,12 +7,16 @@
 #+LATEX_HEADER: \usepackage{pgffor}
 #+LATEX_HEADER: \newcommand{\repeatn}[2]{\foreach \i in {1, ..., #1} {#2}}
 
+# ##### font type
+#+LATEX_HEADER: \usepackage{tgheros}
+
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{margin=1in}
 
 #+LATEX_HEADER: \makeatletter
 #+LATEX_HEADER: \newcommand{\specialterms}[1]{\@for\next:=#1\do {\@namedef{specialterm@\detokenize\expandafter{\next}}{}}}
 #+LATEX_HEADER: \newcommand\term[1]{\@ifundefined{specialterm@\detokenize{#1}}{#1}{\emph{#1}\global\expandafter\let\csname specialterm@\detokenize{#1}\endcsname\relax}}
+# ###+LATEX_HEADER: \renewcommand\section{\@startsection{section}{1}{\z@}{-3.5ex \@plus -1ex \@minus -.2ex}{2.3ex \@plus.2ex}{\large\bfseries\scshape}}
 #+LATEX_HEADER: \makeatother
 #+LATEX_HEADER: \specialterms{foo}
 
@@ -40,9 +44,3 @@
 #+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}/cm^2}
 #+LATEX_HEADER: \DeclareSIUnit \inch {''}
 #+LATEX_HEADER: \sisetup{range-phrase = \text{--}}
-
-# add clearpage before every section
-# https://stackoverflow.com/questions/71040968/org-mode-export-to-latex-page-break-at-each-section-and-subsection
-#+LATEX_HEADER: \usepackage{titlesec}
-#+LATEX_HEADER: \newcommand{\sectionbreak}{\clearpage}
-#+LATEX_HEADER: \newcommand{\subsectionbreak}{\clearpage}
