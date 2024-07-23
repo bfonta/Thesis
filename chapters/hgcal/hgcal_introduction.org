@@ -8,7 +8,7 @@ The forward \ac{ECAL} and \ac{HCAL} were however designed to sustain an integrat
 This is because scintillation-based solutions are very sensitive to ionizing radiation [[cite:&wigmans_new_developments]].
 The formation of color centres during irradiation has already lead to a stark $\eta\text{-dependent}$ reduction of the transparency of existing \ch{PbWO4} endcap crystals, often by values above 90%.
 Despite the possible recover through spontaneous or thermal annealing which can mitigate the opaqueness brought by photons [[cite:&annealing_calorimeter]], irreversible damage is caused by hadrons, mostly charged pions of \SI{\sim 1}{\GeV} [[cite:&wigmans2;&wigmans]].
-Given the \num{6} to \num{8} times larger luminosities expected during the full \ac{HL-LHC} data-taking period, a drastic degradation of the physics performance seems unavoidable (see [[fig:lumi_plans_hllhc]]).
+Given the \num{6} to \num{8} times larger luminosities expected for the full \ac{HL-LHC} data-taking period, with respect to the \ac{LHC}, a drastic degradation of the physics performance seems unavoidable (see [[fig:lumi_plans_hllhc]]).
 Negative effects would be evident almost from the start [[cite:&hgcal_technical_proposal]].
 
 The CMS experiment thus foresees the complete replacement of its endcap calorimeters, introducing the ambitious \ac{HGCAL} project [[cite:&hgcalTDR]].

@@ -4,22 +4,22 @@
 
 The first phase of the \ac{LHC} has been running since 2010, spanning three data runs, the last of which, \run{3}, is currently approaching its end of life, in the last quarter of 2025.
 Phase-2 will soon follow with the new \ac{HL-LHC}, which will start taking data in 2029, extending \ac{HEP} studies well into the future (see ref:fig:hllhc) [[cite:&hllhc_evolution_paper1;&hllhc_evolution_paper2]].
+An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of \num{10} years, corresponding to \SI{90}{\percent} of the total data collected by the \ac{LHC} [[cite:&hllhc]].
 The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SIrange{\sim5e34}{7.5e34}{\per\cm\squared\per\second} [[cite:&hllhc]].
 This is more than twice the \ac{LHC}’s current value.
 These conditions correspond, in the ultimate HL-LHC configuration, to a \ac{PU} of up to 200, a \ac{TID} reaching \SI{2}{\mega\gray}, and a fluence of up to \SI{1e16}{\nequiv}.
-The neutron equivalent fluence, in this context, is defined as the number of \SI{1}{\MeV} neutrons per \si{\per\cm\squared} traversing the detector material.
-It serves as a measure for potential radiation damage.
+The neutron equivalent fluence, in this context, is defined as the number of \SI{1}{\MeV} neutrons per \si{\per\cm\squared} traversing the detector material, and serves as a measure for potential radiation damage.
 The normalization at \SI{1}{\MeV} is chosen both due to historical reasons and the fact that expected neutron spectra at the \ac{HL-LHC} typically have a probability density peaking in that region. 
-For comparison with the \ac{HL-LHC}, the \ac{LHC} currently brings \num{\sim 50} \ac{PU} interactions on average [[cite:&pileup_twiki]], a dose of the order of \SI{1e5}{\gray} and a fluence of \SI{\sim 1e15}{\nequiv} (see [[ref:sec:lhc_design]]) [[cite:&lhc_fluences]].
-An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of \num{\sim 10} years [[cite:&hllhc]], while current \ac{CMS} endcap calorimeters are designed to sustain a more modest value of up to \SI{500}{\per\femto\barn}.
+For comparison with the \ac{HL-LHC}, the \ac{LHC} currently brings an average of \num{\sim 50} \ac{PU} interactions [[cite:&pileup_twiki]], a dose of the order of \SI{1e5}{\gray} and a fluence of \SI{\sim 1e15}{\nequiv} (see [[ref:sec:lhc_design]]) [[cite:&lhc_fluences]].
+To give an example of how dramatic the changes are expected to be, current \ac{CMS} endcap calorimeters are designed to sustain a up to \SI{500}{\per\femto\barn}, \num{8} times less than what the \ac{HL-LHC} may bring.
+Extensive detector upgrades are therefore required for many \ac{LHC} experiments, which will be detailed in [[ref:sec:hllhc_detector_upgrades,sec:cms_detector_upgrades]].
+The operational scenario of the \ac{HL-LHC} is continuosly evolving, with some uncertainties still present.
+Given past delays and current unknowns, it is still soon to definitely confirm current operational plans.
 
 #+ATTR_LATEX: :width 1.\textwidth
 #+CAPTION: The \ac{HL-LHC} project timeline. Run3 is currently on-going, and the \ac{HL-LHC} will start collecting data in 2029, following three years of \ac{LHC} shutdown for detector upgrades. Data collection should end in the early 2040's. Current plans are still subject to change.
 #+NAME: fig:hllhc
 [[~/org/PhD/Thesis/figures/hgcal/hllhc.pdf]]
-
-The operational scenario of the \ac{HL-LHC} is continuosly evolving, with some uncertainties still present.
-Given past delays and current unknowns, it is still soon to definitely confirm current operational plans.
 
 #+NAME: fig:lumi_plans_hllhc
 #+CAPTION: Planned peak and integrated luminosities during the \ac{HL-LHC}. Three data-taking runs are foreseen, interspersed by three \acp{LS}. Two scenarios with different \ac{YETS} durations are shown, where shorter stops have the potential for significant integrated luminosity increases. The schedule was last updated on January 2022. Taken from [[cite:&hllhc_evolution_paper2]].

@@ -1,3 +1,16 @@
-<<sec::SingletModel>>
+:PROPERTIES:
+:CUSTOM_ID: sec:singlet_model
+:END:
 
-This is the singlet model [[cite:&jona_soutenance]] and [[cite:&hgcal_tdr]].
+One important question is to investigate whether the scalar sector realized in nature corresponds indeed to the SM, or whether it
+is enhanced by additional scalars, which can be singlets, doublets, or any other multiplets under the electroweak gauge group
+Such extensions then typically come with additional particle content, i.e. additional neutral or charged scalars which can also differ by their CP properties.
+Naturally, such models then need to obey current constraints from both theory and experiment, as e.g. stabilization conditions for the vacuum, positivity, perturbativity, and constraints from direct searches, signal strength, or electroweak precision observables.
+
+[[cite:&singlet_model_robens]]
+
+One question currently of high interest is whether new physics will enable a strong first-order electroweak phase transition. In general, this is studied in the context of exotic Higgs decays.
+However, one can also test this in models where the second scalar is heavier than the 125 GeV resonance.
+The hardest constraint on $\sin(\theta)$ comes from the measurements of the W mass @talk about current efforts to measure the W mass@
+
+[[cite:&singlet_model_robens_proceedings]]

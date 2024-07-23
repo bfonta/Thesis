@@ -1,4 +1,6 @@
-<<sec:offline_reco>>
+:PROPERTIES:
+:CUSTOM_ID: sec:offline_reco
+:END:
 
 Reconstruction is the operation of constructing physics quantities from the raw data collected
 in the experiment.

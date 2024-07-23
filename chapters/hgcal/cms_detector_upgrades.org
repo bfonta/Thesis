@@ -2,45 +2,49 @@
 :CUSTOM_ID: sec:cms_detector_upgrades
 :END:
 
-List all subdetector upgrades in \ac{CMS}. [[cite:&cms_run3_developments]]
+The extreme radiation levels and high \acp{PU} mandate an extensive upgrade of most \ac{LHC} detector systems, and \ac{CMS} is no exception.
+For the scope of this thesis, the drastic upgrades put forward in the trigger system and endcap calorimeters take precedence, and will be described in detail in [[ref:sec:phase2_trigger_system,sec:hgcal_intro]].
+However, given the intricacies of the online and offline trigger chain, and the ideas behind \ac{PF} reconstruction, considering subdetectors as independent elements is naive and ultimately wrong.
+We therefore think a brief summary of all other subdetector upgrades is worthwhile, and can help put in perspective the substantial efforts of the \ac{CMS} Collaboration as a whole [[cite:&cms_run3_developments]].
+
+\myparagraph{Tracker}
+
+The pixel and strip tracking detectors, subject to the highest radiations and doses among all \ac{CMS} components, will be entirely replaced, with considerably increased granularity [[cite:&cms_tracker_tdr]].
+They will be lighter and will extend up to $|\eta| < 3.8$.
+For the pixels, a new first layer will be placed at \SI{29}{\mm} from the \ac{IP}.
+
+This is achieved by substituting the current pixel detectors with ones of smaller size and superseding the present strips with modern ones featuring macro pixels. This upgrade will guarantee, at the same time, a lower material budget and extended pseudorapidity coverage to |η| < 3.8.
+The tracker should improve reconstruction and identification capabilities of \ac{CMS}, greatly increasing its longitudinal and transversal resolutions, and lowering fake rates.
+The tracker will also integrated in the \ac{L1} trigger chain, enabling the reconstruction of trigger tracks up to $|\eta|=2.4$ in a \ac{PF}-like approach (see [[#sec:phase2_trigger_system]]).
+
++ Strips
+  + \ac{IT} and \ac{OT} (check pixels)
+
+\myparagraph{MTD}:
+
+will be introduced in the gap between the tracker and the calorimeters in both the barrel and endcap regions, thus increasing the timing information on charged candidates.
+This upgrade will have extensive use in disentangling the approximately 200 PU interactions foreseen per bunch crossing.  [[cite:&mtd_tdr;&mtd_timing_plot]]
+
+\myparagraph{Calorimeters}
+
++ *HGCAL Nose*: very forward portion of the endcap calorimeter covering pseudorapidity values between 3 and 4.2, locate in front of the \ac{HF}, very similar to \ac{HGCAL} \SI{4.6}{\mega\gray} maximum absorbed dose and \SI{2e16}{\nequiv}, both twice as large as \ac{HGCAL}'s values, good for VBS scattering measurement of longitudinally polarized channels (two very forwards jets), also good for VBF production of H and HH
+
++ *HCAL*
+  + in HCAL hybrid photodiodes were replaces by SiPMs (in Run1)
+  + HCAL brings new depth and timing information
+
++ check Jona for barrel
+
+\myparagraph{Muon detectors}
+
++ *Muons*: be complemented by installing state-of-the-art Resistive Plate Chamber (RPC) detectors and the newly developed Gas Electron Multiplier (GEM) chambers. These additions to the muon
+detection system will increase the geometrical coverage to |η| ≤ 2.8, ensuring the possibility of
+extended muon track matching in the forward region. With the aim of further increasing the
+
++ *GEM*: After the introduction of GE1/1 superchambers in \run{3}, two additional GEM detector types will be installed before the start of the \ac{HL-LHC}. The first, named GE2/1, consists on superchambers similar to the already installed GE1/1 superchambers, but larger, covering \num{20} degrees in \ac{phi}. The \ac{eta} coverage will also be slightly extended, from \num{2.15} to \num{2.4}. The second type, called \ac{ME0}, refers to superchambers located closer to the beamline, at $2.0 < |\eta| < 2.8$, which also span \num{20} degrees in \ac{phi} [[cite:&gem_trigger_data_format;&gem_tdr]]. It will be installed on the back of \ac{HGCAL}.
 
 
-\paragraph{Pixels}
-+ New Layer 1 at 29mm from the beamline
-+ lighter and extended tracker (integrated into the Level-1 trigger) [[cite:&plow_milos]]
+\myparagraph{BRIL}
 
-
-\paragraph{Stripe}
-+ \ac{IT} and \ac{OT} (check pixels)
-
-\paragraph{MTD}
-[[cite:&mtd_tdr;&mtd_timing_plot]]
-
-\paragraph{HGCAL Nose}
-very forward portion of the endcap calorimeter covering pseudorapidity values between 3 and 4.2, locate in front of the \ac{HF}, very similar to \ac{HGCAL} \SI{4.6}{\mega\gray} maximum absorbed dose and \SI{2e16}{\nequiv}, both twice as large as \ac{HGCAL}'s values, good for VBS scattering measurement of longitudinally polarized channels (two very forwards jets), also good for VBF production of H and HH
-
-\paragraph{HGCAL}
-A detailed description is provided in [[ref:sec:hgcal_intro]].
-
-\paragraph{HCAL}
-+ in HCAL hybrid photodiodes were replaces by SiPMs (in Run1)
-+ HCAL brings new depth and timing information
-
-\paragraph{Muons}
-
-\paragraph{GEM}
-After the introduction of GE1/1 superchambers in \run{3}, two additional GEM detector types will be installed before the start of the \ac{HL-LHC}. The first, named GE2/1, consists on superchambers similar to the already installed GE1/1 superchambers, but larger, covering \num{20} degrees in \ac{phi}. The \ac{eta} coverage will also be slightly extended, from \num{2.15} to \num{2.4}. The second type, called \ac{ME0}, refers to superchambers located closer to the beamline, at $2.0 < |\eta| < 2.8$, which also span \num{20} degrees in \ac{phi} [[cite:&gem_trigger_data_format;&gem_tdr]].
-It will be installed on the back of \ac{HGCAL}.
-
-\paragraph{L1}
-+ Folded event building in Run3
-+ GPUs in Run3 (and replace CUDA by Alpaka)
-+ using PNet in HLT
-+ special paths for LLPs
-+ scouting
-
-\paragraph{BRIL}
 + lumi measurements are challenging
 + uncertainty of 1.4% in 2022
-
-\paragraph{...}

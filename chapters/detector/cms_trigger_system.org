@@ -36,8 +36,8 @@ The remaining stages are taken care of by racks of \acp{FPGA} located in the exp
 The small time budget implies a compromise on the quality of the reconstruction, which is a recurrent theme in all trigger-related matters.
 The muon and calorimeter trigger paths produce data called \acp{TP}, which are merged into the \ac{GT}, and used to issue a \ac{L1A} decision.
 \Acp{TP} from the \ac{GEM} muon subdetector are currently being validated, but are not yet used.
-The tracker does not participate in \ac{L1} trigger decisions in \phase{1}.
-The \ac{L1} rate has been increased to \SI{\sim 110}{\kilo\hertz} during \run{3} to favour the introduction of new parking techniques, discussed in [[ref:sec:parking_scouting]].
+The tracker does not participate in the \phase{1} \ac{L1} trigger decisions.
+The \ac{L1} rate has been increased to \SI{\sim 110}{\kilo\hertz} during \run{3} to favour the introduction of the new parking techniques discussed in [[ref:sec:parking_scouting]].
 
 #+NAME: fig:l1_trigger_design_phase1
 #+CAPTION: (Left) Diagram of the \phase{1} \ac{CMS} \ac{L1} during \run{2}. No \ac{L1} tracking is present. \Acp{TP} are generated from the \ac{DT}, \ac{RPC} and \ac{CSC} muon systems and from the \ac{HF}, \ac{ECAL} and \ac{HBHE} calorimetric subdetectors (where the latter refers to the \ac{HCAL}). The two separate paths are merged into the \ac{GT}, which make a \ac{L1A} decision on whether each particular event should be kept. \Acp{TP} from \acp{GEM} are currently being validated, but are not yet used. (Right) Fractions of the \SI{100}{\kilo\hertz} rate allocation for single- and multi-object triggers and cross triggers in a typical \ac{CMS} physics menu during \run{2}. Adapted from [[cite:&l1_performance]]. 
@@ -48,34 +48,34 @@ The \ac{L1} rate has been increased to \SI{\sim 110}{\kilo\hertz} during \run{3}
 [[~/org/PhD/Thesis/figures/detector/L1TriggerFractions.pdf]]
 #+END_figure
 
-\paragraph{Calorimeter Trigger}
+\myparagraph{Calorimeter Trigger}
 
-Like the \ac{CMS} trigger system, the calorimeter trigger is split in two layers.
+\noindent Like the \ac{CMS} trigger system, the calorimeter trigger is split in two layers.
 The first one receives, calibrates, and sorts the \acp{TP} provided by the \ac{HF}, \ac{ECAL} and \ac{HCAL} subdetectors.
 The second layer reconstructs and calibrates physics objects such as electrons and photons, tau leptons, jets, and energy sums.
-It should be noted that the calorimeter trigger cannot distinguish photons from electrons; they all correspond to energy deposits named /candidates/, which are formed based on information contained in groups of \num{25} crystals, the \acp{TT}.
-\ac{L1} reconstruction algorithms work with a granularity dictated by the \acp{TT}, and use discrimination quantities such as the ratio of \ac{HCAL} to \ac{ECAL} energies, or the shape of energy deposits as seen by data-aggregating sliding windows.
-The calorimeter trigger takes advantage of the \ac{TMT}, spatially-pipelined mechanism, which enables the treatment of all event data in a single processing board, in contrast with the parallelism that is usually required [[cite:&time_multiplex]].
+It should be noted that the calorimeter trigger cannot distinguish photons from electrons; they all correspond to energy deposits named /candidates/, which are formed based on information collected in groups of $5\times5$ crystals in the \ac{ECAL} and one projective readout unit in the \ac{HCAL}, jointly known as \acp{TT}.
+\ac{L1} reconstruction algorithms work with a granularity dictated by the \acp{TT}, using discriminative quantities such as the ratio of \ac{HCAL} to \ac{ECAL} energy, or the shape of energy deposits as seen by data-aggregating sliding windows.
+The calorimeter trigger takes advantage of a spatially-pipelined mechanism, the \ac{TMT}, which enables the treatment of all event data in a single processing board, in contrast with the parallelism that is usually required [[cite:&time_multiplex]].
 It works by converting the parallel processing of spatially decoupled detector regions in a $\Delta T$ time period into the sequential processing of the full detector in $N\Delta T$ time.
-$N$ corresponds to the "depth" of the \ac{TMT}, which equates to the number of available boards with enough memory to process one event in full.
-The benefit of using the \ac{TMT} is the removal of event region boundaries, enabling the reconstruction of a full event at once.
+$N$ corresponds to the "depth" of the \ac{TMT}, which is equivalent to the number of available boards with enough memory to process one full event.
+The benefit of using the \ac{TMT} is the removal of region separations in the event.
 It was found that the tradeoff between the delay from organizing the data in series and the increased throughoput and reduced buffering time brought by the \ac{TMT} is largely favourable [[cite:&zabi]].
 A \ac{DeMux} board then reorders, reserializes, and formats the events for the \ac{GT} processing.
-The running algorithms are fully pipelined and start processing data as soon as it is received.
+The running algorithms are fully pipelined and start processing the data as soon as it is received.
 
-\paragraph{Muon Trigger}
+\myparagraph{Muon Trigger}
 
-The redundancy of the muon system in terms of \acp{DT}, \acp{CSC} and \acp{RPC} is used to robustly define the \ac{GMT}.
+\noindent The redundancy of the muon system in terms of \acp{DT}, \acp{CSC} and \acp{RPC} is used to robustly define the \ac{GMT}.
 The subdetectors identify track segments from the information produced by the hits in the gas chambers.
 The segments are collected and transmitted via optical fibers to three muon track finders: the \ac{EMTF}, the \ac{BMTF} and the \ac{OMTF}.
-These run pattern recognition algorithms to identify candidates as muons and extract the their momenta.
+These run pattern recognition algorithms to identify candidates as muons and extract their momenta.
 The track finders play the role of regional triggers, and send the best muon candidates to the \ac{GMT}.
-The \ac{GMT} receives the information and tries to correlate the muon candidates from the tree regions in order to make a decision.
+The \ac{GMT} receives the information and tries to correlate the muon candidates from the three regions in order to make a decision.
 It also merges compatible muon candidates found by more than one single system, and can reject candidates based on their identification quality or the lack of confirmation from other muon systems [[cite:&l1_trigger_upgrade]].
 
-\paragraph{Global Trigger}
+\myparagraph{Global Trigger}
 
-The \ac{GT} collects all \ac{L1} muon and calorimeter candidates, and executes multiple selection and identification algorithms, in parallel, for the final trigger decision.
+\noindent The \ac{GT} collects all \ac{L1} muon and calorimeter candidates, and executes multiple selection and identification algorithms, in parallel, for the final trigger decision.
 Kinematical quantities of the candidates are exploited, such as the invariant mass of \egamma{} or $\mu$ objects, or the angular distance between two objects.
 
 * The High Level Trigger

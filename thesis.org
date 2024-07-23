@@ -84,14 +84,15 @@
 #+INCLUDE: "chapters/hgcal/hllhc.org"
 *** Physics Motivation
 #+INCLUDE: "chapters/hgcal/hllhc_physics.org"
-*** Overview on Detector Ugrades
-#+INCLUDE: "chapters/hgcal/hllhc_detector_upgrades.org"
+** The High Granularity Calorimeter and other detector upgrades
 *** Detector Upgrades in CMS
 #+INCLUDE: "chapters/hgcal/cms_detector_upgrades.org"
 *** The CMS Phase-2 Trigger System
 #+INCLUDE: "chapters/hgcal/phase2_trigger_system.org"
-** The High Granularity Calorimeter
+*** The High Granularity Calorimeter
 #+INCLUDE: "chapters/hgcal/hgcal_introduction.org"
+*** Detector upgrades in other LHC experiments
+#+INCLUDE: "chapters/hgcal/hllhc_detector_upgrades.org"
 ** The reconstruction of trigger primitives in HGCAL
 #+INCLUDE: "chapters/hgcal/hgcal_trigger_primitives.org"
 ** Development of a simplified HGCal geometry and event processing chain
