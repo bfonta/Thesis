@@ -7,7 +7,7 @@
 
 #+NAME: fig:HH_coupling_modifiers
 #+ATTR_LATEX: :width .6\textwidth
-#+CAPTION: The measured coupling modifiers of the Higgs boson to fermions and heavy gauge bosons, as functions of fermion or gauge boson mass, where υ is the vacuum expectation value of the Higgs field. For gauge bosons, the square root of the coupling modifier is plotted, to keep a linear proportionality to the mass, as predicted in the \ac{SM}. The p-value with respect to the SM prediction is 37.5%. Taken from [[cite:&higgs_10_years]].
+#+CAPTION: The measured coupling modifiers of the Higgs boson to fermions and heavy gauge bosons, as functions of fermion or gauge boson mass, where $v$ is the vacuum expectation value of the Higgs field. For gauge bosons, the square root of the coupling modifier is plotted, to keep a linear proportionality to the mass, as predicted in the \ac{SM}. The p-value with respect to the SM prediction is 37.5%. Taken from [[cite:&higgs_10_years]].
 [[~/org/PhD/Thesis/figures/intro/higgs_couplings_line.pdf]]
 
 * The bb\tau\tau final state

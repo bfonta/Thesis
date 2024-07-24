@@ -3,7 +3,7 @@
 :END:
 
 The importance of the online and offline \ac{CMS} trigger systems was already covered in [[#sec:cms_trigger_system]].
-The \Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on standard servers.
+The \Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on commercial servers.
 In this section we detail the hardware and software infrastructure powering the \ac{HGCAL} \ac{L1} \ac{DAQ} and \ac{TPG} systems.
 The \ac{TPG} produces \acp{TP} which, as mentioned in [[#sec:cms_trigger_system]], are physical quantities built to encapsulate the most discriminative information in an event.
 \Acp{TP} are used as building blocks for \ac{L1} decisions.
@@ -11,15 +11,14 @@ In \ac{HGCAL}, \acp{TP} consist of module towers and cluster-related variables, 
 The \ac{TPG} includes all steps from data collection in the \ac{FE} chips at \SI{40}{\mega\hertz} to the production of \acp{TP} in the \ac{BE} electronics [[cite:&hgcalTDR]].
 The splitting of resources between /on-detector/ and /off-detector/ electronics is related to several factors, including the flexibility provided by \acp{FPGA} or other programmable boards, the cost of boards and connectors, and the high radiation present close to the detector [[cite:&zabi]].
 
-The dataflow strategy applies throughput reduction techniques as often and as soon as possible, exploiting pipelined algorithms whenever feasible.
-The \ac{TPG} must fit within a latency of \SI{\sim 5}{\micro\second}, or \num{200} \acp{BX}, taken from the total \SI{12.5}{\micro\second} latency allocated to \ac{L1} [[cite:&l1TDR]].
-It also has to cope with power, cost, space and channel routing constraints [[cite:&jb_hdr]].
+The \ac{TPG} must fit within a latency of \SI{\sim 5}{\micro\second}, or \num{200} \acp{BX}, taken from the total \SI{12.5}{\micro\second} latency allocated to \ac{L1} [[cite:&l1TDR]], and is constrained by the available bandwidth between the \ac{FE} and the \ac{BE}.
+The bandwidth is limited by several factors, including total power consumption, the multiplicity of routing lines, the space available for electronic boards in the \ac{USC}, and the overall cost of hardware, among which expensive \acp{FPGA} and optical links [[cite:&jb_hdr]].
+A large number of throughput reduction techniques is thus applied as often and as soon as possible, exploiting pipelined algorithms whenever feasible.
 The flow of \acp{TP} can be schematically visualized in [[fig:l1chain]].
-\ac{HGCAL} is the \ac{CMS} second subdetector with the most allocated resources at \ac{L1}, due to its high granularity.
-
+\ac{HGCAL} is the second subdetector in \ac{CMS} with the most allocated resources at \ac{L1}, due to its high granularity.
 
 #+NAME: fig:l1chain
-#+CAPTION: Simplified schematic of the dataflow of \acp{TP} in HGCAL, starting (ending) in the top left  (bottom left) corner. The diagram follows the \ac{TP} processing in a Si layer through the \ac{FE} and \ac{BE}, and up to the \ac{L1}, including expected approximate bandwidths. Trigger decisions at this stage will impact the \ac{HLT} and, consequently, physics analysis. Taken from [[cite:&bruno_chep23]].
+#+CAPTION: Simplified schematic of the \ac{TP} dataflow in HGCAL, starting (ending) in the top left  (bottom left) corner. The diagram follows the \ac{TP} processing in a Si layer through the \ac{FE} and \ac{BE}, and up to the \ac{L1}, including expected approximate bandwidths. Trigger decisions at \ac{L1} will impact the \ac{HLT} and, consequently, physics analysis. Adapted from [[cite:&bruno_chep23]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth
 [[~/org/PhD/Thesis/figures/hgcal/L1chain.pdf]]
@@ -42,51 +41,37 @@ The number of \acp{TC} and \acp{elink} associated to the \ac{Sci} section increa
 #+END_figure
 
 * The infrastructure of the backend trigger and data acquisition systems
-# Intro
+
 The \ac{HGCAL} \ac{BE} electronics consist on the \ac{DAQ}, \ac{TPG}, \ac{DCS} and \ac{DSS}.
 The first two form the so-called \ac{TDAQ}.
+The \ac{BE} have been implemented on the \ac{ATCA} infrastructure [[cite:&atca_website]].
+\Ac{ATCA} boards will be placed on \ac{ATCA} crates, which can house up to 14 boards.
 The \ac{DAQ} system includes two parts, where the most proeminent features the configuration, control and data acquisition system.
-The second, smaller part holds the \ac{EMF} interface, which purpose is to propagate \ac{NZS} \ac{HGCAL} "regions of interest", as defined by extrapolated muon tracks in the muon detectors, aiming at reconstructing \ac{MIP} peaks for calibration without applying any threshold.
-
+The second, smaller part holds the \ac{EMF} interface, which purpose is to propagate \ac{NZS} \ac{HGCAL} "regions of interest", as defined by extrapolated muon tracks in the muon detectors, aiming at reconstructing \ac{MIP} peaks for calibration without applying thresholds.
 The larger part of the \ac{DAQ} consists on \num{6} identical hardware copies, following the three-fold polar angle symmetry of the two endcaps.
-Each \SI{120}{\degree} sector hosts \num{16} =Serenity S= boards in two crates; these are called "DAQ boards" in the following.
+Each \SI{120}{\degree} sector hosts \num{16} =Serenity S= \ac{DAQ} boards [[cite:&serenity]] in two crates.
 The interface to the smaller \ac{EMF} system has one =Serenity S= board per endcap, called "\ac{NZS} board".
-
-# TPG
-The role of the HGCAL TPG system is to build objects that are used as primitives by the central L1 trigger.
-The \ac{TPG} system receives \ac{FE} data for every \ac{BX} at \SI{40}{\mega\hertz}, and creates trigger “primitives” which are passed to the CMS central Level-1 Trigger (L1T) system to use in making the L1A trigger decisions. The
-DAQ and TPG systems receive data from the FE electronics through separate links and so are
-effectively independent systems as far as the BE electronics are concerned.
-
-# ATCA boards and crates
-The \ac{BE} across \ac{CMS} have been implemented on the \ac{ATCA} infrastructure [[cite:&atca_website]].
-\Ac{ATCA} boards will be placed on \ac{ATCA} crates, which can house up to 14 boards
-
-# DAQ
 Besides being responsible for data acquistion, the \ac{DAQ} system has other responsibilities.
-Being the entry point to the \ac{FE} electronics, the DAQ is also charged with synchronous fast control, asynchronous slow control, and transporting the timing information from \ac{CMS} to the \ac{FE}.
+Being the entry point to the \ac{FE} electronics, the DAQ is also with synchronous fast control, asynchronous slow control, and transporting the timing information from \ac{CMS} to the \ac{FE}.
+Concerning the \ac{HGCAL} \ac{TPG} system, its role is to build objects that are used as primitives by the central \ac{L1} trigger.
+The \ac{TPG} system receives \ac{FE} data for every \ac{BX} at \SI{40}{\mega\hertz}, and creates trigger “primitives” which are passed to the CMS central Level-1 Trigger (L1T) system to use in making the L1A trigger decisions.
+The \ac{DAQ} and \ac{TPG} systems receive data from the FE electronics through separate links, being independent systems as far as the \ac{BE} electronics are concerned.
 
-# lpGBT
 The \ac{lpGBT} \ac{ASIC} [[cite:&lpgbt]] is the radiation-hard link driver standard to be used with \ac{HL-LHC} \ac{FE} electronics.
 It provides a two-way connection between the \ac{BE} and \ac{FE}, including clock distribution, control and configuration signals, and transmission of the information collected by the detector.
-The data is supplied to the \ac{lpGBT} inputs via up to \num{7} \acp{elink}, each providing 32-bit words at \SI{40}{\mega\hertz}, or \SI{1.28}{\giga\bit\per\second}.
+The data is supplied to the \ac{lpGBT} inputs via up to \num{7} \acp{elink}, each providing \SI{32}{\bit} words at \SI{40}{\mega\hertz}, or \SI{1.28}{\giga\bit\per\second}.
 This corresponds to \SI{8.96}{\giga\bit\per\second} data rates between the \ac{FE} and the \ac{BE}.
 In \ac{HGCAL}, both the \ac{DAQ} and the \ac{TPG} communicate with the \ac{FE} via \acp{elink}, but only the \ac{DAQ} provides control and configuration.
+The data is then forwarded to the \ac{BE} electronics, located at a distance of \SI{\sim 100}{\meter} from \ac{HGCAL}.
+The \ac{VTRx+} [[cite:&vtrxp]] module provides an optical communication interface between the \acp{lpGBT} and the \ac{BE} computing boards.
+Additionally, CERN has developed a custom radiation resistant version of the easy-to-install =Firefly= optical transceivers [[cite:&versatile_link;&firefly]], optimised for use in the \ac{BE} electronics to communicate with the \ac{VTRx+} modules.
 
-# vtrx and firefly
-The data is then forwarded to the \ac{BE} electronics, located at a distance of \SI{100}{\meter} from \ac{HGCAL}.
-The \ac{VTRx+} [[cite:&vtrxp]] module povides an optical communication interface between the \acp{lpGBT} and the computing boards.
-On top, CERN has developed a custom radiation resistant version of the easy-to-install =Firefly= optical transceivers [[cite:&versatile_link;&firefly]], optimised for use in the \ac{BE} electronics to communicate with the \ac{VTRx+} modules.
-
-# timing and control distribution systems
 The \ac{TCDS} interface is provided by one specialized \ac{ATCA} board per crate, named \ac{DTH400}.
 The \ac{DTH400} also provides an interface to the \ac{cDAQ}, outputting \SI{\sim 400}{\giga\bit\per\second} via ethernet \ac{D2S} links.
 The data is then transported to the surface into the memory of commercial servers.
 That \ac{DTH400} boards receives the \ac{CMS}-wide clock and control signals and distributes it to the remaining boards in the crate.
 The communication with the \ac{TCDS} is two-way: this notably gives the ability to request a \ac{BE} resynchronisation or reset, and to throttle the entire \ac{L1} system.
 Communication between the \ac{BE} and the \ac{cDAQ} is established via \SI{25}{\giga\bit\per\second} fiber optics running the \ac{CMS}-wide =SLinkRocket= protocol, which ensures a strict specification based on \SI{128}{\bit} words [[cite:&hlttdr]].
-
-# USC
 The \ac{BE} electronics will be located in the \ac{CMS} \ac{USC}, where space is extremely limited and has to be distributed across all subdetectors.
 The \ac{HGCAL} \ac{TDAQ} \ac{BE} has been assigned \num{8} racks, split into \num{3} and \num{5} to \ac{DAQ} and \ac{TPG}, respectively.
 Each rack fits two \ac{ATCA} crates, and sufficent power is provided to the \ac{ATCA} boards.
@@ -102,24 +87,24 @@ The architecture surrounding the /on-detector/ steps, i.e., the steps taking pla
 The entry points of the reconstruction chain are the custom chips located on the hexaboards or tileboards, depending on the detector region.
 They are called \acp{HGCROC} [[cite:&hgcroc;&hgcroc_paper]], and are \ac{HGCAL}-specific \acp{ASIC} which collect, amplify and filter the produced ionization or scintillation charged currents at \SI{\sim 300}{\tera\byte\per\second} [[cite:&hgcalTDR]].
 The layout of a \ac{HGCROC} chip is shown in [[fig:hgcroc]].
-In addition to a standard \num{10} bit \ac{ADC} charge measuring mode, the \ac{HGCROC} switches to a \ac{ToT} mode as soon as a threshold on the deposited charge is reached, of the order of the preamplifier saturation threshold of \SI{\sim 100}{\femto\coulomb}.
-The time during which the preamplifier is saturated serves a proxy for the amount of deposited charge.
+In addition to a standard \SI{10}{\bit} \ac{ADC} charge measuring mode, the \ac{HGCROC} switches to a \ac{ToT} mode as soon as a threshold on the deposited charge is reached, of the order of the preamplifier saturation threshold of \SI{\sim 100}{\femto\coulomb}.
+The time during which the preamplifier is saturated serves as a proxy for the amount of deposited charge.
 During the saturation period, which can reach up to \SI{\sim 200}{\nano\second}, the chip is blind to new charge deposits.
-Once the saturation is over, the time is digitized with a \num{12} bit \ac{TDC}.
-Beyond the data paths, the chip also inlcludes a \ac{PLL}, which generates the clocks needed to operate the chip.
+Once the saturation is over, the time is digitized with a \SI{12}{\bit} \ac{TDC}.
+Beyond the data paths, the chip includes a \ac{PLL}, which generates the clocks needed to operate the chip.
 An \ac{I2C} interface is also present, enabling the modification of all static parameters of the chip, which are triplicated to prevent \acp{SEE}, which are stochastic, localised and non-cumulative effects disrupting the chip's functioning.
 The two charge digitization modes use different energy scales, mostly due to the strong non-linearity of the \ac{ToT} response for medium charge values, close to the \ac{ADC} regime.
-To avoid an extremely demanding linearization procedure at \SI{40}{\mega\hertz}, an approximate approach is instead employed, carefully balancing the unavoidable positive and negative errors due to the approximations.
+To avoid an extremely demanding linearization procedure at \SI{40}{\mega\hertz}, an approximate approach is instead employed, carefully balancing the unavoidable positive and negative errors resulting from the approximations.
 
-Due to the similarity of the algorithms and electronics of the \ac{Si} and \ac{Sci} detector regions, and also taking into account differences in their development stage, we will focus on the \ac{Si} technology to simplify the overall description.
+Due to the similarity of the algorithms and electronics of the \ac{Si} and \ac{Sci} detector regions, and also taking into account differences in their development stage, we focus on the \ac{Si} technology to simplify the overall description.
 The \ac{HGCROC} trigger path aggregates the data into \acp{TC} by summing their energies, in what constitutes the first of many data reduction algorithms in the \ac{TPG}.
 \Acp{TC} are defined as energy sums of neighbouring sensor cells, and represent a simple method to reduce the prohibitive data throughput.
-They group \num{4} or \num{9} channels into a single \ac{TC}, depending on the \ac{Si} module granularity.
-Only \acp{TC} in odd-numbered layers are considered for further reduction.
+They group \num{4} or \num{9} channels, depending on the \ac{Si} module granularity.
+Only odd-numbered layers are considered for \ac{TC} reduction.
 \Acp{TC} also decrease the algorithms' complexity, in the sense that all modules have exactly \num{48} \acp{TC}, and thus \ac{HGCAL} \ac{L1} algorithms can ignore differences arising from low- and high-granularities.
 After building \acp{TC}, the charge values to be sent to the \ac{BE} are compressed by a factor of \num{\sim 3} using a floating point encoding.
-The compression exploits the fact that a high resolution is generally not required at \ac{L1} for particles lying well above energy thresholds.
-In parallel, the full-granularity data is kept in circular buffers and is sent out via \SI{1.28}{\giga\bit\per\second} \ac{elink} as soon as a \ac{L1A} signal arrives.
+The compression exploits the fact that a high resolution is generally not required at \ac{L1} for particles lying well above the energy thresholds.
+In parallel, the full-granularity data is kept in circular buffers and is sent out via \SI{1.28}{\giga\bit\per\second} \acp{elink} as soon as a \ac{L1A} signal arrives.
 Despite the chip's ability to also measure the \ac{ToA} of the charged pulses, timing information cannot be exploited in the trigger path due to bandwidth constraints.
 
 #+NAME: fig:hgcroc
@@ -132,8 +117,8 @@ Despite the chip's ability to also measure the \ac{ToA} of the charged pulses, t
 The \ac{TPG} reconstruction chain continues via the \ac{ECON-T} chip, which is located very close to the \acp{HGCROC}, in the so-called "concentrator mezzanine", next to the hexaboard.
 The chip concentrates, selects and/or aggregates \acp{TC} within a single module, yielding one data packet per \ac{BX}.
 Each module has either \num{3} or \num{6} \acp{HGCROC}, depending on the concerned granularity density region.
-The \ac{ECON-T} then builds /module sums/, where the energies of \acp{TC} in a module are summed without any threshold being applied.
-The \ac{ECON-T} can operate in a number of modes, of which we mention the ones most likely to be used:
+The \ac{ECON-T} then builds /module sums/, where the energies of \acp{TC} in a module are summed without any energy threshold being applied.
+The \ac{ECON-T} can operate in a number of modes, of which we mention the ones most likely to be used during data-taking, also illustrated in [[fig:econalgos]]:
 
 + *Threshold algorithm*:
   Selects all \acp{TC} with an energy above a given threshold, subject to bandwidth limits. The size of the output varies event-by-event, and for different modules in the same event. 
@@ -152,8 +137,8 @@ It was found that, given the existing event-to-event rate inhomogeneities, the \
 The effect was particularly visible for hadronic jets, where serious cost and space constraints can impose limits on the fiber optics, and thus on the number of \acp{TC} the algorithm can keep.
 On the other hand, the usage of \acp{STC} across the \num{47} layers leads to an unacceptable decrease in \ac{EM} resolution.
 
-#+NAME: fig:hgcroc
-#+CAPTION: Schematic illustration of three data reduction algorithms currently implemented in the \ac{ECON-T} chip. We show low-density modules, but the algorithms are identical for high- or low-density regimes. For displaying purposes, we are assuming the maximum supported bandwidth translates to \num{5} \acp{STC} and \num{6} \acp{TC}, where "id" refers to a different block of data being sent to the \ac{BE}, coming frm a different module or from a different event in the same module. The threshold algorithm requires a variable data size format. The \ac{STC} visualization represents the scenario where each \ac{STC} corresponds to \num{4} \acp{TC}, or \num{16} \ac{Si} cells in a low-density module.
+#+NAME: fig:econalgos
+#+CAPTION: Schematic illustration of three data reduction algorithms currently implemented in the \ac{ECON-T} chip. We show low-density modules, but the algorithms are identical for high-density regimes. For displaying purposes, we are assuming the maximum supported bandwidth translates to \num{5} \acp{STC} and \num{6} \acp{TC} per \ac{BX}, where "id" refers to a different block of data being sent to the \ac{BE}, coming from a different module or from a different event in the same module. The threshold algorithm requires a variable data size format. The \ac{STC} visualization represents the scenario where each \ac{STC} corresponds to \num{4} \acp{TC}, or \num{16} \ac{Si} cells in a low-density module.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/ECONTAlgos.pdf]]
@@ -163,7 +148,7 @@ Another flavour of concentrator chips gathers the \ac{DAQ} data: the \ac{ECON-D}
 The \ac{ECON-D} can optionally apply zero suppression, where only channels with an energy above a certain threshold are kept, and then merges all of \ac{HGCAL}'s data into a single packet.
 One of the major challenges of the \ac{FE} is the ability to deal with extremely inhomogeneous data rates across \ac{HGCAL}, which may ocasionally vary by almost two orders of magnitude.
 The \ac{ECON-D} thus relies on a buffering system which supports variations in the size of the packets and in the \ac{L1A} rate.
-Despite ensuring one sent package per \ac{L1A} signal, the \ac{ECON-D} cannot guarantee the package's data intergrity due to the buffers being full.
+Despite ensuring one sent package per \ac{L1A} signal, the \ac{ECON-D} cannot guarantee the package's data integrity due to the buffers being full.
 \ac{L1} throttling might be required in some cases.
 
 The data is finally then sent via \SI{1.28}{\giga\bit\per\second} e-links to \ac{lpGBT} \acp{ASIC} [[cite:&lpgbt]] located in the \ac{FE} motherboards, or engines.
@@ -174,24 +159,20 @@ In total, \SI{\sim 90}{\tera\byte\per\second} are transferred to the \ac{BE} [[c
 * Backend electronics
 
 The \ac{BE}, located at \SI{\sim 100}{\meter} from the detector, receives \ac{FE} data with the goal of building cluster-shape variables within a \SI{\sim 2.5}{\micro\second} latency budget.
-Clusters, together with simpler \acp{TT}, amount to the final \ac{HGCAL} \acp{TP} to be transmitted to \ac{L1}.
+Clusters, together with simpler \acp{TT} built out of module sums along the longitudinal direction, amount to the final \ac{HGCAL} \acp{TP} to be transmitted to \ac{L1}.
 The \ac{BE} layout is split in two processing stages, called \ac{S1} and \ac{S2}, which run on =Serenity= boards [[cite:&serenity]] with \num{128}-link =Xilinx VU13P= \acp{FPGA}.
 The first stage is required in order to assemble data coming from multiple detector locations into a single board, and thus provide a large enough phase-space to better reconstruct clusters.
 Indeed, each \ac{FE} optical link sends data belonging to a few modules only, which get translated into a mere \SI{2}{\percent} of the detector per \ac{S1} \ac{FPGA}.
 A second stage can then gather the data corresponding to a larger fraction of \ac{HGCAL} to robustly build \acp{TP}.
-Additionally, the more data fits into a single \ac{FPGA}, the leass data duplication is required to handle boundaries, especially when taking into account that different \ac{BE} \acp{FPGA} do not communicate with eachother.
-The current design allocates \SI{120}{\degree} of \ac{HGCAL} to each \ac{S2} board, with a \ac{TMT} period and hence a board multiplicity of \num{18}, effectively representing \num{6} identical subsystems.
+Additionally, the more data fits into a single \ac{FPGA}, the less data duplication is required to handle boundaries, especially when taking into account that different \ac{BE} \acp{FPGA} do not communicate with eachother.
+The current design allots \SI{120}{\degree} of \ac{HGCAL} to each \ac{S2} board, with a \ac{TMT} period and hence a board multiplicity of \num{18}, effectively representing \num{6} identical subsystems.
 
 The \ac{S1} thus receives \ac{ECON-T} data from multiple modules, but from a single \ac{BX}, into \num{14} \acp{FPGA} per \SI{120}{\degree} sector, where the number of boards is driven by the existing optical link multiplicity.
 The data is unpacked, and a residual calibration is performed for each \ac{TC}, if needed.
-The \acp{TC} are routed and sorted in energy into projective \num{2} \ac{phi} vs. \num{42} \rz{} bins per \SI{120}{\degree} sector, where $\text{R}=(x^{2}+y^{2})^{1/2}$ and $\tan(\theta)=$ \si{\rz} (see [[#sec:coordinate_system]]).
-This choice of coordinates is chosen since a constant \si{\rz} corresponds to a constant particle angle $\theta$, where $R$ is defined in the plane perpendicular to the \ac{LHC} beamline.
-The cordinates are "projective" since 3D deposits are mapped to a 2D space.
-Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
-The sorting uses batcher odd-even sorting networks [[cite:&sort_net2;&calorPortales;&sort_net]], where on-the-fly truncation reduces the total number of comparators required and guarantees a fixed output bin size.
-In parallel, module sums are partially summed into module towers, which are formed separately for the \ac{CE-E} and \ac{CE-H}.
+The \acp{TC} are routed into projective \ac{phi} bins.
+In parallel, module sums are partially summed into module towers, being formed separately for the \ac{CE-E} and \ac{CE-H}.
 Finally, the data is sent to \ac{S2} with a \SI{\sim 140}{\tera\bit\per\second} throughput after time-multiplexing it with a \num{18} \ac{BX} period [[cite:&hgcal_backend_tdaq]].
-The \ac{TPG} \ac{BE} architectural layout is illustrated in [[fig:daq_system_overview]], from the \ac{FE} inputs to the output of \acp{TP}.
+The \ac{TPG} \ac{BE} architectural layout is illustrated in [[fig:daq_system_overview]], from the \ac{FE} inputs to sending \acp{TP} to the central \ac{L1} system.
 
 #+NAME: fig:daq_system_overview
 #+ATTR_LATEX: :width 1.\textwidth
@@ -203,30 +184,39 @@ The \ac{TPG} \ac{BE} architectural layout is illustrated in [[fig:daq_system_ove
 Before describing \ac{S2}, we briefly dwell on the unintuitive fact that the data throughput between \ac{S1} and \ac{S2} is actually larger than the one between the \ac{ECON-T} and \ac{S1}.
 Where does the additional data come from?
 The answer is two-fold.
-The first aspect to consider is the data duplication required to handle boundaries between \SI{120}{\degree} sectors, which is nicely illustrated in [[fig:daq_system_overview]].
+Firstly, one needs to account for the data duplication required to handle boundaries between \SI{120}{\degree} sectors, which is nicely illustrated in [[fig:daq_system_overview]].
 Secondly, the data has to be inflated since:
 + the memory addresses have to be encoded on a larger number of bits, because the \ac{S1} covers larger detector regions than the \ac{ECON-T};
-+ the energies have to be encoded on a larger number of bits to absorb different energy scales in different detector regions as used by the ECON-T;
++ the energies have to be encoded on a larger number of bits to absorb different energy scales in the different detector regions used by the ECON-T;
 + more bandwidth has always to be allocated to \ac{TC} bins in order to absorb fluctuations and limit truncation effects in the \ac{S1}. This is also true for the fixed-size \ac{BC} algorithm, since it provides a fixed number of \acp{TC} per module, not per bin.
 
 The \ac{S2} is designed to perform the main \ac{TPG} reconstruction work: building clusters and \acp{TT}.
 Partial tower energies are accumulated into (\rapidity{}, \ac{phi}) bins and clusters are built following the steps highlighted in [[fig:stage2chain]]:
 
 + *Histogramming*:
-  \Acp{TC} are mapped to a \coordsa{} space with (216, 42) bins.
+  \Acp{TC} are mapped to a projective \coordsa{} space with (216, 42) bins, where $\text{R}=(x^{2}+y^{2})^{1/2}$ and $\tan(\theta)=$ \si{\rz} (see [[#sec:coordinate_system]]).
+  These coordinates are chosen since a constant \si{\rz} corresponds to a constant particle angle $\theta$, where R is defined in the plane perpendicular to the \ac{LHC} beamline.
+  The cordinates are "projective", since 3D deposits are mapped to a 2D space.
+  Energy deposits of neutral particles spanning several layers will thus lie in a single \rz{} bin.
   The binning further reduces the spatial granularity and, due to its grid-like structure, facilitates vectorized and hence parallel processing in the firmware.
-  Each bin contains the energy sum of all its \acp{TC}, together with their \tmip-weighted $x/z$ and $y/z$ positions, where \tmip{} is defined as $\text{MIP}/\cos(\theta)$, with one \ac{MIP} being the energy deposited by a minimum ionizing particle [[cite:&PDG \S34.2.3]], and $\theta$ the polar angle introduced in [[#sec:coordinate_system]]:
+  Each bin contains the energy sum of all its \acp{TC}, together with their \tmip-weighted $x/z$ and $y/z$ positions, where \tmip{} is defined as $\text{MIP}/\cos(\theta)$, with one \ac{MIP} being the energy deposited by a minimum ionizing particle [[cite:&PDG \S34.2.3]], and $\theta$ the polar angle introduced in [[#sec:coordinate_system]].
+  The weighted positions are defined as follows:
 
   #+NAME: eq:weighted_position
   \begin{equation}
   \frac{x}{z}\bigg\rvert_{\text{weighted}} = \sum_{i}^{\text{N}_{\text{TC}}}  \frac{\text{MIP}_{\text{T}}^{i}\,x^i}{z^i}
-  \kern 1.5cm
+  \kern .5cm
+  ,
+  \kern .5cm
   \frac{y}{z}\bigg\rvert_{\text{weighted}} = \sum_{i}^{\text{N}_{\text{TC}}}  \frac{\text{MIP}_{\text{T}}^{i}\,y^i}{z^i}
+  \kern .4cm
+  ;
   \end{equation}
 
 + *Smearing*:
   An energy smearing step is applied to the \coordsa{} bins to decrease overall variations in their energy distribution.
-  A convolutional kernel is iteratively and independently slid along both directions.
+  This is meant to address biases discussed in [[#sec:cluster_splitting]].
+  A convolutional kernel is iteratively slid along both directions, independently.
   For each bin, the energy of all its neighours covered by the finitely-sized kernel is multiplied by the corresponding kernel weight, and the energy is updated.
   The kernels are shown in \cref{eq:smooth_kernel}, along \ac{phi} (left) and \si{\rz} (right):
 
@@ -250,56 +240,48 @@ Partial tower energies are accumulated into (\rapidity{}, \ac{phi}) bins and clu
   \end{equation}
 
   Variations are more prominent along \ac{phi} since the binning is finer.
-  The kernel along \ac{phi} is \si{\rz}-dependent, as illustrated by the dots in \cref{eq:smooth_kernel} (left).
+  The length of the kernel along \ac{phi} is \si{\rz}-dependent, as illustrated by the dots in \cref{eq:smooth_kernel} (left).
   The \ac{phi} kernel collects the energy from more bins for lower \si{\rz} rows.
-  The energy of each bin is normalized to ensure no energy is artificially added to the event.
+  The energy of each bin is normalized to its measured energy, in order to ensure that no energy is artificially added to the event.
 
 + *Seeding*:
-  Seeds are local \tmip{} maxima in the histogram, and are so called since they indicate the starting point for clustering algorithms to gather \acp{TC}.
+  Seeds are local \tmip{} maxima in the histogram, and are so called since they indicate the starting \ac{TC} for clustering algorithms to gather other \acp{TC}.
   Seeds are found via a seeding window which, for each bin, spans its immediately adjacent bins and checks whether their \tmip{} energy is lower than the central bin.
-  Circular boundary conditions are taken into account.
   If so, and if the energy from the central bin lies above a threshold, the bin is promoted to a seed.
   The threshold cut limits the collection of clusters from pure noise.
+  Circular boundary conditions are taken into account.
   We define the /window size/ to be $k$ based on the number of $k^{\text{th}}\text{-order}$ neighbours considered by the seeding window.
   A size of \num{1} will consider the central bin plus its \num{8} closest neighbours, a size of \num{2} will consider $16+8+1=27$ bins, and so on.
+  The window size can also be varied differently along the two directions.
   The default \ac{S2} reconstruction uses $k=1$.
 
 + *Clustering*:
   \Acp{TC} are associated to seeds and used to calculate cluster properties.
   Every seed leads to exactly one cluster.
-  Contrary to previous steps, which run on a \coordsa space, the clustering uses a $(x/z,\,y/z)$ projective space.
+  Contrary to previous steps, which run on a \coordsa{} space, the clustering uses the $(x/z,\,y/z)$ space.
   Two different clustering algorithms are currently defined in the \ac{TPG}, and illustrated in [[fig:clustering_algos]].
-  A distance matching threshold is applied in both algorithms, to ensure no \ac{TC} is associated to very distant seeds.
+  A distance matching threshold is applied to both algorithms to ensure no \ac{TC} is associated to extremely distant seeds.
   The distance is calculated in the same projective space.
   The default matching radius slowly increases with detector's depth, from 0.015 in the first layer to 0.050 in the last \ac{CE-H} layers.
   The first and default =min_distance= algorithm associates \acp{TC} to their closest seed, based on the 2D distance in the projective space.
-  The second algorithm, called =max_energy=, prioritizes an association based on seed energy, where the highest energy seed is associated to all \acp{TC} within its matching radius, the second-highest energy seeds is associated to the remaining \acp{TC} with its (different) matching radius, and so forth.
+  The second algorithm, called =max_energy=, prioritizes an association based on seed energy, where the highest energy seed is associated to all \acp{TC} within its matching radius, the second-highest energy seeds is associated to the remaining \acp{TC} within its (different) matching radius, and so forth.
   If no \ac{TC} is left for the lowest-energy seeds, then the cluster will only contain one \ac{TC}, the seed.
 
 #+NAME: fig:clustering_algos
-#+CAPTION: Illustration in the $(x/z,\,y/z)$ space of the two clustering algorithms considered in the \ac{HGCAL} \ac{TPG}. Black dots represent \acp{TC}, green crosses refer to seeds and the red cross stands for the highest energy seed. The purple circles represent the overlap between matching radiae of every seed with the algorithms' criteria. (Left) The =min_distance= algorithm associates \acp{TC} based on distance. (Right) The =max_energy= algorithm prioritizes instead association based on the energy of the seeds. Take from [[cite:&bruno_chep23]].
+#+CAPTION: Illustration in the $(x/z,\,y/z)$ space of the two clustering algorithms considered in the \ac{HGCAL} \ac{TPG}. Black dots represent \acp{TC}, green crosses refer to seeds and the red cross stands for the highest energy seed. The purple circles represent the region of influence of a particular seed on its neighbouring \acp{TC}. (Left) The =min_distance= algorithm associates \acp{TC} based on distance. (Right) The =max_energy= algorithm prioritizes instead association based on the energy of the seeds. Adapted from [[cite:&bruno_chep23]].
 #+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
+#+ATTR_LATEX: :width .9\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/ClusteringAlgos.pdf]]
 #+END_figure
 
 Once the clusters are defined, cluster-shape variables can be computed.
-The full list of variables is not yet defined, but they will surely include the barycenter poisition and energy of the clusters.
-There will also exist two separate interpretations, for \ac{HAD} and \ac{EM} showers with possibly different parameters, such as radii or energy thresholds.
+The full list of variables is not yet defined, but they will surely include the barycenter's position and energy of the clusters.
+Additionally, two separate \ac{HAD} and \ac{EM} interpretations will be defined, with possibly different parameters, such as radii or energy thresholds.
 We refer to "interpretations" since at \ac{L1} no particle identification is performed.
 
 #+NAME: fig:stage2chain
-#+CAPTION: Schematic flowchart of \ac{S2}’s reconstruction chain. \Acp{TC} from \ac{S1} are unpacked and processed in a pipelined fashion up to the creation of cluster-related variables, which are fed to the \ac{L1}. The description of the steps can be found in the text, where "histogramming" refers to the first two steps in this figure. Taken from [[cite:&bruno_chep23]].
+#+CAPTION: Schematic flowchart of \ac{S2}’s reconstruction chain. \Acp{TC} from \ac{S1} are unpacked and processed in a pipelined fashion up to the creation of cluster-related variables, which are fed to the \ac{L1}. The description of the steps can be found in the text, where "histogramming" refers to the first two steps in this figure. Adapted from [[cite:&bruno_chep23]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.02\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/Stage2Chain.pdf]]
 #+END_figure
-  
-* sci
-Not entirely well defined.
-Trigger sum of 4 adjacent tiles
-
-* Additional bibliography :noexport:
-+ JB reference: https://cernbox.cern.ch/pdf-viewer/public/cLosQkewmONZakQ/220606_Dauncey_DN-19-032-V2.pdf?contextRouteName=files-public-link&contextRouteParams.driveAliasAndItem=public%2FcLosQkewmONZakQ&items-per-page=100
-+ Mentin my proceedings [[cite:&bruno_chep23]]
-  

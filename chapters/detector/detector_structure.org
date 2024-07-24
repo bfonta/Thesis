@@ -33,9 +33,55 @@ In the following, we describe all subdetectors in detail, ordered by distance to
 
 \myparagraph{Tracker}
 
-The tracking system was designed to provide coverage up to a pseudorapidity of $\eta \sim 2.4$.
-[[cite:&cms_tracker_tdr]]
+The \ac{CMS} tracker [[cite:&cms_tracker_tdr;&cms_tracker_tdr_addendum]] is the first layer of detection a charged particle sees after being produced at the \ac{pp} collision.
+Its an all-silicon detector, conceived to withstand very large fluences of up to \SI{3.6e15}{\nequiv\per\cm\squared} after \SI{500}{\invfb}.
+Its working principle is well known: charges moving in the semiconductor electric field will create a detectable electric current in an external circuit [[cite:&semiconductors_review]].
+The tracker's highly granular semiconductor technology is organized in several layers, and allows the precise reconstruction of the trajectories of charged objects which, in conjunction with \ac{CMS}'s strong magnetic field, provide information on charge, direction, primary vertex assignment and \ac{PU}.
+Furthermore, it enables the reconstruction of secondary vertices originated from b or $\tau$ decays, and similarly makes analyses on displaced tracks possible [[cite:&cms_displaced_tracks]].
+The tracker is composed of two detection technologies, pixels and strips, located in separate regions, as shown in [[fig:tracker]].
+In total, it measures \SI{5.6}{\meter} in length and \SI{2.4}{\meter} in diameter.
+Pixels usually provide higher resolutions and lower noise, but are also more expensive than strips due to interconnect technologies [[cite:&semiconductors_review]].
+In \ac{CMS}, pixels occupy the inner regions and are immediately surrounded by the strips.
 
+#+NAME: fig:tracker
+#+CAPTION: 2D R vs. z projection of one quarter of the \ac{CMS} tracker. The pixel detector is depicted in green, while single-sided and double-sided strip modules are shown as red and blue segments, respectively. The four components of the strip detector are highlighted in yellow: \ac{TIB}, \ac{TID}, \ac{TOB} and \ac{TEC}. The dashed lines provide visual guidance for the \ac{eta} coordinate. Adapted from [[cite:&cms_tracker_phase2_tdr]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/Tracker.pdf]]
+#+END_figure
+
++ *Pixels*: The pixel detectors are organized in modules, for a total of \num{128e6} readout channels, each one measuring $100\times150\si{\micro\meter}$.
+  In total, the pixel covers a \ac{Si} area of \SI{1.1}{\meter\squared}.
+  The pixel detector is optimized to have four-hit coverage up to $|\eta| \sim 2.5$, improved pattern recognition and track reconstruction, and added
+  redundancy to cope with hit losses.
+  The innermost layer in the \ac{BPIX} sits at only \SI{29}{\mm} from the \ac{IP}.
+  This already represents an upgrade installed in the 2016/2017 technical stop, which also required the installation of a new and tighter beam pipe.
+  Three other layers follow at \SI{68}{\mm}, \SI{109}{\mm} and \SI{160}{\mm} radii.
+  The \ac{FPIX} endcaps are covered by three disks on each side, placed at \SI{296}{\mm}, \SI{396}{\mm} and \SI{516}{\mm} from the \ac{IP}.
+  The detectors are surrounded by "service cylinders", which provide all needed readout and control circuits, as well as cooling tubes and power lines ([[fig:tracker2]], left).
+  Despite the presence of one extra layer, the material budget has been substantially reduced to a minimum in the barrel (\SI{10}{\percent} less) and in the endcaps (\SI{40}{\percent} less): electronic boards on the cylinders are placed outside the tracker acceptance, and special materials are employed for the mechanical structure and \ch{CO2} cooling system at \SI{-10}{\degree} and at 30% relative humidity ([[fig:tracker2]], right).
+  The cooling, besides dissipating the generated power, also helps to mitigate the effects of the damages to the \ac{Si} pixels.
+  This is intended to decrease phenomena such as unintended multiple scattering, pair production, and nuclear interactions, which can create /preshowers/, \ie{} particle showers developing before reaching the calorimeters.
+  Each pixel provides a spatial resolution of \SI{10}{\micro\meter} and \SI{20}{\micro\meter} along the transverse and longitudinal directions, respectively.
+
++ *Strips*: The strip tracking detector is located at larger distances from the \ac{IP}, starting at \SI{20}{\cm} (see [[fig:tracker]]), and is made of \num{\sim 10e6} microstrip sensors, also organized in modules.
+  Its \ac{eta} coverage resembles the one from the pixels.
+  The strips are subdivided into four sections, which are clearly delimited in [[fig:tracker]].
+  The \ac{TIB} and \acp{TID} are made of \num{4} concentric layers and \num{3} disks, respectively.
+  The \ac{TOB} (\ac{TEC}) are located a bit further, and comprise \num{6} layers (\num{9} disks).
+  Roughly half of the modules are double-sided, made of two independent single-sided modules glued back-to-back with a relative rotation of \SI{100}{\milli\radian}.
+  This allows the determination of the third spatial component, while single-sided modules acess 2D positions only [[cite:&tracker_double_sided]].
+  All components are cooled at \SI{-15}{\degree}.
+  The barrel extends up to \SI{116}{\cm} in radius and the endcaps up to \SI{282}{\cm} in depth.
+  The strips achieve a resolution between \num{20} and \SI{50100}{\micro\meter} in the transverse plane, and between \num{200} and \SI{500}{\micro\meter} in the longitudinal direction.
+  The \ac{CMS} strips are the world largest tracking system ever, with \num{93000} strips covering \SI{198}{\meter\squared}.
+
+#+NAME: fig:tracker2
+#+CAPTION: (Left) 3D layout of the \phase{1} \ac{BPIX} and \ac{FPIX} detectors with their respective service half-cylinders. (Middle, Right) Material budget in units of radiation length and hadronic interaction length, as a function of \ac{eta}, as obtained from simulation. The material budget of the \ac{CMS} \phase{1} pixel detector is split into the contributions of the different categories, and the black dots display the original material budget before the technical stop update in 2016/2017. The disk structure of the endcaps lead to the observed peaks. Adapted from [[cite:&pixel_phase1_upgrade2]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/Tracker2.pdf]]
+#+END_figure
 
 \myparagraph{Electromagnetic calorimeter}
 

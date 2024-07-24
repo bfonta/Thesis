@@ -15,15 +15,15 @@ Both algorithms represent viable options to be implemented at the \ac{L1} \ac{S2
 
 Several future research directions are available and required.
 Of particular note, only 0 \ac{PU} single photon guns were studied in depth.
-Despite \num{200} \ac{PU} validation checks samples suggesting a correct data processing behaviour, extensive studies are necessary.
+Despite checks on \num{200} \ac{PU} samples suggesting a correct data processing behaviour, extensive studies are necessary.
 In particular, any algorithm to be added to \ac{S2} must be exposed to the challenging \num{200} \ac{PU} environment, and compared to existing alternatives.
 To give an example, the presence of \ac{PU} background noise might affect the capability to mitigate cluster splits.
 In addition, different types of particles must be tested, such as taus, hadrons and \acp{LLP}.
 Their inclusion requires considering the information coming from the \ac{EM} and \ac{HAD} sections of the detector, and might imply the adaptation and optimization of current algorithms.
-It is currently not clear whether seeding algorithms require information from the \ac{Sci} section.
 As an example of the issues one might encounter, tau leptons naturally create cluster splits via one or three pronged decays, but a single cluster can be obtained also from a three-pronged decay.
+It is also currently not clear whether seeding algorithms require information from the \ac{Sci} section.
 Another point is that unexpected corner cases might create problems that are currently not foreseen.
-During the testing of the hexagonal seeding, for instance, it was found that certain algorithmic steps performed in a determined order with specific parameters lead to failures.
+During the testing of the hexagonal seeding, for instance, unexpected very specific failure modes were found.
 Failures can only be addressed if caught, and this requires systematic tests with large and diverse samples.
 
 Eventually all algorithms must be tested in the firmware before deployment.
@@ -36,3 +36,4 @@ A data structure to pass the \acp{TC} in a module should be defined, together wi
 
 On a final note, I believe the \ac{HGCAL} \ac{L1} chain represents an ideal playground to test modern optimization approaches with deep learning and/or automatic differentiation [[cite:&automatic_differentiation]].
 A robust parameter tuning of all algorithms would clearly fit the needs of the \ac{TPG}, and would most certainly improve physics performance.
+However, pragmaticity should rule in the final years before \ac{HGCAL}'s deployment, and priorities should be such that they provide a working \ac{TPG} chain within the imposed constraints and deadlines.

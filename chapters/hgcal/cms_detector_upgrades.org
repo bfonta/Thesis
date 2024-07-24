@@ -3,17 +3,26 @@
 :END:
 
 The extreme radiation levels and high \acp{PU} mandate an extensive upgrade of most \ac{LHC} detector systems, and \ac{CMS} is no exception.
-For the scope of this thesis, the drastic upgrades put forward in the trigger system and endcap calorimeters take precedence, and will be described in detail in [[ref:sec:phase2_trigger_system,sec:hgcal_intro]].
+For the scope of this thesis, the drastic upgrades put forward in the trigger system and endcap calorimeters take precedence, and will be described in [[ref:sec:phase2_trigger_system,sec:hgcal_intro]], respectively.
 However, given the intricacies of the online and offline trigger chain, and the ideas behind \ac{PF} reconstruction, considering subdetectors as independent elements is naive and ultimately wrong.
-We therefore think a brief summary of all other subdetector upgrades is worthwhile, and can help put in perspective the substantial efforts of the \ac{CMS} Collaboration as a whole [[cite:&cms_run3_developments]].
+We therefore think a brief summary of all other subdetector upgrades is worthwhile, and can help put in perspective all recent and substantial efforts of the \ac{CMS} Collaboration [[cite:&cms_run3_developments]].
 
 \myparagraph{Tracker}
 
-The pixel and strip tracking detectors, subject to the highest radiations and doses among all \ac{CMS} components, will be entirely replaced, with considerably increased granularity [[cite:&cms_tracker_tdr]].
+\noindent The pixel and strip tracking detectors are subject to the highest radiations and doses among all \ac{CMS} components, and their performance will abruptly degrade after \SI{500}{\femto\barn}.
+The pixel detector originally installed has already been replaced during the technical stop between the 2016 and 2017 data-taking periods [[cite:&pixel_phase1_upgrade1;&pixel_phase1_upgrade2]].
+
+will be entirely replaced, with considerably increased granularity [[cite:&cms_tracker_phase2_tdr]].
 They will be lighter and will extend up to $|\eta| < 3.8$.
 For the pixels, a new first layer will be placed at \SI{29}{\mm} from the \ac{IP}.
 
-This is achieved by substituting the current pixel detectors with ones of smaller size and superseding the present strips with modern ones featuring macro pixels. This upgrade will guarantee, at the same time, a lower material budget and extended pseudorapidity coverage to |η| < 3.8.
+
+The barrel pixel layers consist on a total of \num{1184} ractangular modules, almost identical to the \ac{FPIX} ones.
+The innermost layer is placed closer to the \ac{IP}, azt \SI{30}{\mm}
+The number of pixels increases from \num{48e6} to \num{79e6}.
+
+This is achieved by replacing current pixel detectors with smaller sized ones, ensuring a lower material budget, and upgrading the present strips to feature macro pixels.
+
 The tracker should improve reconstruction and identification capabilities of \ac{CMS}, greatly increasing its longitudinal and transversal resolutions, and lowering fake rates.
 The tracker will also integrated in the \ac{L1} trigger chain, enabling the reconstruction of trigger tracks up to $|\eta|=2.4$ in a \ac{PF}-like approach (see [[#sec:phase2_trigger_system]]).
 
@@ -38,7 +47,7 @@ This upgrade will have extensive use in disentangling the approximately 200 PU i
 \myparagraph{Muon detectors}
 
 + *Muons*: be complemented by installing state-of-the-art Resistive Plate Chamber (RPC) detectors and the newly developed Gas Electron Multiplier (GEM) chambers. These additions to the muon
-detection system will increase the geometrical coverage to |η| ≤ 2.8, ensuring the possibility of
+detection system will increase the geometrical coverage to $|\eta| \leq 2.8$, ensuring the possibility of
 extended muon track matching in the forward region. With the aim of further increasing the
 
 + *GEM*: After the introduction of GE1/1 superchambers in \run{3}, two additional GEM detector types will be installed before the start of the \ac{HL-LHC}. The first, named GE2/1, consists on superchambers similar to the already installed GE1/1 superchambers, but larger, covering \num{20} degrees in \ac{phi}. The \ac{eta} coverage will also be slightly extended, from \num{2.15} to \num{2.4}. The second type, called \ac{ME0}, refers to superchambers located closer to the beamline, at $2.0 < |\eta| < 2.8$, which also span \num{20} degrees in \ac{phi} [[cite:&gem_trigger_data_format;&gem_tdr]]. It will be installed on the back of \ac{HGCAL}.

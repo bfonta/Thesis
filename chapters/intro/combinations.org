@@ -38,7 +38,7 @@ The most up-to-date Run2 HH combination constrains the observed (expected) HH cr
 
 
 #+NAME: fig:limits_comb_atlas
-#+CAPTION: Observed and expected 95% CL upper limits on the signal strength for the inclusive \ac{ggF} HH (left) and \ac{VBF} HH production (right) from the \bbtt{}, \bbgg{}, \bbbb{}, multilepton and \bbll{} decay channels, and their statistical combination. The \ac{ggF} or \ac{VBF} HH production cross-section is fixed to the SM predicted value for $\mh=125\,\si{\GeV}$ when deriving limits on the respective signal strength. The expected limit, along with the ±1σ and ±2σ bands, is calculated under the assumption of no HH process and with all NPs profiled to the observed data. Taken from [[cite:&atlas_hh_comb]].
+#+CAPTION: Observed and expected 95% CL upper limits on the signal strength for the inclusive \ac{ggF} HH (left) and \ac{VBF} HH production (right) from the \bbtt{}, \bbgg{}, \bbbb{}, multilepton and \bbll{} decay channels, and their statistical combination. The \ac{ggF} or \ac{VBF} HH production cross-section is fixed to the SM predicted value for $\mh=125\,\si{\GeV}$ when deriving limits on the respective signal strength. The expected limit, along with the $\pm1\sigma$ and $\pm2\sigma$ bands, is calculated under the assumption of no HH process and with all NPs profiled to the observed data. Taken from [[cite:&atlas_hh_comb]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/limits_ggF_HH_SM_atlas.pdf]]
