@@ -2,8 +2,6 @@
 :CUSTOM_ID: sec:cms_detector
 :END:
 
-Use the lead tungstate (\ch{PbWO4}) acronym.
-
 The  muon system has received a new component for \run{3}: the \ac{GEM} superchambers.
 Covering $1.6<|\eta|<2.15$, the new subdetectors enhances the sensitivity of the muon trigger to soft prompt muon signatures and displaced muon signatures from \ac{NP} with \acp{LLP}, increasing leverage to the muon bending angle.
 Each \ac{GEM} chamber is made of three \ac{GEM} foils, and in total \num{36} superchambers have  been installed, where one superchamber is made of two chambers and covers \num{10} degrees in \ac{phi}.
@@ -16,9 +14,3 @@ muon trigger during \ac{LHC} running before the installation of a new silicon tr
 #+BEGIN_figure
 [[~/org/PhD/Thesis/figures/detector/MuonSystemSlice.pdf]]
 #+END_figure
-
-\myparagraph{Tracker}
-Required to be fast and rad-hard, large material budget
-
-\myparagraph{ECAL}
-@mention the two preshower layers@

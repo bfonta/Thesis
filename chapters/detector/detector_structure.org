@@ -150,7 +150,40 @@ The resolution of \ac{ECAL} was also measured in-situ with \run{1} \SI{7}{\TeV} 
 
 \myparagraph{Hadronic Calorimeter}
 
+[[cite:&hcal_tdr]]
+
+Immediately at the back of \ac{ECAL} appears \ac{HCAL}, a sampling calorimeter which measures final-state hadrons and hadronic showers depositing only a part of their energy in \ac{ECAL}.
+Showers initiated by hadrons are governed in part by the strong interaction, which significantly complexifies the hadronization process.
+In a calorimeter, a hadron can loose its energia either via ionization (if it is charged) or via a nuclear interaction, in other words, continuously or abruptly.
+To make things even more complicated, neutral hadrons can only interact strongly, and so their interactions with matter enormously differ from their \ac{EM} counterparts.
+It can thus happen that an hadronic shower loses its energy mostly via \ac{EM} interactions, but a single hadron can also penetrate the full \ac{ECAL} length without releasing any energy whatsoever.
+On average, only 1/3 of the energy of a hadron shower is deposited in \ac{ECAL}.
+The scale of the shower development is largely dominated by the nuclear interaction length, \si{\nucintl}.
+Importantly, the absorption of hadronic showers tends to require much more material than the absorption of \ac{EM} showers at the same energy.
+This fact explains the location of \ac{HCAL} behind \ac{ECAL}, an approach used to achieve full containment, with its \SI{\sim 7}{\nucintl} at $\eta=0$ up to \SI{\sim 12}{\nucintl} at $\eta\sim1.2$, then stabilizing at \SI{\sim 10}{\nucintl} for the endcap.
+
+The lower radiation levels that \ac{HCAL} is experiences when compared to \ac{ECAL} or even the tracker make possible the usage of inexpensive plastic scintillator tiles as active medium, themselves interleaved with brass absorber layers.
+The calorimeter is composed of five separate sections: the \ac{HB}, two \acp{HE} on either side of \ac{CMS}, the \ac{HO} and the \ac{HF}.
+A schematic representation of \ac{HCAL} can be seen in [[fig:hcal1]]
+
+and [[fig:hcal2]]
+
+#+NAME: fig:hcal1
+#+CAPTION: \ac{HCAL} Schematic view of a quarter of the hadronic calorimeter, along the longitudinal direction. The four section are shown: \ac{HB}, \ac{HO}, \ac{HF} and \ac{HF}, or the "nose". The dashed lines provide visual guidance for the \ac{eta} coordinate. Taken from [[cite:&cms_collab]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/HCAL1.pdf]]
+#+END_figure
+
+#+NAME: fig:hcal2
+#+CAPTION: (Left) Assembled HCAL half-barrel. (Middle) Partially assembled HE-minus absorber, where \ac{Sci} trays can be seen being inserted in some of the outer sectors. (Right) Layout of all the HO trays in the CMS detector. Taken from [[cite:&cms_collab]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/HCAL2.pdf]]
+#+END_figure
+
 + check the current HF and compare it with HFNose
++ mention upgrade during phase1 [[cite:&hcal_upgrade]]
   
 \myparagraph{Magnet}
 
