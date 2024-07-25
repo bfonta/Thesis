@@ -1,3 +1,7 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:detector_structure
+:END:
+
 They are designed to be versatile and capable of detecting a wide range of physics processes across various energies.
 The CMS experiment was officially proposed in 1992 with the primary goal of discovering the Higgs boson.
 Key to this objective were the channels $H \rightarrow ZZ \rightarrow 4\ell$ and $H \rightarrow \gamma\gamma$, which required an excellent electromagnetic calorimeter for effective electron and photon detection, with an energy resolution constant term equal to or less than 0.5%.
@@ -83,28 +87,74 @@ In \ac{CMS}, pixels occupy the inner regions and are immediately surrounded by t
 [[~/org/PhD/Thesis/figures/detector/Tracker2.pdf]]
 #+END_figure
 
-\myparagraph{Electromagnetic calorimeter}
+\myparagraph{Electromagnetic Calorimeter}
 
-@TODO@
+\noindent The scintillating lead tungstate (\ch{PbWO4}) \ac{ECAL} [[cite:&ecal_tdr]] of \ac{CMS} is located inside the \SI{3.8}{\tesla} solenoid magnet, consisting of \num{75848} channels in total, split across \num{61200} crystals in the barrel and \num{7324} crystals in each of the two endcaps.
+The medium was chosen based on its compact $\si{\radl}=0.89\,\si{\cm}$ radiation length, providing a total containment of \SI{25}{\radl}, and its small \SI{2.19}{\cm} Molière radius, providing full coverage of all \ac{EM} showers.
+Its hermetic design targets the measurement of the properties of photons and electrons, via their scintillation and absorption in the crystals.
+A \ac{EM} preshower detector is present right in front of the \ac{EE} disks to increase the spatial resolution in the $1.65<|\eta|<2.6$ region.
+Between \SI{\sim 6}{\percent} and \SI{\sim 8}{\percent} of the energy of \ac{EM} showers deposit their energy here, on average.
+The preshower is composed of two layers of radiation-hard \ac{Si} strips alternated with \ch{Pb} absorbers, in the guise of a short, \SI{\sim 1}{\radl} sampling calorimeter.
+Its main purpose is to distinguish between single photons and $\pi^{0}\rightarrow\gamma\gamma$ di-photons.
+These particles are reconstructed over a wide range of energies, from \SI{\sim 5}{\GeV} electrons to hypothetical multi-\si{\TeV} resonances.
+Despite its name, the \ac{ECAL} also measures hadronic energy deposits and the \ac{EM} component of hadronic showers, since it is placed in front of \ac{HCAL}.
+The \ac{ECAL} also provides timing capabilities for \ac{EM} showers, which are used in noise rejection and in the removal of debris from time-adjacent \acp{BX}.
+Besides, just like for the \ac{MTD}, timing is useful in \ac{LLP} searches, especially the ones with a lifetime larger than \SI{1}{\nano\second} [[cite:&performance_calorimeter_trigger]].
+
+The \ac{EB} covers the $|\eta| < 1.479$ region.
+\Ac{EB} crystals are organized in /modules/, in turn arranged into /supermodules/, each spanning half the length of the \ac{EB} and covering \SI{20}{\degre} in \ac{phi}.
+Each module houses \num{425} crystals, which measure $\eta\times\phi = 0.0174\times0.0174$ and \SI{23}{\cm} in depth.
+Instead, in each \ac{EE}, crystals are arranged in two semi-circular support called /dees/, and form $5\times5$ groups named /supercrystals/.
+All crystals are placed perpendicularly to the \ac{IP} in a quasi-radial geometry.
+This layout mitigates the negative impacts of structural gaps, which are nevertheless present, mostly at $\eta=0$ and $\eta=1.479$.
+The structure of the \ac{ECAL} is illustrated in [[fig:ecal1]], and the origin of the gaps is shown in [[fig:ecal2]], where a photo of a supermodule is included.
+
+#+NAME: fig:ecal1
+#+CAPTION: (Left) Conceptual representation of the ECAL mechanical structure. The lead-tungstate crystals are housed in the modules and supermodules of the barrel, while in the endcap they are arranged between the preshower and the support dees, grouped in supercrystals. (Right) A single endcap with Dees apart, showing its supercrystals. Adapted from [[cite:&ecal_tdr]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/ECAL1.pdf]]
+#+END_figure
+
+The energy response of calorimeters is usually parameterised via three separate terms [[cite:&fabiola_calorimetry]], which have been empirically observed to precisely describe resolution curves: 
+
++ *Stochastic term*:
+  Arises due to intrinsic Poissonian fluctuations in the shower development, for \ac{ECAL} the number of produced scintillation photons. Since the number scales with energy, the Poissonian uncertainty of the mean scales with the energy's square root.
+  
++ *Noise term*:
+  Comes from the electronic noise of the readout chain, and scales linearly with the energy.
+  It depends on features such as the detector capacitance and cables.
+  The noise tends to be larger for charge-collecting devices, due to the presence of preamplifiers.
+  On the other hand, scintillation-based detectors like \ac{ECAL} have photo-sensitive devices at the start of their circuit, lowering the noise.
+  
++ *Constant term*: 
+  Includes all sort of contributions which are not dependent on the energy of the particle, like instrumental effects, nonuniformities and structural imperfections.
+  As the centre-of-mass energy of particle accelerators increases, this term will dominate more and more.
+
+In the case of \ac{ECAL}, the energy resolution of $3\times3$ or $5\times5$ crystal arrays was measured by a dedicated electron test beam [[cite:&testbeam_ecal]], with energies varying from \num{20} to \SI{250}{\GeV}, and was parametrised as:
+
+#+NAME: eq:ecal_resolution
+\begin{equation}
+\left( \frac{\sigma}{E} \right)^2 = \left( \frac{2.8\%}{\sqrt{E}} \right)^2 + \left( \frac{12\%}{E}\right)^2 + (0.3\%)^2 \: .
+\end{equation}
+
+\noindent where the first, second and third terms are, respectively, the stochastic, noise and constant term.
+The resolution of \ac{ECAL} was also measured in-situ with \run{1} \SI{7}{\TeV} data [[cite:&ecal_resolution]], and was found to be excellent.
+
+#+NAME: fig:ecal2
+#+CAPTION: (Left) Photograph of one supermodule with its modules clearly visible. (Right) Structure of a quarter of \ac{ECAL}, highlighting individual modules, supermodules and supercrystals. The spacings between supermodules and supercrystals explain the \ac{eta} gaps at 0 and 1.479. Adapted from [[cite:&ecal_tdr]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/ECAL2.pdf]]
+#+END_figure
+
+\myparagraph{Hadronic Calorimeter}
+
 + check the current HF and compare it with HFNose
-
-The lead tungstate (PbWO4) electromagnetic calorimeter of the CMS experiment is located
-inside the 3.8 T solenoid magnet and consists of 61200 crystals in the barrel section and 7324
-crystals in each of the two endcaps, for a total of 75848 channels.
-
-The CMS ECAL is a scintillating lead-tungstate crystal calorimeter, with a silicon strip preshower detector in the forward region that provides precise measurements of the energy and the time-of-arrival of electrons and photons.
-The electromagnetic calorimeter (ECAL) of the CMS detector provides a highly efficient and accurate reconstruction of photons and electrons over a wide range of energies from low-energy electrons (5 GeV) typical of multilepton events, to electroweak-scale energies (Higgs and W/Z bosons), up to the
-TeV scale typical of high-mass resonance searches. The ECAL also measures energy deposits
-from hadrons and the electromagnetic component of jets contributing to jet energy and missing
-transverse momentum (pmissT ) measurements. The ECAL provides precise time-of-arrival mea-
-surements of electromagnetic showers, used in the rejection of backgrounds with a broad time
-distribution, such as electronic noise and pp interactions in preceding and subsequent bunch
-crossings. Precise time measurements can be used to identify new particles with long lifetimes,
-typically larger than 1 ns, predicted by certain theories beyond the standard model [[cite:&performance_calorimeter_trigger]].
-
+  
 \myparagraph{Magnet}
 
-The large, \SI{220}{\tonne} \ch{Nb}-\ch{Ti} superconducting solenoid magnet is the defining feature of the \ac{CMS} design, delivering an axial and uniform magnetic field of \SI{3.8}{\tesla} over a \SI{12.5}{\meter} length and a \SI{3.15}{\meter} radius [[cite:&magnet_cms]].
+\noindent The large, \SI{220}{\tonne} \ch{Nb}-\ch{Ti} superconducting solenoid magnet is the defining feature of the \ac{CMS} design, delivering an axial and uniform magnetic field of \SI{3.8}{\tesla} over a \SI{12.5}{\meter} length and a \SI{3.15}{\meter} radius [[cite:&magnet_cms]].
 The radius is large enough to acommodate both \ac{EM} and \ac{HAD} calorimeters, reducing the material budget in front the calorimeters.
 This eliminates charged particle preshowers in the coil material, facilitating the matching between energy deposits and tracks.
 At normal incidence, the bending power of \SI{4.9}{\tesla\meter} a provides a strong separation between energy deposits of charged and neutral particles.
@@ -118,7 +168,7 @@ In order to contain the magnetic flux, the solenoid is surrounded by a return yo
 
 \myparagraph{Muon Chambers}
 
-\Ac{CMS} is specifically optimized for muon measurements, which are performed by \acp{DT} in the barrel region and \acp{CSC} in the forward region.
+\noindent \Ac{CMS} is specifically optimized for muon measurements, which are performed by \acp{DT} in the barrel region and \acp{CSC} in the forward region.
 \Acp{RPC} are also available for triggering and redundancy.
 The entire system is based on gaseous detectors, and is located outside the solenoid, where the distance to the \ac{PV} is large enough so that only muons are expected.
 Indeed, muons produced at the \ac{LHC}, with energies ranging from a few \si{\MeV} to several \si{\GeV}, are the closest a particle becomes from being a \ac{MIP} (see [[ref:fig:muon_dedx]]), and thus traverse large quantities of matter remaining mostly undisturbed.

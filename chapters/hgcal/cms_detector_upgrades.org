@@ -44,10 +44,43 @@ The updates will bring better resolutions and lower fake rates.
 
 \myparagraph{MTD}
 
-will be introduced in the gap between the tracker and the calorimeters in both the barrel and endcap regions, thus increasing the timing information on charged candidates.
-This upgrade will have extensive use in disentangling the approximately 200 PU interactions foreseen per bunch crossing.  [[cite:&mtd_tdr;&mtd_timing_plot]]
+\noindent The \ac{MTD} [[cite:&mtd_tdr;&mtd_timing_plot]] has no analog in the current \phase{1} \ac{CMS} detector.
+Its addition is driven by the \num{4}-fold \ac{PU} increase brought by the \ac{HL-LHC}.
+Indeed, the primary vertex has to be disentangled from all \ac{PU} vertices, and timing measurements have been shown to provide the required extra handle, as expected from adding a new uncorrelated dimension to the analysis.
+The \ac{MTD} will have the ability to measure the production time of \acp{MIP} for vertex location at a \SI{30}{\pico\second} level, although a deterioration of a factor of \num{2} is expected by the end of the \ac{HL-LHC}.
+This is to be compared with the average \SI{\sim 200}{\pico\second} root mean square of individual interactions in a \ac{BX}.
+The sinergy between the tracker and the \ac{MTD} will enable the association of tracks to the right vertices more often, even for scenarios with closely packed vertices, helping in \ac{LLP} reconstruction, charged hadron identification and b-jet identification.
+The latter is tightly connected with the di-Higgs measurement performed in this thesis, as detailed in [[#sec::bbtautau_intro]], where precision timing can bring an additional \SI{\sim 20}{\percent} signal yield.
+Another interesting cooperation strategy can be envisaged with the calorimeters, especially \ac{HGCAL} (introduced in [[#sec:hgcal_intro]]), which will also provide timing measurements with a similar precision, and can thus be used to ensure compatibility with \ac{MTD} measurements.
+Other benefits are forseen, like better measurements of $\tau$ lepton decays due to the improved \ac{MET} reconstruction quality, or improved \ac{VBF} tagging.
+
+The \ac{MTD} will be located in the gap between the tracker and the calorimeters, in both the barrel as the \ac{BTL}, and in endcap regions, as the \acp{ETL}, having a \SI{28}{\meter\squared} surface area.
+In the \ac{BTL}, crystal bars read out by a pair of \acp{SiPM} have a granularity implying a 7% occupation per crystal at \num{200} \ac{PU}.
+The low occupation limits the probability of double hits during a \ac{BX}.
+Bars are grouped in modules, which are organized in \acp{RU}, which in turn are structured in trays, supported by the tracker support tube (see [[fig:mtdbarrel]]).
+In the \acp{ETL}, located at a distance of \SI{3}{\meter} from the \ac{IP}, a two-disk structure of \ac{Si} sensors will achieve the desired time resolution with two hits per track.
+The \ac{Si} technology was chosen due to the higher radiation at the endcaps.
+The same radiation also requires the addition of a neutron moderator, which shields the tracker from back-scattered particles.
+The \ac{MTD} will consist on more than \num{300000} \acp{SiPM}, which will cover an $\eta<3$ area on both sides.
+It will remain accessible to allow for repairs or future updates, again related to the high radiation levels.
+All in all, the \ac{MTD} will help \ac{CMS} maintaining its current performances in a harsher environment.
+
+#+NAME: fig:mtdbarrel
+#+CAPTION: Overview of the barrel side of the \ac{MTD}. (Left) The hierarchical arrangement of the various components, bars, modules, and readout units. (Right) The tracker support tube with highlighted \ac{MTD} trays (in purple). Taken from [[cite:&mtd_tdr]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/MTDBarrel.pdf]]
+#+END_figure
+
+#+NAME: fig:mtdendcap
+#+CAPTION: (Left) Cross-sectional view of the endcap timing layer (ETL) along the beam axis. The \ac{IP} is to the left of the image. Shown are two endcap disks populated with modules on both faces, along with the support structure. 1: thermal screen; 2, 4, 6, 8: disk faces; 3, 7: support plates; 9: \ac{HGCAL} neutron moderator; 10: support cone; 11: insulation of the support cone; 12: \ac{HGCAL} thermal screen. (Right) Location of the \ac{BTL}, relative to the future \ac{HGCAL}. The \ac{ETL} is placed in front of the neutron moderator of \ac{HGCAL}, but is kept in a separate volume, enabling its independent access for repairs or upgrades. Adapted from [[cite:&mtd_tdr]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/MTDEndcap.pdf]]
+#+END_figure
 
 \myparagraph{Calorimeters}
+
 
 + *HGCAL Nose*: very forward portion of the endcap calorimeter covering pseudorapidity values between 3 and 4.2, locate in front of the \ac{HF}, very similar to \ac{HGCAL} \SI{4.6}{\mega\gray} maximum absorbed dose and \SI{2e16}{\nequiv}, both twice as large as \ac{HGCAL}'s values, good for VBS scattering measurement of longitudinally polarized channels (two very forwards jets), also good for VBF production of H and HH
 

@@ -104,7 +104,7 @@
 #+INCLUDE: "chapters/hgcal/hgcal_discussion.org"
 
 * \reshhbbtt{}: Strategy definition
-#+INCLUDE: "chapters/intro/bbtt_analysis.org"
+#+INCLUDE: "chapters/analysis1/bbtt_analysis.org"
 ** Data, MC and signal samples
 #+INCLUDE: "chapters/analysis1/samples.org"
 
