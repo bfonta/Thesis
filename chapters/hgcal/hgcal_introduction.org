@@ -42,7 +42,7 @@ Its layout can be seen in [[ref:fig:hgcal_long_structure1]].
 
 Sensors are split in two different density regions, depending on their active cell size.
 This is required due to the $\eta\text{-dependent}$ fluence.
-The /high density/ region comprises \SI{0.56}{\centi\meter\squared} cells, which are part of \num{120} and \SI{200}{\micro\meter} thick sensors, and is located closer to the beam axis.
+The /high density/ region comprises \SI{0.56}{\centi\meter\squared} cells, which are part of \num{120} and \SI{200}{\micro\meter} thick sensors (thinner than the current \ac{CMS} tracker!), and is located closer to the beam axis.
 The /low density/ region, located at $|\eta| \lesssim 2.15$ ($R \lesssim 70\si{\centi\meter}$), is instead made of \SI{1.26}{\centi\meter\squared} cells, in modules with thicknesses of \num{200} or \SI{300}{\micro\meter}, depending on their location, as shown in [[ref:fig:layers_layout]].
 Despite the benefits brought by an increase in transversal granularity, the cell area is ultimately bounded by the need to dissipate power, with its limits on cooling requirements [[cite:&hgcalTDR]].
 The exact choice of the area is also connected to the size of \acp{TC}, as discussed in [[#sec:hgcal_trigger_primitives]].

@@ -9,27 +9,40 @@ We therefore think a brief summary of all other subdetector upgrades is worthwhi
 
 \myparagraph{Tracker}
 
-\noindent The pixel and strip tracking detectors are subject to the highest radiations and doses among all \ac{CMS} components, and their performance will abruptly degrade after \SI{500}{\femto\barn}.
-The pixel detector originally installed has already been replaced during the technical stop between the 2016 and 2017 data-taking periods [[cite:&pixel_phase1_upgrade1;&pixel_phase1_upgrade2]].
+\noindent The pixel and strip tracking detectors are subject to the highest radiations and doses among all \ac{CMS} components, and their performance will abruptly degrade after \SI{500}{\invfb}.
+The radiation levels are expected to increase by one order of magnitude during the \ac{HL-LHC}.
+The pixel detector originally installed has already been replaced during the technical stop between the 2016 and 2017 data-taking periods [[cite:&pixel_phase1_upgrade2;&pixel_phase1_upgrade1]].
+It structure its designed with accessibility in mind, such that an update of the pixels does not imply moving the strips.
+The channel occupancy is required to stay within 0.1% for the pixels and 1% for the strips, which is quite demanding at \num{200} \ac{PU}.
+The track separation is also expected to be improved relative to the one currently observed for high-energy jets, where hits are merged at the level of the pixels.
+Following the recent upgrade, the material budget of the tracker should also be decreased, since it negatively affects the donwstream calorimeters and overall \ac{PF} reconstruction.
+The tracker will also be integrated in the \ac{L1} trigger chain for the first time, enabling the reconstruction of trigger tracks up to $|\eta|=2.4$ in a \ac{PF}-like approach (see [[#sec:phase2_trigger_system]]), and requiring updated reconstruction algorithms, to avoid losing selection efficiency.
 
-will be entirely replaced, with considerably increased granularity [[cite:&cms_tracker_phase2_tdr]].
-They will be lighter and will extend up to $|\eta| < 3.8$.
-For the pixels, a new first layer will be placed at \SI{29}{\mm} from the \ac{IP}.
+The tracker will thus be entirely replaced, with considerably increased granularity and \ac{eta} coverage extended up to $|\eta| \sim 4.0$, both for the pixels and strips [[cite:&cms_tracker_phase2_tdr]].
+The number of layers will be kept unchanged, ensuring particles traverse on average at least \num{6} layers, even for the highest \ac{eta} values.
+The updates will bring better resolutions and lower fake rates.
 
++ *Inner Tracker*: Planar pixel modules will still be present, but will be significantly thinner and lighter: \num{100}- to \SI{150}{\micro\meter}-thick sensors compared to the current \SI{300}{\micro\meter} ones, developed in partnership with \ac{ATLAS} [[cite:&rd53]].
+  The increase in granularity, which comes with a reduction in area by a factor of \num{6}, improves the impact parameter resolution and  limits the occupancy.
+  The pixels are organized in $336\times432$ arrays in a dedicated radiation-hard chip, which is designed to also mitigate \acp{SEE} [[cite:&inner_tracker_phase2]].
+  The flexible design of the \ac{IT} will continue to allow replacements during technical stops.
+  
++ *Outer Tracker*: For the \ac{OT}, the update is mainly driven by the requirement to introduce the information from the tracker at \ac{L1}.
+  The strips will be grouped into over \num{13000} modules with two different configurations: /2-strip/ and /pixel-strip/.
+  The former is limited inasmuch it lacks segmentation in the $z$ direction [[cite:&abbaneo]], and is therefore included in the outer \ac{OT} layers only.
+  For the three inner layers, /pixel-strips/ are used, where each module has \num{\sim 1000} strips and \num{\sim 30000} pixels.
+  The barrel pixel-strips measure a third spatial coordinate, constraining the $z$ coordinate of the primary vertex to a \SI{1}{\mm} region, helping in vertex discrimination.
+  Contrary to the current tracker, the future barrel \ac{OT} will have its first three layers tilted, perpendicularly oriented relative to the \ac{IP}.
+  This mechanically challenging layout is meant to recover from inefficiencies arising due to particles traversing near-adjacent double-sided modules, in consecutive layers, which cannot communicate with eachother (see [[fig:tracker_update]], and compare it with [[fig:tracker]]).
 
-The barrel pixel layers consist on a total of \num{1184} ractangular modules, almost identical to the \ac{FPIX} ones.
-The innermost layer is placed closer to the \ac{IP}, azt \SI{30}{\mm}
-The number of pixels increases from \num{48e6} to \num{79e6}.
+#+NAME: fig:tracker_update
+#+CAPTION: Diagram of one quarter of the \phase{2} tracker layout in R-$z$ view. The \ac{IT} green (yellow) lines correspond to pixel modules made of two (four) readout chips. In the \ac{OT}, the blue and red lines represent the two types of modules described in the text. The dashed lines provide visual guidance for the \ac{eta} coordinate. Adapted from [[cite:&cms_tracker_phase2_tdr]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/TrackerUpgrade.pdf]]
+#+END_figure
 
-This is achieved by replacing current pixel detectors with smaller sized ones, ensuring a lower material budget, and upgrading the present strips to feature macro pixels.
-
-The tracker should improve reconstruction and identification capabilities of \ac{CMS}, greatly increasing its longitudinal and transversal resolutions, and lowering fake rates.
-The tracker will also integrated in the \ac{L1} trigger chain, enabling the reconstruction of trigger tracks up to $|\eta|=2.4$ in a \ac{PF}-like approach (see [[#sec:phase2_trigger_system]]).
-
-+ Strips
-  + \ac{IT} and \ac{OT} (check pixels)
-
-\myparagraph{MTD}:
+\myparagraph{MTD}
 
 will be introduced in the gap between the tracker and the calorimeters in both the barrel and endcap regions, thus increasing the timing information on charged candidates.
 This upgrade will have extensive use in disentangling the approximately 200 PU interactions foreseen per bunch crossing.  [[cite:&mtd_tdr;&mtd_timing_plot]]
