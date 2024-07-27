@@ -66,7 +66,7 @@ The latter correspond to the building blocks for all physics objects used in \ac
 
 \myparagraph{PF Tracks}
 
-Reconstructing charged particles consists on recreating their trajectories from individual hits, and extracting particle properties from those trajectories.
+\noindent Reconstructing charged particles consists on recreating their trajectories from individual hits, and extracting particle properties from those trajectories.
 It is therefore not a surprise that all tracking algorithms excel when considering loose requirements on hit multiplicity and hit energy tresholds.
 The same idea is central to online reconstruction too, as will be discussed in [[#sec:hgcal_trigger_primitives]].
 The additional hit multiplicity unfortunately also brings more misreconstruted tracks, by up to \SI{\sim 80}{\percent}.
@@ -109,7 +109,7 @@ The same approach is also able to associate converted bremsstrahlung photons to 
 
 \myparagraph{PF Clusters}
 
-The \ac{PF} clustering algorithm runs separately in most calorimeter subdetectors: barrel and endcaps for the \ac{ECAL} and \ac{HCAL}, and the two preshower layers.
+\noindent The \ac{PF} clustering algorithm runs separately in most calorimeter subdetectors: barrel and endcaps for the \ac{ECAL} and \ac{HCAL}, and the two preshower layers.
 The task is particularly challenging given constant overlaps between photons, neutral and charged hadrons, and electrons with their breamsstrahlung energy deposits.
 Clustering also plays an essential role in cases where the tracker underperforms: low track efficiency or high track $\pt$.
 The algorithm starts by defining /seeds/, which correspond to detector elements with an energy larger than its neighbours and larger than a predefined threshold.
@@ -150,7 +150,7 @@ On top, barrel and endcap regions are calibrated separately to deal with differe
 
 \myparagraph{PF Linking}
 
-A linking algorithm proceeds to connect \ac{PF} elements coming from different subdetectors into /\ac{PF} blocks/, using only its $(\eta,\phi)$ nearest neighbours to reduce time complexity.
+\noindent A linking algorithm proceeds to connect \ac{PF} elements coming from different subdetectors into /\ac{PF} blocks/, using only its $(\eta,\phi)$ nearest neighbours to reduce time complexity.
 Once a link is found, depending on selection criteria associated to the particles being linked, a distance or quality metric is associated to it.
 Links are established in a very detector and particle-dependent way.
 In total, five types exist, linking the individual \ac{PF} tracks and \ac{PF} clusters, based on proximity conditions:
@@ -162,7 +162,7 @@ In total, five types exist, linking the individual \ac{PF} tracks and \ac{PF} cl
 
 \myparagraph{Identification and reconstruction}
 
-Once \ac{PF} blocks are formed, the identification and reconstruction sequence follows a fixed order:
+\noindent Once \ac{PF} blocks are formed, the identification and reconstruction sequence follows a fixed order:
 
 1. Muon candidates are identified and reconstructed, and their \ac{PF} tracks and \ac{PF} clusters are removed from the block;
 2. Electrons, including the collection of the energy of all bremsstrahlung photons, plus energetic and isolated photons are also identified, and all corresponding \ac{PF} elements are masked;
@@ -182,6 +182,8 @@ They are assembled into offline /physics objects/, which we describe in the foll
 [[~/org/PhD/Thesis/figures/detector/PFJetResponse.pdf]]
 #+END_figure
 
+
+* :noexport:
 @Missing all individual particles described in the pf paper [[cite:&particle_flow]]@
 
 

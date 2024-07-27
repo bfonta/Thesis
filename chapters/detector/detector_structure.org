@@ -37,11 +37,11 @@ In the following, we describe all subdetectors in detail, ordered by distance to
 
 \myparagraph{Tracker}
 
-The \ac{CMS} tracker [[cite:&cms_tracker_tdr;&cms_tracker_tdr_addendum]] is the first layer of detection a charged particle sees after being produced at the \ac{pp} collision.
-Its an all-silicon detector, conceived to withstand very large fluences of up to \SI{3.6e15}{\nequiv\per\cm\squared} after \SI{500}{\invfb}.
-Its working principle is well known: charges moving in the semiconductor electric field will create a detectable electric current in an external circuit [[cite:&semiconductors_review]].
+\noindent The \ac{CMS} tracker [[cite:&cms_tracker_tdr;&cms_tracker_tdr_addendum]] is the first layer of detection a charged particle sees after being produced at the \ac{pp} collision.
+Its an all-silicon detector, conceived to withstand very large fluences of up to \SI{3.6e15}{\nequiv\per\cm\squared} after \SI{500}{\invfb} of integrated luminosity.
+Its working principle is well known: charges moving in the semiconductor electric field will generate a detectable electric current in an external circuit [[cite:&semiconductors_review]].
 The tracker's highly granular semiconductor technology is organized in several layers, and allows the precise reconstruction of the trajectories of charged objects which, in conjunction with \ac{CMS}'s strong magnetic field, provide information on charge, direction, primary vertex assignment and \ac{PU}.
-Furthermore, it enables the reconstruction of secondary vertices originated from b or $\tau$ decays, and similarly makes analyses on displaced tracks possible [[cite:&cms_displaced_tracks]].
+Furthermore, the tracker enables the reconstruction of secondary vertices originated from b or $\tau$ decays, and similarly makes analyses on displaced tracks possible [[cite:&cms_displaced_tracks]].
 The tracker is composed of two detection technologies, pixels and strips, located in separate regions, as shown in [[fig:tracker]].
 In total, it measures \SI{5.6}{\meter} in length and \SI{2.4}{\meter} in diameter.
 Pixels usually provide higher resolutions and lower noise, but are also more expensive than strips due to interconnect technologies [[cite:&semiconductors_review]].
@@ -55,15 +55,16 @@ In \ac{CMS}, pixels occupy the inner regions and are immediately surrounded by t
 #+END_figure
 
 + *Pixels*: The pixel detectors are organized in modules, for a total of \num{128e6} readout channels, each one measuring $100\times150\si{\micro\meter}$.
-  In total, the pixel covers a \ac{Si} area of \SI{1.1}{\meter\squared}.
+  In total, pixels covers a \ac{Si} area of \SI{1.1}{\meter\squared}.
   The pixel detector is optimized to have four-hit coverage up to $|\eta| \sim 2.5$, improved pattern recognition and track reconstruction, and added
   redundancy to cope with hit losses.
   The innermost layer in the \ac{BPIX} sits at only \SI{29}{\mm} from the \ac{IP}.
-  This already represents an upgrade installed in the 2016/2017 technical stop, which also required the installation of a new and tighter beam pipe.
+  This represents an upgrade over the original \phase{1} pixels, installed in the 2016/2017 technical stop, and which also required the installation of a new and tighter beam pipe.
   Three other layers follow at \SI{68}{\mm}, \SI{109}{\mm} and \SI{160}{\mm} radii.
   The \ac{FPIX} endcaps are covered by three disks on each side, placed at \SI{296}{\mm}, \SI{396}{\mm} and \SI{516}{\mm} from the \ac{IP}.
   The detectors are surrounded by "service cylinders", which provide all needed readout and control circuits, as well as cooling tubes and power lines ([[fig:tracker2]], left).
-  Despite the presence of one extra layer, the material budget has been substantially reduced to a minimum in the barrel (\SI{10}{\percent} less) and in the endcaps (\SI{40}{\percent} less): electronic boards on the cylinders are placed outside the tracker acceptance, and special materials are employed for the mechanical structure and \ch{CO2} cooling system at \SI{-10}{\degree} and at 30% relative humidity ([[fig:tracker2]], right).
+  Despite the presence of one extra layer, the material budget has been substantially reduced to a minimum in the endcaps and more dramatically in the barrel, by a factor of \SI{\sim 60}{\percent}: electronic boards on the cylinders were placed outside the tracker acceptance, and special materials were employed for the mechanical structure and \ch{CO2} cooling system ([[fig:tracker2]], right).
+  The cooling itself runs at \SI{-10}{\degree} and 30% relative humidity.
   The cooling, besides dissipating the generated power, also helps to mitigate the effects of the damages to the \ac{Si} pixels.
   This is intended to decrease phenomena such as unintended multiple scattering, pair production, and nuclear interactions, which can create /preshowers/, \ie{} particle showers developing before reaching the calorimeters.
   Each pixel provides a spatial resolution of \SI{10}{\micro\meter} and \SI{20}{\micro\meter} along the transverse and longitudinal directions, respectively.
@@ -90,8 +91,16 @@ In \ac{CMS}, pixels occupy the inner regions and are immediately surrounded by t
 \myparagraph{Electromagnetic Calorimeter}
 
 \noindent The scintillating lead tungstate (\ch{PbWO4}) \ac{ECAL} [[cite:&ecal_tdr]] of \ac{CMS} is located inside the \SI{3.8}{\tesla} solenoid magnet, consisting of \num{75848} channels in total, split across \num{61200} crystals in the barrel and \num{7324} crystals in each of the two endcaps.
-The medium was chosen based on its compact $\si{\radl}=0.89\,\si{\cm}$ radiation length, providing a total containment of \SI{25}{\radl}, and its small \SI{2.19}{\cm} Molière radius, providing full coverage of all \ac{EM} showers.
+The medium was chosen based on its compact $\si{\radl}=0.89\,\si{\cm}$ radiation length, providing a total containment of \SI{25}{\radl}, and on its small \SI{2.19}{\cm} Molière radius, providing full coverage of all \ac{EM} showers.
 Its hermetic design targets the measurement of the properties of photons and electrons, via their scintillation and absorption in the crystals.
+The \ac{EB} covers the $|\eta| < 1.479$ region.
+\Ac{EB} crystals are organized in /modules/, in turn arranged into /supermodules/, each spanning half the length of the \ac{EB} and covering \SI{20}{\degre} in \ac{phi}.
+The supermodules also contain \acp{APD} and readout electronics.
+Each module houses \num{425} crystals, which measure $\eta\times\phi = 0.0174\times0.0174$ and \SI{23}{\cm} in depth.
+Instead, in each \ac{EE}, crystals are arranged in two semi-circular support called /dees/, and form $5\times5$ groups named /supercrystals/, extending up to $\eta = 3.0$.
+The crystals are read out by two kinds of photodetectors: \acp{APD} in the barrel and \ac{VPT} in the endcaps.
+All crystals are placed perpendicularly to the \ac{IP} in a quasi-radial geometry.
+This layout mitigates the negative impacts of structural gaps, which are nevertheless present, mostly at $\eta=0$ and $\eta=1.479$.
 A \ac{EM} preshower detector is present right in front of the \ac{EE} disks to increase the spatial resolution in the $1.65<|\eta|<2.6$ region.
 Between \SI{\sim 6}{\percent} and \SI{\sim 8}{\percent} of the energy of \ac{EM} showers deposit their energy here, on average.
 The preshower is composed of two layers of radiation-hard \ac{Si} strips alternated with \ch{Pb} absorbers, in the guise of a short, \SI{\sim 1}{\radl} sampling calorimeter.
@@ -99,14 +108,7 @@ Its main purpose is to distinguish between single photons and $\pi^{0}\rightarro
 These particles are reconstructed over a wide range of energies, from \SI{\sim 5}{\GeV} electrons to hypothetical multi-\si{\TeV} resonances.
 Despite its name, the \ac{ECAL} also measures hadronic energy deposits and the \ac{EM} component of hadronic showers, since it is placed in front of \ac{HCAL}.
 The \ac{ECAL} also provides timing capabilities for \ac{EM} showers, which are used in noise rejection and in the removal of debris from time-adjacent \acp{BX}.
-Besides, just like for the \ac{MTD}, timing is useful in \ac{LLP} searches, especially the ones with a lifetime larger than \SI{1}{\nano\second} [[cite:&performance_calorimeter_trigger]].
-
-The \ac{EB} covers the $|\eta| < 1.479$ region.
-\Ac{EB} crystals are organized in /modules/, in turn arranged into /supermodules/, each spanning half the length of the \ac{EB} and covering \SI{20}{\degre} in \ac{phi}.
-Each module houses \num{425} crystals, which measure $\eta\times\phi = 0.0174\times0.0174$ and \SI{23}{\cm} in depth.
-Instead, in each \ac{EE}, crystals are arranged in two semi-circular support called /dees/, and form $5\times5$ groups named /supercrystals/.
-All crystals are placed perpendicularly to the \ac{IP} in a quasi-radial geometry.
-This layout mitigates the negative impacts of structural gaps, which are nevertheless present, mostly at $\eta=0$ and $\eta=1.479$.
+Besides, timing is useful in \ac{LLP} searches, especially the ones with a lifetime larger than \SI{1}{\nano\second} [[cite:&performance_calorimeter_trigger]].
 The structure of the \ac{ECAL} is illustrated in [[fig:ecal1]], and the origin of the gaps is shown in [[fig:ecal2]], where a photo of a supermodule is included.
 
 #+NAME: fig:ecal1
@@ -139,7 +141,7 @@ In the case of \ac{ECAL}, the energy resolution of $3\times3$ or $5\times5$ crys
 \end{equation}
 
 \noindent where the first, second and third terms are, respectively, the stochastic, noise and constant term.
-The resolution of \ac{ECAL} was also measured in-situ with \run{1} \SI{7}{\TeV} data [[cite:&ecal_resolution]], and was found to be excellent.
+The resolution of \ac{ECAL} was also measured in-situ with \run{1} \SI{7}{\TeV} data [[cite:&ecal_resolution]], and was found to be excellent, ranging from 1.1 to 2.6% in the barrel and 2.2 to 5% in the endcaps for photons coming from a Higgs boson decay.
 
 #+NAME: fig:ecal2
 #+CAPTION: (Left) Photograph of one supermodule with its modules clearly visible. (Right) Structure of a quarter of \ac{ECAL}, highlighting individual modules, supermodules and supercrystals. The spacings between supermodules and supercrystals explain the \ac{eta} gaps at 0 and 1.479. Adapted from [[cite:&ecal_tdr]].
@@ -150,41 +152,56 @@ The resolution of \ac{ECAL} was also measured in-situ with \run{1} \SI{7}{\TeV} 
 
 \myparagraph{Hadronic Calorimeter}
 
-[[cite:&hcal_tdr]]
-
-Immediately at the back of \ac{ECAL} appears \ac{HCAL}, a sampling calorimeter which measures final-state hadrons and hadronic showers depositing only a part of their energy in \ac{ECAL}.
-Showers initiated by hadrons are governed in part by the strong interaction, which significantly complexifies the hadronization process.
-In a calorimeter, a hadron can loose its energia either via ionization (if it is charged) or via a nuclear interaction, in other words, continuously or abruptly.
+\noindent Immediately at the back of \ac{ECAL} appears \ac{HCAL} [[cite:&hcal_tdr]], a sampling calorimeter which measures final-state hadrons and hadronic showers depositing only a part of their energy in \ac{ECAL}.
+Showers initiated by hadrons are governed in part by the strong interaction, which significantly complexifies the hadronization process [[cite:&wigmans]].
+In a calorimeter, a hadron can lose its energy either via continuous ionization (if it is charged) or abruptly via nuclear interactions.
 To make things even more complicated, neutral hadrons can only interact strongly, and so their interactions with matter enormously differ from their \ac{EM} counterparts.
 It can thus happen that an hadronic shower loses its energy mostly via \ac{EM} interactions, but a single hadron can also penetrate the full \ac{ECAL} length without releasing any energy whatsoever.
+A shower can also lose its energy by releasing nucleons from the medium.
+The binding energy required to release those nucleons is called /invisible energy/, since it is inherently undetectable and thus lost for calorimetric measurements.
+All of these reasons lead to a hadronic resolution that is generally much worse than the \ac{EM} one, and can only be improved by correlating the information from multiple subdetectors with a \ac{PF} approach.
 On average, only 1/3 of the energy of a hadron shower is deposited in \ac{ECAL}.
 The scale of the shower development is largely dominated by the nuclear interaction length, \si{\nucintl}.
 Importantly, the absorption of hadronic showers tends to require much more material than the absorption of \ac{EM} showers at the same energy.
-This fact explains the location of \ac{HCAL} behind \ac{ECAL}, an approach used to achieve full containment, with its \SI{\sim 7}{\nucintl} at $\eta=0$ up to \SI{\sim 12}{\nucintl} at $\eta\sim1.2$, then stabilizing at \SI{\sim 10}{\nucintl} for the endcap.
-
-The lower radiation levels that \ac{HCAL} is experiences when compared to \ac{ECAL} or even the tracker make possible the usage of inexpensive plastic scintillator tiles as active medium, themselves interleaved with brass absorber layers.
-The calorimeter is composed of five separate sections: the \ac{HB}, two \acp{HE} on either side of \ac{CMS}, the \ac{HO} and the \ac{HF}.
-A schematic representation of \ac{HCAL} can be seen in [[fig:hcal1]]
-
-and [[fig:hcal2]]
+This fact explains the location of \ac{HCAL} behind \ac{ECAL}, an approach used to achieve full containment, with its \SI{\sim 7}{\nucintl} at $\eta=0$ up to \SI{\sim 12}{\nucintl} at $\eta\sim1.2$, then stabilizing at \SI{\sim 10}{\nucintl} for the endcaps.
 
 #+NAME: fig:hcal1
-#+CAPTION: \ac{HCAL} Schematic view of a quarter of the hadronic calorimeter, along the longitudinal direction. The four section are shown: \ac{HB}, \ac{HO}, \ac{HF} and \ac{HF}, or the "nose". The dashed lines provide visual guidance for the \ac{eta} coordinate. Taken from [[cite:&cms_collab]].
+#+CAPTION: \ac{HCAL} Schematic view of a quarter of the hadronic calorimeter, along the longitudinal direction. The four section are shown: \ac{HB}, \ac{HO}, \ac{HF} and \ac{HF}. The dashed lines provide visual guidance for the \ac{eta} coordinate. Taken from [[cite:&cms_collab]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/HCAL1.pdf]]
 #+END_figure
 
+The lower radiation levels that \ac{HCAL} is experienced when compared to \ac{ECAL} or even the tracker make possible the usage of inexpensive plastic scintillator tiles as active medium, themselves interleaved with brass absorber layers.
+The calorimeter is composed of five separate sections: the \ac{HB}, two \acp{HE} on either side of \ac{CMS}, the \ac{HO} and the \ac{HF}.
+The HB is mechanically segmented into \num{36} wedges, each spanning half of \ac{HB}'s length, covering an azimuthal sector of \SI{20}{\degree}, and weighting about \SI{25.7}{\tonne}.
+Inside each wedge, the plastic scintillators are organized into \num{16} \ac{eta} regions.
+In the endcaps, the \acp{HE} are instead arranged such that their absorber plates are bolted together to form a single \num{18}-sided polyhedric structure (see [[fig:hcal2]], middle) with insertion gaps for the scintillator trays.
+Each of the \num{18} sides weighs \SI{\sim 300}{\tonne}, being fastened to \ac{CMS} to avoid gaps at the \ac{HB}-\ac{HE} interface (recall the geometric inefficiencies also existing for \ac{ECAL}).
+The \ac{HB} is complemented by the \ac{HO} for $|\eta| < 1.4$, located just outside the solenoid magnet, but using the return yoke as absorber material, while the active medium remains \ac{Sci} plastic.
+The \ac{HO} captures the tails of hadronic showers, adding \SI{1}{\nucintl} to the \SI{10}{\nucintl} from the \ac{HB}, which was judged not high enough to fully contain hadronic showers.
+The light produced in the plastic scintillators is wavelength-shifted and captured in fibers.
+The \ac{HCAL} is completed by the \ac{HF}, which is placed at $z=\pm11.2\,\si{\meter}$ from the \ac{IP} and covers up to $|\eta| = 5.2$.
+The \ac{HF} is also a sampling calorimeter, with alternating layers of steel absorber and quarts fibers as active material.
+The fibers produce scintillating light via the Cherenkov effect and send it to \acp{PMT}.
+The relative orientation of some of \ac{ECAL}'s and \ac{HCAL}'s components facilitates the calorimetric trigger processing chain.
+Indeed, both the \ac{HB} and \ac{HE} are segmented into projective towers, aligning, respectively, with the \ac{EB} and \ac{EE}.
+In the \ac{HB}, $\eta\times\phi = 0.087\times0.087$ towers match the $5×5$ \ac{ECAL} crystal arrays, while the \ac{HE} is segmented into coarser $\eta\times\phi \sim 0.17\times0.17$ towers.
+A schematic representation of \ac{HCAL} can be seen in [[fig:hcal1]] and individual components are shown in [[fig:hcal2]].
+
 #+NAME: fig:hcal2
-#+CAPTION: (Left) Assembled HCAL half-barrel. (Middle) Partially assembled HE-minus absorber, where \ac{Sci} trays can be seen being inserted in some of the outer sectors. (Right) Layout of all the HO trays in the CMS detector. Taken from [[cite:&cms_collab]].
+#+CAPTION: (Left) Assembled \ac{HCAL} half-barrel. (Middle) Partially assembled \ac{HE}m without the absorber, where \ac{Sci} trays can be seen inserted in some of the outer sectors. (Right) Layout of all the \ac{HO} trays in the CMS detector. Adapted from [[cite:&cms_collab]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/HCAL2.pdf]]
 #+END_figure
 
-+ check the current HF and compare it with HFNose
-+ mention upgrade during phase1 [[cite:&hcal_upgrade]]
-  
+All components in \ac{HCAL} used to included \acp{HPD} for $|\eta|<3$.
+Initially seen as beneficial due to their high magnetic field tolerance and large gains, issues on high voltage electric discharges lead to significant increases in the overall \ac{HCAL} noise.
+As a consequence, it was decided to progressively replace \acp{HPD} with \acp{SiPM}, and the procedure was completed during the \longshut{2}.
+The upgrade also introduced more performant electronics and data linking, which increased the segmentation in \ac{HB} and \ac{HE}, and also improved time measurements.
+Hadronic shower development is thus measured more precisely, boosting the performance of analyses targeting signatures containing delayed or displaced jets.
+
 \myparagraph{Magnet}
 
 \noindent The large, \SI{220}{\tonne} \ch{Nb}-\ch{Ti} superconducting solenoid magnet is the defining feature of the \ac{CMS} design, delivering an axial and uniform magnetic field of \SI{3.8}{\tesla} over a \SI{12.5}{\meter} length and a \SI{3.15}{\meter} radius [[cite:&magnet_cms]].
@@ -199,7 +216,7 @@ The magnet is cooled by liquid \ch{He}, and must thus operate at \SI{-269}{\degr
 It is for this reason enclosed in a vacuum vessel made of two stainless steel cylinders.
 In order to contain the magnetic flux, the solenoid is surrounded by a return yoke, which is conveniently interleaved with the muon chambers to additionally provide structural support and increase muons momentum resolution.
 
-\myparagraph{Muon Chambers}
+\myparagraph{Muon Chambers} 
 
 \noindent \Ac{CMS} is specifically optimized for muon measurements, which are performed by \acp{DT} in the barrel region and \acp{CSC} in the forward region.
 \Acp{RPC} are also available for triggering and redundancy.
@@ -214,7 +231,7 @@ However, the extreme proximity to the return yoke also creates negative effects,
 A highly redundant muon system is therefore found ideal to preserve physics performance.
 We can indeed find \acp{RPC} present both in the barrel, together with \acp{DT}, and in the endcaps, with \acp{CSC}.
 The redundancy also plays a role in reducing the impact from acceptance blind spots introduced by the support mechanisms and cabling of such large detectors cite:&trigger_tdr_phase1_vol1.
-The structure of the muon chambers, including future upgrades, is shown in [[ref:fig:cms_muon_slice]].
+The structure of the muon chambers, including future upgrades, is shown in [[fig:cms_muon_slice]].
 
 #+NAME: fig:muon_dedx
 #+CAPTION: Mass stopping power, in \si{\MeV\cm\squared\per\gram}, for positive muons in \ch{Cu} as a function of $\beta\gamma \equiv \text{p}/\text{M}$ and energy, with $\text{p}$ being the momentum and $\text{M}$ the energy, over \num{12} orders of magnitude in energy. Muons produced at the \ac{LHC} behave similarly to \acp{MIP}. Solid curves indicate the total stopping power. Vertical bands indicate boundaries between different approximations. The mass stopping power in the radiative region is not simply a function of $\beta\gamma$. Further discussion available in [[cite:&PDG Chpt. 34]], where the figure was taken.
@@ -223,48 +240,58 @@ The structure of the muon chambers, including future upgrades, is shown in [[ref
 [[~/org/PhD/Thesis/figures/detector/StoppingPower.pdf]]
 #+END_figure
 
-\paragraph{Drift Tubes:}
-Present in the barrel section, they consist on drift chambers aiming at providing position resolutions of the order of \SI{100}{\micro\meter}.
-A single \SI{4}{\cm}-wide tube contains a stretched wire within a gas volume.
-When a charged particle passes through the gas, it knocks electrons off the gas atoms.
-The electrons drift along the electric field's direction, reaching the anode and producing a signal.
-The \acp{DT} ensure a constant drift velocity along the entire drift path, which enables the identification of the two-dimensional point in space where the charged particle, a muon in this context, crossed.
-Each \ac{DT} module range from \num{2}\times\SI{2.5}{\meter\squared} to \num{4}\times\SI{2.5}{\meter\squared} in size, and is composed of two or three \acp{SL}.
-Each module contains in turn four \ch{Al} layers of staggered \acp{DT}.
-A \ac{SL} thus provides four two-dimensional points to measure the muon's position.
-\Acp{SL} within a module are aligned in two perpendicular directions, which allows a three-dimensional measurement of the position of the muon track.
+#+NAME: fig:cms_muon_slice
+#+ATTR_LATEX: :width 1.\textwidth
+#+CAPTION: Schematic longitudinal view of a quadrant of the R-z cross-section of the \ac{CMS} detector during \run{2}, when the \ac{GEM} detector was not yet present. All muon subdetector are shown: \acp{DT} (yellow), \acp{CSC} (green) and \acp{RPC} Pseudorapidity values are given with dashed lines. Taken from [[cite:&muon_upgrade]].
+#+BEGIN_figure
+[[~/org/PhD/Thesis/figures/detector/MuonSystemOld.pdf]]
+#+END_figure
 
-\paragraph{Cathode Strip Chambers:}
-Stationed in the endcaps, \acp{CSC} consist of arrays of positively-charged wires perpendicular to negatively-charged \ch{Cu} strips, all within a gas volume.
-When muons pass through, electrons get knocked off the gas atoms.
-Both displaced electrons and ions follow the electric field, inducing signals in the wires and strips, respectively.
-The relative positioning of wires and strips enables a 2D position measurement for each passing muon.
-The existence of six layers per \ac{CSC} module significantly increases the precision of the measurement.
-The resolution for one layer is in the \num{80} to \SI{450}{\micro\meter} range, and approaches \SI{50}{\micro\meter} when combined.
++ *Drift Tubes:*
+  Present in the barrel section, they consist on drift chambers aiming at providing position resolutions of the order of \SI{100}{\micro\meter}.
+  A single \SI{4}{\cm}-wide tube contains a stretched wire within a gas volume.
+  When a charged particle passes through the gas, it knocks electrons off the gas atoms.
+  The electrons drift along the electric field's direction, reaching the anode and producing a signal.
+  The \acp{DT} ensure a constant drift velocity along the entire drift path, which enables the identification of the two-dimensional point in space where the charged particle, a muon in this context, crossed.
+  Each \ac{DT} module range from \num{2}\times\SI{2.5}{\meter\squared} to \num{4}\times\SI{2.5}{\meter\squared} in size, and is composed of two or three \acp{SL}.
+  Each module contains in turn four \ch{Al} layers of staggered \acp{DT}.
+  A \ac{SL} thus provides four two-dimensional points to measure the muon's position.
+  \Acp{SL} within a module are aligned in two perpendicular directions, which allows a three-dimensional measurement of the position of the muon track.
 
-\paragraph{Resistive Plate Chambers:}
-They are present in both the barrel and in the endcap, and provide trigger redundancy with respect to \acp{DT} and \acp{CSC}.
-\Acp{RPC} are made of two parallel plates defining an electric field separated by a thin gas volume.
-Like for the other muon detectors, when muons pass through an \ac{RPC}, they knock out some of the gas electrons, creating electron avalanches.
-Those electrons traverse the plates without interacting and, after a precisely known time delayt, are picked up by external metallic strips.
-This provides a good spatial resolution and a time resolution of \SI{1}{\nano\second}.
-All muon stations are equipped with at least one \ac{RPC}, but two are present in the inner barrel to compensate for the lower resolution of low $\pt$ muons.
-The additional resolution extends the \ac{CMS} trigger low-$\pt$ reach to \SI{\sim 4}{\GeV} in the barrel and \SI{\sim 2}{\GeV} in the endcaps.
++ *Cathode Strip Chambers*:
+  Stationed in the endcaps, \acp{CSC} consist of arrays of positively-charged wires perpendicular to negatively-charged \ch{Cu} strips, all within a gas volume.
+  When muons pass through, electrons get knocked off the gas atoms.
+  Both displaced electrons and ions follow the electric field, inducing signals in the wires and strips, respectively.
+  The relative positioning of wires and strips enables a 2D position measurement for each passing muon.
+  The existence of six layers per \ac{CSC} module significantly increases the precision of the measurement.
+  The resolution for one layer is in the \num{80} to \SI{450}{\micro\meter} range, and approaches \SI{50}{\micro\meter} when combined.
 
-\paragraph{Gas Electron Multipliers:}
-A first batch of 144 \ac{GEM} chambers was introduced in the \ac{CMS} muon system during the \longshut{2}.
-They are located very close to the beampipe, subject to the highest radiation doses among all muon detectors.
-The \acp{GEM} system will improve the measurement of the polar muon bending angle, extending current trigger capabilities.
-It will also extend the muon coverage up to the forward $1.55 < \eta < 2.18$ region.
-The chambers come in two alternating sizes in order to maximize \ac{eta} coverage while fitting in the available space constrained by the support structure, as depicted in [[fig:gem_structure]].
-Each \ac{GEM} chamber includes a stack of three \ac{GEM} foils, which consist of a \SI{50}{\micro\meter}-thick insulating polymer covered on both sides by thin \ch{Cu} conductive layers.
-A strong electric field is applied between the two conductors.
-The chambers are filled with a 70:30 \ch{Ar}/\ch{CO2} mixture, which is ionized by incident muons, and are segmented in strips along \phi{}.
-The electrons created during the ionisation process drift towards the foils create avalanches.
-The resulting electron avalanche induces a readout signal on the finely spaced strips.
-The structure of the chambers and its location in the \ac{CMS} endcap can be seen in [[fig:gem_structure]].
-The CMS GEMs are the largest \ac{GEM} system ever installed, with an area of \SI{\sim 0.5}{\meter\squared} per chamber.
-They bring a combined spatial resolution of \SI{\sim 100}{\micro\meter} and a timing resolution of $\lesssim$ \SI{10}{\nano\second} [[cite:&gem_tdr]].
++ *Resistive Plate Chambers*:
+  They are present in both the barrel and in the endcap, and provide trigger redundancy with respect to \acp{DT} and \acp{CSC}.
+  \Acp{RPC} are made of two parallel plates defining an electric field separated by a thin gas volume.
+  Like for the other muon detectors, when muons pass through an \ac{RPC}, they knock out some of the gas electrons, creating electron avalanches.
+  Those electrons traverse the plates without interacting and, after a precisely known time delayt, are picked up by external metallic strips.
+  This provides a good spatial resolution and a time resolution of \SI{1}{\nano\second}.
+  All muon stations are equipped with at least one \ac{RPC}, but two are present in the inner barrel to compensate for the lower resolution of low $\pt$ muons.
+  The additional resolution extends the \ac{CMS} trigger low-$\pt$ reach to \SI{\sim 4}{\GeV} in the barrel and \SI{\sim 2}{\GeV} in the endcaps.
+
++ *Gas Electron Multipliers*:
+  A first batch of 144 \ac{GEM} chambers, called GE1/1, was introduced in the \ac{CMS} muon system during the \longshut{2}.
+  They are located very close to the beampipe, subject to the highest radiation doses among all muon detectors.
+  The \acp{GEM} will improve the measurement of the muon polar bending angle, extending current trigger capabilities.
+  The provided \ac{eta} coverage of the muon detectors will also be extended, up to the forward $1.55 < \eta < 2.18$ region.
+  The chambers come in two alternating sizes, in order to maximize the \ac{eta} coverage while fitting in the available volume, which is constrained by the support structure.
+  Each \ac{GEM} chamber includes a stack of three \ac{GEM} foils, which consist of a \SI{50}{\micro\meter}-thick insulating polymer covered on both sides by thin copper conductive layers.
+  A strong electric field is applied between the two conductors.
+  In total \num{36} superchambers have been installed, where each superchamber is made of two chambers and covers \num{10} degrees in \ac{phi}.
+  The chambers are filled with a \num{70}/\num{30} \ch{Ar}/\ch{CO2} mixture, which is ionized by incident muons, and are segmented in strips along \ac{phi}.
+  The electrons created during the ionisation process drift towards the foils creating avalanches.
+  The resulting electron avalanche induces a readout signal on the finely spaced strips.
+  The structure of the GE1/1 chambers can be seen in [[fig:gem_structure]].
+  Its location is shown in red in [[fig:muonupgrade]], right behind the future endcap calorimeter.
+  The \ac{CMS} \acp{GEM} are the largest \ac{GEM} system ever installed, with an area of \SI{\sim 0.5}{\meter\squared} per chamber.
+  They bring a combined spatial resolution of \SI{\sim 100}{\micro\meter} and a timing resolution of $\lesssim$ \SI{10}{\nano\second} [[cite:&gem_tdr]].
+  The greatest benefit of the early installation of part of this system is a \ac{L1} muon trigger improvement before the upgrades planned for the tracker and its trigger [[cite:&gem_trigger_data_format;&gem_tdr]].
 
 #+NAME: fig:gem_structure
 #+CAPTION: (Left) Mechanical design blowup of the a triple-\ac{GEM} chamber, following the description in the texrt. (Right) Positioning of short and long chambers in the \ac{CMS} endcap. During the \ac{HL-LHC}, \ac{GEM} detectors will be placed right at the back of \ac{HGCAL}. Adapted from [[cite:&gem_tdr]].
@@ -272,6 +299,3 @@ They bring a combined spatial resolution of \SI{\sim 100}{\micro\meter} and a ti
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/GEMstructure.pdf]]
 #+END_figure
-
-* Comments :noexport:
-+ cross-cehck all the content with [[cite:&cms_run3_developments]]

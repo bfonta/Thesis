@@ -5,7 +5,7 @@
 The extreme radiation levels and high \acp{PU} mandate an extensive upgrade of most \ac{LHC} detector systems, and \ac{CMS} is no exception.
 For the scope of this thesis, the drastic upgrades put forward in the trigger system and endcap calorimeters take precedence, and will be described in [[ref:sec:phase2_trigger_system,sec:hgcal_intro]], respectively.
 However, given the intricacies of the online and offline trigger chain, and the ideas behind \ac{PF} reconstruction, considering subdetectors as independent elements is naive and ultimately wrong.
-We therefore think a brief summary of all other subdetector upgrades is worthwhile, and can help put in perspective all recent and substantial efforts of the \ac{CMS} Collaboration [[cite:&cms_run3_developments]].
+We therefore provide a brief summary of all other subdetector upgrades, which can put into perspective all recent and substantial efforts of the \ac{CMS} Collaboration [[cite:&cms_run3_developments]].
 
 \myparagraph{Tracker}
 
@@ -52,6 +52,7 @@ This is to be compared with the average \SI{\sim 200}{\pico\second} root mean sq
 The sinergy between the tracker and the \ac{MTD} will enable the association of tracks to the right vertices more often, even for scenarios with closely packed vertices, helping in \ac{LLP} reconstruction, charged hadron identification and b-jet identification.
 The latter is tightly connected with the di-Higgs measurement performed in this thesis, as detailed in [[#sec::bbtautau_intro]], where precision timing can bring an additional \SI{\sim 20}{\percent} signal yield.
 Another interesting cooperation strategy can be envisaged with the calorimeters, especially \ac{HGCAL} (introduced in [[#sec:hgcal_intro]]), which will also provide timing measurements with a similar precision, and can thus be used to ensure compatibility with \ac{MTD} measurements.
+To be noted that, contrary to \ac{HGCAL}, the \ac{MTD} will not impose energy thresholds, and so should be able to give meaningful timing measurements for lower momentum charged particles.
 Other benefits are forseen, like better measurements of $\tau$ lepton decays due to the improved \ac{MET} reconstruction quality, or improved \ac{VBF} tagging.
 
 The \ac{MTD} will be located in the gap between the tracker and the calorimeters, in both the barrel as the \ac{BTL}, and in endcap regions, as the \acp{ETL}, having a \SI{28}{\meter\squared} surface area.
@@ -81,25 +82,66 @@ All in all, the \ac{MTD} will help \ac{CMS} maintaining its current performances
 
 \myparagraph{Calorimeters}
 
+\noindent By far the most important upgrade in the \ac{CMS} calorimeters will happen in the endcaps, namely the \ac{HGCAL}.
+This revolutionary calorimeter is described in full in [[#sec:hgcal_intro]], and we here focus on the remaining updates, most of them happening in the barrel section [[cite:&calo_barrel_upgrade]]. \Ac{ECAL} control and safety systems will also be completely replaced cite:&barrel_upgrade_safety.
 
-+ *HGCAL Nose*: very forward portion of the endcap calorimeter covering pseudorapidity values between 3 and 4.2, locate in front of the \ac{HF}, very similar to \ac{HGCAL} \SI{4.6}{\mega\gray} maximum absorbed dose and \SI{2e16}{\nequiv}, both twice as large as \ac{HGCAL}'s values, good for VBS scattering measurement of longitudinally polarized channels (two very forwards jets), also good for VBF production of H and HH
+Unlike for most \ac{CMS} subdetectors discussed in this section, the changes are not directly driven by the increase in radiation levels.
+Contrary to what happens in the endcaps, the crystals in the barrel region are capable of handling the environment of \phase{2}, especially when cooled from a nominal \phase{1} temperature of \SI{18}{\degree} down to \SI{9}{\degree}, as it is currently planned.
+Indirectly, however, the higher luminosities and \acp{PU}, lead to modifications at the \ac{L1} trigger level, namely the latency and rate increase to \SI{12.5}{\micro\second} and \SI{750}{\kilo\hertz}, respectively.
+Both the \ac{FE} and \ac{BE} of the \ac{EB} will be fully replaced, as illustrated in [[fig:ecalupgrade]] (left).
+The upgrades are meant to provide precise timing measurements, limit power dissipation, and increase the granularity of barrel \acp{TP} to a single crystal level, versus the current $5\times5$ arrays.
+This last point reduced backgrounds significantly, enabling the calorimetric trigger thresholds to remain at levels which allow performatnn physics analyses, namely on precision Higgs physics.
+The improved timing will be interestigly also responsible for a better noise filtering and, in conjunction with the increased trigger granularity, is expected to completely remove occasional spurious energy "spikes" in the \acp{APD}, since they have a different time development with respect to standard scintillation pulses, as shown in [[fig:ecalupgrade]] (right).
+Spikes are formed from direct ionization in the \ac{APD} which results in a faster signal rise and decay time [[cite:&calo_barrel_studies]].
+The timing resolution targets \SI{\sim 30}{\pico\second}, enabling constraints of \SI{\sim 1}{\cm} on the longitudinal position of the collision vertices.
 
-+ *HCAL*
-  + in HCAL hybrid photodiodes were replaces by SiPMs (in Run1)
-  + HCAL brings new depth and timing information
+#+NAME: fig:ecalupgrade
+#+CAPTION: (Left) Illustration of the upgrade strategy for the \ac{EB}: the mecahnical structure will remain, while the full electronics will be replaced. (Right) Illustration for the shape difference between a spike pulse shape (black) and a scintillation pulse shape (red), enabling a clear separation. Adapted from [[cite:&calo_barrel_studies]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/ECALUpgrade.pdf]]
+#+END_figure
 
-+ check Jona for barrel
+In what concerns the barrel \ac{HCAL}, detailed longetivity studies allowed to conclude that the replacement of scintillators or fibers will not be necessary, given the detector location further away from the high radiation zone.
+The high \ac{eta} regions will still suffer a degradation of a factor of \num{2} or \num{3}, but this will be largely offset by the recent \ac{FE} \ac{SiPM} upgrade, which addressed all concerns on signal degradation.
+The \ac{SiPM} have a higher efficiency than \ac{HPD}, and will continue to be used during the full duration of the \ac{HL-LHC}.
+However, the \ac{BE} cannot support the rate increase planned for \ac{L1}, and so it will be updated accordingly, following the \ac{EB} design.
+
+The \ac{HF} will not undergo any \phase{2} upgrade.
+In order to cope with the larger rates, some boards and crates that had been allocated to the old \ac{HB} or \ac{HE} will be reused for the \ac{HF}, ensuring that the number of channels per board is low enough for the system to be sustainable even at full \ac{HL-LHC} conditions.
+
+We also mention an entirely new addition with respect to the \phase{1} detector.
+A much simpler version of \ac{HGCAL} is being considered for the very forward endcap regions, covering $3<|\eta|<4.2$, called \ac{HFnose}.
+It would be located in front of the \ac{HF}, being subject to a maximum absorbed dose of \SI{4.6}{\mega\gray} and to a fluence of \SI{2e16}{\nequiv}, both twice as large as the levels expected in \ac{HGCAL}.
+Its motivation stems from improved \ac{VBS} scattering measurements of longitudinally polarized channels and from enhanced single- and di-Higgs \ac{VBF} production, both of which include two very forwards jets.
 
 \myparagraph{Muon detectors}
 
-+ *Muons*: be complemented by installing state-of-the-art Resistive Plate Chamber (RPC) detectors and the newly developed Gas Electron Multiplier (GEM) chambers. These additions to the muon
-detection system will increase the geometrical coverage to $|\eta| \leq 2.8$, ensuring the possibility of
-extended muon track matching in the forward region. With the aim of further increasing the
+\noindent Following the \run{3} upgrade discussed in [[#sec:detector_structure]], with the introduction of the GE1/1 \ac{GEM} superchambers, two additional \ac{GEM} detectors will be installed before the start of the \ac{HL-LHC}.
+The first, named GE2/1, consists on superchambers similar to the already installed but larger, covering \num{20} degrees in \ac{phi}.
+The \ac{eta} coverage will also be slightly extended, from \num{2.15} to \num{2.4}.
+The second type, called \ac{ME0}, refers to superchambers located closer to the beamline, at $2.0 < |\eta| < 2.8$, which also span \num{20} degrees in \ac{phi} [[cite:&gem_trigger_data_format;&gem_tdr]].
+It will be installed on the back of \ac{HGCAL}, improving the muon tagging at higher \ac{eta} values.
 
-+ *GEM*: After the introduction of GE1/1 superchambers in \run{3}, two additional GEM detector types will be installed before the start of the \ac{HL-LHC}. The first, named GE2/1, consists on superchambers similar to the already installed GE1/1 superchambers, but larger, covering \num{20} degrees in \ac{phi}. The \ac{eta} coverage will also be slightly extended, from \num{2.15} to \num{2.4}. The second type, called \ac{ME0}, refers to superchambers located closer to the beamline, at $2.0 < |\eta| < 2.8$, which also span \num{20} degrees in \ac{phi} [[cite:&gem_trigger_data_format;&gem_tdr]]. It will be installed on the back of \ac{HGCAL}.
-
-
+The remaining muon subdetectors, the \acp{DT}, \acp{CSC} and \ac{RPC} will have upgraded electronics to cope with the \num{10} times higher rates and larger chamber occupancies, also improving their performance.
+For the case of \acp{RPC} and \acp{DT}, the new electronics have already been at least partially modernized during the \longshut{2}, and are being tested with real detector conditions in \run{3}.
+To give an example, the current \ac{RPC} boards and \ac{FE} are certified radiation-hard for the \ac{HL-LHC}, but their link system is composed of outdated components, with no spare boards available, most of which are also no longer available in the market [[cite:&muon_upgrade]].
+The link boards will thus be replaced with faster \acp{FPGA}.
+Finally, the addition of the \acp{GEM} will be complemented by the installation of additional improved \ac{RPC}, to be placed in the outer region, at higher \ac{eta} values [[cite:&cms_upgrade_phase2]].
+These new \acp{RPC} have been specifically designed to handle high hit rates.
+ 
+#+NAME: fig:muonupgrade
+#+CAPTION: Schematic longitudinal view of a quadrant of the R-z cross-section of the \ac{CMS} detector during the \ac{HL-LHC}, to be compared with [[fig:cms_muon_slice]]. All muon subdetector are shown, including future additions: \acp{DT} (yellow), \acp{CSC} (green), \acp{RPC} and \acp{GEM}. Additions on the muon side feature the GE2/1 and \ac{ME0} superchambers, which are part of \acp{GEM}, and the \acp{iRPC}. \ac{ME0} will be installed on the back of \ac{HGCAL}. Pseudorapidity values are given with dashed lines. Taken from [[cite:&gem_tdr]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/MuonSystemNew.pdf]]
+#+END_figure
+  
 \myparagraph{BRIL}
 
-+ lumi measurements are challenging
-+ uncertainty of 1.4% in 2022
+\noindent The existing \ac{BRIL} project is responsible for \num{14} technical systems.
+They monitor beam losses and radiation in the \ac{CMS} cavern, provide beam timing, enable the abortion of the beam to protect individual detector components, and measure the beam-induced background and luminosity values.
+For the \ac{HL-LHC}, \ac{BRIL} aims at measuring the luminosity within a \SI{1}{\percent} uncertainty, against the \SI{1.4}{\percent} obtained in 2022.
+The improvement is for instance required by multiple single Higgs cross-section measruements [[cite:&cms_upgrade_phase2]].
+The precision increase will be achieved thanks to the new bunch-by-bunch Fast Beam Condition Monitor luminometer, which will be independent from central \ac{CMS} services and will be able to provide measurements also when \ac{LHC} beams will not be stable.
+Providing \ac{CMS} with a fast feedback on \ac{LHC} beam conditions is crucial, since a continuous beam assessment can protect the sensitive \ac{CMS} subdetectors.

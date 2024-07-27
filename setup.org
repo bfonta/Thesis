@@ -44,3 +44,6 @@
 #+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}/cm^2}
 #+LATEX_HEADER: \DeclareSIUnit \inch {''}
 #+LATEX_HEADER: \sisetup{range-phrase = \text{--}}
+
+#+LATEX_HEADER: \usepackage{lineno}
+#+LATEX_HEADER: \linenumbers

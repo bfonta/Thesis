@@ -2,20 +2,20 @@
 :CUSTOM_ID: sec:hgcal_trigger_primitives
 :END:
 
-The importance of the online and offline \ac{CMS} trigger systems was already covered in [[#sec:cms_trigger_system]].
+The importance of the online and offline \ac{CMS} trigger systems was already highlighted in [[#sec:cms_trigger_system]].
 The \Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on commercial servers.
 In this section we detail the hardware and software infrastructure powering the \ac{HGCAL} \ac{L1} \ac{DAQ} and \ac{TPG} systems.
-The \ac{TPG} produces \acp{TP} which, as mentioned in [[#sec:cms_trigger_system]], are physical quantities built to encapsulate the most discriminative information in an event.
+The \ac{TPG} produces \acp{TP} which are physical quantities built to encapsulate the most discriminative information in an event.
 \Acp{TP} are used as building blocks for \ac{L1} decisions.
 In \ac{HGCAL}, \acp{TP} consist of module towers and cluster-related variables, such as energy, positions and shapes.
 The \ac{TPG} includes all steps from data collection in the \ac{FE} chips at \SI{40}{\mega\hertz} to the production of \acp{TP} in the \ac{BE} electronics [[cite:&hgcalTDR]].
-The splitting of resources between /on-detector/ and /off-detector/ electronics is related to several factors, including the flexibility provided by \acp{FPGA} or other programmable boards, the cost of boards and connectors, and the high radiation present close to the detector [[cite:&zabi]].
+The splitting of resources between /on-detector/ and /off-detector/ electronics is related to several factors, including the flexibility provided by \acp{FPGA} or other programmable boards, the cost of boards and connectors, and the high radiation levels present close to the detector [[cite:&zabi]].
 
-The \ac{TPG} must fit within a latency of \SI{\sim 5}{\micro\second}, or \num{200} \acp{BX}, taken from the total \SI{12.5}{\micro\second} latency allocated to \ac{L1} [[cite:&l1TDR]], and is constrained by the available bandwidth between the \ac{FE} and the \ac{BE}.
+The \ac{TPG} must fit within a \SI{\sim 5}{\micro\second} latency, or \num{200} \acp{BX}, taken from the total \SI{12.5}{\micro\second} latency allocated to the \ac{L1} [[cite:&l1TDR]], and is constrained by the available bandwidth between the \ac{FE} and the \ac{BE}.
 The bandwidth is limited by several factors, including total power consumption, the multiplicity of routing lines, the space available for electronic boards in the \ac{USC}, and the overall cost of hardware, among which expensive \acp{FPGA} and optical links [[cite:&jb_hdr]].
 A large number of throughput reduction techniques is thus applied as often and as soon as possible, exploiting pipelined algorithms whenever feasible.
 The flow of \acp{TP} can be schematically visualized in [[fig:l1chain]].
-\ac{HGCAL} is the second subdetector in \ac{CMS} with the most allocated resources at \ac{L1}, due to its high granularity.
+\ac{HGCAL} is the second subdetector in \ac{CMS} with the largest fraction of allocated resources at \ac{L1}, due to its high granularity.
 
 #+NAME: fig:l1chain
 #+CAPTION: Simplified schematic of the \ac{TP} dataflow in HGCAL, starting (ending) in the top left  (bottom left) corner. The diagram follows the \ac{TP} processing in a Si layer through the \ac{FE} and \ac{BE}, and up to the \ac{L1}, including expected approximate bandwidths. Trigger decisions at \ac{L1} will impact the \ac{HLT} and, consequently, physics analysis. Adapted from [[cite:&bruno_chep23]].
@@ -24,15 +24,17 @@ The flow of \acp{TP} can be schematically visualized in [[fig:l1chain]].
 [[~/org/PhD/Thesis/figures/hgcal/L1chain.pdf]]
 #+END_figure
 
-The smallest detector units the \ac{TPG} is concerned with are \acp{TC}.
+The most granular detector elements the \ac{TPG} is concerned with are \acp{TC}.
 As detailed in [[#sec:frontend_electronics]], for the \ac{Si} section, \acp{TC} are arranged in a "three-fold diamond" configuration where groups of \num{4} or \num{9} \ac{Si} cells form one \ac{TC}.
 This configuration was chosen because it allows the convenient definition of symmetric groups of neighbouring cells to form \acp{TP}, as shown in [[fig:tcs_geometry]].
 It also simplifies the layout of the \ac{Si} module readout \ac{PCB}, given the subdivision of the module into symmetric domains [[cite:&hgcalTDR]].
-In the \ac{Sci} section, \acp{TC} are always groups of $2\times2$ tiles, except close to boundaries, where some \acp{TC} containing less tiles exist [[cite:&sci_specific]].
+In the \ac{Sci} section, \acp{TC} are defined as groups of $2\times2$ tiles, except close to boundaries, where some \acp{TC} containing less tiles exist [[cite:&sci_specific]].
 The number of \acp{TC} and \acp{elink} associated to the \ac{Sci} section increases with the detector's depth, reflecting the overall distribution of \ac{Si} to \ac{Sci} regions with increasing layer number (recall [[fig:hgcal_side_view]]).
 
-@nice sentence to wrap up intro@
-
+\Acp{TP} clearly are the basis for most of the physics analyses that can be done at \ac{CMS}, both now and in the future.
+They stem from a complex interplay of advanced software and hardware approaches, with extremely tight bandwidth and latency budgets, forming the seed for all downstream decisions.
+My thesis work is deeply connected to the definition and processing of \ac{HGCAL} \acp{TP}, and will hopefully grant others the basis for important extensions, with the final goal of providing robust information to enhance the sensitivity to \ac{SM} and \ac{BSM} physics.
+ 
 #+NAME: fig:tcs_geometry
 #+CAPTION: Illustration of the three-fold diamond configuration of an hexagonal \SI{8}{\inch} module, used to associate single \ac{Si} cells to \acp{TC}. Low density modules (left) associate four sensors to each trigger cell, while high density modules (right) create \acp{TC} with nine channels each. All modules have exactly \num{48} \acp{TC}, effectively removing a layer of complexity when processing \acp{TC}. The actual physical dimensions of the \acp{TC} vary given the boundaries of the hexagonal modules. 
 #+BEGIN_figure
@@ -44,7 +46,7 @@ The number of \acp{TC} and \acp{elink} associated to the \ac{Sci} section increa
 
 The \ac{HGCAL} \ac{BE} electronics consist on the \ac{DAQ}, \ac{TPG}, \ac{DCS} and \ac{DSS}.
 The first two form the so-called \ac{TDAQ}.
-The \ac{BE} have been implemented on the \ac{ATCA} infrastructure [[cite:&atca_website]].
+The \ac{BE} have been implemented on the \ac{ATCA} infrastructure [[cite:&atca_website]], also used for other \ac{CMS} subdetectors [[cite:&calo_barrel_upgrade]].
 \Ac{ATCA} boards will be placed on \ac{ATCA} crates, which can house up to 14 boards.
 The \ac{DAQ} system includes two parts, where the most proeminent features the configuration, control and data acquisition system.
 The second, smaller part holds the \ac{EMF} interface, which purpose is to propagate \ac{NZS} \ac{HGCAL} "regions of interest", as defined by extrapolated muon tracks in the muon detectors, aiming at reconstructing \ac{MIP} peaks for calibration without applying thresholds.
