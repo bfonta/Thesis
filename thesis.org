@@ -103,6 +103,7 @@
 ** Discussion and future directions
 #+INCLUDE: "chapters/hgcal/hgcal_discussion.org"
 
+
 * \reshhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/analysis1/bbtt_analysis.org"
 ** Data, MC and signal samples
@@ -177,21 +178,16 @@
 *** Final limits
 *** Comparison with other resonant \bbtt{} results
 ** Future prospects for resonant and non-resonant HH searches
-#+INCLUDE: "chapters/intro/future.org"
-*** Run3
-+ mention \reshybbtt{} analysis
-*** HL-LHC
-+ mention \reshybbtt{} analysis
-*** Future accelerators
-+ mention \reshybbtt{} analysis
+#+INCLUDE: "chapters/analysis2/prospects.org"
 
-
-* Effects of finite width and interference in resonant HH production
+* Effects of finite width and interference
+#+INCLUDE: "chapters/interf_studies/intro.org"
 ** The Singlet Model
 #+INCLUDE: "chapters/interf_studies/singlet_model.org"
 ** Methodology
+#+INCLUDE: "chapters/interf_studies/methodology.org"
 ** Results
-#+INCLUDE: "chapters/interf_studies/interference.org"
+#+INCLUDE: "chapters/interf_studies/interf_results.org"
 
 
 * Conclusions

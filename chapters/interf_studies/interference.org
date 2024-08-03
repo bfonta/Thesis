@@ -1,4 +1,0 @@
-* Additional bibliography :noexport:
-** bbH
-+ [[https://cerncourier.com/wp-content/uploads/2024/03/CERNCourier2024MarApr-digitaledition.pdf][CERN Courrier]]
-  

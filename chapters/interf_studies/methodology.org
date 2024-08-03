@@ -1,0 +1,188 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:interf_methodology
+:END:
+
+# Most of the HH and YH analyses performed by \ac{CMS} make use of the \ac{NWA}, 
+# where the width of BSM particles is neglected and no interference with nonresonant 
+# Higgs boson pair production occurs.
+# However, in general, interference effects can strongly impact 
+# the \HH cross section~\cite{Heinemeyer:2024hxa,Basler:2019nas}.
+# The interference can be either constructive or destructive, enhancing or decreasing the \HH 
+# production rate~\cite{Carena:2018vpt,Grober:2017gut}, and have a nonnegligible effect 
+# in BSM exclusion limits.
+# We study the impact of the interference between nonresonant and resonant production in 
+# the inclusive $\pp\to\HH$ production, which can receive contributions from resonant $\PX\to\HH$ production. 
+# This work provides the first measure of interference effects, identifying phase space regions 
+# where the NWA is valid.
+# We use as a benchmark a simplified scenario based on the real-singlet model introduced in 
+# Section~\ref{Sec:AdditionalSinglets}, as it includes the smallest number of additional free 
+# parameters~\cite{OConnell:2006rsp}.
+# We note that interference effects are model dependent and may be different for other BSM scenarios.
+
+# For this specific study, we modify the singlet model by not imposing the $\mathbb{Z}_2$ symmetry. 
+# The $\mathbb{Z}_2$ symmetry precludes terms of odd powers of the additional singlet scalar field, which are known 
+# to be responsible for a stronger first-order EW phase transition~\cite{Papaefstathiou:2020iag,Papaefstathiou:2021glr}.
+# Exploiting EW symmetry breaking on the singlet model scalar potential, we are left with two mixing states.
+# After mass diagonalization, the identification of one of the states with the SM \PH boson 
+# reduces the number of uncorrelated parameters further from seven to five. 
+# The other state is associated with a new particle \PX. 
+# The couplings of the \PH boson and the \PX particle are given by
+# \begin{equation}
+#   \label{eq:singlet_couplings}
+#   g_{\PH kk} = g^{\text{SM}}_{\PH kk}\cos\alpha \quad \text{and} \quad g_{\PX kk} = -g^{\text{SM}}_{\PH kk}\sin\alpha, 
+# \end{equation}
+# where $\alpha$ is the mixing angle, and $k$ represents any SM particle.
+# For $\mX > 2 \mH$ the width of the \PX resonance can be calculated as 
+# \begin{equation}
+#   \label{eq:width}
+#   \widthGamma = \sin^{2}\alpha\,\Gamma^{\text{SM}}(m_{\PX}) + \frac{\lambda_{\HH\PX}^{2}\sqrt{1 - 4m_{\PH}^{2}/m_{\PX}^{2}}}{8\pi m_{\PX}},
+# \end{equation}
+# where \couplingLambda is the trilinear coupling between two \PH bosons and the new particle \PX, 
+# and $\Gamma^{\text{SM}}(m_{\PX})$ represents the width of a scalar boson of mass \mX with the same 
+# decay modes as the SM \PH boson.
+# The latter has been calculated by interpolating the values published in Ref.~\cite{deFlorian:2016spz}. 
+# In addition to $\alpha$, \mX and \couplingLambda, this singlet model also depends on the trilinear 
+# \PH coupling modifier $\kappaLambda \equiv \lambda_{\PH\PH\PH}/\lambda^{\text{SM}}_{\PH\PH\PH}$, and on an additional scalar coupling.
+
+# We use the \MGvATNLO generator version 2.9.7~\cite{Alwall:2014hca}, 
+# to simulate inclusive \HH events in the singlet model at LO. 
+# A custom universal \textsc{FeynRules}~\cite{FeynRules} output (UFO) model based on Ref.~\cite{Papaefstathiou:2020iag} 
+# adds a heavy scalar boson to the SM with couplings to SM particles as defined in Eq.~\eqref{eq:singlet_couplings}.
+# The samples are created according to the following parameter grid with $\kappaLambda = 1$:
+# \begin{itemize}
+#   \item \mX [\!\GeV{}]: 280, 300, 400, 500, 600, 700, 800, 900, 1000, 
+#   \item $\sin\alpha$: 0.00, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 0.95, 0.99, 
+#   \item \couplingLambda [\!\GeV{}]: $-$600, $-$500, $-$400, $-$300, $-$200, $-$100, $-$50, 0, 50, 100, 200, 300, 400, 500, 600, 
+# \end{itemize}
+# where \mX is chosen based on the signal samples used in the \HH combination presented in Section~\ref{Sec:Results_X_to_HH}.
+# The resonant, nonresonant, and total cross sections for each combination of grid points are generated separately.
+# We perform a parameter scan in the parameters \mX, $\sin\alpha$, and \couplingLambda of the interference ratio defined as 
+# \begin{equation}\label{eq:Rint}
+#   \Rint = \frac{\sigma^{\text{full}} - \left(\sigma^{\text{resonant-only}} + \sigma^{\text{nonresonant}}  \right)}{\sigma^{\text{resonant-only}} + \sigma^{\text{nonresonant}}}.
+# \end{equation}
+# We obtain the nonresonant cross section by setting the coupling $g_{\PX kk}$ defined in Eq.~\eqref{eq:singlet_couplings} to zero, 
+# and the resonant-only cross section by setting the coupling $g_{\PH kk}$ to zero. 
+# The variable \Rint provides information concerning the relative strength of the interference between the SM and 
+# BSM processes. The larger the deviation of \Rint from zero, the stronger the modification of the cross 
+# section due to the interference. We consider the gluon fusion production mode due to its dominant contribution 
+# to the cross section.
+# The UFO model and procedure are validated using the program \textsc{hpair}~\cite{Grober:2015cwa, Grober:2017gut}
+# where the results varying \kappaLambda in the nonresonant scenario are found to agree with the 
+# NLO predictions of Ref.~\cite{CMS:2022dwd}. 
+
+# \begin{figure}[htbp]
+#   \centering
+#   \includegraphics[width=1.5\cmsFigWidth]{Figure_041.pdf}
+#   \caption{
+#     Contours of the variable \Rint as defined in Eq.~(\ref{eq:Rint}) and discussed 
+#     in the text, in the ($\sin\alpha$, \couplingLambda) plane for the singlet 
+#     model with $\kappaLambda = 1$ and different resonance masses \mX between (upper
+#     \cmsLeft) 280 and (lower \cmsRight) 800\GeV. Contours are shown for \Rint values 
+#     of (dashed blue) $-0.2$, (solid blue) $-0.1$, (solid green) $+0.1$, and (dashed green) 
+#     $+0.2$. Regions that are excluded, at 95\%~\CL, from the combined likelihood 
+#     analysis of the \HH analyses presented in this report are indicated by red 
+#     filled areas. Dashed black lines indicate constant relative widths of 5, 10, 
+#     and 20\%.
+#   }
+#   \label{fig:extSec_singlet}
+# \end{figure}
+
+# Exact conclusions from this study naturally depend on the allowed size of \Rint and the relative width \widthRatio. 
+# In the following, we choose as benchmark points $\Rint=\pm10$ and $\pm20\%$, and $\widthRatio=5$, 10 and 20\%.
+# The corresponding contours and exclusion limits derived from the \HH combination in the singlet 
+# model are shown in Fig.~\ref{fig:extSec_singlet}. 
+
+# Contours of positive and negative interference ratios are shown in
+# green (for $\Rint=\pm10\%$) and blue (for $\Rint=\pm20\%$). They are found to
+# swap positions at $\mX = 400\GeV$, likely because of the peak of the nonresonant \HH distribution.
+# The dotted lines denote coupling value combinations beyond which 
+# the relative width of the resonance, $\Gamma_{\PX}/\mX$, exceeds 5
+# and 10\%, respectively, implying the narrow width 
+# approximation not being accurate anymore.   
+# For a given \mX, the quadratic dependence of \widthGamma on both $\sin\alpha$ and \couplingLambda 
+# according to Eq.~\eqref{eq:width} leads to elliptical isolines of constant \widthRatio. 
+# The experimental bound from the \HH combination discussed in Section~\ref{Sec:Results_X_to_HH} 
+# is obtained from the 95\% \CL upper limit on $\sigma(\pp\to\PX)\BR(\PX\to\HH)$, 
+# with the \PX production cross section growing with increasing $\sin\alpha$, 
+# and $\BR(\PX\to\HH)$ growing with increasing \couplingLambda.
+# We note that large values of $\sin\alpha$, corresponding to regions where the \PH boson is less SM-like, 
+# also tend to be excluded by precision measurements of the \PH boson. 
+
+
+# \begin{figure}[!htb]
+#   \centering
+#   \includegraphics[width=\cmsFigWidth]{Figure_042-a.pdf}
+#   \includegraphics[width=\cmsFigWidth]{Figure_042-b.pdf}\\
+#   \includegraphics[width=\cmsFigWidth]{Figure_042-c.pdf}
+#   \includegraphics[width=\cmsFigWidth]{Figure_042-d.pdf}
+#   \caption{
+#     Expected differential cross sections for \HH production, as a function of 
+#     \mHH, for the real-singlet model with $\mX = 280\GeV$ and 
+#     $\widthRatio = 5\%$. The parameters $\sin\alpha$ and \couplingLambda have been 
+#     chosen such that (upper row) $\Rint=\pm 10\%$ and (lower row) $\Rint=\pm 20\%$, 
+#     for (\cmsLeft) negative and (\cmsRight) positive values of \Rint. The total 
+#     cross section for \HH production $\sigma^{\text{full}}$ (red line, labelled 
+#     as $\sigma_{\text{full}}$) is compared to the cross sections $\sigma^{\text{
+#     resonant-only}}$ (blue line, labelled as $\sigma_{\text{res}}$) and $\sigma^{
+#     \text{nonresonant}}$ (green line, labelled as $\sigma_{\text{nores}}$) 
+#     considering only resonant and nonresonant production. In the lower panels the 
+#     ratio of $\sigma^{\text{full}}$ over $(\sigma^{\text{resonant-only}}+\sigma^{
+#     \text{nonresonant}})$ is shown.
+#   }
+#   \label{fig:lineshapes-280GeV}
+# \end{figure}
+
+# \begin{figure}[!htb]
+#   \centering
+#   \includegraphics[width=\cmsFigWidth]{Figure_043-a.pdf}
+#   \includegraphics[width=\cmsFigWidth]{Figure_043-b.pdf}
+#   \includegraphics[width=\cmsFigWidth]{Figure_043-c.pdf}
+#   \includegraphics[width=\cmsFigWidth]{Figure_043-d.pdf}
+#   \caption{
+#     Expected differential cross sections for \HH production, as a function of 
+#     \mHH for the real-singlet model with $\mX = 500\GeV$ and 
+#     $\widthRatio = 5\%$.  The parameters $\sin\alpha$ and \couplingLambda have been 
+#     chosen such that (upper row) $\Rint=\pm 10\%$ and (lower row) $\Rint=\pm 20\%$, 
+#     for (\cmsLeft) negative and (\cmsRight) positive values of \Rint. The total 
+#     cross section for \HH production $\sigma^{\text{full}}$ (red line, labelled 
+#     as $\sigma_{\text{full}}$) is compared to the cross sections $\sigma^{\text{
+#     resonant-only}}$ (blue line, labelled as $\sigma_{\text{res}}$) and $\sigma^{
+#     \text{nonresonant}}$ (green line, labelled as $\sigma_{\text{nores}}$) 
+#     considering only resonant and nonresonant production. In the lower panels the 
+#     ratio of $\sigma^{\text{full}}$ over $(\sigma^{\text{resonant-only}}+\sigma^{
+#     \text{nonresonant}})$ is shown.
+#   }
+#   \label{fig:lineshapes-500GeV}
+# \end{figure}
+
+
+# For most of the studied mass points, sizable interference ratios occur
+# only in parameter regions to which the current measurements are either
+# not yet sensitive, or at too large values of $\sin\alpha$. In
+# particular, for large resonance masses, where interference effects tend
+# to grow, they are far below the current sensitivity and might only
+# play a role when the full data set from HL-LHC becomes
+# available~\cite{Cepeda:2019klc}, as discussed in
+# Sec.~\ref{Sec:DiscoveryPotential_X_to_YH}. However, there are
+# regions at intermediate \mX where the interpretation of NWA-based
+# limits for \HH derived in the singlet model would solicit some care
+# already in the Run~2 combination (\eg $\mX = 500\GeV$, $\sin\alpha =
+# 0.2$ and $\couplingLambda = 400\GeV$). It is important to note that
+# such interpretations are generally model dependent.
+
+# The differential cross sections as a function of \mHH are shown for representative points from 
+# the ($\sin\alpha$, \couplingLambda) parameter space in 
+# Fig.~\ref{fig:lineshapes-280GeV} for $\mX=280\GeV$, and in Fig.~\ref{fig:lineshapes-500GeV} for $\mX=500\GeV$. 
+# The parameters are chosen such that $\widthRatio = 5\%$, which is well below the detector resolution for resonance masses below 1~\TeV,
+# and $\Rint=\pm10\%$ or $\pm20\%$, so that sizable interference effects are expected. 
+# The lineshapes show points in parameter space where the \Rint contours intersect with lines of 
+# constant $\widthRatio = 5\%$ in Fig.~\ref{fig:extSec_singlet}. 
+
+# The mass points of $\mX=280$ and 500\GeV have been chosen because these values are 
+# on the left- and right-hand side of the peak in the \mHH distribution for nonresonant SM \HH production. 
+# The total signal contribution of the resonance, including the interference effect, 
+# can be assessed as the difference between $\sigma^{\text{full}}$ (red graph) and $\sigma^{\text{nonresonant}}$ (green graph).
+# In the $\mX=280\GeV$ case, the resonance peak is at a mass where the non-resonant background is low in comparison; hence the central part of the peak is not much affected in its shape, and a classical bump hunt should still work. However, the total cross section is modified as specified by $\Rint$. For a precision measurement, which is not yet in our reach, a distortion of the signal shape, either a peak-dip or peak-tail pattern depending on the relative sign of the amplitudes, would have to be taken into account.
+# At $\mX=500\GeV$, in the top panels of Fig.~\ref{fig:lineshapes-500GeV}, the signal shape is found to be strongly modified by the interference effect. However, this occurs in a parameter region still relatively far away from the regions currently probed, as can be appreciated in Fig.~\ref{fig:extSec_singlet}. 
+# Although the expected interference effects clearly depend on the underlying model, 
+# they can be expected to be of mounting importance in the future as the LHC data set increases.

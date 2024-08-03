@@ -3,9 +3,9 @@
 :END:
 
 The first phase of the \ac{LHC} has been running since 2010, spanning three data runs, the last of which, \run{3}, is currently approaching its end of life, in the last quarter of 2025.
-Phase-2 will soon follow with the new \ac{HL-LHC}, which will start taking data in 2029, extending \ac{HEP} studies well into the future (see ref:fig:hllhc) [[cite:&hllhc_evolution_paper1;&hllhc_evolution_paper2]].
-An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of \num{10} years, corresponding to \SI{90}{\percent} of the total data collected by the \ac{LHC} [[cite:&hllhc]].
-The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SIrange{\sim5e34}{7.5e34}{\per\cm\squared\per\second} [[cite:&hllhc]].
+Phase-2 will soon follow with the new \ac{HL-LHC} [[cite:&hllhc]], which will start taking data in 2029, extending \ac{HEP} studies well into the future (see ref:fig:hllhc) [[cite:&hllhc_evolution_paper1;&hllhc_evolution_paper2]].
+An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of \num{10} years, corresponding to \SI{90}{\percent} of the total data collected by the \ac{LHC}.
+The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SIrange{\sim5e34}{7.5e34}{\per\cm\squared\per\second}.
 This is more than twice the \ac{LHC}’s current value.
 These conditions correspond, in the ultimate HL-LHC configuration, to a \ac{PU} of up to 200, a total ionizing dose reaching \SI{2}{\mega\gray} [fn:: One Gray is defined as the absorption of one Joule of radiation energy per kilogram.] and a fluence of up to \SI{1e16}{\nequiv}.
 The neutron equivalent fluence, in this context, is defined as the number of \SI{1}{\MeV} neutrons per \si{\per\cm\squared} traversing the detector material, and serves as a measure for potential radiation damage.

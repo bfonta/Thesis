@@ -1,0 +1,9 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:interf_intro
+:END:
+
+This is an intro, contextualizing the work and eferring to the theiss analysis and with NWA
+This chapter reflects the work published in [[cite:&interf_studies]].
+
+* Additional bibliography :noexport:
++ interf studies: https://arxiv.org/abs/2403.16926
