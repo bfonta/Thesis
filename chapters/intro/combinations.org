@@ -2,22 +2,41 @@
 :CUSTOM_ID: sec:combinations
 :END:
 
-\myparagraph{Resonant}
+\myparagraph{Resonant searches}
 
-\noindent 
+\noindent Recent \run{2} \xhh{} analyses have been combined in [[cite:&interf_studies]] and $\sigma\mathcal{B}$ upper limits are shown in [[fig:res_comb_xhh]], as a function of $\mx$.
+The analyses study \spin{0} and \spin{2} resonances in the resonant mass range between \num{0.28} and \SI{4.5}{\TeV}.
+The six highlighted searches target a variety of final states including b-jets, photons, light leptons, and hadronic $\tau$ leptons.
+The exclusion in terms of $\sigma\mathcal{B}$ goes down to \SI{0.2}{\femto\barn} for both spin scenarios probed.
+The best sensitivity at low masses is obtained by the diphoton search, while at high masses the two searches with b-tagged merged jets show the best sensitivity.
+The results of the statistical combination are shown as red lines.
+No deviation larger than \SI{2}{\sigma} from the expected limits is observed.
+The combination brings large improvements in sensitivity in the range of \num{0.5} to \SI{1}{\TeV} in $\mx$, with respect to individual channels.
+This intuitively happens in phase-space regions where no channel dominates in sensitivity.
+A recent combination of HH searches performed by \ac{ATLAS} can be found in [[cite:&atlas_comb_res]], where the \spin{0} result uses the three most sensitive channels and obtains comparable results.
 
+#+NAME: fig:res_comb_xhh
+#+CAPTION: Searches for di-Higgs resonant production. Observed and expected 95% \ac{CL} upper limits on $\sigma\mathcal{B}$ for the production of a \spin{0} resonance X (left) and a \spin{2} resonance G (right), via \ac{ggF}. Individual results and statistical combinations are shown, where observed limits are indicated with solid lines and expected limits with dashed lines. Taken from [[cite:&interf_studies]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/comb_res_hh_spin0.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/comb_res_hh_spin2.pdf]]
+#+END_figure
 
-
-\myparagraph{Nonresonant}
+\myparagraph{Nonresonant searches}
 
 @mention impact of bb\tau\tau@
 
-\noindent The most up-to-date Run2 HH combination constrains the observed (expected) HH cross-section to $\xshh < 3.4\;(2.5)\;\xshhsm$, where the sensitivity is dominated by the \bbbb{}, \bbtt{} and \bbgg{} channels. The limit is also interpreted as a function of the $\kl$ and $\k2v$ coupling modifiers, measuring $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively. Importantly, the latter result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
+\noindent The most up-to-date Run2 HH combination constrains the observed (expected) HH cross-section to $\xshh < 3.4\;(2.5)\;\xshhsm$, where the sensitivity is dominated by the \bbbb{}, \bbtt{} and \bbgg{} channels.
+The limit is also interpreted as a function of the $\kl$ and $\kvv$ coupling modifiers, measuring $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively. Importantly, the latter result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
 
 #+NAME: fig:HH_nonres_comb_xsec
-#+ATTR_LATEX: :width .8\textwidth
 #+CAPTION: Upper limits at 95% confidence level on the SM signal strength $\mu = \xshh / \xshhsm$. The inner (green) band and the outer (yellow) bands indicate the regions containing 68% and 95%, respectively, of the limits on $\mu$ expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Figure taken from [[cite:&summary_hig_twiki]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .8\textwidth
 [[~/org/PhD/Thesis/figures/intro/limits_HH_SM_Mar2023.pdf]]
+#+END_figure
 
 #+NAME: fig:HH_nonres_comb_c2v
 #+CAPTION: 95% confidence intervals on $\kl$ (left) and $\kvv$ (right) superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Results are taken from the references marked next to each individual measurement. 

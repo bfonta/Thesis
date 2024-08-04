@@ -33,6 +33,7 @@
 #+LATEX_HEADER: \Crefname{section}{Section}{Sections}
 
 #+LATEX_HEADER: \DeclareSIUnit \rap {\eta}
+#+LATEX_HEADER: \DeclareSIUnit \std {\sigma}
 #+LATEX_HEADER: \DeclareSIUnit \azi {\phi}
 #+LATEX_HEADER: \DeclareSIUnit \rz {R/z}
 #+LATEX_HEADER: \DeclareSIUnit \barn {b}
