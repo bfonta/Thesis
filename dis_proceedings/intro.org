@@ -19,7 +19,7 @@ Finally, non-SM $\lh{3}$ might allow a \ac{SFO-EWPT} transition, which correspon
 
 Both the \ac{CMS} and the \ac{ATLAS} experiments at the \ac{LHC} are involved in a comprehensive study of HH processes.
 A direct measurement of $\lh{3}$ requires double Higgs boson production while $\lh{4}$ is first probed in the production of 3 Higgs bosons.
-These quantities can also be measured indirectly, as detailed in [[sec:combinations]].
+These quantities can also be measured indirectly, as detailed in [[#sec:combinations_dis]].
 $\kl$ is currently one of the least constrained properties of the Higgs boson.
 
 # #+NAME: fig:BSM_production_diagrams

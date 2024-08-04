@@ -5,7 +5,7 @@ Once can explore \ac{NLO} electroweak loops present in single Higgs production f
 It has also been proposed to use higher-order diagrams of \ac{EW} processes, such as $\mw$ and $\sint$ measurements, with the same goal [[cite:&indirect_searches_ew]].
 The production modes with the largest kinematic dependence on $\lh{3}$ are \tth{} and \vh{} [[cite:&indirect_searches2]], with differences of up to 10%.
 
-The bounds obtained from indirect searches are competitive with the ones from di-Higgs production [[cite:&indirect_searches3]], and provide additional constraints for single Higgs couplings (see ref:sec:combinations).
+The bounds obtained from indirect searches are competitive with the ones from di-Higgs production [[cite:&indirect_searches3]], and provide additional constraints for single Higgs couplings (see [[#sec:combinations]]).
 Nevertheless, departures of the Higgs self-coupling from its \ac{SM} prediction signal the existence
 of new dynamics that, in general, would leave an imprint on other Higgs couplings.
 The importance of a global fit is therefore two-fold, namely to assess the robustness of the studies that take into account deformations exclusively in the Higgs trilinear coupling, and to single out the sensitivity on the single-Higgs couplings that is required to minimise the impact of the possible correlations [[cite:&hllhc_physics]].

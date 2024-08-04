@@ -1,8 +1,18 @@
-<<sec:combinations>>
+:PROPERTIES:
+:CUSTOM_ID: sec:combinations
+:END:
+
+\myparagraph{Resonant}
+
+\noindent 
+
+
+
+\myparagraph{Nonresonant}
 
 @mention impact of bb\tau\tau@
 
-The most up-to-date Run2 HH combination constrains the observed (expected) HH cross-section to $\xshh < 3.4\;(2.5)\;\xshhsm$, where the sensitivity is dominated by the $4b$, $bb\tau\tau$ and $bb\gamma\gamma$ channels. The limit is also interpreted as a function of the $\kl$ and $\k2v$ coupling modifiers, measuring $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively. Importantly, the latter result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
+\noindent The most up-to-date Run2 HH combination constrains the observed (expected) HH cross-section to $\xshh < 3.4\;(2.5)\;\xshhsm$, where the sensitivity is dominated by the \bbbb{}, \bbtt{} and \bbgg{} channels. The limit is also interpreted as a function of the $\kl$ and $\k2v$ coupling modifiers, measuring $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively. Importantly, the latter result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
 
 #+NAME: fig:HH_nonres_comb_xsec
 #+ATTR_LATEX: :width .8\textwidth

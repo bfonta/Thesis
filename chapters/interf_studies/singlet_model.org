@@ -17,3 +17,5 @@ The hardest constraint on $\sin(\theta)$ comes from the measurements of the W ma
 
 The additional scalar boson X predicted in the real-singlet model has the same relative couplings to SM particles as the SM H boson. Most searches for X → HH assume that the width of the X boson is much smaller than the reconstructed mass resolution, such that the NWA holds.
 We use the real-singlet model for a dedicated study of nonnegligible width and interference effects and present the results in Section 4.4. The corresponding model interpretations for the X → HH combination in the real-singlet model are presented there.
+
++ @explain remmoval of Z2 symmetry here@

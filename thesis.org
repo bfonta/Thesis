@@ -104,7 +104,7 @@
 #+INCLUDE: "chapters/hgcal/hgcal_discussion.org"
 
 
-* \reshhbbtt{}: Strategy definition
+* \xhhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/analysis1/bbtt_analysis.org"
 ** Data, MC and signal samples
 #+INCLUDE: "chapters/analysis1/samples.org"
@@ -148,7 +148,7 @@
 #+INCLUDE: "chapters/intro/control_regions.org"
 
 
-* \reshhbbtt{}: Limit extraction
+* \xhhbbtt{}: Limit extraction
 ** Signal discrimination from background
 ** Systematic uncertainties
 *** Normalization uncertainties
@@ -177,7 +177,7 @@
 ** Results
 *** Final limits
 *** Comparison with other resonant \bbtt{} results
-** Future prospects for resonant and non-resonant HH searches
+** Prospects for resonant and non-resonant HH searches
 #+INCLUDE: "chapters/analysis2/prospects.org"
 
 * Effects of finite width and interference

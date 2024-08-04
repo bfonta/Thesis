@@ -1,4 +1,6 @@
-<<sec:combinations>>
+:PROPERTIES:
+:CUSTOM_ID: sec:combinations_dis
+:END:
 
 On top of the HH searches already mentioned, $\kl$ can be additionally constrained by exploiting \ac{NLO} \ac{EW} corrections to single Higgs processes, which also depend on $\kl$.
 Single Higgs cross-sections can indeed be quite sensitive to $\kl$ variations, especially in the VH and ttH production modes, where up to 10% differences are expected.

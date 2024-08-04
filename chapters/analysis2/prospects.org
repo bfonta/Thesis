@@ -10,7 +10,6 @@ In this section, we present an overview for the resonant and nonresonant HH resu
 The measurement of the Higgs self-coupling will arguably become the nexus of all \ac{HEP} research until the 2040s, should no interesting excess or deviation be measured by then.
 
 * Resonant searches
-
 Current projection studies [[cite:&interf_studies]] focus on the most sensitive HH decay channels, namely \bbgg{}, \bbtt{}, and \bbbb{}.
 The studies are based on the resonant HH and YH searches from the \ac{CMS} full \run{2} data set (\SI{138}{\invfb}), as summarized in [[tab:hh_res_refs]].
 
@@ -35,7 +34,7 @@ The experimental sensitivity expected at the \ac{HL-LHC} is derived using the fo
   Advancements in the theory calculations are also expected to reduce theoretical uncertainties.
   
 + S2:
-  The theory uncertainties are halved, while the experimental uncertainties are set according to the recommendations of [[cite:&HLHELHCCommonSystematics]].
+  The theory uncertainties are halved, while the experimental uncertainties are set according to the recommendations of [[cite:&HLHELHC]].
 
 + Statistical only:
   The limits are derived considering only the statistical uncertainty in data, and are thus under-conservative.
@@ -45,7 +44,7 @@ The systematic uncertainty with the largest impact in S1 comes from the limited 
 In S2, the statistical uncertainties on the simulated events are assumed to be negligible, and the main systematic uncertainties arise from the efficiencies of the b-jet and $\tau$ identification and misidentification.
 The projected results from the channels considered are statistically combined. 
 Systematic uncertainties affecting multiple channels are treated as correlated among all the input channels.
-The expected upper limits at 95%~\ac{CL} on the \reshhbbtt{} cross section projected to \SI{3000}{\invfb} are shown for \bbtt{} channel and for the combination of the three most sensitive HH channels in [[fig:prospects_combination]].
+The expected upper limits at 95%~\ac{CL} on the \xhhbbtt{} cross section projected to \SI{3000}{\invfb} are shown for \bbtt{} channel and for the combination of the three most sensitive HH channels in [[fig:prospects_combination]], for \spin{0}.
 
 #+NAME: fig:prospects_combination
 #+CAPTION: Expected upper limits at 95%, on the product of the cross section for the production of a \spin{0} resonance X and the branching fraction $\mathcal{B}(\text{X} \rightarrow \text{HH})$, as a function of $\mx$, for an integrated luminosity of \SI{3000}{\invfb}. Shown are the effects of the different systematic uncertainty scenarios, which are explained in the text. (Left) \bbtt{} decay channel [[cite:&higgs_bbtautau_hy]]. (Right) Combination of the three analysis shown in [[tab:hh_res_refs]], including \bbtt{}. Taken from [[cite:&interf_studies]].
