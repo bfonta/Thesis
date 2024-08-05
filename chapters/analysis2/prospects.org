@@ -10,6 +10,10 @@ In this section, we present an overview for the resonant and nonresonant HH resu
 The measurement of the Higgs self-coupling will arguably become the nexus of all \ac{HEP} research until the 2040s, should no interesting excess or deviation be measured by then.
 
 * Resonant searches
+:PROPERTIES:
+:CUSTOM_ID: sec:prospects_res
+:END:
+
 Current projection studies [[cite:&interf_studies]] focus on the most sensitive HH decay channels, namely \bbgg{}, \bbtt{}, and \bbbb{}.
 The studies are based on the resonant HH and YH searches from the \ac{CMS} full \run{2} data set (\SI{138}{\invfb}), as summarized in [[tab:hh_res_refs]].
 
@@ -60,6 +64,10 @@ The expected upper limits at 95%~\ac{CL} on the \xhhbbtt{} cross section project
 + also mention the YH results (without plots)
 
 * Nonresonant searches
+:PROPERTIES:
+:CUSTOM_ID: sec:prospects_nonres
+:END:
+
 The near future promises further constraints on $\kl$ and on \ac{EFT} couplings in the context of nonresonant HH searches.
 Yet unexplored HH production modes and decay channels are currently being studied.
 On top of the recent $\kvv=0$ exclusion, and assuming $\kl=1$, we hope to measure nonresonant HH via a multi-channel combination by the end of the \ac{HL-LHC} [[cite:&higgs_10_years]].
@@ -77,6 +85,8 @@ The inclusion of \ac{PNet} \tau-tagging at trigger level is being envisaged, and
 We also expect that some HH analysis might benefit from the inclusion of synthetic datasets, as discussed in [[sec:hemisphere_mixing]].
 The first \ac{CMS} Run3 HH results will soon be available.
 
++ first run3 single higgs result [[cite:&cms_higgs_gg_run3]]
+  
 * Additional bibliography :noexport:
 + [[https://indico.cern.ch/event/1404329/contributions/5903658/attachments/2834334/4953058/Tau_Trigger_Apr_10th_BA-4.pdf][PNet for \tau's]] (TSG meeting)
 + Cite various parking data streams [[cite:&parking_scouting]]  

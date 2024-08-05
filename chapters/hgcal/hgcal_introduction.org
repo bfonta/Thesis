@@ -176,4 +176,5 @@ The timing was measured in 2018 to be \SI{\sim 20}{\pico\second} for the highest
 Overall, the results point to a successful operation of the \ac{HGCAL} at the \ac{HL-LHC}.
   
 * Additional bilbiography :noexport:
++ [[https://cernbox.cern.ch/files/spaces/eos/user/j/jsauvan/01-Projects/2408_thesis-Bruno?tiles-size=1&items-per-page=100&view-mode=resource-table][Comments JB]]
 + [[https://indico.cern.ch/event/1334651/contributions/5622989/attachments/2741546/4769493/HGCal_10232023.pdf][CE-H cassettes]]

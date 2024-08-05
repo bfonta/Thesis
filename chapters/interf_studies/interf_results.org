@@ -5,7 +5,7 @@ In the following, we choose as benchmark points $\rint=\pm10\%$ and $\pm20\%$, a
 The corresponding contours and exclusion limits derived from the HH combination in the singlet model are shown in [[fig:interf_maps]]. 
 
 #+NAME: fig:interf_maps
-#+CAPTION: Contours of the variable $\rint$ as defined in [[eq:rint]] and discussed in the text, in the ($\sina$, $\lhhx$) plane for the singlet model with $\kl = 1$ and different resonance masses $\mx$ between (upper left) \num{280} and (lower right) \SI{800}{\GeV}. Contours are shown for $\rint$ values of (dashed blue) \num{-0.2}, (solid blue) \num{-0.1}, (solid green) \num{+0.1}, and (dashed green) \num{+0.2}. Regions that are excluded, at 95% \ac{CL}, from the combined likelihood analysis of the HH analyses presented in this report are indicated by red filled areas. Dashed black lines indicate constant relative widths of 5, 10, and 20%. Taken from [[cite:&interf_studies]].
+#+CAPTION: Contours of the variable $\rint$ as defined in [[eq:rint]] and discussed in the text, in the ($\sina$, $\lhhx$) plane for the singlet model with $\kl = 1$ and different resonance masses $\mx$ between (upper left) \num{280} and (lower right) \SI{800}{\GeV}. Contours are shown for $\rint$ values of (dashed blue) \num{-0.2}, (solid blue) \num{-0.1}, (solid green) \num{+0.1}, and (dashed green) \num{+0.2}. Regions that are excluded, at 95% \ac{CL}, from the combined likelihood analysis of the HH analyses presented in this report are indicated by red filled areas. Dashed black lines indicate constant relative widths of 5, 10, and 20%. Published in [[cite:&interf_studies]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/interferences/interf_maps.pdf]]
@@ -24,12 +24,12 @@ On the other hand, exclusion limits for $\mx$ above \SI{600}{\GeV} are very loos
 Interference effects are small for large resonance masses, and might only play a role when the full data set from the \ac{HL-LHC} becomes available [[cite:&HLHELHC]].
 
 The differential cross sections as a function of $\mhh$ are shown for exemplary points from 
-the ($\sin\alpha$, $\lhhx$) parameter space in [[fig:interf_limits_280]] for $\mx=280\,\si{\GeV}$, and in [[fig:interf_limits_500]] for $\mx=500\,\si{\GeV}$. 
+the ($\sin\alpha$, $\lhhx$) parameter space in [[fig:interf_lineshapes_280]] for $\mx=280\,\si{\GeV}$, and in [[fig:interf_lineshapes_500]] for $\mx=500\,\si{\GeV}$. 
 The parameters are chosen such that $\widthratio = 5\%$, which is well below the detector resolution, and $\rint=\pm10\%$ or $\pm20\%$ so that sizable interference effects are expected. 
 The lineshapes show points in parameter space where the $\rint$ contours intersect with lines of constant $\widthratio = 5\%$ in [[fig:interf_maps]]. 
 
-#+NAME: fig:interf_limits_280
-#+CAPTION: Expected differential cross sections for HH production, as a function of $\mhh$, for the real-singlet model with $\mx = 280\,\si{\GeV}$ and $\widthratio = 5\%$. The parameters $\sina$ and $\lhhx$ have been chosen such that (upper row) $\rint=\pm 10\%$ and (lower row) $\rint=\pm 20\%$, (left) negative and (right) positive values of $\rint$. The total cross section for HH production $\sigma^{\text{full}}$ (red line, labelled as $\sigma_{\text{full}}$) is compared to the cross sections $\sigma^{\text{resonant-only}}$ (blue line, labelled as $\sigma_{\text{res}}$) and $\sigma^{\text{nonresonant}}$ (green line, labelled as $\sigma_{\text{nores}}$) considering only resonant and nonresonant production. In the lower panels the ratio of $\sigma^{\text{full}}$ over $(\sigma^{\text{resonant-only}}+\sigma^{\text{nonresonant}})$ is shown. Taken from [[cite:&interf_studies]].
+#+NAME: fig:interf_lineshapes_280
+#+CAPTION: Expected differential cross sections for HH production, as a function of $\mhh$, for the real-singlet model with $\mx = 280\,\si{\GeV}$ and $\widthratio = 5\%$. The parameters $\sina$ and $\lhhx$ have been chosen such that (upper row) $\rint=\pm 10\%$ and (lower row) $\rint=\pm 20\%$, (left) negative and (right) positive values of $\rint$. The total cross section for HH production $\sigma^{\text{full}}$ (red line, labelled as $\sigma_{\text{full}}$) is compared to the cross sections $\sigma^{\text{resonant-only}}$ (blue line, labelled as $\sigma_{\text{res}}$) and $\sigma^{\text{nonresonant}}$ (green line, labelled as $\sigma_{\text{nores}}$) considering only resonant and nonresonant production. In the lower panels the ratio of $\sigma^{\text{full}}$ over $(\sigma^{\text{resonant-only}}+\sigma^{\text{nonresonant}})$ is shown. Published in [[cite:&interf_studies]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5 \textwidth :center
 [[~/org/PhD/Thesis/figures/interferences/linewidth_280_a.pdf]]
@@ -41,8 +41,8 @@ The lineshapes show points in parameter space where the $\rint$ contours interse
 [[~/org/PhD/Thesis/figures/interferences/linewidth_280_d.pdf]]
 #+END_figure
 
-#+NAME: fig:interf_limits_500
-#+CAPTION: Expected differential cross sections for HH production, as a function of $\mhh$ for the real-singlet model with $\mx = 500\,\si{\GeV}$ and $\widthratio = 5\%$.  The parameters $\sina$ and $\lhhx$ have been such that (upper row) $\rint=\pm 10\%$ and (lower row) $\rint=\pm 20\%$, for (left) negative and (right) positive values of $\rint$. The total section for HH production $\sigma^{\text{full}}$ (red line, labelled as $\sigma_{\text{full}}$) is compared to the cross sections $\sigma^{\text{resonant-only}}$ (blue line, labelled as $\sigma_{\text{res}}$) and $\sigma^{\text{nonresonant}}$ (green line, labelled as $\sigma_{\text{nores}}$) considering only resonant and nonresonant production. In the lower panels the ratio of $\sigma^{\text{full}}$ over $(\sigma^{\text{resonant-only}}+\sigma^{\text{nonresonant}})$ is shown. Taken from [[cite:&interf_studies]].
+#+NAME: fig:interf_lineshapes_500
+#+CAPTION: Expected differential cross sections for HH production, as a function of $\mhh$ for the real-singlet model with $\mx = 500\,\si{\GeV}$ and $\widthratio = 5\%$.  The parameters $\sina$ and $\lhhx$ have been such that (upper row) $\rint=\pm 10\%$ and (lower row) $\rint=\pm 20\%$, for (left) negative and (right) positive values of $\rint$. The total section for HH production $\sigma^{\text{full}}$ (red line, labelled as $\sigma_{\text{full}}$) is compared to the cross sections $\sigma^{\text{resonant-only}}$ (blue line, labelled as $\sigma_{\text{res}}$) and $\sigma^{\text{nonresonant}}$ (green line, labelled as $\sigma_{\text{nores}}$) considering only resonant and nonresonant production. In the lower panels the ratio of $\sigma^{\text{full}}$ over $(\sigma^{\text{resonant-only}}+\sigma^{\text{nonresonant}})$ is shown. Published in [[cite:&interf_studies]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5 \textwidth :center
 [[~/org/PhD/Thesis/figures/interferences/linewidth_500_a.pdf]]
@@ -73,7 +73,7 @@ The \ac{HL-LHC} dataset of \SI{3000}{\invfb} has the potential to considerably e
 Compared to the present limits, the largest improvement is observed for large masses, $\mx=600\,\si{\GeV}$ and higher, where large regions of the ($\sina$, $\lhhx$) plane can be probed, and part of the plane even for $\mx = 1\,\si{\TeV}$. 
 
 #+NAME: fig:interf_prospects
-#+CAPTION: Exclusion contours at 95% \ac{CL}, in the ($\sina$, $\lhhx$) plane for $\kl = 1$ in the real-singlet model. These contours are obtained from the combined likelihood analysis of the HH searches discussed in [[#sec:prospects]] for (upper left to lower right) $\mx = 280$, $400$, $500$, $600$, $700$, and \SI{1000}{\GeV}. The expected limits from the \run{2} dataset have been projected to integrated luminosities of \num{300}, \num{1000}, and \SI{3000}{\invfb}. Excluded areas are indicated by the direction of the hatching along the exclusion contours. Taken from [[cite:&interf_studies]].
+#+CAPTION: Exclusion contours at 95% \ac{CL}, in the ($\sina$, $\lhhx$) plane for $\kl = 1$ in the real-singlet model. These contours are obtained from the combined likelihood analysis of the HH searches discussed in [[#sec:prospects]] for (upper left to lower right) $\mx = 280$, $400$, $500$, $600$, $700$, and \SI{1000}{\GeV}. The expected limits from the \run{2} dataset have been projected to integrated luminosities of \num{300}, \num{1000}, and \SI{3000}{\invfb}. Excluded areas are indicated by the direction of the hatching along the exclusion contours. Published in [[cite:&interf_studies]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/interferences/prospects.pdf]]

@@ -2,8 +2,23 @@
 :CUSTOM_ID: sec:interf_intro
 :END:
 
-This is an intro, contextualizing the work and eferring to the theiss analysis and with NWA
-This chapter reflects the work published in [[cite:&interf_studies]].
+The majority of Higgs analyses considers the \ac{NWA} for the final analysis fit, where the Higgs boson width $\gh$ is set to zero or to an arbitrarily small value.
+This is usually motivated by simplicity, also taking into account that the predicted \ac{SM} $\gh$ is \SI{\sim 4}{\MeV}, compatible with measurements [[cite:&higgs_width]], and is around three order of magnitude smaller than what the \ac{CMS} resolution can currently provide.
+The most up-to-date measurements are performed with the \zzfourl{} and \hgg{} high resolution channels [[cite:&YellowReport3\S10]] (\SI{\sim 1}{\GeV}).
+However, when considering processes with two Higgs bosons, one cannot /a priori/ argue that the detector resolution will always be lower than the width of any \ac{BSM} resonance \xhh{}.
+Instead, and especially for large resonance masses, $\gx$ values are expected to be large, leading to the potential lack of validity of the \ac{NWA}  assumption.
+For simplicity, and despite the above, the \ac{NWA} has been repeatedly used in past \ac{CMS} resonant analysis, including the analysis presented in this thesis.
+A sizeable signal width can create so-called /interferences/ between the resonant and nonresonant components of the signal, which are absent in the \ac{NWA} approach.
+The interference could be either destructive or constructive, respectively reducing or enhancing the HH production rate [[cite:&CarenaWidthEnhancement]].
+The change can be significant, both overall and as a function of $\mhh$, altering the di-Higgs /lineshapes/.
+Some examples are shown in [[ref:fig:interf_lineshapes_280,fig:interf_lineshapes_500]].
 
-* Additional bibliography :noexport:
-+ interf studies: https://arxiv.org/abs/2403.16926
+I have been responsible for a \ac{CMS} phenomenological study that assesses the impact of the \ac{NWA} in different phase-space regions of the inclusive \ac{ggF} \xhh{} process.
+To the best of my knowledge, this is the first time such a complete study on the validity of the \ac{NWA} is performed, within \ac{CMS}.
+The study was originally motivated by my involvement in the \run{2} \hhbbtt{} analysis, the latter representing an ideal setup to test new HH models.
+In the end, the work done settled on a more general approach, not specific to any particular decay channel.
+The ongoing \run{3} should see the first appearances of non-\ac{NWA} setups, since deviations from the \ac{NWA} approach, including this work, have recently drawn a significant interest from the community.
+For simplicity, in this work we consider the resonant model with the smallest number of additional free parameters: the singlet model [[cite:&papa1]].
+Similar studies could be repeated with other, more complex models, such as models containing two singlets [[cite:&papa3]].
+As a future step, we would like to extend the same study to the \bbtt{} channel, namely measuring the impact of the \ac{NWA} approach on the final limits of the analysis.
+The content of this chapter was published as part of a review paper covering the Higgs boson production searches through decays of heavy resonances [[cite:&interf_studies]].
