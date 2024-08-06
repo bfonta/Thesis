@@ -6,7 +6,7 @@ At low energy the potential $V$ associated to the Higgs boson field $H$ in the S
 
 #+NAME: eq:sm_potential
 \begin{equation}
-\frac{1}{2}\mh^{2}H^{2} + \lh{3}vH^{3} + \frac{\lh{4}}{4}H^{4}
+V(\text{H}) = \frac{1}{2}\mh^{2}\text{H}^{2} + \lh{3}v\text{H}^{3} + \frac{\lh{4}}{4}\text{H}^{4}
 \end{equation}
 
 \noindent Continue here.

@@ -1,3 +1,7 @@
 PhD thesis with Emacs org-mode.
 
 [[pain.jpg]]
+
+*** Notes
+
++ The bibliographic file =unsrt.bst= was modified following the approach detailed [[https://tex.stackexchange.com/questions/26575/bibtex-how-to-reduce-long-author-lists-to-firstauthor-et-al][here]], and named =thesis_custom.bst=. The modification limits the number of authors displayed to 4.

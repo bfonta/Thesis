@@ -1,0 +1,24 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:ewpt
+:END:
+
+As discussed in [[#sec:short_comings]], despite the impressive success of the \ac{SM}, we know that it must be incomplete.
+One of the big questions still left unanswered relates to the nature of the \ac{EWSB} brought by the Higgs field.
+When the Universe was very young, at extremely high temperatures, it is energetically favourable for the Higgs field to be zero everywhere.
+Only around a hundred picoseconds after the Big Bang, with a stark temperature drop, is the symmetry broken.
+It is currently unknown how \ac{EWSB} takes place, specifically which kind of phase transition drives it.
+According to the \ac{SM}, the crossover should be smooth [[cite:&ewpt_type]], but such scenario is considered unnatural by some, due to the extreme distance between \ac{EW} and Planck scales.
+A \ac{SFO-EWPT} would point to \ac{BSM} effects, producing signatures that can be detected in next-generation space interferometers, such as the extremely exciting \ac{LISA} [[cite:&lisa]] experiment (already validated by \ac{LISA} Pathfinder [[cite:&lisapathfinder]]) or the similar \ac{Decigo} experiment [[cite:&decigo]].
+The conditions necessary to require a \ac{SFO-EWPT} can notably explain baryogenesis.
+In particular, new states can modify the Higgs potential and its dependence on temperature, potentially introducing false, metastable vacua.
+These would allow sudden phase transitions via the sci-fi-esque coalescence of vacuum bubbles[fn:: Vaccum decay, with thte creation of vaccum bubbles, might destroy the Universe as we know it! [[cite:&coleman;&coleman_luccia]]].
+
+* Additional bilbiography :noexport:
++ [[https://cosmosmagazine.com/science/physics/vacuum-decay-the-ultimate-catastrophe/][Cosmos paper on vacuum decay]]
++ [[https://ep-news.web.cern.ch/content/deciphering-electro-weak-phase-transition-current-and-future-colliders][Papa's outreach article]]
++ [[https://journals.aps.org/prd/pdf/10.1103/PhysRevD.15.2929][Fate of the false vaccum]], Sidney Coleman
++ [[https://static.ias.edu/pitp/archive/2011files/PhysRevD.21.3305.pdf][Grav. effects on and of vaccum decay]], S. Coleman and Frank de Luccia (with nice quote on page 21)
++ Nice overview in [[cite:&hllhc_physics]] (3.6.2), which ends with "Higgs boson pair production
+plays a crucial role on understanding the nature of the electroweak symmetry breaking phase transition,
+which might imply potentially observable effects if there are new states modifying the potential so that
+the matter-antimatter asymmetry can be explained via electroweak baryogenesis."

@@ -43,14 +43,12 @@
 ** Going beyond the SM
 *** SM shortcomings
 #+INCLUDE: "chapters/intro/short_comings.org"
-**** Electro-weak phase transition
-#+INCLUDE: "chapters/intro/ew_phase_transition.org"
 *** Non-resonant BSM HH Production
 #+INCLUDE: "chapters/intro/nonres_BSM_hh.org"
 *** Resonant BSM HH Production
 #+INCLUDE: "chapters/intro/res_BSM_hh.org"
 
-**** Motivaton for the \bbtt{} analysis
+**** Motivation for the \bbtt{} analysis
 
 
 * The CMS Detector at the LHC
@@ -180,8 +178,11 @@
 ** Prospects for resonant and non-resonant HH searches
 #+INCLUDE: "chapters/analysis2/prospects.org"
 
+
 * Effects of finite width and interference
 #+INCLUDE: "chapters/interf_studies/intro.org"
+** The Electro-weak Phase Transition
+#+INCLUDE: "chapters/interf_studies/ew_phase_transition.org"
 ** The Singlet Model
 #+INCLUDE: "chapters/interf_studies/singlet_model.org"
 ** Methodology
@@ -204,7 +205,7 @@
 
 
 * Bibliography :ignore:
-[[bibliographystyle:unsrt]]
+[[bibliographystyle:thesis_custom]]
 [[bibliography:
 ~/dot-emacs/bibliography/references/higgs.bib,
 ~/dot-emacs/bibliography/references/gpu.bib,
