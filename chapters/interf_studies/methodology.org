@@ -2,70 +2,64 @@
 :CUSTOM_ID: sec:interf_methodology
 :END:
 
-We start by calculating the contribution of the interference to the total cross-section, which can be significant.
-
-Most of the HH and YH analyses performed by \ac{CMS} make use of the \ac{NWA}, where the width of \ac{BSM} particles is neglected and no interference with nonresonant Higgs boson pair production occurs.
-However, in general, interference effects can strongly impact the HH cross section.
-The interference can be either constructive or destructive, enhancing or decreasing the HH rate [[cite:&CarenaWidthEnhancement;&Grober2]], and have a nonnegligible effect in \ac{BSM} exclusion limits.
-We study the impact of the interference between nonresonant and resonant production in the inclusive \pphh{} production, which can receive contributions from resonant \xhh{} production. 
-This work provides the first measure of interference effects, identifying phase space regions where the \ac{NWA} is valid.
-We use as a benchmark a simplified scenario based on the real-singlet model introduced in [[#sec:singlet_model]], as it includes the smallest number of additional free parameters [[cite:&OConnell2006rsp]].
-We note that interference effects are model dependent and may be different for other \ac{BSM} scenarios.
-
-For $\mx > 2 \mh$ the width of the X resonance can be calculated as:
-
-#+NAME: eq:width
-\begin{equation}
-\Gamma_{\text{X}} = \sin^{2}\alpha\,\Gamma^{\text{SM}}(\mx) + \Gamma_{\text{X} \rightarrow \text{HH}} \equiv \sin^{2}\alpha\,\Gamma^{\text{SM}}(\mx) + \frac{\lhhx^{2}\sqrt{1 - 4\mh^{2}/\mx^{2}}}{8\pi \mx},
-\end{equation}
-
-\noindent where $\lhhx$ is the trilinear coupling between two H bosons and the new particle X, and $\Gamma^{\text{SM}}(\mx)$ represents the width of a scalar boson of mass $\mx$ with the same decay modes as the \ac{SM} H boson.
-The latter has been calculated by interpolating the values published in [[cite:&YellowReport4]]. 
-In addition to $\alpha$, $\mx$ and $\lhhx$, this singlet model also depends on the trilinear H coupling $\kl \equiv \lambda_{\text{HHH}}/\lambda^{\text{SM}}_{\text{HHH}}$, and on an additional scalar coupling.
-
-#+NAME: fig:single_model_scan
-#+CAPTION: Singlet model $\Gamma_{\text{X} \rightarrow \text{HH}}/\Gamma_{\text{X}}$ branching ratio scan, following [[eq:width]], as a function of $\sina$ anad $\lhhx$, for $\mx{} = 280\,\si{\GeV}$ (left) and $\mx{} = 500\,\si{\GeV}$ (right). The point at $\sina{} = 0$ and $\lhhx{} = 0\,\si{\GeV}$ corresponds to the \ac{SM} scenario, where [[eq:width]] is not well defined.
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/interferences/SingletModelScan.pdf]]
-#+END_figure
-
 #+NAME: fig:single_model_diagrams
-#+CAPTION: (Left) Width of a scalar boson of mass $\mx$ with the same decay modes as the \ac{SM} H boson, as a function of $\mx$, as interpolated from the values published in [[cite:&YellowReport4]]. The $\Gamma^{\text{SM}}(\mx)$ curve is used in [[eq:width]. The red dashed lines are for guidance only, at \SI{125}{\GeV} and \SI{250}{\GeV}. Please note that the 2D scans in this section start at $\mx=280\,\si{\GeV}$. (Right) Example of \num{4} of the \ac{20} \ac{LO} Feynman diagrams considered by the singlet model \ac{UFO} used for this chapter's study.
+#+CAPTION: (Left) Width of a scalar boson of mass $\mx$ with the same decay modes as the \ac{SM} H boson, as a function of $\mx$, as interpolated from the values published in [[cite:&YellowReport4]]. The $\Gamma^{\text{SM}}(\mx)$ curve is used in [[eq:width]. The red dashed lines are for guidance only, at \SI{125}{\GeV} and \SI{250}{\GeV}. Please note that the 2D scans in this section start at $\mx=280\,\si{\GeV}$. (Right) Example of \num{4} of the \num{20} \ac{LO} Feynman diagrams considered by the singlet model UFO used for this chapter's study.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/interferences/SingletModelDiagrams.pdf]]
 #+END_figure
 
-#+NAME: fig:maps_2d
-#+CAPTION: Two-dimensional maps for the full cross section of the singlet model described in [[#sec:singlet_model]], as a function of $\sina$ anad $\lhhx$, for $\mx{} = 280\,\si{\GeV}$ (left) and $\mx{} = 800\,\si{\GeV}$ (right). Similar maps were obtained for all other $\mx$ values mentioned in the text. These maps are later used to draw contour maps for singlet model phase-space regions that are excluded with current HH measurements.
+In the real singlet model, for $\mx > 2 \mh$, the width of the resonance X is given by:
+
+#+NAME: eq:width
+\begin{equation}
+\Gamma_{\text{X}} = \sin^{2}\alpha\,\Gamma^{\text{SM}}(\mx) + \Gamma_{\text{X} \rightarrow \text{HH}} \equiv \sin^{2}\alpha\,\Gamma^{\text{SM}}(\mx) + \frac{\lhhx^{2}\sqrt{1 - 4\mh^{2}/\mx^{2}}}{8\pi \mx} \:\: ,
+\end{equation}
+
+\noindent where $\lhhx$ is the trilinear coupling between two H bosons and the new particle X, and $\Gamma^{\text{SM}}(\mx)$ represents the width of a scalar boson of mass $\mx$ with the same decay modes of the \ac{SM} H boson.
+The latter has been calculated by interpolating the values published in [[cite:&YellowReport4]] and is shown in [[fig:single_model_scan]] (left).
+In addition to $\alpha$, $\mx$ and $\lhhx$, this singlet model also depends on the trilinear H coupling modifier $\kl \equiv \lambda_{\text{HHH}}/\lambda^{\text{SM}}_{\text{HHH}}$, and on an additional scalar coupling.
+The values of the branching ratio of \xhh{} with respect to the entire phase-space of the particle X are encoded by $\Gamma_{\text{X} \rightarrow \text{H}\text{H}}/\Gamma_{\text{X}}$ and displayed in [[fig:single_model_scan]] for two values of $\mx$, as a function of $\sina$ and $\lhhx$.
+The plots are meant to provide an idea of the range of parameters considered, and how they affect $\Gamma_{\text{X}}$.
+In particular, notice that, as expected, $\mathcal{B}(\text{X} \rightarrow \text{H}\text{H})$ is zero along the $\lhhx=0$ horizontal line, as no coupling exists connecting the H and X sectors.
+On the contrary, $\mathcal{B}(\text{X} \rightarrow \text{H}\text{H})$ is always one along the $\sina=0$ ($\cos(\alpha)=1$) vertical line, since in that case X does not couple to any \ac{SM} particle and thus can only decay to a Higgs boson pair.
+Also note how the branching ratio changes with increasing $\mx$, given the extremely significant increase of $\Gamma^{\text{SM}}(\mx)$ with the resonance mass.
+
+#+NAME: fig:single_model_scan
+#+CAPTION: Singlet model $\Gamma_{\text{X} \rightarrow \text{HH}}/\Gamma_{\text{X}}$ branching ratio scan, following [[eq:width]], as a function of $\sina$ and $\lhhx$, for $\mx = 280\,\si{\GeV}$ (left) and $\mx{} = 500\,\si{\GeV}$ (right). The point at $\sina = 0$ and $\lhhx = 0\,\si{\GeV}$ corresponds to the \ac{SM} scenario, where [[eq:width]] is not well defined.
 #+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/interferences/map_2d_280.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/interferences/map_2d_800.pdf]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/interferences/SingletModelScan.pdf]]
 #+END_figure
 
 We use the =MADGRAPH5_aMC@NLO= generator, version 2.9.7 [[cite:&madgraph]], to simulate inclusive HH events in the singlet model at \ac{LO}. 
-A custom \ac{UFO} [[cite:&feynrules]] model based on [[cite:&papa1]] adds a heavy scalar boson to the \ac{SM} with couplings to \ac{SM} particles as defined in [[eq:singlet_couplings]].
-The samples are created according to the following parameter grid with $\kl = 1$:
-+ $\mx$ [\si{\GeV}]: \num{280}, \num{300}, \num{400}, \num{500}, \num{600}, \num{700}, \num{800}, \num{900}, \num{1000}, 
-+ $\sina$: \num{0.00}, \num{0.10}, \num{0.20}, \num{0.30}, \num{0.40}, \num{0.50}, \num{0.60}, \num{0.70}, \num{0.80}, \num{0.90}, \num{0.95}, \num{0.99}, 
-+ $\lhhx$ [\si{\GeV}]: \num{-600}, \num{-500}, \num{-400}, \num{-300}, \num{-200}, \num{-100}, \num{-50}, \num{0}, \num{50}, \num{100}, \num{200}, \num{300}, \num{400}, \num{500}, \num{600}, 
+A custom \ac{UFO} [[cite:&feynrules]] model based on [[cite:&papa1]] adds a heavy scalar boson to the \ac{SM} with couplings to \ac{SM} particles as defined in [[eq:singlet_couplings]], following what is described in [[#sec:singlet_model]].
+The samples are created according to the following parameter grid, using $\kl = 1$:
++ $\mx$ [\si{\GeV}]: \num{280}, \num{300}, \num{400}, \num{500}, \num{600}, \num{700}, \num{800}, \num{900}, \num{1000};
++ $\sina$: \num{0.00}, \num{0.10}, \num{0.20}, \num{0.30}, \num{0.40}, \num{0.50}, \num{0.60}, \num{0.70}, \num{0.80}, \num{0.90}, \num{0.95}, \num{0.99};
++ $\lhhx$ [\si{\GeV}]: \num{-600}, \num{-500}, \num{-400}, \num{-300}, \num{-200}, \num{-100}, \num{-50}, \num{0}, \num{50}, \num{100}, \num{200}, \num{300}, \num{400}, \num{500}, \num{600}.
 
-\noindent where $\mx$ is chosen based on the signal samples used in the HH combination presented in [[#sec:prospects_res]].
-The resonant, nonresonant, and total cross sections for each combination of grid points are generated separately.
-We perform a parameter scan in the parameters $\mx$, $\sina$, and $\lhhx$ of the interference ratio defined as:
+\noindent The values of $\mx$ are chosen based on the signal samples used in the HH combination presented in [[#sec:prospects_res]].
+The resonant, nonresonant, and total HH cross sections in the singlet model for each combination of grid points are generated separately, to what amounts to a very computing intensive task, with the parallel generation of \num{4860} grid points.
+The nonresonant cross section is obtained by setting the $g_{\text{X} kk}$ coupling in [[eq:singlet_couplings]] to zero, and the resonant-only cross section by setting $g_{\text{H} kk}$ to zero.
+We perform parameter scans in $\mx$, $\sina$, and $\lhhx$ for the three cross-sections above, and additionally for the /interference ratio/, defined as:
 
 #+NAME: eq:rint
 \begin{equation}
-\rint = \frac{\sigma^{\text{full}} - \left(\sigma^{\text{resonant-only}} + \sigma^{\text{nonresonant}}  \right)}{\sigma^{\text{resonant-only}} + \sigma^{\text{nonresonant}}}.
+\rint = \frac{\sigma^{\text{total}} - \left(\sigma^{\text{resonant-only}} + \sigma^{\text{nonresonant}}  \right)}{\sigma^{\text{resonant-only}} + \sigma^{\text{nonresonant}}} \:\: .
 \end{equation}
 
-We obtain the nonresonant cross section by setting the coupling $g_{\text{X} kk}$ defined in [[eq:singlet_couplings]] to zero, 
-and the resonant-only cross section by setting the coupling $g_{\text{H} kk}$ to zero. 
-The variable $\rint$ provides information concerning the relative strength of the interference between the SM and 
-BSM processes. The larger the deviation of $\rint$ from zero, the stronger the modification of the cross 
-section due to the interference. We consider the gluon fusion production mode due to its dominant contribution 
-to the cross section.
-The \ac{UFO} model and procedure are validated using the program =hpair= [[cite:&Grober1;&Grober2]] where the results varying $\kl$ in the nonresonant scenario are found to agree with the \ac{NLO} predictions of [[cite:&higgs_10_years]].
+\noindent The variable $\rint$ provides information concerning the relative strength of the interference between the SM and BSM processes.
+When no interference is present, the total cross-section is equal to the sum of its resonant and nonresonant components.
+The larger the deviation of $\rint$ from zero, the stronger the modification of the cross section due to the interference.
+We consider the \ac{ggF} production mode due to its dominant contribution to the cross section.
+Some total cross-section scans are shown in [[fig:maps_2d]], where two-dimensional histograms containing the total cross-section as a function of $\sina$ and $\lhhx$ are displayed for four $\mx$ values.
+The \ac{UFO} model and procedure are validated using the program =hpair= [[cite:&Grober1;&Grober2]] where $\kl\text{-dependent}$ results in the nonresonant scenario are found to agree with the \ac{NLO} predictions of [[cite:&higgs_10_years]].
+
+#+NAME: fig:maps_2d
+#+CAPTION: Two-dimensional maps for the total cross section of the singlet model described in [[#sec:singlet_model]], as a function of $\sina$ and $\lhhx$, for $\mx{} = 280\,\si{\GeV}$ (top left), $\mx{} = 400\,\si{\GeV}$ (top right), $\mx{} = 600\,\si{\GeV}$ (bottom left) and $\mx{} = 800\,\si{\GeV}$ (bottom right). Similar maps were obtained for all other $\mx$ values mentioned in the text. Similar maps for the interference ratios ([[eq:rint]]) are later used to draw contour maps for singlet model phase-space regions that are excluded with current HH measurements.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/interferences/2DMaps.pdf]]
+#+END_figure
+

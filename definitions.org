@@ -6,7 +6,7 @@
 #+LATEX_HEADER: \newcommand{\dijetmass}{m_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\dijetrap}{y_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\emiss}{E^{\text{miss}}_{\text{T}}}
-#+LATEX_HEADER: \newcommand{\rint}{R_{\text{int}}}
+#+LATEX_HEADER: \newcommand{\rint}{\text{R}_{\text{int}}}
 #+LATEX_HEADER: \newcommand{\widthratio}{\Gamma_{\text{X}}/m_{\text{X}}}
 #+LATEX_HEADER: \newcommand{\httt}{H_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\htvar}{H_{\text{T}}}

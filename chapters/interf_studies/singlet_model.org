@@ -2,50 +2,55 @@
 :CUSTOM_ID: sec:singlet_model
 :END:
 
-An important point under investigation is to know whether the scalar sector realized in nature corresponds to the \ac{SM}.
+An important point under investigation is to know whether the scalar sector realized in Nature corresponds to the \ac{SM}.
 Despite the remarkable success of the \ac{SM} so far, many \ac{BSM} physics predicts the existence of additional scalars, which could be singlets, doublets, or any other multiplets under the \ac{EW} gauge group.
-Such extensions typically come with additional \ac{BSM} particles.
-Intuitively, such models nevertheless have to obey the constraints set from both theory and experiments [[cite:&singlet_model_robens]].
+These extensions typically come with additional \ac{BSM} particles.
+Such models nevertheless have to obey the constraints set from both theory and experiments [[cite:&singlet_model_robens]].
 
-In this chapter we focus on the \ac{SM} extended by a real singlet scalar field X.
-This corresponds to the simplest extension to the \ac{SM} possible, with the smallest addition of new free parameters, and thus serves as a useful ideal test case against which to validate ideas and new techniques.
+In this chapter we focus on the \ac{SM} extended by a real singlet scalar field S.
+This corresponds to the simplest extension to the \ac{SM} possible, with the smallest addition of new free parameters, and thus serves as an ideal test case against which to validate ideas and new techniques.
 The singlet model also has no direct gauge interactions, making it harder to detect experimentally. 
-Despite its simplicity, the singlet model can generate a \ac{SFO-EWPT} sufficient to explain electro-weak baryogenesis.
+Despite its simplicity, the singlet model can generate a \ac{SFO-EWPT} sufficient to explain \ac{EW} baryogenesis, and provides a complementary approach with respect to using exotic Higgs decays [[cite:&CarenaExotic]].
 The most general form of the Higgs scalar potential $V$ becomes (compare with [[eq:sm_potential]]):
 
 #+NAME: eq:singlet_couplings
 \begin{equation}
-V(\text{H}, \text{X}) = \mu^{2} (\text{H}^{\dagger} \text{H}) + \frac{1}{2} (\text{H}^{\dagger} \text{H})^{2} + c_{1}(\text{H}^{\dagger} \text{H})\text{X} + \frac{c_{2}}{2}(\text{H}^{\dagger} \text{H})\text{X}^{2} + \frac{\mx^{2}}{2}\text{X}^{2} + \frac{\kappa}{3}\text{X}^{3} + \frac{\lhhx}{2}\text{X}^{4}
+V(\text{H}, \text{S}) = \mu^{2} (\text{H}^{\dagger} \text{H}) + \frac{1}{2} (\text{H}^{\dagger} \text{H})^{2} + c_{1}(\text{H}^{\dagger} \text{H})\text{S} + \frac{c_{2}}{2}(\text{H}^{\dagger} \text{H})\text{S}^{2} + \frac{\mx^{2}}{2}\text{S}^{2} + \frac{\kappa}{3}\text{S}^{3} + \frac{\lambda_{\text{S}}}{2}\text{S}^{4}\:,
 \end{equation}
 
-\noindent In the formula, the constants $c_{1}$ and $c_{2}$ represent the connection between the \ac{SM} and the new singlet scalar.
+\noindent where the constants $c_{1}$ and $c_{2}$ represent the connection between the \ac{SM} and the new singlet scalar.
 At this point, some authors impose a \ztwo{} symmetry on the real singlet field, which is then softly broken by the \ac{VEV} of the singlet field, leading to the mixing of the eigenstates of the H and S fields.
-For this specific study, we consider instead a version of the singlet model where no \ztwo{} symmetry is imposed.
-This is motivated by the fact that the \ztwo{} symmetry is known to preclude terms of odd powers of the additional singlet scalar field,
+For this specific study, we consider instead a version of the singlet model where no \ztwo{} symmetry $S \rightarrow -S$ is imposed on the scalar field.
+This is motivated by the fact that the \ztwo{} symmetry precludes terms of odd powers of the additional singlet scalar field S,
 such as the ones multiplied by $c_{1}$ and $\kappa$ in [[eq:singlet_couplings]].
-The odd terms in S are known to be often responsible for a stronger first-order \ac{EW} phase transition [[cite:&papa1;&papa2]].
-Exploiting \ac{EW} symmetry breaking on the singlet model scalar potential, we are left with two mixing states.
-After mass diagonalization, the identification of one of the states with the \ac{SM} H boson reduces the number of uncorrelated parameters further from seven to five. 
-The other state is associated with a new particle X. 
-The couplings of the H boson and the X particle are given by
+The odd terms in S are known to be often responsible for a \ac{SFO-EWPT} [[cite:&papa1;&papa2]], as discussed in [[#sec:ewpt]].
+
+Exploiting \ac{EW} symmetry breaking, both H and S aquire a \ac{VEV}, where the Higgs \ac{VEV} $v_{0}$ is measured to be \SI{\sim 246}{\GeV}, using Fermi's constant (see [[eq:self_coupling]]), and the new S \ac{VEV} $x_{0}$ is unknown.
+Following the same procedure as for the Higgs mechanism ([[#sec:higgs_mechanism]]), we expand around the two fields: $\text{H} \rightarrow (v_{0}+h)/\sqrt{2}$ and $\text{S} \rightarrow x_{0} + s$.
+To obtain physical states, the mass matrix is again diagonalized, leading to:
+
+#+NAME: eq:diagonalization
+\begin{equation}
+\begin{aligned}
+&\text{P} = h\cos(\alpha) + s\sin(\alpha) \:\: ,  \\
+&\text{X} = -h\sin(\alpha) + s\cos(\alpha) \:\: ,
+\end{aligned}
+\end{equation}
+
+\noindent where the particle P can be identified with the measured \SI{125}{\GeV} Higgs boson, X is the new scalar arising from the additional field S, and $\alpha$ is the mixing angle.
+Following [[cite:&papa1]], we consider only the scenario where S is heavier than the Higgs boson.
+Notice that $\text{X} \rightarrow \text{H}\text{H}$ becomes kinematically possible as soon as $\mx > 2 \mh$.
+The association of the first particle P with the \ac{SM} H boson reduces the number of uncorrelated parameters in the singlet model from seven to five. 
+The couplings of the H boson and the X particle to any \ac{SM} particle $k$ are then simply given by:
 
 #+NAME: eq:singlet_couplings
 \begin{equation}
-g_{\text{H} kk} = g^{\text{SM}}_{\text{H} kk}\cos\alpha \quad \text{and} \quad g_{\text{X} kk} = -g^{\text{SM}}_{\text{H} kk}\sin\alpha, 
+g_{\text{H} kk} = g^{\text{SM}}_{\text{H} kk}\cos\alpha \quad \text{and} \quad g_{\text{X} kk} = -g^{\text{SM}}_{\text{H} kk}\sin\alpha \:\: , 
 \end{equation}
 
-\noindent where $\alpha$ is the mixing angle, and $k$ represents any SM particle.
-The angle $\alpha$ is the parameter that enables an indirect connection of the new scalar with the gauge and fermionic sectors of the \ac{SM}.
+\noindent where the angle $\alpha$ is the parameter that enables an indirect connection of the new scalar with the gauge and fermionic sectors of the \ac{SM}.
+When $\sin(\alpha)=0$, $\cos(\alpha)=1$ and the \ac{SM} is recovered.
+The hardest constraints on the singlet model usually come from searches for diboson final states, single Higgs combinations, and the measurements of the W mass [[cite:&singlet_model_robens_proceedings]].
 
-
-
-
-One question currently of high interest is whether new physics will enable a \ac{SFO-EWPT} phase transition.
-In general, this is studied in the context of exotic Higgs decays.
-However, one can also test this in models where the second scalar is heavier than the 125 GeV resonance.
-The hardest constraint on $\sin(\theta)$ comes from the measurements of the W mass @talk about current efforts to measure the W mass@
-
-[[cite:&singlet_model_robens_proceedings]]
-
-The additional scalar boson X predicted in the real-singlet model has the same relative couplings to SM particles as the SM H boson. Most searches for X → HH assume that the width of the X boson is much smaller than the reconstructed mass resolution, such that the NWA holds.
-We use the real-singlet model for a dedicated study of nonnegligible width and interference effects and present the results in Section 4.4. The corresponding model interpretations for the X → HH combination in the real-singlet model are presented there.
+In the next sections, we use the real singlet model for a dedicated study of interference effects arising from a non-zero X resonance width.
+We are particularly interested in knowing whether the \ac{NWA} holds everywhere and, if not, in which regions of the phase space.

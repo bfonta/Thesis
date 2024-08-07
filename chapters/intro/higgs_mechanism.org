@@ -1,4 +1,6 @@
-<<sec:HiggsMechanism>>
+:PROPERTIES:
+:CUSTOM_ID: sec:higgs_mechanism
+:END:
 
 @Explain how the non-zero value of the Higgs field that permeates the Universe breaks electro-weak symmetry (related to the EWPT section)@
 

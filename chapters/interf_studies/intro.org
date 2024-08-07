@@ -17,8 +17,8 @@ I have been responsible for a \ac{CMS} phenomenological study that assesses the 
 To the best of my knowledge, this is the first time such a complete study on the validity of the \ac{NWA} is performed, within \ac{CMS}.
 The study was originally motivated by my involvement in the \run{2} \hhbbtt{} analysis, the latter representing an ideal setup to test new HH models.
 In the end, the work done settled on a more general approach, not specific to any particular decay channel.
-The ongoing \run{3} should see the first appearances of non-\ac{NWA} setups, since deviations from the \ac{NWA} approach, including this work, have recently drawn a significant interest from the community.
-For simplicity, in this work we consider the resonant model with the smallest number of additional free parameters: the singlet model [[cite:&papa1]].
+The ongoing \run{3} should see the first appearances of non-\ac{NWA} results, since large deviations with respect to the \ac{NWA} approach, have recently drawn a significant interest from the community.
+For simplicity, we here consider the resonant model with the smallest number of additional free parameters: the singlet model [[cite:&papa1]].
 Similar studies could be repeated with other, more complex models, such as models containing two singlets [[cite:&papa3]].
 As a future step, we would like to extend the same study to the \bbtt{} channel, namely measuring the impact of the \ac{NWA} approach on the final limits of the analysis.
 The content of this chapter was published as part of a review paper covering the Higgs boson production searches through decays of heavy resonances [[cite:&interf_studies]].
