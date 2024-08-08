@@ -1,19 +1,21 @@
 
-Any conclusions to be drawn from this study naturally depend on thresholds imposed on $\rint$ and on the relative width $\widthratio$.
-In the following, we choose as benchmark points $\rint=\pm10$ and $\pm20\%$, and $\widthratio=5$, \num{10} and \SI{20}{\percent}.
+Any conclusions to be drawn from this study naturally depend on the thresholds imposed on $\rint$ and $\widthratio$.
+In the following, we choose as benchmark points $\rint=\pm10$ and $\pm20\%$, and $\widthratio=5$, \num{10} and \SI{20}{\percent}, the latter being reasonable when taking into account resolutions achieved by \ac{CMS}.
 The corresponding contours and exclusion limits derived from the HH combination in the singlet model are shown in [[fig:interf_maps]].
-The $\widthratio$ curves are obtained using [[eq:width]], and $\rint$ curves use 2D histograms, similar to the ones shown in [[fig:maps_2d]].
-The red HH exclusion region uses the total cross section histograms directly.
-Positive and negative interference ratio contours are shown in green ($\rint=\pm10\%$) and blue ($\rint=\pm20\%$).
+The red HH exclusion region uses the total cross section histograms as shown in [[fig:maps_2d]].
+The HH combination technically did not use the real singlet model, but rather the more generic Randall-Sundrum, \spin{0} model, usually consider for \spin{0} resonance searches.
+Given the similarities between the two models, and the fact that \ac{NWA} was considered, we don't expect any meaningful kinematic differences, and we believe it is sound to derive exclusion limits also in the context of the (\spin{0}) singlet model.
+The $\widthratio$ curves are obtained using [[eq:width]], and $\rint$ curves use 2D histograms similar to the total cross section ones, after considering [[eq:rint]].
+Positive and negative interference ratio contours are shown in green ($\rint=+10\%, +20\%$) and blue ($\rint=-10\%, -20\%$).
 The contours are found to swap positions at $\mx = 400\,\si{\GeV}$, likely because of the peak of the nonresonant HH distribution.
-For a given $\mx$, the quadratic dependence of $\gx$ on both $\sina$ and $\lhhx$ according to [[eq:width]] leads to dotted black elliptical isolines of constant $\widthratio$. 
-Those lines denote thresholds beyond which $\Gamma_{\text{X}}/\mx$ exceeds 5%, 10% or 20%, implying that the \ac{NWA} might not be accurate anymore.   
+For a given $\mx$, the quadratic dependence of $\gx$ on both $\sina$ and $\lhhx$ according to [[eq:width]] leads to the dotted black elliptical isolines of constant $\widthratio$.
+Those lines denote thresholds beyond which $\Gamma_{\text{X}}/\mx$ exceeds 5%, 10% or 20%, implying that the \ac{NWA} might no longer be accurate.
 The experimental bound from the HH combination discussed in [[#sec:combinations]] is obtained from the 95% \ac{CL} upper limit on $\sigma(\text{pp} \rightarrow \text{X})\mathcal{B}(\text{X} \rightarrow \text{HH})$, with the X production cross section growing with increasing $\sina$, and $\mathcal{B}(\text{X} \rightarrow \text{HH})$ growing with increasing $\lhhx$.
 We note that large values of $\sina$, corresponding to regions where the H boson is less \ac{SM}-like, also tend to be excluded by precision measurements of the Higgs boson, usually at \num{\sim 0.16} and above [[cite:&papa1]].
-For most of the studied mass points, sizable interference ratios occur only in parameter regions to which the current measurements are not yet sensitive.
+For most of the studied mass points, sizable interference ratios occur only in parameter regions to which the current measurements are not yet sensitive, or at too large values of $\sina$.
+In particular, for large resonance masses, with $\mx$ above \SI{600}{\GeV}, where interference effects tend to grow, measurements are far below the current sensitivity and might only play a role when the full data set from the HL-LHC becomes available [[cite:&HLHELHC]]. 
 However, there are regions at intermediate $\mx$ where the interpretation of \ac{NWA}-based limits for HH derived in the singlet model would solicit some care already in the \run{2} combination (for example $\mx = 500\,\si{\GeV}$, $\sina = 0.2$ and $\lhhx = 400\,\si{\GeV}$).
-On the other hand, exclusion limits for $\mx$ above \SI{600}{\GeV} are very loose.
-Interference effects are small for large resonance masses, and might only play a role when the full data set from the \ac{HL-LHC} becomes available [[cite:&HLHELHC]].
+It is important to note that such interpretations are generally model dependent.
 
 #+NAME: fig:interf_maps
 #+CAPTION: Contours of the variable $\rint$ as defined in [[eq:rint]] and discussed in the text, in the ($\sina$, $\lhhx$) plane for the singlet model with $\kl = 1$ and different resonance masses $\mx$ between (upper left) \num{280} and (lower right) \SI{800}{\GeV}. Contours are shown for $\rint$ values of (dashed blue) \num{-0.2}, (solid blue) \num{-0.1}, (solid green) \num{+0.1}, and (dashed green) \num{+0.2}. Regions that are excluded, at 95% \ac{CL}, from the combined likelihood analysis of the HH analyses presented in this report are indicated by red filled areas. Dashed black lines indicate constant relative widths of 5, 10, and 20%. Published in [[cite:&interf_studies]].
@@ -22,14 +24,19 @@ Interference effects are small for large resonance masses, and might only play a
 [[~/org/PhD/Thesis/figures/interferences/interf_maps.pdf]]
 #+END_figure
 
-The differential cross sections as a function of $\mhh$ are shown for exemplary points from the ($\sin\alpha$, $\lhhx$) parameter space in [[fig:interf_lineshapes_280]] for $\mx=280\,\si{\GeV}$, and in [[fig:interf_lineshapes_500]] for $\mx=500\,\si{\GeV}$. 
+The differential cross sections as a function of $\mhh$ are shown for a subset of points from the ($\sin\alpha$, $\lhhx$) parameter space in [[fig:interf_lineshapes_280]] for $\mx=280\,\si{\GeV}$, and in [[fig:interf_lineshapes_500]] for $\mx=500\,\si{\GeV}$. 
 The parameters are chosen such that $\widthratio = 5\%$, which is well below the detector resolution, and $\rint=\pm10\%$ or $\pm20\%$ so that sizable interference effects are expected. 
 The lineshapes show points in parameter space where the $\rint$ contours intersect with lines of constant $\widthratio = 5\%$ in [[fig:interf_maps]]. 
 The mass points of $\mx=280\,\si{\GeV}$ and $500\,\si{\GeV}$ have been chosen because these values are on the left- and right-hand side of the peak in the $\mhh$ distribution for nonresonant \ac{SM} HH production. 
-The line shapes are in general not affected strongly, especially for small $\mx$.
 The signature indicating the presence of the X resonance, including interference effects, can be assessed as the difference between $\sigma^{\text{full}}$ (red graph) and $\sigma^{\text{nonresonant}}$ (green graph).
-For $\mx=280\,\si{\GeV}$, this signature develops a peak-dip structure for a negative interference ratio, and a shoulder-like enhancement towards large masses for a positive interference ratio. 
-Similar effects, albeit on reversed sides of the peak, are visible for $\mx=500\,\si{\GeV}$. 
+In the $\mx=280\,\si{\GeV}$ case, the resonance peak is at a mass where the nonresonant background is low in comparison.
+The shape of central part of the peak is thus not much affected, and a classical bump hunt should still work.
+Still, the signature develops a peak-dip structure for a negative interference ratio, and a shoulder-like enhancement towards large masses for a positive interference ratio.
+For a precision measurement, which is not yet in our reach, a distortion of the signal shape would have to be taken into account.
+For $\mx=500\,\si{\GeV}$, in the top panels of [[fig:interf_lineshapes_500]], the signal shape is found to be strongly modified by the interference effect.
+Similar distortion effects as seen for $\mx=280\,\si{\GeV}$, albeit on reversed sides of the peak, are visible for $\mx=500\,\si{\GeV}$. 
+The distortion however occurs in a ($\sin\alpha$, $\lhhx$) parameter region still relatively far from the regions currently probed, as can be appreciated in [[fig:interf_maps]].
+The total cross section, for all $\mx$ values, is modified as specified by $\rint$.
 Although the expected interference effects clearly depend on the underlying model, they can be expected to be of mounting importance in the future as the \ac{LHC} data set increases.
 
 #+NAME: fig:interf_lineshapes_280
@@ -72,23 +79,8 @@ Compared to the present limits, the largest improvement is observed for large ma
 [[~/org/PhD/Thesis/figures/interferences/prospects.pdf]]
 #+END_figure
 
-We finalizez by noting that all conclusions drawn above are model dependent, and may well be different for other \ac{BSM} scenarios.
-We also recall that a (reasoanble) choice of parameter thresholds had to be made, and which could have been different.
-This represents however the first of such studies within \ac{CMS}, hinting already at the necessity of avoiding the \ac{NWA} for HH studies.
+We finalize this chapter by noting that all conclusions drawn above are model dependent, and may well be different for other \ac{BSM} scenarios.
+This means that distortions could be stronger and affected parameter regions could be larger.
+We also recall that a (reasonable) choice of parameter thresholds had to be made, and which could have been different.
+This represents however the first dedicated interference study within \ac{CMS}, hinting already at the necessity of avoiding the \ac{NWA} in future HH analyses.
 
-* Additional bibliography :noexport:
-+ p52 25-26: why do you say interference effects are small at large m_X? In Fig 41 as m_X goes up the area affected by > 10% interference is most of the plane…
-  We agree that this was ambiguously phrased. We changed the paragraph to:
-  “For most of the studied mass points, sizable interference ratios occur only in parameter regions to which the current measurements are either not yet sensitive, or at too large values of sina. In particular, for large resonance masses, where interference effects tend to grow, they are far below the current sensitivity and might only play a role when the full data set from the HL-LHC becomes available, as discussed in Sec. 5.3. However, there are regions at intermediate mX where (…). It is important to note that such interpretations are generally model dependent.”
-
-+ p52/54/55
-  -fig 42: I would argue that for a resonance search the interference doesn't matter in this case. Yes, the interference effects are sizeable, but the effects happen at a rate 20x lower than the resonance peak…
-  Following this suggestion, we have rephrased the text to:
-  “In the 280 GeV case, the resonance peak is at a mass where the nonresonant background is low in comparison; hence the central part of the peak is not much affected in its shape, and a classical bump hunt should still work. However, the total cross section is modified as specified by Rint. For a precision measurement, which is not yet in our reach, a distortion of the signal shape, either a peak-dip or peak-tail pattern depending on the relative sign of the amplitudes, would have to be taken into account. At MX=500 GeV, in the top panels of Fig. 43, the signal shape is found to be strongly modified by the interference effect. However, this occurs in a parameter region still relatively far from the regions currently probed, as can be appreciated in Fig. 41."
-
-  
-+ - p. 52, l. 24-27: "On the other hand, exclusion limits for mX above 600 GeV are very loose. Interference effects are small for large resonance masses, and might only play a role when the full data set from the HL-LHC [210] becomes available, as discussed in Section 5.3."
-  I am puzzled by this statement. Looking e.g. at the lower left plot in Fig. 41, the green and blue dashed and full lines where the interference effects are +- 10 or +-20 percent cross the red exclusion limit from the HH analyses. So these analyses would be sensitive to these considerable interference effects. Or do I misunderstand something here? The presence of the green and blue contours in the two lower plots also does not support the statement that interference effects are small for large resonance masses.
-
-  We have rephrased this discussion (keeping in mind that large values of sin(alpha) tend to be excluded by precision measurements of the H boson as mentioned in the previous paragraph):
-  “For most of the studied mass points, sizable interference ratios occur only in parameter regions to which the current measurements are either not yet sensitive, or at too large values of sina. In particular, for large resonance masses, where interference effects tend to grow, they are far below the current sensitivity and might only play a role when the full data set from the HL-LHC becomes available, as discussed in Sec. 5.3. However, there are regions at intermediate mX where (…). It is important to note that such interpretations are generally model dependent.”
