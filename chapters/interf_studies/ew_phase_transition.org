@@ -9,7 +9,9 @@ Only around a hundred picoseconds after the Big Bang, with a stark temperature d
 It is currently unknown how \ac{EWSB} takes place, specifically which kind of phase transition drives it.
 According to the \ac{SM}, the crossover should be smooth [[cite:&ewpt_type]], but such scenario is considered unnatural by some, due to the extreme distance between \ac{EW} and Planck scales.
 A \ac{SFO-EWPT} would point to \ac{BSM} effects, producing signatures that can be detected in next-generation space interferometers, such as the exciting \ac{LISA} [[cite:&lisa]] experiment (already validated by \ac{LISA} Pathfinder [[cite:&lisapathfinder]]) or the similar \ac{Decigo} experiment [[cite:&decigo]].
+Some \ac{BSM} models, including the singlet model discussed in [[#sec:singlet_model]], can create the required modifications to allow for a \ac{SFO-EWPT}.
 The conditions necessary to require a \ac{SFO-EWPT} can notably explain baryogenesis.
 In particular, new states can modify the Higgs potential and its dependence on temperature, potentially introducing false, metastable vacua.
-These would allow sudden phase transitions via the sci-fi-esque coalescence of vacuum bubbles[fn:: Vaccum decay, with the creation of vaccum bubbles, might destroy the Universe as we know it [[cite:&coleman;&coleman_luccia]]!].
+It is however important to note that, based on current $\mt$ and $\alpha_{\text{S}}$ constraints [[cite:&vacuum_stability_2024]], our Universe could be metastable without additional states.
+The false potential minima would allow sudden phase transitions via the sci-fi-esque coalescence of vacuum bubbles[fn:: Vaccum decay, with the creation of vaccum bubbles, might destroy the Universe as we know it [[cite:&coleman;&coleman_luccia]]!].
 We again point out the importance of HH production in the possible observation of variations of the Higgs potential, which might be connected to \ac{EWPT}, elucidating the matter-antimatter asymmetry experienced in our Universe [[cite:&hllhc_physics]].

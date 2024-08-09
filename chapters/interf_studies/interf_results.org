@@ -3,8 +3,8 @@ Any conclusions to be drawn from this study naturally depend on the thresholds i
 In the following, we choose as benchmark points $\rint=\pm10$ and $\pm20\%$, and $\widthratio=5$, \num{10} and \SI{20}{\percent}, the latter being reasonable when taking into account resolutions achieved by \ac{CMS}.
 The corresponding contours and exclusion limits derived from the HH combination in the singlet model are shown in [[fig:interf_maps]].
 The red HH exclusion region uses the total cross section histograms as shown in [[fig:maps_2d]].
-The HH combination technically did not use the real singlet model, but rather the more generic Randall-Sundrum, \spin{0} model, usually consider for \spin{0} resonance searches.
-Given the similarities between the two models, and the fact that \ac{NWA} was considered, we don't expect any meaningful kinematic differences, and we believe it is sound to derive exclusion limits also in the context of the (\spin{0}) singlet model.
+The HH combination technically did not use the real singlet model, but rather the Randall-Sundrum, \ac{NWA} \spin{0} model, usually considered for \spin{0} resonance searches [[cite:&xanda_benchmarks_wed]].
+Given that the two models have the same scalar coupling structure, interpretations in the context of the singlet model remain valid.
 The $\widthratio$ curves are obtained using [[eq:width]], and $\rint$ curves use 2D histograms similar to the total cross section ones, after considering [[eq:rint]].
 Positive and negative interference ratio contours are shown in green ($\rint=+10\%, +20\%$) and blue ($\rint=-10\%, -20\%$).
 The contours are found to swap positions at $\mx = 400\,\si{\GeV}$, likely because of the peak of the nonresonant HH distribution.

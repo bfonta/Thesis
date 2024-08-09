@@ -1,1 +1,6 @@
-<<sec::ResBSMHH>>
+:PROPERTIES:
+:CUSTOM_ID: sec:res_BSM_hh
+:END:
+
++ introduce spin0 and spin2 models here?
++ cite [[cite:&xanda_benchmarks_wed]]
