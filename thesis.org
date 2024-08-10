@@ -79,27 +79,26 @@
 
 * Trigger primitives reconstruction for the HGCAL Level-1 trigger
 ** The High Luminosity LHC
-#+INCLUDE: "chapters/hgcal/hllhc.org"
+#+INCLUDE: "chapters/hgcal/1_hllhc.org"
 *** Physics Motivation
-#+INCLUDE: "chapters/hgcal/hllhc_physics.org"
+#+INCLUDE: "chapters/hgcal/1p1_hllhc_physics.org"
 ** The High Granularity Calorimeter and other detector upgrades
 *** Detector Upgrades in CMS
-#+INCLUDE: "chapters/hgcal/cms_detector_upgrades.org"
+#+INCLUDE: "chapters/hgcal/2p1_cms_detector_upgrades.org"
 *** The CMS Phase-2 Trigger System
-#+INCLUDE: "chapters/hgcal/phase2_trigger_system.org"
+#+INCLUDE: "chapters/hgcal/2p2_phase2_trigger_system.org"
 *** The High Granularity Calorimeter
-#+INCLUDE: "chapters/hgcal/hgcal_introduction.org"
+#+INCLUDE: "chapters/hgcal/2p3_hgcal_introduction.org"
 *** Detector upgrades in other LHC experiments
-#+INCLUDE: "chapters/hgcal/hllhc_detector_upgrades.org"
+#+INCLUDE: "chapters/hgcal/2p4_hllhc_detector_upgrades.org"
 ** The reconstruction of trigger primitives in HGCAL
-#+INCLUDE: "chapters/hgcal/hgcal_trigger_primitives.org"
+#+INCLUDE: "chapters/hgcal/3_hgcal_trigger_primitives.org"
 ** Development of a simplified HGCAL geometry and event processing chain
-#+INCLUDE: "chapters/hgcal/event_geom_developments.org"
-
+#+INCLUDE: "chapters/hgcal/4_event_geom_developments.org"
 ** Cluster splitting
-#+INCLUDE: "chapters/hgcal/cluster_splits.org"
+#+INCLUDE: "chapters/hgcal/5_cluster_splits.org"
 ** Discussion and future directions
-#+INCLUDE: "chapters/hgcal/hgcal_discussion.org"
+#+INCLUDE: "chapters/hgcal/6_hgcal_discussion.org"
 
 
 * \xhhbbtt{}: Strategy definition

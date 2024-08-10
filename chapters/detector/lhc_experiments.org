@@ -14,9 +14,9 @@ It sits at a total length of \SI{46}{\meter}, a diameter of \SI{25}{\meter}, and
 It comprises a series of concentric and hermetic detection layers to measure the different kinds of particles produced at the \ac{PV}.
 The \ac{ID} is the first of such detectors, devised to measure the direction, momentum and charge of charged particles.
 It includes a Pixel Detector, a \ac{SCT}, and a \ac{TRT}.
-The \num{\sim 92e6} \ac{Si} pixels are located just \SI{3.3}{\cm} away from the beamline, spread across four detection layers, and reach a \SI{10}{\micro\meter} precision.
+The \num{\sim 92e6} \ac{Si} pixels are located just \SI{3.3}{\cm} away from the beamline, spread across four detection layers, and reach a \SI{10}{\um} precision.
 The \ac{SCT} follows, containing \num{\sim 6e6} strips, for a total of \SI{60}{\meter\squared} of silicon material.
-It reaches a precision of \SI{25}{\micro\meter}.
+It reaches a precision of \SI{25}{\um}.
 The last component of the \ac{ID} is the \ac{TRT}, which uses the different drift-tube gaseous technology, similar to what is present in the \ac{CMS} muon chambers.
 The \ac{TRT} exploits the production of transition radiation to extract information on the particle type.
 Since the radiation is proportional to the particle mass, lighter particles will emit more photons.
@@ -38,7 +38,7 @@ To keep the argon liquid, the calorimeters are kept at \SI{-184}{\degree}.
 A tile \ac{HAD} calorimeter follows, made of alternating steel absorber and active \ac{Sci} plastic layers, read out by \acp{PMT}.
 Around \num{420000} tiles are present, weighting almost \SI{2900}{\tonne}.
 Next, the outer regions of \ac{ATLAS} are taken by a large muon spectrometer.
-Five different subdetectors provide precise (\SI{\sim 100}{\micro\meter}) and fast (\SI{\sim 2.5}{\micro\second}) muon momentum measurements: \acp{MDT}, \acp{RPC}, \acp{TGC}, \acp{sTGC} and Micromegas.
+Five different subdetectors provide precise (\SI{\sim 100}{\um}) and fast (\SI{\sim 2.5}{\micro\second}) muon momentum measurements: \acp{MDT}, \acp{RPC}, \acp{TGC}, \acp{sTGC} and Micromegas.
 The muon trajectories are deviated thanks to additional magnets, including two endcap magnets and the largest toroidal magnetic ever built, located in the center of the experiment, which took almost a year to install.
 The magnets provide up to \SI{3.5}{\tesla}, and are located in between the muon subdetectors.
 Finally, a brief mention to the two-tiered trigger system: \ac{ATLAS} has implemented "trigger-level analysis" and "delayed stream" modes, which are similar to the \ac{CMS} scouting and parking strategies, respectively, discussed in [[ref:sec:cms_trigger_system]] [[cite:&atlas_delayed_stream]].

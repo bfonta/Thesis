@@ -54,7 +54,7 @@ In \ac{CMS}, pixels occupy the inner regions and are immediately surrounded by t
 [[~/org/PhD/Thesis/figures/detector/Tracker.pdf]]
 #+END_figure
 
-+ *Pixels*: The pixel detectors are organized in modules, for a total of \num{128e6} readout channels, each one measuring $100\times150\si{\micro\meter}$.
++ *Pixels*: The pixel detectors are organized in modules, for a total of \num{128e6} readout channels, each one measuring $100\times150\si{\um}$.
   In total, pixels covers a \ac{Si} area of \SI{1.1}{\meter\squared}.
   The pixel detector is optimized to have four-hit coverage up to $|\eta| \sim 2.5$, improved pattern recognition and track reconstruction, and added
   redundancy to cope with hit losses.
@@ -67,7 +67,7 @@ In \ac{CMS}, pixels occupy the inner regions and are immediately surrounded by t
   The cooling itself runs at \SI{-10}{\degree} and 30% relative humidity.
   The cooling, besides dissipating the generated power, also helps to mitigate the effects of the damages to the \ac{Si} pixels.
   This is intended to decrease phenomena such as unintended multiple scattering, pair production, and nuclear interactions, which can create /preshowers/, \ie{} particle showers developing before reaching the calorimeters.
-  Each pixel provides a spatial resolution of \SI{10}{\micro\meter} and \SI{20}{\micro\meter} along the transverse and longitudinal directions, respectively.
+  Each pixel provides a spatial resolution of \SI{10}{\um} and \SI{20}{\um} along the transverse and longitudinal directions, respectively.
 
 + *Strips*: The strip tracking detector is located at larger distances from the \ac{IP}, starting at \SI{20}{\cm} (see [[fig:tracker]]), and is made of \num{\sim 10e6} microstrip sensors, also organized in modules.
   Its \ac{eta} coverage resembles the one from the pixels.
@@ -78,7 +78,7 @@ In \ac{CMS}, pixels occupy the inner regions and are immediately surrounded by t
   This allows the determination of the third spatial component, while single-sided modules acess 2D positions only [[cite:&tracker_double_sided]].
   All components are cooled at \SI{-15}{\degree}.
   The barrel extends up to \SI{116}{\cm} in radius and the endcaps up to \SI{282}{\cm} in depth.
-  The strips achieve a resolution between \num{20} and \SI{50100}{\micro\meter} in the transverse plane, and between \num{200} and \SI{500}{\micro\meter} in the longitudinal direction.
+  The strips achieve a resolution between \num{20} and \SI{50100}{\um} in the transverse plane, and between \num{200} and \SI{500}{\um} in the longitudinal direction.
   The \ac{CMS} strips are the world largest tracking system ever, with \num{93000} strips covering \SI{198}{\meter\squared}.
 
 #+NAME: fig:tracker2
@@ -248,7 +248,7 @@ The structure of the muon chambers, including future upgrades, is shown in [[fig
 #+END_figure
 
 + *Drift Tubes:*
-  Present in the barrel section, they consist on drift chambers aiming at providing position resolutions of the order of \SI{100}{\micro\meter}.
+  Present in the barrel section, they consist on drift chambers aiming at providing position resolutions of the order of \SI{100}{\um}.
   A single \SI{4}{\cm}-wide tube contains a stretched wire within a gas volume.
   When a charged particle passes through the gas, it knocks electrons off the gas atoms.
   The electrons drift along the electric field's direction, reaching the anode and producing a signal.
@@ -264,7 +264,7 @@ The structure of the muon chambers, including future upgrades, is shown in [[fig
   Both displaced electrons and ions follow the electric field, inducing signals in the wires and strips, respectively.
   The relative positioning of wires and strips enables a 2D position measurement for each passing muon.
   The existence of six layers per \ac{CSC} module significantly increases the precision of the measurement.
-  The resolution for one layer is in the \num{80} to \SI{450}{\micro\meter} range, and approaches \SI{50}{\micro\meter} when combined.
+  The resolution for one layer is in the \num{80} to \SI{450}{\um} range, and approaches \SI{50}{\um} when combined.
 
 + *Resistive Plate Chambers*:
   They are present in both the barrel and in the endcap, and provide trigger redundancy with respect to \acp{DT} and \acp{CSC}.
@@ -281,7 +281,7 @@ The structure of the muon chambers, including future upgrades, is shown in [[fig
   The \acp{GEM} will improve the measurement of the muon polar bending angle, extending current trigger capabilities.
   The provided \ac{eta} coverage of the muon detectors will also be extended, up to the forward $1.55 < \eta < 2.18$ region.
   The chambers come in two alternating sizes, in order to maximize the \ac{eta} coverage while fitting in the available volume, which is constrained by the support structure.
-  Each \ac{GEM} chamber includes a stack of three \ac{GEM} foils, which consist of a \SI{50}{\micro\meter}-thick insulating polymer covered on both sides by thin copper conductive layers.
+  Each \ac{GEM} chamber includes a stack of three \ac{GEM} foils, which consist of a \SI{50}{\um}-thick insulating polymer covered on both sides by thin copper conductive layers.
   A strong electric field is applied between the two conductors.
   In total \num{36} superchambers have been installed, where each superchamber is made of two chambers and covers \num{10} degrees in \ac{phi}.
   The chambers are filled with a \num{70}/\num{30} \ch{Ar}/\ch{CO2} mixture, which is ionized by incident muons, and are segmented in strips along \ac{phi}.
@@ -290,7 +290,7 @@ The structure of the muon chambers, including future upgrades, is shown in [[fig
   The structure of the GE1/1 chambers can be seen in [[fig:gem_structure]].
   Its location is shown in red in [[fig:muonupgrade]], right behind the future endcap calorimeter.
   The \ac{CMS} \acp{GEM} are the largest \ac{GEM} system ever installed, with an area of \SI{\sim 0.5}{\meter\squared} per chamber.
-  They bring a combined spatial resolution of \SI{\sim 100}{\micro\meter} and a timing resolution of $\lesssim$ \SI{10}{\nano\second} [[cite:&gem_tdr]].
+  They bring a combined spatial resolution of \SI{\sim 100}{\um} and a timing resolution of $\lesssim$ \SI{10}{\nano\second} [[cite:&gem_tdr]].
   The greatest benefit of the early installation of part of this system is a \ac{L1} muon trigger improvement before the upgrades planned for the tracker and its trigger [[cite:&gem_trigger_data_format;&gem_tdr]].
 
 #+NAME: fig:gem_structure

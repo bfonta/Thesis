@@ -1,7 +1,8 @@
 
 Any conclusions to be drawn from this study naturally depend on the thresholds imposed on $\rint$ and $\widthratio$.
-In the following, we choose as benchmark points $\rint=\pm10$ and $\pm20\%$, and $\widthratio=5$, \num{10} and \SI{20}{\percent}, the latter being reasonable when taking into account resolutions achieved by \ac{CMS}.
-The corresponding contours and exclusion limits derived from the HH combination in the singlet model are shown in [[fig:interf_maps]].
+In the following, we choose as thresholds $\rint=\pm10$ and $\pm20\%$, and $\widthratio=5$, \num{10} and \SI{20}{\percent}.
+The $\widthratio$ values are defined taking into account jet resolutions achieved by \ac{CMS}, which amount typically to 15 to 20% at \SI{30}{\GeV}, 10% at \SI{100}{\GeV}, and 5% at \SI{1}{\TeV} [[cite:&jet_resolution_run2]].
+The contours corresponding to the thresholds above and the exclusion limits derived from the HH combination in the singlet model are shown in [[fig:interf_maps]].
 The red HH exclusion region uses the total cross section histograms as shown in [[fig:maps_2d]].
 The HH combination technically did not use the real singlet model, but rather the Randall-Sundrum, \ac{NWA} \spin{0} model, usually considered for \spin{0} resonance searches [[cite:&xanda_benchmarks_wed]].
 Given that the two models have the same scalar coupling structure, interpretations in the context of the singlet model remain valid.

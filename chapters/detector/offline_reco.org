@@ -113,7 +113,7 @@ The same approach is also able to associate converted bremsstrahlung photons to 
 The task is particularly challenging given constant overlaps between photons, neutral and charged hadrons, and electrons with their breamsstrahlung energy deposits.
 Clustering also plays an essential role in cases where the tracker underperforms: low track efficiency or high track $\pt$.
 The algorithm starts by defining /seeds/, which correspond to detector elements with an energy larger than its neighbours and larger than a predefined threshold.
-Topological clusters are then built, centered on the seeds, based on the physical connection of neighbouring cells with energies larger than a given \ac{S-N} threshold.
+Topological clusters are then built, centered on the seeds, based on the physical connection of neighbouring cells with energies larger than a given S/N threshold.
 An iterative algorithm based on a Gaussian mixing model is used to reconstruct clusters within the topological clusters.
 The algorithm postulates a fixed number of seeds, and associates a gaussian function to each, allowing some room for energy sharing across clusters.
 The positions and energies of the clusters are obtained via a maximum likelihood fit.

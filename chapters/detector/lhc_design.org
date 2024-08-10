@@ -50,12 +50,12 @@ F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}
 | $N_{\text{b}}$   | particles per bunch              | \num{1.15e11}          |
 | $n_{\text{b}}$   | number of bunches per beam       | \num{2808}             |
 | $f_{\text{rev}}$ | revolution frequency             | \SI{11.2}{\kilo\hertz} |
-| $\epsilon_n$            | transverse beam emittance        | \SI{3.75}{\micro\meter}     |
+| $\epsilon_n$            | transverse beam emittance        | \SI{3.75}{\um}   |
 | $\beta^*$            | beta function (focal length)     | \SI{0.55}{\meter}      |
 | $\Delta t_{\text{b}}$ | bunches spacing                  | \SI{25}{\nano\second}  |
 | $\theta_{\text{c}}$   | collision angle                  | \SI{285}{\micro\radian}     |
 | $\sigma_z$            | bunches transverse r.m.s at IP   | \SI{7.55}{\cm}         |
-| $\sigma_{xy}$         | bunches longitudinal r.m.s at IP | \SI{16.7}{\micro\meter}     |
+| $\sigma_{xy}$         | bunches longitudinal r.m.s at IP | \SI{16.7}{\um}        |
 
 Goal for Run 3 is to approx. double the luminosity for ATLAS and CMS
 
