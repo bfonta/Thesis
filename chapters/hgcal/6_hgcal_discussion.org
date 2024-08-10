@@ -1,0 +1,39 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:hgcal_discussion
+:END:
+
+In this chapter I introduced the \ac{HL-LHC} and its upgrades, focusing mostly on the future \ac{HGCAL}.
+The reconstruction of \acp{TP} in \ac{HGCAL} was described in detail, in order to contextualize the developments I brought forward.
+My contributions covered two interdependent axis: software development and algorithm design and implementation.
+Concerning the former, a new =Python= chain was developed in order to replicate the \ac{L1} \ac{S2} processing chain.
+The chain is and will likely remain an important piece of software for people working on \ac{TPG} at \ac{HGCAL}.
+In parallel, a simplified geometry was implemented, useful for visualization and sharing.
+In general, the developments simplify testing, validation and tuning of any current and future algorithms.
+On the algorithmic axis, I designed and implemented from scratch two new algorithms, \bsplits{} and the hexagonal seeding.
+The former mitigates cluster splits without affecting firmware resources, while the latter showcases an elegant solution to the biases introduced by mismatched coordinate systems.
+Both algorithms represent viable options to be implemented at the \ac{L1} \ac{S2}, together with some alternative approaches mentioned in [[#sec:algo_alternatives]].
+
+Several future research directions are available and required.
+Of particular note, only 0 \ac{PU} single photon guns were studied in depth.
+Despite checks on \num{200} \ac{PU} samples suggesting a correct data processing behaviour, extensive studies are necessary.
+In particular, any algorithm to be added to \ac{S2} must be exposed to the challenging \num{200} \ac{PU} environment, and compared to existing alternatives.
+To give an example, the presence of \ac{PU} background noise might affect the capability to mitigate cluster splits.
+In addition, different types of particles must be tested, such as taus, hadrons and \acp{LLP}.
+Their inclusion requires considering the information coming from the \ac{EM} and \ac{HAD} sections of the detector, and might imply the adaptation and optimization of current algorithms.
+As an example of the issues one might encounter, tau leptons naturally create cluster splits via one or three pronged decays, but a single cluster can be obtained also from a three-pronged decay.
+It is also currently not clear whether seeding algorithms require information from the \ac{Sci} section.
+Another point is that unexpected corner cases might create problems that are currently not foreseen.
+During the testing of the hexagonal seeding, for instance, unexpected very specific failure modes were found.
+Failures can only be addressed if caught, and this requires systematic tests with large and diverse samples.
+
+Eventually all algorithms must be tested in the firmware before deployment.
+This becomes increasingly crucial as the \ac{HGCAL} installation deadline approaches.
+A logical and much awaited extension of this chapter's work consists on using modern tools to include \bsplits{} and the new seeding algorithm in \acp{FPGA}.
+The idea is to rewrite the current implementations in a pragma-enriched \texttt{C++} version, which can be converted to \ac{RTL} via =Vitis= / =Vivado= \ac{HLS} [[cite:&vitis_hls]].
+\Ac{RTL} can be converted to \ac{FPGA}-interpretable code by =Vivado=.
+The challenge mostly lies on writing the RTL interface between the modules processed by the \ac{ECON-T} and the \ac{BE} algorithms.
+A data structure to pass the \acp{TC} in a module should be defined, together with a mapping between \coordsb{} and the \ac{TC} positions in the data structure.
+
+On a final note, I believe the \ac{HGCAL} \ac{L1} chain represents an ideal playground to test modern optimization approaches with deep learning and/or automatic differentiation [[cite:&automatic_differentiation]].
+A robust parameter tuning of all algorithms would clearly fit the needs of the \ac{TPG}, and would most certainly improve physics performance.
+However, pragmaticity should rule in the final years before \ac{HGCAL}'s deployment, and priorities should be such that they provide a working \ac{TPG} chain within the imposed constraints and deadlines.

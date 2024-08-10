@@ -1,0 +1,44 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:hllhc
+:END:
+
+The first phase of the \ac{LHC} has been running since 2010, spanning three data runs, the last of which, \run{3}, is currently approaching its end of life, foreseen in the last quarter of 2025.
+Phase-2 will soon follow with the new \ac{HL-LHC} [[cite:&hllhc]], which is planned to start taking data in 2029, extending \ac{HEP} studies well into the future (see ref:fig:hllhc) [[cite:&hllhc_evolution_paper1;&hllhc_evolution_paper2]].
+An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of \num{10} years, corresponding to \SI{90}{\percent} of the total data collected by the \ac{LHC}.
+The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SI{7.5e34}{\per\cm\squared\per\second}.
+This is more than twice the \ac{LHC}’s current value.
+These conditions correspond, in the ultimate HL-LHC configuration, to up to 200 \ac{PU}, \SI{2}{\mega\gray} of total ionizing dose[fn:: One Gray is defined as the absorption of one Joule of radiation energy per kilogram.] and a fluence of up to \SI{e16}{\nequiv}.
+The neutron equivalent fluence, in this context, is defined as the number of \SI{1}{\MeV} neutrons per \si{\per\cm\squared} traversing the detector material, and serves as a measure for potential radiation damage.
+The normalization at \SI{1}{\MeV} is chosen both due to historical reasons and the fact that expected neutron spectra at the \ac{HL-LHC} typically have a probability density peaking in that region. 
+For comparison with the \ac{HL-LHC}, the \ac{LHC} currently brings an average of \num{\sim 50} \ac{PU} interactions [[cite:&pileup_twiki]], a dose of the order of \SI{0.1}{\mega\gray} and a fluence of \SI{\sim e15}{\nequiv} (see [[ref:sec:lhc_design]]) [[cite:&lhc_fluences]].
+To give an example of how dramatic the changes are expected to be, current \ac{CMS} endcap calorimeters are designed to sustain up to \SI{500}{\per\femto\barn}, \num{8} times less than what the \ac{HL-LHC} may bring.
+Extensive detector upgrades are therefore required for many \ac{LHC} experiments, which will be detailed in [[ref:sec:hllhc_detector_upgrades,sec:cms_detector_upgrades]].
+The operational scenario of the \ac{HL-LHC} is continuously evolving, with some uncertainties still present.
+Given past delays and current unknowns, it is still soon to definitely confirm current operational plans.
+
+#+ATTR_LATEX: :width 1.\textwidth
+#+CAPTION: The \ac{HL-LHC} project timeline [[cite:&hllhc_website]]. \run{3} is currently on-going, and the \ac{HL-LHC} is planned to start collecting data in 2029, following three years of \ac{LHC} shutdown for detector upgrades. Data collection should end in the early 2040's. Current plans are still subject to change.
+#+NAME: fig:hllhc
+[[~/org/PhD/Thesis/figures/hgcal/hllhc.pdf]]
+
+#+NAME: fig:lumi_plans_hllhc
+#+CAPTION: Planned peak and integrated luminosities during the \ac{HL-LHC}. Three data-taking runs are foreseen, interspersed by three \acp{LS}. Two scenarios with different \ac{YETS} durations are shown, where shorter stops have the potential for significant integrated luminosity increases. The schedule was last updated on January 2022. Taken from [[cite:&hllhc_evolution_paper2]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/lhc/lumi_evolution_hllhc.pdf]]
+#+END_figure
+
+
+* Lumi measurements can improve due to :noexport:
++ [[cite:&hllhc_physics]]
++ high precision luminosity detectors are needed to provide high-granularity bunch-by-bunch luminosity measurements, with very good linearity and stability.
++ Advanced, multiple and redundant VdM scans and refined VdM analysis techniques can lead to substantial improvements.
++ Novel techniques, such as the measurement of fiducial Z boson production rates exploiting in-situ efficiency determination, provide handles for advancement of the integrated luminosity uncertainty towards the 1% target
+
+* ToDo [0/2] :noexport:
++ [ ] briefly mention FCC? https://fccis.web.cern.ch/conceptual-design-report-volumes
++ [ ] technological challenges: "Among these are cutting-edge 11–12 Tesla superconducting magnets, compact
+superconducting cavities for beam rotation with ultra-precise phase control, new technology and physical
+processes for beam collimation and 100 metre-long high-power superconducting links with negligible energy
+dissipation, all of which required several years of dedicated R&D effort on a global international level." [[cite:&hllhc]]
++ https://indico.cern.ch/event/1418024/contributions/5960937/attachments/2883360/5052485/JM%20CMS%20Jun%202024.pdf

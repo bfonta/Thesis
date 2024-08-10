@@ -1,0 +1,110 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:phase2_trigger_system
+:END:
+
+Following the current trigger design, already described in [[#sec:cms_trigger_system]], the \ac{CMS} trigger and \ac{DAQ} will continue to feature an online synchronous hardware-based \ac{L1} trigger, consisting of custom electronic boards, followed by the \ac{HLT}, running software algorithms offline and asynchronously [[cite:&hlttdr]].
+Hand in hand with critical detector upgrades, a complete redesign of the \ac{L1} \ac{CMS} trigger system is foreseen [[cite:&l1TDR]].
+For the first time, the tracker will be taken into account for \ac{L1} decisions, and the granularity of the endcaps will increase dramatically.
+The all-hardware data processing chain focus on latency reduction by carefully optimizing available resources, from \ac{FPGA} memory and throughput allocation, to high-speed links for data transfer.
+The new trigger algorithms and architecture must deal with the higher luminosity and increased pile-up, while accessing all the discovery potential the new or updated detectors can provide.
+To cope with the above, the total latency of the system is increased from \SI{3.8}{\micro\second} in \phase{1} to \SI{12.5}{\micro\second}, and the output trigger rate from the current \SI{\sim 100}{\kilo\hertz} to \SI{750}{\kilo\hertz}, maintaining the efficiency of the signal selection to the levels exhibited in \phase{1}, while keeping or enhancing the sensitivity to \ac{NP}.
+The \phase{2} trigger architecture will become more stratified and interdependent, consisting on four initially separate data processing paths.
+The implementation of global triggers (\ac{GCT}, \ac{GMT} and \ac{GTT}, plus the final \ac{GT} to where all paths converge) allows for resource reduction when implementing the \ac{PF}-like algorithms in the newly introduced correlator layers.
+The correlators combine the information from multiple subdetectors to achieve near-\ac{HLT} sensitivity, exploiting a novel suite of intricate algorithms.
+This structure is complemented by the introduction of an innovative data scouting system, which further attests to the almost real-time analysis \ac{L1} will provide.
+The full architecture of the \phase{2} \ac{L1} trigger is illustrated in [[fig:l1_trigger_design_phase2]], and [[fig:tps_to_physics]] displays the complex interplay between \acp{TP} from multiple subdetectors, trigger objects, \ac{L1} algorithms and the physics being targeted.
+
+#+NAME: fig:l1_trigger_design_phase2
+#+CAPTION: Diagram of the \ac{CMS} \ac{L1} \phase{2} trigger design, to be compared with [[fig:l1_trigger_design_phase1]] (left). The calorimeter trigger is represented on the left. The track finder in the center sends tracking information to the correlator, the \ac{GTT}, and the \ac{GMT}. The muon trigger architecture is represented on the right and composed of three muon track finders. The correlator in the center is composed of 2 layers for \ac{PF} processing. The \ac{GT} receives all trigger information for the final decision. For each architecture component, the information about the time multiplexing period (TMUX), the regional segmentation (RS) in \ac{eta} or \ac{phi}, the functional segmentation (FS), and the number of \acp{FPGA} are specified. Taken from [[cite:&l1TDR]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/L1TriggerDesignPhase2.pdf]]
+#+END_figure
+
+#+NAME: fig:tps_to_physics
+#+CAPTION: Summary diagram showcasing the interdependence of \acp{TP}, among which the ones coming from \ac{HGCAL}, and physics, including HH processes. The links between \acp{TP}, trigger objects, \ac{L1} algorithms and physics channels are depicted. \Acp{TP} include crystals, towers and clusters from calorimeters (\ac{ECAL}, \ac{HCAL}, \ac{HF} and \ac{HGCAL}), stubs and clusters from the muon detectors (\ac{DT}, \ac{RPC}, \ac{CSC}, \ac{GEM} and \ac{iRPC}), as well as \ac{L1} tracks from the track finder. The trigger objects types produced by the \phase{2} \ac{L1} trigger system are represented: standalone, track-matched, tracker-based and \ac{PF}/\ac{PUPPI}-based. Taken from [[cite:&l1TDR]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/TPtoPhysics.pdf]]
+#+END_figure
+
+\myparagraph{Calorimeter Trigger}
+
+\noindent The upgrade of the barrel and endcap calorimeters will be exploited to process high-granularity data to produce cluster-related variables, leading to calorimetric \acp{TP}.
+Additionally, using the \acp{HF} will extend the \ac{eta} coverage up to $\eta=5$.
+The \ac{GCT} assembles all \acp{TP} and builds calorimeter-only objects, such as hadronically decaying taus, $e/\gamma$ candidates, jets and energy sums.
+The data is then sent to the correlators with a \SI{5}{\micro\second} latency, which also corresponds to the \ac{HGCAL} allowed latency, of which \SI{1}{\micro\second} is used only for transfering the data from the \ac{BE} to the \ac{GCT}.
+Some global calorimetric quantities are sent directly to the \ac{GT}, within \SI{9}{\micro\second} maximum.
+A detailed description of the reconstruction of trigger primitives in the future \ac{HGCAL} will be provided in [[#sec:hgcal_trigger_primitives]], as it is closely related to part of the work developed in the context of this thesis.
+
+\myparagraph{Track Trigger}
+
+\noindent For the first time in \ac{CMS}, it will be possible to reconstruct charged particle tracks in the tracker at \SI{40}{\mega\hertz}.
+\Acp{TP} are produced in the track finder processors of the \ac{OT} \ac{BE}, and are sent to the \ac{GTT}.
+There, the reconstruction of the \ac{PV} and tracker-only objects like jets and missing transverse momentum takes place.
+If needed, the \ac{GTT} can also propagate extra copies of tracks to other parts of the trigger system.
+The new track trigger will be able to mitigate the negative effects of \ac{PU} in \ac{PF} via a precise measurement of the position of the \ac{PV} at \ac{L1}.
+
+\myparagraph{Muon Trigger}
+
+\noindent The muon detectors' redundancy will be kept, and additional \ac{GEM} stations will offer a coverage of up to $\eta = 2.8$.
+The processing of \acp{TP} by the muon track finders will follow the same region-based structure as in \phase{1}.
+The \ac{GMT} thus receives data from the \ac{EMTF}, \ac{OMTF} and \ac{BMTF}, but also directly from the tracker to build muon candidates.
+The ability to reconstruct tracks at \ac{L1} will bring some muon reconstruction capabilities previously available for offline reconstruction only.
+Even without considering the tracker, new possibilities will open-up: triggering on muon-like \ac{LLP} decays or slow phenomena, such as \ac{NP} with \acp{HSCP}.
+Once all processing is finalized, the \ac{GMT} propagates the information to the \ac{GT}.
+
+\myparagraph{Particle Flow Trigger}
+
+\noindent Consisting on two flexible correlator layers, a \ac{PF}-like approach called \ac{CT} is introduced for the first time in \ac{CMS} at \ac{L1}.
+It optimally combines data from the calorimetry, tracking and muon trigger paths.
+The first layer builds the high-level \ac{PF} candidates, and the second implements identification and isolation algorithms, building objects such as electrons, muons, jets, hadronic taus and energy sums.
+The correlator might also host a simplified version of \ac{PUPPI}, with the goal of reducing the energy resolution degradation from \ac{PU}.
+The \ac{CT} finally sends a list of sorted objects to the \ac{GT}.
+
+\myparagraph{Global Trigger}
+
+\noindent The outputs from the \ac{GCT}, \ac{GMT}, \ac{GTT}, and \ac{CT} are merged, and correlations between variables from all processed objects are exploited to further enhance the sensitivity of the scalable \ac{GT}.
+Examples of such correlations are $\Delta \eta$, $\Delta\text{R}$, and invariant masses between trigger objects.
+An event accept or reject decision is made based on a menu of \num{\sim 1000} algorithms, expected to continuously evolve based on lessons learned during data-taking.
+Improved hardware capabilities, together with striking advancements in available software libraries for firmware implementation and testing, like =hls4ml= [[cite:&hls4ml]], bring new \ac{NN}-based algorithms to the table.
+Some examples include autoencoders to keep potential \ac{NP} events from being rejected.
+Despite \ac{NN}'s high resource consumption, current hardware capabilities suggest that their inclusion is feasible, also given that the \ac{GT}'s logic is expected to run at frequencies at least \num{6} times larger than the proton collision rate.
+Other functionalities of the \ac{GT} include the setting of prescales and the monitoring of trigger rates.
+The \ac{GT} also serves as an interface to external triggers, such as the ones related to the \ac{CTPPS} experiment, or to beam and luminosity monitoring.
+External triggers can be used in conjunction with other triggers in the same algorithms.
+Each of the \ac{GT} boards sends a readout record to the \ac{DAQ}, containing information like \ac{GT} inputs and algorithm-specific bits.
+This is in turn useful for the \ac{HLT}, which can use the information to seed its own reconstruction with \ac{L1} objects, and reject seemingly interesting events at \ac{HLT} level which were found by the \ac{L1}.
+In total, the \ac{GT} is expected to have a latency of \SI{\sim 1}{\micro\second}.
+Future upgrades including \ac{MTD} timing information are also being envisaged.
+The addition would bring a powerful handle to observe displaced signals.
+
+\myparagraph{Scouting system}
+
+\noindent A serious advancement of the future trigger capabilities is the inclusion of the data scouting strategy already at \ac{L1}.
+Spare optical outputs from various \acp{FPGA} will perform zero suppression and preprocessing at the beam collision rate of \SI{40}{\mega\hertz}.
+This is the first time that \ac{CMS} is able to process \ac{L1} data in a triggerless fashion.
+It must be noted that the data stored by the scouting stream will have the same limitations of \ac{L1} data in what concerns purity and resolution.
+The added scouting data will enable the study of processes lacking a clear signature for data reduction at \ac{L1}, and also phenomena where the definition of \acp{TP} is not essential for competitive measurements.
+Moreover, the scouting will enable a detailed monitoring of the entire trigger system, and bring anomaly detection in quasi-real-time.
+Finally, the scouting will introduce some complementary luminosity measurements based on observed physics processes.
+
+\myparagraph{HLT}
+
+\noindent The \phase{2} \ac{HLT} will analyse the full \SI{750}{\kilo\hertz} \ac{L1} output, which translates to a \SI{\sim 50}{\tera\bit\per\second} throughput, with the event size increasing to approximately \SI{8.5}{\mega\byte}.
+The \num{30}-fold throughput increase with respect to \phase{1} IS mostly driven by the upgraded tracker and the new \ac{HGCAL}, which bring a tremendous increase in granularity.
+The reconstruction of these high granularity objects will be based on iterative procedures, namely Kalman filter algorithms with deterministic annealing for the tracker, and \ac{TICL} for \ac{HGCAL} [[cite:&hlt_phase2_thiago]].
+The goal of the \ac{HLT} online selection will be to balance the following three key elements [[cite:&hlttdr]]:
++ preserve and possibly improve the \ac{CMS} physics reach for the most important processes, without strongly modifying current thresholds and efficiencies;
++ reduce the event rate by a factor of \num{100}, just like it is being currently done in \phase{1}, since a \SI{7.5}{\kilo\hertz} \ac{HLT} output rate is considered the maximum supported for permanent storage and offline processing;
++ implement new algorithms to achieve the above within available resources.
+
+The decision by \ac{CMS} to adopt a heterogeneous \ac{HLT} farm already in \run{3} inaugurates a novel trigger approach which will be further explored and extended during \phase{2}.
+The offline reconstruction workflow is expected to be offloaded to \acp{GPU} by 50% and 80% by the end of \run{4} and \run{5}, respectively [[cite:&refCUDA1]].
+This estimate includes the detectors not yet installed, such as \ac{HGCAL}.
+The adoption of a heterogeneous architecture also potentially reduces the computing cost necessary to satisfy the CMS physics programme, since computation on GPUs might be cheaper than on CPUs [[cite:&refCUDA2]].
+Other potential improvements are currently being explored, such as the migration from traditional \ac{CMS} data formats to \acp{SoA}, for better \ac{CPU} and \ac{GPU} utilization.
+Additionally, the rewriting of many algorithms to parallelization-friendly versions will boost their performance.
+Furthermore, some approaches to write truly heterogneneous code via abstract interfaces is being considered, in order to improve code reuse (and this avoid code duplication), and avoid the axcessive dependence on particular vendor of \ac{CPU} and/or \ac{GPU} processors.
+The =alpaka= cite:&alpaka1;&alpaka2;&alpaka3 and =Kokkos= [[cite:&kokkos1;&kokkos2]] portability libraries represent some of the most promising solutions. to reduce code duplication and dependency on the architecture of a particular vendor [[cite:&hlt_run3_gpus;&hlt_alpaka]].
+
