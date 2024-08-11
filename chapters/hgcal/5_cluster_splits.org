@@ -3,19 +3,19 @@
 :END:
 
 The framework described in [[#sec:event_geom_developments]] is put to use in a concrete scenario.
-Before the start of the thesis here described, it had been observed that some (relatively rare) events processed by the \ac{L1} \ac{S2} chain identified more clusters than the number of generated particles interacting in the detector.
-For a single particle, this implies measuring two energy clusters from just one generated particle.
+Before the start of the thesis here described, it had been observed that the \ac{L1} \ac{S2} chain, for uncoverted photon events, ocasionally identified more clusters than the number of unconverted photons originally generated in the detector.
+For a single photon, this corresponds to measuring two energy clusters from just one generated particle.
 We say that the cluster that should have been measured was "split", hence the term /cluster splits/.
-At the \ac{TPG} level of the reconstruction, each cluster is supposed to correspond to a single particle.
+At the \ac{TPG} level of the reconstruction, each cluster should ideally correspond to a single particle.
 A different behaviour can degrade the detector's energy and position resolution, since:
-- particles can be reconstructed with a lower energy than their true energy when only one cluster passes additional selections, since the energy distribution across the clusters can be asymmetric;
-- particles can be reconstructed with a shifted position when only one cluster passes additional selections, since part of the energy deposits will not contribute to the position calculation (see [[eq:weighted_position]]);
-- the multiplicity of particles in the event can be affected, when both clusters are interpreted as separate particles.
++ particles can be reconstructed with a lower energy than their true energy when only one cluster passes additional selections, since the energy distribution across the clusters can be asymmetric;
++ particles can be reconstructed with a shifted position when only one cluster passes additional selections, since part of the energy deposits will not contribute to the position calculation (see [[eq:weighted_position]]);
++ the multiplicity of particles in the event can be affected, when both clusters are interpreted as separate particles.
 The above can negatively impact the \ac{L1} decision, and thus trigger efficiency.
 When studying cluster splits we require the following additional selections:
 + $(E_{\text{Cluster}}-E_{\text{Gen}})/E_{\text{Gen}} < -0.35$, which only selects events where a split very likely happened, since on average the energy is equally split across the two clusters;
 + $\eta \in \left[1.7, 2.8\right]$, to avoid unwanted reconstruction effects at \ac{HGCAL} boundaries, where showers might be transversally cut.
-With these selections, we observe cluster splits in \SI{\sim 1}{\percent} of single photon events.
+With these selections, we observe cluster splits in \SI{\sim 1}{\percent} of single unconverted photon events.
 In the remainder of this section we explain the causes for cluster splits, and detail the techniques developed in the context of this thesis to mitigate or remove it.
 
 * The origin of cluster splits
@@ -25,7 +25,7 @@ In the remainder of this section we explain the causes for cluster splits, and d
 
 As seen in [[#sec:hgcal_trigger_primitives]], the first step of the \ac{S2} consists on reducing the detector's granularity by mapping \acp{TC} into projective \coordsa{} bins.
 The physical dimensions of the bins are strongly dependent on their location: bins closer to the beamline (low \rz{}) will be much smaller than bins closer to the outer boundary of the \ac{Si} layers (high \rz{}).
-Given \num{42} \rz{} bins and \num{216} \ac{phi} bins in a \ac{CE-E} layer starting at $\text{R}=30\si{\cm}$ and ending at $\text{R}=150\si{\cm}$, the ratio of the physical areas of two far-away bins can reach a factor of \num{5}.
+Given \num{42} \rz{} bins and \num{216} \ac{phi} bins in a \ac{CE-E} layer starting at $\text{R}=\,30\si{\cm}$ and ending at $\text{R}=150\,\si{\cm}$, the ratio of the physical areas of two far-away bins can reach a factor of \num{5}.
 In spite of the varying bin area, the distribution of \acp{TC} across \ac{HGCAL} is uniform.
 This implies a smaller number of \acp{TC} for low \rz{} bins.
 This is intended, as regions closer to the beamline expect larger energy density or occupancies, and thus the binning should be finer to increase the local resolution.
@@ -50,8 +50,8 @@ The effect is overwhelmignly more present in the low \rz{} region, where bins ar
 
 Previous studies [[cite:&sudah_ahuja]] have shown, unsurprisingly, that defining a \rz{}-dependent binning can mitigate the splits.
 Specifically, binning schemes with finer bins in the low \rz{} regions improve the energy resolution.
-However, and taking into account the intended final \ac{FPGA} implementation, the added complexity requires additional firmware resorces, making it impractical.
-In what follows, we propose a solution which, besides performing better, does not impact hardware resources.  
+However, and taking into account the intended final \ac{FPGA} implementation, the added complexity requires additional firmware resources, making it impractical.
+In what follows, we propose a solution which does not impact hardware resources.  
 
 * The bye-splits iterative algorithm
 
@@ -124,47 +124,31 @@ This number drops to \SI{\sim 11}{\percent} (\SI{\sim 8}{\percent}) for the 3\te
 The algorithm removes a significant portion of cluster splits.
 We show one such example in [[fig:split]], where the effect of the smearing step is also illustrated.
 Significant improvements in energy response and position resolution are obtained, as one can observe on the left column of [[fig:byesplits_res]].
-The response is here defined by dividing the reconstructed $\pt$ by the generated one, where a value of \num{1} indicates that all the momentum was reconstructed.
-The resolutions are instead calculated by taking the difference between reconstructed and generated \ac{eta} or \ac{phi}, where a value of \num{0} indicates a perfect matching between generated and reconstructed positions.
+The energy response is here defined by dividing the reconstructed $\pt$ by the generated one, where a value of \num{1} indicates that all the momentum was reconstructed.
+The position resolutions are instead calculated by taking the difference between reconstructed and generated \ac{eta} or \ac{phi}, where a value of \num{0} indicates a perfect matching between generated and reconstructed positions.
 \bsplits{} has also been validated by verifying that it does not impact the reconstruction of samples where no cluster splits are present.
 The sample was obtained requiring an energy response above \num{-0.2}, instead of below \num{-0.35}.
 The algorithm is thus a strong candidate for the final design of the reconstruction chain.
-Adapted versions of \bsplits{} are currently also being considered to address \ac{TC} assignment to \ac{phi} bins in the upstream \ac{ECON-T}/\ac{S1} interface.
+# Adapted versions of \bsplits{} are currently also being considered to address \ac{TC} assignment to \ac{phi} bins in the upstream \ac{ECON-T}/\ac{S1} interface.
 
 #+NAME: fig:ratio_bsplits
-#+CAPTION: Dependence of the ratio of cluster splits with the parameter $\lambda$, which controls the stopping condition of \bsplits{} (see [[eq:termination]]). The blue line represents the fraction of cluster splits with the defalt chain, also implemented in \ac{CMSSW}. The red dotes refer to the custom framework with \bsplits{}. The more agressive the algorithm is, the more cluster splits are removed. Following [[eq:termination]], a value of $\lambda=0$ indicates the most agressive stopping condition.
+#+CAPTION: Dependence of the ratio of cluster splits with the parameter $\lambda$, which controls the stopping condition of \bsplits{} (see [[eq:termination]]). The blue line represents the fraction of cluster splits with the default chain, also implemented in \ac{CMSSW}. The red dots refer to the custom framework with \bsplits{}. The more agressive the algorithm is, the more cluster splits are removed. Following [[eq:termination]], a value of $\lambda=0$ indicates the most agressive stopping condition.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/RatioByeSplits.pdf]]
 #+END_figure
 #+NAME: fig:split
-#+CAPTION: Example of a cluster split for a single photon event in the \coordsa{} space, where colors represent energy deposited per bin in \tmip{} units. The orange cross shows the position of the generated photon. The top (bottom) row shows the same event before (after) applying the smearing step. The left (right) column displays the event not considering (considering) the \bsplits{} algorithm, where the red (black) crosses point to the position of the reconstructed clusters. Generated and reconstructed clusters become superimposed after running \bsplits{}.
+#+CAPTION: Example of a cluster split for a single photon event in the \coordsa{} space, where colors represent energy deposited per bin in \tmip{} units. The orange cross shows the position of the generated uncoverted photon. The top (bottom) row shows the same event before (after) applying the smearing step. The left (right) column displays the event not considering (considering) the \bsplits{} algorithm, where the red (black) crosses point to the position of the reconstructed clusters. Generated and reconstructed clusters become superimposed after running \bsplits{}.
 #+BEGIN_figure
-#+ATTR_LATEX: :width .495\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/split_nosmooth_before_mod.png]]
-#+ATTR_LATEX: :width .495\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/split_nosmooth_after_mod.png]]
-#+ATTR_LATEX: :width .495\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/split_smooth_before_mod.png]]
-#+ATTR_LATEX: :width .495\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/split_smooth_after_mod.png]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/ClusterSplits.pdf]]
 #+END_figure
 
 #+NAME: fig:byesplits_res
-#+CAPTION: Response (top) and position resolution (\ac{eta}, middle, and \ac{phi}, bottom). The blue curves refer to the standard \ac{CMSSW} \ac{S2} chain, which is identical in both columns. The red curves shows the results of the custom =Python= framework, considering =bye-splits= with $\lambda=0$ on the left and a seeding window of size 2 along \ac{phi} on the right. Both approaches improve the response and resolutions. All displayed events satisfy the selections described in the text.
+#+CAPTION: Energy response (top) and position resolution (\ac{eta}, middle, and \ac{phi}, bottom). The blue curves refer to the standard \ac{CMSSW} \ac{S2} chain, which is identical in both columns. The red curves shows the results of the custom =Python= framework, considering =bye-splits= with $\lambda=0$ on the left and a seeding window of size 2 along \ac{phi} on the right. Both approaches improve the response and resolutions. All displayed events satisfy the selections described in the text.
 #+BEGIN_figure
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/byesplits_res.png]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/byesplits_res_2.png]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/byesplits_eta.png]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/byesplits_2_eta.png]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/byesplits_phi.png]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/byesplits_2_phi.png]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/ByeSplits.pdf]]
 #+END_figure
 
 * Algorithmic alternatives
@@ -173,8 +157,8 @@ Adapted versions of \bsplits{} are currently also being considered to address \a
 :END:
 
 The performance of \bsplits{} is very encouraging, but could be improved.
-Alternative approaches were therefore explored to mitigate cluster splits, trying to achieve better responses and position resolutions.
-New approaches could be easily tested thanks to the frameowrk described in [[#sec:event_geom_developments]].
+Alternative approaches were therefore explored to mitigate cluster splits, trying to achieve better energy responses and position resolutions.
+New approaches could be easily tested thanks to the framework described in [[#sec:event_geom_developments]].
 Three methods are tested, and they all reduce cluster splits dramatically.
 
 + *Seeding window increase*: The size of the seeding window along \ac{phi} was increased to \num{2} bins, while keeping the size along \rz{} set to \num{1} bin. This enables the seeding step to "look further", and notice whether a particular area of the phase-space has two local maxima. The window has access to \num{14} neighbours instead of \num{8}. Results are displayed on the right column of [[fig:byesplits_res]], where it becomes clear that cluster splits are virtually completely removed, with  a performance clearly superior to \bsplits{}. However, each window requires six additional firmware comparators, increasing resource consumption.
@@ -225,7 +209,8 @@ On the positive side, using coordinates that follow the geometry of the detector
 It also simplifies the routing of \acp{TC}, and removes any need for coordinate conversion in the algorithms.
 The firmware resource usage remains very dependent on individual algorithms, and can actually be lowered given the removal of potential coordinate conversion steps.
 
-I have designed and implemented a new seeding step for \ac{S2} which receives \acp{TC} and finds local maxima directly in detector coordinates.
+I have designed an alternative seeding step for \ac{S2} which receives \acp{TC} and finds local maxima directly in detector coordinates.
+The step was implemented as part of an alternative processing chain in the =Python= software reconstruction.
 For each \ac{HGCAL} layer, the seeding projects all modules into a new global hexagonal coordinate system.
 The coordinate translation from local \coordsb{} to global ($u^{\prime},v^{\prime}$) \ac{TC} coordinates, using the hexagonal module coordinates ($U,V$), is done using the following expression:
 
@@ -254,24 +239,24 @@ The coordinate translation from local \coordsb{} to global ($u^{\prime},v^{\prim
 \noindent where the constants reflect the structure of the \ac{Si} modules and the hexagonal tessellation.
 Notably, they can be expressed as powers of \num{2}, easing their inclusion in the firmware.
 The effect can be seen in [[fig:hexag_coords]], where the end result of the translation of seven modules is shown in detector and rectangular spaces.
-Both spaces are functionally identical, but the second helps visualizing what the new seeding step considers.
-The result of the same translation for a simulated single photon event is shown in [[fig:hexag_coords_event]].
+Both spaces are functionally identical, but the second helps visualizing what the alternative seeding step considers.
+The result of the same translation for a simulated single unoconverted photon event is shown in [[fig:hexag_coords_event]].
 
 #+NAME: fig:hexag_coords
-#+CAPTION: Illustration for the global hexagonal coordinate system used for the new seeding based on detector coordinates. Brown shows \acp{TC} belonging to the central module, while cyan shows the first-order neigbours that have to be considered when applying a size \num{1} seeding window to all \acp{TC} in the central module. Each \ac{TC} only has \num{6} neighbours. (Left) Detector space. (Right) The same detector elements converted to a square grid-like space, helpful to visualize the structure of the seeding window in hexagonal coordinates. The bins contained within the dashed lines represent the bins that a naive seeding implementation would have to store in memory for each module being processed.
+#+CAPTION: Illustration for the global hexagonal coordinate system used for the alternative seeding based on detector coordinates. Brown shows \acp{TC} belonging to the central module, while cyan shows the first-order neigbours that have to be considered when applying a size \num{1} seeding window to all \acp{TC} in the central module. Each \ac{TC} only has \num{6} neighbours. (Left) Detector space. (Right) The same detector elements converted to a square grid-like space, helpful to visualize the structure of the seeding window in hexagonal coordinates. The bins contained within the dashed lines represent the bins that a naive seeding implementation would have to store in memory for each module being processed.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/HexagonalCoordinates.pdf]]
 #+END_figure
 
 #+NAME: fig:hexag_coords_event
-#+CAPTION: Simulated event projection of the fours \ac{TC} layers in the shower maximum region (\num{9}, \num{11}, \num{13} and \num{15}). Each \ac{TC} only has \num{6} neighbours. (Left) Detector space. (Right) The same detector elements converted to a square grid-like space, helpful to visualize the structure of the seeding window in hexagonal coordinates.
+#+CAPTION: Projection of \acp{TC} in four layers (\num{9}, \num{11}, \num{13} and \num{15}) of a simulated single unconverted photon event. The layers correspond to the shower maximum region. Each \ac{TC} has \num{6} neighbours only, not \num{8} as the rectangular space might suggest. (Left) Detector space. (Right) The same detector elements converted to a square grid-like space.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/HexagonalCoordinatesEvent.pdf]]
 #+END_figure
 
-The internal logic of the new seeding is very similar to the default seeding algorithm.
+The internal logic of the alternative seeding is very similar to the default seeding algorithm.
 Once the coordinate translation in [[eq:matrix]] is applied, the algorithm searches for local seeding maxima.
 Given the non-projective nature of the coordinates, we choose to consider the projection of $(u^{\prime},v^{\prime})$ for layers \num{9}, \num{11}, \num{13} and \num{15}, corresponding to the \ac{EM} shower maximum region.
 Contrary to standard cartesian coordinates, each hexagonal bin only has \num{6} neighbours.
@@ -282,10 +267,11 @@ These considerations become relevant if the seeding is run in parallel for multi
 The algorithm itself can be easily parallelized at \ac{TC} level, where each brown bin would correspond to a separate instance.
 The dashed lines contain the bins in a square-grid which would have to be kept in memory if running all instances in parallel, using some kind of shared memory in a naive implementation.
 Further considerations about firmware implementation are outside the scope of this thesis.
-An additional advantage of the new seeding step is that it makes the histogramming and smearing steps from \ac{S2} redundant.
-They are thus removed, potentially reducing \ac{S2}'s latency.
+An additional advantage of the alternative seeding step is that it allows to replace the current \ac{S2} histogramming step by a simple accumulation step across layers, potentially reducing \ac{S2}'s latency.
+The smearing might also become redundant, since its main purpose was to remove cluster splits.
+This is indeed the case in all performed tests, but further validation would be required, as discussed in [[#sec:hgcal_discussion]].
 
-The custom processing chain is run with the new seeding and is compared with the default chain using \coordsa{} coordinates.
+The custom processing chain is run with the alternative seeding and is compared with the default chain using \coordsa{} coordinates.
 The energy response and position resolution remain virtually identical, as shown in the top plots of [[fig:uv_dist]].
 The response is here defined as the difference between clustered and generated energy divided by the generated energy, where zero corresponds to reconstructing all generated energy.
 We also show in green what would the response and resolution be had all \acp{TC} be considered, instead of considering only the ones filtered by the clustering algorithm.
@@ -294,18 +280,14 @@ The green curve provides a more reasonable reference to which we can compare the
 The clustering algorithm only loses a small amount of energy compared to what is available.
 Interestingly, the bottom plots of [[fig:uv_dist]] demonstrate an almost complete removal of cluster splits, by simply using detector coordinates, without running any additional algorithm or modified \ac{S2} step.
 The splits are removed at high \ac{eta}, where they are known to dominate.
+The additional number of splits for higher energy values can be explained by the increase of the spread of energy deposition along \coordsa{}.
 We also test a seeding window of size \num{2}, but find no significant difference relative to the default size of \num{1}.
+We believe that the rare splits still present after running the algorithm do not have a geometrical cause, but are instead the result of photon conversions that happened after the surface of \ac{HGCAL} but before the layers where the \ac{EM} shower maximum occurs.
 The algorithm is observed to have a "perfect efficiency" at 0 \ac{PU}, meaning that it reconstructs at least one seed for all events.
 
 #+NAME: fig:uv_dist
-#+CAPTION: (Top) Energy response (left) and \ac{phi} resolution (right) for the default (blue) and new (orange) reconstruction chains. The new chain drops the histogramming and smearing steps, and replaces the seeding step by the one using detector coordinates. In green we display the same quantities obtained with all \acp{TC}, where the position is weighted by the \ac{TC} energy. (Bottom) Average number of seeds as a function of energy (left) and |\ac{eta}| (right). Using detector coordinates naturally removes cluster splits.
+#+CAPTION: (Top) Energy response (left) and \ac{phi} position resolution (right) for the default (blue) and alternative (orange) reconstruction chains, considering 0 \ac{PU} single unconverted photons. The alternative chain drops the histogramming and smearing steps, and replaces the seeding step by the one using detector coordinates. In green we display the same quantities obtained with all \acp{TC}, where the position is weighted by the \ac{TC} energy. (Bottom) Average number of seeds as a function of energy (left) and |\ac{eta}| (right). Using detector coordinates naturally removes cluster splits.
 #+BEGIN_figure
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/uv_dist_en_mod_label.png]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/uv_dist_phi_mod_label.png]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/uv_multiplicity_en.png]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/hgcal/uv_multiplicity_eta.png]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/UVDist.pdf]]
 #+END_figure

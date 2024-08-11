@@ -27,7 +27,7 @@ Alternatives to \ac{HGCAL} were originally considered, such as an optical Shashl
 #+END_figure
 
 The proposed novel \ac{HGCAL} design includes a \ac{CE-E} with \ac{Si} as active material in the first \num{26} layers, as shown in [[fig:hgcal_side_view]].
-Each layer is composed of $\mathcal{O}(100)$ \SI{8}{\inch} hexagonal \ac{Si} modules, which shape is chosen to cover the available circular transversal area more efficiently than rectangles, keeping the ability to tesselate the plane perpendicular to the beamline without introducing unmanageable hardware and mechanical challenges.
+Each layer is composed of $\mathcal{O}(300)$ \SI{8}{\inch} hexagonal \ac{Si} modules, which shape is chosen to cover the available circular transversal area more efficiently than rectangles, keeping the ability to tesselate the plane perpendicular to the beamline without introducing unmanageable hardware and mechanical challenges.
 The choice is also related to the circular cross-section of grown \ac{Si} cylindrical ingots, leading to less wasted material.
 Each \ac{Si} module is composed of a sucession of hexagonal layers featuring, in order, a \ac{PCB}, or hexaboard, a \ac{Si} sensor, a \SI{105}{\um} Kapton foil, and a \ch{CuW} baseplate.
 The Kapton foil provides insulation between the sensor back-plane and the baseplate, which is held at ground [[cite:&hgcalTDR]].
