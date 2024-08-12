@@ -1,0 +1,36 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:physics_objects
+:END:
+
+* Electrons
+* Muons
+* Hadronic Tau Leptons
+
+#+NAME: tab:tau_decays
+#+CAPTION: $\tau$ lepton branching fractions [[cite:&PDG]].
+#+ATTR_LATEX: :placement [!h] :center t :align l|c|c
+| Decay mode                                         | Meson resonance             | $\mathcal{B}$ [%] |
+|----------------------------------------------------+-----------------------------+-------------------|
+| $e\nu_{e}\nu_{\tau}$                                      |                             |              17.8 |
+| $\mu\nu_{\mu}\nu_{\tau}$                                      |                             |              17.4 |
+| *all leptonic decays*                                |                             |              35.2 |
+|----------------------------------------------------+-----------------------------+-------------------|
+| $\text{h}^{\pm}\nu_{\tau}$                                |                             |              11.5 |
+| $\text{h}^{\pm}\pi^{0}\nu_{\tau}$                           | $\rho(770)$                    |              26.0 |
+| $\text{h}^{\pm}\pi^{0}\pi^{0}\nu_{\tau}$                      | $\text{a}_{\text{1}}(1260)$ |               9.5 |
+| $\text{h}^{\pm}\text{h}^{\mp}\text{h}^{\pm}\nu_{\tau}$      | $\text{a}_{\text{1}}(1260)$ |               9.8 |
+| $\text{h}^{\pm}\text{h}^{\mp}\text{h}^{\pm}\pi^{0}\nu_{\tau}$ |                             |               4.8 |
+| other hadronic decays                              |                             |               3.2 |
+| *all hadronic decays*                                |                             |              64.8 |
+
++ hadronic tau decays capture the last branching fraction of HH decays in the \xhhbbtt{} analysis
++ copy from Jona
+
+  
+* Jets
++ use Alessandro's section 2.3.3 starting from "The energy measurement of jets can..."
+  
+** b-jets
+
+* Missing transverse energy
++ The transverse momentum actually carried by invisible particles is systematically different from the true, corrected MET, due to the non-compensating nature of the calorimeters and to detector misalignment.

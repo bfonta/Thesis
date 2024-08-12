@@ -1,4 +1,4 @@
-<<sec::bbgg>>
+<<sec:bbgg>>
 
 * Additional bibliography :noexport:
 + 

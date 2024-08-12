@@ -113,16 +113,9 @@
 *** Analysis trigger regions
 *** Note on the inclusion method
 ** Physics objects
-*** Electrons
-*** Muons
-*** Hadronic $\tau$'s
-*** Jets
-**** b-jets
-*** Missing transverse energy
+#+INCLUDE: "chapters/analysis1/physics_objects.org"
 ** Selection
-*** $\tau\tau$ pair
-*** bb pair
-**** HH b-tagging network
+#+INCLUDE: "chapters/analysis1/selection.org"
 ** Categorization
 #+INCLUDE: "chapters/analysis1/categorization.org"
 *** Resolved jets

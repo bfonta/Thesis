@@ -101,7 +101,9 @@ As a consequence, the \ac{HLT} timing and throughput improved by 40% and 80%, re
 The \ac{CMS} \ac{HLT} system is constantly subject to updates and optimizations, in order to improve algorithmic efficiency and increase allowed rates, while maintaining an excellent physics performance, despite the increasingly more challeging running conditions [[cite:&performance_calorimeter_trigger;&performance_muon_trigger]].
 
 * Parking and Scouting
-<<sec:parking_scouting>>
+:PROPERTIES:
+:CUSTOM_ID: sec:parking_scouting
+:END:
 
 The quest for ever higher event rates given current technology limitations and experimental benefits that can be derived, has lead \ac{CMS} to explore the non-standard use of triggers.
 There are various constraints imposed on the trigger system and data processing framework which limit the number of events that can be selected, recorded and analyzed.
@@ -118,8 +120,9 @@ The absolute and relative cost of all these components has a strong impact on th
 In the following the parking and scouting strategies are presented [[cite:&parking_scouting1;&parking_scouting2;&parking_scouting_run3_cms]].
 They are also summarised in [[ref:fig:parking_scouting]].
 
-\paragraph{Parking:}
-The essential idea of data parking is to record as much data as possible, and process it later, as soon as resources used for the \num{\sim 48} hours long prompt reconstruction become available, which often happens between data-taking periods.
+\myparagraph{Parking}
+
+\noindent The essential idea of data parking is to record as much data as possible, and process it later, as soon as resources used for the \num{\sim 48} hours long prompt reconstruction become available, which often happens between data-taking periods.
 One of the positive effects of this strategy is to lower the kinematical thresholds used by algorithms, and thus increase the acceptance to low-mass physics signals.
 To sustain the high rates which necessarily arise from lower thresholds, the data is written directly to tape, usually during the latest stages of an \ac{LHC} fill when the rate is substantially decreased due to lower instantaneous luminosities.
 
@@ -143,8 +146,9 @@ Additionally, three new parking strategies have been introduced:
 [[~/org/PhD/Thesis/figures/detector/parking_bbtt_accept_gain.pdf]]
 #+END_figure
 
-\paragraph{Scouting:}
-The offline reconstruction in \ac{CMS} notably increases the quality of the collected dataset.
+\myparagraph{Scouting}
+
+\noindent The offline reconstruction in \ac{CMS} notably increases the quality of the collected dataset.
 Unfortunately but unsurprisingly, it also brings a significant bandwidth and storage requirements growth.
 It is not possible to perform the offline reconstruction on all events processed and accepted by the \ac{HLT}.
 The trigger scouting strategy proposes to save some events using \ac{HLT} reconstruction only, which provides a smaller event size at the cost of data resolution.

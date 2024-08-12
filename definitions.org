@@ -6,6 +6,7 @@
 #+LATEX_HEADER: \newcommand{\dijetmass}{m_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\dijetrap}{y_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\emiss}{E^{\text{miss}}_{\text{T}}}
+#+LATEX_HEADER: \newcommand{\ptmiss}{\vec{p}_{\text{T}, \text{miss}}}
 #+LATEX_HEADER: \newcommand{\rint}{\text{R}_{\text{int}}}
 #+LATEX_HEADER: \newcommand{\widthratio}{\Gamma_{\text{X}}/m_{\text{X}}}
 #+LATEX_HEADER: \newcommand{\httt}{H_{\text{T}}}
@@ -13,6 +14,7 @@
 #+LATEX_HEADER: \newcommand{\klrat}{\kappa_{\lambda} = \lambda_{\text{HHH}} / \lambda_{\text{HHH}}^{\text{SM}}}
 #+LATEX_HEADER: \newcommand{\kl}{\kappa_{\lambda}}
 #+LATEX_HEADER: \newcommand{\kt}{\kappa_{t}}
+#+LATEX_HEADER: \newcommand{\ktalgo}{k_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\kvv}{\kappa_{\text{2V}}}
 #+LATEX_HEADER: \newcommand{\kv}{\kappa_{\text{V}}}
 #+LATEX_HEADER: \newcommand{\lhhx}{\lambda_{\text{HHX}}}

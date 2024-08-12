@@ -1,0 +1,7 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:selection
+:END:
+
+* $\tau\tau$ pair
+* bb pair
+** HH b-tagging network

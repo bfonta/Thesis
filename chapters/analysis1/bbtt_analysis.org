@@ -1,3 +1,5 @@
 :PROPERTIES:
-:CUSTOM_ID: sec::bbtautau_intro
+:CUSTOM_ID: sec:bbtautau_intro
 :END:
+
+Intro to the analysis chapters.
