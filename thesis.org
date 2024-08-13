@@ -71,11 +71,7 @@
 ** Offline Reconstruction
 #+INCLUDE: "chapters/detector/offline_reco.org"
 ** Monte Carlo generation
-#+INCLUDE: "chapters/mc_generation.org"
-+ include an event display of 2018
-*** Activities as Monte Carlo contact
-+ test
-
+#+INCLUDE: "chapters/detector/mc_generation.org"
 
 * Trigger primitives reconstruction for the HGCAL Level-1 trigger
 ** The High Luminosity LHC

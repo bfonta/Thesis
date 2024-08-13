@@ -32,7 +32,7 @@ Also note how the branching ratio changes with increasing $\mx$, given the extre
 [[~/org/PhD/Thesis/figures/interferences/SingletModelScan.pdf]]
 #+END_figure
 
-We use the =MADGRAPH5_aMC@NLO= generator, version 2.9.7 [[cite:&madgraph]], to simulate inclusive HH events in the singlet model at \ac{LO}. 
+We use the =MadGraph5_aMC@NLO= generator, version 2.9.7 [[cite:&madgraph]], to simulate inclusive HH events in the singlet model at \ac{LO}. 
 A custom \ac{UFO} [[cite:&feynrules]] model based on [[cite:&papa1]] adds a heavy scalar boson to the \ac{SM} with couplings to \ac{SM} particles as defined in [[eq:singlet_couplings]], following what is described in [[#sec:singlet_model]].
 In total, the model considers \num{20} \ac{ggF} \ac{LO} Feynman diagrams, \num{4} of which are shown in [[fig:single_model_diagrams]] (right).
 The samples are created according to the following parameter grid, using $\kl = 1$:
