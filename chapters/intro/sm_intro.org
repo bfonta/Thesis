@@ -1,0 +1,5 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:sm_intro
+:END:
+
++ in the \ac{SM} interactions are dictated by symmetry principles [[cite:&halzen_martin]]

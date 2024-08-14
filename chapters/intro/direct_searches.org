@@ -1,3 +1,12 @@
+\myparagraph{\bbbb}
+
+\myparagraph{\bbgg}
+
+\myparagraph{\bbtt}
++ Mention H(bb)Y(tt)
+
+\myparagraph{\ggtt}
+
 \ac{CMS} has recently explored the extremely rare \gamma\gamma\tau\tau decay channel, for the first time, using full Run2 data.
 The analysis covers non-resonant production via \ac{ggF} and the HH (spin 0 and 2) and HY \ac{BSM} resonant production modes.
 The latter particle refers to an additional BSM scalar Y, considering both H(bb)Y(\tau\tau) and H(\tau\tau)Y(bb) signatures.
@@ -37,7 +46,6 @@ The limits are around one order of magnitude worse than the ones obtained by the
 #+END_figure
 
 * Additional bibliography :noexport:
-** \gamma\gamma\tau\tau
-+ HIG-22-012 ([[https://cds.cern.ch/record/2893031?ln=en][CDS]])
-+ [[https://www.stat.cmu.edu/stamps/files/nicholas_wardle_slides.pdf][The discrete profiling method]] (slides)
-  
++ \gamma\gamma\tau\tau
+  + HIG-22-012 ([[https://cds.cern.ch/record/2893031?ln=en][CDS]])
+  + [[https://www.stat.cmu.edu/stamps/files/nicholas_wardle_slides.pdf][The discrete profiling method]] (slides)

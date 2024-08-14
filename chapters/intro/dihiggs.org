@@ -2,7 +2,7 @@
 :CUSTOM_ID: sec:dihiggs
 :END:
 
-As mentioned in [[sec:SM]], the \ac{SM} has proven an immensely successful theory.
+As mentioned in [[#sec:sm_intro]] the \ac{SM} has proven an immensely successful theory.
 However, some processes, either due to their low available event statistics or to a challenging experimental signature, are yet to be measured.
 The production of Higgs boson pairs is one of such cases, given its extreme rarity (see [[ref:sec:production]]), in addition generally involving complicated final states including multiple decay products with jets and/or \ac{MET}.
 

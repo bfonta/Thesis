@@ -1,0 +1,5 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:history
+:END:
+
++ The Brout-Englert-Higgs mechanism, hereafter referred as Higgs mechanism for simplicity, was finally proposed in 1964 in order to generate non-zero masses for the gauge bosons and explain the existence  of masses for fermions.

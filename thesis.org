@@ -10,9 +10,11 @@
 
 * Introduction to Higgs boson pair production
 ** The Standard Model of Particle Physics
-<<sec:SM>>
+#+INCLUDE: "chapters/intro/sm_intro.org"
 *** Brief historical perspective
+#+INCLUDE: "chapters/intro/history.org"
 *** The building blocks of the SM
+#+INCLUDE: "chapters/intro/sm_structure.org"
 *** The Higgs Mechanism
 #+INCLUDE: "chapters/intro/higgs_mechanism.org"
 *** Experimental status of Higgs boson physics
@@ -26,18 +28,12 @@
 
 ** Experimental status of SM HH Physics
 #+INCLUDE: "chapters/intro/hh_exp_status.org"
-*** 4b
-#+INCLUDE: "chapters/intro/bbbb.org"
-*** \bbgg{}
-#+INCLUDE: "chapters/intro/bbgammagamma.org"
-*** \bbtt{}
-#+INCLUDE: "chapters/intro/bbtautau.org"
-*** \ggtt{}
-#+INCLUDE: "chapters/intro/gammagammatautau.org"
-*** ZZ, ZH and future techniques
-#+INCLUDE: "chapters/intro/zz_and_zh.org"
+*** Direct searches
+#+INCLUDE: "chapters/intro/direct_searches.org"
 *** Indirect searches
 #+INCLUDE: "chapters/intro/indirect_searches.org"
+*** ZZ, ZH and future techniques
+#+INCLUDE: "chapters/intro/zz_and_zh.org"
 *** Combinations
 #+INCLUDE: "chapters/intro/combinations.org"
 ** Going beyond the SM
@@ -47,8 +43,6 @@
 #+INCLUDE: "chapters/intro/nonres_BSM_hh.org"
 *** Resonant BSM HH Production
 #+INCLUDE: "chapters/intro/res_BSM_hh.org"
-
-**** Motivation for the \bbtt{} analysis
 
 
 * The CMS Detector at the LHC
@@ -72,6 +66,7 @@
 #+INCLUDE: "chapters/detector/offline_reco.org"
 ** Monte Carlo generation
 #+INCLUDE: "chapters/detector/mc_generation.org"
+
 
 * Trigger primitives reconstruction for the HGCAL Level-1 trigger
 ** The High Luminosity LHC
@@ -166,10 +161,9 @@
 ** Prospects for resonant and non-resonant HH searches
 #+INCLUDE: "chapters/analysis2/prospects.org"
 
-
 * Effects of finite width and interference
 #+INCLUDE: "chapters/interf_studies/intro.org"
-** The Electro-weak Phase Transition
+** The Electroweak Phase Transition
 #+INCLUDE: "chapters/interf_studies/ew_phase_transition.org"
 ** The Singlet Model
 #+INCLUDE: "chapters/interf_studies/singlet_model.org"
@@ -177,7 +171,6 @@
 #+INCLUDE: "chapters/interf_studies/methodology.org"
 ** Results
 #+INCLUDE: "chapters/interf_studies/interf_results.org"
-
 
 * Conclusions
 #+INCLUDE: "chapters/conclusions.org"
@@ -203,6 +196,6 @@
 ~/dot-emacs/bibliography/references/pure_software.bib,
 ~/dot-emacs/bibliography/references/physics.bib,
 ~/dot-emacs/bibliography/references/stats.bib,
-~/dot-emacs/bibliography/references/detector.bib]]
-
+~/dot-emacs/bibliography/references/detector.bib,
+~/dot-emacs/bibliography/references/biology.bib]]
 
