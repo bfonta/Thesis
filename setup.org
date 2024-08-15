@@ -6,6 +6,7 @@
 #+LATEX_HEADER: \usepackage{xcolor}
 #+LATEX_HEADER: \usepackage{pgffor}
 #+LATEX_HEADER: \usepackage{slashed}
+#+LATEX_HEADER: \usepackage{epigraph} 
 #+LATEX_HEADER: \newcommand{\repeatn}[2]{\foreach \i in {1, ..., #1} {#2}}
 
 # ##### font type

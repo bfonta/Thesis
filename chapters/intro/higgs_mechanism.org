@@ -17,7 +17,7 @@ We instead speak of /spontaneous/ symmetry breaking when some symmetry is broken
 With spontaneous symmetry breaking, the true symmetry of the system is simply hidden by the necessary choice of an asymmetrical lower energy state.
 We can for instance think of a plastic rod being compressed along its longitudinal axis ([[fig:symmetries]], middle): before applying a vertical force the system is symmetric under rotations, but after being compressed the ground state necessarily breaks the symmetry[fn:: Spontaneous symmetry breaking is also present in the most recent diffusion models for content generation [[cite:&spontaneous_breaking_diffusion]]!].
 
-In the context of \ac{HEP}, it is the presence of an additional scalar field what spontaneously breaks the symmetry of the original \ac{EW} lagrangian in [[eq:ew_lagrangian]].
+In the context of \ac{HEP}, it is the presence of an additional scalar field what spontaneously breaks the symmetry of the original \ac{EW} lagrangian in [[eq:ew_lagrangian_short]].
 The theory starts by introducing a $\text{SU}(2)_{\text{L}}$ doublet with 4 scalar real fields:
 
 #+NAME: eq:su2_doublet
@@ -88,30 +88,33 @@ V(\text{H}) = \frac{1}{2}\mh^{2}\text{H}^{2} + \lh{3}v\text{H}^{3} + \frac{\lh{4
 
 #+NAME: eq:self_couplings
 \begin{equation}
-\lh{3}^{\text{SM}} = \frac{G_{F}}{\sqrt{2}}\mh^{2} = \frac{\mh^{2}}{2v^{2}} \simeq 0.13 \:,\:\:\:\: \lh{3} = \lh{4} \: .
+\lh{3} = \frac{G_{F}}{\sqrt{2}}\mh^{2} = \frac{\mh^{2}}{2v^{2}} \simeq 0.13 \:,\:\:\:\: \lh{3} = \lh{4} \: .
 \end{equation}
 
-\noindent We can conclude that the Higgs self-couplings are fully determined in the \ac{SM}, given that both $\mh$ and $v$ have been measured, the latter depending on Fermi's constant $G_{F}$, which is measured with muon decays.
-From an experimental point of view, the Higgs boson thus provides a unique opportunity to perform a \ac{SM} closure test, independent from the gauge interactions of the electroweak sector.
+\noindent We can conclude that the Higgs self-couplings are fully determined in the \ac{SM}, given the measurements of $\mh$ and $v$, the latter fixed by Fermi's constant $G_{F}$, which is measured via muon decays.
+From an experimental point of view, the Higgs boson thus provides a unique opportunity to perform a \ac{SM} closure test, independently from the gauge interactions of the electroweak sector.
 
 The Higgs mechanism represents an economical way to provide mass to the weak bosons in the theory.
 Additionally, it can be shown that the new massive bosons preserve renormalizability [[cite:&hooft]].
 However, a second feat is yet to be achieved: justify the existence of fermion masses.
-To do so, Yukawa (renormalizable) terms are added to the \ac{SM} lagrangian, coupling left to right chiral fields as follows:
+To do so, Yukawa (renormalizable) $\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\text{Y}}$ invariant terms are added to the \ac{SM} lagrangian, coupling left to right chiral fields:
 
 #+NAME: eq:yukawa_lagrangian
 \begin{equation}
 \mathcal{L}_{\text{Yukawa}} = -y_{f^\prime} \left( \bar{\Psi}_{\text{L}}\phi\psi_{\text{R}}^{\prime} + \bar{\psi}^{\prime}_{\text{R}}\phi^{\dagger} \Psi_L \right) - y_{f}\left(\bar{\Psi}_{\text{L}} \tilde{\phi} \psi_{\text{R}} + \bar{\psi}_{\text{R}} \tilde{\phi}^{\dagger} \Psi_L \right) \: ,
 \end{equation}
 
-\noindent where $\psi$ and $\psi^{\prime}$ denote up and down fermions ($I_3 = 1/2$ and $I_3 = −1/2$), and:
+\noindent where $\psi$ and $\psi^{\prime}$ denote up and down fermions ($I_3 = 1/2$ and $I_3 = −1/2$, respectively, see [[eq:ew_doublets_singlets]]), and:
 
 #+NAME: eq:yukawa_definitions
 \begin{equation}
 \tilde{\phi} = i\sigma_{2}\phi^{*} = \binom{\phi_{0}^{*}}{-\phi_{+}^{*}} \hspace{3mm} \xmapsto[]{\hspace{1mm} \text{EWSB} \hspace{1mm}} \:\:\: \frac{1}{\sqrt{2}}\binom{v+\text{H}(x)}{0} \: .
 \end{equation}
 
-\noindent After \ac{EWSB}, using [[eq:unitary_gauge]] and [[eq:yukawa_definitions]], and summing over fermion up and down types, [[eq:yukawa_definitions]] is simplified to:
+\noindent If we want for instance to generate the electron mass, it suffices to replace the fields with $\bar{\Psi}_{\text{L}} = (\bar{\nu_{e}},\bar{e})$ and similar for the right-handed singlets.
+Note that fermion mass terms of the form $m\bar{\psi}\psi$ are forbidden by gauge invariance, and it is the addition of the Higgs doublet which changes the scenario.
+
+After \ac{EWSB}, using [[eq:unitary_gauge]] and [[eq:yukawa_definitions]], and summing over fermion up and down types, [[eq:yukawa_definitions]] is simplified to:
 
 #+NAME: eq:yukawa_definitions
 \begin{equation}
@@ -120,20 +123,27 @@ To do so, Yukawa (renormalizable) terms are added to the \ac{SM} lagrangian, cou
 
 \noindent with new $y_{f}v/\sqrt{2}$ mass terms for the fermions.
 The \ac{SM} therefore explains fermion masses by introducing /ad hoc/ Yukawa coupling terms between the Higgs field and all fermion fields, breaking the symmetry between the three lepton families.
-At the same time, the origin or fundamental reason for such terms remains unknown.
-The Higgs mechanism does however predict a linear proportionality between the masses of all fermions and all gauge bosons (recall [[eq:higgs_lagrangian_full]]), as experimentally verified by \ac{CMS} and \ac{ATLAS}, and shown in [[fig:linear_fermions_bosons]].
-The Higgs field also an enormous impact in other fronts.
+At the same time, the origin or fundamental reason for such terms remains unknown, with the masses being free parameters of the theory.
+The Higgs mechanism does however predict a proportionality between its couplings and the masses of all fermions and gauge bosons (recall [[eq:higgs_lagrangian_full]]).
+This has been experimentally verified by CMS and ATLAS, and is shown in [[fig:linear_fermions_bosons]].
+The Higgs field also has an enormous impact in other fronts.
 As we will see in [[#sec:dihiggs]], there is a strong link between the $\lh{3}$ and $\lh{4}$ self-couplings with the stability of the vacuum.
 The Higgs boson is also speculated to be connected to inflation, dark matter production, and baryogenesis.
 The last item is briefly discussed in [[#sec:ewpt]].
 
+Despite strongly motivated, and serving as the main motivation for building the \ac{LHC}, all the above was a matter of pure speculation until very recently.
+Since the mass of the new boson was a free parameter of the theory, there was no definite way to guarantee that we could produce a Higgs particle in a \ac{HEP} experiment, despite some argument that suggested otherwise.
+We allude to considerations on unitarity and perturbative behaviour implying upper limits of $\mh \lesssim 700\,\si{\GeV}$ [[cite:&higgs_mass_up_bound1;&higgs_mass_up_bound2]], and to lower limits driven by vaccum stability arguments, where the nontrivial minima at $v \neq 0$ will disappear if $\mh$ is too small [[cite:&higgs_mass_down_bound]].
+The Higgs boson was finally jointly discovered by the \ac{CMS} and \ac{ATLAS} experiments, and was announced to the world on July 2012 [[cite:&CMS_Higgs_discovery1;&CMS_Higgs_discovery2;&ATLAS_Higgs_discovery]].
+All measurements so far suggest that the new particle truly is the predicted \ac{SM} scalar Higgs boson, with zero charge and a mass slighlty above \SI{125}{\GeV}.
+Interestingly, the value found for $\mh$ almost perfectly maximizes the product of the 14 branching ratios of the \ac{SM} Higgs boson into the known fermion and boson pairs [[cite:&higgs_br_maximum1]].
+It is not known if this fact is accidental or if it instead hints at a deeper yet hidden theory, but it certainly increases the richness of Higgs physics to be explored at the \ac{LHC} and beyond.
+
 #+NAME: fig:linear_fermions_bosons
 #+CAPTION: The measured coupling modifiers of the Higgs boson to fermions and heavy gauge bosons, as functions of fermion or gauge boson mass, where $v$ is the vacuum expectation value of the Higgs field. For gauge bosons, the square root of the coupling modifier is plotted, to keep a linear proportionality to the mass, as predicted in the \ac{SM}. Measurements used full \run{2} \ac{LHC} data. Their p-value with respect to the \ac{SM} prediction is 37.5% (\ac{CMS}, left) and 65% (\ac{ATLAS}, right). Taken from [[cite:&higgs_10_years;&higgs_atlas_nature_10years]].
 #+BEGIN_figure
-#+ATTR_LATEX: :width .495\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/HiggsCouplingLineCMS.pdf]]
-#+ATTR_LATEX: :width .505\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/HiggsCouplingLineATLAS.pdf]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/HiggsCouplingLine.pdf]]
 #+END_figure
 
 * Additional bibliography :noexport:

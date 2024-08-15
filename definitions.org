@@ -23,9 +23,10 @@
 #+LATEX_HEADER: \newcommand{\mgg}{m_{\gamma\gamma}}
 #+LATEX_HEADER: \newcommand{\mhh}{m_{\text{HH}}}
 #+LATEX_HEADER: \newcommand{\mh}{m_{\text{H}}}
+#+LATEX_HEADER: \newcommand{\mz}{m_{\text{Z}}}
+#+LATEX_HEADER: \newcommand{\mw}{m_{\text{W}}}
 #+LATEX_HEADER: \newcommand{\mtt}{m_{t\bar{t}}}
 #+LATEX_HEADER: \newcommand{\mt}{m_{t}}
-#+LATEX_HEADER: \newcommand{\mw}{m_{\text{W}}}
 #+LATEX_HEADER: \newcommand{\mx}{m_{\text{X}}}
 #+LATEX_HEADER: \newcommand{\gx}{\Gamma_{\text{X}}}
 #+LATEX_HEADER: \newcommand{\gh}{\Gamma_{\text{H}}}

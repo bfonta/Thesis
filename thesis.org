@@ -9,8 +9,8 @@
 #+LATEX: \fontsize{12pt}{13pt}\selectfont
 
 * Introduction to Higgs boson pair production
-** The Standard Model of Particle Physics
 #+INCLUDE: "chapters/intro/sm_intro.org"
+** The Standard Model of Particle Physics
 *** Brief historical perspective
 #+INCLUDE: "chapters/intro/history.org"
 *** The building blocks of the SM
