@@ -6,15 +6,14 @@
 #+LATEX_HEADER: \newcommand{\dijetmass}{m_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\dijetrap}{y_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\emiss}{E^{\text{miss}}_{\text{T}}}
-#+LATEX_HEADER: \newcommand{\ptmiss}{\vec{p}_{\text{T}, \text{miss}}}
-#+LATEX_HEADER: \newcommand{\rint}{\text{R}_{\text{int}}}
-#+LATEX_HEADER: \newcommand{\widthratio}{\Gamma_{\text{X}}/m_{\text{X}}}
+#+LATEX_HEADER: \newcommand{\gh}{\Gamma_{\text{H}}}
+#+LATEX_HEADER: \newcommand{\gx}{\Gamma_{\text{X}}}
 #+LATEX_HEADER: \newcommand{\httt}{H_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\htvar}{H_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\klrat}{\kappa_{\lambda} = \lambda_{\text{HHH}} / \lambda_{\text{HHH}}^{\text{SM}}}
 #+LATEX_HEADER: \newcommand{\kl}{\kappa_{\lambda}}
-#+LATEX_HEADER: \newcommand{\kt}{\kappa_{t}}
 #+LATEX_HEADER: \newcommand{\ktalgo}{k_{\text{T}}}
+#+LATEX_HEADER: \newcommand{\kt}{\kappa_{t}}
 #+LATEX_HEADER: \newcommand{\kvv}{\kappa_{\text{2V}}}
 #+LATEX_HEADER: \newcommand{\kv}{\kappa_{\text{V}}}
 #+LATEX_HEADER: \newcommand{\lhhx}{\lambda_{\text{HHX}}}
@@ -23,18 +22,28 @@
 #+LATEX_HEADER: \newcommand{\mgg}{m_{\gamma\gamma}}
 #+LATEX_HEADER: \newcommand{\mhh}{m_{\text{HH}}}
 #+LATEX_HEADER: \newcommand{\mh}{m_{\text{H}}}
-#+LATEX_HEADER: \newcommand{\mz}{m_{\text{Z}}}
-#+LATEX_HEADER: \newcommand{\mw}{m_{\text{W}}}
 #+LATEX_HEADER: \newcommand{\mtt}{m_{t\bar{t}}}
 #+LATEX_HEADER: \newcommand{\mt}{m_{t}}
+#+LATEX_HEADER: \newcommand{\mw}{m_{\text{W}}}
 #+LATEX_HEADER: \newcommand{\mx}{m_{\text{X}}}
-#+LATEX_HEADER: \newcommand{\gx}{\Gamma_{\text{X}}}
-#+LATEX_HEADER: \newcommand{\gh}{\Gamma_{\text{H}}}
 #+LATEX_HEADER: \newcommand{\my}{m_{\text{Y}}}
+#+LATEX_HEADER: \newcommand{\mz}{m_{\text{Z}}}
+#+LATEX_HEADER: \newcommand{\ptmiss}{\vec{p}_{\text{T}, \text{miss}}}
 #+LATEX_HEADER: \newcommand{\pt}{p_{\text{T}}}
+#+LATEX_HEADER: \newcommand{\rint}{\text{R}_{\text{int}}}
 #+LATEX_HEADER: \newcommand{\sina}{\sin\alpha}
 #+LATEX_HEADER: \newcommand{\sint}{\sin\theta_{W}}
+#+LATEX_HEADER: \newcommand{\symcolor}{$\text{SU(3)}_{\text{C}}$}
+#+LATEX_HEADER: \newcommand{\symfull}{$\text{SU(3)}_{\text{C}}\otimes\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\text{Y}}$}
+#+LATEX_HEADER: \newcommand{\symoney}{$\text{U}(1)_{\text{Y}}$}
+#+LATEX_HEADER: \newcommand{\symone}{$\text{U}(1)$}
+#+LATEX_HEADER: \newcommand{\symthree}{$\text{SU}(3)$}
+#+LATEX_HEADER: \newcommand{\symthreec}{$\text{SU}(3)_{\text{C}}$}
+#+LATEX_HEADER: \newcommand{\symtwol}{$\text{SU}(2)_{\text{L}}$}
+#+LATEX_HEADER: \newcommand{\symtwo}{$\text{SU}(2)$}
+#+LATEX_HEADER: \newcommand{\symweak}{$\text{SU}(2)_{\text{L}} \otimes \text{U}(1)_{\text{Y}}$}
 #+LATEX_HEADER: \newcommand{\thw}{\theta_{\text{W}}}
+#+LATEX_HEADER: \newcommand{\widthratio}{\Gamma_{\text{X}}/m_{\text{X}}}
 
 # Processes
 #+LATEX_HEADER: \newcommand{\bbbb}{bbbb}

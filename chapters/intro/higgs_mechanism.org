@@ -54,7 +54,7 @@ By defining the \ac{VEV} as $v=\mu/\sqrt{\lambda}$ and expanding around the true
 \noindent where the sum across $i$ is implied.
 [[eq:expand_potential]] is interpreted as the presence of a scalar real massive field H and three massless fields $\theta^{i}$.
 The massless fields follow from Goldstone's theorem [[cite:&goldstone]], which states that whenever a continuous symmetry is not apparent in the ground state, or spontaneously broken, a number of massless bosons will be generated equal to the number of the broken generators of the symmetry, in this case three.
-By applying the "unitary gauge" transformation on top, we can easily see that the $\theta^{i}$ bosons are unphysical:
+By applying the /unitary gauge/ transformation on top, we can easily see that the $\theta^{i}$ bosons are unphysical:
 
 #+NAME: eq:unitary_gauge
 \begin{equation}
@@ -104,7 +104,7 @@ To do so, Yukawa (renormalizable) $\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\t
 \mathcal{L}_{\text{Yukawa}} = -y_{f^\prime} \left( \bar{\Psi}_{\text{L}}\phi\psi_{\text{R}}^{\prime} + \bar{\psi}^{\prime}_{\text{R}}\phi^{\dagger} \Psi_L \right) - y_{f}\left(\bar{\Psi}_{\text{L}} \tilde{\phi} \psi_{\text{R}} + \bar{\psi}_{\text{R}} \tilde{\phi}^{\dagger} \Psi_L \right) \: ,
 \end{equation}
 
-\noindent where $\psi$ and $\psi^{\prime}$ denote up and down fermions ($I_3 = 1/2$ and $I_3 = −1/2$, respectively, see [[eq:ew_doublets_singlets]]), and:
+\noindent where $\psi$ and $\psi^{\prime}$ denote up and down fermions ($I_3 = 1/2$ and $I_3 = −1/2$, respectively, see [[eq:chiral_components]]), and:
 
 #+NAME: eq:yukawa_definitions
 \begin{equation}
