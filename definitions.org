@@ -32,6 +32,7 @@
 #+LATEX_HEADER: \newcommand{\pt}{p_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\rint}{\text{R}_{\text{int}}}
 #+LATEX_HEADER: \newcommand{\sina}{\sin\alpha}
+#+LATEX_HEADER: \newcommand{\astrong}{\alpha_{\text{S}}}
 #+LATEX_HEADER: \newcommand{\sint}{\sin\theta_{W}}
 #+LATEX_HEADER: \newcommand{\symcolor}{$\text{SU(3)}_{\text{C}}$}
 #+LATEX_HEADER: \newcommand{\symfull}{$\text{SU(3)}_{\text{C}}\otimes\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\text{Y}}$}
@@ -56,6 +57,10 @@
 #+LATEX_HEADER: \newcommand{\hgg}{H $\rightarrow$ $\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\hhbbbbtt}{HH $\rightarrow$ bbbb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hhbbbb}{HH $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\hbb}{H $\rightarrow$ bb}
+#+LATEX_HEADER: \newcommand{\hww}{H $\rightarrow$ W$^{\pm}$W$^{\mp*}$}
+#+LATEX_HEADER: \newcommand{\hzz}{H $\rightarrow$ ZZ$^{*}$}
+#+LATEX_HEADER: \newcommand{\hcc}{H $\rightarrow$ cc}
 #+LATEX_HEADER: \newcommand{\hhbbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\hhbbtt}{HH $\rightarrow$ bb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hhbbzz}{HH $\rightarrow$ bbZZ}
@@ -76,8 +81,9 @@
 #+LATEX_HEADER: \newcommand{\zllg}{Z $\rightarrow$ ll$\gamma$}
 #+LATEX_HEADER: \newcommand{\zll}{Z $\rightarrow$ ll}
 #+LATEX_HEADER: \newcommand{\zzbbbb}{ZZ $\rightarrow$ bbbb}
-#+LATEX_HEADER: \newcommand{\zzfourl}{H $\rightarrow$ ZZ $\rightarrow$ 4l}
-#+LATEX_HEADER: \newcommand{\zzzhbbbb}{ZZ\slash ZH $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\zbb}{Z $\rightarrow$ bb}
+#+LATEX_HEADER: \newcommand{\hzzfourl}{H $\rightarrow$ ZZ$^{*}$ $\rightarrow$ 4$\ell$}
+#+LATEX_HEADER: \newcommand{\zzzhbbbb}{ZZ \slash ZH $\rightarrow$ bbbb}
 
 # HGCAL
 #+LATEX_HEADER: \newcommand{\bsplits}{\texttt{bye\_splits}}
@@ -115,3 +121,5 @@
 #+LATEX_HEADER: \newcommand{\tauh}{$\tau_{\text{h}}$}
 
 #+LATEX_HEADER: \newcommand{\myparagraph}[1]{\paragraph{\large{#1}}~\vspace{.2cm}}
+
+#+LATEX_HEADER: \newenvironment{mytablewiderrows}{\renewcommand{\arraystretch}{1.3}\tabular}{\endtabular}

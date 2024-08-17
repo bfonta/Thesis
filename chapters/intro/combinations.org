@@ -110,7 +110,7 @@ The main challenge of the combination recently performed by \ac{CMS} [[cite:&CMS
 The mitigation of double-counting and minimization of overlaps, together with the combination of event categories from both single and double-Higgs analysis, lead to stronger $\kl$ constraints.
 The analysis with the most sensitive production modes are included.
 Whenever overlaps exist, one of two approaches is taken: either additional selections are applied, or the least sensitive category or analysis is removed.
-As an example, the \bbzz{} analysis is removed in favour of \zzfourl{} due to the former's relatively low sensitivity to $\kl$.
+As an example, the \bbzz{} analysis is removed in favour of \hzzfourl{} due to the former's relatively low sensitivity to $\kl$.
 Concerning systematics, their modelling in HH processes is generally simpler when compared to single H, due to the limited statistics of HH.
 
 \ac{CMS} observed exclusion intervals at 95% \ac{CL} of $-0.4 < \kl < 6.3$, assuming other Higgs couplings to follow the \ac{SM}, or $-1.4 < k_{\lambda} < 6.1$ otherwise.

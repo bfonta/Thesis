@@ -1,0 +1,128 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:higgs_exp_status
+:END:
+
+The measurement of Higgs properties at the LHC are in general challenging, given the low cross-sections involved.
+The most sensitive analyses to single Higgs boson processes are the ones including the \hgg{} and \hzzfourl{} decay channels.
+Both are quite rare in the \ac{SM}, as shown in [[tab:higgs_decay_br]], but possess extremely clean photonic or leptonic signatures, with relatively few competing background processes.
+The diphoton channel is not even allowed at tree level, since the Higgs boson only couples to mass!
+The two channels have been responsible for increasingly precise measurements of the properties of the Higgs boson, namely its spin-parity $J^{P} = 0^{+}$ [[cite:&CMS_Hparity;&ATLAS_Hparity]], and its mass, here shown for the \hzzfourl{} channel [[cite:&higgs_mass_cms_run2;&atlas_higgs_4l_mass]]:
+
+#+NAME: eq:mass_higgs_4l
+\begin{align}
+\mh & = 124.94 \pm 0.17\,\text{(stat.)} \pm 0.03\,\text{(syst.)} \:\:\: \text{(ATLAS)} \:, \nonumber \\
+\mh & = 125.08 \pm 0.10\,\text{(stat.)} \pm 0.05\,\text{(syst.)} \:\:\: \text{(CMS)} \:,
+\end{align}
+
+\noindent We also mention the combination performed by \ac{ATLAS} of the two channels above [[cite:&higgs_mass_atlas]], with slightly better overall precision than the \ac{CMS} result above:
+
+#+NAME: eq:mass_higgs_comb
+\begin{equation}
+\mh = 125.11 \pm 0.09\,\text{(stat.)} \pm 0.06\,\text{(syst.)} \:.
+\end{equation}
+
+\noindent The precision of this measurement is a very important parameter to consider, on the grounds that $\mh$ is a free parameter of the theory, and many observables depend on it.
+The width is also an important parameter to characterize the Higgs boson.
+One can measure it directly, using on-shell processes, but the results have large uncertainties.
+\Ac{CMS} has for instance measured $\gh < 60\,\si{\MeV}$ at 68% confidence level using the $\text{H} \rightarrow \text{Z}\text{Z} \rightarrow 4\ell$ channel [[cite:&higgs_mass_cms_run2;&higgs_width_proposal1;&higgs_width_proposal2]].
+On the other hand, the precision is greatly increased when combining on-shell and off-shell cross-section measurents.
+Despite the small total width, the $\text{H} \rightarrow \text{Z}\text{Z}^{*}$ cross-section is enhanced due to ZZ and $\ttbar$ threshold effects [[cite:&passarino]].
+Since the on- to off-shell cross-section ratio is proportional to the width, performed measurements lead to [[cite:&higgs_width_atlas;&higgs_mass_cms_run2]]:
+
+#+NAME: eq:mass_width_higgs_4l
+\begin{align}
+\gh & = 4.5^{+3.3}_{-2.5}\,\si{\MeV} \:\:\: \text{(ATLAS)} \: , \nonumber \\
+\gh & = 2.9^{+2.3}_{-1.7}\,\si{\MeV} \:\:\: \text{(CMS)} \: .
+\end{align}
+
+#+NAME: tab:higgs_production_xsecs
+#+CAPTION: Cross-sections and corresponding uncertainties for the most significant Higgs boson production modes, at $\sqrt{s}=13\,\text{TeV}$, for $\mh = 125.09\,\si{\GeV}$ [[cite:&YellowReport4]].
+#+ATTR_LATEX: :placement [!h] :center t :align l|l :environment mytablewiderrows
+| Production mode        | Cross section [$\si{\pico\barn}$]                                                                 |
+|------------------------+---------------------------------------------------------------------------------------------------|
+| ggF                    | $48.61^{+4.27\%}_{-6.49\%}\,\text{(theory)} \pm 1.85\%\,\text{(PDF)}^{+2.59\%}_{-2.62\%}(\astrong)$ |
+| VBF                    | $3.766^{+0.43\%}_{-0.33\%}\,\text{(scale)} \pm 2.1\%\,\text{(PDF+}\astrong\text{)}$                   |
+| WH                     | $1.358 \pm 0.51\%\,\text{(scale)} \pm 1.35\%\,\text{(PDF+}\astrong\text{)}$                           |
+| ZH                     | $0.880^{+3.50\%}_{-2.68\%}\,\text{(scale)} \pm 1.65\%\,\text{(PDF}+\astrong\text{)}$                  |
+| ttH                    | $0.5065^{+5.8\%}_{-9.2\%}$                                                                        |
+| bbH                    | $0.4863^{+20.1\%}_{-23.9\%}$                                                                      |
+| tH (t-channel)         | $0.07426^{+6.5\%}_{-14.7\%}$                                                                      |
+
+#+NAME: fig:H_production_diagrams
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Feynman diagrams for the leading Higgs boson production processes: gluon fusion (a), vector boson fusion (b), associated production with a W or Z (V) boson (c) associated production with a top or bottom quark pair (d), and associated production with a single top quark, in the t-channel (e, f). Different Yukawa couplings are represented with various colors. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/intro/H_production_diagrams.pdf]]
+
+The Higgs boson is created via a series of production modes, the most important of which we show in [[fig:H_production_diagrams]] and list in [[tab:higgs_production_xsecs]], where cross-sections are provided for $\sqrt{s}=13\,\text{TeV}$ (\run{2}), with $\mh = 125.09\,\si{\GeV}$.
+Looking at [[fig:single_higgs_xsec_br]] (left), we can expect a small increase for the current \run{3} at $\sqrt{s}=13.6\,\text{TeV}$.
+By far the most dominant production mode is \ac{ggF}, which is also the most commonly measured at the \ac{LHC}.
+One order of magnitude below, the \ac{VBF} and VH "Higgs-strahlung" associated production modes follow, the latter split into WH and ZH, where WH includes processes with the two charged W bosons.
+The \ac{VBF} production mode, despite its small cross-section, has a striking experimental signature with its two additional jets, which have usually a large \ac{pt} and are produced back-to-back.
+\Ac{VBF} and VH also enables to probe the Higgs coupling to vector bosons, which is not present in \ac{ggF}.
+The ttH and tH channels have an even smaller small cross-section, but can provide additional information on the top-quark Yukawa coupling.
+Among the listed production modes, only bbH and tH have not yet been measured at the \ac{LHC}.
+The former happens only \SI{\sim 3}{\percent} of times and recently had a dedicated \ac{CMS} search, which observed an 95% \ac{CL} upper limit of 3.7 times the expected \ac{SM} cross-section value [[cite:&cms_bbh]].
+Once measured, it will serve as a further test for the Higgs coupling to bottom quarks.
+A fact worth noting are the absolute and relative dependences of the various production modes with the Higgs boson transverse momentum shown in [[fig:single_higgs_xsec_br]].
+As statistics increase and more events are made available for the distribution tails, the relationship between production modes is drastically effected.
+Above $\pt^{\text{H}} \approx 550\,\si{\GeV}$ VH becomes the second most common production mode, and it even surpasses \ac{ggF} at the admittedly very high $\pt^{\text{H}} \approx 1250\,\si{\GeV}$ value.
+This helps to illustrate the dynamic nature of Higgs physics.
+
+#+NAME: fig:HH_prod_kl_b
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Cumulative cross section for the production of a Higgs boson as a function of the lowest Higgs boson transverse momentum. The cross section due to \ac{ggF} (green), \ac{VBF} (red), vector boson associated (blue) and top-quark pair associated (magenta) production mode are shown in absolute values (left) and relative size (right). Taken from [[cite:&xsec_evolution_pt]].
+[[~/org/PhD/Thesis/figures/intro/hh_xsec_evoluton_pt.pdf]]
+
+#+NAME: fig:single_higgs_xsec_br
+#+CAPTION: (Left) Higgs boson production cross section for several production modes, as a function of the $\sqrt{s}$ centre-of-mass energy. (Right) Branching fractions of Higgs boson decays, as a function of $\mh$. Taken from [[cite:&YellowReport4]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/higgs_cross_sections.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/higgs_branching_ratio.pdf]]
+#+END_figure
+
+The final state decays of the Higgs boson is "maximally rich" [[cite:&higgs_br_maximum1]], presenting a vast potential for exploration.
+We list the most common decay channels in [[tab:higgs_decay_br]] and show some in [[fig:HH_decay_diagrams]].
+The \hbb{} decay dominates, but suffers from an exceedingly large multi-jet background, plus significant resonant \zbb{} background, and has never been observed in \ac{ggF}.
+Similar issues arise in \ac{VBF}, despite the additional handles provided by the jets, since the cross-section is greatly reduced.
+Instead, associated VH production is used, since the additional boson decays to leptons, which leave a clean signature in the detector.
+The multi-jet background is even larger for \hcc{}, given the lower masses involved.
+As seen before, the "golden channels" end up being \hzzfourl{} and \hgg{}, with very small couplings but experimentally clean.
+Notice that all decays with particles lighter than muons, such as light quarks or electrons, are completely out of reach from current or future detectors unless \ac{BSM} effects come into play.
+These final states have extremely small predicted couplings to the Higgs boson.
+To give an example, the $\text{H} \rightarrow e^{+}e^{-}$ decay is predicted to have a branching ratio $\mathcal{B}$ of \num{\approx 5e-9}, but the most recent \ac{CMS} 95% \ac{CL} upper limits excludes \num{3e-4} only [[cite:&higgs_to_electrons]].
+
+#+NAME: tab:higgs_decay_br
+#+CAPTION: Largest single Higgs boson branching ratios for $\mh = 125.09\,\si{\GeV}$ [[cite:&YellowReport4]]. The asterisk $*$ refers to virtual particles.
+#+ATTR_LATEX: :placement [!h] :align l|l :center t :environment mytablewiderrows
+| Decay mode               | $\mathcal{B}$ [%]                      |
+|--------------------------+----------------------------------------|
+| \hbb{}                   | \rule{0pt}{3ex}$58.09^{+0.72}_{-0.73}$ |
+| \hww                     | $21.53\pm0.33$                           |
+| $\text{H} \rightarrow gg$         | $8.18\pm0.42$                            |
+| $\text{H} \rightarrow \tau^{+}\tau^{-}$ | $6.27\pm0.10$                            |
+| \hcc{}                   | $2.88^{+0.16}_{-0.06}$                 |
+| \hzz{}                   | $2.641\pm0.040$                          |
+| \hgg{}                   | $0.2270\pm0.0047$                        |
+| $\text{H} \rightarrow \text{Z}\gamma$  | $0.1541\pm0.0090$                        |
+| $\text{H} \rightarrow \mu^{+}\mu^{-}$ | $0.02171^{+0.00036}_{-0.00037}$        |
+
+#+NAME: fig:HH_decay_diagrams
+#+ATTR_LATEX: :width .7\textwidth
+#+CAPTION: Feynman diagrams for the leading Higgs boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ $Z\gamma$. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/intro/H_decay_diagrams.pdf]]
+
+To conclude, all production modes and decay channels measured so far agree with the predictions of the \ac{SM}.
+A summary is shown in [[fig:higgs_modifiers]], where the two panels report the agreement of \ac{CMS} measurements with the \ac{SM} using signal strength modifiers $\mu$, defined as $\mu_{i} \equiv \sigma_{i}/(\sigma_{{i}})_{\text{SM}}$ for the production modes $i$ on the left and as $\mu^{f} \equiv \mathcal{B}^{f}/(\mathcal{B}^{f})_{\text{SM}}$ for the decay channels $f$ on the right.
+Of particular relevance are the observation of $\text{H} \rightarrow \tau^{+}\tau^{-}$ [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]] and the first evidence for $\text{H} \rightarrow \mu^{+}\mu^{-}$ [[cite:&H2mumu]].
+Also, and as already discussed in [[#sec:higgs_mechanism]] and illustrated in [[fig:linear_fermions_bosons]], the predicted proportionality between the Higgs couplings and the fermion and gauge boson masses is remarkable, being confirmed by both \ac{CMS} and \ac{ATLAS}.
+Finally, the phenomenology of cubic and quartic interactions of the Higgs boson, as introduced by [[eq:sm_potential]], are still left to be discussed.
+Given their tight connection with this thesis' subject, it receives a dedicate treatment in [[#sec:dihiggs]].
+
+#+NAME: fig:higgs_modifiers
+#+CAPTION: Signal strength parameters extracted for various production modes $\mu_i$, assuming $\mathcal{B}^f=\mathcal{B}^f_{\text{SM}}$ (left), and decay channels $\mu^f$, assuming $\sigma_i=(\sigma_i)_{\text{SM}}$ (right). The thick (thin) black lines indicate the 1 (2) standard deviation (s.d.) \acp{CL}, with the systematic and statistical components of the 1 s.d. interval indicated by the red and blue bands, respectively. The vertical dashed line at unity represents the values of $\mu_i$ and $\mu^f$ in the \ac{SM} [[cite:&higgs_10_years]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/HiggsSignalStrengths.pdf]]
+#+END_figure
