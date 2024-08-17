@@ -4,10 +4,10 @@
 
 There is hardly a more successfull theoretical framework across all Sciences than the \ac{SM} of Particle Physics.
 Despite colossal experimental efforts, including the most sophisticated (and expensive) accelerators and detectors ever built, and the involvement of thousands of scientists and engineers, all hundreds of petabytes of data so far produced match \ac{SM} predictions, in an inspiring demonstration of scientific accomplishment.
-And yet we know it to be incomplete, from the surprising behaviour of rotation curves of galaxies, to a mysterious form of energy which permeates the entire Universe, to the apparent absence of a charge-mirrored world which should naively exist in identical proportions to our own.
+And yet we know the \ac{SM} to be incomplete, from the surprising behaviour of rotation curves of galaxies, to a mysterious form of energy which permeates the entire Universe, to the apparent absence of a charge-mirrored world which should naively exist in identical proportions to our own.
 
 This chapter introduces the \ac{SM}, focusing on the Higgs boson particle, theorized 60 years ago but discovered on June 2012 only at the CERN LHC [[cite:&ATLAS_Higgs_discovery;&CMS_Higgs_discovery1;&CMS_Higgs_discovery2]].
-The first section sets the tone with a brief historical introduction, and the text quickly moves on to detail the theoretical building blocks of Particle Physics, before describing the Higgs mechanism, one of the main ideas which revolutionized our understanding of fundamental interactions.
+The first section sets the tone by detailing the theoretical building blocks of elementary Particle Physics, before describing the Higgs mechanism, one of the ideas which revolutionized our understanding of fundamental interactions.
 Next, we concentrate our attention on Higgs phenomenology, most notably on Higgs pair production and decay.
 The experimental status of HH physics is summarized, showcasing the full success so far obtained by the \ac{SM}.
 We conclude by presenting the reasons we believe something must lie beyond the current theory, concretely mentioning \ac{BSM} HH analyses, including the one studied in this thesis, which have the potential to unveil Nature one step further.

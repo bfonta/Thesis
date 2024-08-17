@@ -223,7 +223,7 @@ The description in this section serves as basis for the more complex algorithms 
 
 * Jets
 Since quarks and gluons carry color charge, they must obbey \ac{QCD} /confinement/, according to which only colorless states are allowed.
-As a consequence, once a hard collision in \ac{HEP} experiments takes place, ejected quarks and gluons are immediately associated to other colored objects, forming colorless hadrons in a process called /hadronisation/.
+As a consequence, once a hard collision in \ac{HEP} experiments takes place, ejected quarks and gluons are immediately associated to other colored objects, forming colorless hadrons in a process called /hadronization/.
 The group of all newly formed colorless hadrons is called a /jet/, since they all travel in approximately the same direction, and tends to be shaped as a narrow cone, of course depending on the algorithm used for the jet reconstruction.
 In \ac{CMS}, jets are reconstructed from charged and neutral \ac{PF} candidates, 85% of which are photons and charged hadrons, via the anti-$\ktalgo$ algorithm [[cite:&antikt]].
 This algorithm, designed to be insensitive to the effect of soft radiation, defines the following two distance parameters, themselves inspired by previous clustering algorithms [[cite:&kt;&cambridge_aachen_1;&cambridge_aachen_2]]:

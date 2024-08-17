@@ -8,9 +8,9 @@ A virtuous cycle often takes place between data collection and improvements in s
 In the following we provide a brief and necessarily incomplete overview of some of the physics motivations to build the \ac{HL-LHC}.
 A detailed description is out of the scope of this work.
 
-\myparagraph{EW processes}
+* EW processes
 
-\noindent The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
+The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
 This notably applies to W mass $\mw$ and weak mixing angle $\thw$ measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
 \num{\sim 2e6} W boson events will be collected per week, leading to a statistical sensitivity of about \SI{10}{\MeV} for the $W$ mass, and significantly lower for cross-section measurements.
 The added luminosity might also help solving the tension between old $\theta_{W}$ measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result [[cite:&weak_mixing_angle_cms]], which agrees with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
@@ -25,9 +25,9 @@ There is also the possibility for the longitudinal components of the $V$ bosons 
 \ac{VBS} also forms the ideal field for anomalous gauge couplings measurements, especially quartic couplings.
 Finally, even rarer tri-boson processes ($\sigma\sim0.1\,\si{\pico\barn}$) brings an extra handle on \ac{SM} testing.
 
-\myparagraph{Strong interactions}
+* Strong interactions
 
-\noindent The \ac{HL-LHC} will enable an increase in the kinematic reach for jet and photon production.
+The \ac{HL-LHC} will enable an increase in the kinematic reach for jet and photon production.
 This will in turn reduce the associated experimental uncertainties, improving \ac{PDF} modeling.
 High-$\pt$ b-jets are sensitive to higher-order corrections, parton shower modeling and \acp{PDF}.
 Therefore, investigating the b-jet contribution to the total jet cross section enables to test the available theoretical predictions.
@@ -38,9 +38,9 @@ For the first time, the \ac{HL-LHC} will make possible the measurement of quantu
 This brings an improvement in \ac{DPS} modeling, which has been so far very limited.
 \ac{DPS} can be as relevant as the single proton scattering for same-sign $WW$ final states involving $b\bar{b}$ or $c\bar{c}$ quark pairs.
 
-\myparagraph{Top physics}
+* Top physics
 
-\noindent The heaviest particle in the \ac{SM} plays an important role in \ac{EWSB} and in \ac{BSM} searches.
+The heaviest particle in the \ac{SM} plays an important role in \ac{EWSB} and in \ac{BSM} searches.
 With the \ac{HL-LHC} we will be able to improve the precision of the $\mt$ measurement, and to study $t\bar{t}$ differential distributions in more detail, reaching $\mtt\sim 7\,\si{\TeV}$ and $\pt\sim 2.5\,\si{\TeV}$.
 This will provide benefits for \ac{PDF} measurements.
 One will also be able to explore \ac{BSM} for $\mtt > 7\,\si{\TeV}$ due to the low \ac{SM} background.
@@ -48,17 +48,17 @@ An interesting link might be drawn between the results of \ac{LHCb} and \ac{ATLA
 There will be as well the possibility to observe the rare $t\bar{t}t\bar{t}$ production for the first time, despite its small cross-section of $\mathcal{O}(10)\,\si{\per\femto\barn}$.
 $t\bar{t}t\bar{t}$ can be used to constrain some of the Wilson coefficients associated to \ac{EFT} dimension-6 operators, to further study the top Yukawa coupling constrain, including its magnitude and \ac{CP} properties, since it can occur via the mediation of a Higgs boson [[cite:&tttt]], and even to assess the presence of the non-\ac{SM} top quark dipole moment.
 
-\myparagraph{Forward physics}
+* Forward physics
 
-\noindent Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the \ac{AFP} [[cite:&afp_tdr]] are extended in the \ac{HL-LHC} phase, \ac{CEP} $pp \rightarrow p\,(\gamma\gamma\rightarrow \text{X})\,p$ phenomena, among which light-by-light scattering ($\text{X} = \gamma\gamma$), will be further explored \ac{CEP}.
+Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the \ac{AFP} [[cite:&afp_tdr]] are extended in the \ac{HL-LHC} phase, \ac{CEP} $pp \rightarrow p\,(\gamma\gamma\rightarrow \text{X})\,p$ phenomena, among which light-by-light scattering ($\text{X} = \gamma\gamma$), will be further explored \ac{CEP}.
 Other processes include, for instance, $\text{X} = \mu\mu,\,\tau\tau,\,Z,\,H,\,WW,\,ZZ$, and enable the study of anomalous gauge couplings and the magnetic moment of the $\tau$, among other studies [[cite:&ctpps_varela;&ctpps_pitt]].
 \ac{CEP} processes carry particular interest since they bring production of charged particles initiated only by photons, into what amounts to using the \ac{LHC} as a $\gamma\gamma$ collider.
 In parallel, a whole plethora of \ac{QCD}-related measurements can be performed in \acp{CEP}.
 The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross-sections, increasing their discovery potential.
 
-\myparagraph{Higgs Physics}
+* Higgs Physics
 
-\noindent The Higgs boson programme will remain at the forefront of \ac{CMS} research, with the \num{150} million Higgs bosons and \num{120} thousand Higgs boson pairs expected to be produced at the end of the \ac{HL-LHC} phase.
+The Higgs boson programme will remain at the forefront of \ac{CMS} research, with the \num{150} million Higgs bosons and \num{120} thousand Higgs boson pairs expected to be produced at the end of the \ac{HL-LHC} phase.
 The precision of the Higgs couplings will improve by a factor of \num{\sim 4}, with most couplings measured to a \SI{2}{\percent} precision.
 After the expected observation of $H \rightarrow \mu\mu$ already at \run{3}, the $H \rightarrow Z\gamma$ channel will share the same fate during \phase{2} [[cite:&higgs_10_years]], despite its uncertainty remaining statistically driven.
 However, the long-awaited flagship measurement of \ac{HL-LHC} concerns di-Higgs production.

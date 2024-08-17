@@ -17,7 +17,7 @@ We instead speak of /spontaneous/ symmetry breaking when some symmetry is broken
 With spontaneous symmetry breaking, the true symmetry of the system is simply hidden by the necessary choice of an asymmetrical lower energy state.
 We can for instance think of a plastic rod being compressed along its longitudinal axis ([[fig:symmetries]], middle): before applying a vertical force the system is symmetric under rotations, but after being compressed the ground state necessarily breaks the symmetry[fn:: Spontaneous symmetry breaking is also present in the most recent diffusion models for content generation [[cite:&spontaneous_breaking_diffusion]]!].
 
-In the context of \ac{HEP}, it is the presence of an additional scalar field what spontaneously breaks the symmetry of the original \ac{EW} lagrangian in [[eq:ew_lagrangian_short]].
+In the context of \ac{HEP}, it is the presence of an additional scalar field what spontaneously breaks the symmetry of the original electroweak lagrangian in [[eq:ew_lagrangian_short]].
 The theory starts by introducing a $\text{SU}(2)_{\text{L}}$ doublet with 4 scalar real fields:
 
 #+NAME: eq:su2_doublet
@@ -74,9 +74,21 @@ Using the definition of covariant derivative in [[eq:ew_covariant]] plus the uni
   \end{split}
 \end{equation}
 
-\noindent where the Higgs mass term in the first line establishes a new free parameter of the theory, $\mh = \sqrt{2\lambda}v = \sqrt{2}\mu$, and the second line shows mass terms for the W and Z gauge bosons, where their masses are similarly given by the square root of the multiplicative term in front of the respective fields.
-The unitary gauge effectively removed the Goldstone bosons $\theta^{i}$, which were absorbed as additional degrees of freedom of the weak gauge bosons, corresponding to their longitudinal polarizations.
-This is referred as the Higgs mechanism.
+\noindent where the Higgs mass term in the first line establishes a new free parameter of the theory, $\mh = \sqrt{2\lambda}v = \sqrt{2}\mu$, and the second line shows mass terms for the W and Z gauge bosons:
+
+#+NAME: eq:wz_masses_formula
+\begin{equation}
+\mw^{2} = \frac{g^{2}v^{2}}{4} \: , \:\:\:\: \mz^{2} = \frac{(g^{2}+g^{\prime2})v^{2}}{4} \: .
+\end{equation}
+
+\noindent These masses have been experimentally measured to be [[cite:&wmasscomb;&zmasscomb;&cdf_wzmass]]:
+
+#+NAME: eq:wz_masses_measured
+\begin{equation}
+\mw = 80.3692 \pm 0.0133 \,\si{\GeV} \: , \:\:\:\: \mz = 91.1880 \pm 0.0020 \,\si{\GeV}
+\end{equation}
+
+\noindent The unitary gauge effectively removed the Goldstone bosons $\theta^{i}$, which were absorbed as additional degrees of freedom of the weak gauge bosons, corresponding to their longitudinal polarizations.
 We can finally introduce the Higgs potential $V$ as it is usually presented:
 
 #+NAME: eq:sm_potential
@@ -94,6 +106,7 @@ V(\text{H}) = \frac{1}{2}\mh^{2}\text{H}^{2} + \lh{3}v\text{H}^{3} + \frac{\lh{4
 \noindent We can conclude that the Higgs self-couplings are fully determined in the \ac{SM}, given the measurements of $\mh$ and $v$, the latter fixed by Fermi's constant $G_{F}$, which is measured via muon decays.
 From an experimental point of view, the Higgs boson thus provides a unique opportunity to perform a \ac{SM} closure test, independently from the gauge interactions of the electroweak sector.
 
+* The Yukawa couplings
 The Higgs mechanism represents an economical way to provide mass to the weak bosons in the theory.
 Additionally, it can be shown that the new massive bosons preserve renormalizability [[cite:&hooft]].
 However, a second feat is yet to be achieved: justify the existence of fermion masses.
@@ -111,17 +124,65 @@ To do so, Yukawa (renormalizable) $\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\t
 \tilde{\phi} = i\sigma_{2}\phi^{*} = \binom{\phi_{0}^{*}}{-\phi_{+}^{*}} \hspace{3mm} \xmapsto[]{\hspace{1mm} \text{EWSB} \hspace{1mm}} \:\:\: \frac{1}{\sqrt{2}}\binom{v+\text{H}(x)}{0} \: .
 \end{equation}
 
-\noindent If we want for instance to generate the electron mass, it suffices to replace the fields with $\bar{\Psi}_{\text{L}} = (\bar{\nu_{e}},\bar{e})$ and similar for the right-handed singlets.
+\noindent If we want for instance to generate the electron mass, it suffices to replace the fields with $\bar{\Psi}_{\text{L}} = (\bar{\nu_{e}},\bar{e})$ and similarly for the right-handed singlets.
 Note that fermion mass terms of the form $m\bar{\psi}\psi$ are forbidden by gauge invariance, and it is the addition of the Higgs doublet which changes the scenario.
 
 After \ac{EWSB}, using [[eq:unitary_gauge]] and [[eq:yukawa_definitions]], and summing over fermion up and down types, [[eq:yukawa_definitions]] is simplified to:
 
-#+NAME: eq:yukawa_definitions
+#+NAME: eq:fermion_masses
 \begin{equation}
-\mathcal{L}_{\text{Yukawa}} = - \sum_f m_f\left( \bar{\psi}_\text{L} \psi_{\text{R}} + \bar{\psi}_\text{R} \psi_{\text{L}} \right) \left( 1 + \frac{H}{v} \right) \: ,
+\mathcal{L}_{\text{Yukawa}} = - \sum_f m_f\left( \bar{\psi}_\text{L} \psi_{\text{R}} + \bar{\psi}_\text{R} \psi_{\text{L}} \right) \left( 1 + \frac{\text{H}}{v} \right) \: ,
 \end{equation}
 
-\noindent with new $y_{f}v/\sqrt{2}$ mass terms for the fermions.
+\noindent with new $m_{f} = y_{f}v/\sqrt{2}$ mass terms for the fermions.
+Very importantly, we are here simplifying the calculations: [[eq:yukawa_lagrangian]] can be expressed as a series of mass terms only after diagonalizing the original Yukawa matrices that multiply the fields.
+The process of diagonalization implies that the lepton fields are not mass eigenstates; they have to be redefined as in $\psi^{\prime} \rightarrow U\psi$.
+When the redefinition is propagated back to the full \ac{EW} lagrangian, only the term containing charged currents is modified:
+
+#+NAME: eq:ckm_lagrangian
+\begin{equation}
+\mathcal{L}_{\text{CC}} = \frac{e}{\sqrt{2}\sin\theta_{\text{W}}} W_{\mu}^{+} V_{\text{CKM}} \left(\bar{\psi}_{\text{L}}\gamma^\mu\psi_{\text{L}}^{\prime} \right) + \text{h.c.} \:,
+\end{equation}
+
+\noindent where the last term refers to the hermitian conjugate to simplify the expression, and $V_{\text{CKM}}$ is the \ac{CKM} matrix, receiving contributions from the two diagonalized fields $\psi_{\text{L}}$.
+The \ac{CKM} matrix describes the mixing between all quark generations, and is what makes possible the existence of flavour-changing charged currents in the \ac{SM}.
+This is not the case for leptons, where couplings to charged W's only happen within each generation; a decay like $e^{-} \rightarrow \nu_{\mu} W^{-}$ is not allowed.
+The values of the \ac{CKM} are shown in the following:
+
+#+NAME: eq:ckm_matrix1
+\begin{equation}
+\begin{pmatrix}
+  d^{\prime} \\
+  s^{\prime} \\
+  b^{\prime}
+\end{pmatrix}
+=
+V_{\text{CKM}} 
+\begin{pmatrix}
+  d \\
+  s \\
+  b
+\end{pmatrix}
+\: ,
+\end{equation}
+
+#+NAME: eq:ckm_matrix2
+\begin{equation}
+| V_{\text{CKM}} | = 
+\begin{pmatrix}
+  0.97435 \pm 0.00016             & 0.22501 \pm 0.000658            & 0.003732^{+0.000090}_{-0.000085} \\
+  0.22487 \pm 0.00068             & 0.97349 \pm 0.00016             & 0.04183^{+0.00079}_{-0.00069}    \\
+  0.00858^{+0.00019}_{-0.00017} & 0.04111^{+0.00077}_{-0.00068} & 0.999118^{+0.000029}_{-0.000034}
+\end{pmatrix}
+\: ,
+\end{equation}
+
+\noindent where the experimentally measured [[cite:&PDG 12]] magnitudes of the \ac{CKM} elements represent the probability amplitude for a quark $i$ to transform into a quark $j$.
+The matrix also includes an additional phase, which will further discussed in [[#sec:short_comings]].
+Since the mass diagonalization does not affect neutral currents, neutral processes changing the flavour of fermions are forbidden at first-order in the \ac{SM}.
+The fact that the matrix is relatively close of being diagonal implies a preference for couplings within the same generation.
+This is for instance why top quarks decay virtually always to b quarks, and other decays channels can be neglected.
+
 The \ac{SM} therefore explains fermion masses by introducing /ad hoc/ Yukawa coupling terms between the Higgs field and all fermion fields, breaking the symmetry between the three lepton families.
 At the same time, the origin or fundamental reason for such terms remains unknown, with the masses being free parameters of the theory.
 The Higgs mechanism does however predict a proportionality between its couplings and the masses of all fermions and gauge bosons (recall [[eq:higgs_lagrangian_full]]).

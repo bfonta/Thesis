@@ -5,3 +5,4 @@
 CP violation / matter-antimatter asymmetry [[cite:&cp_violation1;&cp_violation2;&cp_violation3]]
 
 + mention the baryon asymmetry of the Universe, or baryogenesis
++ discussed in section 1.1.6 of Alessandro

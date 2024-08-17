@@ -7,9 +7,9 @@ For the scope of this thesis, the drastic upgrades put forward in the trigger sy
 However, given the intricacies of the online trigger chain, and the ideas behind \ac{PF} reconstruction, considering subdetectors as independent elements is naive and ultimately wrong.
 We therefore provide a brief summary of all other subdetector upgrades, which can put into perspective all recent and substantial efforts of the \ac{CMS} Collaboration [[cite:&cms_run3_developments]].
 
-\myparagraph{Tracker}
+* Tracker
 
-\noindent The pixel and strip tracking detectors are subject to the highest radiations and doses among all \ac{CMS} components, and their performance will abruptly degrade after \SI{500}{\invfb}.
+The pixel and strip tracking detectors are subject to the highest radiations and doses among all \ac{CMS} components, and their performance will abruptly degrade after \SI{500}{\invfb}.
 The radiation levels are expected to increase by one order of magnitude during the \ac{HL-LHC}.
 The pixel detector originally installed has already been replaced during the technical stop between the 2016 and 2017 data-taking periods [[cite:&pixel_phase1_upgrade2;&pixel_phase1_upgrade1]].
 Its structure is designed with accessibility in mind, such that an update of the pixels does not imply moving the strips.
@@ -42,9 +42,9 @@ The updates will bring better resolutions and lower fake rates.
 [[~/org/PhD/Thesis/figures/hgcal/TrackerUpgrade.pdf]]
 #+END_figure
 
-\myparagraph{MTD}
+* MTD
 
-\noindent The \ac{MTD} [[cite:&mtd_tdr;&mtd_timing_plot]] has no analog in the current \phase{1} \ac{CMS} detector.
+The \ac{MTD} [[cite:&mtd_tdr;&mtd_timing_plot]] has no analog in the current \phase{1} \ac{CMS} detector.
 Its addition is driven by the \num{4}-fold \ac{PU} increase brought by the \ac{HL-LHC}.
 Indeed, the primary vertex has to be disentangled from all \ac{PU} vertices, and timing measurements have been shown to provide the required extra handle, as expected from adding a new uncorrelated dimension to the analysis.
 The \ac{MTD} will have the ability to measure the production time of \acp{MIP} for vertex location at a \SI{30}{\pico\second} level, although a deterioration of a factor of \num{2} is expected by the end of the \ac{HL-LHC}.
@@ -80,9 +80,9 @@ All in all, the \ac{MTD} will help \ac{CMS} maintaining its current performances
 [[~/org/PhD/Thesis/figures/hgcal/MTDEndcap.pdf]]
 #+END_figure
 
-\myparagraph{Calorimeters}
+* Calorimeters
 
-\noindent By far the most important upgrade in the \ac{CMS} calorimeters will happen in the endcaps, namely the \ac{HGCAL}.
+By far the most important upgrade in the \ac{CMS} calorimeters will happen in the endcaps, namely the \ac{HGCAL}.
 This revolutionary calorimeter is described in full in [[#sec:hgcal_intro]], and we here focus on the remaining updates, most of them happening in the barrel section [[cite:&calo_barrel_upgrade]]. \Ac{ECAL} control and safety systems will also be completely replaced cite:&barrel_upgrade_safety.
 
 Unlike for most \ac{CMS} subdetectors discussed in this section, the changes are not directly driven by the increase in radiation levels.
@@ -115,7 +115,7 @@ A much simpler version of \ac{HGCAL} is being considered for the very forward en
 It would be located in front of the \ac{HF}, being subject to a maximum absorbed dose of \SI{4.6}{\mega\gray} and to a fluence of \SI{2e16}{\nequiv}, both twice as large as the levels expected in \ac{HGCAL}.
 Its motivation stems from improved \ac{VBS} scattering measurements of longitudinally polarized channels and from enhanced single- and di-Higgs \ac{VBF} production, both of which include two very forwards jets.
 
-\myparagraph{Muon detectors}
+* Muon detectors
 
 \noindent Following the \run{3} upgrade discussed in [[#sec:detector_structure]], with the introduction of the GE1/1 \ac{GEM} superchambers, two additional \ac{GEM} detectors will be installed before the start of the \ac{HL-LHC}.
 The first, named GE2/1, consists of superchambers similar to the already installed but larger, covering \num{20} degrees in \ac{phi}.
@@ -137,9 +137,9 @@ These new \acp{RPC} have been specifically designed to handle high hit rates.
 [[~/org/PhD/Thesis/figures/hgcal/MuonSystemNew.pdf]]
 #+END_figure
   
-\myparagraph{BRIL}
+* BRIL
 
-\noindent The existing \ac{BRIL} project is responsible for \num{14} technical systems.
+The existing \ac{BRIL} project is responsible for \num{14} technical systems.
 They monitor beam losses and radiation in the \ac{CMS} cavern, provide beam timing, enable the abortion of the beam to protect individual detector components, and measure the beam-induced background and luminosity values.
 For the \ac{HL-LHC}, \ac{BRIL} aims at measuring the luminosity within a \SI{1}{\percent} uncertainty, against the \SI{1.4}{\percent} obtained in 2022.
 The improvement is for instance required by multiple single Higgs cross-section measruements [[cite:&cms_upgrade_phase2]].

@@ -4,6 +4,7 @@
 #+SETUPFILE: setup.org
 #+SETUPFILE: definitions.org
 #+EXCLUDE_TAGS: noexport
+#+OPTIONS: H:4
 
 # #### default spacing is 14pt
 #+LATEX: \fontsize{12pt}{13pt}\selectfont
@@ -11,10 +12,10 @@
 * Introduction to Higgs boson pair production
 #+INCLUDE: "chapters/intro/sm_intro.org"
 ** The Standard Model of Particle Physics
-*** Brief historical perspective
-#+INCLUDE: "chapters/intro/history.org"
 *** The building blocks of the SM
 #+INCLUDE: "chapters/intro/sm_structure.org"
+*** From symmetries to interactions
+#+INCLUDE: "chapters/intro/sm_symmetries.org"
 *** The Higgs Mechanism
 #+INCLUDE: "chapters/intro/higgs_mechanism.org"
 *** Experimental status of Higgs boson physics
