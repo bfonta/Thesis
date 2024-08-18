@@ -2,6 +2,21 @@
 :CUSTOM_ID: sec:dihiggs
 :END:
 
+
+
+The di-Higgs production mecahnism are in many ways similar to the production modes of single Higgs physics covered in [[#sec:higgs_exp_status]].
+The main difference is often the additional split of a virtual Higgs into two final state Higgs bosons, and the striking cross-section reduction by \num{\sim 3} orders of magnitude.
+The five modes that occur the most often are listed below:
+
++ 
+
+
+
+
+
+
+
+
 As mentioned in [[#sec:sm_intro]] the \ac{SM} has proven an immensely successful theory.
 However, some processes, either due to their low available event statistics or to a challenging experimental signature, are yet to be measured.
 The production of Higgs boson pairs is one of such cases, given its extreme rarity (see [[ref:sec:production]]), in addition generally involving complicated final states including multiple decay products with jets and/or \ac{MET}.
@@ -43,10 +58,53 @@ nism of Higgs boson pairs at hadron colliders within the SM [[cite:&hllhc_physic
 # #+CAPTION: Feynman diagrams for the leading \ac{BSM} HH pair production processes introduced by the \ac{EFT} approach. Three new couplings are thus introduced: $c_{2}$, $c_{2g}$ and $c_{2}$. /k)/ gluon fusion HH ("triangle") /l)/ gluon-fusion HH ("box") /m,n,o)/ \ac{VBF} HH.
 # [[~/org/PhD/Thesis/figures/BSM_HH_production_diagrams.pdf]]
 
-* To do :noexport:
-- [ ] cover [[cite:&hllhc_physics]] physics briefly discussed in [[ref:sec:hllhc]]
+* Production
+:PROPERTIES:
+:CUSTOM_ID: sec:production
+:END:
+
+#+NAME: fig:HH_production_diagrams_b
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: Feynman diagrams for the leading H boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ Z$\gamma$. Taken from [[cite:&higgs_10_years]].
+[[~/org/PhD/Thesis/figures/intro/HH_production_diagrams.pdf]]
+
+#+NAME: fig:HH_prod_energy
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: HH production cross section as a function of the center of mass energy for the six largest HH production channels at /pp/ colliders. The thickness of the lines corresponds to the scale and PDF uncertainties added linearly. Gluon fusion dominates for the entire energy range. The figure is taken from [[cite:&HH_xsec_running]].
+[[~/org/PhD/Thesis/figures/intro/HH_production_energy.pdf]]
+
+#+NAME: fig:HH_prod_kl
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: HH production cross section as a function of the coupling modifier $\klrat$ for several production mechanisms. The dashed and solid lines denote respectively the LO and NLO predictions and the bands indicate the PDF and scale uncertainties added linearly. The figure is taken from [[cite:&HH_xsec_running]].
+[[~/org/PhD/Thesis/figures/intro/HH_production_kl.pdf]]
+
+
+#+NAME: tab:HH_production_xsec
+#+CAPTION: Inclusive gluon fusion cross-sections for HH production for different centre-of-mass energies in the \ac{NNLO} \ac{FT} approximation, for $\mh=\SI{125}{\GeV}$, with the central scale set to $\mhh/2$ (see [[cite:&higgs_xsec_top_effects]]). PDF, $\alpha_{S}$, scale and top mass $m_{t}$ uncertainties are also showcased. Taken from [[cite:&lhc_wg4_twiki]].
+#+ATTR_LATEX: :placement [!h] :center t :align c|c|c|c
+| $\sqrt{s}$ (\si{\TeV}) | $\sigma^{\text{FTapprox}}_{\text{NNLO}}$ (\si{\femto\barn}) | PDF + $\alpha_{S}$ unc. | Scale + $m_{t}$ unc. |
+|------------------------+--------------------------------------------------+-----------------+-------------------|
+|                      7 |                                            6.572 | \pm4.3%           | $-$               |
+|                      8 |                                            9.441 | \pm3.9%           | $-$               |
+|                     13 |                                            31.05 | \pm3.0%           | $-23\% +6\%$      |
+|                   13.6 |                                            34.43 | \pm3.0%           | $-23\% +6\%$      |
+|                     14 |                                            36.69 | \pm3.0%           | $-23\% +6\%$      |
+|                     27 |                                            139.9 | \pm2.5%           | $-22\% +5\%$      |
+|                    100 |                                             1224 | \pm2.4%           | $-21\% +4\%$      |
   
+* Decay
+:PROPERTIES:
+:CUSTOM_ID: sec:decay
+:END:
+
+** The bb\tau\tau final state
+
+** Other final states
+
+
+
+
 * Additional bibliography :noexport:
 + [[https://github.com/bfonta/HHStatAnalysis/blob/master/AnalyticalModels/python/plot_differential.py][Produce differential BSM distributions]] (using ~HHReweightingPlots~ folder in =lxplus9=, release ~CMSSW_14_1_0_pre2~)
 + Andre david artigo [[cite:&andre_david_higgs_ten_years]]
-  
+- cover [[cite:&hllhc_physics]] physics briefly discussed in [[ref:sec:hllhc]]  

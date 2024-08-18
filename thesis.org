@@ -22,11 +22,6 @@
 #+INCLUDE: "chapters/intro/higgs_exp_status.org"
 ** Higgs boson pair phenomenology in the SM
 #+INCLUDE: "chapters/intro/dihiggs.org"
-*** Production
-#+INCLUDE: "chapters/intro/production.org"
-*** Decay
-#+INCLUDE: "chapters/intro/decay.org"
-
 ** Experimental status of SM HH Physics
 #+INCLUDE: "chapters/intro/hh_exp_status.org"
 *** Direct searches

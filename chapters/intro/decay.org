@@ -1,7 +1,0 @@
-:PROPERTIES:
-:CUSTOM_ID: sec:decay
-:END:
-
-* The bb\tau\tau final state
-
-* Other final states
