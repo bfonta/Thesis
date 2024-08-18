@@ -22,6 +22,17 @@
 #+INCLUDE: "chapters/intro/higgs_exp_status.org"
 ** Higgs boson pair phenomenology in the SM
 #+INCLUDE: "chapters/intro/dihiggs.org"
+*** Production modes
+#+INCLUDE: "chapters/intro/production_modes.org"
+*** Final states
+#+INCLUDE: "chapters/intro/final_states.org"
+** Going beyond the SM
+*** SM shortcomings
+#+INCLUDE: "chapters/intro/short_comings.org"
+*** Non-resonant BSM HH Production
+#+INCLUDE: "chapters/intro/nonres_BSM_hh.org"
+*** Resonant BSM HH Production
+#+INCLUDE: "chapters/intro/res_BSM_hh.org"
 ** Experimental status of SM HH Physics
 #+INCLUDE: "chapters/intro/hh_exp_status.org"
 *** Direct searches
@@ -32,15 +43,6 @@
 #+INCLUDE: "chapters/intro/zz_and_zh.org"
 *** Combinations
 #+INCLUDE: "chapters/intro/combinations.org"
-** Going beyond the SM
-*** SM shortcomings
-#+INCLUDE: "chapters/intro/short_comings.org"
-*** Non-resonant BSM HH Production
-#+INCLUDE: "chapters/intro/nonres_BSM_hh.org"
-*** Resonant BSM HH Production
-#+INCLUDE: "chapters/intro/res_BSM_hh.org"
-
-
 * The CMS Detector at the LHC
 ** The Large Hadron Collider
 #+INCLUDE: "chapters/detector/lhc_intro.org"

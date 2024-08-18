@@ -1,0 +1,102 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:production
+:END:
+
+The double Higgs production mechanisms are in many ways similar to the production modes of single Higgs physics covered in [[#sec:higgs_exp_status]].
+The main difference consists of the larger number of possible Feynamn diagrams for each production mode at the lowest order, and naturally the striking cross section reduction by 3 orders of magnitude.
+The five production modes that most often occur are discussed below, and their cross sections are listed in [[tab:HH_production_xsec]] for $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$.
+In [[fig:HH_prod_energy]], instead, we show the evolution of the same production modes with increasing centre-of-mass energy.
+Quite apparent is the hierarchical structure of the importance of each mode, which evolves differently than for single Higgs processes.
+Processes involving top quarks in the final states increase their cross section faster with energy than processes including vector bosons.
+This observation will surely impact future detectors at higher centre-of-mass energies.
+
+#+NAME: fig:HH_prod_energy
+#+ATTR_LATEX: :width .9\textwidth
+#+CAPTION: HH production cross section as a function of the center of mass energy for the six largest HH production channels at /pp/ colliders. The thickness of the lines corresponds to the scale and PDF uncertainties added linearly. Gluon fusion dominates for the entire energy range. The figure is taken from [[cite:&HH_xsec_running]].
+[[~/org/PhD/Thesis/figures/intro/HH_production_energy.pdf]]
+
+#+NAME: tab:HH_production_xsec
+#+CAPTION: Inclusive cross-sections for the most significant HH production modes at $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$ in the \ac{NNLO} \ac{FT} approximation for $\mh = 125\,\si{\GeV}$. Taken from [[cite:&lhc_wg4_twiki]].
+#+ATTR_LATEX: :placement [!h] :center t :align l|l :environment mytablewiderrows
+| Production mode                | Cross section [$\si{\femto\barn}$]                                                                |
+|--------------------------------+---------------------------------------------------------------------------------------------------|
+| ggHH                           | $30.77^{+2.2\%}_{-5\%}(\text{scale})^{+4.0\%}_{-18.0\%}\%(\mt)\pm1.5\%(\text{PDF})\pm1.7\%(\astrong)$ |
+| VBF HH                         | $1.687_{-0.04\%}^{+0.05\%}(\text{scale})\pm2.7\%(\text{PDF}+\astrong)$                                |
+| $\text{W}^{+}\text{H}\text{H}$ | $0.329_{-0.41\%}^{+0.32\%}(\text{scale})\pm2.2\%(\text{PDF}+\astrong)$                                |
+| $\text{W}^{-}\text{H}\text{H}$ | $0.173_{-1.3\%}^{+1.2\%}(\text{scale})\pm2.8\%(\text{PDF}+\astrong)$                                  |
+| ZHH                            | $0.363_{-2.7\%}^{+3.4\%}(\text{scale})\pm1.9\%(\text{PDF}+\astrong)$                                  |
+| ttHH                           | $0.756_{-15.0\%}^{+4.3\%}(\text{scale})\pm3.3\%(\text{PDF}+\astrong)$                                 |
+| tqHH                           | $0.0289_{-3.6\%}^{+5.5\%}(\text{scale})\pm4.7\%(\text{PDF}+\astrong)$                                 |
+
+** Gluon fusion
+The fusion of gluons $gg \rightarrow \text{H}\text{H}$, via a heavy-quark loop is the most important production mechanism of Higgs boson pairs at hadron colliders [[cite:&hllhc_physics]].
+Contrary to single Higgs \ac{ggF}, in HH phenomenology two diagrams participate.
+The first involves a heavy quark loop, just like for single Higgs production, radiating two Higgs bosons.
+It is shown in [[fig:HH_production_diagrams_ggf]] (left), where the dependence on the self-coupling $\lh{3}$ and on the top Yukawa coupling $y_{t}$ is clear.
+A second diagram exists, but related to $y_{t}$ only.
+The amplitude of the two diagrams is overwhelmingly dominated by the top-quark contribution; the mass of the second-heaviest quark, the b, is \num{\sim 40} smaller, and its contribution to the HH \ac{ggF} cross section amounts to \SI{\sim 0.3}{\percent}, being usually neglected due to the current experimental sensitivity [[cite:&bquark_contribution_ggf]].
+Importantly, given the identical final states, the two production diagrams interfere, and the interference is destructive.
+This, on top of the additional diagram vertex with respect to single Higgs production, justifies the extremely small HH \ac{ggF} cross-section.
+On the other hand, the same effect increases the sensitivity to \ac{NP}, since it is easier to spot \ac{BSM} deviations that might boost HH rates.
+This fact motivates \ac{BSM} HH studies, as the one presented in [[#sec:bbtautau_intro]].
+
+#+NAME: fig:HH_production_diagrams_ggf
+#+CAPTION: Feynman diagrams for double Higgs gluon fusion production. The two diagrams have amplitudes of similar magnitdues, but interfere destructively. The quark loops are completely dominated by the top quark. (Left) Triangle diagram. (Right) Box diagram.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/intro/ProductionHH_ggf.pdf]]
+#+END_figure
+
+** Vector Boson fusion
+Besides also depending on $\lh{3}$, \ac{VBF} HH, or $qq^{\prime} \rightarrow jj\text{H}\text{H}$, where $j$ stands for a jet, exhibits a dependence on the cubic ($\kv$) and quartic ($\kvv$) couplings of the Higgs boson to vector gauge bosons, as shown in [[fig:HH_production_diagrams_vbf]].
+The two forward jets provide a powerful discriminative handle.
+In addition, theoretical arguments lead to suppressed hadron production in the central \ac{eta} regions of the detector, between the two jets [[cite:&zeppenfeld]].
+Therefore, and despite its cross section more than 18 times smaller than for \ac{ggF}, \ac{VBF} HH provides a clear signature that suppresses the multi-jet background.
+
+#+NAME: fig:HH_production_diagrams_vbf
+#+CAPTION: Feynman diagrams for double Higgs VBF production.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/intro/ProductionHH_vbf.pdf]]
+#+END_figure
+
+** Associated production, or Higgs-strahlung
+This process $qq^{\prime} \rightarrow \text{V}\text{H}\text{H}$ involves the same couplings appearing in the \ac{VBF} HH process, and an additional vector boson is present in the final states, as shown in [[fig:HH_production_diagrams_vhh]].
+The extra boson is often used as a powerful handle to discriminate against multi-jet background, as in analyses where the Higgs bosons decay to b quarks [[cite:&vhh_4b]].
+Additionally, and especially in the $4 < \kl 7$ range of the coupling modifier, the cross sections get closer to the ones of \ac{VBF} and \ac{ggF} processes, creating some complementarity worth exploring.
+The limits become comparable to other subleading searches for those high $\kl$ regions.
+
+#+NAME: fig:HH_production_diagrams_vhh
+#+CAPTION: Feynman diagrams for double Higgs associated production.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/intro/ProductionHH_vhh.pdf]]
+#+END_figure
+
+** Top/anti-top associated production
+The process $qq^{\prime}/gg \rightarrow \ttbar\text{H}\text{H}$ can be both gluon- or quark-initiated, and is characterized by the presence of an additional top quark pair.
+In this mode, either two Higgs bosons are radiated from the top quarks, or are otherwiseproduced from the Higgs self-coupling, as shown in [[fig:HH_production_diagrams_tthh]].
+The ttHH cross section exceeds the one from VBF HH starting from $\sqrt{s} \approx 70\,\si{\GeV}$ and for high HH transverse momenta.
+This behaviour is very different from what happens for single Higgs processes, where ttH remains minor for high energies (see [[fig:single_higgs_xsec_br]], left).
+
+#+NAME: fig:HH_production_diagrams_tthh
+#+CAPTION: Feynman diagrams for double Higgs $\ttbar$ associated production.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/intro/ProductionHH_tthh.pdf]]
+#+END_figure
+
+** Single top associated production
+The process $qq^{\prime} \rightarrow tj\text{H}\text{H}$ can proceed via a multitude of t- or s-channels, as shown in [[fig:HH_production_diagrams_thh]].
+The cross-sections are so small that can be hardly investigated at the \ac{LHC}.
+Future colliders can nevertheless open a window on this production mode, because the cross-section increases faster with energy than associated production, and reaches the same value at $\sqrt{s} \approx 100\,\si{\GeV}$.
+Additionally, the two jets will provide background reduction capabilities.
+The interest comes from being able to probe HH couplings to vector bosons and top quarks simultaneously.
+
+#+NAME: fig:HH_production_diagrams_thh
+#+CAPTION: Feynman diagrams for double Higgs single top quark associated production.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/intro/ProductionHH_thh.pdf]]
+#+END_figure
+  

@@ -1,0 +1,34 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:final_states
+:END:
+
+The sensitivity of some \ac{HEP} processes is dominated by a single final state.
+For single Higgs physics, for instance, the \hzzfourl{} is often regarded as a "golden channel".
+It has a large signal-to-background ratio, with a flatish background under the Higgs boson peak, and possesses an extremely detector-friendly final state, which benefits from the good electron and muons resolution in \ac{CMS} and \ac{ATLAS}.
+Another example can be provided inn the context of B-Physics, where the $B^{0}_{s} \rightarrow \mu\mu$ and $B_{s} \rightarrow \mu\mu$ decays are equally seen as "golden", since they are experimentally clean, taking into account the excquisite muon resolutions in \ac{CMS}, and are highly suppressed in the \ac{SM}, making them particular sensitive to \ac{BSM} effects [[cite:&cms_bs]].
+In double Higgs production the same cannot be said.
+The final states currently available considering experimental constraints are illustrated in [[fig:HH_final_states]] where no single channel dominates the sensitivity to the quantities of interest, namely the $\kl$ and $\kvv$ coupling modifiers.
+Instead, a rich measurement programme has to be established, considering multiple final states, and foreseeing their subsequent combination.
+
+#+NAME: fig:HH_final_states
+#+CAPTION: Illustration of the branching ratios (in %) for the most common HH decay final states. There is no single "golden channel" that fully dominates the sensitivity. The three most sensitive channels, called "silver bullets", are highlighted. The legend refers to the type of measurements performed within \ac{CMS} at the time of writing. A first VHH measurements has been recently published [[cite:&vhh_4b]]. ttHH topologies are starting to be explored, but no results are yet available.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/intro/DecaysHH.pdf]]
+#+END_figure
+
+Three channels are nevertheless more sensitive than the others: \bbbb{}, \bbgg{} and \bbtt{}.
+They are collectively referred as "silver bullets", since their combined measurement drives most of the sensitivity in HH measurements.
+
++ \hhbbbb{}: characterized by the largest branching ratio at 34%, it is unfortunately overwhelmend by multi-jet background, much like \hbb{} and \hcc{} processes discussed in [[#sec:higgs_exp_status]].
+  Its relative importance has been increasing, given the recent and very significant improvements in the performance of jet taggers, mostly driven by the application of novel machine learning techniques.
+  Its particulary suited for the high-boost regime, but it is successfully used across the entire phase-space.
+
++ \hhbbgg{}: just like for the \hgg{} process, a subpercent branching fraction is here compensated by a pure, low background final state.
+  The irreducible di-photon background can be mitigated by applying a selection on the photon pair invariant mass.
+
++ \hhbbtt{}: represents an ideal compromise between a sizeable branching fraction at 7.3% and a background benefitting from the presence of a relatively pure $\tau\tau$ pair.
+  It is the channel considered for the analysis later described in this thesis.
+
+\noindent The remaining channels have a limited impact on the final sensitivity, but are nevertheless explored.
+They potentiate the development of new techniques that can be later transferred to other analyses, they can be sensitive to very particular and unexpected \ac{BSM} signatures, and they can provide the additional small gain required to observe a new process.

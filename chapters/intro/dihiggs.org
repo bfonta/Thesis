@@ -2,107 +2,30 @@
 :CUSTOM_ID: sec:dihiggs
 :END:
 
+The Higgs self-coupling $\lh{3}$ plays a central role in the spontaneous symmetry breaking of electroweak theory, and governs the sole scalar interaction so far observed in Nature.
+The connection to the \ac{SM} is established via the Higgs potential in [[eq:sm_potential]], where the triple and quartic Higgs couplings are predicted.
+The self-couplings represents the last fundamental piece of the \ac{SM} yet to be measured, and provide a unique consistency test of the \ac{SM}, representing a fundamental and crucial validation of the \ac{EWSB} mechanism [[cite:&YellowReport4]].
+The shape of the Higgs potential itself would evidently be affected in case of \ac{BSM} deviations, and could have dramatic consequences for our understanding of the Universe.
 
+Experimentally, one aims to verify if the relationships in [[eq:self_couplings]] hold.
+However, and as discussed in [[#sec:production]], the available experimental signatures often involve different types of interactions, which do not simply include the Higgs self-couplings.
+It is therefore necessary to disentangle $\lh{3}$ contributions from other effects.
+Often, simultaneous fits of multiple couplings are performed, when a particular process under study is influenced by more than on production mode.
+Furthermore, all HH processes are affected by a very small total cross section, which places HH processes as one of the rarest processes currently probed at \ac{CMS}.
+Challenges can also be related to the final states explored, which are often complex, including multiple decay products with jets and/or \ac{MET}.
 
-The di-Higgs production mecahnism are in many ways similar to the production modes of single Higgs physics covered in [[#sec:higgs_exp_status]].
-The main difference is often the additional split of a virtual Higgs into two final state Higgs bosons, and the striking cross-section reduction by \num{\sim 3} orders of magnitude.
-The five modes that occur the most often are listed below:
-
-+ 
-
-
-
-
-
-
-
-
-As mentioned in [[#sec:sm_intro]] the \ac{SM} has proven an immensely successful theory.
-However, some processes, either due to their low available event statistics or to a challenging experimental signature, are yet to be measured.
-The production of Higgs boson pairs is one of such cases, given its extreme rarity (see [[ref:sec:production]]), in addition generally involving complicated final states including multiple decay products with jets and/or \ac{MET}.
-
-As seen in [[#sec:higgs_mechanism]], one of the central pieces of the SM is the Higgs potential (see [[eq:sm_potential]]), where the triple and quartic Higgs couplings play a significant role.
-In the \ac{SM}, the Higgs $\lh{3}$ parameter drives the strength of the Higgs boson self-coupling, and is uniquely determined by the structure of the scalar potential in [[eq:sm_potential]], and represents the potential's last missing piece from an experimental point of view.
-Indeed, the potential is completely determined by the mass of the Higgs $\mh$, the vacuum expectation value $v=(\sqrt{2}G_{F}^{-1/2})$, and $\lh{3}$, where $\mh$ and fermi's constant $G_{F}$ have already been measured.
-
-Measurements of $\lh{3}$ (or equivalently $\kl$) and $\lh{4}$ therefore provide a unique consistency test of the \ac{SM}, representing a fundamental and crucial test of the \ac{EWSB} mechanism [[cite:&YellowReport4]].
-Furthermore, and as discussed in [[#sec:ewpt]], a Higgs potential deviating from its SM expectation can have dramatic consequences for the understanding and destiny of the Universe.
-Finally, as covered in [[#sec:ewpt]], non-SM $\lh{3}$ might allow a \ac{SFO-EWPT} transition, which corresponds to the third Sakharov condition necessary for achieving the matter-antimatter asymmetry we observe today.
-
-Both the \ac{CMS} and the \ac{ATLAS} experiments at the \ac{LHC} are involved in a comprehensive study of HH processes.
-A direct measurement of $\lh{3}$ requires double Higgs boson production while $\lh{4}$ is first probed in the production of 3 Higgs bosons.
-These quantities can also be measured indirectly, as detailed in [[#sec:combinations]].
-$\kl$ is currently one of the least constrained properties of the Higgs boson.
-
-
-The Higgs self-coupling plays a central role in the spontaneous breaking of electroweak symmetry, and governs a pure elementary scalar interaction – one that has never been observed in nature.
-
-The fusion of gluons via a heavy-quark (mainly top-quark) loop is the most important production mecha-
-nism of Higgs boson pairs at hadron colliders within the SM [[cite:&hllhc_physics]].
-
-#+NAME: fig:event_display_res2b_2016
-#+CAPTION: \ac{CMS} event display for a \hhbbtt{} event in 2016. Three views are shown, namely $R$ vs $z$ (top left), $R$ vs $\phi$ (top right), and 3D in cartesian coordinates (bottom). Red and blue represent, respectively, \ac{ECAL} and \ac{HCAL} energy deposits, where the magnitude is proxied the dimension of each bar. Tracks are represented in green. The event passed the \rescat{2} selection. The selection of the analysis categories is defined in [[ref:sec:categorization]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_RhoZ.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_RhoPhi.pdf]]
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_3D.pdf]]
-#+END_figure
-
-
-
-# #+NAME: fig:BSM_production_diagrams
-# #+ATTR_LATEX: :width .5\textwidth
-# #+CAPTION: Feynman diagrams for the leading \ac{BSM} HH pair production processes introduced by the \ac{EFT} approach. Three new couplings are thus introduced: $c_{2}$, $c_{2g}$ and $c_{2}$. /k)/ gluon fusion HH ("triangle") /l)/ gluon-fusion HH ("box") /m,n,o)/ \ac{VBF} HH.
-# [[~/org/PhD/Thesis/figures/BSM_HH_production_diagrams.pdf]]
-
-* Production
-:PROPERTIES:
-:CUSTOM_ID: sec:production
-:END:
-
-#+NAME: fig:HH_production_diagrams_b
-#+ATTR_LATEX: :width .9\textwidth
-#+CAPTION: Feynman diagrams for the leading H boson decay channels into: /g)/ heavy vector boson pairs /h)/ fermion anti-fermion pairs /i)/ photon pairs /j)/ Z$\gamma$. Taken from [[cite:&higgs_10_years]].
-[[~/org/PhD/Thesis/figures/intro/HH_production_diagrams.pdf]]
-
-#+NAME: fig:HH_prod_energy
-#+ATTR_LATEX: :width .9\textwidth
-#+CAPTION: HH production cross section as a function of the center of mass energy for the six largest HH production channels at /pp/ colliders. The thickness of the lines corresponds to the scale and PDF uncertainties added linearly. Gluon fusion dominates for the entire energy range. The figure is taken from [[cite:&HH_xsec_running]].
-[[~/org/PhD/Thesis/figures/intro/HH_production_energy.pdf]]
+Often, instead of measuring directly the several available couplings, results are instead expressed as a function of /coupling modifiers/, similar to the signal strength modifiers introduced in [[#sec:higgs_exp_status]].
+The coupling modifiers compare the measured coupling with the \ac{SM} expectation, and are defined as $\kl \equiv \lh{3}/\lh{3}^{\text{SM}}$.
+\ac{BSM} theories are thus characterized by $\kl \neq 1$.
+In [[fig:HH_prod_kl]] we display the running of the HH cross section for several production mechanisms, as a function of $\kl$.
+It is interesting to note the misalignment of the interference minima for different modes.
+This fact implies a varying constraining power for different modes, depending on the phase-space region being studied.
+Other modifiers are similarly defined, namely $\kv \equiv \cv/\cv^{\text{SM}}$, for the coupling between two Higgs bosons and one vector boson, and $\kvv \equiv \cvv/\cvv^{\text{SM}}$, a quartic coupling between two Higgs bosons and two vector bosons.
 
 #+NAME: fig:HH_prod_kl
 #+ATTR_LATEX: :width .9\textwidth
-#+CAPTION: HH production cross section as a function of the coupling modifier $\klrat$ for several production mechanisms. The dashed and solid lines denote respectively the LO and NLO predictions and the bands indicate the PDF and scale uncertainties added linearly. The figure is taken from [[cite:&HH_xsec_running]].
+#+CAPTION: HH production cross section as a function of the coupling modifier $\kl$ for several production mechanisms. The dashed and solid lines denote respectively the LO and NLO predictions and the bands indicate the PDF and scale uncertainties added linearly. The interference minima are not aligned for different production modes. The figure is taken from [[cite:&HH_xsec_running]].
 [[~/org/PhD/Thesis/figures/intro/HH_production_kl.pdf]]
-
-
-#+NAME: tab:HH_production_xsec
-#+CAPTION: Inclusive gluon fusion cross-sections for HH production for different centre-of-mass energies in the \ac{NNLO} \ac{FT} approximation, for $\mh=\SI{125}{\GeV}$, with the central scale set to $\mhh/2$ (see [[cite:&higgs_xsec_top_effects]]). PDF, $\alpha_{S}$, scale and top mass $m_{t}$ uncertainties are also showcased. Taken from [[cite:&lhc_wg4_twiki]].
-#+ATTR_LATEX: :placement [!h] :center t :align c|c|c|c
-| $\sqrt{s}$ (\si{\TeV}) | $\sigma^{\text{FTapprox}}_{\text{NNLO}}$ (\si{\femto\barn}) | PDF + $\alpha_{S}$ unc. | Scale + $m_{t}$ unc. |
-|------------------------+--------------------------------------------------+-----------------+-------------------|
-|                      7 |                                            6.572 | \pm4.3%           | $-$               |
-|                      8 |                                            9.441 | \pm3.9%           | $-$               |
-|                     13 |                                            31.05 | \pm3.0%           | $-23\% +6\%$      |
-|                   13.6 |                                            34.43 | \pm3.0%           | $-23\% +6\%$      |
-|                     14 |                                            36.69 | \pm3.0%           | $-23\% +6\%$      |
-|                     27 |                                            139.9 | \pm2.5%           | $-22\% +5\%$      |
-|                    100 |                                             1224 | \pm2.4%           | $-21\% +4\%$      |
-  
-* Decay
-:PROPERTIES:
-:CUSTOM_ID: sec:decay
-:END:
-
-** The bb\tau\tau final state
-
-** Other final states
-
-
-
 
 * Additional bibliography :noexport:
 + [[https://github.com/bfonta/HHStatAnalysis/blob/master/AnalyticalModels/python/plot_differential.py][Produce differential BSM distributions]] (using ~HHReweightingPlots~ folder in =lxplus9=, release ~CMSSW_14_1_0_pre2~)

@@ -1,6 +1,8 @@
 # Variables
 #+LATEX_HEADER: \newcommand{\bbll}{bbll+$E^{\text{miss}}_{\text{T}}$}
 #+LATEX_HEADER: \newcommand{\cg}{c_{g}}
+#+LATEX_HEADER: \newcommand{\cv}{c_{\text{V}}}
+#+LATEX_HEADER: \newcommand{\cvv}{c_{\text{2V}}}
 #+LATEX_HEADER: \newcommand{\ctwog}{c_{2g}}
 #+LATEX_HEADER: \newcommand{\ctwo}{c_{2}}
 #+LATEX_HEADER: \newcommand{\dijetmass}{m_{\text{jj}}}
@@ -10,7 +12,6 @@
 #+LATEX_HEADER: \newcommand{\gx}{\Gamma_{\text{X}}}
 #+LATEX_HEADER: \newcommand{\httt}{H_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\htvar}{H_{\text{T}}}
-#+LATEX_HEADER: \newcommand{\klrat}{\kappa_{\lambda} = \lambda_{\text{HHH}} / \lambda_{\text{HHH}}^{\text{SM}}}
 #+LATEX_HEADER: \newcommand{\kl}{\kappa_{\lambda}}
 #+LATEX_HEADER: \newcommand{\ktalgo}{k_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\kt}{\kappa_{t}}
