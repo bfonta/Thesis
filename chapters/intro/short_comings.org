@@ -13,7 +13,7 @@ In total, assuming neutrinos are of Dirac type (as opposed to Majorana fermions)
 The simple presence of so many parameters suggests that the \ac{SM}, despite its undeniable achievements, continues to be just a model, where parameters are chosen to match observations.
 A series of patterns exists between the different parameters, hinting at an underlying yet unknown symmetry principle.
 Besides, multiple observations undoubtedly show inconsistencies that cannot be explained by the \ac{SM}, at least in its current form.
-In the following, we list the most prominent challenges, and possible solutions yet to be experimentally demonstrated [[cite:&thomson;&griffiths]]:
+In the following, we list the most prominent challenges [[cite:&thomson;&griffiths]]:
 
 + *Dark Matter*:
   It has been know for almost a century that standard gravitational equations fail to describe the velocity distribution of stars around the centre of galaxies.
