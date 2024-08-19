@@ -107,6 +107,10 @@ V(\text{H}) = \frac{1}{2}\mh^{2}\text{H}^{2} + \lh{3}v\text{H}^{3} + \frac{\lh{4
 From an experimental point of view, the Higgs boson thus provides a unique opportunity to perform a \ac{SM} closure test, independently from the gauge interactions of the electroweak sector.
 
 * The Yukawa couplings
+:PROPERTIES:
+:CUSTOM_ID: sec:yukawa
+:END:
+
 The Higgs mechanism represents an economical way to provide mass to the weak bosons in the theory.
 Additionally, it can be shown that the new massive bosons preserve renormalizability [[cite:&hooft]].
 However, a second feat is yet to be achieved: justify the existence of fermion masses.
@@ -183,7 +187,7 @@ Since the mass diagonalization does not affect neutral currents, neutral process
 The fact that the matrix is relatively close of being diagonal implies a preference for couplings within the same generation.
 This is for instance why top quarks decay virtually always to b quarks, and other decays channels can be neglected.
 
-The \ac{SM} therefore explains fermion masses by introducing /ad hoc/ Yukawa coupling terms between the Higgs field and all fermion fields, breaking the symmetry between the three lepton families.
+The \ac{SM} therefore explains fermion masses by introducing 12 /ad hoc/ Yukawa coupling terms between the Higgs field and all fermion fields, breaking the symmetry between the three lepton families.
 At the same time, the origin or fundamental reason for such terms remains unknown, with the masses being free parameters of the theory.
 The Higgs mechanism does however predict a proportionality between its couplings and the masses of all fermions and gauge bosons (recall [[eq:higgs_lagrangian_full]]).
 This has been experimentally verified by CMS and ATLAS, and is shown in [[fig:linear_fermions_bosons]].
@@ -196,7 +200,7 @@ Despite strongly motivated, and serving as the main motivation for building the 
 Since the mass of the new boson was a free parameter of the theory, there was no definite way to guarantee that we could produce a Higgs particle in a \ac{HEP} experiment, despite some argument that suggested otherwise.
 We allude to considerations on unitarity and perturbative behaviour implying upper limits of $\mh \lesssim 700\,\si{\GeV}$ [[cite:&higgs_mass_up_bound1;&higgs_mass_up_bound2]], and to lower limits driven by vaccum stability arguments, where the nontrivial minima at $v \neq 0$ will disappear if $\mh$ is too small [[cite:&higgs_mass_down_bound]].
 The Higgs boson was finally jointly discovered by the \ac{CMS} and \ac{ATLAS} experiments, and was announced to the world on July 2012 [[cite:&CMS_Higgs_discovery1;&CMS_Higgs_discovery2;&ATLAS_Higgs_discovery]].
-All measurements so far suggest that the new particle truly is the predicted \ac{SM} scalar Higgs boson, with zero charge and a mass slighlty above \SI{125}{\GeV}.
+All measurements so far suggest that the new particle truly is the predicted \ac{SM} scalar Higgs boson, with zero charge and a mass slightly above \SI{125}{\GeV}.
 Interestingly, the value found for $\mh$ almost perfectly maximizes the product of the 14 branching ratios of the \ac{SM} Higgs boson into the known fermion and boson pairs [[cite:&higgs_br_maximum1]].
 It is not known if this fact is accidental or if it instead hints at a deeper yet hidden theory, but it certainly increases the richness of Higgs physics to be explored at the \ac{LHC} and beyond.
 

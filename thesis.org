@@ -33,7 +33,7 @@
 #+INCLUDE: "chapters/intro/nonres_BSM_hh.org"
 *** Resonant BSM HH Production
 #+INCLUDE: "chapters/intro/res_BSM_hh.org"
-** Experimental status of SM HH Physics
+** Experimental status of HH Physics
 #+INCLUDE: "chapters/intro/hh_exp_status.org"
 *** Direct searches
 #+INCLUDE: "chapters/intro/direct_searches.org"
@@ -43,6 +43,8 @@
 #+INCLUDE: "chapters/intro/zz_and_zh.org"
 *** Combinations
 #+INCLUDE: "chapters/intro/combinations.org"
+
+
 * The CMS Detector at the LHC
 ** The Large Hadron Collider
 #+INCLUDE: "chapters/detector/lhc_intro.org"
@@ -190,6 +192,7 @@
 ~/dot-emacs/bibliography/references/gpu.bib,
 ~/dot-emacs/bibliography/references/trigger.bib,
 ~/dot-emacs/bibliography/references/mtd.bib,
+~/dot-emacs/bibliography/references/astrophysics.bib,
 ~/dot-emacs/bibliography/references/mc_generation.bib,
 ~/dot-emacs/bibliography/references/pure_software.bib,
 ~/dot-emacs/bibliography/references/physics.bib,

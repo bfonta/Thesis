@@ -4,28 +4,15 @@
 
 The Higgs self-coupling $\lh{3}$ plays a central role in the spontaneous symmetry breaking of electroweak theory, and governs the sole scalar interaction so far observed in Nature.
 The connection to the \ac{SM} is established via the Higgs potential in [[eq:sm_potential]], where the triple and quartic Higgs couplings are predicted.
-The self-couplings represents the last fundamental piece of the \ac{SM} yet to be measured, and provide a unique consistency test of the \ac{SM}, representing a fundamental and crucial validation of the \ac{EWSB} mechanism [[cite:&YellowReport4]].
-The shape of the Higgs potential itself would evidently be affected in case of \ac{BSM} deviations, and could have dramatic consequences for our understanding of the Universe.
+These couplings are the last fundamental \ac{SM} pieces left to be measured, and provide a unique \ac{SM} consistency test, representing a crucial validation of the \ac{EWSB} mechanism [[cite:&YellowReport4]].
+The shape of the Higgs potential itself would evidently be affected in case of \ac{BSM} deviations, leading to dramatic consequences for our understanding of the Universe.
 
 Experimentally, one aims to verify if the relationships in [[eq:self_couplings]] hold.
-However, and as discussed in [[#sec:production]], the available experimental signatures often involve different types of interactions, which do not simply include the Higgs self-couplings.
+However, as discussed in [[#sec:production]], the available experimental signatures often involve different types of interactions, which do not simply include the Higgs self-couplings.
 It is therefore necessary to disentangle $\lh{3}$ contributions from other effects.
-Often, simultaneous fits of multiple couplings are performed, when a particular process under study is influenced by more than on production mode.
-Furthermore, all HH processes are affected by a very small total cross section, which places HH processes as one of the rarest processes currently probed at \ac{CMS}.
+Often, simultaneous fits of multiple couplings are performed, when a particular process under study is influenced by more than one production mode.
+Furthermore, all HH processes carry a very small total cross section, placing them as some of the rarest processes currently probed at \ac{CMS}.
 Challenges can also be related to the final states explored, which are often complex, including multiple decay products with jets and/or \ac{MET}.
-
-Often, instead of measuring directly the several available couplings, results are instead expressed as a function of /coupling modifiers/, similar to the signal strength modifiers introduced in [[#sec:higgs_exp_status]].
-The coupling modifiers compare the measured coupling with the \ac{SM} expectation, and are defined as $\kl \equiv \lh{3}/\lh{3}^{\text{SM}}$.
-\ac{BSM} theories are thus characterized by $\kl \neq 1$.
-In [[fig:HH_prod_kl]] we display the running of the HH cross section for several production mechanisms, as a function of $\kl$.
-It is interesting to note the misalignment of the interference minima for different modes.
-This fact implies a varying constraining power for different modes, depending on the phase-space region being studied.
-Other modifiers are similarly defined, namely $\kv \equiv \cv/\cv^{\text{SM}}$, for the coupling between two Higgs bosons and one vector boson, and $\kvv \equiv \cvv/\cvv^{\text{SM}}$, a quartic coupling between two Higgs bosons and two vector bosons.
-
-#+NAME: fig:HH_prod_kl
-#+ATTR_LATEX: :width .9\textwidth
-#+CAPTION: HH production cross section as a function of the coupling modifier $\kl$ for several production mechanisms. The dashed and solid lines denote respectively the LO and NLO predictions and the bands indicate the PDF and scale uncertainties added linearly. The interference minima are not aligned for different production modes. The figure is taken from [[cite:&HH_xsec_running]].
-[[~/org/PhD/Thesis/figures/intro/HH_production_kl.pdf]]
 
 * Additional bibliography :noexport:
 + [[https://github.com/bfonta/HHStatAnalysis/blob/master/AnalyticalModels/python/plot_differential.py][Produce differential BSM distributions]] (using ~HHReweightingPlots~ folder in =lxplus9=, release ~CMSSW_14_1_0_pre2~)

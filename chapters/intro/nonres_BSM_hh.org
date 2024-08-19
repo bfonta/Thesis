@@ -2,10 +2,42 @@
 :CUSTOM_ID: sec:nonres_BSM_hh
 :END:
 
-Many \ac{BSM} models with \ac{SM}-compatible single Higgs boson signal strengths can exhibit a di-Higgs phenomenology vastly different from the \ac{SM} expectation.
-In this sense, a successful discovery of Higgs boson pair production at the LHC and the subsequent measurement of potential deviations from the \ac{SM} constitute an important avenue in the search for physics beyond the \ac{SM}.
+\Ac{BSM} signatures can naturally be probed in nonresonant modes, \ie{}, production modes not issued by a resonance decaying to a pair of Higgs bosons.
+As in other \ac{HEP} fields, physicists look for deviations from \ac{SM} predictions.
+Causes for such deviations are substantiated by many proposed \ac{BSM} theories, but experimentally amount to either an enhancement of the HH production rate, and/or the modification of the shape of some kinematical distributions.
 
-To facilitate such a measurement, it is crucial to establish the Higgs boson pair production cross section in the \ac{SM} to the best theoretical accuracy possible and to provide \ac{BSM} benchmarks that reflect the phenomenology of Higgs boson pairs at the LHC in a consistent and concise fashion.
+Often, instead of measuring directly the several available couplings, results are instead expressed as a function of /coupling modifiers/, similar to the signal strength modifiers introduced in [[#sec:higgs_exp_status]].
+The coupling modifiers compare the measured couplings with their \ac{SM} expectations.
+For the case of the Higgs self-coupling, the definition is $\kl~\equiv~\lh{3}/\lh{3}^{\text{SM}}$, where $\lh{3}$ is fully determined in the \ac{SM}, once $v$ and $\mh$ are measured.
+\ac{BSM} theories are thus characterized by $\kl \neq 1$.
+In [[fig:HH_prod_kl]] we display the running of the HH cross section for several production mechanisms, as a function of $\kl$.
+The minima are due to the interference between several diagrams for each production mode, as presented in [[#sec:production]].
+Minima notably occur at different $\kl$ values for different production modes, $\kl=2.45$ for \ac{ggF}.
+This fact implies a varying constraining power for different modes, depending on the phase-space region being studied.
+Other modifiers are similarly defined, namely $\kv~\equiv~\cv/\cv^{\text{SM}}$, for the coupling between two Higgs bosons and one vector boson, and $\kvv~\equiv~\cvv/\cvv^{\text{SM}}$, a quartic coupling between two Higgs bosons and two vector bosons.
+
+#+NAME: fig:HH_prod_kl
+#+CAPTION: HH production cross section as a function of the coupling modifier $\kl$ for several production mechanisms. The dashed and solid lines denote respectively the \ac{LO} and \ac{NLO} predictions and the bands indicate the \ac{PDF} and scale uncertainties added linearly. The interference minima are not aligned for different production modes. For \ac{ggF} the cross-section is now known at \ac{NNLO} level with finite tio quark mass effects, while the figure displays the values for the \ac{NLO} FTapprox calculation. The figure is taken from [[cite:&HH_xsec_running]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .9\textwidth
+[[~/org/PhD/Thesis/figures/intro/HH_production_kl.pdf]]
+#+END_figure
+
+#+NAME: eq:parameterisation_ggf
+\begin{alignat}{3}
+\sigma_{\text{ggF}}/\sigma_{\text{ggF}}^{\text{SM}} & \sim |\mathcal{A}_{\triangle}|^2\kl^2\kt^2 &&+ |\mathcal{A}_{\square}|^2\kt^4 & &+ \mathcal{I}_{\triangle\square}\kl\kt^3 \nonumber \\
+\sigma_{\text{ggF}}/\sigma_{\text{ggF}}^{\text{SM}} \bigg\rvert_{\sqrt{s}=13\,\si{\GeV}} & \sim 0.28 \kl^2\kt^2 &&+ 2.09 \kt^4 & &- 1.37 \kl\kt^3
+\end{alignat}
+
+\noindent where $\mathcal{A}_{\triangle}$ and $\mathcal{A}_{\square}$ are the amplitudes of the triangle and box \ac{ggF} diagrams, respectively, and $\mathcal{I}_{\triangle\square}$ represents the interference term.
+
+
+Variations of the coupling modifiers can also have a enormous impact on the shape of kinematical distributions.
+Taking the mass of the HH system in [[fig:kl_c_EFT]] (left) as an example, we can see the \ac{SM} $\kl=1$ scenario can be completely altered by smaller or larger $\kl$ values.
+Physically, and given the couplings present in the box and triangle diagrams, low $|\kl| \rightarrow 0$ corresponds to box dominated processes, while large $|\kl|$ values are ruled by triangle diagrams.
+The larger visual variations occur for $\kl=2.45$, where the interference is maximal.
+Although focusing on \ac{ggF}, it is worth noting that other production modes will also include interferences between different diagrams, as one could already see in [[fig:HH_prod_kl]].
+The consequennce is clear: kinematic deviations represent a smoking gun for the presence of anomalous couplings.
 
 #+NAME: fig:kl_c_EFT
 #+CAPTION: HH mass distribution for different $\kl$ values, highlighting the strong impact of a deviation from the expected SM values. Larger $|\kl|$ values correspond to scenarios where the HH "triangle" diagram dominates.
@@ -16,13 +48,26 @@ To facilitate such a measurement, it is crucial to establish the Higgs boson pai
 [[~/org/PhD/Thesis/figures/intro/c.pdf]]
 #+END_figure
 
-See [[fig:kl_c_EFT]] now!
+
+
+
+
+
+
+
+
+
+Many \ac{BSM} models with \ac{SM}-compatible single Higgs boson signal strengths can exhibit a di-Higgs phenomenology vastly different from the \ac{SM} expectation.
+In this sense, a successful discovery of Higgs boson pair production at the LHC and the subsequent measurement of potential deviations from the \ac{SM} constitute an important avenue in the search for physics beyond the \ac{SM}.
+
+To facilitate such a measurement, it is crucial to establish the Higgs boson pair production cross section in the \ac{SM} to the best theoretical accuracy possible and to provide \ac{BSM} benchmarks that reflect the phenomenology of Higgs boson pairs at the LHC in a consistent and concise fashion.
 
 Test \ac{BSM} w/ anomalous couplings
 + discuss coupling modifiers
 + deviations may lead to diffs. in HH production and kinematics
 + small SM HH cross-section because of the interference between the triangle nad box diagrams
 
+  
 * Effective Field Theories
 + Probe effects from resonances with very high mass at lower energy scales
 + \ac{BSM} effects on ggF HH production can be studied
@@ -31,3 +76,10 @@ Test \ac{BSM} w/ anomalous couplings
 + Explore sensitivity to \ac{BSM} \ac{EFT} couplings with \ac{EFT} benchmark points
   + based on test statistic measuring kinematics’ similarities
   + allow extrapolation between different points
+
+#+NAME: fig:SMEFTdiagrams
+#+CAPTION: Leading order Feynman diagrams n the \ac{HEFT} description at dimension 6 for \ac{ggF} production mechanism [[cite:&cadamuro_review]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/SMEFTdiagrams.pdf]]
+#+END_figure

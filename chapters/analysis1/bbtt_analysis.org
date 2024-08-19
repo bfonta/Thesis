@@ -2,4 +2,14 @@
 :CUSTOM_ID: sec:bbtautau_intro
 :END:
 
-Intro to the analysis chapters.
+#+NAME: fig:event_display_res2b_2016
+#+CAPTION: \ac{CMS} event display for a \hhbbtt{} event in 2016. Three views are shown, namely $R$ vs $z$ (top left), $R$ vs $\phi$ (top right), and 3D in cartesian coordinates (bottom). Red and blue represent, respectively, \ac{ECAL} and \ac{HCAL} energy deposits, where the magnitude is proxied the dimension of each bar. Tracks are represented in green. The event passed the \rescat{2} selection. The selection of the analysis categories is defined in [[ref:sec:categorization]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_RhoZ.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_RhoPhi.pdf]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_3D.pdf]]
+#+END_figure
+
