@@ -41,7 +41,7 @@ On the other hand, the same effect increases the sensitivity to \ac{NP}, since i
 This fact motivates \ac{BSM} HH studies, as the one presented in [[#sec:bbtautau_intro]].
 
 #+NAME: fig:HH_production_diagrams_ggf
-#+CAPTION: Feynman diagrams for double Higgs gluon fusion production. The two diagrams have amplitudes of similar magnitdues, but interfere destructively. The quark loops are completely dominated by the top quark. (Left) Triangle diagram. (Right) Box diagram.
+#+CAPTION: Feynman diagrams for double Higgs gluon fusion production. The two diagrams have amplitudes of similar magnitudes, but interfere destructively. The quark loops are completely dominated by the top quark. (Left) Triangle diagram, characterised by the Higgs self-coupling and the coupling of the Higgs to top quarks. (Right) Box diagram, with two contributions from Higgs-top couplings.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth
 [[~/org/PhD/Thesis/figures/intro/ProductionHH_ggf.pdf]]
@@ -62,8 +62,8 @@ Therefore, and despite its cross section more than 18 times smaller than for \ac
 
 ** Associated production, or Higgs-strahlung
 This process $qq^{\prime} \rightarrow \text{V}\text{H}\text{H}$ involves the same couplings appearing in the \ac{VBF} HH process, and an additional vector boson is present in the final states, as shown in [[fig:HH_production_diagrams_vhh]].
-The extra boson is often used as a powerful handle to discriminate against multi-jet background, as in analyses where the Higgs bosons decay to b quarks [[cite:&vhh_4b]].
-Additionally, and especially in the $4 < \kl 7$ range of the coupling modifier, the cross sections get closer to the ones of \ac{VBF} and \ac{ggF} processes, creating some complementarity worth exploring.
+The extra boson is used as a powerful handle to discriminate against multi-jet background, so far tested in analyses where the Higgs bosons decay to b quarks [[cite:&vhh_4b_cms;&vhh_4b_atlas]].
+Additionally, and especially in the $4 < \kl < 7$ range of the coupling modifier, the cross sections get closer to the ones of \ac{VBF} and \ac{ggF} processes, creating some complementarity worth exploring.
 The limits become comparable to other subleading searches for those high $\kl$ regions.
 
 #+NAME: fig:HH_production_diagrams_vhh

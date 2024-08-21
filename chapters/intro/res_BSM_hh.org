@@ -2,7 +2,147 @@
 :CUSTOM_ID: sec:res_BSM_hh
 :END:
 
-* Motivation for the \bbtt{} analysis
+The simplest imaginable signature of \ac{NP} consists in the production of an s-channel resonance decaying to a pair of \ac{SM} particles.
+In the context of HH searches, and in addition to the nonresonant approaches discusssed in [[#sec:nonres_BSM_hh]], \ac{BSM} physics can be probed under the assumption that there indeed exists some new particle X with a mass within what the \ac{LHC} can produce, decaying to a pair of Higgs bosons.
+In that case, given enough experimental sensitivity, we would naively expect to see a "bump" in double Higgs mass distributions.
+In practice, admitting such hypothetical particle exists, such excess might only be discernible via variables with a higher discriminative power, such as discriminators built out of \ac{ML} procedures.
+The experimental challenges of such kind of analysis is highlighted in [[#sec:bbtautau_intro]].
+Here we instead focus on the very large number of theoretical models which can accomodate a \xhh{} process.
+It is experimentally unfeasible to address all such models separately.
+If that were the case, each model would require its own set of samples, with varying parameters such as the mass or the shapes of every resonance, adding also complications from the point of view of storage.
+Furthermore, analysis tools would have to be optimized for each sample type, requiring independent computing-intensive trainings, which take time to process and validate.
+The approach usually taken, including in this thesis, is to define an approach that is, as much as possible, model-independent, via a set of benchmarks.
+Results are subsequently reinterpreted in the context of particular models, if judged relevant.
+This enables the analysis team to explore at once a broad class of models.
+
+In this section we nevertheless cover some of the theoretical approaches that are most often connected with resonant decay to HH.
+The simplest model possible is the singlet model, which is covered in [[#sec:singlet_model]] since it is directly connected with the work discussed in that chapter.
+Here we instead cover other models, which despite not being directly used by this work, serve as a strong motivation to perform the HH searches described in further chapters.
+We will restrict ourselves to models predicting new \spin{0} and \spin{2} resonances, as those will be the benchmarks studied by the resonant analysis later described.
+
+* Two Higgs Doublet Model
+The \ac{2HDM}, as its name indicates, adds a second doublet field to the Higgs doublet introduced by the Higgs mechanism.
+This /ad-hoc/ choice is strongly motivated by multiple reasons.
+The simplest version of \ac{SUSY}, the \ac{MSSM}, cannot give mass to all quarks without the introduction of a second doublet [[cite:&susy]].
+One can thus say that the phenomenology of \ac{SUSY} is described by the \ac{2HDM}.
+Additionally, some axion models, among the ones not yet ruled out by experiments, require two doublets for their effective low-energy theory to function [[cite:&axions]].
+The \ac{2HDM} can also be made to accommodate the required baryon asymmetry to explain baryogenesis, with explicit or spontaneous \ac{CP} violation [[cite:&2hdm_2]].
+
+Following a similar recipe to what was done in the \ac{SM} in [[eq:su2_doublet]], we add two complex scalar \symtwo{} doublets with eight fields in total:
+
+#+NAME: eq:su2_doublet_2hdm
+\begin{equation}
+\phi_a = \binom{\phi^+_a}{\phi^0_a} = \frac{1}{\sqrt{2}} \binom{\phi^1_a+i\phi^2_a}{\phi^3_a+i\phi^4_a} \: , \:\:\:\:\:
+\phi_b = \binom{\phi^+_b}{\phi^0_b} = \frac{1}{\sqrt{2}} \binom{\phi^1_b+i\phi^2_b}{\phi^3_b+i\phi^4_b} \: ,
+\end{equation}
+
+\noindent There are usually a series of simplifications that are performed.
+\Ac{CP} is assumed to be conserved in the Higgs sector and not spontaneously broken, some discrete symmetries are imposed to eliminate quartic terms odd in one of the two doublets (like $\phi_a^{\dagger}\phi_b\phi_b^{\dagger}\phi_b$).
+The most general potential one can write with the above assumptions is:
+
+#+NAME: eq:potential_2hdm
+\begin{equation}
+\begin{split}
+V(\phi_a,\phi_b) & = m_{aa}^{2}\phi_{a}^{\dagger}\phi_{a} + m_{bb}^{2}\phi_{b}^{\dagger}\phi_{b} - m_{ab}^{2} \left( \phi_{a}^{\dagger}\phi_{b} + \phi_{b}^{\dagger}\phi_{a} \right) + \frac{\lambda_a}{2} \left( \phi_{a}^{\dagger}\phi_{a} \right)^{2} + \frac{\lambda_b}{2} \left( \phi_{b}^{\dagger}\phi_{b} \right)^{2} \\
+           & + \lambda_{c}\phi_{a}^{\dagger}\phi_{a}\phi_{b}^{\dagger}\phi_{b} + \lambda_{d}\phi_{a}^{\dagger}\phi_{b}\phi_{b}^{\dagger}\phi_{a} +
+              \frac{\lambda_e}{2} \left[ \left( \phi_{a}^{\dagger}\phi_{b} \right)^{2} + \left( \phi_{b}^{\dagger}\phi_{a} \right)^{2} \right] \: ,
+\end{split}
+\end{equation}
+
+\noindent where all parameters $m$ and $\lambda$ are real.
+Three out of the eight scalar fields are the Goldstone bosons that give mass to the W and Z bosons, and the remaining five fields correspond to five physical Higgs bosons, where one of them can be identified with the scalar boson obsrved at the \ac{LHC}.
+Two of them are \ac{CP}-even and neutral scalars, two are charged scalar particles, and the last is a \ac{CP}-odd neutral scalar [[cite:&thomson]].
+By writing the mass-squared terms on the minima of the potential above, given as:
+
+#+NAME: eq:minima_2hdm
+\begin{equation}
+\langle\phi_a\rangle_0 = \frac{1}{\sqrt{2}}\binom{0}{v_{a}} \: , \:\:\:\:\: \langle\phi_b\rangle_0 = \frac{1}{\sqrt{2}}\binom{0}{v_{b}} \: ,
+\end{equation}
+
+\noindent where $v_a$ and $v_b$ are the fields' minima, one gets the follow mass-squared terms for the scalars:
+
+#+NAME: eq:lagrangian_2hdm_1
+\begin{equation}
+\mathcal{L}_{\phi^{\pm} \text{ mass}} = \left[ m_{ab}^{2} - (\lambda_d+\lambda_e)v_av_b \right] (\phi_a^-, \phi_b^-)
+  \begin{pmatrix}
+    v_b/v_a & -1 \\
+    -1      & v_a/v_b
+  \end{pmatrix}
+\binom{\phi_a^+}{\phi_b^+} \: ,
+\end{equation}
+
+\noindent where the mass-squared of the additional "charged Higgs" is given by $m_+^2 = [m_{ab}^2/(v_av_b) - \lambda_4 - \lambda_5](v_a^2+v_b^2)$.
+The term for the pseudoscalars is given by:
+
+#+NAME: eq:lagrangian_2hdm_2
+\begin{equation}
+\mathcal{L}_{\eta \text{ mass}} = \frac{m_A^2}{v_a^2 + v_b^2}  (\eta_a, \eta_b)
+  \begin{pmatrix}
+    v_b^2    & -v_a v_b \\
+    -v_a v_b & v_a^2
+  \end{pmatrix}
+\binom{\eta_a}{\eta_b} \: ,
+\end{equation}
+
+\noindent with $m_A^2 = [m_{ab}^2/(v_av_b) - 2\lambda_e](v_a^2 + v_b^2)$.
+Finally, the mass-squared terms for the scalars are given by:
+
+#+NAME: eq:lagrangian_2hdm_3
+\begin{equation}
+\mathcal{L}_{\rho \text{ mass}} = -(\rho_a, \rho_b)
+  \begin{pmatrix}
+    m_{ab}^2(v_b/v_a)+\lambda_av_a^2 & -m_{ab}^2 + \lambda_{cde}v_av_b \\
+    -m_{ab}^2 + \lambda_{cde}v_av_b  & m_{ab}^{2}(v_a/v_b) + \lambda_b v_b^2
+  \end{pmatrix}
+\binom{\rho_a}{\rho_b} \: ,
+\end{equation}
+
+\noindent where $\lambda_{cde} = \lambda_c + \lambda_d + \lambda_e$.
+The mass-squared matrix can be diagonalized, with an additional parameter $\alpha$ representing the corresponding rotation angle.
+A second angle $\beta$ can also be defined, by diagonalizing together the mass-squared matrices of the charged scalars and pseudoscalars.
+An important relationship with the two \acp{VEV}, often used for parameterisations, is:
+
+#+NAME: eq:vev_ratio
+\begin{equation}
+\tan \beta = \frac{v_b}{v_a} \: .
+\end{equation}
+
+\noindent The two angles determine all interactions between the five "Higgs" fields and the vector gauge bosons and fermions, the latter by also adding Yukawa-like terms.
+One should not forget that the potential in [[eq:potential_2hdm]] made some assumptions which, if relaxed, reveal even more complexity.
+For instance, \ac{FCNC} become possible at tree-level, despite being strongly constrained by experiments.
+Currently, scenarios with natural flavour conservation are usually preferred.
+
+
++ constraints at the lhc?
+
+
+* Warped Extra Dimensions
+Generations of physicists have tried to incorporate quantum gravity in the \ac{SM} without much success so far.
+Despite its negligible effect at the energy scales probed in our experiments, the gravitational force is bound to become significant at close range, or alternatively, at very high energy, near the \SI{e19}{\GeV} Planck scale.
+One of the theories that tries to unify the four known forces is string theory, where the basic units of matter are multi-dimensional /branes/ instead of the zero-dimensional particles present in the \ac{SM}.
+This idea was first introduced in the Kaluza-Klein model, which sought to extend general relativity to a five (4+1) dimensional space (four space dimensions and one time dimension).
+There, the existence of additional microscopic space dimensions was theorized.
+These dimensions would be /compactified/, or equivalently "curled up" and hidden at the macroscopic scale.
+Multiple theories use the concept of \ac{ED} to adress the shortcomings of the \ac{SM}.
+Whenever those theories are based on distorted space-time geometries, they are referred to as \ac{WED}.
+
+Among \ac{WED} models, one benchmark often used for \ac{LHC} experiments is the Randall-Sundrum model [[cite:&rs_model]].
+In this model, two branes are defined in a five-dimensional space, with one being the \ac{SM} brane where our (3+1)-dimensional Universe is located, and the other corresponding to the Planck scale.
+The region between the two branes is denoted the "bulk".
+The Universe thus described includes an extra compactified dimension, corresponding to a line segment between the two branes.
+The most general solution of Einstein's equations leads to an exponential metric on the fifth dimension, bounded by the two branes.
+The model also helps explaining the surprising difference in scales between gravity and other forces.
+Instead of an extreme and unnatural fine-tuning, gravity could be concentrated in specific regions of the warped space-time, leading to a very weak version of gravity in our Universe, but stronger elsewhere.
+Furthermore, the Higgs mechanism can be added in the same way as in the \ac{SM}, confining the added doublet in [[eq:su2_doublet]] to the $\si{\TeV}$ brane.
+
+Importantly, especially for experimentalists, is the prediction of two new particles [[cite:&xanda_benchmarks_wed]].
+A \spin{2} particle appears as the mediator of the gravitational force, appropriately named "graviton".
+Additionally, a new scalar is required by the size of the additional dimension, and is called "radion".
+For certain regions of the model's phase-space, both particles can decay to a pair of Higgs boson or pairs of W and Z bosons.
+Searches at the \ac{LHC} are thus sensitive to these two hypothetical high mass particles.
+The thesis here reported explores the resonant \hhbbtt{} decay.
+The radion and the Higgs boson can even be allowed to mix, although that scenario is not directly explored at th elevel of the analysis.
+Related work in the context of a singlet-model is covered in [[#sec:interf_intro]].
 
 * Biblio :noexport:
 + introduce spin0 and spin2 models here?

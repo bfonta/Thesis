@@ -11,30 +11,32 @@
 
 The Higgs mechanism revolutionized Particle Physics, and has driven \ac{HEP} experiments and studies for the past \num{\sim 50} years, of which this thesis is a mere example.
 The mechanism is responsible for generating the masses of the W and Z gauge bosons, and for explaining the masses of fermions.
-At its core, it is based on symmetry breaking, a phenomenon widely present in Nature, and exemplified in [[fig:symmetries]], left.
-A striking example appears in biology [[cite:&chirality_bio_1;&chirality_bio_2]], where all known molecules that are central to life have just one out of two possible chiralities: the DNA and RNA are right-handed, while aminoacids and proteins are all left-handed.
+It is deeply connected to the stability of the electroweak vacuum, and thus possibly the fate of our Universe, it can have a role in baryogenesis [[cite:&electroweak_baryogenesis]], and it might even be identified as the possible inflaton in the primordial Universe [[cite:&inflaton]].
+Despite its central role in modern particle physics, the higgs mechanism is at its core based on a relatively simple phenomenon, that of symmetry breaking, which is widely present in Nature (see [[fig:symmetries]], left).
+
+A striking example of symmetry breaking takes place in biology [[cite:&chirality_bio_1;&chirality_bio_2]], where all known molecules that are central to life have just one out of two possible chiralities: the DNA and RNA are right-handed, while aminoacids and proteins are all left-handed.
 We instead speak of /spontaneous/ symmetry breaking when some symmetry is broken without the presence of an external agent, contrary to what happens, for instance, when gravity breaks the 3D space symmetry, establishing a difference between "up" and "down" [[cite:&griffiths]].
 With spontaneous symmetry breaking, the true symmetry of the system is simply hidden by the necessary choice of an asymmetrical lower energy state.
 We can for instance think of a plastic rod being compressed along its longitudinal axis ([[fig:symmetries]], middle): before applying a vertical force the system is symmetric under rotations, but after being compressed the ground state necessarily breaks the symmetry[fn:: Spontaneous symmetry breaking is also present in the most recent diffusion models for content generation [[cite:&spontaneous_breaking_diffusion]]!].
 
-In the context of \ac{HEP}, it is the presence of an additional scalar field what spontaneously breaks the symmetry of the original electroweak lagrangian in [[eq:ew_lagrangian_short]].
-The theory starts by introducing a $\text{SU}(2)_{\text{L}}$ doublet with 4 scalar real fields:
+In the context of \ac{HEP}, it is the presence of an additional scalar field which spontaneously breaks the symmetry of the original electroweak lagrangian in [[eq:ew_lagrangian_short]].
+A $\text{SU}(2)_{\text{L}}$ doublet with 4 scalar real fields is introduced:
 
 #+NAME: eq:su2_doublet
 \begin{equation}
-\phi = \binom{\phi_+}{\phi^0} = \frac{1}{\sqrt{2}} \binom{\phi^1+i\phi^2}{\phi^3+i\phi^4}
+\phi = \binom{\phi^+}{\phi^0} = \frac{1}{\sqrt{2}} \binom{\phi^1+i\phi^2}{\phi^3+i\phi^4} \: ,
 \end{equation}
 
 \noindent where $\phi$ must be a scalar due to space isotropy and homogeneity arguments.
-To introduce this term in the \ac{SM} lagrangian, we introduce the Higgs lagrangian with standard kinetic and potential terms:
+To add this term to the \ac{SM} lagrangian, we introduce an additional lagrangian term with standard kinetic and potential terms:
 
 #+NAME: eq:higgs_lagrangian_short
 \begin{equation}
-\mathcal{L}_{\text{H}} = \left( D_{\mu}\phi \right)^{\dag}\left( D^{\mu}\phi \right) - V(\phi^{\dag}\phi)
+\mathcal{L} = \left( D_{\mu}\phi \right)^{\dag}\left( D^{\mu}\phi \right) - V(\phi^{\dag}\phi)
 \end{equation}
             
 \noindent where $D_{\mu}$ is the covariant derivative introduced in [[eq:ew_covariant]].
-The Higgs potential can be written as:
+The potential term above can be written as:
 
 #+NAME: eq:sm_orig_potential
 \begin{equation}
@@ -58,11 +60,11 @@ By applying the /unitary gauge/ transformation on top, we can easily see that th
 
 #+NAME: eq:unitary_gauge
 \begin{equation}
-\phi(x) \rightarrow e^{-\frac{i}{v}\sigma_j\theta^j(x)} \phi(x) = \frac{1}{\sqrt{2}} \binom{0}{v+H(x)} \: .
+\phi(x) \rightarrow e^{-\frac{i}{v}\sigma_j\theta^j(x)} \phi(x) = \frac{1}{\sqrt{2}} \binom{0}{v+\text{H}(x)} \: .
 \end{equation}
 
 \noindent Only one scalar field remains, corresponding to a new scalar boson, the Higgs particle.
-Curiously, the Higgs boson is the only known scalar field.
+The Higgs field is the only known scalar field in Nature.
 Using the definition of covariant derivative in [[eq:ew_covariant]] plus the unitary gauge in the lagrangian [[eq:higgs_lagrangian_short]], we obtain:
 
 #+NAME: eq:higgs_lagrangian_full
@@ -103,7 +105,7 @@ V(\text{H}) = \frac{1}{2}\mh^{2}\text{H}^{2} + \lh{3}v\text{H}^{3} + \frac{\lh{4
 \lh{3} = \frac{G_{F}}{\sqrt{2}}\mh^{2} = \frac{\mh^{2}}{2v^{2}} \simeq 0.13 \:,\:\:\:\: \lh{3} = \lh{4} \: .
 \end{equation}
 
-\noindent We can conclude that the Higgs self-couplings are fully determined in the \ac{SM}, given the measurements of $\mh$ and $v$, the latter fixed by Fermi's constant $G_{F}$, which is measured via muon decays.
+\noindent We can conclude that the Higgs self-couplings are fully determined in the \ac{SM}, given the measurements of $\mh$ and $v$, the latter fixed by Fermi's constant $G_{F}$, which is in turn measured via muon decays.
 From an experimental point of view, the Higgs boson thus provides a unique opportunity to perform a \ac{SM} closure test, independently from the gauge interactions of the electroweak sector.
 
 * The Yukawa couplings
@@ -197,9 +199,9 @@ The Higgs boson is also speculated to be connected to inflation, dark matter pro
 The last item is briefly discussed in [[#sec:ewpt]].
 
 Despite strongly motivated, and serving as the main motivation for building the \ac{LHC}, all the above was a matter of pure speculation until very recently.
-Since the mass of the new boson was a free parameter of the theory, there was no definite way to guarantee that we could produce a Higgs particle in a \ac{HEP} experiment, despite some argument that suggested otherwise.
-We allude to considerations on unitarity and perturbative behaviour implying upper limits of $\mh \lesssim 700\,\si{\GeV}$ [[cite:&higgs_mass_up_bound1;&higgs_mass_up_bound2]], and to lower limits driven by vaccum stability arguments, where the nontrivial minima at $v \neq 0$ will disappear if $\mh$ is too small [[cite:&higgs_mass_down_bound]].
-The Higgs boson was finally jointly discovered by the \ac{CMS} and \ac{ATLAS} experiments, and was announced to the world on July 2012 [[cite:&CMS_Higgs_discovery1;&CMS_Higgs_discovery2;&ATLAS_Higgs_discovery]].
+Since the mass of the new boson was a free parameter of the theory, there was no definite way to guarantee that we could produce a Higgs particle in a \ac{HEP} experiment, despite some optimism.
+We allude to considerations on unitarity and perturbative behaviour, implying upper limits of $\mh \lesssim 700\,\si{\GeV}$ [[cite:&higgs_mass_up_bound1;&higgs_mass_up_bound2]], and to lower limits driven by vaccum stability arguments, where the nontrivial minima at $v \neq 0$ would disappear if $\mh$ was too small [[cite:&higgs_mass_down_bound]].
+The Higgs boson was finally jointly discovered by the CMS and ATLAS experiments, and was announced to the world on July 2012 [[cite:&CMS_Higgs_discovery1;&CMS_Higgs_discovery2;&ATLAS_Higgs_discovery]].
 All measurements so far suggest that the new particle truly is the predicted \ac{SM} scalar Higgs boson, with zero charge and a mass slightly above \SI{125}{\GeV}.
 Interestingly, the value found for $\mh$ almost perfectly maximizes the product of the 14 branching ratios of the \ac{SM} Higgs boson into the known fermion and boson pairs [[cite:&higgs_br_maximum1]].
 It is not known if this fact is accidental or if it instead hints at a deeper yet hidden theory, but it certainly increases the richness of Higgs physics to be explored at the \ac{LHC} and beyond.

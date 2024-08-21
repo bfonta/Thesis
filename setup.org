@@ -33,6 +33,8 @@
 #+LATEX_HEADER: \Crefname{table}{Table}{Tables}
 #+LATEX_HEADER: \crefname{section}{Section}{Sections}
 #+LATEX_HEADER: \Crefname{section}{Section}{Sections}
+#+LATEX_HEADER: \crefname{chapter}{Chapter}{Chapters}
+#+LATEX_HEADER: \Crefname{chapter}{Chapter}{Chapters}
 
 #+LATEX_HEADER: \DeclareSIUnit \rap {\eta}
 #+LATEX_HEADER: \DeclareSIUnit \std {\sigma}

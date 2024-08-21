@@ -1,4 +1,16 @@
-<<sec:indirect_searches>>
+:PROPERTIES:
+:CUSTOM_ID: sec:indirect_searches
+:END:
+
+Although single Higgs production does not depend in $\lh{3}$ at \ac{LO} or at higher orders in \ac{QCD}, it does depend on it thorugh weak loops, namely in \ac{EW} interactions at \ac{NLO}, as shown in the diagrams of [[fig:single_higgs_indirect_production]], for production, and [[fig:single_higgs_indirect_decay]], for decays [[cite:&indirect_searches1]].
+
+#+NAME: fig:h_br_dependence
+#+CAPTION: (Left) Single Higgs cross section dependence on $\kl$, for the five most common production modes, namely \ac{ggF}, \ac{VBF}, associated production with split contributions from the W and Z boson, and $\ttbar{}\text{H}$. (Right) Single Higgs \ac{BR} dependence on $\kl$, showing the Higgs couplings to fermions ($f\bar{f}$), photons ($\gamma\gamma$) and vector gauge bosons (W and Z). Taken from [[cite:&indirect_searches1]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/SingleHiggsBRdependence.pdf]]
+#+END_figure
+
 
 An alternative method was developed to extract information on the trilinear Higgs coupling without using Higgs boson pair production.
 Once can explore \ac{NLO} electroweak loops present in single Higgs production featuring the trilinear Higgs vertex.

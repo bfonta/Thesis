@@ -3,7 +3,7 @@
 #+LATEX_HEADER: \newcommand{\cg}{c_{g}}
 #+LATEX_HEADER: \newcommand{\cv}{c_{\text{V}}}
 #+LATEX_HEADER: \newcommand{\cvv}{c_{\text{2V}}}
-#+LATEX_HEADER: \newcommand{\ctwog}{c_{2g}}
+#+LATEX_HEADER: \newcommand{\cgg}{c_{2g}}
 #+LATEX_HEADER: \newcommand{\ctwo}{c_{2}}
 #+LATEX_HEADER: \newcommand{\dijetmass}{m_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\dijetrap}{y_{\text{jj}}}

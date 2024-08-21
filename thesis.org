@@ -163,7 +163,7 @@
 
 * Effects of finite width and interference
 #+INCLUDE: "chapters/interf_studies/intro.org"
-** The Electroweak Phase Transition
+** The Stability of the Electroweak Vaccum
 #+INCLUDE: "chapters/interf_studies/ew_phase_transition.org"
 ** The Singlet Model
 #+INCLUDE: "chapters/interf_studies/singlet_model.org"
