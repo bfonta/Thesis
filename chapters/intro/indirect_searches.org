@@ -2,6 +2,10 @@
 :CUSTOM_ID: sec:indirect_searches
 :END:
 
++ Investigating the Higgs self-couplings through HHH production [[https://indico.cern.ch/event/1291157/contributions/5876758/attachments/2900751/5086982/Panagiotis_Stylianou_ICHEP24.pdf][talk]]
+
+
+
 Although single Higgs production does not depend in $\lh{3}$ at \ac{LO} or at higher orders in \ac{QCD}, it does depend on it thorugh weak loops, namely in \ac{EW} interactions at \ac{NLO}, as shown in the diagrams of [[fig:single_higgs_indirect_production]], for production, and [[fig:single_higgs_indirect_decay]], for decays [[cite:&indirect_searches1]].
 
 #+NAME: fig:h_br_dependence

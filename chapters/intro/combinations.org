@@ -2,121 +2,6 @@
 :CUSTOM_ID: sec:combinations
 :END:
 
-\myparagraph{Resonant searches}
-
-\noindent Recent \run{2} \xhh{} analyses have been combined in [[cite:&interf_studies]] and $\sigma\mathcal{B}$ upper limits are shown in [[fig:res_comb_xhh]], as a function of $\mx$.
-The analyses study \spin{0} and \spin{2} resonances in the resonant mass range between \num{0.28} and \SI{4.5}{\TeV}.
-The six highlighted searches target a variety of final states including b-jets, photons, light leptons, and hadronic $\tau$ leptons.
-The exclusion in terms of $\sigma\mathcal{B}$ goes down to \SI{0.2}{\femto\barn} for both spin scenarios probed.
-The best sensitivity at low masses is obtained by the diphoton search, while at high masses the two searches with b-tagged merged jets show the best sensitivity.
-The results of the statistical combination are shown as red lines.
-No deviation larger than \SI{2}{\sigma} from the expected limits is observed.
-The combination brings large improvements in sensitivity in the range of \num{0.5} to \SI{1}{\TeV} in $\mx$, with respect to individual channels.
-This intuitively happens in phase-space regions where no channel dominates in sensitivity.
-A recent combination of HH searches performed by \ac{ATLAS} can be found in [[cite:&atlas_comb_res]], where the \spin{0} result uses the three most sensitive channels and obtains comparable results.
-
-#+NAME: fig:res_comb_xhh
-#+CAPTION: Searches for di-Higgs resonant production. Observed and expected 95% \ac{CL} upper limits on $\sigma\mathcal{B}$ for the production of a \spin{0} resonance X (left) and a \spin{2} resonance G (right), via \ac{ggF}. Individual results and statistical combinations are shown, where observed limits are indicated with solid lines and expected limits with dashed lines. Taken from [[cite:&interf_studies]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/comb_res_hh_spin0.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/comb_res_hh_spin2.pdf]]
-#+END_figure
-
-\myparagraph{Nonresonant searches}
-
-@mention impact of bb\tau\tau@
-
-\noindent The most up-to-date Run2 HH combination constrains the observed (expected) HH cross-section to $\xshh < 3.4\;(2.5)\;\xshhsm$, where the sensitivity is dominated by the \bbbb{}, \bbtt{} and \bbgg{} channels.
-The limit is also interpreted as a function of the $\kl$ and $\kvv$ coupling modifiers, measuring $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively. Importantly, the latter result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
-
-#+NAME: fig:HH_nonres_comb_xsec
-#+CAPTION: Upper limits at 95% confidence level on the SM signal strength $\mu = \xshh / \xshhsm$. The inner (green) band and the outer (yellow) bands indicate the regions containing 68% and 95%, respectively, of the limits on $\mu$ expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Figure taken from [[cite:&summary_hig_twiki]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .8\textwidth
-[[~/org/PhD/Thesis/figures/intro/limits_HH_SM_Mar2023.pdf]]
-#+END_figure
-
-#+NAME: fig:HH_nonres_comb_c2v
-#+CAPTION: 95% confidence intervals on $\kl$ (left) and $\kvv$ (right) superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Results are taken from the references marked next to each individual measurement. 
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/exclusion_kl_Mar2023.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/exclusion_C2V_Mar2023.pdf]]
-#+END_figure
-
-#+NAME: fig:scan_comb_cms_nature
-#+CAPTION: Combined expected and observed 95% CL upper limits on the HH production cross-section for different values of $\kl$ (left) and $\kvv$ (right), assuming the SM values for the modifiers of Higgs boson couplings to top quarks and vector bosons. The green and yellow bands represent the \SI{1}{\sigma} and \SI{2}{\sigma} extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross-section (its \SI{1}{\sigma} uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95% CL. Taken from [[cite:&higgs_10_years]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/scan_kl_nature.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/scan_k2v_nature.pdf]]
-#+END_figure
-
-#+NAME: fig:scan_comb_atlas
-#+CAPTION: Observed (solid lines) and expected (dashed lines) 95% CL exclusion limits on the HH production cross-sections of the inclusive \ac{ggF} and \ac{VBF} processes as a function of $\kl$ (left) and the \ac{VBF} process as a function of $\kvv$ (right), for the \bbgg{} (purple), \bbtt{} (green), multilepton (cyan), \bbbb{} (blue) and \bbll{} (brown) decay channels and their combination (black). The expected limits assume no HH production or no \ac{VBF} HH production, respectively. The \ac{ggF} HH production cross-section is assumed to be as predicted by the SM in the right plot. The red line shows the theory prediction for the \ac{ggF} and \ac{VBF} HH production cross-section as a function of $\kl$ (left), and the predicted \ac{VBF} HH cross-section as a function of $\kvv$ (right). The bands surrounding the red cross-section lines indicate the theoretical uncertainties on the predicted cross-sections. Taken from [[cite:&atlas_hh_comb]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/atlas_combination_kl.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/atlas_combination_k2v.pdf]]
-#+END_figure
-
-
-#+NAME: fig:limits_comb_atlas
-#+CAPTION: Observed and expected 95% CL upper limits on the signal strength for the inclusive \ac{ggF} HH (left) and \ac{VBF} HH production (right) from the \bbtt{}, \bbgg{}, \bbbb{}, multilepton and \bbll{} decay channels, and their statistical combination. The \ac{ggF} or \ac{VBF} HH production cross-section is fixed to the SM predicted value for $\mh=125\,\si{\GeV}$ when deriving limits on the respective signal strength. The expected limit, along with the $\pm1\sigma$ and $\pm2\sigma$ bands, is calculated under the assumption of no HH process and with all NPs profiled to the observed data. Taken from [[cite:&atlas_hh_comb]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/limits_ggF_HH_SM_atlas.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/limits_VBF_HH_SM_atlas.pdf]]
-#+END_figure
-
-#+NAME: fig:direct_vs_indirect_cms
-#+CAPTION: Constraints on $\kl$ and $\kvv$ from the production of Higgs boson pairs (left). Constraint on the Higgs boson self-coupling modifier $\kl$ from single and pair production of Higgs boson(s) (right). Taken from [[cite:&higgs_10_years]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .431\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/direct_indirect1.pdf]]
-#+ATTR_LATEX: :width .569\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/direct_indirect2.pdf]]
-#+END_figure
-
-#+NAME: fig:kl_vs_k2v_atlas
-#+CAPTION: Expected 95% CL contours in the $\kvv{}–kl{}$ plane, corresponding to the individual decay channels and their combination, are illustrated using dashed lines. The observed contour from the combined results is depicted by a solid black line. The \ac{SM} prediction is marked by a star, and the combined best-fit value is indicated by a cross. Taken from [[cite:&atlas_hh_comb]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/kl_vs_k2v_atlas_comb.pdf]]
-#+END_figure
-
-#+NAME: fig:xsec_atlas
-#+CAPTION: Observed and expected 95% CL combined upper limits on the cross-section for the \ac{SM} and seven \ac{BSM} HEFT benchmarks in the ggF process, describing representative signal kinematics and $\mhh$ shape features obtained by varying multiple \ac{HEFT} coefficients. The expected limits from the \bbtt{}, \bbgg{} and \bbbb{} decay channels are presented as well. Theoretical predictions, estimated using specific sets of coefficient values defined in the benchmarks, are shown as red cross dots. Taken from [[cite:&atlas_hh_comb]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/eft_atlas_comb.pdf]]
-#+END_figure
-
-
-
-On top of the HH searches already mentioned, $\kl$ can be additionally constrained by exploiting \ac{NLO} \ac{EW} corrections to single Higgs processes, which also depend on $\kl$.
-Single Higgs cross-sections can indeed be quite sensitive to $\kl$ variations, especially in the \vh{} and \tth{} production modes, where up to 10% differences are expected.
-Additionally, there is a strong complementarity between direct and indirect searches [[cite:&indirect_searches2]].
-HH searches generally provide weaker contraints on the Higgs boson coupling to fermions and vector bosons, due to the lower production cross-section with respect to single Higgs.
-On the other hand, double Higgs processes provide stronger constraints on $\kl$.
-
-The main challenge of the combination recently performed by \ac{CMS} [[cite:&CMSHplusHHcomb]] consists on estimating and efficiently removing overlaps between signal regions of different analysis.
-The mitigation of double-counting and minimization of overlaps, together with the combination of event categories from both single and double-Higgs analysis, lead to stronger $\kl$ constraints.
-The analysis with the most sensitive production modes are included.
-Whenever overlaps exist, one of two approaches is taken: either additional selections are applied, or the least sensitive category or analysis is removed.
-As an example, the \bbzz{} analysis is removed in favour of \hzzfourl{} due to the former's relatively low sensitivity to $\kl$.
-Concerning systematics, their modelling in HH processes is generally simpler when compared to single H, due to the limited statistics of HH.
-
-\ac{CMS} observed exclusion intervals at 95% \ac{CL} of $-0.4 < \kl < 6.3$, assuming other Higgs couplings to follow the \ac{SM}, or $-1.4 < k_{\lambda} < 6.1$ otherwise.
-For comparison, \ac{ATLAS} observed $-0.4 < \kl < 6.3$, assuming \ac{SM} couplings, or $-1.4 < k_{\lambda} < 6.1$ otherwise [[cite:&ATLASHplusHHcomb]].
-We show ($\kl$, $\kt$) and ($\kv$, $\kvv$) scans in [[fig:combination_2d_scans]], where the complementarity between the two types of processes is clearly highlighted.
-\ac{CMS} was also able to once again [[cite:&higgs_10_years]] exclude $\kvv=0$ at more than \SI{5}{\sigma}, this time without fixing $\kv=1$.
 
 #+NAME: fig:combination_2d_scans
 #+CAPTION: Observed two-dimensional likelihood scans of ($\kl$, $\kt$) (left) and ($\kv$, $\kvv$) (right). The strong complementarity between the single and double Higgs processes is well illustrated. The remaining coupling modifiers are set to their \ac{SM} value. Taken from [[cite:&CMSHplusHHcomb]].
@@ -126,6 +11,7 @@ We show ($\kl$, $\kt$) and ($\kv$, $\kvv$) scans in [[fig:combination_2d_scans]]
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/combination_single_double_k2v_kv.pdf]]
 #+END_figure
+
 
 * Additional bibliography :noexport:
 + [[https://cms-results.web.cern.ch/cms-results/public-results/preliminary-results/HIG-23-006/index.html][HIG-23-006]]

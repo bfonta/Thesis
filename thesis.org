@@ -39,11 +39,11 @@
 #+INCLUDE: "chapters/intro/direct_searches.org"
 *** Indirect searches
 #+INCLUDE: "chapters/intro/indirect_searches.org"
-*** ZZ, ZH and future techniques
-#+INCLUDE: "chapters/intro/zz_and_zh.org"
-*** Combinations
+*** Combining direct with indirect searches
 #+INCLUDE: "chapters/intro/combinations.org"
 
+*** Future techniques
+#+INCLUDE: "chapters/intro/zz_and_zh.org"
 
 * The CMS Detector at the LHC
 ** The Large Hadron Collider
@@ -156,7 +156,8 @@
 #+INCLUDE: "chapters/statistics/hypothesis.org"
 *** The maximum likelihood method
 ** Results
-*** Final limits
+*** Limits
+#+INCLUDE: "chapters/analysis2/final_limits.org"
 *** Comparison with other resonant \bbtt{} results
 ** Prospects for resonant and non-resonant HH searches
 #+INCLUDE: "chapters/analysis2/prospects.org"
@@ -176,7 +177,10 @@
 #+INCLUDE: "chapters/conclusions.org"
 
 
+#+LaTeX: \appendix
 * Appendix
+** ATLAS results on double Higgs production
+#+INCLUDE: "chapters/appendixes/atlas_results.org"
 ** General control distributions
 ** MET SF control distributions
 

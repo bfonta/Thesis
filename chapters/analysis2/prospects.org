@@ -78,14 +78,20 @@ New techniques, including better estimates of \ac{QCD} background and new machin
 The usage of \ac{PNet} [[cite:&particle_net]] for \tau-initiated jets and the application of transformer technology to jet tagging [[cite:&particle_transformer]] might have a strong impact.
 This opens up a potentially large phase-space for boosted $H\rightarrow bb/cc/a\tau\tau$ analyses.
 Run 3 will extend \ac{PNet}'s tasks, with jet flavour classification, $\tau\tau$ identification and jet mass regression.
+It has already been used for energy regression in the context of jet energy scale calibrations, improving energy response resolution by \SI{\sim 15}{\percent} [[cite:&pnet_jet_calibration]].
 
 Additionally, an improved trigger strategy has been implemented, considering both data scouting and parking cite:&parking_scouting_run3_cms, and with the inclusion of \ac{PNet} b-tagging directly in the trigger.
 New triggers will benefit \bbtt{} analysis with the added 4j+2b and 4j+1b+1\tauh{} paths (the latter in 2024 only).
+\Ac{pt} thresholds will be lower for \hhbbbb{} and \hhbbtt{}.
 The inclusion of \ac{PNet} \tau-tagging at trigger level is being envisaged, and might be done still during Run3.
 We also expect that some HH analysis might benefit from the inclusion of synthetic datasets, as discussed in [[sec:hemisphere_mixing]].
 The first \ac{CMS} Run3 HH results will soon be available.
 
 + first run3 single higgs result [[cite:&cms_higgs_gg_run3]]
+
++ reduce bbH background to HH: [[https://indico.cern.ch/event/1291157/contributions/5876805/attachments/2898998/5083322/240718_ICHEP_bbHforHH.pdf][talk]]
+
++ giovanni marchiori ICHEP [[https://indico.cern.ch/event/1291157/contributions/5876729/attachments/2899194/5088459/2024_07_18%20-%20ICHEP2024%20-%20Higgs%20physics%20opportunities%20at%20the%20FCC.pdf][talk]]
   
 * Additional bibliography :noexport:
 + [[https://indico.cern.ch/event/1404329/contributions/5903658/attachments/2834334/4953058/Tau_Trigger_Apr_10th_BA-4.pdf][PNet for \tau's]] (TSG meeting)

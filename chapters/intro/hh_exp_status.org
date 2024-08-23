@@ -2,6 +2,33 @@
 :CUSTOM_ID: sec:hh_exp_status
 :END:
 
+As I write these lines, \run{3} at the \ac{LHC} is on-going, and the first results on double Higgs production at \SI{13.6}{\TeV} ...
+
+Nevertheless, one cannot forget the plethora of results \run{1} and \run{2} provided, consistently beating expectations.
+Searches for Higgs boson pair production have been performed by the \ac{CMS} and the \ac{ATLAS} experiments.
+
+We cover the results from the \ac{ATLAS} Collaboration in [[#sec:atlas_results]].
+In the following we give a brief glimpse on the extensive double Higgs boson research programme within the \ac{CMS} Collaboration, citing the most recent results for each production and decay channel.
+
++ \hhbbbb{} boosted [[cite:&atlas_hh_bbbb_boost]] and resolved [[cite:&bbbb_resolved_cms]] in \ac{ggF} and \ac{VBF}
++ \hhbbbb{} VHH [[cite:&vhh_4b_cms]]
++ \hhbbtt{} [[cite:&higgs_bbtautau_nonres]] in ggF and VBF
++ \hhbbgg{} [[cite:&bbgg_cms]]
+
++ multilepton (WWWW, $\text{W}\text{W}\tau\tau$ and $\tau\tau\tau\tau$), ggF and VBF [[cite:&cms_hh_multilepton]]
++ \hhbbzz{} ggF [[cite:&cms_hh_bbzz]]
++ \hhbbww{} ggF and VBF [[cite:&cms_hh_bbww]]
++ \hhwwgg{} ggF and VBF [[cite:&cms_hh_wwgg]]
++ \hhttgg{} ggF [[cite:&gammagammatautau]]
+
++ \hhbbvv{} covers unexplored all-hadronic final states at the \ac{LHC}, with \ac{BR} of 13%
+  no relevant constrain on $\kl$, focus on the boosted regime to better constrain $\k2v$
+  is almost able to exclude $\kvv=0$ by itself [[cite:&cms_hh_bbvv_hadr]]
+  first use of the novel particle transformer, briefly covered in [[#sec:hh_techniques]], to tag a VV jet (30% less efficient than for bb)
+  calibrate singal efficiency per subjet @read@
+
+
+
 Both the \ac{CMS} and the \ac{ATLAS} experiments at the \ac{LHC} are involved in a comprehensive study of HH processes.
 A direct measurement of $\lh{3}$ requires double Higgs boson production while $\lh{4}$ is first probed in the production of 3 Higgs bosons.
 These quantities can also be measured indirectly, as detailed in [[#sec:combinations]].

@@ -3,12 +3,12 @@
 :END:
 
 The double Higgs production mechanisms are in many ways similar to the production modes of single Higgs physics covered in [[#sec:higgs_exp_status]].
-The main difference consists of the larger number of possible Feynamn diagrams for each production mode at the lowest order, and naturally the striking cross section reduction by 3 orders of magnitude.
-The five production modes that most often occur are discussed below, and their cross sections are listed in [[tab:HH_production_xsec]] for $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$.
-In [[fig:HH_prod_energy]], instead, we show the evolution of the same production modes with increasing centre-of-mass energy.
-Quite apparent is the hierarchical structure of the importance of each mode, which evolves differently than for single Higgs processes.
-Processes involving top quarks in the final states increase their cross section faster with energy than processes including vector bosons.
-This observation will surely impact future detectors at higher centre-of-mass energies.
+The main differences consists of the larger number of possible Feynamn diagrams for each production mode at the lowest loop order, and clearly the dramatic cross section reduction by 3 orders of magnitude.
+The five most common production modes are discussed below, and their cross sections are listed in [[tab:HH_production_xsec]] for $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$.
+In [[fig:HH_prod_energy]], we show the evolution of those production modes with the centre-of-mass energy.
+Production modes with top quarks increase their cross section faster than processes including vector bosons.
+This observation will impact future detectors at higher centre-of-mass energies.
+Gluon fusion will nevertheless remain dominant in any future hadron collider.
 
 #+NAME: fig:HH_prod_energy
 #+ATTR_LATEX: :width .9\textwidth
@@ -62,9 +62,9 @@ Therefore, and despite its cross section more than 18 times smaller than for \ac
 
 ** Associated production, or Higgs-strahlung
 This process $qq^{\prime} \rightarrow \text{V}\text{H}\text{H}$ involves the same couplings appearing in the \ac{VBF} HH process, and an additional vector boson is present in the final states, as shown in [[fig:HH_production_diagrams_vhh]].
-The extra boson is used as a powerful handle to discriminate against multi-jet background, so far tested in analyses where the Higgs bosons decay to b quarks [[cite:&vhh_4b_cms;&vhh_4b_atlas]].
-Additionally, and especially in the $4 < \kl < 7$ range of the coupling modifier, the cross sections get closer to the ones of \ac{VBF} and \ac{ggF} processes, creating some complementarity worth exploring.
-The limits become comparable to other subleading searches for those high $\kl$ regions.
+The extra boson is used as a powerful handle to discriminate against multi-jet background, so far tested in analyses where Higgs bosons decay to b quarks [[cite:&vhh_4b_cms;&vhh_4b_atlas]].
+Additionally, and especially in the $4 < \kl < 7$ range of the coupling modifier, the cross sections get closer to the \ac{VBF} and \ac{ggF} ones, creating some complementarity worth exploring.
+The limits become indeed comparable to other subleading searches for those high $\kl$ values.
 
 #+NAME: fig:HH_production_diagrams_vhh
 #+CAPTION: Feynman diagrams for double Higgs associated production.

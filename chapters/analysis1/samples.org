@@ -1,4 +1,6 @@
-<<sec:samples>>
+:PROPERTIES:
+:CUSTOM_ID: sec:samples
+:END:
 
 * MC reweighting
 Copy Alessandro

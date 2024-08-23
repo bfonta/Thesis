@@ -1,3 +1,7 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:hh_techniques
+:END:
+
 * The \zzzhbbbb{} analysis
 The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have cross-sections 31 and 8 times larger than the \ac{SM} ones, respectively, and are therefore expected to be observed before the \bbbb{} process.
 The recently published resolved \zzzhbbbb{} analysis [[cite:&zz_zh_bbbb]] uses a series of advanced background estimation techniques to successfully validate a \ac{QCD} estimate using synthetic datasets ([[sec:qcd_bkgd_problem]]).

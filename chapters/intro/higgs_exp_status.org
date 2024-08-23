@@ -5,8 +5,8 @@
 The measurement of Higgs properties at the LHC are in general challenging, given the low cross-sections involved.
 The most sensitive analyses to single Higgs boson processes are the ones including the \hgg{} and \hzzfourl{} decay channels.
 Both are quite rare in the \ac{SM}, as shown in [[tab:higgs_decay_br]], but possess extremely clean photonic or leptonic signatures, with relatively few competing background processes.
-The diphoton channel is not even allowed at tree level, since the Higgs boson only couples to mass!
-The two channels have been responsible for increasingly precise measurements of the properties of the Higgs boson, namely its spin-parity $J^{P} = 0^{+}$ [[cite:&CMS_Hparity;&ATLAS_Hparity]], and its mass, here shown for the \hzzfourl{} channel [[cite:&higgs_mass_cms_run2;&atlas_higgs_4l_mass]]:
+The diphoton channel is not even allowed at tree level, since the Higgs boson couples to mass!
+The two channels have been responsible for increasingly precise measurements of the properties of the Higgs boson, namely its spin-parity $J^{P} = 0^{+}$ [[cite:&CMS_Hparity;&ATLAS_Hparity]], and its mass, here shown for the \hzzfourl{} channel in \run{1} + \run{2} combinations [[cite:&higgs_mass_cms_run2;&atlas_higgs_4l_mass]]:
 
 #+NAME: eq:mass_higgs_4l
 \begin{align}
@@ -14,7 +14,7 @@ The two channels have been responsible for increasingly precise measurements of 
 \mh & = 125.08 \pm 0.10\,\text{(stat.)} \pm 0.05\,\text{(syst.)} \:\:\: \text{(CMS)} \:,
 \end{align}
 
-\noindent We also mention the combination performed by \ac{ATLAS} of the two channels above [[cite:&higgs_mass_atlas]], with slightly better overall precision than the \ac{CMS} result above:
+\noindent We also mention the combination performed by \ac{ATLAS} of the two channels above [[cite:&higgs_mass_atlas]], which achieves the best precision so far:
 
 #+NAME: eq:mass_higgs_comb
 \begin{equation}
@@ -88,10 +88,14 @@ The \hbb{} decay dominates, but suffers from an exceedingly large multi-jet back
 Similar issues arise in \ac{VBF}, despite the additional handles provided by the jets, since the cross-section is greatly reduced.
 Instead, associated VH production is used, since the additional boson decays to leptons, which leave a clean signature in the detector.
 The multi-jet background is even larger for \hcc{}, given the lower masses involved.
-As seen before, the "golden channels" end up being \hzzfourl{} and \hgg{} (mostly the former), with very small couplings but experimentally clean.
+Again, its production in association with vector bosons decaying leptonically is explored, imposing modest constraints on its cross-section and on the charm Yukawa coupling [[cite:&higgs_to_charm_atlas]].
+As seen before, the "golden channels" end up being \hzzfourl{} and \hgg{} (mostly the former), with very small couplings but with an experimentally clean signature.
+The very rare $\text{H} \rightarrow \text{Z}\gamma$ has been recently combined between \ac{CMS} and \ac{ATLAS}, leading to its \SI{3.4}{\sigma} evidence for the first time [[cite:&cms_higgs_zgamma]].
 Notice that all decays with particles lighter than muons, such as light quarks or electrons, are completely out of reach from current or future detectors unless \ac{BSM} effects come into play.
 These final states have extremely small predicted couplings to the Higgs boson.
-To give an example, the $\text{H} \rightarrow e^{+}e^{-}$ decay is predicted to have a branching ratio $\mathcal{B}$ of \num{\sim 5e-9}, but the most recent \ac{CMS} 95% \ac{CL} upper limits excludes \num{3e-4} only [[cite:&higgs_to_electrons]].
+To give an example, the $\text{H} \rightarrow e^{+}e^{-}$ decay is predicted to have a branching ratio $\mathcal{B}$ of \num{\sim 5e-9}, but the most recent \ac{CMS} 95% \ac{CL} upper limits excludes \num{3e-4} only [[cite:&higgs_to_electrons]] (similar for \ac{ATLAS} [[cite:&higgs_to_ee_atlas]]).
+The two experiments have also been probing \ac{LFV} processes such as $\text{H} \rightarrow e\mu$, $\text{H} \rightarrow \tau\mu$ and $\text{H} \rightarrow \tau\mu$, reaching better and better sensitivities up to \num{e-5}, and other rare decays, such as Higgs boson decays to $\text{J}/\psi$ or its excited states.
+Of particular relevance for \ac{CMS} are the observation of $\text{H} \rightarrow \tau\tau$ [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]] and the first evidence for $\text{H} \rightarrow \mu\mu$ [[cite:&H2mumu]].
 
 #+NAME: tab:higgs_decay_br
 #+CAPTION: Largest single Higgs boson branching ratios for $\mh = 125.09\,\si{\GeV}$ [[cite:&YellowReport4]]. The asterisk $*$ refers to virtual particles.
@@ -115,8 +119,7 @@ To give an example, the $\text{H} \rightarrow e^{+}e^{-}$ decay is predicted to 
 
 To conclude, all production modes and decay channels measured so far agree with the predictions of the \ac{SM}.
 A summary is shown in [[fig:higgs_modifiers]], where the two panels report the agreement of \ac{CMS} measurements with the \ac{SM} using signal strength modifiers $\mu$, defined as $\mu_{i} \equiv \sigma_{i}/(\sigma_{{i}})_{\text{SM}}$ for the production modes $i$ on the left and as $\mu^{f} \equiv \mathcal{B}^{f}/(\mathcal{B}^{f})_{\text{SM}}$ for the decay channels $f$ on the right.
-Of particular relevance are the observation of $\text{H} \rightarrow \tau^{+}\tau^{-}$ [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]] and the first evidence for $\text{H} \rightarrow \mu^{+}\mu^{-}$ [[cite:&H2mumu]].
-Also, and as already discussed in [[#sec:higgs_mechanism]] and illustrated in [[fig:linear_fermions_bosons]], the predicted proportionality between the Higgs couplings and the fermion and gauge boson masses is remarkable, being confirmed by both \ac{CMS} and \ac{ATLAS}.
+Additionally, and as already discussed in [[#sec:higgs_mechanism]] and illustrated in [[fig:linear_fermions_bosons]], the predicted proportionality between the Higgs couplings and the fermion and gauge boson masses is remarkable, being confirmed by both \ac{CMS} and \ac{ATLAS}.
 Finally, the phenomenology of cubic and quartic interactions of the Higgs boson, as introduced by [[eq:sm_potential]], are still left to be discussed.
 Given their tight connection with this thesis' subject, it receives a dedicate treatment in [[#sec:dihiggs]].
 

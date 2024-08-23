@@ -1,0 +1,46 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:atlas_results
+:END:
+
+#+NAME: fig:limits_comb_atlas
+#+CAPTION: Observed and expected 95% CL upper limits on the signal strength for the inclusive \ac{ggF} HH (left) and \ac{VBF} HH production (right) from the \bbtt{}, \bbgg{}, \bbbb{}, multilepton and \bbll{} decay channels, and their statistical combination. The \ac{ggF} or \ac{VBF} HH production cross-section is fixed to the SM predicted value for $\mh=125\,\si{\GeV}$ when deriving limits on the respective signal strength. The expected limit, along with the $\pm1\sigma$ and $\pm2\sigma$ bands, is calculated under the assumption of no HH process and with all NPs profiled to the observed data. Taken from [[cite:&atlas_hh_comb]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/limits_ggF_HH_SM_atlas.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/limits_VBF_HH_SM_atlas.pdf]]
+#+END_figure
+
+In this section we provide a brief overview on the most up-to-date results obtained by \ac{ATLAS} on HH production.
+Results can be compared with the \ac{CMS} ones presented in [[ref:sec:direct_searches,sec:indirect_searches]].
+Many of the results presented are also used for the \ac{CMS} and \ac{ATLAS} combinations in [[#sec:combinations]].
+The channels covered are virtually the same covered by \ac{CMS}, but ocasionally organized differently: \hhbbbb{} resolved [[cite:&atlas_hh_bbbb_res]] and boosted [[cite:&atlas_hh_bbbb_boost]], \hhbbtt{} [[cite:&atlas_hh_bbtt]], \hhbbgg{} [[cite:&atlas_hh_bbgg]], \hhbbll{} [[cite:&atlas_hh_bbll]] and combined multileptonic decays [[cite:&atlas_hh_multileptons]].
+
+Recent combined results from the most sensitive searches with full \run{2} data are shown in [[fig:limits_comb_atlas]].
+There, observed and expected 95% \ac{CL} upper limits on the \ac{ggF} (left) and \ac{VBF} (right) HH signal strength are depicted.
+As expected, the three most sensitive channels are the silver bullets, \bbbb{}, \bbgg{} and \bbtt{}.
+The \ac{ggF} combination leads to an observed (expected) limit at 2.9 (2.4) the \ac{SM} expectation.
+The \ac{VBF} combination is naturally much worsed, the analysis being mostly used to constrain $\kvv$.
+
+#+NAME: fig:scan_comb_atlas
+#+CAPTION: Observed (solid lines) and expected (dashed lines) 95% CL exclusion limits on the HH production cross-sections of the inclusive \ac{ggF} and \ac{VBF} processes as a function of $\kl$ (left) and the \ac{VBF} process as a function of $\kvv$ (right), for the \bbgg{} (purple), \bbtt{} (green), multilepton (cyan), \bbbb{} (blue) and \bbll{} (brown) decay channels and their combination (black). The expected limits assume no HH production or no \ac{VBF} HH production, respectively. The \ac{ggF} HH production cross-section is assumed to be as predicted by the SM in the right plot. The red line shows the theory prediction for the \ac{ggF} and \ac{VBF} HH production cross-section as a function of $\kl$ (left), and the predicted \ac{VBF} HH cross-section as a function of $\kvv$ (right). The bands surrounding the red cross-section lines indicate the theoretical uncertainties on the predicted cross-sections. Taken from [[cite:&atlas_hh_comb]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/atlas_combination_kl.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/atlas_combination_k2v.pdf]]
+#+END_figure
+
+#+NAME: fig:kl_vs_k2v_atlas
+#+CAPTION: Expected 95% CL contours in the $\kvv{}–kl{}$ plane, corresponding to the individual decay channels and their combination, are illustrated using dashed lines. The observed contour from the combined results is depicted by a solid black line. The \ac{SM} prediction is marked by a star, and the combined best-fit value is indicated by a cross. Taken from [[cite:&atlas_hh_comb]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/kl_vs_k2v_atlas_comb.pdf]]
+#+END_figure
+
+#+NAME: fig:xsec_atlas
+#+CAPTION: Observed and expected 95% CL combined upper limits on the cross-section for the \ac{SM} and seven \ac{BSM} HEFT benchmarks in the ggF process, describing representative signal kinematics and $\mhh$ shape features obtained by varying multiple \ac{HEFT} coefficients. The expected limits from the \bbtt{}, \bbgg{} and \bbbb{} decay channels are presented as well. Theoretical predictions, estimated using specific sets of coefficient values defined in the benchmarks, are shown as red cross dots. Taken from [[cite:&atlas_hh_comb]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/eft_atlas_comb.pdf]]
+#+END_figure

@@ -1,49 +1,105 @@
-\myparagraph{\bbbb}
+:PROPERTIES:
+:CUSTOM_ID: sec:direct_searches
+:END:
 
-\myparagraph{\bbgg}
+Experiments extract 95% \ac{CL} upper limits on resonant HH production as a function of the resonance mass $\mx$.
 
-\myparagraph{\bbtt}
+Recent \ac{CMS} results include...
+
 + Mention H(bb)Y(tt)
++ mention "Measuring triple Higgs production at current and future colliders"  [[https://indico.cern.ch/event/1291157/contributions/5876804/attachments/2900906/5087077/ICHEP_Higgs.pdf][talk]]
 
-\myparagraph{\ggtt}
 
-\ac{CMS} has recently explored the extremely rare \gamma\gamma\tau\tau decay channel, for the first time, using full Run2 data.
-The analysis covers non-resonant production via \ac{ggF} and the HH (spin 0 and 2) and HY \ac{BSM} resonant production modes.
-The latter particle refers to an additional BSM scalar Y, considering both H(bb)Y(\tau\tau) and H(\tau\tau)Y(bb) signatures.
-Despite the minuscule HH branching ratio of 0.028%, the analysis presents interesting specificities worth discussing.
-In this work we focus on the nonresonant analysis only.
+# gammagamma tautau
+\ac{CMS} has recently explored the extremely rare \gamma\gamma\tau\tau decay channel, for the first time, using full \run{2} data, in both nonresonant and resonant production, the latter considering HH (spin 0 and 2) and HY \ac{BSM} production.
+The minuscule HH branching ratio of 0.028% only allows to obtain limits around one order of magnitude worse than the ones obtained by the most sensitive channels.
 
-The analysis exploits di-$\gamma$ triggers only, as triggering on the \tau's is found to have a negligible impact.
-Standard photon and lepton selections are applied.
-The dominant backgrounds are peaking single-H and nonresonant \gamma+jets, \gamma\gamma+jets, $\ttbar+\gamma$, $\ttbar+\gamma\gamma$ and V\gamma.
-Minor backgrounds are taken from simulation.
-The signal is fitted independently for different categories and data taking years with a double \ac{CB} function.
-The background also includes a \hgg{} contribution which is modelled just like the signal.
-The background continuum, instead, uses the discrete profiling method [[cite:&discrete_profiling]], which considers multiple analytical functions and penalizes functions with many parameters.
+* Nonresonant searches
 
-Interestingly, \tau’s are reconstructed in all its 6 decay modes ($ee$, $\mu\mu$, $e\mu$, $e\tau_{h}$, $\mu\tau_{h}$ and $\tau_{h}\tau_{h}$), and additionally the single $\tau_{h}$ and $\tau_{h}+\text{track}$ channels are considered when no electorn or muon pass the selection.
-Multiple selections are used, including a DY window mass veto to events compatible with \zll{} or \zllg{} close to the mass of the Z.
+@mention impact of bb\tau\tau@
 
-A \ac{BDT} is used, considering as input features related to the events' kinematical properties.
-To avoid artificially creating a peaking structure in the di-\gamma mass ($\mgg$), which is used in the final fit, the \ac{BDT} is made independent of $\mgg$ at first order.
-This is achieved by not using $\mgg$ as an input to the \ac{BDT} and by dividing the $\pt$ of photon candidates by $\mgg$.
-Sequential boundaries are applied to the \ac{BDT}'s output to create two categories of different signal purities.
-The splitting maximizes signal sensitivity.
-Events not belonging to one of those two categories are discarded.
+\noindent The most up-to-date Run2 HH combination constrains the observed (expected) HH cross-section to $\xshh < 3.4\;(2.5)\;\xshhsm$, where the sensitivity is dominated by the \bbbb{}, \bbtt{} and \bbgg{} channels.
+The limit is also interpreted as a function of the $\kl$ and $\kvv$ coupling modifiers, measuring $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively. Importantly, the latter result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
 
-The final results are obtained performing a simultaneous maximum likelihood fit to $\mgg$ in the two signal-enriched categories.
-As expected by a SM behaviour, the analysis observed very few \gamma\gamma\tau\tau candidates.
-However, it delivers observed (expected) $\kl$ 95% \ac{CL} upper limits, $-13\;(-11) < k_{\lambda} < 18\;(16)$, and on the HH proton-proton cross-section, $\sigma_{\text{HH}} < 930\;(740)\;\si{\femto\barn}$ or $\sigma_{\text{HH}} < 33\;(26)\;\sigma_{\text{HH}}^{\text{SM}}$.
-The limits are around one order of magnitude worse than the ones obtained by the most sensitive channels.
-
-#+NAME: fig:ggtt_results
-#+CAPTION: Results of the \gamma\gamma\tau\tau nonresonant analysis. /Left)/ Distribution of the BDT scores used for the event categorization from data and predictions from MC simulation. /Right)/ Data points and signal-plus-background models for the most sensitive analysis category, where the lower panel in each plot shows the residual signal yield after subtraction of the background. Taken from [[cite:&gammagammatautau]].
+#+NAME: fig:HH_nonres_comb_xsec
+#+CAPTION: Upper limits at 95% confidence level on the SM signal strength $\mu = \xshh / \xshhsm$. The inner (green) band and the outer (yellow) bands indicate the regions containing 68% and 95%, respectively, of the limits on $\mu$ expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Figure taken from [[cite:&summary_hig_twiki]].
 #+BEGIN_figure
-#+ATTR_LATEX: :width .555\textwidth :center
-[[~/org/PhD/Thesis/figures/ggtt_BDT.pdf]]
-#+ATTR_LATEX: :width .445\textwidth :center
-[[~/org/PhD/Thesis/figures/ggtt_result.pdf]]
+#+ATTR_LATEX: :width .8\textwidth
+[[~/org/PhD/Thesis/figures/intro/limits_HH_SM_Mar2023.pdf]]
 #+END_figure
+
+#+NAME: fig:HH_nonres_comb_c2v
+#+CAPTION: 95% confidence intervals on $\kl$ (left) and $\kvv$ (right) superimposed by the best fit value on this parameter. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to the one sigma interval. The quoted expected upper limits are evaluated with the postfit values of the uncertainties. Results are taken from the references marked next to each individual measurement. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/exclusion_kl_Mar2023.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/exclusion_C2V_Mar2023.pdf]]
+#+END_figure
+
+#+NAME: fig:scan_comb_cms_nature
+#+CAPTION: Combined expected and observed 95% CL upper limits on the HH production cross-section for different values of $\kl$ (left) and $\kvv$ (right), assuming the SM values for the modifiers of Higgs boson couplings to top quarks and vector bosons. The green and yellow bands represent the \SI{1}{\sigma} and \SI{2}{\sigma} extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross-section (its \SI{1}{\sigma} uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95% CL. Taken from [[cite:&higgs_10_years]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/scan_kl_nature.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/scan_k2v_nature.pdf]]
+#+END_figure
+
+#+NAME: fig:direct_vs_indirect_cms
+#+CAPTION: Constraints on $\kl$ and $\kvv$ from the production of Higgs boson pairs (left). Constraint on the Higgs boson self-coupling modifier $\kl$ from single and pair production of Higgs boson(s) (right). Taken from [[cite:&higgs_10_years]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .431\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/direct_indirect1.pdf]]
+#+ATTR_LATEX: :width .569\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/direct_indirect2.pdf]]
+#+END_figure
+
+
+On top of the HH searches already mentioned, $\kl$ can be additionally constrained by exploiting \ac{NLO} \ac{EW} corrections to single Higgs processes, which also depend on $\kl$.
+Single Higgs cross-sections can indeed be quite sensitive to $\kl$ variations, especially in the \vh{} and \tth{} production modes, where up to 10% differences are expected.
+Additionally, there is a strong complementarity between direct and indirect searches [[cite:&indirect_searches2]].
+HH searches generally provide weaker contraints on the Higgs boson coupling to fermions and vector bosons, due to the lower production cross-section with respect to single Higgs.
+On the other hand, double Higgs processes provide stronger constraints on $\kl$.
+
+The main challenge of the combination recently performed by \ac{CMS} [[cite:&CMSHplusHHcomb]] consists on estimating and efficiently removing overlaps between signal regions of different analysis.
+The mitigation of double-counting and minimization of overlaps, together with the combination of event categories from both single and double-Higgs analysis, lead to stronger $\kl$ constraints.
+The analysis with the most sensitive production modes are included.
+Whenever overlaps exist, one of two approaches is taken: either additional selections are applied, or the least sensitive category or analysis is removed.
+As an example, the \bbzz{} analysis is removed in favour of \hzzfourl{} due to the former's relatively low sensitivity to $\kl$.
+Concerning systematics, their modelling in HH processes is generally simpler when compared to single H, due to the limited statistics of HH.
+
+\ac{CMS} observed exclusion intervals at 95% \ac{CL} of $-0.4 < \kl < 6.3$, assuming other Higgs couplings to follow the \ac{SM}, or $-1.4 < k_{\lambda} < 6.1$ otherwise.
+For comparison, \ac{ATLAS} observed $-0.4 < \kl < 6.3$, assuming \ac{SM} couplings, or $-1.4 < k_{\lambda} < 6.1$ otherwise [[cite:&ATLASHplusHHcomb]].
+We show ($\kl$, $\kt$) and ($\kv$, $\kvv$) scans in [[fig:combination_2d_scans]], where the complementarity between the two types of processes is clearly highlighted.
+\ac{CMS} was also able to once again [[cite:&higgs_10_years]] exclude $\kvv=0$ at more than \SI{5}{\sigma}, this time without fixing $\kv=1$.
+
+
+
+
+* Resonant searches
+The m HH distribution in the SM has a broad peak about 400 GeV, a value where several final states achieve similar sensitivities, as also seen in the combination @add combination figure@
+
+\noindent Recent \run{2} \xhh{} analyses have been combined in [[cite:&interf_studies]] and $\sigma\mathcal{B}$ upper limits are shown in [[fig:res_comb_xhh]], as a function of $\mx$.
+The analyses study \spin{0} and \spin{2} resonances in the resonant mass range between \num{0.28} and \SI{4.5}{\TeV}.
+The six highlighted searches target a variety of final states including b-jets, photons, light leptons, and hadronic $\tau$ leptons.
+The exclusion in terms of $\sigma\mathcal{B}$ goes down to \SI{0.2}{\femto\barn} for both spin scenarios probed.
+The best sensitivity at low masses is obtained by the diphoton search, while at high masses the two searches with b-tagged merged jets show the best sensitivity.
+The results of the statistical combination are shown as red lines.
+No deviation larger than \SI{2}{\sigma} from the expected limits is observed.
+The combination brings large improvements in sensitivity in the range of \num{0.5} to \SI{1}{\TeV} in $\mx$, with respect to individual channels.
+This intuitively happens in phase-space regions where no channel dominates in sensitivity.
+A recent combination of HH searches performed by \ac{ATLAS} can be found in [[cite:&atlas_comb_res]], where the \spin{0} result uses the three most sensitive channels and obtains comparable results.
+
+#+NAME: fig:res_comb_xhh
+#+CAPTION: Searches for di-Higgs resonant production. Observed and expected 95% \ac{CL} upper limits on $\sigma\mathcal{B}$ for the production of a \spin{0} resonance X (left) and a \spin{2} resonance G (right), via \ac{ggF}. Individual results and statistical combinations are shown, where observed limits are indicated with solid lines and expected limits with dashed lines. Taken from [[cite:&interf_studies]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/comb_res_hh_spin0.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/comb_res_hh_spin2.pdf]]
+#+END_figure
+
 
 * Additional bibliography :noexport:
 + \gamma\gamma\tau\tau

@@ -102,7 +102,8 @@ In the most general \ac{EFT} formulation, there is a single dim-5 operator, whic
 Next, there are around 2800 dim-6 operators, which reduce to less than 100 by imposing specific restrictions.
 For instance, in \ac{SMEFT}, one of the few \ac{EFT} approaches often explored, one demands additional flavour symmetries and \ac{CP}-conservation to reduce the number of operators to 59.
 Operators with higher dimensions are very suppressed and usually neglected.
-However, some dedicated analyses for dim-8 operators have recently be done @cit@, since ...
+However, some dedicated studies for dim-8 operators have recently been done [[cite:&dim8_alessandra]], since electroweak quartic gauge couplings can be studied via \ac{VBF} processes, where dim-8 operators are used to parameterise deviations from the \ac{SM} prediction [[cite:&dim8_1]].
+Departures from \ac{SM} triple and quartic couplings lead to the growth of scattering amplitudes, signalling \ac{NP} [[cite:&dim8_2]].
 
 #+NAME: fig:SMEFTdiagrams
 #+CAPTION: Leading order Feynman diagrams n the \ac{HEFT} description at dimension 6 for \ac{ggF} production mechanism [[cite:&cadamuro_review]].
@@ -111,12 +112,13 @@ However, some dedicated analyses for dim-8 operators have recently be done @cit@
 [[~/org/PhD/Thesis/figures/intro/SMEFTdiagrams.pdf]]
 #+END_figure
 
-For HH production initiated by gluon fusion, a possible \ac{EFT} lagrangian can be constructed out of all dim-6 gauge-invariant operators [[cite:&eft_dim6_hh]]:
+For HH production initiated by gluon fusion, a possible \ac{EFT} lagrangian can be constructed out of all dim-6 gauge-invariant operators [[cite:&eft_dim6_hh]], with $t$ representing the top quark and $G_{\mu\nu}$ the eight gluons:
 
 #+NAME: eq:eft_lagrangian_higgs
 \begin{equation}
 \begin{split}
-    \mathcal{L}_{\text{EFT}}^{\text{HH}} & = \frac{1}{2}\partial^{\mu}\text{H}\partial_{\mu}\text{H} - \frac{1}{2}\mh^{2}\text{H}^2 + \kl\lh{3} v\text{H}^3 \\ & - \frac{\mt}{v}\left(v+\kt \text{H} + \frac{\ctwo}{v}H^2\right)(\overline{t}_{\text{L}}t_{\text{R}}+t_{\text{R}}\overline{t}_{\text{L}}) \\ & + \frac{\astrong}{12\pi v} \left(\cg\text{H} - \frac{\cgg}{2v}\text{H}^2\right)G^a_{\mu\nu}G_{a}^{\mu\nu}
+    \mathcal{L}_{\text{EFT}}^{\text{HH}} & = \frac{1}{2}\partial^{\mu}\text{H}\partial_{\mu}\text{H} - \frac{1}{2}\mh^{2}\text{H}^2 + \kl\lh{3} v\text{H}^3 - \frac{\mt}{v}\left(v+\kt \text{H} + \frac{\ctwo}{v}H^2\right) (\overline{t}_{\text{L}}t_{\text{R}}+t_{\text{R}}\overline{t}_{\text{L}}) \\
+    & + \frac{\astrong}{12\pi v} \left(\cg\text{H} - \frac{\cgg}{2v}\text{H}^2\right)G^a_{\mu\nu}G_{a}^{\mu\nu}
 \end{split}
 \end{equation}
 

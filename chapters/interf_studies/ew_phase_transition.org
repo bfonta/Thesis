@@ -2,6 +2,13 @@
 :CUSTOM_ID: sec:ewpt
 :END:
 
+#+NAME: fig:meta_stability
+#+CAPTION: (Left) Illustration of the Higgs potential $V(\phi)$ for the scalar field $\phi$. Choosing any of the minima in the complex circle breaks the symmetry. (Right) Quantum corrections can lead to changes in the shape of the Higgs potential, including the development of a second minimum implying metastability. These effects are not verifiable with our current experimental sensitivity. The minimum is taken at $v/\sqrt{2}$. Adapted from [[cite:&higgs_review_potential]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/interferences/MetaStability.pdf]]
+#+END_figure
+
 As discussed in [[#sec:short_comings]], despite the impressive success of the \ac{SM}, we know that it must be incomplete.
 One of the big questions still left unanswered relates to the nature of the \ac{EWSB} of the Higgs field.
 When the Universe was very young, at extremely high temperatures, it was energetically favourable for the Higgs field to be zero everywhere.
@@ -10,7 +17,7 @@ It is currently unknown how \ac{EWSB} takes place, specifically which kind of ph
 According to the \ac{SM}, the crossover should be smooth [[cite:&ewpt_type]], but such scenario is considered unnatural by some, due to the extreme distance between \ac{EW} and Planck scales.
 A \ac{SFO-EWPT} would point to \ac{BSM} effects, producing signatures that can be detected in next-generation space interferometers, such as LISA [[cite:&lisa]] (already validated by the LISA Pathfinder [[cite:&lisapathfinder]]) or the similar Decigo experiment [[cite:&decigo]].
 Some \ac{BSM} models, including the singlet model discussed in [[#sec:singlet_model]], can create the required conditions to enable a \ac{SFO-EWPT}, which can notably also explain baryogenesis.
-In particular, new states can modify the Higgs potential and its dependence on temperature, potentially introducing false, metastable vacua.
+In particular, new states can modify the Higgs potential and its dependence on temperature, potentially introducing false, metastable vacua, as illustrated in [[fig:meta_stability]].
 The false potential minima would allow sudden phase transitions via the sci-fi-esque coalescence of vacuum bubbles[fn:: Vaccum decay, with the creation of vaccum bubbles, might destroy the Universe as we know it [[cite:&coleman;&coleman_luccia]]!].
 It is however important to note that, based on current $\mt$ and $\alpha_{\text{S}}$ constraints [[cite:&vacuum_stability_2024]], our Universe could be metastable without additional states.
 The stability conditions are ruled by the running of the self-coupling with energy, in a function that also depends on the Higgs boson and top quark masses.
