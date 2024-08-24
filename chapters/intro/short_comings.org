@@ -29,9 +29,9 @@ In the following, we list the most prominent challenges [[cite:&thomson;&griffit
   Significantly, the three couplings evolve with energy in such a way that their unification could be achievable at some higher energy,
   within a generale symmetry group.
   \Acp{GUT} have been proposed with all-encompassing gauge symmetry groups, where convergences are achieved at grand unification scales (\SI{\approx e16}{\GeV}), often dependent on the presence of additional particles, which modify the running of the couplings.
-  These theories usually require proton decay, which as not been observed so far[fn:: I can't resist mentioning the futuristic possibility of using material taken from the Moon's depths to improve on current limits [[cite:&proton_decay_moon]], which are otherwise slowly reaching practical experimental ceilings.]: current lower bounds are set at $> 10^{34}$ [[cite:&kamiokande_proton]].
+  These theories usually require proton decay, which as not been observed so far[fn:: I can't resist mentioning the futuristic possibility of using material taken from the Moon's depths to improve on current limits [[cite:&proton_decay_moon]], which are otherwise slowly reaching practical experimental ceilings.]: current lower bounds are set at around $10^{33}/10^{34}$ at 90% \ac{CL} [[cite:&kamiokande_proton;&kamiokande_proton2]].
   Even more dramatic is the absence of gravity from the current framework.
-  The quantization of general relativity as been shown to not be renormalizable, and cannot thus be integrated in the \ac{SM} as-is.
+  The quantization of general relativity as been shown to not be renormalizable, and cannot thus be integrated in the \ac{SM} as it is.
 
 + *\Ac{CP} violation and baryogenesis*:
   Sakharov identified the three necessary ingredients to explain a process capable of reproducing the observed asymmetry: /i/) lepton and baryon number violation, /ii/) at some point in time the Universe was out of thermal equilibrium, and /iii/) there must be a \ac{CP} violating interaction.

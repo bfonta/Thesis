@@ -2,55 +2,37 @@
 :CUSTOM_ID: sec:indirect_searches
 :END:
 
-+ Investigating the Higgs self-couplings through HHH production [[https://indico.cern.ch/event/1291157/contributions/5876758/attachments/2900751/5086982/Panagiotis_Stylianou_ICHEP24.pdf][talk]]
-
-
-
-Although single Higgs production does not depend in $\lh{3}$ at \ac{LO} or at higher orders in \ac{QCD}, it does depend on it thorugh weak loops, namely in \ac{EW} interactions at \ac{NLO}, as shown in the diagrams of [[fig:single_higgs_indirect_production]], for production, and [[fig:single_higgs_indirect_decay]], for decays [[cite:&indirect_searches1]].
-
-#+NAME: fig:h_br_dependence
-#+CAPTION: (Left) Single Higgs cross section dependence on $\kl$, for the five most common production modes, namely \ac{ggF}, \ac{VBF}, associated production with split contributions from the W and Z boson, and $\ttbar{}\text{H}$. (Right) Single Higgs \ac{BR} dependence on $\kl$, showing the Higgs couplings to fermions ($f\bar{f}$), photons ($\gamma\gamma$) and vector gauge bosons (W and Z). Taken from [[cite:&indirect_searches1]].
+#+NAME: fig:single_higgs_indirect_production
+#+CAPTION: Examples of single Higgs boson production processes at \ac{NLO} contributing to the Higgs boson self-coupling. The on ein the top left is a \ac{ggF} process, while the others refer to \tth{}. Taken from [[cite:&indirect_searches1]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/SingleHiggsBRdependence.pdf]]
-#+END_figure
-
-
-An alternative method was developed to extract information on the trilinear Higgs coupling without using Higgs boson pair production.
-Once can explore \ac{NLO} electroweak loops present in single Higgs production featuring the trilinear Higgs vertex.
-It has also been proposed to use higher-order diagrams of \ac{EW} processes, such as $\mw$ and $\sint$ measurements, with the same goal [[cite:&indirect_searches_ew]].
-The production modes with the largest kinematic dependence on $\lh{3}$ are \tth{} and \vh{} [[cite:&indirect_searches2]], with differences of up to 10%.
-
-The bounds obtained from indirect searches are competitive with the ones from di-Higgs production [[cite:&indirect_searches3]], and provide additional constraints for single Higgs couplings (see [[#sec:combinations]]).
-Nevertheless, departures of the Higgs self-coupling from its \ac{SM} prediction signal the existence
-of new dynamics that, in general, would leave an imprint on other Higgs couplings.
-The importance of a global fit is therefore two-fold, namely to assess the robustness of the studies that take into account deformations exclusively in the Higgs trilinear coupling, and to single out the sensitivity on the single-Higgs couplings that is required to minimise the impact of the possible correlations [[cite:&hllhc_physics]].
-
-Single and double Higgs processes are extremely complementary [[cite:&indirect_searches4]].
-
-[[cite:&indirect_searches1]]
-
-
-#+NAME: fig:single_higgs_indirect_production
-#+CAPTION: Examples of single Higgs boson production processes contributing to the Higgs boson self-coupling. The top left one represent \ac{ggF} while the remaining refer to \tth{}. Taken from [[cite:&indirect_searches1]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .45\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/single_higgs_indirect1.pdf]]
-#+ATTR_LATEX: :width .45\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/single_higgs_indirect3.pdf]]
-#+ATTR_LATEX: :width .45\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/single_higgs_indirect4.pdf]]
-#+ATTR_LATEX: :width .45\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/single_higgs_indirect5.pdf]]
+[[~/org/PhD/Thesis/figures/intro/IndirectSearchesProduction.pdf]]
 #+END_figure
 
 #+NAME: fig:single_higgs_indirect_decay
-#+CAPTION: Examples of single Higgs boson decay processes contributing to the Higgs boson self-coupling. The diagrams in the top (bottom) row refer to \ac{NLO} $\gamma\gamma$ ($VV$) decays. Taken from [[cite:&indirect_searches1]].
+#+CAPTION: Examples of single Higgs boson decay processes at \ac{NLO} contributing to the Higgs boson self-coupling. The diagrams in the top (bottom) row refer to $\gamma\gamma$ ($VV$) decays. Taken from [[cite:&indirect_searches1]].
 #+BEGIN_figure
-#+ATTR_LATEX: :width .45\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/single_higgs_indirect7.pdf]]
-#+ATTR_LATEX: :width .45\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/single_higgs_indirect2.pdf]]
-#+ATTR_LATEX: :width .9\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/single_higgs_indirect6.pdf]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/IndirectSearchesDecay.pdf]]
+#+END_figure
+
+On top of the already mentioned HH direct searches, $\kl$ can be alternatively constrained by the exploitation of single Higgs processes, such as \hzzfourl{} and \hgg{}.
+Indeed, despite not depending on $\lh{3}$ at \ac{LO} or at higher orders in \ac{QCD}, single Higgs production does depend on $\kl$ in \ac{EW} interactions at \ac{NLO}.
+We display some of those dependencies in [[fig:single_higgs_indirect_production]], for production, and [[fig:single_higgs_indirect_decay]], for decays [[cite:&indirect_searches1]].
+Searches probing the Higgs self-coupling with higher-rder loops are denoted /indirect/.
+Single Higgs cross-sections can be quite sensitive to $\kl$ variations, especially in the \vh{} and \tth{} production modes, where up to 10% differences are expected [[cite:&indirect_searches2]].
+The fact that a higher loop order is needed is in part counterbalanced by the much higher single Higgs cross section, leading to competitive limits with respect to HH production.
+Having the same goal in mind, there has been an additional proposal, consisting on using processes with higher-order \ac{EW} diagrams, such as the ones used in $\mw$ and $\sint$ measurements, with the same goal [[cite:&indirect_searches_ew]].
+
+Modifications of the Higgs self-coupling are parameterised with the $\kappa\text{-framework}$ ([[#sec:nonres_BSM_hh]]), which is known to be equivalent to an \ac{EFT} approach with the introduction of higher-dimensional operators only affecting $\lh{3}$.
+Additional sensitivity can be obtained by measuring differential cross sections, which do not have a flat dependence on $\kl$.
+The transverse momentum \ac{pt} of the Higgs boson is found to be the most sensitive observable to detect \ac{BSM} effects on the trilinear coupling [[cite:&indirect_searches2;&modelling_single_h]].
+The bounds obtained from indirect searches are competitive with the ones from di-Higgs production [[cite:&indirect_searches3]], as shown in [[fig:direct_vs_indirect_cms]], and provide additional constraints for single Higgs couplings.
+We describe in [[#sec:combinations]] the ample complementarity between single and double Higgs boson measurements.
+
+#+NAME: fig:direct_vs_indirect_cms
+#+CAPTION: Constraints on the Higgs boson self-coupling modifier $\kl$ from single and pair production of Higgs bosons. Single Higgs boson processes lead to competitive $\kl$ measurements relative to HH processes. Taken from [[cite:&higgs_10_years]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/IndirectSearchesComb.pdf]]
 #+END_figure

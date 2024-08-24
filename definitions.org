@@ -1,10 +1,11 @@
 # Variables
+#+LATEX_HEADER: \newcommand{\astrong}{\alpha_{\text{S}}}
 #+LATEX_HEADER: \newcommand{\bbll}{bb$\ell\ell$+$E^{\text{miss}}_{\text{T}}$}
-#+LATEX_HEADER: \newcommand{\cg}{c_{g}}
-#+LATEX_HEADER: \newcommand{\cv}{c_{\text{V}}}
-#+LATEX_HEADER: \newcommand{\cvv}{c_{\text{2V}}}
 #+LATEX_HEADER: \newcommand{\cgg}{c_{2g}}
+#+LATEX_HEADER: \newcommand{\cg}{c_{g}}
 #+LATEX_HEADER: \newcommand{\ctwo}{c_{2}}
+#+LATEX_HEADER: \newcommand{\cvv}{c_{\text{2V}}}
+#+LATEX_HEADER: \newcommand{\cv}{c_{\text{V}}}
 #+LATEX_HEADER: \newcommand{\dijetmass}{m_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\dijetrap}{y_{\text{jj}}}
 #+LATEX_HEADER: \newcommand{\emiss}{E^{\text{miss}}_{\text{T}}}
@@ -33,14 +34,13 @@
 #+LATEX_HEADER: \newcommand{\pt}{p_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\rint}{\text{R}_{\text{int}}}
 #+LATEX_HEADER: \newcommand{\sina}{\sin\alpha}
-#+LATEX_HEADER: \newcommand{\astrong}{\alpha_{\text{S}}}
 #+LATEX_HEADER: \newcommand{\sint}{\sin\theta_{W}}
 #+LATEX_HEADER: \newcommand{\symcolor}{$\text{SU(3)}_{\text{C}}$}
 #+LATEX_HEADER: \newcommand{\symfull}{$\text{SU(3)}_{\text{C}}\otimes\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\text{Y}}$}
 #+LATEX_HEADER: \newcommand{\symoney}{$\text{U}(1)_{\text{Y}}$}
 #+LATEX_HEADER: \newcommand{\symone}{$\text{U}(1)$}
-#+LATEX_HEADER: \newcommand{\symthree}{$\text{SU}(3)$}
 #+LATEX_HEADER: \newcommand{\symthreec}{$\text{SU}(3)_{\text{C}}$}
+#+LATEX_HEADER: \newcommand{\symthree}{$\text{SU}(3)$}
 #+LATEX_HEADER: \newcommand{\symtwol}{$\text{SU}(2)_{\text{L}}$}
 #+LATEX_HEADER: \newcommand{\symtwo}{$\text{SU}(2)$}
 #+LATEX_HEADER: \newcommand{\symweak}{$\text{SU}(2)_{\text{L}} \otimes \text{U}(1)_{\text{Y}}$}
@@ -48,6 +48,9 @@
 #+LATEX_HEADER: \newcommand{\widthratio}{\Gamma_{\text{X}}/m_{\text{X}}}
 
 # Processes
+#+LATEX_HEADER: \newcommand{\bbbbbb}{bbbbbb}
+#+LATEX_HEADER: \newcommand{\bbbbgg}{bbbb$\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\bbbbtt}{bbbb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\bbbb}{bbbb}
 #+LATEX_HEADER: \newcommand{\bbgg}{bb$\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\bbtt}{bb$\tau\tau$}
@@ -61,15 +64,17 @@
 #+LATEX_HEADER: \newcommand{\hhbbbbtt}{HH $\rightarrow$ bbbb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hhbbbb}{HH $\rightarrow$ bbbb}
 #+LATEX_HEADER: \newcommand{\hhbbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\hhbbtt}{HH $\rightarrow$ bb$\tau\tau$}
-#+LATEX_HEADER: \newcommand{\hhbbzz}{HH $\rightarrow$ bbZZ}
-#+LATEX_HEADER: \newcommand{\hhbbww}{HH $\rightarrow$ bbWW}
-#+LATEX_HEADER: \newcommand{\hhwwgg}{HH $\rightarrow$ WW$\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\hhttgg}{HH $\rightarrow$ $\tau\tau\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\hhbbvv}{HH $\rightarrow$ bbVV}
 #+LATEX_HEADER: \newcommand{\hhbbll}{HH $\rightarrow$ bb$\ell\ell$+$E^{\text{miss}}_{\text{T}}$}
+#+LATEX_HEADER: \newcommand{\hhbbtt}{HH $\rightarrow$ bb$\tau\tau$}
+#+LATEX_HEADER: \newcommand{\hhbbvv}{HH $\rightarrow$ bbVV}
+#+LATEX_HEADER: \newcommand{\hhbbww}{HH $\rightarrow$ bbWW}
+#+LATEX_HEADER: \newcommand{\bbww}{bbWW}
+#+LATEX_HEADER: \newcommand{\hhbbzz}{HH $\rightarrow$ bbZZ}
 #+LATEX_HEADER: \newcommand{\hhhbbbbbb}{HHH $\rightarrow$ bbbbbb}
+#+LATEX_HEADER: \newcommand{\hhhbbbbgg}{HHH $\rightarrow$ bbbb$\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\hhhbbbbtt}{HHH $\rightarrow$ bbbb$\tau\tau$}
+#+LATEX_HEADER: \newcommand{\hhttgg}{HH $\rightarrow$ $\tau\tau\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\hhwwgg}{HH $\rightarrow$ WW$\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\hww}{H $\rightarrow$ W$^{\pm}$W$^{\mp*}$}
 #+LATEX_HEADER: \newcommand{\hzzfourl}{H $\rightarrow$ ZZ$^{*}$ $\rightarrow$ 4$\ell$}
 #+LATEX_HEADER: \newcommand{\hzz}{H $\rightarrow$ ZZ$^{*}$}
@@ -79,11 +84,16 @@
 #+LATEX_HEADER: \newcommand{\ttbar}{t\bar{t}}
 #+LATEX_HEADER: \newcommand{\tth}{$t\bar{t}\text{H}$}
 #+LATEX_HEADER: \newcommand{\vh}{$V\text{H}$}
+#+LATEX_HEADER: \newcommand{\xhhbbbb}{X $\rightarrow$ HH $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\xhhbbgg}{X $\rightarrow$ HH $\rightarrow$ bb$\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\xhhbbtt}{X $\rightarrow$ HH $\rightarrow$ bb$\tau\tau$}
+#+LATEX_HEADER: \newcommand{\xhhbbww}{X $\rightarrow$ HH $\rightarrow$ bbWW}
 #+LATEX_HEADER: \newcommand{\xhh}{X $\rightarrow$ HH}
-#+LATEX_HEADER: \newcommand{\xhybbtt}{X $\rightarrow$ HY $\rightarrow$ $\tau\tau$bb}
+#+LATEX_HEADER: \newcommand{\xyhbbbb}{X $\rightarrow$ HY $\rightarrow$ bbbb}
 #+LATEX_HEADER: \newcommand{\xshhsm}{\sigma_{\text{HH}}^{\text{SM}}}
 #+LATEX_HEADER: \newcommand{\xshh}{\sigma_{\text{HH}}}
+#+LATEX_HEADER: \newcommand{\xyhbbgg}{X $\rightarrow$ Y(bb)H($\gamma\gamma$)}
+#+LATEX_HEADER: \newcommand{\xyhbbtt}{X $\rightarrow$ Y(bb)H($\tau\tau$)}
 #+LATEX_HEADER: \newcommand{\xyh}{X $\rightarrow$ YH}
 #+LATEX_HEADER: \newcommand{\xyy}{X $\rightarrow$ YY}
 #+LATEX_HEADER: \newcommand{\zbb}{Z $\rightarrow$ bb}

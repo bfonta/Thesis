@@ -15,7 +15,7 @@ For the Higgs self-coupling, the definition is $\kl~\equiv~\lh{3}/\lh{3}^{\text{
 \ac{BSM} theories are thus characterized by $\kl \neq 1$.
 In [[fig:HH_prod_kl]] we display the running of the HH cross section for several production mechanisms, as a function of $\kl$.
 The minima are due to the diagram interference for each production mode, as presented in [[#sec:production]].
-Minima notably occur at different $\kl$ values for different production modes; for \ac{ggF} it occurs at $\kl=2.45$.
+Minima notably occur at different $\kl$ values for different production modes; $\kl=2.45$ for \ac{ggF}.
 A variable constraining power is associated to each production mode, depending on the phase-space region being studied.
 Other coupling modifiers are similarly defined, namely $\kv~\equiv~\cv/\cv^{\text{SM}}$, for the coupling between two Higgs bosons and one vector boson, and $\kvv~\equiv~\cvv/\cvv^{\text{SM}}$, a quartic coupling between two Higgs bosons and two vector bosons which can only be studied with \ac{VBF}.
 
@@ -26,23 +26,30 @@ Other coupling modifiers are similarly defined, namely $\kv~\equiv~\cv/\cv^{\tex
 [[~/org/PhD/Thesis/figures/intro/HH_production_kl.pdf]]
 #+END_figure
 
-The coupling modifiers also modify the relative abundance of each final state.
-Using the recipe described in [[cite:&indirect_searches1]], we have obtained the HH \ac{BR} dependence on $\kl$, as displayed in [[fig:hh_br_dependence]].
-The figure on the left refers to single Higgs production and was obtained to validate the procedure; it should be compared to the right plot of [[fig:h_br_dependence]].
-We used the assumption that the HH \ac{BR} can be obtained as the product of the individual single H \acp{BR}, which holds in the $\kappa\text{-framework}$.
+The coupling modifiers also modify the relative abundance of production modes and final states.
+In [[fig:h_br_dependence]] we show how the single Higgs production modes (left) and decays (right) are affected by a $\kl$ parameterisation.
+Then, using the recipe described in [[cite:&indirect_searches1]], we obtain a similar plot for the HH \ac{BR} dependence on $\kl$, as displayed in [[fig:hh_br_dependence]] (right).
+The left figure again refers to single Higgs production and was obtained to validate the procedure; it should be compared to the right plot of [[fig:h_br_dependence]].
+We used the assumption that the HH \ac{BR} can be obtained as the product of the individual single Higgs boson \acp{BR}, which holds in the $\kappa\text{-framework}$.
 Relative changes $\delta$ in the \ac{BR} are the same for all fermions, which are identified by the letter $f$.
 Contrary to what happens for single Higgs production, HH final states have a negligible dependence on $\kl$.
-Additionally, as we will see in [[#sec:hh_exp_status]], current $\kl$ contraints are often significantly tighter than the range displayed in the plots, and variations are thus at a submillesimal level.
+Additionally, as we will see in [[#sec:hh_exp_status]], current $\kl$ contraints are often significantly tighter than the range displayed in the plots; the relevant variations thus are of submillesimal level.
+
+#+NAME: fig:h_br_dependence
+#+CAPTION: (Left) Single Higgs cross section dependence on $\kl$, for the five most common production modes, namely \ac{ggF}, \ac{VBF}, associated production with split contributions from the W and Z boson, and $\ttbar{}\text{H}$. (Right) Single Higgs \ac{BR} dependence on $\kl$, showing the Higgs couplings to fermions ($f\bar{f}$), photons ($\gamma\gamma$) and vector gauge bosons (W and Z). Taken from [[cite:&indirect_searches1]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/SingleHiggsBRdependence.pdf]]
+#+END_figure
 
 #+NAME: fig:hh_br_dependence
-#+CAPTION: Branching fraction deviations of single (left) and double (right) Higgs processes as a function of the Higgs coupling modifier $\kl$. The single Higgs process is included for validation only, and matches the right plot of [[fig:h_br_dependence]]. Calculated follow the procedure detailed in [[cite:&indirect_searches1]].
+#+CAPTION: Branching fraction deviations in percentage of single (left) and double (right) Higgs processes as a function of the HH coupling modifier $\kl$. Different decays are included, where "g" stands for gluon and "f" for fermion. The single Higgs process is included for validation only, and matches the right plot of [[fig:h_br_dependence]]. Calculated following the procedure detailed in [[cite:&indirect_searches1]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/BRdependence_SingleHiggs.pdf]]
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/BRdependence_DoubleHiggs.pdf]]
 #+END_figure
-
 
 Deviations of the cross-section of \ac{ggF} HH processes can be parameterised as a function of $\kl$ and $\kt\equiv y_t/y_t^{\text{SM}}$ as follows:
 

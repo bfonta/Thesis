@@ -2,9 +2,21 @@
 :CUSTOM_ID: sec:combinations
 :END:
 
+There is a strong complementarity between direct and indirect $\kl$ studies [[cite:&indirect_searches2;&indirect_searches4]].
+Given their lower cross section, double Higgs boson searches generally provide weaker constraints on the Higgs couplings to fermions and vector bosons with respect to single Higgs analyses.
+On the other hand, HH processes provide stronger constraints on $\kl$.
+Combinations drawn from the two approaches maximize sensitivity, often enabling the relaxation of additional constraints during the fit, for example when setting some coupling modifiers to their \ac{SM} value.
+Global fits also enable to further validate individual studies, mostly at the level of the statistical methods, as the final results should be compatible with individual analyses.
+
+\Ac{CMS} has recently performed a combination of single and double Higgs production analyses [[cite:&CMSHplusHHcomb]].
+The analyses with the most sensitive production modes are included.
+The main challenge consists on estimating and efficiently removing overlaps between signal regions of different analysis.
+Whenever overlaps exist, one of two approaches is taken: either additional selections are applied, or the least sensitive category or analysis is removed.
+As an example, the \bbzz{} analysis is removed in favour of \hzzfourl{} due to the former's relatively low $\kl$ sensitivity.
+Concerning systematics, their modelling in HH processes is generally simpler when compared to single H, due to the limited HH statistics.
 
 #+NAME: fig:combination_2d_scans
-#+CAPTION: Observed two-dimensional likelihood scans of ($\kl$, $\kt$) (left) and ($\kv$, $\kvv$) (right). The strong complementarity between the single and double Higgs processes is well illustrated. The remaining coupling modifiers are set to their \ac{SM} value. Taken from [[cite:&CMSHplusHHcomb]].
+#+CAPTION: (Top) Observed two-dimensional likelihood scans of ($\kl$, $\kt$) (left) and ($\kv$, $\kvv$) (right). The strong complementarity between the single and double Higgs processes is well illustrated. The combination slightly improves on HH results. The remaining coupling modifiers are set to their \ac{SM} value. Taken from [[cite:&CMSHplusHHcomb]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/combination_single_double_kl_kt.pdf]]
@@ -12,6 +24,11 @@
 [[~/org/PhD/Thesis/figures/combination_single_double_k2v_kv.pdf]]
 #+END_figure
 
+\ac{CMS} observed exclusion intervals at 95% \ac{CL} of $-0.4 < \kl < 6.3$, assuming other Higgs couplings to follow the \ac{SM}, or $-1.4 < k_{\lambda} < 6.1$ otherwise.
+For comparison, \ac{ATLAS} observed $-0.4 < \kl < 6.3$ assuming \ac{SM} couplings, and $-1.4 < k_{\lambda} < 6.1$ otherwise [[cite:&ATLASHplusHHcomb]].
+We show ($\kl$, $\kt$) and ($\kv$, $\kvv$) scans in [[fig:combination_2d_scans]] (top), where the complementarity between the two types of processes is clearly highlighted.
+\ac{CMS} was also able to once again [[cite:&higgs_10_years]] exclude $\kvv=0$ at more than \SI{5}{\sigma}, this time without fixing $\kv=1$.
+Finally, the bottom bar of [[fig:direct_vs_indirect_cms]] shows that even $\kl$ benefits, even if only slightly, from the inclusion of indirect processes in the overall result.
 
 * Additional bibliography :noexport:
 + [[https://cms-results.web.cern.ch/cms-results/public-results/preliminary-results/HIG-23-006/index.html][HIG-23-006]]

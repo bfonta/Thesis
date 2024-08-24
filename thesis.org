@@ -42,8 +42,6 @@
 *** Combining direct with indirect searches
 #+INCLUDE: "chapters/intro/combinations.org"
 
-*** Future techniques
-#+INCLUDE: "chapters/intro/zz_and_zh.org"
 
 * The CMS Detector at the LHC
 ** The Large Hadron Collider

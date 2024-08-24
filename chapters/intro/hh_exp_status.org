@@ -2,43 +2,22 @@
 :CUSTOM_ID: sec:hh_exp_status
 :END:
 
-As I write these lines, \run{3} at the \ac{LHC} is on-going, and the first results on double Higgs production at \SI{13.6}{\TeV} ...
+As I write these lines, \run{3} at the \ac{LHC} is on-going, and many results will be complemented by updated analysis iterations at \SI{13.6}{\TeV}, exploiting more data and more performant experimental techniques.
+This will also be the case for HH resonant and nonresonant processes.
+Nevertheless, one cannot forget the plethora of results \run{1} and \run{2} provided, consistently beating experimental expectations.
+Many searches for Higgs boson pair production have been performed by the \ac{CMS} and the \ac{ATLAS} experiments.
+Direct measurements enable to probe $\lh{3}$ using HH production, and the current experimental status is covered in [[#sec:direct_searches]].
+There is also the option to probe the Higgs self-coupling indirectly, namely via higher-order loop.
+This idea is described in [[#sec:indirect_searches]].
+Finally, the direct and indirect approach can be combined, as detailed in [[#sec:combinations]].
 
-Nevertheless, one cannot forget the plethora of results \run{1} and \run{2} provided, consistently beating expectations.
-Searches for Higgs boson pair production have been performed by the \ac{CMS} and the \ac{ATLAS} experiments.
-
-We cover the results from the \ac{ATLAS} Collaboration in [[#sec:atlas_results]].
-In the following we give a brief glimpse on the extensive double Higgs boson research programme within the \ac{CMS} Collaboration, citing the most recent results for each production and decay channel.
-
-+ \hhbbbb{} boosted [[cite:&atlas_hh_bbbb_boost]] and resolved [[cite:&bbbb_resolved_cms]] in \ac{ggF} and \ac{VBF}
-+ \hhbbbb{} VHH [[cite:&vhh_4b_cms]]
-+ \hhbbtt{} [[cite:&higgs_bbtautau_nonres]] in ggF and VBF
-+ \hhbbgg{} [[cite:&bbgg_cms]]
-
-+ multilepton (WWWW, $\text{W}\text{W}\tau\tau$ and $\tau\tau\tau\tau$), ggF and VBF [[cite:&cms_hh_multilepton]]
-+ \hhbbzz{} ggF [[cite:&cms_hh_bbzz]]
-+ \hhbbww{} ggF and VBF [[cite:&cms_hh_bbww]]
-+ \hhwwgg{} ggF and VBF [[cite:&cms_hh_wwgg]]
-+ \hhttgg{} ggF [[cite:&gammagammatautau]]
-
-+ \hhbbvv{} covers unexplored all-hadronic final states at the \ac{LHC}, with \ac{BR} of 13%
-  no relevant constrain on $\kl$, focus on the boosted regime to better constrain $\k2v$
-  is almost able to exclude $\kvv=0$ by itself [[cite:&cms_hh_bbvv_hadr]]
-  first use of the novel particle transformer, briefly covered in [[#sec:hh_techniques]], to tag a VV jet (30% less efficient than for bb)
-  calibrate singal efficiency per subjet @read@
-
-
-
-Both the \ac{CMS} and the \ac{ATLAS} experiments at the \ac{LHC} are involved in a comprehensive study of HH processes.
-A direct measurement of $\lh{3}$ requires double Higgs boson production while $\lh{4}$ is first probed in the production of 3 Higgs bosons.
-These quantities can also be measured indirectly, as detailed in [[#sec:combinations]].
-$\kl$ is currently one of the least constrained properties of the Higgs boson.
-
-The \ac{CMS} experiment has explored a rich and diverse HH programme during Run2, and will continue to do so in Run3.
-In the following, we list some selected analysis which stand out due to its relative sensitivity, to some useful technique, or to some interesting peculiarity.
-The list is necessarily incomplete, subjective and biased, but we hope it provides a taste for all HH efforts undertook by \ac{CMS}.
-Finally, in [[#sec:combinations]], we discuss the most recent HH combinations in \ac{CMS}.
-
+We briefly mention that some analyses are starting to probe $\lh{4}$, which can be done via the production of three Higgs bosons.
+There is no experimental guarantee that $\lh{3}=\lh{4}$, with vital consequences for the shape of the Higgs potential in [[eq:sm_potential]], and ultimately for our Universe, as covered in [[#sec:ewpt]].
+The shape can really be only fully determined from a combined measurement of both HH and HHH processes.
+Given the correlations between $\lh{3}$ and $\lh{4}$, any hypothetical $\kl$ deviation will provide information on the quartic coupling [[cite:&Stylianou_2024]].
+Despite the vanishingly small cross-section at \SI{\sim 0.1}{\pico\barn} and smaller branching ratios ($\mathcal{B}(\text{HH}\rightarrow\text{bbbb})\approx0.33$ while $\mathcal{B}(\text{HHHH}\rightarrow\text{bbbbbb})\approx0.19$, for instance), triple production can add some constraining power to $\kl$ without requiring the quartic Higgs coupling modifier to be set to one in HH + HHH combinations.
+\Ac{CMS} is currently initiating studies with the \bbbbbb{} and \bbbbgg{} final states.
+However, given current sensitivity constraints, HHH analyses might become relevant in future colliders only.
 
 * Additional bibliography :noexport:
 + B2G Summary plots: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsB2G
