@@ -2,15 +2,15 @@
 :CUSTOM_ID: sec:nonres_BSM_hh
 :END:
 
-Multiple \ac{NP} scenarios with a \ac{SM}-like Higgs boson can exhibit a double Higgs phenomenology vastly different from what is expected from the \ac{SM}.
+Multiple \ac{NP} scenarios with \ac{SM}-like Higgs bosons exhibit a phenomenology of HH processes which deviates from the \ac{SM}.
 \Ac{BSM} signatures can naturally be probed in nonresonant modes, \ie{} production modes not created by a resonance decaying to a pair of Higgs bosons.
 As in other \ac{HEP} fields, physicists look for deviations from \ac{SM} predictions.
 Causes for such deviations are substantiated by many proposed \ac{BSM} theories, but experimentally amount to either a change in the HH production rate, or/and the modification of the shape of some kinematical distributions.
 
-Often, instead of directly measuring the couplings, results are instead expressed as a function of /coupling modifiers/, similar to the signal strength modifiers introduced in [[#sec:higgs_exp_status]].
-The coupling modifiers compare the measured couplings with their \ac{SM} expectations, with an approach dubbed the "$\kappa\text{-framework}$".
-The idea is to assume that there is a single Higgs boson, with its measured \SI{\approx 125}{\GeV} mass, and that any possible \ac{NP} present in experimental measurements only affect the couplings where at least one Higgs boson is involved.
-The possible \ac{NP} effects are then parameterized with coefficients $\kappa$.
+# take from Allessandro the assumptions of the k-framework if needed, but it does not seem much relevant for HH processes
+Often, instead of directly measuring the couplings, results are instead expressed as a function of /coupling modifiers/ $\kappa$, in a fashion similar to what was introduced in [[#sec:higgs_exp_status]] concerning signal strength modifiers.
+The modifiers compare the measured couplings with \ac{SM} expectations, and parameterise \ac{NP} effects.
+This approach is called the "$\kappa\text{-framework}$".
 For the Higgs self-coupling, the definition is $\kl~\equiv~\lh{3}/\lh{3}^{\text{SM}}$, where $\lh{3}$ is fully determined in the \ac{SM} once $v$ and $\mh$ are measured.
 \ac{BSM} theories are thus characterized by $\kl \neq 1$.
 In [[fig:HH_prod_kl]] we display the running of the HH cross section for several production mechanisms, as a function of $\kl$.

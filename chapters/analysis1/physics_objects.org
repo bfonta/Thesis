@@ -34,3 +34,7 @@
 
 * Missing transverse energy
 + The transverse momentum actually carried by invisible particles is systematically different from the true, corrected MET, due to the non-compensating nature of the calorimeters and to detector misalignment.
+
+
+* Additional bibliography :noexport:
++ maybe useful with some object definition [[cite:&signal_processing]]

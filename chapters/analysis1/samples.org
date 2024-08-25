@@ -2,8 +2,85 @@
 :CUSTOM_ID: sec:samples
 :END:
 
-* MC reweighting
-Copy Alessandro
+The analysis uses \SI{138}{\invfb} of data collected at $\sqrt{s}=13\,\si{\TeV}$ with a \SI{25}{\nano\second} bunch crossing intervals during 2016, 2017 and 2018 at \ac{CMS}, corresponding to \run{2}.
 
-* Additonal bibliography
-+ maybe useful with some object definition [[cite:&signal_processing]]
+* Data samples
+As seen in [[#sec:hlt]], \ac{CMS} structures its datasets in \acp{PD}, each defined by a unique set of \ac{HLT} (a "soup of triggers"), where the inclusion of an event implies the latter triggered at least one of the paths.
+Each \ac{PD} usually focuses on a particular type of physics object.
+There is thus a strong correlation between the \ac{HLT} triggers and the datasets an analysis must consider.
+Ultra-Legacy data are used for all separate runs in the three years.
+The 2016 data samples are split into two periods.
+This is because in late 2015 and 2016 the \ac{Si} strip tracker experiences issues with the pre-amplifier of one of its APV series readout chips, leading to a loss of hits in the first \SI{20}{\femto\barn} of 2016.
+In the remainder of this thesis the period with issues is denoted as 2016 APV, or "pre-VFP"[fn:: VFP refers to "Preamplifier Feedback Voltage Bias"], while the remaining 2016 data is referred to as 2016 "post-VFP", or simply 2016.
+
+For the analysis discussed in this work, we use the =EGamma=, =SingleMuon=, =Tau= and =MET= \acp{PD}.
+Their names give a strong hint on the triggers used to collect such data.
+There are however some mismatches; the =SingleMuon= \ac{PD}, for instance, also includes double muon triggers.
+The datasets are split across the three analysis channels as follows:
+
++ \eletau{}: =EGamma=, =Tau=, =MET=
++ \mutau{}: =SingleMuon=, =Tau=, =MET=
++ \tautau{}: =Tau=, =MET=
+
+\noindent Overlaps occur because an event can, and often does, fire triggers associated to different \acp{PD}.
+They are removed by appropriate kinematic cuts described in [[#sec:triggers]].
+
+* Background samples
+When interested in a particular process, one wants to measure as many events as possible.
+This can be done by increasing the collected luminosity, but also by improving the efficiency and/or acceptance of the experiment to the /signal/ of interest.
+In the case of this thesis' analysis, we want to make sure all hypothetical \xhhbbtt{} events are recorded.
+However, the topology of the signal process can be mimicked by various unrelated \ac{SM} processes, called /backgrounds/.
+Therefore, when the signal efficiency increases, the presence of background also tends to become more significant.
+If the backgrounds are incorrectly estimated, a part of the measured data will not be correctly classified, leading to incorrect conclusions.
+The analysis could for instance measure the presence of a \ac{BSM} signal since some data subset is not accounted for by the backgrounds.
+
+In particular, the \xhhbbtt{} analysis is affected by numerous sources of background, which can be qualitatively grouped into the /reducible/ and /irreducible/ categories.
+The reducible backgrounds refer to those which final states could in theory be distingished from the final states of the signal.
+In practice, however, no experiment has a perfect object efficiency and identification, and some errors are prone to happen.
+This becomes particularly noticeable when the backgrounds have cross sections several orders of magnitude larger than the signal being studied.
+By far the most important reducible background in the \xhhbbtt{} analysis is multijet production,
+where gluon- or quark-initiated jets are misidentified as $\tau$ or b candidates.
+It mostly affects the \tautau{} channel, since the leptonic selections in the other two channels supress the multijet contribution.
+In what follows we also refer to this source as "QCD background".
+Other reducible backgrounds are the \ac{DY} production of a $\tau$ pair in association with a light quark pair, $\ttbar$ production with the decay of at least one of its W bosons to quarks, and the production of W bosons in association with light jets, where the latter are misidentified as either leptons or b jets.
+
+The irreducible backgrounds are instead those which final state particle content is identical to the signal of interest.
+The production of $\ttbar$ pairs dominates in this regard, namely when the decay is fully leptonic, as $\ttbar\to\bbbar\,\text{W}^{\pm} \text{W}^{\mp} \rightarrow  \bbbar\,\ell^{\pm} \bar{\nu_{\ell}} \tau^{\mp} \nu_{\tau}$, where $\ell$ can refer to electrons, muons or taus.
+This background affects all the considered analysis channels.
+The second most prominent irreducible background is again \ac{DY} lepton pair production, but this time with the additional jets being specifically b jets: $\text{Z}/\gamma^{*} + \bbbar \rightarrow \ell\ell + \bbbar$.
+
+On top, several minor background components are taken into account:
++ double gauge boson: WW, ZZ, WZ;
++ triple gauge boson: WWW, WWZ, WZZ, ZZZ;
++ single top: t-channel and s-channel, being the latter much less common;
++ electroweak: W or Z plus jets;
++ single Higgs boson: \ac{ggF}, \ac{VBF}, and in association with a W or Z boson;
++ top quark pairs: $\ttbar\text{H}$, $\ttbar\text{W}$, $\ttbar\text{Z}$, $\ttbar\text{WW}$, $\ttbar\text{WZ}$, $\ttbar\text{ZZ}$.
+
+\noindent All the above should be negligible given their small cross sections, and one would naively think they can be ignored.
+However, not only the total process rate matters, but also its shape.
+Some low cross section processes can peak under the \bbtt{} maximum, as is for instance the case with $\ttbar\text{H}$.
+This can be observed in the $\tau\tau$ mass regression described in [[#sec:tautau_regression]].
+
+The background samples are generated based on state-of-the-art theoretical calculations at \ac{LO} or \ac{NLO}, and are used to optimize the event selection and to evaluate the efficiency, acceptance and to compute systematic uncertainties.
+The samples are also used to extract all sorts of \ac{SF} corrections.
+
+* Signal samples
+The signal samples used to model the resonant \xhh{} processes refer to \spin{0} and \spin{2} processes, corresponding to the radion and graviton hypothesis, respectively.
+@improve@
+
+* MC reweighting
+The reweighting and normalisation of \ac{MC} background samples is essential to model the processes accurately and to establish a sound comparison with data.
+The same is true for signal sample, except into what concerns the overall normalisation, since the cross-section of resonant processes is arbitrarily defined.
+The reweighting of \ac{MC} samples is performed as follows, depending on the sample and data-taking period:
+
+#+NAME: eq:mc_weight
+\begin{equation}
+N^{\text{period}}_{\text{sample}} = \frac{ \mathcal{L}^{\text{period}} \times \left( \sigma \times \mathcal{B} \right)^{\text{theory}}_{\text{sample}} \times N_{\text{sample}}^{\text{gen}} \times \prod_{i} w_i \times \prod_{j} w_{j}^{\text{gen}} } { \sum_{j} w_j^{\text{gen}} }, 
+\end{equation}
+
+\noindent where $w^{\text{gen}}$ stands for generation-related weights, $\mathcal{L}^{\text{period}}$ is the luminosity in one of the four data-taking periods in \run{2}, $\sigma$ and $\mathcal{B}$ represent, in order, the process cross section and decay \ac{BR}, $N^{\text{gen}}$ is the number of generated events, $i$ represents a weight being applied on top of the $j$ generation weights.
+Different data-taking periods can have different sets of $w_{i}$ weights, which can be expanded following the detection of discrepancies between data and \ac{MC}.
+For the weights $i$ we consider, depending on analysis selections and data-taking periods, stitching weights for \ac{DY} samples, \ac{L1} prefiring weights, trigger \ac{SF} weights, weights for objects faking taus, \ac{PU} jet identification weights, reshaping b-tagging weights and b-jet discriminator weights.
+In the $j$ generation weights we include the \ac{PU} reweighting and the \ac{NLO} reweighting.
+The weights are all described in [[#sec:mc_corrections]].

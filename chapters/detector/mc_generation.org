@@ -8,7 +8,7 @@ The development of algorithms for future detectors would be impossible without d
 It goes without saying that \ac{MC} samples are a fundamental ingredient in this thesis, for the \xhhbbtt{} analysis as well as for the detector's work.
 
 Throughout the following chapters, the so-called full simulation, or =FullSim=, is used, creating samples with a single particle for dedicated detector studies, or performing instead the complete simulation of \hhbbtt{} events.
-=FuillSim= corresponds to a detailed simulation of the entire experimental setup, including the propagation of particles through all detector components, the interaction of particles with the detector material, and the response of the various detectors components.
+=FullSim= corresponds to a detailed simulation of the entire experimental setup, including the propagation of particles through all detector components, the interaction of particles with the detector material, and the response of the various detectors components.
 The simulation of \ac{MC} events follows a well-defined processing chains in \ac{CMS}, and is defined such that simulation and measured experimental data are processed in very similar ways.
 Indeed, after the simulation phase, the two chains are identical, and produce identical data formats to be used by analysists.
 Output objects are eventually stored in different files, where files with the same event content share a common data tier, such as =RAW=, =RECO= or =AOD=.

@@ -92,10 +92,11 @@
 
 * \xhhbbtt{}: Strategy definition
 #+INCLUDE: "chapters/analysis1/bbtt_analysis.org"
-** Data, MC and signal samples
+** Samples
 #+INCLUDE: "chapters/analysis1/samples.org"
 
 ** Triggers
+#+INCLUDE: "chapters/analysis1/triggers.org"
 *** Legacy triggers
 #+INCLUDE: "chapters/analysis1/legacy_triggers.org"
 *** Additional triggers
@@ -110,18 +111,11 @@
 *** Resolved jets
 *** Boosted jets
 ** $\tau\tau$ mass regression
+#+INCLUDE: "chapters/analysis1/tautau_regression.org"
 ** QCD background estimation
 #+INCLUDE: "chapters/intro/qcd_estimation.org"
 ** Monte Carlo corrections
-*** Pileup reweighting
-*** Pileup jet identification
-*** Jet energy smearing
-*** Legacy trigger scale factors
-*** Single tau trigger scale factors
-*** MET trigger scale factors
-#+INCLUDE: "chapters/analysis1/met_trigger_scale_factors.org"
-*** DeepTau scale factors for hadronic $\tau$'s
-*** Lepton scale factors
+#+INCLUDE: "chapters/analysis1/mc_corrections.org"
 
 ** Control regions
 #+INCLUDE: "chapters/intro/control_regions.org"
@@ -160,6 +154,7 @@
 ** Prospects for resonant and non-resonant HH searches
 #+INCLUDE: "chapters/analysis2/prospects.org"
 
+
 * Effects of finite width and interference
 #+INCLUDE: "chapters/interf_studies/intro.org"
 ** The Stability of the Electroweak Vaccum
@@ -171,11 +166,13 @@
 ** Results
 #+INCLUDE: "chapters/interf_studies/interf_results.org"
 
+
 * Conclusions
 #+INCLUDE: "chapters/conclusions.org"
 
 
 #+LaTeX: \appendix
+
 * Appendix
 ** ATLAS results on double Higgs production
 #+INCLUDE: "chapters/appendixes/atlas_results.org"

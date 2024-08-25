@@ -2,8 +2,17 @@
 :CUSTOM_ID: sec:res_BSM_hh
 :END:
 
+#+NAME: fig:res_X_diagrams
+#+CAPTION: Feynman diagrams for hypothetical resonant processes contributing to double Higgs pair production via \ac{ggF} (left) and \ac{VBF} (right).
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/gg_X_HH.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/vbf_X_HH.pdf]]
+#+END_figure
+
 The simplest imaginable signature of \ac{NP} consists in the production of an s-channel resonance decaying to a pair of \ac{SM} particles.
-In the context of HH searches, and in addition to the nonresonant approaches discussed in [[#sec:nonres_BSM_hh]], \ac{BSM} physics can be probed under the assumption that there indeed exists some new particle X with a mass within what the \ac{LHC} can produce, decaying to a pair of Higgs bosons.
+In the context of HH searches, and in addition to the nonresonant approaches discussed in [[#sec:nonres_BSM_hh]], \ac{BSM} physics can be probed under the assumption that there indeed exists some new particle X with a mass within what the \ac{LHC} can produce, decaying to a pair of Higgs bosons, as shown in [[fig:res_X_diagrams]] for \ac{ggF} and \ac{VBF} processes.
 In that case, given enough experimental sensitivity, we would naively expect to see a "bump" in double Higgs mass distributions.
 In practice, admitting such hypothetical particle exists, the excess might only be discernible through variables with a higher discriminative power, such as discriminators built out of \ac{ML} procedures.
 The experimental challenges of such kind of analysis is highlighted in [[#sec:bbtautau_intro]].
