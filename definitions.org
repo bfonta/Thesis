@@ -115,6 +115,12 @@
 #+LATEX_HEADER: \newcommand{\tmip}{$\text{MIP}_{\text{T}}$}
 
 # Text
+#+LATEX_HEADER: \newcommand{\sele}{$\text{single-}e$}
+#+LATEX_HEADER: \newcommand{\stau}{$\text{single-}\tau$}
+#+LATEX_HEADER: \newcommand{\dtau}{$\text{di-}\tau$}
+#+LATEX_HEADER: \newcommand{\smu}{$\text{single-}\mu$}
+#+LATEX_HEADER: \newcommand{\celetau}{$\text{cross-}e\tau$}
+#+LATEX_HEADER: \newcommand{\cmutau}{$\text{cross-}\mu\tau$}
 #+LATEX_HEADER: \newcommand{\boostcat}{\textbf{boosted}}
 #+LATEX_HEADER: \newcommand{\bphys}{B-Physics}
 #+LATEX_HEADER: \newcommand{\eleele}{$\tau_{\mu}\tau_{\text{h}}$}

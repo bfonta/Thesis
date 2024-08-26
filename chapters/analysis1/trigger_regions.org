@@ -1,0 +1,150 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:trigger_regions
+:END:
+
+#+NAME: fig:kinTriggerRegions
+#+CAPTION: Lepton-\ac{pt} kinematic regions where different triggers of the analysis are applied, for 2018. The regions are defined based on the triggers' \ac{HLT} cuts, and the colored thick lines represent the boundaries of those regions. The three $\tau\tau$ decay channels are represented by the left, middle and right columns. Single-$e$($\mu$) and cross-$e\tau$($\mu\tau$) triggers are used for high-\ac{pt} leptons in the \eletau{} (\mutau{}) channels. The $\metnomu$ trigger covers low-\ac{pt} leptons. The \stau{} trigger covers the region where one of the leptons has high-\ac{pt}, and the other \ac{pt} lower than the single- and cross-trigger thresholds. The three regions are explicitly defined in the text. Each row refers to different samples, the top two representing signal radion with masses of \num{700} and \SI{1000}{\GeV}, while the bottom row shows the distribution of the two most important components of MC-derived background: \ac{DY} and $\ttbar$.
+#+BEGIN_figure
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/draw_trigger_Radion-700-GeV_etau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/draw_trigger_Radion-700-GeV_mutau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/draw_trigger_Radion-700-GeV_tautau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/draw_trigger_Radion-1000-GeV_etau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/draw_trigger_Radion-1000-GeV_mutau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/draw_trigger_Radion-1000-GeV_tautau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/draw_trigger_TT-DY_etau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/draw_trigger_TT-DY_etau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/draw_trigger_TT-DY_etau_baseline_2018.pdf]]
+#+END_figure  
+
+In this work, for each channel, non-overlapping trigger regions are defined in order to simultaneously exploit different triggers.
+The regions do not depend on the trigger being fired, but only on kinematic properties of the events.
+The full \logicor{} is not explored for reasons discussed in [[#sec:inclusion_method]].
+The regions have a very similar structure for all years and channels, and are shown in [[fig:kinTriggerRegions]] for 2018, in a simplified illustration which considers only the \ac{pt} cuts.
+The only exception is the \eletau{} channel in 2016, since no cross trigger was available, and the legacy region only includes $\pt^e > 26\,\si{\GeV} \&\& |\eta|<2.5$.
+
+The \ac{pt} and \ac{eta} cuts which define the regions are based on the corresponding \ac{HLT} thresholds in [[ref:&tab:trigger_etau;&tab:trigger_mutau;&tab:trigger_mutau]], plus the additional threshold applied on top of \ac{pt} cuts (\SI{1}{\GeV} for electrons, \SI{2}{\GeV} for muons and \SI{5}{\GeV} for taus).
+The legacy region takes precedence over all other regions, since it is the region where the triggers more closely target the analysis topology, and thus have larger signal acceptance.
+Taking as an example the \eletau{} channel in 2018 (top left plot in [[fig:kinTriggerRegions]]), the legacy region is defined with the following \ac{pt} cuts:
+
+#+NAME: eq:region_condition
+\begin{equation*}
+\underbrace{ \pt^{e}>33\,\si{\GeV} }_{\text{single lepton trigger}} \:\: \mid\mid \:\:
+\underbrace{ \left( \pt^{e}>25\,\si{\GeV} \:\: \&\& \:\: \pt^{\tau}>35\,\si{\GeV} \right) }_{\text{cross trigger}}
+\end{equation*}
+
+\noindent The next region to be defined is the \stau{} trigger one.
+Sticking to the same example, a cut at $\pt(\tau)>190\,\si{\GeV}$ is applied, including the \SI{10}{\GeV} threshold.
+The threshold follows the recommendation of the Tau \ac{POG} within the \ac{CMS} Collaboration.
+Note that for the \tautau{} channel the \stau{} region is actually composed of two disjoint regions, one for each tau lepton.
+Finally, all events not belonging to the above two kinematic regions are associated to the \ac{MET} region, on the condition that they fire the $\metnomu$ trigger requirements.
+The complete selections are shown in [[tab:triggerRegions]], where their five-dimensional nature becomes clear.
+For \eletau{} and \mutau{}, the lepton is by definition considered lepton #1; in the \tautau{} channel the first lepton is the most isolated one.
+
+#+NAME: tab:triggerRegions
+#+CAPTION: Kinematic definition of the three trigger regions considered in this analysis, for the \eletau{} channel. The slashes deparate the thresholds applied in 2016, 2017 and 2018, in order. Notice that no \celetau{} was present for 2016. The \ac{pt} and $\metnomu$ values are in $\si{\GeV}$ units.
+\begin{table}[!h]
+  \begin{center}
+    {
+      \scriptsize
+      \begin{tabular}{lcccccc}
+        \hline \\[-.1cm]
+        Chn.  & Region & Trigs. & lepton \# 1 &    & lepton \# 2 & $\metnomu$ \\
+        \hline \\[-.05cm]
+
+        \multirow{4}{*}{\eletau{}} & \multirow{2}{*}{Legacy} & \celetau{} & $\pt > -/25/25$, $|\eta| \leq 2.1$      & \&\&       & $\pt > -/35/35 $, $|\eta| \leq 2.1$    & \multirow{2}{*}{--} \\
+                                  &                        & \sele{}    & $\pt > 26/33/33$, $|\eta| < 2.5$     & --         & --                               &                    \\[.15cm]
+                                                                                                            
+                                  & Tau                    & \stau{}    & --                                & --         & $\pt > 130/190/190$, $|\eta| \leq 2.1$ & --                 \\[.15cm]
+                                                                                                            
+                                  & MET                    & $\metnomu$ & --                                & --         & --                               & $> 150/150/150$    \\[.15cm]
+                                                                                                            
+        \hline \\[-.1cm]                                                                                     
+                                                                                                            
+        \multirow{4}{*}{\mutau{}}  & \multirow{2}{*}{Legacy}  & \cmutau{} & $\pt > 21/22/22$, $|\eta| \leq 2.1$     & \&\&       & $\pt > 25/32/32 $, $|\eta| \leq 2.1$   & \multirow{2}{*}{--} \\
+                                  &                         & \smu{}    & $\pt > 26/29/26$, $|\eta| < 2.4$     & --         & --                               &                    \\[.15cm]
+                                                                                                            
+                                  & Tau                     & \stau{}   & --                                & --         & $\pt > 130/190/190$, $|\eta| \leq 2.1$ & --                 \\[.15cm]
+                                                                                                            
+                                  & MET                     & $\metnomu$ & --                                &  --        & --                              & $> 150/150/150$    \\[.15cm]
+                                                                                                            
+        \hline \\[-.1cm]                                                                                     
+                                                                                                            
+        \multirow{3}{*}{\tautau{}} & Legacy                 & \dtau{}   & $\pt > 40/40/40$, $|\eta| \leq 2.1$     & \&\&       & $\pt > 40/40/40$, $|\eta| \leq 2.1$    & --                 \\[.15cm]
+
+                                  & Tau                     & \stau{}   & $\pt > 130/190/190$, $|\eta| \leq 2.1$  & $\mid\mid$ & $p_T > 130/190/190$, $|\eta| \leq 2.1$ & --                 \\[.15cm]
+
+                                  & MET                     & $\metnomu$ & --                                & --         & --                              & $> 150/150/150$    \\[.15cm]
+
+      \end{tabular}
+    } 
+  \end{center}
+\end{table}
+
+#+NAME: fig:compare_gains
+#+CAPTION: Comparison, for the three analysis channels, of the weighted number of signal events obtained after applying the ``standard'' ($\text{bigtau}=\text{False}$) and ``bigtau'' ($\text{bigtau}=\text{True}$) trigger regions. In all channels the standard region provides an improvement for intermediate masses. Equivalently, the legacy triggers are more efficient to signal than the \stau{} trigger. This unexpected result can be due to a \ac{pt} cut on the tau track, not present in the legacy triggers. The plots refer to the \spin{2} hypothesis, but the results for \spin{0} are very similar.
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/etau_test_compare_gains.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/mutau_test_compare_gains.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/tautau_test_compare_gains.pdf]]
+#+END_figure
+
+We additionally study whether giving precedence to the \stau{} region over the legacy region increases the analysis acceptance.
+This corresponds to events with two high \ac{pt} leptons to be assigned the \stau{} trigger region.
+We find this change to be detrimental since, as shown in [[fig:compare_gains]], the alternative method performs worse for intermediate $\mx$.
+This $\mx$ region is particularly relevant, given the \bbtt{} excess observed by \ac{ATLAS} [[cite:&atlas_hh_bbtt]].
+The results imply that the \stau{} trigger is less efficient than the legacy triggers, for the three channels.
+This is surprising for the \tautau{} channel, where the legacy trigger is a double $\tau$ trigger.
+We believe the difference is due to the additional track \ac{pt} cut at \SI{50}{\GeV} present in the \stau{} \ac{HLT} path only.
+
+#+NAME: fig:trigger_improvement
+#+CAPTION: Trigger acceptance gain for 2018 in the \eletau{} (top), \mutau{} (middle) and \tautau{} channels, with respect to the legacy triggers, in percentage, when considering the addition of the $\metnomu$ and \stau{} triggers. The analysis trigger regions are taken into account. The expected statistics improvement is significant, especially for high $\mx$ values. We show the \spin{0} hypothesis, but the result with the \spin{2} hypothesis is very similar.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/trigger_acceptance_gains_etau.pdf]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/trigger_acceptance_gains_mutau.pdf]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/trigger_acceptance_gains_tautau.pdf]]
+#+END_figure
+
+The expected signal acceptance gain from adding the $\metnomu$ and \stau{} triggers is shown in [[fig:trigger_improvement]] for the three analysis channels, after applying the analysis selection.
+Analysis weights are taken into account, also for the uncertainties displayed.
+The graphs show the impact on the \spin{0} signal, but results are observed to be comparable for \spin{2} samples.
+We also require the $\tau\text{s}$ to be matched with generated objects, identified based on their $\tau$ decays ($e$, $\mu$ or $\tau_{\text{h}}$).
+As expected, the $\tau\tau$ channel is the one mostly benefitting from the new triggers.
+The expected signal acceptance increase is very significant, especially for high masses.
+The difference between the \eletau{} and \mutau{} channels comes from the higher \ac{pt} cut of muons at \SI{15}{\GeV} (versus \SI{10}{\GeV} for electrons), which is needed due to the validity range of the respective identification and isolation \acp{SF}.
+
+We have additionally tested the =HLT_Mu50= trigger to ensure no additional gain could be obtained in the \mutau{} channel.
+This trigger, despite being seeded by the same \ac{pt} cuts as the \smu{} trigger currently being considered, does not include an isolation requirement.
+We applied the trigger for all muons with a \ac{pt} above the \SI{50}{\GeV} \ac{HLT} cut plus the offline threshold.
+We observe that the =HLT_Mu50= trigger brings no increase in signal acceptance, and we thus do not add it to the analysis trigger strategy.
+In other words, for the relatively high $p_T(\mu)$ values considered by =HLT_Mu50=, the \ac{HLT} isolation works perfectly (after removing events with an isolation larger than 0.15, as discussed in [[#sec:selection]]).
+
+* Dataset event overlap
+As said in [[#sec:samples]], each channel uses up to three \acp{PD}.
+Since an event can fire multiple triggers, and those trigger can be part of different \acp{PD}, event overlaps can exist between \acp{PD}.
+Ideally one would take into account individual event identifiers and make sure each event is only used once.
+This method is however impractical, esppecially when processing samples in parallel.
+Alternatively, as done in this work, a set of rules is agreed upon:
++ an event only firing the $\metnomu$ trigger can only be accepted if it belongs to the =MET= dataset, and vice-versa, an event from the =MET= dataset can only be accepted if it fired the $\metnomu$ trigger;
++ an event only firing the \stau{} trigger can only be accepted of it belongs to the =Tau= dataset, and vice-versa, an event from the =Tau= dataset can only be accepted if it fired the \stau{} trigger;
+  + this is ignored if the channel is \tautau{}, because there the =Tau= dataset is used both for the legacy and for the \stau{} trigger regions.
+
+\noindent The above rules ensure no event overlapping, but leads to a very small loss of events.
+For instance, the analysis will not consider a \mutau{} event in the =SingleMuon= \ac{PD} if it only fires the $\metnomu$ trigger, and if the same event is not present in the =MET= dataset.
+Similar scenarios can be envisaged with other combinations of regions and \acp{PD}.
+However, such occurrences are clearly unexpected and very rare, and we decide to ignore them for the sake of simplicity.
+

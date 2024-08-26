@@ -7,6 +7,7 @@
   
 * Motivation
 + justify bbtt channel choice and explain the different etau, mutau and tautau channels
++ introduce also mumu for validation region and met trigger SFs
 
 #+NAME: fig:tau_decay_modes
 #+CAPTION: Illustration of the six combinations of the decay modes of two tau leptons. The thick black region corresponds to the channels considered in the analysis and included in the final limits. The dashed square indicates that the \mumu{} channel is not used to extract the limits, but is considered both for defining a \ac{DY}-enriched \ac{CR} and for deriving the $\metnomu$ trigger \acp{SF}. The remaining decay channels amount to only \SI{\sim 9}{\percent} of the $\tau\tau$ branching ratio, being dominated by \ac{DY} and/or $\ttbar$, and therefore do not contribute significantly to the final sensitivity.

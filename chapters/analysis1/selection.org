@@ -2,6 +2,9 @@
 :CUSTOM_ID: sec:selection
 :END:
 
+Instead, all events lying above the minimum accepted $\pt$ ($|\eta|$) values are considered: \SI{10}{\GeV} (2.5) for electrons, \SI{15}{\GeV} (2.4) for muons and \SI{20}{\GeV} (2.3) for \tauh{}s.
+The values originate from hard limits imposed by the isolation and identification trigger SFs used in the analysis.
+
 * $\tau\tau$ pair
 * bb pair
 ** HH b-tagging network

@@ -5,6 +5,9 @@
 * Electrons
 * Muons
 * Hadronic Tau Leptons
+:PROPERTIES:
+:CUSTOM_ID: sec:hadronic_taus
+:END:
 
 #+NAME: tab:tau_decays
 #+CAPTION: $\tau$ lepton branching fractions [[cite:&PDG]].
@@ -25,7 +28,7 @@
 
 + hadronic tau decays capture the last branching fraction of HH decays in the \xhhbbtt{} analysis
 + copy from Jona
-
++ introduce \ac{HPS} algorithm
   
 * Jets
 + use Alessandro's section 2.3.3 starting from "The energy measurement of jets can..."

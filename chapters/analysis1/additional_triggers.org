@@ -1,0 +1,53 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:additional_triggers
+:END:
+
+Triggers were added that had not been present in previous iterations of the analysis.
+The aim of the additions is to extend the available phase-space, increasing signal acceptance.
+The first novelty is the usage of an unprescaled $\metnomu$ trigger.
+This variable closely follows [[eq:met]], but reconstructed muons are explicitly removed from its definition:
+
+#+NAME: eq:metnomu
+\begin{equation}
+\ptmiss = - \sum_{i}^{N_{\text{particles}}}\vec{p}_{\text{T,i}} \: + \: \sum_{j}^{N_{\text{muons}}}\vec{p}_{\text{T,j}} \, .
+\end{equation}
+
+\noindent This quantity is extremely useful when computing \ac{MET} trigger \acp{SF}, as described in [[#sec:met_trigger_sfs]].
+The \ac{MET} trigger above is used in all channels, exploiting the low lepton \ac{pt} kinematic region not covered by other triggers.
+This trigger also enables to reach high-\ac{eta} events that would otherwise not be kept by the cross-lepton triggers, since no $\eta$ cut is enforced.
+Given the additional $\pt$ thresholds one has to apply on top of the \ac{HLT} thresholds, as described in [[#sec:selection]], the $\metnomu$ trigger brings more events than one can initially think, since the actual regions not accessible by the legacy triggers becomes larger.
+We also expect the $\metnomu$ trigger to become more and more significant with increasing $\mx$.
+For low resonance masses, the two Higgs bosons are close to be back-to-back in the laboratory frame, and \ac{MET} (and $\metnomu$) will thus largely cancel.
+As $\mx$ increases, the bosons become more and more collimated, increasing \ac{MET}, which is brought mostly by the neutrinos of the $\tau$ decays.
+The same reason indicates that the \tautau{} channel should be the one benefitting the most from the added $\metnomu$ trigger, also taking into account the \ac{pt} hard thresholds of the $\text{di-}\tau$ trigger, when compared to the legacy triggers in the other decay channels.
+Finally, given some \ac{SF}-related constraints discussed in [[#sec:met_trigger_sfs]], we have also removed events with $\metnomu$ lower than \SI{150}{\GeV} from all data-taking periods.
+
+A single-$\tau$ trigger is additionally added in all channels, for events with exactly one high-\ac{pt} \tauh{}.
+When both leptons have a high \ac{pt}, the legacy triggers are used, since they have a larger efficiency, as discussed in [[#sec:trigger_regions]] and shown in [[fig:compare_gains]].
+We note that the $\metnomu$ trigger also adds acceptance for high-\ac{pt} \tauh{}s, given the single-$\tau$ trigger \ac{eta} cut at 2.1.
+
+The most significant selections included in the additional $\metnomu$ and \stau{} triggers are listed separately in [[tab:trigger_met_stau]].
+Whenever data and MC trigger efficiencies exhibit differences, \acp{SF} are applied to the MC trigger efficiencies.
+This is described in [[#sec:mc_corrections]].
+
+#+NAME: tab:trigger_met_stau
+#+CAPTION: Trigger paths used in the \mumu{} channel for the three years of data-taking and the corresponding integrated luminosity recorded with each. Within each year, the logical =OR= of all the paths is always intended. The paths requiring one \tauh{} have changed during the 2018 data-taking after the implementation of the \ac{HPS} algorithm. The Isolation (Iso) criteria reported in the table are explained in the text.
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{llc}
+    \hline \\[-1em]
+    Year                  & Trigger requirement                                                                                     & Lumi [$\si{\invfb}$] \\ [+0.3em]\hline \\[-1em]
+    \multirow{3}{*}{2016} & $\metnomu>120\,\si{\GeV}$, $\mhtnomu>120\,\si{\GeV}$                                                    & 35.9 \\
+                          & One \tauh{}, $\pt>120\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, VLoose Iso          & 29.1 \\
+                          & One \tauh{}, $\pt>140\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, VLoose Iso          & 33.3 \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{3}{*}{2017} & $\metnomu>120\,\si{\GeV}$, $\mhtnomu>120\,\si{\GeV}$                                                    & 40.6 \\
+                          & $\metnomu>120\,\si{\GeV}$, $\mhtnomu>120\,\si{\GeV}$, $\htvar>120\,\si{\GeV}$                           & 36.7 \\
+                          & One \tauh{}, $\pt>180\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, Medium Iso          & 41.5 \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{2}{*}{2018} & $\metnomu>120\,\si{\GeV}$, $\mhtnomu>120\,\si{\GeV}$                                                    & 59.8 \\
+                          & One \tauh{}, $\pt>180\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, Medium Iso          & 59.8 \\
+                          & One \tauh{}, $\pt>180\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, 1 prong, Medium Iso & 59.8 \\ [+0.3em]\hline \\[-1em]
+\end{tabular}
+\end{table}

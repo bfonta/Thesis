@@ -8,6 +8,10 @@
 * Legacy trigger scale factors
 * Single tau trigger scale factors
 * MET trigger scale factors
+:PROPERTIES:
+:CUSTOM_ID: sec:met_trigger_sfs
+:END:
+
 ** MET trigger inefficiency in 2017
 We can see that in 2017 the trigger does not becomes fully efficient for high $\metnomu$ values.
 This is because the ~HLT_PFMETNoMu120_PFMHTNoMu120_IDTight~ trigger was not active in the last runs of 2017.

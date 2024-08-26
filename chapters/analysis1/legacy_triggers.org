@@ -1,3 +1,105 @@
 :PROPERTIES:
 :CUSTOM_ID: sec:legacy_triggers
 :END:
+
+#+NAME: fig:cross_trigger_ex
+#+CAPTION: Illustration of the benefits brought by a cross trigger, in the ($\pt(\ell)$, $\pt(\tau_{\text{h}})$) phase-space, with $\ell$ representing an electron or muon. The dashed lines and arrows indicate the regions covered by the respective triggers. In transparent blue we show the region covered by the single lepton trigger, while in transparent red we highlight the region added by the cross trigger, increasing the analysis event acceptance. The extra tau leg requirement enables to decrease the lepton leg threshold relative to the single trigger. Triggers also depend on other variables, making the real multi-dimensional picture more complex.
+#+BEGIN_figure
+#+ATTR_LATEX: :width .9\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/cross_trigger.pdf]]
+#+END_figure
+
+Cross trigger paths are then added to the \eletau{} and \mutau{} channels, following what was done in the nonresonant \bbtt{} analysis of Ref. [[cite:&higgs_bbtautau_nonres]].
+By "cross" we refer to triggers which apply a \logicand{} on two different object types: electron and tau for \eletau{}, muon and tau for \mutau{}.
+These new triggers enlarge the analysis' phase-space, as shown in [[fig:cross_trigger_ex]], increasing its event acceptance.
+The \ac{pt} thresholds on the leptonically-decaying $\tau\text{s}$ can indeed be lowered.
+We call /legacy triggers/ the set of triggers that had already been used in previous analysis iterations, and list them for the three analysis channels in [[ref:&tab:trigger_etau;&tab:trigger_mutau;&tab:trigger_tautau]].
+The region covered by those triggers is appropriately called the /legacy region/.
+
+Additionally, the \mumu{} channel, despite not being exploited for the final results in [[#sec:final_limits]], is nevertheless used for defining a \ac{CR} and for extracting \ac{MET} trigger \acp{SF} as explained in [[#sec:met_trigger_sfs]].
+The \mumu{} triggers are thus also relevant, and are shown in [[tab:trigger_mumu]].
+
+#+NAME: tab:trigger_etau
+#+CAPTION: Trigger paths used in the \eletau{} channel for the three years of data-taking and the corresponding integrated luminosity recorded with each. Within each year, the logical =OR= of all the paths is always intended. The paths requiring one \tauh{} have changed during the 2018 data-taking after the implementation of the \ac{HPS} algorithm (see [[#sec:hadronic_taus]]). The Isolation (Iso) criteria reported in the table are explained in the text.
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{llc}
+    \hline \\[-1em]
+    Year                  & Trigger requirement                                                         & Lumi [$\si{\invfb}$] \\ [+0.3em]\hline \\[-1em]
+    \multirow{1}{*}{2016} & One electron, $\pt>25\,\si{\GeV}$, $|\eta|<2.1$, Tight Iso                     & 35.9 \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{4}{*}{2017} & One electron, $\pt>32\,\si{\GeV}$, Tight Iso, L1 Double-e/$\gamma$               & 41.5 \\
+                          & One electron, $\pt>35\,\si{\GeV}$, Tight Iso                                & 41.5 \\
+                          & One electron, $\pt>24\,\si{\GeV}$, $|\eta|<2.1$, Tight Iso                     & \multirow{2}{*}{41.5}\\
+                          & \hspace{3mm}+ One \tauh{}, $\pt>30\si{\GeV}$, $|\eta|<2.1$, Loose PF Iso       & \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{4}{*}{2018} & One electron, $\pt>32\,\si{\GeV}$, Tight Iso                                & 59.8\\
+                          & One electron, $\pt>35\,\si{\GeV}$, Tight Iso                                & 59.8\\
+                          & One electron, $\pt>24\,\si{\GeV}$, $|\eta|<2.1$, Calo. Iso                     & \multirow{2}{*}{42.1}\\
+                          & \hspace{3mm}+ One \ac{HPS} \tauh{}, $\pt>30\,\si{\GeV}$, $|\eta|<2.1$, Loose PF Iso & \\ [+0.3em]\hline \\[-1em]
+\end{tabular}
+\end{table}
+
+#+NAME: tab:trigger_mutau
+#+CAPTION: Trigger paths used in the \mutau{} channel for the three years of data-taking and the corresponding integrated luminosity recorded with each. Within each year, the logical =OR= of all the paths is always intended. The paths requiring one \tauh{} have changed during the 2018 data-taking after the implementation of the \ac{HPS} algorithm (see [[#sec:hadronic_taus]]). The Isolation (Iso) criteria reported in the table are explained in the text.
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{llc}
+    \hline \\[-1em]
+    Year                  & Trigger requirement                                                         & Lumi [$\si{\invfb}$] \\ [+0.3em]\hline \\[-1em]
+    \multirow{4}{*}{2016} & One muon, $\pt>24\,\si{\GeV}$, Tracker Iso                                  & 35.9 \\
+                          & One muon, $\pt>24\,\si{\GeV}$, Calo Iso                                     & 35.9 \\
+                          & One muon, $\pt>24\,\si{\GeV}$, Calo Iso                                     & \multirow{2}{*}{35.9}\\
+                          & \hspace{3mm}+ One \tauh{}, $\pt>20\si{\GeV}$, Loose PF Iso                  &  \\ [+0.3em]\hline \\[-1em] 
+
+    \multirow{3}{*}{2017} & One muon, $\pt>27\,\si{\GeV}$, Calo. Iso                                    & 41.5 \\
+
+                          & One muon, $\pt>20\,\si{\GeV}$, $|\eta|<2.1$, Calo. Iso                         & \multirow{2}{*}{41.5}\\
+                          & \hspace{3mm}+ One \tauh{}, $\pt>27\si{\GeV}$, $|\eta|<2.1$, Loose PF Iso       & \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{4}{*}{2018} & One muon, $\pt>24\,\si{\GeV}$, Calo. Iso                                    & 59.8\\
+                          & One muon, $\pt>27\,\si{\GeV}$, Calo. Iso                                    & 59.8\\[3pt]
+                          & One muon, $\pt>20\,\si{\GeV}$, $|\eta|<2.1$, Calo. Iso                         & \multirow{2}{*}{59.8}\\[3pt]
+                          & \hspace{3mm}+ One \tauh{}, $\pt>27\,\si{\GeV}$, $|\eta|<2.1$, Loose PF Iso     & \\ [+0.3em]\hline \\[-1em]
+\end{tabular}
+\end{table}
+
+#+NAME: tab:trigger_tautau
+#+CAPTION: Trigger paths used in the \tautau{} channel for the three years of data-taking and the corresponding integrated luminosity recorded with each. Within each year, the logical =OR= of all the paths is always intended. The paths requiring one \tauh{} have changed during the 2018 data-taking after the implementation of the \ac{HPS} algorithm (see [[#sec:hadronic_taus]]). The Isolation (Iso) criteria reported in the table are explained in the text.
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{llc}
+    \hline \\[-1em]
+    Year                  & Trigger requirement                                                         & Lumi [$\si{\invfb}$] \\ [+0.3em]\hline \\[-1em]
+    \multirow{2}{*}{2016} & Two \tauh{}, $\pt>35\,\si{\GeV}$, $|\eta|<2.1$, Medium Iso                     & 27.2 \\
+                          & Two \tauh{}, $\pt>35\,\si{\GeV}$, $|\eta|<2.1$, Medium Comb. Iso               & 8.7 \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{3}{*}{2017} & Two \tauh{}, $\pt>35\,\si{\GeV}$, $|\eta|<2.1$, Tight Iso                      & 41.5 \\
+                          & Two \tauh{}, $\pt>40\,\si{\GeV}$, $|\eta|<2.1$, Medium Iso                     & 41.5 \\
+                          & Two \tauh{}, $\pt>40\,\si{\GeV}$, $|\eta|<2.1$, Tight Iso                      & 41.5 \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{1}{*}{2018} & Two \tauh{}, $\pt>35\,\si{\GeV}$, $|\eta|<2.1$, Medium Iso                     & 59.8 \\ [+0.3em]\hline \\[-1em]
+
+\end{tabular}
+\end{table}
+
+#+NAME: tab:trigger_mumu
+#+CAPTION: Trigger paths used in the \mumu{} channel for the three years of data-taking and the corresponding integrated luminosity recorded with each. Within each year, the logical =OR= of all the paths is always intended. The paths requiring one \tauh{} have changed during the 2018 data-taking after the implementation of the \ac{HPS} algorithm (see [[#sec:hadronic_taus]]). The Isolation (Iso) criteria reported in the table are explained in the text.
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{llc}
+    \hline \\[-1em]
+    Year                  & Trigger requirement                                                         & Lumi [$\si{\invfb}$] \\ [+0.3em]\hline \\[-1em]
+    \multirow{2}{*}{2016} & One muon, $\pt>24\,\si{\GeV}$, Tracker Iso                                  & 35.9 \\
+                          & One muon, $\pt>24\,\si{\GeV}$, Calo Iso                                     & 35.9 \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{1}{*}{2017} & One muon, $\pt>27\,\si{\GeV}$, Calo. Iso                                    & 41.5 \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{2}{*}{2018} & One muon, $\pt>24\,\si{\GeV}$, Calo. Iso                                    & 59.8 \\
+                          & One muon, $\pt>27\,\si{\GeV}$, Calo. Iso                                    & 59.8 \\ [+0.3em]\hline \\[-1em]
+\end{tabular}
+\end{table}

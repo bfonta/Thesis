@@ -100,8 +100,11 @@
 *** Legacy triggers
 #+INCLUDE: "chapters/analysis1/legacy_triggers.org"
 *** Additional triggers
+#+INCLUDE: "chapters/analysis1/additional_triggers.org"
 *** Analysis trigger regions
+#+INCLUDE: "chapters/analysis1/trigger_regions.org"
 *** Note on the inclusion method
+#+INCLUDE: "chapters/analysis1/inclusion_method.org"
 ** Physics objects
 #+INCLUDE: "chapters/analysis1/physics_objects.org"
 ** Selection
