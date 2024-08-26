@@ -10,37 +10,37 @@
 #+LATEX: \fontsize{12pt}{13pt}\selectfont
 
 * Introduction to Higgs boson pair production
-#+INCLUDE: "chapters/intro/sm_intro.org"
+#+INCLUDE: "chapters/intro/0_sm_intro.org"
 ** The Standard Model of Particle Physics
 *** The building blocks of the SM
-#+INCLUDE: "chapters/intro/sm_structure.org"
+#+INCLUDE: "chapters/intro/1p1_sm_structure.org"
 *** From symmetries to interactions
-#+INCLUDE: "chapters/intro/sm_symmetries.org"
+#+INCLUDE: "chapters/intro/1p2_sm_symmetries.org"
 *** The Higgs Mechanism
-#+INCLUDE: "chapters/intro/higgs_mechanism.org"
+#+INCLUDE: "chapters/intro/1p3_higgs_mechanism.org"
 *** Phenomenology and experimental status of Higgs boson physics
-#+INCLUDE: "chapters/intro/higgs_exp_status.org"
+#+INCLUDE: "chapters/intro/1p4_higgs_exp_status.org"
 ** Higgs boson pair phenomenology in the SM
-#+INCLUDE: "chapters/intro/dihiggs.org"
+#+INCLUDE: "chapters/intro/2_dihiggs.org"
 *** Production modes
-#+INCLUDE: "chapters/intro/production_modes.org"
+#+INCLUDE: "chapters/intro/2p1_production_modes.org"
 *** Final states
-#+INCLUDE: "chapters/intro/final_states.org"
+#+INCLUDE: "chapters/intro/2p2_final_states.org"
 ** Going beyond the SM
 *** SM shortcomings
-#+INCLUDE: "chapters/intro/short_comings.org"
+#+INCLUDE: "chapters/intro/3p1_short_comings.org"
 *** Non-resonant BSM HH Production
-#+INCLUDE: "chapters/intro/nonres_BSM_hh.org"
+#+INCLUDE: "chapters/intro/3p2_nonres_BSM_hh.org"
 *** Resonant BSM HH Production
-#+INCLUDE: "chapters/intro/res_BSM_hh.org"
+#+INCLUDE: "chapters/intro/3p3_res_BSM_hh.org"
 ** Experimental status of HH Physics
-#+INCLUDE: "chapters/intro/hh_exp_status.org"
+#+INCLUDE: "chapters/intro/4_hh_exp_status.org"
 *** Direct searches
-#+INCLUDE: "chapters/intro/direct_searches.org"
+#+INCLUDE: "chapters/intro/4p1_direct_searches.org"
 *** Indirect searches
-#+INCLUDE: "chapters/intro/indirect_searches.org"
+#+INCLUDE: "chapters/intro/4p2_indirect_searches.org"
 *** Combining direct with indirect searches
-#+INCLUDE: "chapters/intro/combinations.org"
+#+INCLUDE: "chapters/intro/4p3_combinations.org"
 
 
 * The CMS Detector at the LHC
