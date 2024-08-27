@@ -78,7 +78,7 @@ For \eletau{} and \mutau{}, the lepton is by definition considered lepton #1; in
                                                                                                             
         \hline \\[-.1cm]                                                                                     
                                                                                                             
-        \multirow{3}{*}{\tautau{}} & Legacy                 & \dtau{}   & $\pt > 40/40/40$, $|\eta| \leq 2.1$     & \&\&       & $\pt > 40/40/40$, $|\eta| \leq 2.1$    & --                 \\[.15cm]
+        \multirow{3}{*}{\tautau{}} & Legacy                 & \ditau{}   & $\pt > 40/40/40$, $|\eta| \leq 2.1$     & \&\&       & $\pt > 40/40/40$, $|\eta| \leq 2.1$    & --                 \\[.15cm]
 
                                   & Tau                     & \stau{}   & $\pt > 130/190/190$, $|\eta| \leq 2.1$  & $\mid\mid$ & $p_T > 130/190/190$, $|\eta| \leq 2.1$ & --                 \\[.15cm]
 

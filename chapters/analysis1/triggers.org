@@ -3,7 +3,7 @@
 :END:
 
 The offline data events are recorded with a set of \ac{L1}+\ac{HLT} triggers directly related to the analysis decay channels.
-The goal is to minimise the number of \hhbtt{} events lost, extending the analysis acceptance.
+The goal is to minimise the number of \hhbbtt{} events lost, extending the analysis acceptance.
 This is why modern analyses often consider a large set of different \ac{HLT} trigger paths, since every bit of acceptance increase matters, especially for processes as rare as double Higgs production.
 This idea remains true for the present /resonant/ search, given that more events tends to equate to more stringent exclusion limits.
 However, it is also true that one should expect diminishing returns for each additional trigger considered.

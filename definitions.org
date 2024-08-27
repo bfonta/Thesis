@@ -118,7 +118,7 @@
 #+LATEX_HEADER: \newcommand{\taus}{$\tau\text{s}$}
 #+LATEX_HEADER: \newcommand{\sele}{$\text{single-}e$}
 #+LATEX_HEADER: \newcommand{\stau}{$\text{single-}\tau$}
-#+LATEX_HEADER: \newcommand{\dtau}{$\text{di-}\tau$}
+#+LATEX_HEADER: \newcommand{\ditau}{$\text{di-}\tau$}
 #+LATEX_HEADER: \newcommand{\smu}{$\text{single-}\mu$}
 #+LATEX_HEADER: \newcommand{\celetau}{$\text{cross-}e\tau$}
 #+LATEX_HEADER: \newcommand{\cmutau}{$\text{cross-}\mu\tau$}

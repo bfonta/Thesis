@@ -2,48 +2,29 @@
 :CUSTOM_ID: sec:selection
 :END:
 
-In this section we cover the various selections performed on the events selected by the analysis triggers.
-The general idea is to maximize the event acceptance to the \xhhbbttt{} signal while reducing background events.
-This is achieved by targeting the topologies of interest, focusing first on single physics objects, such as b-jets and tau lepton final state products, and later on pairs of such quantities, reconstructing the decays of the two Higgs bosons.
+In this section we cover the various selection stages performed on the events collected by the analysis triggers.
 Given the rarity of HH processes, it is imperative to measure as many \hhbbtt{} events as possible.
-The following step consists instead on /discriminating/ between interesting signal events and the unavoidable associated background.
-In a section later on
+The selection is achieved by targeting the topologies of interest, focusing first on single physics objects, such as b-jets and tau lepton decay products in the \bbtt{} case, and later on pairs of such quantities, reconstructing the decays of the two Higgs bosons.
+Next, a set of /categories/ is defined, \ie{} independent event subsets with defining properties.
+The categories are created in order to boost the sensitivity of a dedicated /discriminant/, which is not required to look at the full dataset.
+The discrimination step, covered in [[#sec:analysis2_intro]], consists on distinguishing interesting signal events from the unavoidable associated background.
+Recent improvements in discrimination algorithms can in most cases perform a selection significantly better than what even a very good physical intuition achieves.
+Therefore, the general idea for an initial selection is to prioritize the maximization of the event acceptance to the \xhhbbtt{} signal.
+The full analysis flow is illustrated in XXXXXXX.
+In the following we detail the selections on leptons and b-jets in [[ref:&sec:tau_pair_sel;&sec:b_pair_sel]], and proceed with the description of the categorization in [[#sec:categorization]], which separates events into two resolved and one boosted category, relative to the boost of the b-jets.
+Following the selection of particle candidates, a loose rectangular cut is applied on the invariant mass of the $\tau\tau$ and $bb$ pairs, as described in [[#sec:mass_cut]]
+Finally, binned distributions of the event distributions are used to train the dedicated \ac{NN} discriminants.
 
-The first one aims at
-reconstructing the decay products of the H with the highest possible acceptance for all final
-signatures by applying a series of general preselection criteria. The second part is designed to
-maximize the sensitivity to different signal topologies by applying dedicated selections and event
-categorizations. The final stage aims to further increase sensitivity by applying a dedicated
-discriminator based on a neural network to reject the residual background contamination.
-
-
-
-
-As a first step, lepton candidates are selected and used to reconstruct $\tau\tau$ pairs from the decay of one of the Higgs bosons in the event.
-%
-The final state of the $\tau\tau$ system is assessed according to the typology of the $\tau$ decay, as detailed in Section~\ref{sec:tautaucandidate}.
-%
-Subsequently, pairs of b-jet candidates are identified and selected from the decay of the second Higgs boson.
-%
-This enables the subdivision of events into three orthogonal categories: res1b, res2b and boosted. This categorisation is described in Section~\ref{sec:bbcandidate}.
-%
-Following the selection of particle candidates, a loose rectangular cut is applied on the invariant mass of the $\tau\tau$ and $bb$ pairs in the res1b and res2b categories.
-%
-In the boosted category, the cut is applied only on the invariant mass of the $\tau\tau$ pairs.
-%
-These cuts remove the tails of the mass spectrum, and outliers in these regimes, easing the task of discriminators further down in the analysis chain.
-%
-It also allow to define control regions with low signal contamination, useful to assess the proper modelling of some of the main analysis' backgrounds.
-%
-Finally, binned distributions of the events are used to train dedicated parameterised depp neural networks in order to discriminate signal from background events, as discussed in Sections~\ref{sec:tautauregression} and~\ref{sec:sigExtraction} .
-
-
+* Tau lepton pair
+:PROPERTIES:
+:CUSTOM_ID: sec:tau_pair_sel
+:END:
 Instead, all events lying above the minimum accepted $\pt$ ($|\eta|$) values are considered: \SI{10}{\GeV} (2.5) for electrons, \SI{15}{\GeV} (2.4) for muons and \SI{20}{\GeV} (2.3) for \tauh{}s.
 The values originate from hard limits imposed by the isolation and identification trigger SFs used in the analysis.
 
-* Tau lepton pair
 
-This step of the analysis is aimed at identifying the visible decay products of one of the 125\GeV Higgs boson decaying into a $\tau$ pair.
+
+This step of the analysis is aimed at identifying the visible decay products of one of the \SI{125}{\GeV} Higgs boson decaying into a $\tau$ pair.
 % 
 As already done in~\cite{CMS-PAS-HIG-17-002,CMS-PAS-HIG-16-028,CMS-PAS-HIG-16-029,CMS-HIG-20-010} the $\tau\tau$ decay mode is assessed using offline information only.
 % 
@@ -264,7 +245,12 @@ Events are rejected if, besides the two signal leptons ($e$, $\mu$ or \tauh), th
   % 
 \end{itemize}
 
+
 * B quark pair
+:PROPERTIES:
+:CUSTOM_ID: sec:b_pair_sel
+:END:
+
 This step of the analysis is aimed at selecting jets from the decay of the second 125\GeV Higgs boson in a $b\bar{b}$ pair.
 %
 For events to be selected, one of the following must occur:
@@ -428,6 +414,18 @@ The network aims at discriminating $X\rightarrow HH\rightarrow bb\tau\tau$ signa
 }
 \end{figure}
 
+* Categorization
+:PROPERTIES:
+:CUSTOM_ID: sec:categorization
+:END:
+
+These cuts remove the tails of the mass spectrum, and outliers in these regimes, easing the task of discriminators further down in the analysis chain.
+It also allow to define control regions with low signal contamination, useful to assess the proper modelling of some of the main analysis' backgrounds.
+
+* Invariant mass cut
+:PROPERTIES:
+:CUSTOM_ID: sec:mass_cut
+:END:
 
 * Resolved jets
 
