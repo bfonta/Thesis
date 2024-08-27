@@ -115,6 +115,7 @@
 #+LATEX_HEADER: \newcommand{\tmip}{$\text{MIP}_{\text{T}}$}
 
 # Text
+#+LATEX_HEADER: \newcommand{\taus}{$\tau\text{s}$}
 #+LATEX_HEADER: \newcommand{\sele}{$\text{single-}e$}
 #+LATEX_HEADER: \newcommand{\stau}{$\text{single-}\tau$}
 #+LATEX_HEADER: \newcommand{\dtau}{$\text{di-}\tau$}
@@ -131,7 +132,8 @@
 #+LATEX_HEADER: \newcommand{\logicand}[1]{\texttt{logical~AND}}
 #+LATEX_HEADER: \newcommand{\logicor}[1]{\texttt{logical~OR}}
 #+LATEX_HEADER: \newcommand{\longshut}[1]{Long Shutdown~#1}
-#+LATEX_HEADER: \newcommand{\mumu}{$\tau_{\mu}\tau_{\text{h}}$}
+#+LATEX_HEADER: \newcommand{\mumu}{$\tau_{\mu}\tau_{\mu}$}
+#+LATEX_HEADER: \newcommand{\hhbtag}{\texttt{HH-bTag}}
 #+LATEX_HEADER: \newcommand{\mutau}{$\tau_{\mu}\tau_{\text{h}}$}
 #+LATEX_HEADER: \newcommand{\phase}[1]{Phase~#1}
 #+LATEX_HEADER: \newcommand{\rescat}[1]{\textbf{res#1b}}

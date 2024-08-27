@@ -9,6 +9,14 @@
 :CUSTOM_ID: sec:hadronic_taus
 :END:
 
+The tau lepton, despite theoretically similar to the two other leptons, has fundamentally different properties.
+For one, and contrary to the electron, which is stable, and to the muon, which can travel large distances before decaying, the very short $(290.3\pm0.5)\times10^{-15}\,\si{\second}$ tau lifetime [[cite:&PDG]] implies that it cannot currently be observed directly, as a $\tau$ lepton will travel on average just a few millimiters before decaying.
+Secondly, its mass makes it the only hadronically-decaying lepton.
+In fact, it does so approximately 2/3 of the time, while the remaining decays proceed leptonically, to electrons or muons.
+The decay modes of the $\tau$ are listed in [[tab:tau_decays]], and can be categorized in terms of the number of charged particles, or /prongs/, the final state includes.
+Due to charge conservation, \taus{} can only decay to an odd number of prongs, and usually decays with five or more prongs are neglected due to their extremely low \acp{BR}.
+The decay itself can happen via a meson resonance, or directly to the hadrons, which consist of pions on \SI{\sim 98}{\percent} of occurrences, with the rest being kaons [[cite:&PDG]].
+
 #+NAME: tab:tau_decays
 #+CAPTION: $\tau$ lepton branching fractions [[cite:&PDG]].
 #+ATTR_LATEX: :placement [!h] :center t :align l|c|c
@@ -26,11 +34,41 @@
 | other hadronic decays                              |                             |               3.2 |
 | *all hadronic decays*                                |                             |              64.8 |
 
-+ hadronic tau decays capture the last branching fraction of HH decays in the \xhhbbtt{} analysis
-+ copy from Jona
-+ introduce \ac{HPS} algorithm
-  
+In general, the hadronic decays can be differentiated from quark or gluon jets by the isolation of the decay products, their collimation and their multiplicity [[cite:&particle_flow]].
+Tau leptons can also be mimicked as electrons and muons by decays with one charged track, and by decays with one prong plus a few photons, which can interpreted as ann electron with its bremstrahlung radiation.
+The individual particles reconstructed by \ac{PF} are fed into the \ac{CMS}-specific \ac{HPS} algorithm [[cite:&HPS1;&HPS2;&HPS3]], which is responsible for hadronic $\tau$ reconstruction.
+The task is rather complex, since a plethora of decay particles exist.
+Neutral hadrons, on one hand, decay to photons ($\pi^{0}\rightarrow\gamma\gamma$) which quickly convert to electron-positron pairs in the material of the tracker.
+Charged hadrons, instead, amount to kaons and pions, and can be produced with different multiplicities.
+The algorithm starts by reconstructing neutral hadrons, which amounts to collect energy deposits in /strips/, \ie{} regions along (\ac{eta}, \ac{phi}) which are created by the magnetic bending of electrons and positrons.
+The momenta of the strips amounts to the vectorial sum of all its components.
+Next, charged hadrons satisfying $\pt>0.5\,\si{\GeV}$ and coming from the \ac{PV} are reconstructed.
+They can fit into multiple topologies, as shown in [[tab:tau_decays]], and when appropriate, they are required to be compatible with the $\rho$ or $a_{1}$ resonances.
+Candidates with particles outside the so-called /signal cone/ are also rejected, where the cone is defined as $3\,\si{\GeV}/\pt(\tau_{\text{h}})$, capturing the dependence with the system's boost.
+The cone size is bounded between 0.1 at low \ac{pt} and 0.05 at high \ac{pt}.
+Finally, in case multiple \tauh{} candidates satisfy the requirements, only the one with the highest \ac{pt} is kept, such that only one candidate is defined per jet.
+
+The perfomances of \ac{HPS} during \run{2} are very dependent on the process and on the kinematics, and are presented in detail in Ref. [[cite:&HPS1]].
+One is generally concerned with the misidentification probabilities of jets, electrons and muons, and with the identification efficiencies of hadronically-decaying \taus{}.
+In a nutshell, the misidentification probabilities for leptons are extremely small, often at subpercent level given appropriate \ac{WP} choices.
+Jet misidentification tends to be a bit higher, but still usually below 1%, and never above 2%.
+Concerning efficiencies, they are \ac{WP}-dependent too, lying always above 90% for \ac{DY} events and 86% for $\ttbar{}$ events.
+Finally, the \ac{HPS} algorithm can recover events with two prongs, where one extra track was "lost".
+This happens for 19% of the 3-prong decays and for 13% of the 3-prong+$\pi^{0}$ decays.
+
+In the context of the \xhhbbtt{} analysis, hadronic $\tau$ decays are the most important $\tau$ decays, given the large \ac{BR}.
+This is also the case for many other analyses.
+The reconstruction of haadronically-decaying \taus{} is thus complemented by dedicated \ac{DNN} algorithms.
+In \run{2}, =DeepTau= has demonstrated good performances, is used in our analysis, and is summarized in what follows.
+@introduce deep tau@
+We finalize by noting that 2-prong recovered events are not considered in the analysis, since for most analyses the background increase brought by the extra events outweighs the increase in efficiency.
+We thus follow the general \ac{CMS} recommendations, and consider only 1-prong and 3-prong events, with or without an additional neutral pion.
+
+
 * Jets
+:PROPERTIES:
+:CUSTOM_ID: sec:jets
+:END:
 + use Alessandro's section 2.3.3 starting from "The energy measurement of jets can..."
   
 ** b-jets

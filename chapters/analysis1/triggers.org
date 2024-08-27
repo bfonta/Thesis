@@ -2,8 +2,14 @@
 :CUSTOM_ID: sec:triggers
 :END:
 
-The offline data events are recored with a set of \ac{L1}+\ac{HLT} triggers directly related to the analysis decay channels.
-Whenever multiple triggers are used for the same channel, a \logicor{} is applied to all trigger paths.
-The trigger strategy employed in this work extends the one used in the previous \ac{CMS} resonant \bbtt{} result using only 2016 data [[cite:&higgs_bbtautau_hy]].
-There, each channel was associated with a specific trigger type: \eletau{} (\mutau{}) was selected with a trigger requiring on electron (muon), and \tautau{} used a trigger requiring two tau leptons.
+The offline data events are recorded with a set of \ac{L1}+\ac{HLT} triggers directly related to the analysis decay channels.
+The goal is to minimise the number of \hhbtt{} events lost, extending the analysis acceptance.
+This is why modern analyses often consider a large set of different \ac{HLT} trigger paths, since every bit of acceptance increase matters, especially for processes as rare as double Higgs production.
+This idea remains true for the present /resonant/ search, given that more events tends to equate to more stringent exclusion limits.
+However, it is also true that one should expect diminishing returns for each additional trigger considered.
+Taking also into account the complexities associated to data processing and trigger corrections, a balance must be found in which and how many triggers to consider.
+
+The trigger strategy employed in this work extends the strategy used in the previous \ac{CMS} resonant \bbtt{} result [[cite:&higgs_bbtautau_hy]], which used 2016 data only.
+In that analysis, each channel was associated with a specific trigger type: \eletau{} (\mutau{}) was selected with a trigger requiring one electron (muon), and \tautau{} used a trigger requiring two tau leptons.
+In the following, we detail the new triggers used in the resonant \hhbbtt{} analysis for the first time, and explain in which phase-space regions they are applied.
 

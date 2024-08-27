@@ -2,6 +2,10 @@
 :CUSTOM_ID: sec:inclusion_method
 :END:
 
+In this section we provide a brief overview of a general method for estimating \acp{SF} of the \logicor{} of any number of triggers.
+The implementation and testing of the method represented a significant part of my PhD, but ended up not being fully exploited by reasons detailed below.
+We nevertheless describe the underlying idea, hoping it can serve as basis for future work.
+
 The probability that at least one out of $N_{\text{items}}$ trigger items $i$ accepts an event $j$ with trigger item bit $x$ is given by [[cite:&inclusion_method]]:
 
 #+NAME: eq:prob_or
@@ -10,10 +14,10 @@ The probability that at least one out of $N_{\text{items}}$ trigger items $i$ ac
 \end{equation}
 
 \noindent where $\epsilon$ refers to the trigger efficiency (depending on variables $q$), defined as the number of events passing trigger item $i$ and some reference trigger, divided by the number of events passing the same reference trigger.
-In [[eq:prob_or]], we use the fact that the triggers we consider are not prescaled and different data runs have the same conditions.
+In [[eq:prob_or]] we use the fact that the triggers we consider are not prescaled and different data runs have the same conditions.
 Correlations might exist between triggers, so we rewrite $x_{1j}\epsilon_{1j}x_{2j}\epsilon_{2j} \rightarrow x_{1j}\epsilon_{1j}x_{2j}\epsilon_{2|1j}$ 
 (note the commutativity $\epsilon_{1j}\epsilon_{2|1j} = \epsilon_{2j}\epsilon_{1|2j}$), where $\epsilon_{i}(q_{j}) \equiv \epsilon_{ij}$ simplifies the notation.
-Using Bayes' theorem we express the efficiency product as an \textit{intersection efficiency} $\epsilon_{1\cap2j}$, representing the fraction of events passing triggers 1 and 2, plus some reference trigger, relative to all events that pass the same reference trigger.
+Using Bayes' theorem, we express the efficiency product as an \textit{intersection efficiency} $\epsilon_{1\cap2j}$, representing the fraction of events passing triggers 1 and 2, plus some reference trigger, relative to all events that pass the same reference trigger.
 The probability becomes:
 
 #+NAME: eq:example3
@@ -23,7 +27,7 @@ The probability becomes:
         &+ x_{1j}x_{2j}x_{3j}\epsilon_{1\cap2\cap3j} + \cdots
 \end{align}
 
-\noindent For each intersection, we must define variable(s) $q$.
+\noindent For each intersection, we must define the variables $q$.
 We should consider the ones used in the definition of trigger items, since correlations are large.
 Finally, we can correct our MC distributions event-by-event, using the \acp{SF}:
 
@@ -39,7 +43,7 @@ We nevertheless note that the terms of \cref{eq:prob_or} with more triggers will
 Importantly, orthogonal reference triggers have to be found for each intersection, where the latter should have enough statistics.
 Finally, the method represents a new approach, thus requiring extensive testing.
 
-However, it also brings important advantages.
+The method also brings important advantages.
 Contrary to common division-like methods, all data are used.
 It may become very advantageous when significant overlap exists between triggers. 
 Indeed, most analysis do not consider the \logicor{} between triggers due to the increased complexity.
@@ -49,10 +53,16 @@ For simplicity, we used the muon \ac{pt} as $q$ across all intersections.
 We consider the \logicor{} between the \stau{} and \mutau{} triggers, and apply the standard analysis selection.
 We observe that the \acp{SF} calculated via [[eq:prob_or]] provide better Data/MC agreement in the analysis phase-space than the \acp{SF} provided centrally by \ac{CMS}.
 The improvement is observed only for the variable being used, namely the lepton \ac{pt}.
-This encouraging result can be explained since our custom \acp{SF} are calculated with kinematics specific to \hhbbtt{}, while central \acp{SF} must be general enough to be used by multiple analysis.
+This encouraging result can be explained since our custom \acp{SF} are calculated with kinematics specific to \xhhbbtt{}, while central \acp{SF} must be general enough to be used by multiple analyses.
 Variables not correlated with the used \ac{pt} are not affected.
 
-
-+ explain why the full OR was not pursued
-+ say that the framework was nevertheless used to estimate $\metnomu$ \acp{SF}
-+ express wish that framework is used in the future, mention \run{3}
+The method just presented was not applied to the \xhhbbtt{} analysis, despite being fully implemented and despite the preliminary validation.
+This can be explained by the fact that the complete validation would require more time, which would not be then dedicated to work on the analysis as a whole.
+There were also significant challenges in defining appropriate reference triggers and datasets for each intersection combination, correct and possibly multi-dimensional binnings for each variable $q$, and the integration of custom \acp{SF} with \acp{SF} centrally provided by \ac{CMS}.
+Additionally, the project was experimental, and there was no guarantee the final result would converge into robust and usable corrections.
+For all the reasons above, we decided to create a trigger strategy with non-overlapping regions, as described in [[#sec:trigger_regions]], so that the \logicor{} between all triggers would not have to be considered.
+However, the developed framework was not left unused.
+Firstly, given its flexibility, it was utilised with one single trigger, namely the \ac{MET} trigger studies presented in [[#sec:met_trigger_sfs]].
+Secondly, it is now serving as the basis for a similar endeavour, which will be hopefully used for future \bbtt{} work.
+Estimates have shown an expected acceptance gain of the order of \SI{\sim 10}{\percent} when using the full \logicor{} for the \run{3} nonresonant \hhbbtt{} analysis.
+Exploiting the \logicor{} of multiple trigger is thus one of many possible approaches to increase the performance of future HH searches.

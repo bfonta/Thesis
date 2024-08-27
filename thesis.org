@@ -107,12 +107,8 @@
 #+INCLUDE: "chapters/analysis1/inclusion_method.org"
 ** Physics objects
 #+INCLUDE: "chapters/analysis1/physics_objects.org"
-** Selection
+** Selection and Categorization
 #+INCLUDE: "chapters/analysis1/selection.org"
-** Categorization
-#+INCLUDE: "chapters/analysis1/categorization.org"
-*** Resolved jets
-*** Boosted jets
 ** $\tau\tau$ mass regression
 #+INCLUDE: "chapters/analysis1/tautau_regression.org"
 ** QCD background estimation

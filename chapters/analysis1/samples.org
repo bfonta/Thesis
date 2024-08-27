@@ -2,7 +2,7 @@
 :CUSTOM_ID: sec:samples
 :END:
 
-The analysis uses \SI{138}{\invfb} of data collected at $\sqrt{s}=13\,\si{\TeV}$ with a \SI{25}{\nano\second} bunch crossing intervals during 2016, 2017 and 2018 at \ac{CMS}, corresponding to \run{2}.
+The analysis uses \SI{137.2}{\invfb} of \run{2} \ac{UL} data collected at $\sqrt{s}=13\,\si{\TeV}$ during 2016 (\SI{35.9}{\invfb}), 2017 (\SI{41.5}{\invfb}) and 2018 (\SI{59.8}{\invfb}) at \ac{CMS}.
 
 * Data samples
 As seen in [[#sec:hlt]], \ac{CMS} structures its datasets in \acp{PD}, each defined by a unique set of \ac{HLT} (a "soup of triggers"), where the inclusion of an event implies the latter triggered at least one of the paths.

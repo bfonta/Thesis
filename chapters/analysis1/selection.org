@@ -2,9 +2,433 @@
 :CUSTOM_ID: sec:selection
 :END:
 
+In this section we cover the various selections performed on the events selected by the analysis triggers.
+The general idea is to maximize the event acceptance to the \xhhbbttt{} signal while reducing background events.
+This is achieved by targeting the topologies of interest, focusing first on single physics objects, such as b-jets and tau lepton final state products, and later on pairs of such quantities, reconstructing the decays of the two Higgs bosons.
+Given the rarity of HH processes, it is imperative to measure as many \hhbbtt{} events as possible.
+The following step consists instead on /discriminating/ between interesting signal events and the unavoidable associated background.
+In a section later on
+
+The first one aims at
+reconstructing the decay products of the H with the highest possible acceptance for all final
+signatures by applying a series of general preselection criteria. The second part is designed to
+maximize the sensitivity to different signal topologies by applying dedicated selections and event
+categorizations. The final stage aims to further increase sensitivity by applying a dedicated
+discriminator based on a neural network to reject the residual background contamination.
+
+
+
+
+As a first step, lepton candidates are selected and used to reconstruct $\tau\tau$ pairs from the decay of one of the Higgs bosons in the event.
+%
+The final state of the $\tau\tau$ system is assessed according to the typology of the $\tau$ decay, as detailed in Section~\ref{sec:tautaucandidate}.
+%
+Subsequently, pairs of b-jet candidates are identified and selected from the decay of the second Higgs boson.
+%
+This enables the subdivision of events into three orthogonal categories: res1b, res2b and boosted. This categorisation is described in Section~\ref{sec:bbcandidate}.
+%
+Following the selection of particle candidates, a loose rectangular cut is applied on the invariant mass of the $\tau\tau$ and $bb$ pairs in the res1b and res2b categories.
+%
+In the boosted category, the cut is applied only on the invariant mass of the $\tau\tau$ pairs.
+%
+These cuts remove the tails of the mass spectrum, and outliers in these regimes, easing the task of discriminators further down in the analysis chain.
+%
+It also allow to define control regions with low signal contamination, useful to assess the proper modelling of some of the main analysis' backgrounds.
+%
+Finally, binned distributions of the events are used to train dedicated parameterised depp neural networks in order to discriminate signal from background events, as discussed in Sections~\ref{sec:tautauregression} and~\ref{sec:sigExtraction} .
+
+
 Instead, all events lying above the minimum accepted $\pt$ ($|\eta|$) values are considered: \SI{10}{\GeV} (2.5) for electrons, \SI{15}{\GeV} (2.4) for muons and \SI{20}{\GeV} (2.3) for \tauh{}s.
 The values originate from hard limits imposed by the isolation and identification trigger SFs used in the analysis.
 
-* $\tau\tau$ pair
-* bb pair
+* Tau lepton pair
+
+This step of the analysis is aimed at identifying the visible decay products of one of the 125\GeV Higgs boson decaying into a $\tau$ pair.
+% 
+As already done in~\cite{CMS-PAS-HIG-17-002,CMS-PAS-HIG-16-028,CMS-PAS-HIG-16-029,CMS-HIG-20-010} the $\tau\tau$ decay mode is assessed using offline information only.
+% 
+Selected signal events are required to have at least one \PGt candidate that decayed hadronically and has been reconstructed by the HPS algorithm~\cite{Chatrchyan:2012zz}.
+% 
+\par
+% 
+The \texttt{DeepTauv2p1} discriminator \cite{CMS-DP-2019-033} identifies \PGt's, distinguishing them from jets, electrons and muons.
+% 
+We use the \texttt{decayModeFindingNewDMs} algorithm for the decay mode reconstruction which, according to the Tau POG, is the recommended algorithm to use in conjunction with \texttt{DeepTauv2p1}.
+%
+Tau lepton HPS decay modes 5 and 6 are experimental, and are explicitly rejected (see Table~\ref{tab:taudm}), as recommended.
+%
+\begin{table}[!htb]
+  \begin{center}
+    \begin{tabular}{|l|c|c|c|c|c|c|c|}
+      \hline
+      DM & 0 & 1 & 2 & 5 & 6 & 10 & 11 \\
+      \hline
+      $N_{c}$ & 1 & 1 & 1 & 2 & 2 & 3 & 3 \\
+      $N_{p}$ & 0 & 1 & 2 & 0 & 1 & 0 & 1 \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Mapping of \PGt decay mode (DM) codes to the number of final state particles, where $N_c$ is the number of charged hadrons (prongs) and $N_p$ is the number of $\pi^0$s in the decay.}
+  \label{tab:taudm}
+\end{table}
+%
+Those two decay modes have been shown to recover three-pronged taus, where one track is lost during reconstruction.
+%
+However, the background increase tends to outweigh the increase in efficiency~\cite{twiki:tauID}.
+%
+Furthermore, all events assigned the decay mode 2 are analysed as though they correspond to decay mode 1.
+%
+The former is exceedingly rare, and the HPS algorithm is not tuned to reconstruct decays containing two $\pi^0$s.
+%
+When applying SFs, we also perform the assignment of decay mode 2 to 1.
+%
+% We do not employ the \texttt{MVA2017v2} discriminator together with the \texttt{decayModeFindingNewDMs} algorithm, which can be considered, but is not recommended, for analysis involving high \PT taus with low expected signal and background yields, like SUSY or Exotica searches~\cite{twiki:tauID}.
+%
+The identification requirement applied to hadronic \PGt's is the \texttt{Medium} WP of the \texttt{DeepTauVSjet} algorithm.
+% 
+Hadronically decaying \PGt's are required to also pass the \texttt{Tight} \texttt{DeepTauVSmu} and the \texttt{VVLoose} \texttt{DeepTauVSe} discriminators, as provided by the Tau POG~\cite{twiki:tauID}.
+% 
+The WP choice is related to the WPs used by the Tau POG to derive SFs for genuine \PGt's, which have a dependency on \texttt{DeepTauVSmu} and \texttt{DeepTauVSe}.
+% 
+The reasoning is to use corrections as close to POG recommendations as possible, to reach a good data/MC agreement in all relevant parts of the parameter space.
+% 
+\par
+% 
+For events containing at least one $\tau_{h}$ candidate, a first loop is performed over the offline objects looking for muon and electron candidates passing the baseline selection criteria.
+% 
+An event is classified as \muth if a muon is found, or is otherwise classified as \eleth if an electron is found.
+%
+If neither a muon or electron are found, the event is classified as \thth if a second hadronic \PGt is present.
+% 
+In the \muth and \eleth final states, legs are ordered inside each pair by assigning the first position to the leptonic leg ($\mu$, $e$).
+% 
+In the \thth final state both legs permutations are built and sorted, as described in Section~\ref{sec:ththflow}.
+% 
+\par
+% 
+This strategy was chosen because it maximizes the purity of the event while removing event overlaps among the three different final states.
+% 
+A third lepton veto is applied to all events, discarding events where an additional electron or muon, besides the 2 leptons used to build the $\tau\tau$ pair, is present.
+% 
+A description of the selections applied to identify additional electrons and muons is given in Section~\ref{subsubsec:thirdLepVeto}.
+% 
+\par
+% 
+A subsequent check that the event is firing the trigger path associated to the selected final states and that the selected offline leptons are geometrically matched to the online ones is performed.
+% 
+With respect to the 2016 data analysis, the use of cross-triggers allows for a much lower threshold on the \pt of the \PGt leptons, hence the request of a fixed cut on the lepton \pt is dropped from the $\tau\tau$ pair selection.
+% 
+Instead, each reconstructed offline lepton is required to pass a \pt threshold depending on the HLT trigger path fired by the event:
+% 
+\begin{equation}
+  \label{eq:ptTreshold}
+  p_T^{\text{offline}} \geq p_T^{\text{HLT}}\ +\ \text{threshold}\:,
+\end{equation}
+% 
+\noindent where  $p_T^{\text{offline}}$ is the transverse momentum of the offline selected lepton, $p_T^{\text{HLT}}$ is the \pt threshold applied at trigger level and ``threshold'' is a variable depending on the lepton type: 1\GeV for electron trigger legs, 2\GeV for muon trigger legs, 5\GeV for the di-\PGt trigger, and 10\GeV for the single-\PGt trigger.
+%
+The thresholds are chosen to be conservative with respect to the trigger turn-on curves and according to the recommendations of the Tau POG~\cite{twiki:tauPOGtriggers}.
+%
+For events passing a given kind of trigger (single-e/$\mu$, cross-e\PGt/$\mu$\PGt, di-\PGt, single-\PGt, MET), the \pt selection is determined by the loosest threshold on the object at trigger level among those available for that kind of trigger, with the exception of the MET trigger.
+%
+When the MET trigger fires, no explicit \PT or $\eta$ cuts are applied to the objects, as described in Section~\re{sec:triggerkinregions}.
+
+
++ mention trigger kinematic regions defined in [[#sec:trigger_regions]]
+
+
+\subsubsection{\muth channel}
+\label{sec:muthflow}
+Events are required to pass any of the triggers described in Section~\ref{sec:triggers} and the offline leptons are required to match the HLT ones. In addition, the following is required:
+% 
+\begin{itemize}
+\item a muon with $|\eta_{\mu}| < 2.4$ passing tight
+  particle--flow muon and track muon identification criteria plus the relative particle-flow and track isolation requirements $I_{\text{rel}}^{\text{track-}\mu} < 0.15$ and $I_{\text{rel}}^{\text{PF-}\mu} < 0.15$.
+  The reconstructed muon production vertex must be close to the main primary vertex
+  (the first of the \\ \texttt{offlineSlimmedPrimaryVertices} collection) within a distance
+  $\Delta_{xy} < 0.045 \cm$ and $\Delta_{z} < 0.2 \cm$.
+  % 
+  The \pt threshold on the muon depends on the HLT trigger path fired (not applicable when the MET trigger fired):
+  \begin{itemize}
+  \item 2016: $p_T>26 \ (21)$ \GeV if the event fired with a single-muon (cross-$\mu$\PGt) trigger.
+  \item 2017: $p_T>29 \ (22)$ \GeV if the event fired with a single-muon (cross-$\mu$\PGt) trigger.
+  \item 2018: $p_T>26 \ (22)$ \GeV if the event fired with a single-muon (cross-$\mu$\PGt) trigger.
+  \end{itemize}
+\item a hadronic tau of $|\eta_{\tau_{h}}| \leq 2.3$ ($2.1$ for events firing only the cross-$\mu$\PGt trigger).
+  % 
+  The same $\Delta_{z}$ requirement as in the case of the muon is applied.
+  % 
+  The \pt threshold on the hadronic tau depends on the HLT trigger path fired (not applicable when the MET trigger fired):
+  % 
+  \begin{itemize}
+  \item 2016: $p_T>20 \ (25)$ \GeV if it fired a single-muon (cross-$\mu$\PGt) trigger.
+  \item 2017 and 2018: $p_T>20 \ (32)$ \GeV if it fired a single-muon (cross-$\mu$\PGt) trigger.
+  \end{itemize}
+  % 
+\item muon and hadronic tau are required to have opposite electric charge and a spatial separation $\Delta R (\mu, \tauh) > 0.4$.
+  % 
+\end{itemize}
+%
+The phase-space is divided into three regions according to the \pt of the leptons as follows.
+%
+For a visualization of the trigger region cuts, refer to the middle column of Figure~\ref{fig:kinTriggerRegions}.
+%
+For their actual value, see Tables~\ref{tab:triggerRegionsETau},~\ref{tab:triggerRegionsMuTau} and~\ref{tab:triggerRegionsTauTau}, or the \texttt{Python} pseudo-code in Appendix~\ref{sec:appendixTriggerRegions}.
+% 
+\subsubsection{\eleth channel}
+\label{sec:ethflow}
+% 
+Events are required to pass any of the triggers described in Section~\ref{sec:triggers} and the offline leptons are required to match the HLT ones. In addition, the following is required:
+%
+\begin{itemize}
+  % 
+\item An electron of $\left| \eta_{e} \right| < 2.5$ passing the logical AND between the \texttt{Tight} MVA non-iso-identification criteria (80\% efficiency WP, \verb|mvaEleID-Fall17-noiso-V2-wp80|), and the relative isolation requirement $I_{\text{rel}}^{e} < 0.1$.
+  % 
+  The reconstructed electron production vertex must be close to the main primary vertex (the first of the \\
+  \texttt{offlineSlimmedPrimaryVertices} collection) within a distance $\Delta_{xy} < 0.045 \cm$ and $\Delta_{z} < 0.2 \cm$.
+  % 
+  The \pt threshold on the electron depends on the fired HLT trigger path (not applicable when the MET trigger fired):
+  % 
+  \begin{itemize}
+  \item 2016: $p_T>26$ \GeV if it fired a single-electron trigger.
+  \item 2017 + 2018: $p_T>33 \ (25)$ \GeV if it fired a single-electron (cross-$e$\PGt) trigger.
+  \end{itemize}
+  % 
+\item a hadronic tau of $|\eta_{\tau_{h}}| \leq 2.3$.
+  % 
+  The same $\Delta_{z}$ requirement as in the case of the electron is applied.
+  % 
+  The \pt threshold on the hadronic tau depends on the fired HLT trigger path (not applicable when the MET trigger fired):
+  % 
+  \begin{itemize}
+  \item 2016: $p_T>20$ \GeV if it fired a single-electron trigger.
+  \item 2017 + 2018: $p_T>20 \ (35)$ \GeV if it fired a single-electron (cross-$e$\PGt) trigger.
+  \end{itemize}
+  % 
+\item Electron and hadronic tau are required to have opposite electric charge and a spatial separation $\Delta R (e, \tauh) > 0.4$.
+  % 
+\end{itemize}
+%
+The phase-space is divided into three regions according to the \pt of the leptons, as follows.
+%
+For a visualization of the trigger region cuts, refer to the left column of Figure~\ref{fig:kinTriggerRegions}.
+%
+For their actual value, see Tables~\ref{tab:triggerRegionsETau},~\ref{tab:triggerRegionsMuTau} and~\ref{tab:triggerRegionsTauTau}, or the \texttt{Python} pseudo-code in Appendix~\ref{sec:appendixTriggerRegions}.
+%
+\subsubsection{\thth channel}
+\label{sec:ththflow}
+% 
+Events are required to pass any of the triggers described in Section~\ref{sec:triggers} and the offline leptons are required to match the online ones. In addition the following is required:
+% 
+\begin{itemize}
+%
+\item two hadronic $\tau$'s with $|\eta_{\tau_h}| \leq 2.3$.
+  % 
+  A vertex requirement of $\Delta_{z} < 0.2 \cm$ is applied.
+  %
+  The lower \pt threshold applied on hadronic taus is 40\GeV for the three years when considering the di-\PGt trigger (35\GeV + 5\GeV, see Eq.~\ref{eq:ptTreshold}).
+  %
+  In the regions covered by the MET and single-\PGt triggers the threshold goes down to 20\GeV, which corresponds to the minimum value for which the Tau POG SFs are valid.
+  %
+\item \PGt pairs are at first sorted according to the \texttt{DeepTau} isolation of their first leg.
+  % 
+  If the two first legs have the same isolation, the highest \pt of first leg is used to order the pair.
+  % 
+  If the \pt is also the same (i.e., the pairs share the same first leg) the pair with the most isolated second leg is preferred.
+  % 
+  If ambiguity is still present, priority is given to the pair with the highest \pt of the second leg.
+  % 
+\item after all pairs have been sorted, the first pair with opposite charged \PGt's, satisfying $\Delta R (\tauh, \tauh) > 0.4$, where both \tauh pass their baseline selection, is chosen.
+  % 
+  The remaining pairs are discarded.
+  % 
+\end{itemize}
+
+** Third lepton veto
+
+Events are rejected if, besides the two signal leptons ($e$, $\mu$ or \tauh), they contain an electron or a muon which passes the following selection:
+\begin{itemize}
+\item an electron of $|\eta_{e}| < 2.5$ and $p_T > 10\GeV$.
+  % 
+  %The electron passes the \textit{Medium} MVA iso-identification criteria (\verb|mvaEleID-Fall17-iso-V2-wp90|) OR
+  The electron passes the logical AND between the \texttt{Medium} MVA non-iso-identification criteria \\
+  (\verb|mvaEleID-Fall17-noIso-V2-wp90|) and the relative isolation requirement $I_{\text{rel}}^{e} < 0.3$.
+  % 
+  The reconstructed electron production vertex must be close to the main primary vertex (the first of the \verb|offlineSlimmedPrimaryVertices|
+  collection) within a distance $\Delta_{xy} < 0.045 \cm$ and $\Delta_{z} < 0.2 \cm$.
+  % 
+\item a muon of $|\eta_{\mu}| < 2.4$ and $p_T > 10\GeV$ and passing the \texttt{Medium} particle--flow muon and \texttt{HighPt} track muon identification criteria, plus the relative particle--flow and track isolation requirements, $I_{\text{rel}}^{\text{track-}\mu} < 0.3$ and $I_{\text{rel}}^{\text{PF-}\mu} < 0.3$, respectively.
+  %
+  The reconstructed muon production vertex must be close to the main primary vertex (the first of the \verb|offlineSlimmedPrimaryVertices|
+  collection) within a distance $\Delta_{xy} < 0.045 \cm$ and $\Delta_{z} < 0.2 \cm$.
+  % 
+\end{itemize}
+
+* B quark pair
+This step of the analysis is aimed at selecting jets from the decay of the second 125\GeV Higgs boson in a $b\bar{b}$ pair.
+%
+For events to be selected, one of the following must occur:
+\begin{itemize}
+\item two jets with $p_T > 20\GeV$ and $|\eta| < 2.5$ ($|\eta| < 2.4$) for 2017 and 2018 (2016), with a $\Delta R > 0.5$ distance between each jet and both selected $\tau$ candidates;
+\item one boosted jet (selection defined in Section~\ref{sec:sigExtraction}), with the distance between the jet and both selected $\tau$ candidates of $\Delta R > 0.8$.
+\end{itemize}
+%
+%
+% A jet is considered as b-tagged if its DeepFlavour score is larger than the \textit{medium} working point, as detailed in Section~\ref{sec:bJets}.
+%As shown in Figure~\ref{fig:bbcand_bDiscrValues}, often the second jet by DeepFlavour score does not fulfil the minimal b-tag requirement
+%in the gluon-gluon fusion signal sample. In order to minimize the jet mistagging probability, a new strategy is put in place for the jets assignment.
+%
+%\begin{figure}[htb]
+%\centering
+%\subfigure[]{\includegraphics[width=0.5\textwidth, angle=0] {figures/placeholder.pdf}}
+%\caption{
+%\label{fig:bbcand_bDiscrValues}
+%Distribution of the DeepCSV score for the first two jets ordered by DeepFlavour score for a gluon-gluon
+%fusion signal sample.}
+%\end{figure}
+%
+Furthermore, studies where performed on the previous published $bb\tau\tau$ result on $2016$ data~\cite{CMS-PAS-HIG-17-002}
+to evaluate the signal yield loss at different steps of the event selection process.
+%
+As a consequence, the $H\rightarrow bb$ selection was improved by developing a new algorithm to identify b-jets, dubbed \hhbtag{}.
+%
+This algorithm is based on a neural network
+architecture and it is described in Section~\ref{sec:hh_btag} and in more detail in AN-2019/283~\cite{AN-2019-283}.
+%
+For each event belonging to one of the resolved categories, all possible b-jet candidates are assigned a score by the \hhbtag{} algorithm.
+%
+The two jets with the highest score are taken to be the two b-jets originating from the decay of the Higgs boson.
+%
+In the boosted category the \hhbtag{} algorithm is not employed; we use the ParticleNet discriminant~\cite{pnet} instead, as explained in Section~\ref{sec:sigExtraction}.
+
 ** HH b-tagging network
+%Introduction of deep learning techniques in jet, b-jet and hadronic tau decays identification
+%within CMS (e.g. DeepCSV, DeepFlavour, and DeepTau ID) has already been demonstrated to be well
+%suited for improving the discovery significance of several analyses. 
+This section describes the \hhbtag machine learning algorithm, meant to improve the selection of
+b-jets in $HH \rightarrow \bbtt$ events in CMS, and its retraining carried out in order to refine the
+performance of the model. The version of the method upon which the new training is based is
+described in detail in AN-2019/283~\cite{AN-2019-283}. The performance of the algorithm is
+evaluated and compared with respect to the previous version and to the standard algorithms
+(DeepFlavour and ParticleNet) used to select the b-jet pair of the $\HH \rightarrow \bbtt$ event
+candidates.
+
++ continues in the AN /home/bruno/remote4/HH_Btag.tex...
+
+** Signal extraction
+
+Events are split in three orthogonal categories: \textbf{res1b}, \textbf{res2b} and \textbf{boosted}.
+%
+This categorization scheme arises naturally from the reconstruction of jets within the CMS framework.
+%
+The latter is based on the radial separation between the the two b-quarks:
+%
+\begin{itemize}
+\item $\Delta R(b,b)\,> \,0.8$: each b--quark is reconstructed as a jet applying the AK4 algorithm (resolved jet);
+\item $0.4 \, < \, \Delta R(b,b)\,< \,0.8$: the two b--quarks are reconstructed both as two separated AK4 jets and as a large--radius jet (fatjet) using the AK8 algorithm;
+\item $\Delta R(b,b)\,< \,0.4$: the two b--quarks are reconstructed only as an AK8 jet.
+\end{itemize}
+%
+The resolved categories target the first scenario ($\Delta R \, (b,b)\,> \,0.4$) while the boosted category targets the other two scenarios.
+%
+Events with a reconstructed fatjet having $m_{\text{softDrop}} > 30$\GeV, $p_T> 250$\GeV, $\Delta R(\text{jet},\tau)\,> \,0.8$ for both \PGt's and ParticleNet (PNet) discriminant passing the Low Purity working point fall in the \textbf{boosted} category.
+%
+Events without an AK8 jet are assigned to the resolved categories.
+%
+They are further categorised based on the AK4 jet \texttt{DeepFlavor} score:
+% 
+\begin{itemize}
+\item Resolved 2jet--1tag (\textbf{res1b}):
+Events in this category are such that only one of the two b-jet candidates passes the ``Medium'' working point for all the final states.
+\item Resolved 2jet--2tag (\textbf{res2b}):
+Events in this category are such that both b-jet candidates pass the ``Medium'' working point for all the final states.
+\end{itemize}
+%
+The \textbf{res2b} category provides the most sensitive measurements for resonance masses below 700 GeV while the \textbf{boosted} category drives the analysis sensitivity for resonance masses above 700 GeV.
+%
+\par
+%
+Events classified as resolved are required to have reconstructed visibile masses of the b and $\tau$ pairs within a rectangular window.
+%
+In order to define the mass window interval, gluon-fusion spin-0 and spin-2 signal samples are utilized.
+%
+The samples cover a range of masses spanning from 250 \GeV to 3 \TeV, and involve the production of resonance particles that subsequently decay into pairs of Higgs bosons and $\tau$ leptons.
+%
+The samples were merged, considering all mass and spin configurations at once. 
+%
+The three analysis channels (\muth, \eleth and \thth) have been considered to estimate the rectangular cuts.
+%
+The event selection, in addition to the baseline requirements, includes the following conditions:
+%
+\begin{itemize}
+\item presence of two resolved b-jet candidates for the $\text{H} \rightarrow bb$ candidate reconstruction, passing the loose bTag working point;
+\item b-jet hadron flavour equals 5, corresponding to the PDG code of the $b$ quark;
+\item $\tau$ leptons with opposite charge.
+\end{itemize}
+%
+\noindent The maximum and minimum values of the $m_{bb}$ and $m_{\tau\tau}$ visible masses are calculated from their 99.5\% and 0.5\% quantiles, and are estimated to be:
+%
+\begin{itemize}
+\item $m_{\tau\tau}$ visible mass between 20\GeV and 130\GeV;
+\item $m_{bb}$ between 40\GeV and 270\GeV.
+\end{itemize}
+%
+\noindent The cuts ensures a very high signal efficiency.
+%
+To define the mass window interval, the limits for $m_{bb}$ are calculated first. 
+%
+An additional requirement is then added while computing the limits for $m_{\tau\tau}$: to consider $m_{bb}$ only within the limits calculated in the previous step.
+%
+The two-dimensional distribution of $m_{bb}$ versus $m_{\tau\tau}$ is displayed in Figure~\ref{fig:windowMassRegions}, where a red rectangle highlights the computed mass interval.
+%
+We note that the visible mass signal distributions are similar for all mass points.
+%
+\par
+%
+It has been shown that a more discriminant mass cut, altough providing a larger S/B ratio, results in a poorer limit when compared to the limit obtained with a DNN discriminator \cite{CMS-HIG-20-010}.
+%
+Given that the signal events are better discriminated by the parameterised DNN put in place for this analysis,
+the goal of applying the mass window is instead to remove significantly outlying background events in regions where no signal overlap is expected.
+%
+\begin{figure}
+  \centering
+  %
+  \includegraphics[width=.325\linewidth,clip]{figures/analysisflow/draw_mass_Radion-700-GeV_etau_baseline_2018.pdf}
+  \includegraphics[width=.325\linewidth,clip]{figures/analysisflow/draw_mass_Radion-700-GeV_mutau_baseline_2018.pdf}
+  \includegraphics[width=.325\linewidth,clip]{figures/analysisflow/draw_mass_Radion-700-GeV_tautau_baseline_2018.pdf}
+  %
+  \includegraphics[width=.325\linewidth,clip]{figures/analysisflow/draw_mass_Radion-1000-GeV_etau_baseline_2018.pdf}
+  \includegraphics[width=.325\linewidth,clip]{figures/analysisflow/draw_mass_Radion-1000-GeV_mutau_baseline_2018.pdf}
+  \includegraphics[width=.325\linewidth,clip]{figures/analysisflow/draw_mass_Radion-1000-GeV_tautau_baseline_2018.pdf}
+  % 
+  \includegraphics[width=.325\linewidth,clip]{figures/analysisflow/draw_mass_TT-DY_etau_baseline_2018.pdf}
+  \includegraphics[width=.325\linewidth,clip]{figures/analysisflow/draw_mass_TT-DY_mutau_baseline_2018.pdf}
+  \includegraphics[width=.325\linewidth,clip]{figures/analysisflow/draw_mass_TT-DY_tautau_baseline_2018.pdf}
+  % 
+  \caption{Illustration of the rectangular window mass cut (in red) on top of signal (700\GeV and 1\TeV for, respectively, the top and middle rows) and background (bottom row).
+    %
+    The three analysis channels are represented in the left, middle and right columns.
+    %
+  }
+  \label{fig:windowMassRegions}
+\end{figure}
+%
+Figure~\ref{fig:categories_scheme} describes schematically how events are split into different categories and the
+discriminating variable used for signal extraction in each category.
+%
+The final limit extraction is performed fitting the distributions of the score of a parameterised neural network (pDNN) in the three analysis categories.
+%
+The network aims at discriminating $X\rightarrow HH\rightarrow bb\tau\tau$ signal events from background, and is described Section~\ref{sec:ggfDNN}.
+%
+\begin{figure}[htb]
+\centering
+\subfigure[]{\includegraphics[width=0.6\textwidth, angle=0] {figures/analysisflow/AnalysisFlowDiagram.pdf}}
+\caption{ \label{fig:categories_scheme}
+  Descriptive scheme of event categorization. ``pDNN'' refers to the parameterised final discriminant.
+}
+\end{figure}
+
+
+* Resolved jets
+
+* Boosted jets
