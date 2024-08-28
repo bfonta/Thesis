@@ -95,7 +95,7 @@ Notice that all decays with particles lighter than muons, such as light quarks o
 These final states have extremely small predicted couplings to the Higgs boson.
 To give an example, the $\text{H} \rightarrow e^{+}e^{-}$ decay is predicted to have a branching ratio $\mathcal{B}$ of \num{\sim 5e-9}, but the most recent \ac{CMS} 95% \ac{CL} upper limits excludes \num{3e-4} only [[cite:&higgs_to_electrons]] (similar for \ac{ATLAS} [[cite:&higgs_to_ee_atlas]]).
 The two experiments have also been probing \ac{LFV} processes such as $\text{H} \rightarrow e\mu$, $\text{H} \rightarrow \tau\mu$ and $\text{H} \rightarrow \tau\mu$, reaching better and better sensitivities up to \num{e-5}, and other rare decays, such as Higgs boson decays to $\text{J}/\psi$ or its excited states.
-Of particular relevance for \ac{CMS} are the observation of $\text{H} \rightarrow \tau\tau$ [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]] and the first evidence for $\text{H} \rightarrow \mu\mu$ [[cite:&H2mumu]].
+Of particular relevance for \ac{CMS} are the observation of \htt{} [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]] and the first evidence for $\text{H} \rightarrow \mu\mu$ [[cite:&H2mumu]].
 
 #+NAME: tab:higgs_decay_br
 #+CAPTION: Largest single Higgs boson branching ratios for $\mh = 125.09\,\si{\GeV}$ [[cite:&YellowReport4]]. The asterisk $*$ refers to virtual particles.

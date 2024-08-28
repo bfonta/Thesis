@@ -98,7 +98,7 @@ This ceases to be true for high $\my$, since the larger mass implies a smaller Y
 The exclusion upper limits tend to be of around \num{50}, \num{5}, and \SI{0.3}{\femto\barn} for $\mx = 0.5$, $1$, and $3\,\si{\TeV}$, respectively.
 
 #+NAME: fig:comb_xyh_lowmass
-#+CAPTION: Observed and expected \xyh{} upper limits, at 95% \ac{CL}, on the product of the cross section $\sigma$ for the production of a resonance X via \ac{ggF} and the \ac{BR} $\mathcal{B}$ for the $\text{X} \rightarrow \text{Y (bb)} \text{H}$ decay. The \ac{SM} \acp{BR} of the $\text{H} \rightarrow ττ$, $\text{H} \rightarrow \gamma\gamma$ and $\text{H} \rightarrow \text{bb}$ decays are assumed. The results from the individual analyses and their combination are shown as functions of $\my$ and $\mx$ for $\mx \leq 1\,\si{\TeV}$. Observed (expected) limits are indicated by markers connected with solid (dashed) lines. For an easier visualization, the limits have been scaled in successive steps by two orders of magnitude each. For each set of graphs, a black arrow points to the corresponding $\mx$ value.
+#+CAPTION: Observed and expected \xyh{} upper limits, at 95% \ac{CL}, on the product of the cross section $\sigma$ for the production of a resonance X via \ac{ggF} and the \ac{BR} $\mathcal{B}$ for the $\text{X} \rightarrow \text{Y (bb)} \text{H}$ decay. The \ac{SM} \acp{BR} of the $\text{H} \rightarrow \tau\tau$, $\text{H} \rightarrow \gamma\gamma$ and $\text{H} \rightarrow \text{bb}$ decays are assumed. The results from the individual analyses and their combination are shown as functions of $\my$ and $\mx$ for $\mx \leq 1\,\si{\TeV}$. Observed (expected) limits are indicated by markers connected with solid (dashed) lines. For an easier visualization, the limits have been scaled in successive steps by two orders of magnitude each. For each set of graphs, a black arrow points to the corresponding $\mx$ value.
 #+BEGIN_figure
 #+ATTR_LATEX: :width .9\textwidth :center
 \hspace{.9cm} [[~/org/PhD/Thesis/figures/intro/XHY_Comb_LowMass.pdf]]
@@ -115,7 +115,7 @@ The exclusion upper limits tend to be of around \num{50}, \num{5}, and \SI{0.3}{
 
 The \xhhbbtt{} result obtained in this thesis represents an enormous improvement over the first of such studies in \ac{CMS}, which used only 2016 data [[cite:&cms_hh_bbtt]].
 This work also improves on the techniques of its nonresonant counterpart [[cite:&higgs_bbtautau_nonres]].
-A \xhybbtt{} has also been published by \ac{CMS} [[cite:&cms_hh_bbtt]], not obtaining limits for a \SI{125}{\GeV} Higgs boson.
+A \xyhbbtt{} has also been published by \ac{CMS} [[cite:&cms_hh_bbtt]], not obtaining limits for a \SI{125}{\GeV} Higgs boson.
 An interpolation was nevertheless performed, is shwon in [[fig:res_comb_xhh]] and comparisons are discussed in [[#sec:final_limits]].
 
 * Comment from Rainer :noexport:

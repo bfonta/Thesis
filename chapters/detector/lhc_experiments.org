@@ -60,7 +60,7 @@ The muon system finalizes the design, enabling impactful measurements such as th
 
 \ac{LHCb} is also the sole \ac{LHC} experiment capable to run both in collider and fixed-target mode [[cite:&lhcb_fixed_target]].
 The \ac{SMOG} provides a mean to inject noble gases (\ch{He}, \ch{Ar}, \ch{Ne}) into \ac{VELO}.
-Despite smaller \bb{} cross-sections and worse signal-to-background ratio, fixed-target experiments bring average $b$ flight lengths of a few~\si{\cm}, compared to a few~\si{\mm} in the collider mode, due to larger Lorentz boosts.
+Despite smaller $\bbbar$ cross-sections and worse signal-to-background ratio, fixed-target experiments bring average $b$ flight lengths of a few~\si{\cm}, compared to a few~\si{\mm} in the collider mode, due to larger Lorentz boosts.
 The larger momenta of the final state particles in the lab also implies simpler triggering and tagging.
 Some result bforuhg forward by \ac{SMOG} include fixed-target \jpsi{} and $D^{0}$ production, and direct measurements of antiproton production [[cite:&antimatter_prod_fixed_target_lhcb]], which is relevant for \ac{DM} searches.
 

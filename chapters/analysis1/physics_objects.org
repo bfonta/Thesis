@@ -18,7 +18,7 @@ Due to charge conservation, \taus{} can only decay to an odd number of prongs, a
 The decay itself can happen via a meson resonance, or directly to the hadrons, which consist of pions on \SI{\sim 98}{\percent} of occurrences, with the rest being kaons [[cite:&PDG]].
 
 #+NAME: tab:tau_decays
-#+CAPTION: $\tau$ lepton branching fractions, where $\texth}^{\pm/\mp}$ symbolizes any charged hadron [[cite:&PDG]].
+#+CAPTION: $\tau$ lepton branching fractions, where $\text{h}^{\pm/\mp}$ symbolizes any charged hadron [[cite:&PDG]].
 #+ATTR_LATEX: :placement [!h] :center t :align l|c|c
 | Decay mode                                         | Meson resonance             | $\mathcal{B}$ [%] |
 |----------------------------------------------------+-----------------------------+-------------------|
@@ -81,7 +81,7 @@ y_{\alpha} = \exp(x_{\alpha}) / \sum_{\beta}\exp{x_{\beta}} \:\:\: \, \:\:\: D_{
 The discrimnators are also referred as =DeepTauVSjet= / =DeepTauVSe= / =DeepTauVSmu= for $D_{\text{jet}}$ / $D_{mu}$ / $D_{e}$, respectively.
 The expected \tauh{} identification efficiencies are obtained with the validation samples, and are defined as the efficiencies for genuine \tauhs{} in a \htt{} sample that are reconstructed as \tauhs{} with $30 < \pt < 170 \,\si{\GeV}$ to pass a particular discriminator \ac{WP}.
 The efficiencies range from 40 to 98% for jets, from 60 to 99.5% for electrons, and from 99.5 to 99.95% for muons, depending on the chosen \ac{WP}.
-The $\text{jet} \rightarrow \tau$ misidentification rate depends on the \pt and quark flavor of the jet, and in simulated W production events with jets it has been estimated to be 0.43% for a genuine $\tau$ identification efficiency of 70%.
+The $\text{jet} \rightarrow \tau$ misidentification rate depends on the \ac{pt} and quark flavor of the jet, and in simulated W production events with jets it has been estimated to be 0.43% for a genuine $\tau$ identification efficiency of 70%.
 The same rate for electrons and muons is 2.60 (0.03)% for a genuine \tauh{} identification efficiency of 80 ($>99\%$).
 Significant updates are being put in place, mostly for \run{3} analyses, including using more recent and extended data for training, improved training techniques, and optimised hyperparameter tuning [[cite:&deeptau_run3]].
 
@@ -160,7 +160,7 @@ The thresholds on the DeepFlavour discriminator value corresponding to =Loose=, 
 \end{table}
 
 As mentioned before, AK8 jets originating from decays merged \hbb{} decays are tagged using the \ac{PNet} algorithm.
-This \ac{GNN}-based algorithm is able to identify hadronic decays of highly Lorentz-boosted top quarks and W, Z, and Higgs bosons, and classify different decay modes, such as $\bbar{}$, $c\bar{c}$ or $q\bar{q}$ pairs.
+This \ac{GNN}-based algorithm is able to identify hadronic decays of highly Lorentz-boosted top quarks and W, Z, and Higgs bosons, and classify different decay modes, such as $\bbbar$, $\ccbar$ or $\qqbar$ pairs.
 We use its mass-decorrelated version.
 The tagger is trained with \xbb{}, \xcc{} and \xqq{} signal jets, and with \ac{QCD} multijet background samples, where X is a \spin{0} scalar, and accordingly outputs four scores, each representing the probability for one of the four processes: $P(X\rightarrow \text{b}\bar{\text{b}})$, $P(X\rightarrow \text{c}\bar{\text{c}})$, $P(X\rightarrow \text{q}\bar{\text{q}})$ and $P(\text{QCD})$.
 The algorithm achieves mass decorrelation by reweighting the training samples into uniform jet \ac{pt} and jet =SoftDrop= mass distributions.
@@ -171,7 +171,7 @@ The \xbb{} discriminant is defined as:
   \frac{P(X\rightarrow b\bar{b})}{P(X\rightarrow b\bar{b}) + P(QCD)}.
 \end{equation} 
 
-\noindent Three \acp{WP} are defined with \hbb{} signal jets at efficiencies of 40%, 60%, and 80%: Low Purity (LP), Medium Purity (MP), and High Purity (HP), respectively.
+\noindent Three \acp{WP} are defined with \hbb{} signal jets at efficiencies of 40%, 60%, and 80%: \ac{LP}, \ac{MP}, and \ac{HP}, respectively.
 The final exclusion limits are run once per \ac{WP}, and the LP \ac{WP} is found to lead to the most stringent results.
 It corresponds to a discriminator value of 0.9088 for 2016APV, 0.9137 for 2016, 0.9105 for 2017, and 0.9172 for 2018.
 Finally, data/\ac{MC} discrepancies require the application of dedicated \acp{SF} to all jets passing the \ac{PNet} \acp{WP}.
@@ -214,7 +214,7 @@ If a matched generator-level jet exists, then the four-momentum of the correspon
 	c_{\text{JER}} = 1+(s_{\text{JER}}-1)\,\frac{\pt-\pt^{\text{Gen.}}}{\pt}
 \end{equation}
 
-\noindent where $s_{\text{JER}$ is the data-to-simulation core resolution scale factor.
+\noindent where $s_{\text{JER}}$ is the data-to-simulation core resolution scale factor.
 If the jet was not matched (and $\pt^{\text{Gen.}}$ is not available), then a stochastic smearing is applied, performing the four-momentum rescaling using a different factor:
 
 #+NAME: fig:hybrid2

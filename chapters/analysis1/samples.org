@@ -60,7 +60,7 @@ On top, several minor background components are taken into account:
 \noindent All the above should be negligible given their small cross sections, and one would naively think they can be ignored.
 However, not only the total process rate matters, but also its shape.
 Some low cross section processes can peak under the \bbtt{} maximum, as is for instance the case with $\ttbar\text{H}$.
-This can be observed in the $\tau\tau$ mass regression described in [[#sec:tautau_regression]].
+This can be observed in the \ditau{} mass regression described in [[#sec:tautau_regression]].
 
 The background samples are generated based on state-of-the-art theoretical calculations at \ac{LO} or \ac{NLO}, and are used to optimize the event selection and to evaluate the efficiency, acceptance and to compute systematic uncertainties.
 The samples are also used to extract all sorts of \ac{SF} corrections.

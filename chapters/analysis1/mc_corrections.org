@@ -55,7 +55,7 @@ Before applying any b-tag selection criteria, expected event yields should be pr
 (i.e. the sum of event weights) before and after applying b-tag weights should be identical.
 In order to ensure this, the sum of event weights before and after applying b-tag event weights, without requiring any b-tag selection,
 is computed. The ratio $r = \sum \omega_{\text{before}} / \sum \omega_{\text{after}}$ represents a phase-space extrapolation
-and is multiplied to the b-tag event weight. The values of these $r$ factors are reported in Table~\ref{tab:bTagRfactors}.
+and is multiplied to the b-tag event weight. The values of these $r$ factors are reported in [[tab:btag_rfactor]].
 
 #+NAME: tab:btag_rfactor
 #+CAPTION: Values of the $r$ factors used to correct the b-tag event weights and preserve the normalization of the MC samples.
@@ -65,15 +65,15 @@ and is multiplied to the b-tag event weight. The values of these $r$ factors are
     \begin{tabular}{lll}
 	\hline \\[-1em]
 	Year & Final state & $r$ factor \\ \hline \\[-1em]
-	\multirow{3}{*}{2016} & \mutau	& 1.0081 \\
-			      & \etau	& 1.0068 \\
-			      & \tautau & 1.0103 \\[+0.3em] \hline \\[-1em]
-	\multirow{3}{*}{2017} & \mutau	& 0.9993 \\
-			      & \etau	& 0.9949 \\
-			      & \tautau & 0.9547 \\[+0.3em] \hline \\[-1em]
-	\multirow{3}{*}{2018} & \mutau	& 1.0039 \\
-			      & \etau	& 1.0040 \\
-			      & \tautau & 0.9795 \\[+0.3em] \hline \\[-1em]
+	\multirow{3}{*}{2016} & \mutau{}  & 1.0081 \\
+			      & \eletau{} & 1.0068 \\
+			      & \tautau{} & 1.0103 \\[+0.3em] \hline \\[-1em]
+	\multirow{3}{*}{2017} & \mutau{}  & 0.9993 \\
+			      & \eletau{} & 0.9949 \\
+			      & \tautau{} & 0.9547 \\[+0.3em] \hline \\[-1em]
+	\multirow{3}{*}{2018} & \mutau{}  & 1.0039 \\
+			      & \eletau{} & 1.0040 \\
+			      & \tautau{} & 0.9795 \\[+0.3em] \hline \\[-1em]
     \end{tabular}
 \end{table}
 
