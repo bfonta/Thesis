@@ -35,5 +35,56 @@ Indeed, looking at the recomputed efficiency and SF plot in ref:fig:eff_mumu_201
 [[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_17_mutau_MET.pdf]]
 #+END_figure
 
+* B-tag reshaping
+:PROPERTIES:
+:CUSTOM_ID: sec:btag_reshape
+:END:
+
+To account for discrepancies in the b-tag performance in MC, the whole b-tagging discriminant distribution in MC is corrected
+to match the one in data, following the shape calibration procedure recommended by the b-Tag and Vertexing POG in~\cite{twiki:BTagShapeCalibration}.
+%
+For each MC event with a given jet configuration, the event weight $\omega$ is computed as:
+\[
+\omega = \prod_i^{N_{jets}} SF\left(D_i,  p_{Ti}, \eta_i \right)
+\]
+where the scale factors SF are provided by the BTV POG as a function of the discriminator score,
+transverse momentum and pseudo-rapidity of the jets.
+%
+The event weights computed with this method should change only the shape of the b-tagging discriminant.
+Before applying any b-tag selection criteria, expected event yields should be preserved: this means that the number of events
+(i.e. the sum of event weights) before and after applying b-tag weights should be identical.
+In order to ensure this, the sum of event weights before and after applying b-tag event weights, without requiring any b-tag selection,
+is computed. The ratio $r = \sum \omega_{\text{before}} / \sum \omega_{\text{after}}$ represents a phase-space extrapolation
+and is multiplied to the b-tag event weight. The values of these $r$ factors are reported in Table~\ref{tab:bTagRfactors}.
+
+#+NAME: tab:btag_rfactor
+#+CAPTION: Values of the $r$ factors used to correct the b-tag event weights and preserve the normalization of the MC samples.
+\begin{table}[htbp]
+    \centering
+    \setlength{\tabcolsep}{10pt}
+    \begin{tabular}{lll}
+	\hline \\[-1em]
+	Year & Final state & $r$ factor \\ \hline \\[-1em]
+	\multirow{3}{*}{2016} & \mutau	& 1.0081 \\
+			      & \etau	& 1.0068 \\
+			      & \tautau & 1.0103 \\[+0.3em] \hline \\[-1em]
+	\multirow{3}{*}{2017} & \mutau	& 0.9993 \\
+			      & \etau	& 0.9949 \\
+			      & \tautau & 0.9547 \\[+0.3em] \hline \\[-1em]
+	\multirow{3}{*}{2018} & \mutau	& 1.0039 \\
+			      & \etau	& 1.0040 \\
+			      & \tautau & 0.9795 \\[+0.3em] \hline \\[-1em]
+    \end{tabular}
+\end{table}
+
+* Particle Net SFs
+:PROPERTIES:
+:CUSTOM_ID: sec:pnet_sfs
+:END:
+
 * DeepTau scale factors for hadronic $\tau$'s
+:PROPERTIES:
+:CUSTOM_ID: sec:deep_tau_sfs
+:END:
+
 * Lepton scale factors

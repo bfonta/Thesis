@@ -123,6 +123,7 @@
 * \xhhbbtt{}: Limit extraction
 ** Signal discrimination from background
 ** Systematic uncertainties
+#+INCLUDE: "chapters/analysis2/systematics.org"
 *** Normalization uncertainties
 **** Luminosity
 **** Electrons and muon isolation and identificaton efficiencies

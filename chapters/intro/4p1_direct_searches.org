@@ -53,7 +53,7 @@ One can additionally perform a $\kl,\kvv$ simultaneous fit to \ac{ggF} and \ac{V
 We conclude by mentioning two very recent results, produced after the combinations above.
 The first refers to the \hhbbvv{} analysis [[cite:&cms_hh_bbvv_hadr]], which covers so far unexplored all-hadronic final states, with a 13% \ac{BR}.
 Despite the absence of a relevant $\kl$ constrain, the analysis focus on the boosted regime to better constrain $\kvv$, almost excluding $\kvv=0$ by itself.
-The analysis represents the first use of the novel Particle Transformer algorithm [[cite:&particle_transformer]], briefly covered in [[#sec:prospects]], to tag a merged $\text{H}\rightarrow\text{V}\text{V} \rightarrow 4\text{q}$ jet.
+The analysis represents the first use of the novel Particle Transformer algorithm [[cite:&transformer]], briefly covered in [[#sec:prospects]], to tag a merged $\text{H}\rightarrow\text{V}\text{V} \rightarrow 4\text{q}$ jet.
 The second result consists on using \ac{VBS} production of $\text{W}^{\pm}\text{W}^{\pm}\text{H}(\rightarrow \text{b}\bar{\text{b}})$ to constrain HHWW couplings, considering only W leptonic channels [[cite:&wwh_kvv_cms_theory;&wwh_kvv_cms]].
 The diagrams also include $\lh{3}$, but given the experimental sensitivity the analysis focuses instead on $\kvv$, being mostly sensitive to $\text{V}=\text{W}$ due to the lepton selection.
 The final constraints are competitive with other subleading channels.
@@ -61,9 +61,9 @@ These new ideas show the potential for a continued deliver of high-quality resul
 
 * Resonant searches
 The \ac{CMS} Collaboration has very recently performed a combination of multiple \run{2} resonant analyses [[cite:&interf_studies]], considering both the \xhh{} and the \xyh{} topologies, with X and Y being \ac{BSM} scalars which could reflect the theories described in [[#sec:res_BSM_hh]].
-In the same work, interpretations are done for different theories, establishing  exclusion limits on their parameters.
+In the same work, interpretations are done for different theories, establishing  exclusion limits on the model's parameters.
 Individual analyses extract 95% \ac{CL} upper limits on the resonant HH production as a function of the resonance mass $\mx$.
-When YH limits are drawn, an additional dependence on $\my$ exists.
+When YH limits are drawn, an additional dependence on $\my$ is included.
 In total, six searches are considered, targeting a variety of final states.
 On the one hand, \xhh{} searches include the \bbww{} decay with resolved [[cite:&cms_hh_bbww]] and merged [[cite:&cms_hh_bbww_merged]] topologies, and also a multilepton search [[cite:&cms_hh_multileptons]].
 On the other hand, the searches considered for the \xyh{} process are \xyhbbtt{} [[cite:&higgs_bbtautau_hy]], \xyhbbgg{} [[cite:&higgs_bbgg_hy]] and \xyhbbbb [[cite:&higgs_bbbb_hy]].
@@ -85,11 +85,10 @@ The exclusion in terms of $\sigma\mathcal{B}$ goes down to \SI{\sim 0.1}{\femto\
 The best sensitivity at low masses is obtained by the \xhhbbgg{} search, while at high masses the two searches with b-tagged merged jets dominate, mostly \xhhbbbb{}.
 The \xhhbbtt{} result becomes more important at intermediate masses, demonstrating the complementarity between the three silver bullets.
 The results of the statistical combination are shown as solid red lines.
-No deviation larger than 2 standard deviations from the expected limits is observed.
+No deviation larger than \SI{2}{\sigma} from the expected limits is observed.
 The combination brings good limit improvements in the intermediate $\mx$ range, with respect to individual channels.
 This happens in phase-space regions where no single channel dominates the sensitivity.
 A recent combination of HH searches performed by \ac{ATLAS} can be found in [[cite:&atlas_comb_res]], where the \spin{0} result uses the three most sensitive channels and obtains comparable results to \ac{CMS}.
-The \xhhbbtt{} result obtained in this thesis and shown in [[#sec:final_limits]] hints at a much stronger limit than the one in [[fig:res_comb_xhh]], opening a window for further improvements in the combination, still with \run{2} data.
 
 We show the \xyh{} combinations in [[ref:fig:comb_xyh_lowmass,fig:comb_xyh_highmass]], where 95% \ac{CL} $\sigma\mathcal{B}$ upper limits are drawn as a function of $\my$, and different $\mx$ limits are rescaled to make the curves visually distinct.
 The two plots differ on the $\mx$ range, with the split happening at \SI{1}{\TeV}.
@@ -111,6 +110,13 @@ The exclusion upper limits tend to be of around \num{50}, \num{5}, and \SI{0.3}{
 #+ATTR_LATEX: :width .9\textwidth :center
 \hspace{.9cm} [[~/org/PhD/Thesis/figures/intro/XHY_Comb_HighMass.pdf]]
 #+END_figure
+
+** \bbtt{} resonant searches
+
+The \xhhbbtt{} result obtained in this thesis represents an enormous improvement over the first of such studies in \ac{CMS}, which used only 2016 data [[cite:&cms_hh_bbtt]].
+This work also improves on the techniques of its nonresonant counterpart [[cite:&higgs_bbtautau_nonres]].
+A \xhybbtt{} has also been published by \ac{CMS} [[cite:&cms_hh_bbtt]], not obtaining limits for a \SI{125}{\GeV} Higgs boson.
+An interpolation was nevertheless performed, is shwon in [[fig:res_comb_xhh]] and comparisons are discussed in [[#sec:final_limits]].
 
 * Comment from Rainer :noexport:
 "bbtt is really a YH analysis which was requested to exclude the mY=mH points due to strategic considerations by L2 management. Hence no dedicated paper and no spin 2. For our HH combination, an interpolation was made, which is described in the combination subsection (end of Sec 2). This was because management saw another dedicated HH analysis coming which was supposed to give better sensitivity for HH. But it never converged.

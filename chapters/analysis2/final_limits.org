@@ -2,6 +2,9 @@
 :CUSTOM_ID: sec:final_limits
 :END:
 
++ compare also to HY analysis [[cite:&higgs_bbtautau_hy]]
++ Importantly, the results of this work hint at a the strongest limit than the one in [[fig:res_comb_xhh]], opening a window for further improvements in the combination, still with \run{2} data.
+  
 #+NAME: fig:Figure label
 #+CAPTION: Final limits for \spin{0} (left) and \spin{2} (right).
 #+BEGIN_figure

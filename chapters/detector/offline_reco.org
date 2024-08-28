@@ -222,9 +222,13 @@ Additional muons can be searched for in the rare cases where the calibrated clus
 The description in this section serves as basis for the more complex algorithms reconstructing hadronic tau decays, which are briefly described in [[#sec:physics_objects]], and are essential for the \xhhbbtt{} analysis.
 
 * Jets
-Since quarks and gluons carry color charge, they must obbey \ac{QCD} /confinement/, according to which only colorless states are allowed.
-As a consequence, once a hard collision in \ac{HEP} experiments takes place, ejected quarks and gluons are immediately associated to other colored objects, forming colorless hadrons in a process called /hadronization/.
-The group of all newly formed colorless hadrons is called a /jet/, since they all travel in approximately the same direction, and tends to be shaped as a narrow cone, of course depending on the algorithm used for the jet reconstruction.
+:PROPERTIES:
+:CUSTOM_ID: sec:offline_jet_object
+:END:
+
+Since quarks and gluons carry color charge, they must obey \ac{QCD} /confinement/, according to which only colorless states are allowed.
+As a consequence, once a hard collision in takes place, ejected quarks and gluons are immediately associated to other colored objects, forming colorless hadrons in a process called /hadronization/.
+The group of all newly formed colorless hadrons is called a /jet/, since all its constituents travel in approximately the same direction, outlining a narrow cone shape, of course dependent on the algorithm used for the its reconstruction.
 In \ac{CMS}, jets are reconstructed from charged and neutral \ac{PF} candidates, 85% of which are photons and charged hadrons, via the anti-$\ktalgo$ algorithm [[cite:&antikt]].
 This algorithm, designed to be insensitive to the effect of soft radiation, defines the following two distance parameters, themselves inspired by previous clustering algorithms [[cite:&kt;&cambridge_aachen_1;&cambridge_aachen_2]]:
 
@@ -232,28 +236,28 @@ This algorithm, designed to be insensitive to the effect of soft radiation, defi
 \begin{equation}
   \begin{cases}
     d_{ij}=\min(1/k_{\text{T},i}^{2}, 1/k_{\text{T},j}^{2})\, \Delta_{ij}^2 / R^2 \\
-    d_{i\text{B}} = 1/k_{\text{T},i}^{2}
+    d_{i}^{\text{B}} = 1/k_{\text{T},i}^{2}
   \end{cases}\,,
 \end{equation}
 
-\noindent where $\Delta_{ij}^2 = (y_i - y_j)^2 + (\phi_i - \phi_j)^2$, with $y$ being the rapidity, $\phi$ the azimuthal angle and $k$ the transverse momentum, $d_{ij}$ is the distance between two \ac{PF} candidates or pseudo-jets $i$ and $j$, $d_{i\text{B}}$ is the distance between $i$ and the beam B.
-$\Delta^2_{ij}/R$ encodes the jet angular extension, where $R$ determines the radius of the clustering.
+\noindent where $d_{ij}$ is the distance between two \ac{PF} candidates or pseudo-jets $i$ and $j$, $d_{i}^{\text{B}}$ is the distance between $i$ and the beam B, and $\Delta_{ij}^2 = (y_i - y_j)^2 + (\phi_i - \phi_j)^2$, with $y$ being the rapidity, $\phi$ the azimuthal angle and $k$ the transverse momentum.
+$\Delta^2_{ij}/R^2$ encodes the jet angular extension, where $R$ determines the radius of the clustering.
 The fact that the distances are inversely proportional to the transverse momentum of the particles or pseudo-jets ensures that the soft particles will first cluster around the hard particles in the event.
 This is meant to avoid the modification of the jet shape by soft radiation.
-In the limit where a single hard particle exists, the jet will be perfectly conical, accumulating all soft particles within $R$.
+In the limit where there is only a single hard particle, the jet will be perfectly conical, accumulating all soft particles within $R$.
 If two hard particles exist, the algorithm will instead produce two clipped cones, with their overlap divided by a straight line.
 The algorithm proceeds iteratively as follows:
 + identify the smallest of the two distances between all available particles or pseudo-jets $i$ and $j$:
-  + if $d_{ij} < d_{iB}$, then $i$ and $j$ are combined to form a new pseudo-jet;
-  + if $d_{ij} > d_{iB}$, the iteration ends and $i$ is defined as a new jet and removed from the list of particles and pseudo-jets;
+  /a/) if $d_{ij} < d_{i}^{\text{B}}$, then $i$ and $j$ are combined to form a new pseudo-jet;
+  /b/) if $d_{ij} > d_{i}^{\text{B}}$, the iteration ends and $i$ is defined as a new jet and removed from the list of particles and pseudo-jets;
 + the procedure is repeated until no particles or pseudo-jets are left and a list of jets has been produced.
-\noindent In \ac{CMS}, \ac{PF} objects are feeded to the =FASTJET= package [[cite:&fastjet]] which runs the the anti-$\ktalgo$ with $R=0.4$, 0.8 or 0.15 depending on the intended jet cone size.
+\noindent In \ac{CMS}, \ac{PF} objects are feeded to the =FASTJET= package [[cite:&fastjet]], which runs the the anti-$\ktalgo$ with $R=0.4$, 0.8 or 1.5 depending on the intended jet cone size.
 In the resonant HH analysis detailed in this thesis, the first two values are employed, for resolved and boosted topologies, respectively.
 The jet four-momentum is computed as the vector sum of all the four-momenta of clustered \ac{PF} candidates.
 As shown in [[fig:pflow_gains]] (right), the anti-$\ktalgo$ together with the \ac{PF} approach allows the reconstruction of \SI{\sim 90}{\percent} of the jet constituents, representing a dramatic performance improvement especially at lower energies.
 Jet resolutions in \ac{CMS} are quite energy-dependent, at around 15-20% for $\pt \sim30\,\si{\GeV}$, $10\%$ for $\pt \sim100\,\si{\GeV}$, and 5% for $\pt \sim1\,\si{\TeV}$ [[cite:&jet_resolution_run2]].
 Additional jet identification criteria can be introduced to target specific jet signatures, such as c- and b-jets, or hadronically decaying $\tau\text{s}$.
-A detailed description of the such criteria is discussed in [[#sec:physics_objects]], in the context of the \xhhbbtt{} analysis.
+A detailed description of such criteria is discussed in [[#sec:physics_objects]], in the context of the \xhhbbtt{} analysis.
 Required corrections such as jet energy scales and resolutions are also covered there.
 
 * Missing transverse energy

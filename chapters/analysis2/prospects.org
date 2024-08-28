@@ -145,7 +145,7 @@ Uncertainties are still dominated by the lack of statistics, but \ac{ggF} theory
 
 For the moment, Run3 is an opportunity to bring improvements before the start of the \ac{HL-LHC}.
 New techniques, including better estimates of \ac{QCD} background and new machine learning methods, will make existing results quickly obsolete.
-The usage of \ac{PNet} [[cite:&particle_net]] for \tau-initiated jets and the application of transformer technology to jet tagging [[cite:&particle_transformer]] might have a strong impact.
+The usage of \ac{PNet} [[cite:&particle_net]] for \tau-initiated jets and the application of transformer technology to jet tagging [[cite:&transformer]] might have a strong impact.
 This opens up a potentially large phase-space for boosted $H\rightarrow bb/cc/a\tau\tau$ analyses.
 Run 3 will extend \ac{PNet}'s tasks, with jet flavour classification, $\tau\tau$ identification and jet mass regression.
 It has already been used for energy regression in the context of jet energy scale calibrations, improving energy response resolution by \SI{\sim 15}{\percent} [[cite:&pnet_jet_calibration]].
