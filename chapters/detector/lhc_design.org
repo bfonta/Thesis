@@ -1,5 +1,9 @@
-<<sec:lhc_design>>
+:PROPERTIES:
+:CUSTOM_ID: sec:lhc_design
+:END:
 
++ The LHC consists of a 27-kilometre ring of superconducting magnets with a number of accelerating structures to boost the energy of the particles along the way.
+  
 In [[ref:fig:cms_xsec_summary]] we can assess the full range of cross-section values in the reach of \ac{CMS} and the \ac{LHC}.
 The dominant inclusive proton-proton interactions tower at \SI{e14}{\femto\barn}, followed closely by their inelastic counterparts at \SI{\sim 6e13}{\femto\barn} [[cite:&inelastic_pp_7tev;&inelastic_pp_13tev]].
 On the other end, extremely rare triboson, \ac{VBF}, \ac{VBS}, top and Higgs processes, including the HH process studied elsewhere in this work, sit at the edge of what is currently achievable, with cross sections of the order of some \si{\femto\barn}, or even less.
@@ -38,7 +42,7 @@ F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}
 
 #+NAME: pileup
 \begin{equation}
-<\mu> = \frac{L\sigma_{pp}^{\text{inelastic}}}{n_bf_{\text{rev}}}
+\langle\mu\rangle = \frac{L\sigma_{pp}^{\text{inelastic}}}{n_bf_{\text{rev}}}
 \end{equation}
 
 #+NAME: tab:LHCparameters

@@ -44,6 +44,7 @@
 
 
 * The CMS Detector at the LHC
+#+INCLUDE: "chapters/detector/cern.org"
 ** The Large Hadron Collider
 #+INCLUDE: "chapters/detector/lhc_intro.org"
 *** Design
