@@ -31,7 +31,7 @@ The full \logicor{} is not explored for reasons discussed in [[#sec:inclusion_me
 The regions have a very similar structure for all years and channels, and are shown in [[fig:kinTriggerRegions]] for 2018, in a simplified illustration which considers only the \ac{pt} cuts.
 The only exception is the \eletau{} channel in 2016, since no cross trigger was available, and the legacy region only includes $\pt^e > 26\,\si{\GeV} \&\& |\eta|<2.5$.
 
-The \ac{pt} and \ac{eta} cuts which define the regions are based on the corresponding \ac{HLT} thresholds in [[ref:&tab:trigger_etau;&tab:trigger_mutau;&tab:trigger_mutau]], plus the additional threshold applied on top of \ac{pt} cuts (\SI{1}{\GeV} for electrons, \SI{2}{\GeV} for muons and \SI{5}{\GeV} for taus).
+The \ac{pt} and \ac{eta} cuts which define the regions are based on the corresponding \ac{HLT} thresholds in [[tab:trigger_mutau]], plus the additional threshold applied on top of \ac{pt} cuts (\SI{1}{\GeV} for electrons, \SI{2}{\GeV} for muons and \SI{5}{\GeV} for taus).
 The legacy region takes precedence over all other regions, since it is the region where the triggers more closely target the analysis topology, and thus have larger signal acceptance.
 Taking as an example the \eletau{} channel in 2018 (top left plot in [[fig:kinTriggerRegions]]), the legacy region is defined with the following \ac{pt} cuts:
 

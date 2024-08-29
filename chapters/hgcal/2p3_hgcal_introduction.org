@@ -137,7 +137,7 @@ In the \ac{HL-LHC} environment, a robust vertex identification becomes possible 
 [[~/org/PhD/Thesis/figures/hgcal/FluenceHGCAL.pdf]]
 #+END_figure
 
-In summary, while sustaining the doses and fluences shown in [[fig:dose_fluence_hgcal]], the \ac{HGCAL} fulfils the following requirements for its upgrade [[cite:&hgcalTDR]]:
+In summary, while sustaining the doses and fluences[fn:: The fluence is relevant for silicon detectors, while the dose is an important parameter for electronics and scintilators.] shown in [[fig:dose_fluence_hgcal]], the \ac{HGCAL} fulfils the following requirements for its upgrade [[cite:&hgcalTDR]]:
 
 + ensure the lateral compactness of showers thanks to sufficient material density;
 + ensure high transverse and longitudinal granularities;
@@ -145,8 +145,8 @@ In summary, while sustaining the doses and fluences shown in [[fig:dose_fluence_
 + enable precise timing measurements;
 + include \ac{L1} trigger capabilities.
 
-\noindent These features turn \ac{HGCAL} into a truly five-dimensional sampling calorimeter: energy, three-dimensional position and timing measurements.
-A summary of some of the parameters of \ac{HGCAL} is provided in [[ref:tab:HGCALparameters]].
+\noindent The features above turn \ac{HGCAL} into a truly five-dimensional sampling calorimeter: energy, three-dimensional position and timing measurements.
+A summary of some of the parameters of \ac{HGCAL} is provided in [[tab:HGCALparameters]].
 
 #+NAME: tab:HGCALparameters
 #+CAPTION: Summary of some of the properties of \ac{HGCAL}.

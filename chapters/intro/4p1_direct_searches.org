@@ -16,7 +16,7 @@ Jointly studying \ac{ggF} and \ac{VBF}, \hhbbtt{} [[cite:&higgs_bbtautau_nonres]
 The above channels drive the sensitivity of combinations, but are complemented by the following.
 In the \ac{ggF} production process only, \ac{CMS} obtained results on \hhbbzz{} [[cite:&cms_hh_bbzz]] and on the extremely rare \hhttgg{} decay ($\mathcal{B}\approx0.028\%$) [[cite:&gammagammatautau]].
 The latter is not used in the combinations reported below.
-Taking into account both \ac{ggF} and \ac{VBF}, we also have multilepton (HH decaying to WWWW, $\text{W}\text{W}\tau\tau$ and $\tau\tau\tau\tau$) [[cite:&cms_hh_multilepton]], \hhbbww{} [[cite:&cms_hh_bbww]] and \hhwwgg{} [[cite:&cms_hh_wwgg]] analyses.
+Taking into account both \ac{ggF} and \ac{VBF}, we also have multilepton (HH decaying to WWWW, $\text{W}\text{W}\tau\tau$ and $\tau\tau\tau\tau$) [[cite:&cms_hh_multileptons]], \hhbbww{} [[cite:&cms_hh_bbww]] and \hhwwgg{} [[cite:&cms_hh_wwgg]] analyses.
 
 #+NAME: fig:HH_nonres_comb_xsec
 #+CAPTION: Upper limits at 95% \ac{CL} on the SM signal strength $\mu = \xshh / \xshhsm$. The inner (green) aand outer (yellow) bands indicate the regions containing 68% and 95%, respectively, of the limits on $\mu$ expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the post-fit values of the uncertainties. Figure taken from [[cite:&summary_hig_twiki]].
@@ -105,7 +105,7 @@ The exclusion upper limits tend to be of around \num{50}, \num{5}, and \SI{0.3}{
 #+END_figure
 
 #+NAME: fig:comb_xyh_highmass
-#+CAPTION: Observed and expected \xyh{} upper limits, at 95% \ac{CL}, on the product of the cross section $\sigma$ for the production of a resonance X via \ac{ggF} and the \ac{BR} $\mathcal{B}$ for the $\text{X} \rightarrow \text{Y (bb)} \text{H}$ decay. The \ac{SM} \acp{BR} of the $\text{H} \rightarrow ττ$, $\text{H} \rightarrow \gamma\gamma$ and $\text{H} \rightarrow \text{bb}$ decays are assumed. The results from the individual analyses and their combination are shown as functions of $\my$ and $\mx$ for $\mx \geq 1.2\,\si{\TeV}$. Observed (expected) limits are indicated by markers connected with solid (dashed) lines. For an easier visualization, the limits have been scaled in successive steps by two orders of magnitude each. For each set of graphs, a black arrow points to the corresponding $\mx$ value.
+#+CAPTION: Observed and expected \xyh{} upper limits, at 95% \ac{CL}, on the product of the cross section $\sigma$ for the production of a resonance X via \ac{ggF} and the \ac{BR} $\mathcal{B}$ for the $\text{X} \rightarrow \text{Y (bb)} \text{H}$ decay. The \ac{SM} \acp{BR} of the $\text{H} \rightarrow \tau\tau$, $\text{H} \rightarrow \gamma\gamma$ and $\text{H} \rightarrow \text{bb}$ decays are assumed. The results from the individual analyses and their combination are shown as functions of $\my$ and $\mx$ for $\mx \geq 1.2\,\si{\TeV}$. Observed (expected) limits are indicated by markers connected with solid (dashed) lines. For an easier visualization, the limits have been scaled in successive steps by two orders of magnitude each. For each set of graphs, a black arrow points to the corresponding $\mx$ value.
 #+BEGIN_figure
 #+ATTR_LATEX: :width .9\textwidth :center
 \hspace{.9cm} [[~/org/PhD/Thesis/figures/intro/XHY_Comb_HighMass.pdf]]

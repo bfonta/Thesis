@@ -7,7 +7,7 @@ Phase-2 will soon follow with the new \ac{HL-LHC} [[cite:&hllhc]], which is plan
 An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of \num{10} years, corresponding to \SI{90}{\percent} of the total data collected by the \ac{LHC}.
 The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SI{7.5e34}{\per\cm\squared\per\second}.
 This is more than twice the \ac{LHC}’s current value.
-These conditions correspond, in the ultimate HL-LHC configuration, to up to 200 \ac{PU}, \SI{2}{\mega\gray} of total ionizing dose[fn:: One Gray is defined as the absorption of one Joule of radiation energy per kilogram.] and a fluence of up to \SI{e16}{\nequiv}.
+The conditions correspond, in the ultimate HL-LHC configuration, to up to 200 \ac{PU}, \SI{2}{\mega\gray} of total ionizing dose[fn:: One Gray is defined as the absorption of one Joule of radiation energy per kilogram.] and a fluence of up to \SI{e16}{\nequiv}.
 The neutron equivalent fluence, in this context, is defined as the number of \SI{1}{\MeV} neutrons per \si{\per\cm\squared} traversing the detector material, and serves as a measure for potential radiation damage.
 The normalization at \SI{1}{\MeV} is chosen both due to historical reasons and the fact that expected neutron spectra at the \ac{HL-LHC} typically have a probability density peaking in that region. 
 For comparison with the \ac{HL-LHC}, the \ac{LHC} currently brings an average of \num{\sim 50} \ac{PU} interactions [[cite:&pileup_twiki]], a dose of the order of \SI{0.1}{\mega\gray} and a fluence of \SI{\sim e15}{\nequiv} (see [[ref:sec:lhc_design]]) [[cite:&lhc_fluences]].

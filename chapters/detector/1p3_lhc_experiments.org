@@ -1,4 +1,6 @@
-<<sec:lhc_experiments>>
+:PROPERTIES:
+:CUSTOM_ID: sec:lhc_experiments
+:END:
 
 tunnel facility excavated for the LEP collider
 

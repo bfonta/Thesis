@@ -195,7 +195,7 @@ For each type of \ac{PF} candidate an offset energy is subtracted from the jet e
 Next, detector response corrections are applied, in order to fix its non-uniformity across the jet \ac{pt} and \ac{eta}.
 In the following step, still remaining data/MC differences are further corrected; they originate from \ac{PU} effects that also depend on the jet \ac{pt} and \ac{eta}.
 Finally, optional flavour dependet corrections can be applied.
-For all jet types, the energy scale uncertainties are smaller than 3% for $\pt > 50\,\si{\GeV}$ in the $|η| < 3.0$ region, increasing to 5% for $3.0 < |η| < 5.0$.
+For all jet types, the energy scale uncertainties are smaller than 3% for $\pt > 50\,\si{\GeV}$ in the $|\eta| < 3.0$ region, increasing to 5% for $3.0 < |\eta| < 5.0$.
 
 #+NAME: fig:jerc
 #+CAPTION:  Flow of jet energy corrections to sequentially apply to obtain a calibrated jet, as done for \run{2} within \ac{CMS}. Taken from [[cite:&jet_corr2]].

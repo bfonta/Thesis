@@ -2,6 +2,18 @@
 :CUSTOM_ID: sec:lhc_operations
 :END:
 
+In [[fig:cms_xsec_summary]] we can assess the full range of cross-section values in the reach of \ac{CMS} and the \ac{LHC}.
+The dominant inclusive proton-proton interactions tower at \SI{e14}{\femto\barn}, followed closely by their inelastic counterparts at \SI{\sim 6e13}{\femto\barn} [[cite:&inelastic_pp_7tev;&inelastic_pp_13tev]].
+On the other end, extremely rare triboson, \ac{VBF}, \ac{VBS}, top and Higgs processes, including the HH process studied elsewhere in this work, sit at the edge of what is currently achievable, with cross sections of the order of some \si{\femto\barn}, or even less.
+This impressive range of \num{14} orders of magnitude testifies for the richness of the \ac{LHC} programme.
+
+#+NAME: fig:cms_xsec_summary
+#+CAPTION: Summary of the cross section measurements of Standard Model processes at CMS. The process, centre-of-mass energy of the measurement, and the associated publication are reported on the left of the panel; the integrated luminosity used for each result is reported on the right. Values are to be compared to the total proton-proton interaction cross section of about \SI{1e11}{\pico\barn}. Taken from [[cite:&summary_smp_twiki]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/CMSCrossSectionsSummary.pdf]]
+#+END_figure
+
 #+NAME: fig:lhc_lumi_results
 #+CAPTION: (Left) Delivered luminosity as a function of the time for all data-takingperiods. (Right) Average number of interactions per bunch crossing for all data-taking periods. The overall mean values and the inelastic pp cross sections are also shown. For both plots, since the 2023 data taking is still ongoing at the time of writing of this manuscript, the related information is partial.
 #+BEGIN_figure

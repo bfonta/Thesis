@@ -9,15 +9,14 @@ In the following we provide a brief and necessarily incomplete overview of some 
 A detailed description is out of the scope of this work.
 
 * EW processes
-
 The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
 This notably applies to W mass $\mw$ and weak mixing angle $\thw$ measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
-\num{\sim 2e6} W boson events will be collected per week, leading to a statistical sensitivity of about \SI{10}{\MeV} for the $W$ mass, and significantly lower for cross-section measurements.
+\num{\sim 2e6} W boson events will be collected per week, leading to a statistical sensitivity of about \SI{10}{\MeV} for the W mass, and significantly lower for cross-section measurements.
 The added luminosity might also help solving the tension between old $\theta_{W}$ measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result [[cite:&weak_mixing_angle_cms]], which agrees with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
 Concerning \ac{VBF} and \ac{VBS} processes, despite the overall lower cross-section, of about one order of magnitude with respect to the \ac{ggF} production, the presence of additional hard and forward jets enables a very significant reduction of the multijet background.
 This is particularly true for large rapidity separations $\Delta \dijetrap \gtrsim 4.5$ and di-jet invariant masses
 $\dijetmass \gtrsim \SI{700}{\GeV}$, where \ac{VBF} production dominates over \ac{ggF}.
-In \ac{VBS}, measurements of longitudinal scattering of two $V$ ($V=W,Z$) is particularly enticing, as it is still unknown whether the Higgs alone can avoid a divergent behaviour of the scattering amplitude at high energies, violating unitarity [[cite:&vbs2]].
+In \ac{VBS}, measurements of longitudinal scattering of two Vs ($\text{V}=\text{W},\,\text{Z}$) is particularly enticing, as it is still unknown whether the Higgs alone can avoid a divergent behaviour of the scattering amplitude at high energies, violating unitarity [[cite:&vbs2]].
 The longitudinal component of the $V$ bosons is in particular tightly connected to the Higgs mechanism and \ac{EWSB}, since massless particles only have transversal components.
 However, differential measurements of gauge boson polarization is harder given the reduced cross-section of the longitudinal-only components.
 Would unitarity be violated, particle probability would no longer be conserved: the calculated number of $V$ pairs produced in the interaction would exceed the incident flux [[cite:&thomson]].
@@ -36,7 +35,7 @@ On the photon side, diphotons with high invariant mass are ideal probes to test 
 The \ac{HL-LHC} will enable a more precise knowledge of photon related cross-sections.
 For the first time, the \ac{HL-LHC} will make possible the measurement of quantum correlations between partons in the proton by precisely studying differential distributions.
 This brings an improvement in \ac{DPS} modeling, which has been so far very limited.
-\ac{DPS} can be as relevant as the single proton scattering for same-sign $WW$ final states involving $b\bar{b}$ or $c\bar{c}$ quark pairs.
+\ac{DPS} can be as relevant as the single proton scattering for same-sign WW final states involving $\bbbar$ or $\ccbar$ quark pairs.
 
 * Top physics
 

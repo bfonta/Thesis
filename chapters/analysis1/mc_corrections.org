@@ -41,7 +41,7 @@ Indeed, looking at the recomputed efficiency and SF plot in ref:fig:eff_mumu_201
 :END:
 
 To account for discrepancies in the b-tag performance in MC, the whole b-tagging discriminant distribution in MC is corrected
-to match the one in data, following the shape calibration procedure recommended by the b-Tag and Vertexing POG in~\cite{twiki:BTagShapeCalibration}.
+to match the one in data, following the shape calibration procedure recommended by the b-Tag and Vertexing POG.
 %
 For each MC event with a given jet configuration, the event weight $\omega$ is computed as:
 \[

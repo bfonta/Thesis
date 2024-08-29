@@ -1,13 +1,15 @@
-#+TITLE: Thesis Title
-#+AUTHOR: Bruno Alves
 #+LATEX_CLASS: mimosis
+#+LATEX_CLASS_OPTIONS: [a4paper,12pt]
 #+SETUPFILE: setup.org
 #+SETUPFILE: definitions.org
 #+EXCLUDE_TAGS: noexport
-#+OPTIONS: H:4
+#+OPTIONS: H:4 toc:nil
 
+* OPTIONS START :ignore:
+#+LATEX: \input{cover}
 # #### default spacing is 14pt
 #+LATEX: \fontsize{12pt}{13pt}\selectfont
+#+TOC: headlines 4
 
 * Introduction to Higgs boson pair production
 #+INCLUDE: "chapters/intro/0_sm_intro.org"
@@ -44,27 +46,27 @@
 
 
 * The CMS Detector at the LHC
-#+INCLUDE: "chapters/detector/cern.org"
+#+INCLUDE: "chapters/detector/0_cern.org"
 ** The Large Hadron Collider
-#+INCLUDE: "chapters/detector/lhc_intro.org"
+#+INCLUDE: "chapters/detector/1_lhc_intro.org"
 *** Design
-#+INCLUDE: "chapters/detector/lhc_design.org"
+#+INCLUDE: "chapters/detector/1p1_lhc_design.org"
 *** Operations
-#+INCLUDE: "chapters/detector/lhc_operations.org"
+#+INCLUDE: "chapters/detector/1p2_lhc_operations.org"
 *** Experiments
-#+INCLUDE: "chapters/detector/lhc_experiments.org"
+#+INCLUDE: "chapters/detector/1p3_lhc_experiments.org"
 ** The CMS Detector
-#+INCLUDE: "chapters/detector/detector.org"
+#+INCLUDE: "chapters/detector/2_detector.org"
 *** Coordinate system
-#+INCLUDE: "chapters/detector/coordinate_system.org"
+#+INCLUDE: "chapters/detector/2p1_coordinate_system.org"
 *** Detector Structure
-#+INCLUDE: "chapters/detector/detector_structure.org"
+#+INCLUDE: "chapters/detector/2p2_detector_structure.org"
 ** The CMS Trigger System
-#+INCLUDE: "chapters/detector/cms_trigger_system.org"
+#+INCLUDE: "chapters/detector/3_cms_trigger_system.org"
 ** Offline Reconstruction
-#+INCLUDE: "chapters/detector/offline_reco.org"
+#+INCLUDE: "chapters/detector/4_offline_reco.org"
 ** Monte Carlo generation
-#+INCLUDE: "chapters/detector/mc_generation.org"
+#+INCLUDE: "chapters/detector/5_mc_generation.org"
 
 
 * Trigger primitives reconstruction for the HGCAL Level-1 trigger

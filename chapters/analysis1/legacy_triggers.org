@@ -13,7 +13,7 @@ Cross trigger paths are then added to the \eletau{} and \mutau{} channels, follo
 By "cross" we refer to triggers which apply a \logicand{} on two different object types: electron and tau for \eletau{}, muon and tau for \mutau{}.
 These new triggers enlarge the analysis' phase-space, as shown in [[fig:cross_trigger_ex]], increasing its event acceptance.
 The \ac{pt} thresholds on the leptonically-decaying $\tau\text{s}$ can indeed be lowered.
-We call /legacy triggers/ the set of triggers that had already been used in previous analysis iterations, and list them for the three analysis channels in [[ref:&tab:trigger_etau;&tab:trigger_mutau;&tab:trigger_tautau]].
+We call /legacy triggers/ the set of triggers that had already been used in previous analysis iterations, and list them for the three analysis channels in [[ref:tab:trigger_etau;tab:trigger_mutau;tab:trigger_tautau]].
 The region covered by those triggers is appropriately called the /legacy region/.
 
 Additionally, the \mumu{} channel, despite not being exploited for the final results in [[#sec:final_limits]], is nevertheless used for defining a \ac{CR} and for extracting \ac{MET} trigger \acp{SF} as explained in [[#sec:met_trigger_sfs]].

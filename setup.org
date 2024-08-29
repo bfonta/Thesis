@@ -6,14 +6,90 @@
 #+LATEX_HEADER: \usepackage{xcolor}
 #+LATEX_HEADER: \usepackage{pgffor}
 #+LATEX_HEADER: \usepackage{slashed}
-#+LATEX_HEADER: \usepackage{epigraph} 
+#+LATEX_HEADER: \usepackage{epigraph}
+#+LATEX_HEADER: \usepackage{graphicx} 
 #+LATEX_HEADER: \newcommand{\repeatn}[2]{\foreach \i in {1, ..., #1} {#2}}
+#+LATEX_HEADER: \usepackage[absolute,overlay]{textpos}
+#+LATEX_HEADER: \usepackage{lipsum}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{caption}
+#+LATEX_HEADER: \usepackage{multicol}
+#+LATEX_HEADER: \usepackage{multirow}
+#+LATEX_HEADER: \setlength{\columnseprule}{0pt}
+#+LATEX_HEADER: \setlength\columnsep{10pt}
+#+LATEX_HEADER: \usepackage[french]{babel}
+#+LATEX_HEADER: \label{form}
 
 # ##### font type
 #+LATEX_HEADER: \usepackage{tgheros}
 
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{margin=1in}
+
+# ##### PhD Structure
+#+LATEX_HEADER: \newcommand{\PhDTitle}{Titre de la thèse (sur plusieurs lignes si nécessaire, 4 voire 5)}
+#+LATEX_HEADER: \newcommand{\PhDname}{Bruno Afonso Fontana Santos Alves}
+#+LATEX_HEADER: \newcommand{\NNT}{20XXIPPAXXXX}
+#+LATEX_HEADER: \newcommand{\ecodoctitle}{Dénomination}
+#+LATEX_HEADER: \newcommand{\ecodocacro}{Sigle}
+#+LATEX_HEADER: \newcommand{\ecodocnum}{000}
+#+LATEX_HEADER: \newcommand{\PhDspeciality}{voir spécialités par l'ED}
+#+LATEX_HEADER: \newcommand{\PhDworkingplace}{Nom de l'établissement}
+#+LATEX_HEADER: \newcommand{\defenseplace}{Ville de soutenance}
+#+LATEX_HEADER: \newcommand{\defensedate}{Date}
+
+#+LATEX_HEADER: \newcommand{\logoEt}{etab}
+#+LATEX_HEADER: \newcommand{\vpos}{0.1}
+#+LATEX_HEADER: \newcommand{\hpos}{12.25}
+#+LATEX_HEADER: \newcommand{\logoEtt}{etab2}
+#+LATEX_HEADER: \newcommand{\vpostt}{0.1}
+#+LATEX_HEADER: \newcommand{\hpostt}{6.1}
+
+# Membre n°1 (Président) / Member n°1 (President)
+#+LATEX_HEADER: \newcommand{\jurynameA}{Prénom Nom}
+#+LATEX_HEADER: \newcommand{\juryadressA}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\juryroleA}{Président}
+
+# Membre n°2 (Rapporteur) / Member n°2 (Reviewer)
+#+LATEX_HEADER: \newcommand{\jurynameB}{Prénom Nom}
+#+LATEX_HEADER: \newcommand{\juryadressB}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\juryroleB}{Rapporteur}
+
+# Membre n°3 (Rapporteur) / Member n°3 (Reviewer)
+#+LATEX_HEADER: \newcommand{\jurynameC}{Prénom Nom}
+#+LATEX_HEADER: \newcommand{\juryadressC}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\juryroleC}{Rapporteur}
+
+# Membre n°4 (Examinateur) / Member n°4 (Examiner)
+#+LATEX_HEADER: \newcommand{\jurynameD}{Prénom Nom}
+#+LATEX_HEADER: \newcommand{\juryadressD}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\juryroleD}{Examinateur}
+
+# Membre n°5 (Directeur de thèse) / Member n°5 (Thesis supervisor)
+#+LATEX_HEADER: \newcommand{\jurynameE}{Prénom Nom}
+#+LATEX_HEADER: \newcommand{\juryadressE}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\juryroleE}{Directeur de thèse}
+
+# Membre n°6 (Co-directeur de thèse) / Member n°6 (Thesis co-supervisor)
+#+LATEX_HEADER: \newcommand{\jurynameF}{Prénom Nom}
+#+LATEX_HEADER: \newcommand{\juryadressF}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\juryroleF}{Co-directeur de thèse}
+
+# Membre n°7 (Invité) / Member n°7 (Guest)
+#+LATEX_HEADER: \newcommand{\jurynameG}{Prénom Nom}
+#+LATEX_HEADER: \newcommand{\juryadressG}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\juryroleG}{Invité}
+
+# Membre n°8 (Invité) / Member n°8 (Guest)
+#+LATEX_HEADER: \newcommand{\jurynameH}{Prénom Nom}
+#+LATEX_HEADER: \newcommand{\juryadressH}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\juryroleH}{Invité}
+
+#+LATEX_HEADER: \label{layout}
+
+#+LATEX_HEADER: \hypersetup{pdfauthor={\PhDname}, pdfsubject={Manuscrit de thèse de doctorat}, pdftitle={\PhDTitle}}
+
+# ###################################################################################
 
 #+LATEX_HEADER: \makeatletter
 #+LATEX_HEADER: \newcommand{\specialterms}[1]{\@for\next:=#1\do {\@namedef{specialterm@\detokenize\expandafter{\next}}{}}}

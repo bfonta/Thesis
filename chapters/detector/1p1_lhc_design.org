@@ -2,47 +2,48 @@
 :CUSTOM_ID: sec:lhc_design
 :END:
 
-+ The LHC consists of a 27-kilometre ring of superconducting magnets with a number of accelerating structures to boost the energy of the particles along the way.
-  
-In [[ref:fig:cms_xsec_summary]] we can assess the full range of cross-section values in the reach of \ac{CMS} and the \ac{LHC}.
-The dominant inclusive proton-proton interactions tower at \SI{e14}{\femto\barn}, followed closely by their inelastic counterparts at \SI{\sim 6e13}{\femto\barn} [[cite:&inelastic_pp_7tev;&inelastic_pp_13tev]].
-On the other end, extremely rare triboson, \ac{VBF}, \ac{VBS}, top and Higgs processes, including the HH process studied elsewhere in this work, sit at the edge of what is currently achievable, with cross sections of the order of some \si{\femto\barn}, or even less.
-This impressive range of \num{14} orders of magnitude testifies for the richness of the \ac{LHC} programme.
+The world-highest \SI{6.8}{\TeV} proton beam energies at the \ac{LHC} cannot be achieved without a complex chain of injection.
+The chain starts with the production of protons in the \ac{Linac4}, and continues in progressively more energetic acelerating rings, going first to the \ac{PSB}, then to the \ac{PS}, and finally into the \ac{SPS}, before being injected into the \ac{LHC}.
+The complete accelerator complex is illustrated in [[fig:cern_acc_complex]].
 
-#+NAME: fig:cms_xsec_summary
-#+CAPTION: Summary of the cross section measurements of Standard Model processes at CMS. The process, centre-of-mass energy of the measurement, and the associated publication are reported on the left of the panel; the integrated luminosity used for each result is reported on the right. Values are to be compared to the total proton-proton interaction cross section of about \SI{1e11}{\pico\barn}. Taken from [[cite:&summary_smp_twiki]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/detector/CMSCrossSectionsSummary.pdf]]
-#+END_figure
+\Ac{Linac4} [[cite:&linac4]] is designed to boost negative hydrogen ions to high energies via radiofrequency cavities, and it has been the proton source of the \ac{LHC} since 2020.
+It is \SI{86}{\meter} long, is located \SI{12}{\meter} underground, and accelerates ions to \SI{160}{\MeV}, in a series of four stages.
+First, the magnetic field of a radio-frequency quadrupole reaches \SI{3}{\MeV}, then drift tubes arrive at \SI{50}{\MeV}, later a different set of linear accelerators attain \SI{100}{\MeV}, where finally so-called Pi-mode structures provide the final \SI{160}{\MeV} energy.
+During injection to the \ac{PSB}, the ions are stripped from their two electrons, leaving the individual protons, which in turn enable a larger particle multiplicities in the synchrotron, reduces beam losses and simplifies the injection procedure.
+The beam continues its path in the \SI{150}{\meter}-long \ac{PSB}, being accelerated to up to \SI{2}{\GeV}.
+From here the beams follow to the \ac{PS}, but are also sent to the ISOLDE experiment.
+The acceleration procedures continues with the \ac{PS}, CERN's first synchrotron, and \ac{SPS}, which reach energies of \num{25} and \SI{450}{\GeV}, respectively.
+Specially built transfer lines connect the \ac{SPS} and \ac{LHC} ring tunnels, and fast kicker magnets are used to split the proton beam into two beamlines, which are then accelerated to their target energies using additional high frequency cavities.
+The \ac{SPS}, with its \SI{7}{\km} ring length and \num{1317} electromagnets, also directly provides proton beams for some experiments, such as NA61/SHINE, NA62 and COMPASS.
+It has also notably been involved in the discoveries of the W and Z boson, since at the time it was running as a proton-antiproton collider.
 
+The \ac{LHC} consists of a \SI{27}{\km} ring of superconducting magnets with a number of accelerating structures to boost the energy of the particles along the way.
+@lhc@  
 
-
-It is common practice to express charged and neutral particle contributions to radiation in terms of dose and \SI{1}{\MeV} neutron equivalent fluence, respectively.
-The term (absorbed) dose refers to the mean energy imparted by ionizing radiation to matter in a volume divided by the mass contained in the respective volume [[cite:&icru_report]].
-Any particle fluence can be reduced to an equivalent 1 MeV neutron fluence producing the same bulk damage in a specific semiconductor. The scaling is based on the hypothesis that generation of bulk damage is due to non-ionizing energy transfers to the lattice.
-
-In the \ac{LHC}, the total Dose and Fluence, cumulated over 10 years of operation, are expected to be about 100
-kGy and >1015 particles/cm2 respectively (in the LHC experiments) [[cite:&fibers_high_dose]]
+Once the beams achieve the desired energy, they are focused and put into collision in four specific \acp{IP} along the \ac{LHC}'s circumference, where each \ac{IP} is surrounded by a large physics experiment: ATLAS, ALICE, CMS, and LHCb.
+The ATLAS and CMS expertiments are two multi-purpose experiments with a broad and similar physics programme.
+LHCb and ALICE target instead more dedicated fields, namely flavour physics and heavy-ion physics, respectively.
+These and other detectors are succinctly described in [[#sec:lhc_experiments]].
+\Ac{CMS} in particular in described at length in [[#sec:cms_detector]], due to its immediate connection to this thesis.
 
 #+NAME: eq:lumi
 \begin{equation}
-\frac{\partial N}{\partial t} = L\sigma
+\frac{\partial N}{\partial t} = \mathcal{L}\,\sigma
 \end{equation}
 
 #+NAME: eq:inst_lumi
 \begin{equation}
-\mathcal{L} = F \cdot \frac{N_{\text{b}}^2 n_{\text{b}} f_{\text{rev}} \gamma}{4\pi \epsilon_n \beta^*}
+\mathcal{L} = F \, \frac{N_{\text{b}}^2 n_{\text{b}} f_{\text{rev}} \gamma}{4\pi \epsilon_n \beta^*}
 \end{equation}
 
 #+NAME: eq:lumi_form_fact
 \begin{equation}
-F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}{2}}
+F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{-1/2}
 \end{equation}
 
 #+NAME: pileup
 \begin{equation}
-\langle\mu\rangle = \frac{L\sigma_{pp}^{\text{inelastic}}}{n_bf_{\text{rev}}}
+\langle\mu\rangle = \frac{\mathcal{L}\,\sigma_{pp}^{\text{inelastic}}}{n_bf_{\text{rev}}}
 \end{equation}
 
 #+NAME: tab:LHCparameters
@@ -64,7 +65,7 @@ F = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{\frac{-1}
 Goal for Run 3 is to approx. double the luminosity for ATLAS and CMS
 
 #+NAME: fig:cern_acc_complex
-#+CAPTION:  The CERN accelerator complex. The \ac{LHC} is a \SI{27}{\kilo\meter} ring shown at the top in dark blue. Its the last of a complex chain of particle accelerators. The smaller machines are used in sequence to accelerate the proton beams that collide at four \acp{IP}, corresponding to the centre of \ac{ALICE}, \ac{ATLAS}, \ac{CMS} and \ac{LHCb}. Taken from [[cite:&lhc_complex]].
+#+CAPTION:  The CERN accelerator complex. The \ac{LHC} is a \SI{27}{\kilo\meter} ring shown at the top in dark blue. Its the last of a complex chain of particle accelerators. The smaller machines are used in sequence to accelerate the proton beams that collide at four \acp{IP}, corresponding to the centre of ALICE, ATLAS, CMS and LHCb. Taken from [[cite:&lhc_complex]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/CERNaccelerators.pdf]]

@@ -154,7 +154,7 @@ Only \SI{\sim 1}{\percent} of muons within the acceptance of the muon detectors 
 This once again highlights the advantages brough forward by the \ac{PF} approach.
 Occasionally, and despite the \ac{CMS} calorimetric density, some energetic charged hadrons can reach the muon systems and be reconstructed as muons.
 A balance must thus be established between muon identification efficiency and purity.
-The obtained muon $\pt$ resolution ranges between 1% and 6% for $\pt < 100\,\si{GeV}$ muons and is of around 10% for central muons of $\pt ∼ 1\,\si{TeV}$.
+The obtained muon $\pt$ resolution ranges between 1% and 6% for $\pt < 100\,\si{GeV}$ muons and is of around 10% for central muons of $\pt \sim 1\,\si{TeV}$.
 
 # Particle identification and reconstruction
 The identification of muons is based on a set of selections driven by the properties of global and tracker muons.
