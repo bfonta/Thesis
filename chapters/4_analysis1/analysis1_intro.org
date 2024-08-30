@@ -1,5 +1,5 @@
 :PROPERTIES:
-:CUSTOM_ID: sec:bbtautau_intro
+:CUSTOM_ID: sec:analysis1_intro
 :END:
 
 This Chapter covers the latest iteration of the resonant \xhhbbtt{} analysis performed at \ac{CMS}, based on the complete \run{2} data.

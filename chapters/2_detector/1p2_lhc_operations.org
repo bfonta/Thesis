@@ -1,0 +1,79 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:lhc_operations
+:END:
+
+The inaugural run of the \ac{LHC} took place in September 2008, when the first protons successfully circulated around the machine.
+Unfortunately, nine days later, an unexpected and violent leakage of a \ch{He} coolant due to a faulty electrical connection caused the severe damage of multiple equipment, including some superconducting magnets.
+The morose and expensive repairs required a one-year technical stop, after which test \SI{450}{\GeV} proton beams were initially injected, and the energy was steadily increased without further issues.
+
+The \ac{LHC} physics programme started on March 30\textsuperscript{th} 2010, with collisions at \SI{3.5}{\TeV} per beam. 
+The first data period used for Physics analyses, or \run{1}, considered the years of 2011 and 2012, with a total of \SI{29.4}{\invfb} at \SI{20}{\mega\hertz}, where the first \SI{6.1}{\invfb} were collected in 2011 at \SI{7}{\TeV}, and the following \SI{23.3}{\invfb} were obtained at \SI{8}{\TeV} in 2012 [[cite:&lhc_operations]].
+These datasets were responsible for, among other things, the observation of the anticipated Higgs boson at $\mh \sim 125\,\si{\GeV}$ [[cite:&ATLAS_Higgs_discovery;&CMS_Higgs_discovery1;&CMS_Higgs_discovery2]], announced on July 4\textsuperscript{th} 2012.
+It followed a two-years-long \ac{LS}, where the magnet interconnects responsible for the 2008 incident were consolidated.
+Experiments also took advantage of this period to implement detector upgrades.
+
+For \run{2}, the center-of-mass energy was increased to \SI{13}{\TeV} at a \SI{40}{\mega\hertz} bunch crossing frequency (or, equivalently, a \SI{25}{\nano\second} spacing, roughly doubling the number of bunches in a train), totalling \SI{137.2}{\invfb} between 2015 and 2018.
+Per year, the \ac{LHC} delivered \SI{4.2}{\invfb} in 2015, \SI{41.0}{\invfb} in 2016, \SI{49.8}{\invfb} in 2017 and \SI{67.9}{\invfb} in 2018, a large part of which was recorded by the experiments.
+The \run{2} dataset is used for the physics analyses discussed in [[ref:sec:analysis1_intro,sec:analysis2_intro]], except for the dataset taken in 2015, which was employed solely for comissioning of the updated \ac{LHC} configuration.
+In [[ref:fig:lhc_lumi_results1,fig:lhc_lumi_results2]] we show the luminosities delivered by \ac{LHC} and recorded by the \ac{CMS} experiment, and also show the \ac{PU} values measured by the latter.
+\Ac{CMS} is described in detail in [[#sec:cms_detector]].
+After the end of \run{2}, it was time for further detector refurbishments.
+For \ac{CMS}, this notably included new electronics for the hadronic calorimeter.
+
+The last \ac{LHC} run, appropriately called \run{3}, is currently ongoing, having started in 2022 and with its end planned next year, in 2025.
+Another \ch{He} leak was responsible for a complete halt of operations on September 2023.
+The culprit was eventually identified: a tree fell on Swiss powerlines, originating a power glitch that lead to the quench of an inner triplet magnet and the mentioned leak.
+Once the issue was addressed, the rest of the year was devoted to \ch{Pb}-\ch{Pb} collisions at \SI{5.36}{\TeV}.
+Despite the leak, operations in 2024 have been extremely positive, with the \ac{LHC}'s 10000\textsuperscript{th} fill reached on August 21\textsuperscript{st}.
+The \SI{250}{\invfb} delivered luminosity target that had been initially set for \run{3} will likely be achieved, given the current value above \SI{150}{\invfb}.
+2024 is the most productive year in \ac{LHC}'s history so far.
+
+#+NAME: fig:lhc_lumi_results1
+#+CAPTION: Luminosities and \ac{PU}. All plots include the still ongoing \run{3}, and are thus subject to future changes. (Left) Luminosity delivered by the \ac{LHC} and recorded by \ac{CMS} as a function of time, for all data-taking periods. (Right) Average number of \ac{pp} interactions per bunch crossing for all data-taking periods. The overall mean values and the inelastic \ac{pp} cross sections are also shown. Taken from [[cite:&pileup_twiki]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .527\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/lhc/int_lumi_allcumulative_pp.pdf]]
+#+ATTR_LATEX: :width .473\textwidth :center
+[[~/org/PhD/Thesis/figures/hgcal/lhc/pileup_allYears.pdf]]
+#+END_figure
+
+#+NAME: fig:lhc_lumi_results2
+#+CAPTION: Luminosity delivered to \ac{CMS} versus time during stable beams at nominal center-of-mass energy, for several data-taking years. The plot includes the still ongoing \run{3}, and is thus subject to future changes. Taken from [[cite:&pileup_twiki]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.15\textwidth :center
+\hspace{-1.8cm} [[~/org/PhD/Thesis/figures/hgcal/lhc/int_lumi_cumulative_pp.pdf]]
+#+END_figure
+
+It is also interesting to note some of the challenges tackled by the \ac{LHC} over the years.
+We briefly mention a few, all currently under control:
++ *Unidentified Falling Objects*: occasional \SI{10}{\\micro\meter}-sized particles fall from the top of the vacuum chambers interact with the positively charged beam and can cause significant beam losses, potentially leading to quenches.
+  The study and simulation of these microscopic particles has sdtrongly mitigate their negative effects.
++ *Electron clouds*: Electrons can be produced in ionisation or photo-emission processes and interact with the walls of the beam chamber, producing more electrons, and leading to beam instabilities.
+  This can be fixed by a process known as /scrubbing/, where an intentionally created electron cloud is impinged on the problematic surfaces, since it has been shown that the electron bombardment of a material dramatically reduces its seconday electron yield.
++ *Beam induced heating*: The increase in luminosity also increases the temperature and pressure felt by equipment located near the \ac{LHC} beams.
+  This happens due to the exposure all sorts of radiation originated in the beam: synchrotron, lost protons, photoelectrons and even radio signals [[cite:&lhc_operations]].
+  All problematic situations have nevertheless been addressed.
+
+* Tracker TDR :noexport:
+https://cds.cern.ch/record/2272264/files/CMS-TDR-014.pdf
+
+Operation of the accelerator started in 2009. The 2010-2012 running period is referred to as
+Run 1. In 2010 and 2011 the LHC operated at a centre-of-mass energy, √s, of 7 TeV, and deliv-
+ered to the CMS experiment [2] data volumes of 45 pb−1 and 6.1 fb−1 of integrated luminosity,
+respectively. The centre-of-mass energy was increased to 8 TeV in 2012 and an integrated lumi-
+nosity of 23.3 fb−1 was delivered to CMS during that year. Run 1 was followed by a two-year
+long shutdown, referred to as Long Shutdown 1 (LS1), during which the accelerator and the
+experiments were consolidated. This allowed starting Run 2 in 2015 at a centre-of-mass energy
+of 13 TeV. The integrated luminosities delivered to CMS were 4.2 fb−1 in 2015 and 41.1 fb−1 in
+2016.
+The collision rate of pp collisions increased steadily, with instantaneous luminosities of up to
+2.1 × 1032 cm−2s−1 in 2010, 7.7 × 1033 cm−2s−1 in 2012, and 1.5 × 1034 cm−2s−1 in 2016, exceed-
+ing the LHC design value of 1.0 × 1034 cm−2s−1.
+Thanks to the excellent performance of the LHC, the experiments (ATLAS, ALICE, CMS, and
+LHCb) have been able to achieve a plethora of highly relevant physics results, including the
+discovery of the Higgs boson by ATLAS and CMS in 2012 [3, 4], and the measurement of the
+branching ratios of the rare decays of the neutral B0
+s and B0 mesons to two muons by CMS and
+LHCb [5] and more recently by ATLAS [6]. Stringent limits have been placed on a large variety
+of new physics models. The top quark pair production cross section has been determined as a
+function of √s and the top quark mass has been measured with unprecedented precision [7].

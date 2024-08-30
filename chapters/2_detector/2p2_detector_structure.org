@@ -4,10 +4,10 @@
 
 They are designed to be versatile and capable of detecting a wide range of physics processes across various energies.
 The CMS experiment was officially proposed in 1992 with the primary goal of discovering the Higgs boson.
-Key to this objective were the channels $H \rightarrow ZZ \rightarrow 4\ell$ and $H \rightarrow \gamma\gamma$, which required an excellent electromagnetic calorimeter for effective electron and photon detection, with an energy resolution constant term equal to or less than 0.5%.
+Key to this objective were the channels \hzzfourl{} and \hgg{}, which required an excellent electromagnetic calorimeter for effective electron and photon detection, with an energy resolution constant term equal to or less than 0.5%.
 
 The architecture of the CMS detector is depicted in Figure 2.7.
-It is a cylindrical apparatus with a length of $21.6\,m$ and a diameter of $14.6\,m$, comprising a central section known as the barrel, and two forward sections termed endcaps.
+It is a cylindrical apparatus with a length of \SI{21.6}{\meter} and a diameter of \SI{14.6}{\meter}, comprising a central section known as the barrel, and two forward sections termed endcaps.
 The precise demarcation between these regions varies according to the specific subdetectors in question.
 
 To fulfill its versatile objectives, the CMS detector is outfitted with an intricate configuration of concentric detection layers.
@@ -35,10 +35,10 @@ To achieve precise momentum measurement, a powerful magnet was necessary, leadin
 The CMS detector's structure and components are designed to meet these stringent requirements.
 In the following, we describe all subdetectors in detail, ordered by distance to the \ac{PV}.
 
-\myparagraph{Tracker}
+* Tracker
 
-\noindent The \ac{CMS} tracker [[cite:&cms_tracker_tdr;&cms_tracker_tdr_addendum]] is the first layer of detection a charged particle sees after being produced at the \ac{pp} collision.
-Its an all-silicon detector, conceived to withstand very large fluences of up to \SI{3.6e15}{\nequiv\per\cm\squared} after \SI{500}{\invfb} of integrated luminosity.
+The \ac{CMS} tracker [[cite:&cms_tracker_tdr;&cms_tracker_tdr_addendum]] is the first layer of detection a charged particle sees after being produced at the \ac{pp} collision.
+Its an all-silicon detector, conceived to withstand very large fluences of up to \SI{3.6e15}{\nequiv} after \SI{500}{\invfb} of integrated luminosity.
 Its working principle is well known: charges moving in the semiconductor electric field will generate a detectable electric current in an external circuit [[cite:&semiconductors_review]].
 The tracker's highly granular semiconductor technology is organized in several layers, and allows the precise reconstruction of the trajectories of charged objects which, in conjunction with \ac{CMS}'s strong magnetic field, provide information on charge, direction, primary vertex assignment and \ac{PU}.
 Furthermore, the tracker enables the reconstruction of secondary vertices originated from b or $\tau$ decays, and similarly makes analyses on displaced tracks possible [[cite:&cms_displaced_tracks]].
@@ -88,9 +88,9 @@ In \ac{CMS}, pixels occupy the inner regions and are immediately surrounded by t
 [[~/org/PhD/Thesis/figures/detector/Tracker2.pdf]]
 #+END_figure
 
-\myparagraph{Electromagnetic Calorimeter}
+* Electromagnetic Calorimeter
 
-\noindent The scintillating lead tungstate (\ch{PbWO4}) \ac{ECAL} [[cite:&ecal_tdr]] of \ac{CMS} is located inside the \SI{3.8}{\tesla} solenoid magnet, consisting of \num{75848} channels in total, split across \num{61200} crystals in the barrel and \num{7324} crystals in each of the two endcaps.
+The scintillating lead tungstate (\ch{PbWO4}) \ac{ECAL} [[cite:&ecal_tdr]] of \ac{CMS} is located inside the \SI{3.8}{\tesla} solenoid magnet, consisting of \num{75848} channels in total, split across \num{61200} crystals in the barrel and \num{7324} crystals in each of the two endcaps.
 The medium was chosen based on its compact $\si{\radl}=0.89\,\si{\cm}$ radiation length, providing a total containment of \SI{25}{\radl}, and on its small \SI{2.19}{\cm} Molière radius, providing full coverage of all \ac{EM} showers.
 Its hermetic design targets the measurement of the properties of photons and electrons, via their scintillation and absorption in the crystals.
 The \ac{EB} covers the $|\eta| < 1.479$ region.
@@ -150,9 +150,9 @@ The resolution of \ac{ECAL} was also measured in-situ with \run{1} \SI{7}{\TeV} 
 [[~/org/PhD/Thesis/figures/detector/ECAL2.pdf]]
 #+END_figure
 
-\myparagraph{Hadronic Calorimeter}
+* Hadronic Calorimeter
 
-\noindent Immediately at the back of \ac{ECAL} appears \ac{HCAL} [[cite:&hcal_tdr]], a sampling calorimeter which measures final-state hadrons and hadronic showers depositing only a part of their energy in \ac{ECAL}.
+Immediately at the back of \ac{ECAL} appears \ac{HCAL} [[cite:&hcal_tdr]], a sampling calorimeter which measures final-state hadrons and hadronic showers depositing only a part of their energy in \ac{ECAL}.
 Showers initiated by hadrons are governed in part by the strong interaction, which significantly complexifies the hadronization process [[cite:&wigmans]].
 In a calorimeter, a hadron can lose its energy either via continuous ionization (if it is charged) or abruptly via nuclear interactions.
 To make things even more complicated, neutral hadrons can only interact strongly, and so their interactions with matter enormously differ from their \ac{EM} counterparts.
@@ -202,9 +202,8 @@ As a consequence, it was decided to progressively replace \acp{HPD} with \acp{Si
 The upgrade also introduced more performant electronics and data linking, which increased the segmentation in \ac{HB} and \ac{HE}, and also improved time measurements.
 Hadronic shower development is thus measured more precisely, boosting the performance of analyses targeting signatures containing delayed or displaced jets.
 
-\myparagraph{Magnet}
-
-\noindent The large, \SI{220}{\tonne} \ch{Nb}-\ch{Ti} superconducting solenoid magnet is the defining feature of the \ac{CMS} design, delivering an axial and uniform magnetic field of \SI{3.8}{\tesla} over a \SI{12.5}{\meter} length and a \SI{3.15}{\meter} radius [[cite:&magnet_cms]].
+* Magnet
+The large, \SI{220}{\tonne} \ch{Nb}-\ch{Ti} superconducting solenoid magnet is the defining feature of the \ac{CMS} design, delivering an axial and uniform magnetic field of \SI{3.8}{\tesla} over a \SI{12.5}{\meter} length and a \SI{3.15}{\meter} radius [[cite:&magnet_cms]].
 The radius is large enough to acommodate both \ac{EM} and \ac{HAD} calorimeters, reducing the material budget in front the calorimeters.
 This eliminates charged particle preshowers in the coil material, facilitating the matching between energy deposits and tracks.
 At normal incidence, the bending power of \SI{4.9}{\tesla\meter} a provides a strong separation between energy deposits of charged and neutral particles.
@@ -216,9 +215,8 @@ The magnet is cooled by liquid \ch{He}, and must thus operate at \SI{-269}{\degr
 It is for this reason enclosed in a vacuum vessel made of two stainless steel cylinders.
 In order to contain the magnetic flux, the solenoid is surrounded by a return yoke, which is conveniently interleaved with the muon chambers to additionally provide structural support and increase muons momentum resolution.
 
-\myparagraph{Muon Chambers} 
-
-\noindent \Ac{CMS} is specifically optimized for muon measurements, which are performed by \acp{DT} in the barrel region and \acp{CSC} in the forward region.
+* Muon Chambers
+\Ac{CMS} is specifically optimized for muon measurements, which are performed by \acp{DT} in the barrel region and \acp{CSC} in the forward region.
 \Acp{RPC} are also available for triggering and redundancy.
 The entire system is based on gaseous detectors, and is located outside the solenoid, where the distance to the \ac{PV} is large enough so that only muons are expected.
 Indeed, muons produced at the \ac{LHC}, with energies ranging from a few \si{\MeV} to several \si{\GeV}, are the closest a particle becomes from being a \ac{MIP} (see [[ref:fig:muon_dedx]]), and thus traverse large quantities of matter remaining mostly undisturbed.

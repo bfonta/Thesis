@@ -111,12 +111,11 @@ The exclusion upper limits tend to be of around \num{50}, \num{5}, and \SI{0.3}{
 \hspace{.9cm} [[~/org/PhD/Thesis/figures/intro/XHY_Comb_HighMass.pdf]]
 #+END_figure
 
-** \bbtt{} resonant searches
-
 The \xhhbbtt{} result obtained in this thesis represents an enormous improvement over the first of such studies in \ac{CMS}, which used only 2016 data [[cite:&cms_hh_bbtt]].
 This work also improves on the techniques of its nonresonant counterpart [[cite:&higgs_bbtautau_nonres]].
 A \xyhbbtt{} has also been published by \ac{CMS} [[cite:&cms_hh_bbtt]], not obtaining limits for a \SI{125}{\GeV} Higgs boson.
-An interpolation was nevertheless performed, is shwon in [[fig:res_comb_xhh]] and comparisons are discussed in [[#sec:final_limits]].
+An interpolation was nevertheless performed and is shown in [[fig:res_comb_xhh]].
+Comparisons are discussed in [[#sec:final_limits]].
 
 * Comment from Rainer :noexport:
 "bbtt is really a YH analysis which was requested to exclude the mY=mH points due to strategic considerations by L2 management. Hence no dedicated paper and no spin 2. For our HH combination, an interpolation was made, which is described in the combination subsection (end of Sec 2). This was because management saw another dedicated HH analysis coming which was supposed to give better sensitivity for HH. But it never converged.

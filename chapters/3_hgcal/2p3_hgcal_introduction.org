@@ -77,7 +77,7 @@ Thinner sensors are thus prefered for regions exposed to higher fluences.
 
 #+NAME: tab:Si_sensors_parameters
 #+CAPTION: Features of the \ac{Si} sensors. The \ac{Si} cell size defines two regions, namely the high-density and low-density regions [[cite:&hgcalTDR;&hgcal_lateral_layout]].
-#+ATTR_LATEX: :placement [!h] :center t :align c|c|c|c
+#+ATTR_LATEX: :placement [!h] :center t :align c|c|c|c :environment mytablewiderrows
 | Tickness [\si{\um}]                                   | \num{120}  | \num{200}                | \num{300}  |
 |-------------------------------------------------------+------------+--------------------------+------------|
 | Cell size [\si{\cm\squared}]                          | \num{0.56} | \num{0.56} or \num{1.26} | \num{1.26} |
@@ -150,7 +150,7 @@ A summary of some of the parameters of \ac{HGCAL} is provided in [[tab:HGCALpara
 
 #+NAME: tab:HGCALparameters
 #+CAPTION: Summary of some of the properties of \ac{HGCAL}.
-#+ATTR_LATEX: :placement [!h] :center t :align c|c
+#+ATTR_LATEX: :placement [!h] :center t :align c|c :environment mytablewiderrows
 | Parameter                           | Value                         |
 |-------------------------------------+-------------------------------|
 | $\eta$ coverage                        | $1.5 \lesssim \eta \lesssim 3.0$ |

@@ -9,126 +9,125 @@
 #+LATEX: \input{cover}
 # #### default spacing is 14pt
 #+LATEX: \fontsize{12pt}{13pt}\selectfont
-#+TOC: headlines 4
+#+TOC: headlines 2
 
-* Introduction to Higgs boson pair production
-#+INCLUDE: "chapters/intro/0_sm_intro.org"
+* Higgs boson pair production in the Standard Model and beyond
+#+INCLUDE: "chapters/1_intro/0_sm_intro.org"
 ** The Standard Model of Particle Physics
+#+INCLUDE: "chapters/1_intro/1_sm_intro.org"
 *** The building blocks of the SM
-#+INCLUDE: "chapters/intro/1p1_sm_structure.org"
+#+INCLUDE: "chapters/1_intro/1p1_sm_structure.org"
 *** From symmetries to interactions
-#+INCLUDE: "chapters/intro/1p2_sm_symmetries.org"
+#+INCLUDE: "chapters/1_intro/1p2_sm_symmetries.org"
 *** The Higgs Mechanism
-#+INCLUDE: "chapters/intro/1p3_higgs_mechanism.org"
+#+INCLUDE: "chapters/1_intro/1p3_higgs_mechanism.org"
 *** Phenomenology and experimental status of Higgs boson physics
-#+INCLUDE: "chapters/intro/1p4_higgs_exp_status.org"
+#+INCLUDE: "chapters/1_intro/1p4_higgs_exp_status.org"
 ** Higgs boson pair phenomenology in the SM
-#+INCLUDE: "chapters/intro/2_dihiggs.org"
+#+INCLUDE: "chapters/1_intro/2_dihiggs.org"
 *** Production modes
-#+INCLUDE: "chapters/intro/2p1_production_modes.org"
+#+INCLUDE: "chapters/1_intro/2p1_production_modes.org"
 *** Final states
-#+INCLUDE: "chapters/intro/2p2_final_states.org"
+#+INCLUDE: "chapters/1_intro/2p2_final_states.org"
 ** Going beyond the SM
 *** SM shortcomings
-#+INCLUDE: "chapters/intro/3p1_short_comings.org"
+#+INCLUDE: "chapters/1_intro/3p1_short_comings.org"
 *** Non-resonant BSM HH Production
-#+INCLUDE: "chapters/intro/3p2_nonres_BSM_hh.org"
+#+INCLUDE: "chapters/1_intro/3p2_nonres_BSM_hh.org"
 *** Resonant BSM HH Production
-#+INCLUDE: "chapters/intro/3p3_res_BSM_hh.org"
+#+INCLUDE: "chapters/1_intro/3p3_res_BSM_hh.org"
 ** Experimental status of HH Physics
-#+INCLUDE: "chapters/intro/4_hh_exp_status.org"
+#+INCLUDE: "chapters/1_intro/4_hh_exp_status.org"
 *** Direct searches
-#+INCLUDE: "chapters/intro/4p1_direct_searches.org"
+#+INCLUDE: "chapters/1_intro/4p1_direct_searches.org"
 *** Indirect searches
-#+INCLUDE: "chapters/intro/4p2_indirect_searches.org"
+#+INCLUDE: "chapters/1_intro/4p2_indirect_searches.org"
 *** Combining direct with indirect searches
-#+INCLUDE: "chapters/intro/4p3_combinations.org"
-
+#+INCLUDE: "chapters/1_intro/4p3_combinations.org"
 
 * The CMS Detector at the LHC
-#+INCLUDE: "chapters/detector/0_cern.org"
+#+INCLUDE: "chapters/2_detector/0_cern.org"
 ** The Large Hadron Collider
-#+INCLUDE: "chapters/detector/1_lhc_intro.org"
+#+INCLUDE: "chapters/2_detector/1_lhc_intro.org"
 *** Design
-#+INCLUDE: "chapters/detector/1p1_lhc_design.org"
+#+INCLUDE: "chapters/2_detector/1p1_lhc_design.org"
 *** Operations
-#+INCLUDE: "chapters/detector/1p2_lhc_operations.org"
+#+INCLUDE: "chapters/2_detector/1p2_lhc_operations.org"
 *** Experiments
-#+INCLUDE: "chapters/detector/1p3_lhc_experiments.org"
+#+INCLUDE: "chapters/2_detector/1p3_lhc_experiments.org"
 ** The CMS Detector
-#+INCLUDE: "chapters/detector/2_detector.org"
+#+INCLUDE: "chapters/2_detector/2_detector.org"
 *** Coordinate system
-#+INCLUDE: "chapters/detector/2p1_coordinate_system.org"
+#+INCLUDE: "chapters/2_detector/2p1_coordinate_system.org"
 *** Detector Structure
-#+INCLUDE: "chapters/detector/2p2_detector_structure.org"
+#+INCLUDE: "chapters/2_detector/2p2_detector_structure.org"
 ** The CMS Trigger System
-#+INCLUDE: "chapters/detector/3_cms_trigger_system.org"
+#+INCLUDE: "chapters/2_detector/3_cms_trigger_system.org"
 ** Offline Reconstruction
-#+INCLUDE: "chapters/detector/4_offline_reco.org"
+#+INCLUDE: "chapters/2_detector/4_offline_reco.org"
 ** Monte Carlo generation
-#+INCLUDE: "chapters/detector/5_mc_generation.org"
+#+INCLUDE: "chapters/2_detector/5_mc_generation.org"
 
 
 * Trigger primitives reconstruction for the HGCAL Level-1 trigger
+#+INCLUDE: "chapters/3_hgcal/0_intro.org"
 ** The High Luminosity LHC
-#+INCLUDE: "chapters/hgcal/1_hllhc.org"
+#+INCLUDE: "chapters/3_hgcal/1_hllhc.org"
 *** Physics Motivation
-#+INCLUDE: "chapters/hgcal/1p1_hllhc_physics.org"
+#+INCLUDE: "chapters/3_hgcal/1p1_hllhc_physics.org"
 ** The High Granularity Calorimeter and other detector upgrades
 *** Detector Upgrades in CMS
-#+INCLUDE: "chapters/hgcal/2p1_cms_detector_upgrades.org"
+#+INCLUDE: "chapters/3_hgcal/2p1_cms_detector_upgrades.org"
 *** The CMS Phase-2 Trigger System
-#+INCLUDE: "chapters/hgcal/2p2_phase2_trigger_system.org"
+#+INCLUDE: "chapters/3_hgcal/2p2_phase2_trigger_system.org"
 *** The High Granularity Calorimeter
-#+INCLUDE: "chapters/hgcal/2p3_hgcal_introduction.org"
+#+INCLUDE: "chapters/3_hgcal/2p3_hgcal_introduction.org"
 *** Detector upgrades in other LHC experiments
-#+INCLUDE: "chapters/hgcal/2p4_hllhc_detector_upgrades.org"
+#+INCLUDE: "chapters/3_hgcal/2p4_hllhc_detector_upgrades.org"
 ** The reconstruction of trigger primitives in HGCAL
-#+INCLUDE: "chapters/hgcal/3_hgcal_trigger_primitives.org"
+#+INCLUDE: "chapters/3_hgcal/3_hgcal_trigger_primitives.org"
 ** Development of a simplified HGCAL geometry and event processing chain
-#+INCLUDE: "chapters/hgcal/4_event_geom_developments.org"
+#+INCLUDE: "chapters/3_hgcal/4_event_geom_developments.org"
 ** Cluster splitting
-#+INCLUDE: "chapters/hgcal/5_cluster_splits.org"
+#+INCLUDE: "chapters/3_hgcal/5_cluster_splits.org"
 ** Discussion and future directions
-#+INCLUDE: "chapters/hgcal/6_hgcal_discussion.org"
-
+#+INCLUDE: "chapters/3_hgcal/6_hgcal_discussion.org"
 
 * \xhhbbtt{}: Strategy definition
-#+INCLUDE: "chapters/analysis1/bbtt_analysis.org"
+#+INCLUDE: "chapters/4_analysis1/analysis1_intro.org"
 ** Samples
-#+INCLUDE: "chapters/analysis1/samples.org"
+#+INCLUDE: "chapters/4_analysis1/samples.org"
 
 ** Triggers
-#+INCLUDE: "chapters/analysis1/triggers.org"
+#+INCLUDE: "chapters/4_analysis1/triggers.org"
 *** Legacy triggers
-#+INCLUDE: "chapters/analysis1/legacy_triggers.org"
+#+INCLUDE: "chapters/4_analysis1/legacy_triggers.org"
 *** Additional triggers
-#+INCLUDE: "chapters/analysis1/additional_triggers.org"
+#+INCLUDE: "chapters/4_analysis1/additional_triggers.org"
 *** Analysis trigger regions
-#+INCLUDE: "chapters/analysis1/trigger_regions.org"
+#+INCLUDE: "chapters/4_analysis1/trigger_regions.org"
 *** Note on the inclusion method
-#+INCLUDE: "chapters/analysis1/inclusion_method.org"
+#+INCLUDE: "chapters/4_analysis1/inclusion_method.org"
 ** Physics objects
-#+INCLUDE: "chapters/analysis1/physics_objects.org"
+#+INCLUDE: "chapters/4_analysis1/physics_objects.org"
 ** Selection and Categorization
-#+INCLUDE: "chapters/analysis1/selection.org"
+#+INCLUDE: "chapters/4_analysis1/selection.org"
 ** $\tau\tau$ mass regression
-#+INCLUDE: "chapters/analysis1/tautau_regression.org"
+#+INCLUDE: "chapters/4_analysis1/tautau_regression.org"
 ** QCD background estimation
-#+INCLUDE: "chapters/intro/qcd_estimation.org"
+#+INCLUDE: "chapters/4_analysis1/qcd_estimation.org"
 ** Monte Carlo corrections
-#+INCLUDE: "chapters/analysis1/mc_corrections.org"
-
+#+INCLUDE: "chapters/4_analysis1/mc_corrections.org"
 ** Control regions
-#+INCLUDE: "chapters/intro/control_regions.org"
+#+INCLUDE: "chapters/4_analysis1/control_regions.org"
 
 
 * \xhhbbtt{}: Limit extraction
-#+INCLUDE: "chapters/analysis2/intro.org"
+#+INCLUDE: "chapters/5_analysis2/intro.org"
 ** Signal discrimination from background
-#+INCLUDE: "chapters/analysis2/pdnn.org"
+#+INCLUDE: "chapters/5_analysis2/pdnn.org"
 ** Systematic uncertainties
-#+INCLUDE: "chapters/analysis2/systematics.org"
+#+INCLUDE: "chapters/5_analysis2/systematics.org"
 *** Normalization uncertainties
 **** Luminosity
 **** Electrons and muon isolation and identificaton efficiencies
@@ -154,29 +153,29 @@
 *** The maximum likelihood method
 ** Results
 *** Limits
-#+INCLUDE: "chapters/analysis2/final_limits.org"
+#+INCLUDE: "chapters/5_analysis2/final_limits.org"
 *** Comparison with other resonant \bbtt{} results
 ** Prospects for resonant and non-resonant HH searches
-#+INCLUDE: "chapters/analysis2/prospects.org"
+#+INCLUDE: "chapters/5_analysis2/prospects.org"
 
 
 * Effects of finite width and interference
-#+INCLUDE: "chapters/interf_studies/intro.org"
+#+INCLUDE: "chapters/6_interf_studies/intro.org"
 ** The Stability of the Electroweak Vaccum
-#+INCLUDE: "chapters/interf_studies/ew_phase_transition.org"
+#+INCLUDE: "chapters/6_interf_studies/ew_phase_transition.org"
 ** The Singlet Model
-#+INCLUDE: "chapters/interf_studies/singlet_model.org"
+#+INCLUDE: "chapters/6_interf_studies/singlet_model.org"
 ** Methodology
-#+INCLUDE: "chapters/interf_studies/methodology.org"
+#+INCLUDE: "chapters/6_interf_studies/methodology.org"
 ** Results
-#+INCLUDE: "chapters/interf_studies/interf_results.org"
+#+INCLUDE: "chapters/6_interf_studies/interf_results.org"
 
 
 * Conclusions
-#+INCLUDE: "chapters/conclusions.org"
+#+INCLUDE: "chapters/7_conclusions/conclusions.org"
 
-
-#+LaTeX: \appendix
+* BEFORE APPENDIX :ignore:
+#+LATEX: \appendix
 
 * Appendix
 ** ATLAS results on double Higgs production
@@ -204,3 +203,7 @@
 ~/dot-emacs/bibliography/references/detector.bib,
 ~/dot-emacs/bibliography/references/biology.bib]]
 
+
+* OPTIONS END :ignore:
+#+LATEX: \clearpage
+#+LATEX: \input{back}

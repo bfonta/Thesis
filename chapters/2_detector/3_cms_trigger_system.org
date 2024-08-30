@@ -2,15 +2,25 @@
 :CUSTOM_ID: sec:cms_trigger_system
 :END:
 
-With proton beams crossing every \SI{25}{\nano\second}, and considering the average \ac{PU} measured during \phase{1} (see [[ref:fig:lhc_lumi_results]]), around \num{e9} \ac{pp} interactions are expected every second.
+With proton beams crossing every \SI{25}{\nano\second}, and considering the average \ac{PU} measured during \phase{1} ([[fig:lhc_lumi_results1]], right), around \num{e9} \ac{pp} interactions are expected every second at the \ac{CMS} \ac{IP}.
 Given \SI{\sim 1}{\mega\bit} zero-supressed events, a \SI{\sim 40}{\tera\bit\per\second} throughput follows.
 Meanwhile, the maximum rate which can be realistically archived in real time by the \ac{CMS} online computer farm sits at \SI{\sim 1}{\kilo\hertz}, which already represents a ten-fold improvement with respect to \run{1}.
 Collision and data rates are thus much higher than the rate at which data can be written to mass storage.
 This implies a throughput reduction by a factor of \num{e4}.
+
+#+NAME: fig:cms_xsec_summary
+#+CAPTION: Summary of the cross section measurements of \ac{SM} processes at \ac{CMS}. The process name, centre-of-mass energy of the measurement, and related publication are reported on the left of the panel; the integrated luminosity used for each result is reported on the right. Values are to be compared to the total proton-proton interaction cross section of about \SI{e11}{\pico\barn}. Taken from [[cite:&summary_smp_twiki]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/detector/CMSCrossSectionsSummary.pdf]]
+#+END_figure
+
 However, among all events produced in \ac{CMS}, only a small fraction carries physical significance.
 Most events are related to well known physical interactions which are not meant to be covered by the \ac{LHC} programme.
-As seen in [[ref:fig:cms_xsec_summary]], the processes studied by \ac{CMS} span at least \num{14} orders of magnitude.
-Only processes with cross-sections of \SI{e7}{\femto\barn} or lower require a significant part of the luminosity which the \ac{LHC} is able to provide.
+As perfectly illustrated in [[fig:cms_xsec_summary]], the processes studied by \ac{CMS} span at least \num{14} orders of magnitude.
+The dominant inclusive proton-proton interactions tower at \SI{e14}{\femto\barn}, followed closely by their inelastic counterparts at \SI{\sim 6e13}{\femto\barn} [[cite:&inelastic_pp_13tev;&inelastic_pp_7tev]].
+On the other end, extremely rare triboson, \ac{VBF}, \ac{VBS}, top and Higgs processes, including the HH process studied elsewhere in this work, sit at the edge of what is currently achievable, with cross sections of the order of some \si{\femto\barn}, or even less.
+While the difference testifies for the richness of the \ac{LHC} programme, it also shows that only processes with cross-sections of \SI{e7}{\femto\barn} or lower require a significant part of the luminosity which the \ac{LHC} is able to provide.
 The large reduction factor, being absolutely crucial given current technological limitations, can therefore be justified on physics grounds.
 
 The needed data reduction is the reason for existence of the \ac{CMS} trigger system: only events deemed interesting are selected for futher processing.
@@ -37,7 +47,7 @@ The small time budget implies a compromise on the quality of the reconstruction,
 The muon and calorimeter trigger paths produce data called \acp{TP}, which are merged into the \ac{GT}, and used to issue a \ac{L1A} decision.
 \Acp{TP} from the \ac{GEM} muon subdetector are currently being validated, but are not yet used.
 The tracker does not participate in the \phase{1} \ac{L1} trigger decisions.
-The \ac{L1} rate has been increased to \SI{\sim 110}{\kilo\hertz} during \run{3} to favour the introduction of the new parking techniques discussed in [[ref:sec:parking_scouting]].
+The \ac{L1} rate has been increased to \SI{\sim 110}{\kilo\hertz} during \run{3} to favour the introduction of the new parking techniques discussed in [[#sec:parking_scouting]].
 
 #+NAME: fig:l1_trigger_design_phase1
 #+CAPTION: (Left) Diagram of the \phase{1} \ac{CMS} \ac{L1} during \run{2}. No \ac{L1} tracking is present. \Acp{TP} are generated from the \ac{DT}, \ac{RPC} and \ac{CSC} muon systems and from the \ac{HF}, \ac{ECAL} and \ac{HBHE} calorimetric subdetectors (where the latter refers to the \ac{HCAL}). The two separate paths are merged into the \ac{GT}, which make a \ac{L1A} decision on whether each particular event should be kept. \Acp{TP} from \acp{GEM} are currently being validated, but are not yet used. (Right) Fractions of the \SI{100}{\kilo\hertz} rate allocation for single- and multi-object triggers and cross triggers in a typical \ac{CMS} physics menu during \run{2}. Adapted from [[cite:&l1_performance]]. 
@@ -48,9 +58,8 @@ The \ac{L1} rate has been increased to \SI{\sim 110}{\kilo\hertz} during \run{3}
 [[~/org/PhD/Thesis/figures/detector/L1TriggerFractions.pdf]]
 #+END_figure
 
-\myparagraph{Calorimeter Trigger}
-
-\noindent Like the \ac{CMS} trigger system, the calorimeter trigger is split in two layers.
+** Calorimeter Trigger
+Like the \ac{CMS} trigger system, the calorimeter trigger is split in two layers.
 The first one receives, calibrates, and sorts the \acp{TP} provided by the \ac{HF}, \ac{ECAL} and \ac{HCAL} subdetectors.
 The second layer reconstructs and calibrates physics objects such as electrons and photons, tau leptons, jets, and energy sums.
 It should be noted that the calorimeter trigger cannot distinguish photons from electrons; they all correspond to energy deposits named /candidates/, which are formed based on information collected in groups of $5\times5$ crystals in the \ac{ECAL} and one projective readout unit in the \ac{HCAL}, jointly known as \acp{TT}.
@@ -63,9 +72,8 @@ It was found that the tradeoff between the delay from organizing the data in ser
 A \ac{DeMux} board then reorders, reserializes, and formats the events for the \ac{GT} processing.
 The running algorithms are fully pipelined and start processing the data as soon as it is received.
 
-\myparagraph{Muon Trigger}
-
-\noindent The redundancy of the muon system in terms of \acp{DT}, \acp{CSC} and \acp{RPC} is used to robustly define the \ac{GMT}.
+** Muon Trigger
+The redundancy of the muon system in terms of \acp{DT}, \acp{CSC} and \acp{RPC} is used to robustly define the \ac{GMT}.
 The subdetectors identify track segments from the information produced by the hits in the gas chambers.
 The segments are collected and transmitted via optical fibers to three muon track finders: the \ac{EMTF}, the \ac{BMTF} and the \ac{OMTF}.
 These run pattern recognition algorithms to identify candidates as muons and extract their momenta.
@@ -73,9 +81,8 @@ The track finders play the role of regional triggers, and send the best muon can
 The \ac{GMT} receives the information and tries to correlate the muon candidates from the three regions in order to make a decision.
 It also merges compatible muon candidates found by more than one single system, and can reject candidates based on their identification quality or the lack of confirmation from other muon systems [[cite:&l1_trigger_upgrade]].
 
-\myparagraph{Global Trigger}
-
-\noindent The \ac{GT} collects all \ac{L1} muon and calorimeter candidates, and executes multiple selection and identification algorithms, in parallel, for the final trigger decision.
+** Global Trigger
+The \ac{GT} collects all \ac{L1} muon and calorimeter candidates, and executes multiple selection and identification algorithms, in parallel, for the final trigger decision.
 Kinematical quantities of the candidates are exploited, such as the invariant mass of \egamma{} or $\mu$ objects, or the angular distance between two objects.
 
 * The High Level Trigger
@@ -118,11 +125,10 @@ The absolute and relative cost of all these components has a strong impact on th
 #+END_figure
 
 In the following the parking and scouting strategies are presented [[cite:&parking_scouting1;&parking_scouting2;&parking_scouting_run3_cms]].
-They are also summarised in [[ref:fig:parking_scouting]].
+They are also summarised in [[fig:parking_scouting]].
 
-\myparagraph{Parking}
-
-\noindent The essential idea of data parking is to record as much data as possible, and process it later, as soon as resources used for the \num{\sim 48} hours long prompt reconstruction become available, which often happens between data-taking periods.
+** Parking
+The essential idea of data parking is to record as much data as possible, and process it later, as soon as resources used for the \num{\sim 48} hours long prompt reconstruction become available, which often happens between data-taking periods.
 One of the positive effects of this strategy is to lower the kinematical thresholds used by algorithms, and thus increase the acceptance to low-mass physics signals.
 To sustain the high rates which necessarily arise from lower thresholds, the data is written directly to tape, usually during the latest stages of an \ac{LHC} fill when the rate is substantially decreased due to lower instantaneous luminosities.
 
@@ -135,7 +141,7 @@ Additionally, three new parking strategies have been introduced:
 
 + *\acp{LLP}*: Particles with long lifetimes are central to many current \ac{BSM} scenarios, and but imply large displacements relative to the \ac{PV}, which renders its final states often inadequate to be measured by standard trigger techniques. A group of dedicated paths has thus been introduced, targeting displaced jets and dijets, taking into account their time delay with resppect to prompt decays.
 
-+ *HH*: As discussed in [[ref:sec:dihiggs]], the study of the Higgs boson self-coupling is one of the most relevant, if not the most important measurement to be pursued at the \ac{LHC} in the foreseeable future. \ac{CMS} has successfully deployed the \ac{PNet} b-tagging discriminant at \ac{HLT} level, which made possible the loosen jet $\pt$ thresholds, $\htvar$ selections and b-tagging requirements. These updates were combined with a reduction of the $\htvar$ requirement at \ac{L1}. Di-Higgs and triple-Higgs analysis benefit enormously, with signal efficiency improvements as shown in [[ref:fig:hh_parking_improv]].
++ *HH*: As discussed in [[#sec:dihiggs]], the study of the Higgs boson self-coupling is one of the most relevant, if not the most important measurement to be pursued at the \ac{LHC} in the foreseeable future. \ac{CMS} has successfully deployed the \ac{PNet} b-tagging discriminant at \ac{HLT} level, which made possible the loosen jet $\pt$ thresholds, $\htvar$ selections and b-tagging requirements. These updates were combined with a reduction of the $\htvar$ requirement at \ac{L1}. Di-Higgs and triple-Higgs analysis benefit enormously, with signal efficiency improvements as shown in [[fig:hh_parking_improv]].
 
 #+NAME: fig:hh_parking_improv
 #+CAPTION: Trigger efficiencies as a function of the invariant di-Higgs mass $\mhh$ for simulated \hhbbbb{}  samples considering the full \run{2}, 2022 and 2023 data-taking periods (left) and for \hhbbtt{} in 2023 only (right). $\kl=1$ is used for both figures. Very significant efficiency increases are also observed in the \hhhbbbbbb{} and \hhhbbbbtt{} analysis. Taken from [[cite:&parking_hh_twiki]]; also available in [[cite:&parking_scouting_run3_cms]].
@@ -146,9 +152,8 @@ Additionally, three new parking strategies have been introduced:
 [[~/org/PhD/Thesis/figures/detector/parking_bbtt_accept_gain.pdf]]
 #+END_figure
 
-\myparagraph{Scouting}
-
-\noindent The offline reconstruction in \ac{CMS} notably increases the quality of the collected dataset.
+** Scouting
+The offline reconstruction in \ac{CMS} notably increases the quality of the collected dataset.
 Unfortunately but unsurprisingly, it also brings a significant bandwidth and storage requirements growth.
 It is not possible to perform the offline reconstruction on all events processed and accepted by the \ac{HLT}.
 The trigger scouting strategy proposes to save some events using \ac{HLT} reconstruction only, which provides a smaller event size at the cost of data resolution.

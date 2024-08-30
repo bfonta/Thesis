@@ -1,0 +1,21 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:sm_intro
+:END:
+
+It all started with light!
+Little did Thomson know, in 1897, that the observed deflection of a stream of charged particles by a magnet would be the seed for the gradual development of the theory explaining the interactions of all known fundamental particles.
+Following the discovery of the electron, Rutherford famously demonstrated the structure of the atom, and soon after Bohr managed to develop a mathematical framework predicting the spectrum of Hydrogen.
+Discoveries followed at a great pace: Chadwick's neutron, Planck's and Einstein's quantum.
+Theoretical and experimental developments continued for half a century, facing frequent obstacles, but eventually reaching a surprisingly effective framework, capable of describing wildly diverse natural phenomena: from the core of an atom to interstellar space.
+This overarching theory is known as the Standard Model of Particle Physics, sitting at the base of all scientific knowledge.
+
+
+
+
+
+
+This section is responsible for introducing the \ac{SM}, covering its major aspects, especially whenever connected to later Chapters.
+The \ac{SM} building blocks are coherently listed, serving as the starting point for the remaing sections.
+It immediately follows a description of the far-reaching relationship between abstract symmetries and fundamental interactions, and its consequences on for the model under discussion.
+This idea is corroborated an explanation of the Higgs mechanism, one of the revolutionary ideas defining the modern understanding of Particle Physics.
+Having thus introduced the Higgs boson, we finalize the first Chapter by providing a concise account of the phenomenology and experimental status of Higgs physics: what quantities are worth measuring, and which results those measurements yielded.

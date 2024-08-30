@@ -38,7 +38,7 @@ The amplitude of the two diagrams is overwhelmingly dominated by the top-quark c
 Importantly, given the identical final states, the two production diagrams interfere, and the interference is destructive.
 This, on top of the additional diagram vertex with respect to single Higgs production, justifies the extremely small HH \ac{ggF} cross-section.
 On the other hand, the same effect increases the sensitivity to \ac{NP}, since it is easier to spot \ac{BSM} deviations that might boost HH rates.
-This fact motivates \ac{BSM} HH studies, as the one presented in [[#sec:bbtautau_intro]].
+This fact motivates \ac{BSM} HH studies, as the one presented in [[#sec:analysis1_intro]].
 
 #+NAME: fig:HH_production_diagrams_ggf
 #+CAPTION: Feynman diagrams for double Higgs gluon fusion production. The two diagrams have amplitudes of similar magnitudes, but interfere destructively. The quark loops are completely dominated by the top quark. (Left) Triangle diagram, characterised by the Higgs self-coupling and the coupling of the Higgs to top quarks. (Right) Box diagram, with two contributions from Higgs-top couplings.

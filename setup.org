@@ -89,6 +89,8 @@
 
 #+LATEX_HEADER: \hypersetup{pdfauthor={\PhDname}, pdfsubject={Manuscrit de thèse de doctorat}, pdftitle={\PhDTitle}}
 
+#+LATEX_HEADER: \input{back_options}
+
 # ###################################################################################
 
 #+LATEX_HEADER: \makeatletter

@@ -15,7 +15,7 @@ The simplest imaginable signature of \ac{NP} consists in the production of an s-
 In the context of HH searches, and in addition to the nonresonant approaches discussed in [[#sec:nonres_BSM_hh]], \ac{BSM} physics can be probed under the assumption that there indeed exists some new particle X with a mass within what the \ac{LHC} can produce, decaying to a pair of Higgs bosons, as shown in [[fig:res_X_diagrams]] for \ac{ggF} and \ac{VBF} processes.
 In that case, given enough experimental sensitivity, we would naively expect to see a "bump" in double Higgs mass distributions.
 In practice, admitting such hypothetical particle exists, the excess might only be discernible through variables with a higher discriminative power, such as discriminators built out of \ac{ML} procedures.
-The experimental challenges of such kind of analysis is highlighted in [[#sec:bbtautau_intro]].
+The experimental challenges of such kind of analysis is highlighted in [[#sec:analysis1_intro]].
 Here we instead focus on the very large number of theoretical models which can accomodate \xhh{} or \xyh{} processes, with Y being yet another \ac{BSM} scalar particle.
 It is experimentally unfeasible to address all such models separately.
 If that were the case, each model would require its own set of samples with varying parameters, such as the mass or the shapes of every resonance, adding also complications from the point of view of storage.
