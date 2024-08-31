@@ -3,12 +3,13 @@
 :END:
 
 The double Higgs production mechanisms are in many ways similar to the production modes of single Higgs physics covered in [[#sec:higgs_exp_status]].
-The main differences consists of the larger number of possible Feynamn diagrams for each production mode at the lowest loop order, and clearly the dramatic cross section reduction by 3 orders of magnitude.
-The five most common production modes are discussed below, and their cross sections are listed in [[tab:HH_production_xsec]] for $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$.
+The main differences consist of the larger number of possible Feynamn diagrams for each production mode at the lowest loop order, the connected multiplicity increase in the final state decay products, and the dramatic cross section reduction of 3 orders of magnitude.
+The five most common production modes are listed in [[tab:HH_production_xsec]], along with their cross sections for $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$.
 In [[fig:HH_prod_energy]], we show the evolution of those production modes with the centre-of-mass energy.
-Production modes with top quarks increase their cross section faster than processes including vector bosons.
-This observation will impact future detectors at higher centre-of-mass energies.
-Gluon fusion will nevertheless remain dominant in any future hadron collider.
+Modes with top quarks increase their cross section faster than processes including vector bosons, an observation that might have to be taken into account in future detectors at higher centre-of-mass energies.
+Gluon fusion will nevertheless remain dominant in any future hadron collider as it is at the \ac{LHC}.
+For the same reason, \ac{ggF} is also the production mode considered in the analysis reported in [[ref:sec:analysis1_intro,sec:analysis2_intro]].
+In the following we provide a more detailed description of each production mode:
 
 #+NAME: fig:HH_prod_energy
 #+ATTR_LATEX: :width .9\textwidth

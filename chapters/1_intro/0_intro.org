@@ -7,7 +7,7 @@ Despite colossal experimental efforts, including the most sophisticated (and exp
 And yet, we know the \ac{SM} to be incomplete, from the surprising behaviour of rotation curves of galaxies, to a mysterious form of energy permeating the entire Universe, or the apparent absence of a charge-mirrored world which should naively exist in identical proportions to the world we inhabit.
 
 Soon after the Higgs boson was discovered at the CERN LHC [[cite:&ATLAS_Higgs_discovery;&CMS_Higgs_discovery1;&CMS_Higgs_discovery2]], studies of its properties followed, in what seemed a natural and quick way to reach \ac{NP}.
-While some of the properties of the Higgs boson still remain underconstrained by the experiments, none of the highly anticipated new states have been discovered, whereas all experimental studies confirm the agreement of the collected data on the Higgs particle with the \ac{SM}.
+While some of these properties still remain underconstrained by the experiments, none of the highly anticipated new resonances have been discovered, whereas all experimental studies confirm the agreement of the collected data on the Higgs particle with the \ac{SM}.
 \ac{NP} could unfortunately lie at such high energies to substantiate the dreaded "particle desert" scenario, a vast region between $\si{\TeV}$ and \ac{BSM} scales where no resonances exist, making future discoveries impossible in the foreseeable future.
 Notwithstanding, such fears might prove wrong, as a single unexpected discovery would overturn the current state of affairs.
 After discovering the top quark, physicists had to wait 17 years for the Higgs boson; the next momentous discovery could very well lie around the corner.
@@ -17,9 +17,8 @@ Alongside the ability to search for \ac{BSM} resonances, the interaction of two 
 This quantity is profoundly connected to the internals of \ac{EWSB} and the stability of the \ac{EW} vacuum, and its measurement could lead to a revolution in the not-so-distant future.
 
 This Chapter introduces the \ac{SM}, giving special emphasis to the Higgs particle.
-The first section sets the tone, by detailing the building blocks of the \ac{SM} and the relationship between abstract symmetries and fundamental interactions.
-The description then proceeds to the Higgs mechanism, one of the revolutionary ideas defining the modern understanding of Particle Physics.
-Next, we devote our attention to Higgs phenomenology, most notably on HH production and decay.
+The first section sets the tone, by detailing the underlying mechanisms of the \ac{SM}, including a description of the Higgs mechanism.
+Next, we devote our attention to Higgs phenomenology, most notably HH production and decay.
 We then present the reasons that lead us to believe something lies beyond the current theory, specifically discussing resonant and nonresonant HH analyses, just like the one presented in this thesis.
 We conclude by summarizing the experimental status of HH physics, highlighting both direct and indirect searches, and a combination of the two.
 

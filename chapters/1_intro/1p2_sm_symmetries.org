@@ -3,11 +3,11 @@
 :END:
 
 There has always been a deep connection between the symmetries in the Universe and the laws that dictate its behaviour.
-Geometrical patterns had been observed from ancient times; greeks for instance believed that the motion of objects had to follow symmetrical trajectories, despite not always agreeing with observed data.
-Newton instead transferred symmetries to the /equations/ describing the motion, and not to the solutions of those equations.
-More recently, the synergy between symmetries and Nature became firmly established in Noether's famous theorem, stating that for each continuous symmetry a conservation law ensues, and that conversely, every conservation law reflects an underlying symmetry.
-Energy conservation follows from the invariance of the laws of Physics under translations in time, the invariance under space translations leads to momentum conservation, and so on [[cite:&griffiths]].
-In this section, the profound ideas that constitute the \ac{SM} are described, covering the surprising way in which symmetries lead to all known forces and particle interactions.
+Geometrical patterns had been observed from ancient times; greeks for instance believed the motion of objects had to follow symmetrical trajectories, despite frequent discrepancies with observed data.
+Newton instead transferred the idea of symmetries to the equations describing the motion, rather than focusing on the solutions of the same equations.
+In 1915, the synergy between symmetries and Nature became firmly established in Noether's famous theorem [[cite:&noether]], stating that for each continuous symmetry a conservation law ensues or that, conversely, every conservation law reflects an underlying symmetry.
+Energy conservation follows from the invariance of the laws of Physics under translations in time, the invariance under space translations leads to momentum conservation, and so forth [[cite:&griffiths]].
+In this section, the profound ideas that cement the \ac{SM} are described, covering the surprising way in which symmetries lead to all known forces and particle interactions.
 
 * Yang-Mills theory
 
@@ -166,7 +166,7 @@ Dirac spinors can be decomposed into left- and right-handed chiral components L 
 
 \noindent where it becomes clear the generators of \symtwol{} are zero for the right singlets, and thus only the left chirality fields interacts with the W gauge bosons.
 This corresponds to Wu's observation mentioned above, where Nature does not treat left- and right-handed particles equally.
-If we follow the Yang-Mills approach as in [[eq:derivative_extra]], but for the electroweak \symtwol{} transformation instead, the covariant derivative becomes:
+If we follow the Yang-Mills approach as in [[eq:derivative_extra]], but for the \ac{EW} \symtwol{} transformation instead, the covariant derivative becomes:
 
 #+NAME: eq:ew_covariant
 \begin{equation}
@@ -292,5 +292,4 @@ The theory thus predicts cubic and quartic gauge couplings: ZWW, $\gamma\text{W}
 The model presented in this section does manage to integrate the electromagnetic and weak forces into the same framework, into what constitued a resounding success.
 However, while photons and gluons are massless, vector bosons are known to be massive, while Dirac mass terms are not gauge invariant to the symmetries so far explored.
 We could add those terms anyways, but unrenormalizable divergences would appear, getting more severe at each additional loop order, making the theory unpredictive and ultimately meaningless.
-Luckily, an alternative exists: the /Higgs mechanism/.
-It is the subject of the next section [[#sec:higgs_mechanism]].
+Fortunately, an alternative procedure was found.

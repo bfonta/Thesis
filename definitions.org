@@ -30,6 +30,7 @@
 #+LATEX_HEADER: \newcommand{\mt}{m_{t}}
 #+LATEX_HEADER: \newcommand{\mw}{m_{\text{W}}}
 #+LATEX_HEADER: \newcommand{\mx}{m_{\text{X}}}
+#+LATEX_HEADER: \newcommand{\gf}{G_{F}}
 #+LATEX_HEADER: \newcommand{\my}{m_{\text{Y}}}
 #+LATEX_HEADER: \newcommand{\mz}{m_{\text{Z}}}
 #+LATEX_HEADER: \newcommand{\ptmiss}{\vec{p}_{\text{T}, \text{miss}}}

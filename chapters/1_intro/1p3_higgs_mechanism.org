@@ -11,7 +11,7 @@
 
 The Higgs mechanism revolutionized Particle Physics, and has driven \ac{HEP} experiments and studies for the past \num{\sim 50} years, of which this thesis is a mere example.
 The mechanism is responsible for generating the masses of the W and Z gauge bosons, and for explaining the masses of fermions.
-It is deeply connected to the stability of the electroweak vacuum, and thus possibly the fate of our Universe, it can have a role in baryogenesis [[cite:&electroweak_baryogenesis]], and it might even be identified as the possible inflaton in the primordial Universe [[cite:&inflaton]].
+It is deeply connected to the stability of the \ac{EW} vacuum, and thus possibly the fate of our Universe, it can have a role in baryogenesis [[cite:&electroweak_baryogenesis]], and it might even be identified as the possible inflaton in the primordial Universe [[cite:&inflaton]].
 Despite its central role in modern particle physics, the higgs mechanism is at its core based on a relatively simple phenomenon, that of symmetry breaking, which is widely present in Nature (see [[fig:symmetries]], left).
 
 A striking example of symmetry breaking takes place in biology [[cite:&chirality_bio_1;&chirality_bio_2]], where all known molecules that are central to life have just one out of two possible chiralities: the DNA and RNA are right-handed, while aminoacids and proteins are all left-handed.
@@ -19,7 +19,7 @@ We instead speak of /spontaneous/ symmetry breaking when some symmetry is broken
 With spontaneous symmetry breaking, the true symmetry of the system is simply hidden by the necessary choice of an asymmetrical lower energy state.
 We can for instance think of a plastic rod being compressed along its longitudinal axis ([[fig:symmetries]], middle): before applying a vertical force the system is symmetric under rotations, but after being compressed the ground state necessarily breaks the symmetry[fn:: Spontaneous symmetry breaking is also present in the most recent diffusion models for content generation [[cite:&spontaneous_breaking_diffusion]]!].
 
-In the context of \ac{HEP}, it is the presence of an additional scalar field which spontaneously breaks the symmetry of the original electroweak lagrangian in [[eq:ew_lagrangian_short]].
+In the context of \ac{HEP}, it is the presence of an additional scalar field which spontaneously breaks the symmetry of the original \ac{EW} lagrangian in [[eq:ew_lagrangian_short]].
 A $\text{SU}(2)_{\text{L}}$ doublet with 4 scalar real fields is introduced:
 
 #+NAME: eq:su2_doublet
@@ -102,11 +102,11 @@ V(\text{H}) = \frac{1}{2}\mh^{2}\text{H}^{2} + \lh{3}v\text{H}^{3} + \frac{\lh{4
 
 #+NAME: eq:self_couplings
 \begin{equation}
-\lh{3} = \frac{G_{F}}{\sqrt{2}}\mh^{2} = \frac{\mh^{2}}{2v^{2}} \simeq 0.13 \:,\:\:\:\: \lh{3} = \lh{4} \: .
+\lh{3} = \frac{\gf}{\sqrt{2}}\mh^{2} = \frac{\mh^{2}}{2v^{2}} \simeq 0.13 \:,\:\:\:\: \lh{3} = \lh{4} \: .
 \end{equation}
 
-\noindent We can conclude that the Higgs self-couplings are fully determined in the \ac{SM}, given the measurements of $\mh$ and $v$, the latter fixed by Fermi's constant $G_{F}$, which is in turn measured via muon decays.
-From an experimental point of view, the Higgs boson thus provides a unique opportunity to perform a \ac{SM} closure test, independently from the gauge interactions of the electroweak sector.
+\noindent We can conclude that the Higgs self-couplings are fully determined in the \ac{SM}, given the measurements of $\mh$ and $v$, the latter fixed by Fermi's constant $\gf$, which is in turn measured via muon decays.
+From an experimental point of view, the Higgs boson thus provides a unique opportunity to perform a \ac{SM} closure test, independently from the gauge interactions of the \ac{EW} sector.
 
 * The Yukawa couplings
 :PROPERTIES:

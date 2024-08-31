@@ -2,17 +2,17 @@
 :CUSTOM_ID: sec:dihiggs
 :END:
 
-The Higgs self-coupling $\lh{3}$ plays a central role in the spontaneous symmetry breaking of electroweak theory, and governs the sole scalar interaction so far observed in Nature.
-The connection to the \ac{SM} is established via the Higgs potential in [[eq:sm_potential]], where the triple and quartic Higgs couplings are predicted.
-These couplings are the last fundamental \ac{SM} pieces left to be measured, and provide a unique \ac{SM} consistency test, representing a crucial validation of the \ac{EWSB} mechanism [[cite:&YellowReport4]].
-The shape of the Higgs potential itself would evidently be affected in case of \ac{BSM} deviations, leading to dramatic consequences for our understanding of the Universe.
+The Higgs self-coupling $\lh{3}$ plays a central role in the spontaneous symmetry breaking of \ac{EW} theory, and governs the sole scalar interaction so far observed in Nature.
+The connection to the \ac{SM} is established via the Higgs potential in [[eq:sm_potential]], where the triple and quartic Higgs couplings are predicted once $\mh$ and $\gf$ are measured.
+These self-couplings represent the last fundamental \ac{SM} pieces yet to be measured, and provide a unique \ac{SM} consistency test, enabling the crucial validation of the \ac{EWSB} mechanism [[cite:&YellowReport4]].
+The shape of the Higgs potential itself would be affected in case of \ac{BSM} deviations, leading to dramatic consequences for our understanding of the Universe.
 
 Experimentally, one aims to verify if the relationships in [[eq:self_couplings]] hold.
 However, as discussed in [[#sec:production]], the available experimental signatures often involve different types of interactions, which do not simply include the Higgs self-couplings.
 It is therefore necessary to disentangle $\lh{3}$ contributions from other effects.
 Often, simultaneous fits of multiple couplings are performed, when a particular process under study is influenced by more than one production mode.
-Furthermore, all HH processes carry a very small total cross section, placing them as some of the rarest processes currently probed at \ac{CMS}.
-Challenges can also be related to the final states explored, which are often complex, including multiple decay products with jets and/or \ac{MET}.
+Furthermore, all HH processes carry a very small total cross section, placing them as some of the rarest physics processes probed at the \ac{LHC}.
+Challenges can also be found in the explored final states, being often complex, and including multiple decay products with jets and/or \ac{MET}.
 
 * Additional bibliography :noexport:
 + [[https://github.com/bfonta/HHStatAnalysis/blob/master/AnalyticalModels/python/plot_differential.py][Produce differential BSM distributions]] (using ~HHReweightingPlots~ folder in =lxplus9=, release ~CMSSW_14_1_0_pre2~)

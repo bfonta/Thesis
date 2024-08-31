@@ -12,7 +12,7 @@
 #+TOC: headlines 2
 
 * Higgs boson pair production in the Standard Model and beyond
-#+INCLUDE: "chapters/1_intro/0_sm_intro.org"
+#+INCLUDE: "chapters/1_intro/0_intro.org"
 ** The Standard Model of Particle Physics
 #+INCLUDE: "chapters/1_intro/1_sm_intro.org"
 *** The building blocks of the SM
@@ -30,6 +30,7 @@
 *** Final states
 #+INCLUDE: "chapters/1_intro/2p2_final_states.org"
 ** Going beyond the SM
+#+INCLUDE: "chapters/1_intro/3_bsm_intro.org"
 *** SM shortcomings
 #+INCLUDE: "chapters/1_intro/3p1_short_comings.org"
 *** Non-resonant BSM HH Production
