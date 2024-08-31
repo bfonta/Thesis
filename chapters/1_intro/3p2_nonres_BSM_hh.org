@@ -109,7 +109,7 @@ In the most general \ac{EFT} formulation, there is a single dim-5 operator, whic
 Next, there are around 2800 dim-6 operators, which reduce to less than 100 by imposing specific restrictions.
 For instance, in \ac{SMEFT}, one of the few \ac{EFT} approaches often explored, one demands additional flavour symmetries and \ac{CP}-conservation to reduce the number of operators to 59.
 Operators with higher dimensions are very suppressed and usually neglected.
-However, some dedicated studies for dim-8 operators have recently been done [[cite:&dim8_alessandra]], since electroweak quartic gauge couplings can be studied via \ac{VBF} processes, where dim-8 operators are used to parameterise deviations from the \ac{SM} prediction [[cite:&dim8_1]].
+However, some dedicated studies for dim-8 operators have recently been done [[cite:&dim8_alessandra]], since \ac{EW} quartic gauge couplings can be studied via \ac{VBF} processes, where dim-8 operators are used to parameterise deviations from the \ac{SM} prediction [[cite:&dim8_1]].
 Departures from \ac{SM} triple and quartic couplings lead to the growth of scattering amplitudes, signalling \ac{NP} [[cite:&dim8_2]].
 
 #+NAME: fig:SMEFTdiagrams

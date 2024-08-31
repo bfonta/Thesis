@@ -24,7 +24,7 @@ Concerning systematics, their modelling in HH processes is generally simpler whe
 [[~/org/PhD/Thesis/figures/combination_single_double_k2v_kv.pdf]]
 #+END_figure
 
-\ac{CMS} observed exclusion intervals at 95% \ac{CL} of $-0.4 < \kl < 6.3$, assuming other Higgs couplings to follow the \ac{SM}, or $-1.4 < k_{\lambda} < 6.1$ otherwise.
+\ac{CMS} observed exclusion intervals at 95% \ac{CL} of $-0.4 < \kl < 6.3$, assuming other Higgs couplings to follow the \ac{SM}, or $-1.4 < \kappa_{\lambda} < 6.1$ otherwise.
 For comparison, \ac{ATLAS} observed $-0.4 < \kl < 6.3$ assuming \ac{SM} couplings, and $-1.4 < k_{\lambda} < 6.1$ otherwise [[cite:&ATLASHplusHHcomb]].
 We show ($\kl$, $\kt$) and ($\kv$, $\kvv$) scans in [[fig:combination_2d_scans]] (top), where the complementarity between the two types of processes is clearly highlighted.
 \ac{CMS} was also able to once again [[cite:&higgs_10_years]] exclude $\kvv=0$ at more than \SI{5}{\sigma}, this time without fixing $\kv=1$.

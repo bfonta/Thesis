@@ -2,18 +2,9 @@
 :CUSTOM_ID: sec:short_comings
 :END:
 
-The \ac{SM} is a remarkable triumph of modern physics, beautifully explaining all known \ac{EM}, weak and strong interactions, and establishing a profound connection between symmetries and governing equations which precisely predict the entire set of measurements so far performed at the \ac{LHC} and prior accelerators.
-Precision tests confirm the \ac{SM} validity at energies up to the electroweak scale, and the observed Higgs boson resembles the predicted one up to great precision.
-Models predicting complex "Higgs families", such as multiple \ac{SUSY}-flavoured theories or the \ac{2HDM}, are getting less and less favoured as more data is collected and analyzed.
-Some ideas are nevertheless added in an /ad hoc/ fashion to reproduce experimental data.
-Take the Yukawa couplings: they are introduced in an effort to explain fermion masses, and coincidentally work extremely well with the newly introduced Higgs doublet ([[#sec:yukawa]]).
-Besides, the entire theory arises from the \symfull{} gauge group, but it remains unclear why this particular symmetry works, and not a different one.
-Also unclear is the reason for exactly three generations of fermions, which maybe reflects an underlying deeper explanation.
-In total, assuming neutrinos are of Dirac type (as opposed to Majorana fermions), the \ac{SM} brings \num{26} free parameters to the table: \num{12} Yukawa couplings, three coupling constants, namely the weak and strong couplings and Fermi's constant, the two parameters describing the Higgs potential in [[eq:sm_orig_potential]], eight mixing angles for the \ac{PMNS} and \ac{CKM} matrices, and a strong \ac{CP} phase.
-The simple presence of so many parameters suggests that the \ac{SM}, despite its undeniable achievements, continues to be just a model, where parameters are chosen to match observations.
-A series of patterns exists between the different parameters, hinting at an underlying yet unknown symmetry principle.
-Besides, multiple observations undoubtedly show inconsistencies that cannot be explained by the \ac{SM}, at least in its current form.
-In the following, we list the most prominent challenges [[cite:&thomson;&griffiths]]:
+Despite its success, intriguing observations or fully unexplained phenomena blatantly highlight the limitations of the \ac{SM}.
+In this section, we list the most prominent challenges a successfull future theory should ideally address [[cite:&griffiths;&thomson]].
+That high-energy collider physics has the potential to look for answers in many of the following topics is a statement for the relevance \ac{HEP} experiments still have in the general experimental landscape.
 
 + *Dark Matter*:
   It has been know for almost a century that standard gravitational equations fail to describe the velocity distribution of stars around the centre of galaxies.
@@ -57,3 +48,7 @@ In the following, we list the most prominent challenges [[cite:&thomson;&griffit
 + *Unnaturalness of the Higgs mass*:
   The Higgs boson mass seems to be precisely and unnaturally fine-tuned to have a value much lower than what would be expected from quantum arguments.
   Indeed, quantum corrections from Higgs interactions with other particles should place $\mh$ at the level of the Planck scale, \ie{} 17 orders of magnitude larger than its measured value.
+
+Regardless of what may lie ahead, we are confident in saying that sometime, somewhere, the \ac{SM} sturdiness will crack, hinting at what lies beyond.
+In this thesis we took the risk of assuming the answer lies in double Higgs production.
+Even if proved wrong, our choice will allow future work to get closer to the next big discovery.
