@@ -57,31 +57,33 @@
 #+LATEX_HEADER: \newcommand{\bbgg}{bb$\gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\bbtt}{bb$\tau\tau$}
 #+LATEX_HEADER: \newcommand{\bbzz}{bbZZ}
-#+LATEX_HEADER: \newcommand{\bspsiphi}{B_{s} \rightarrow J/\psi \phi}
+#+LATEX_HEADER: \newcommand{\bspsiphi}{\text{B}_{\text{s}} \rightarrow J/\psi \phi}
 #+LATEX_HEADER: \newcommand{\ggtt}{$\gamma\gamma\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hbb}{H $\rightarrow$ bb}
 #+LATEX_HEADER: \newcommand{\htt}{H $\rightarrow$ $\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hcc}{H $\rightarrow$ cc}
-#+LATEX_HEADER: \newcommand{\hgg}{H $\rightarrow$ $\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\hhbbbbtt}{HH $\rightarrow$ bbbb$\tau\tau$}
-#+LATEX_HEADER: \newcommand{\hhbbbb}{HH $\rightarrow$ bbbb}
-#+LATEX_HEADER: \newcommand{\hhbbgg}{HH $\rightarrow$ bb$\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\hhbbll}{HH $\rightarrow$ bb$\ell\ell$+$E^{\text{miss}}_{\text{T}}$}
-#+LATEX_HEADER: \newcommand{\hhbbtt}{HH $\rightarrow$ bb$\tau\tau$}
-#+LATEX_HEADER: \newcommand{\hhbbvv}{HH $\rightarrow$ bbVV}
-#+LATEX_HEADER: \newcommand{\hhbbww}{HH $\rightarrow$ bbWW}
+#+LATEX_HEADER: \newcommand{\hgg}{$\mathrm{H} \rightarrow \gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\hhbbbbtt}{$\mathrm{HH} \rightarrow \mathrm{bbbb}\tau\tau$}
+#+LATEX_HEADER: \newcommand{\hhbbbb}{$\mathrm{HH} \rightarrow \mathrm{bbbb}$}
+#+LATEX_HEADER: \newcommand{\hhbbgg}{$\mathrm{HH} \rightarrow \mathrm{bb}\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\hhbbll}{$\mathrm{HH} \rightarrow \mathrm{bb}\ell\ell+\mathrm{E}^{\mathrm{miss}}_{\mathrm{T}}$}
+#+LATEX_HEADER: \newcommand{\hhbbtt}{$\mathrm{HH} \rightarrow \mathrm{bb}\tau\tau$}
+#+LATEX_HEADER: \newcommand{\hhbbvv}{$\mathrm{HH} \rightarrow \mathrm{bbVV}$}
+#+LATEX_HEADER: \newcommand{\hhbbww}{$\mathrm{HH} \rightarrow \mathrm{bbWW}$}
 #+LATEX_HEADER: \newcommand{\bbww}{bbWW}
-#+LATEX_HEADER: \newcommand{\hhbbzz}{HH $\rightarrow$ bbZZ}
-#+LATEX_HEADER: \newcommand{\hhhbbbbbb}{HHH $\rightarrow$ bbbbbb}
-#+LATEX_HEADER: \newcommand{\hhhbbbbgg}{HHH $\rightarrow$ bbbb$\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\hhhbbbbtt}{HHH $\rightarrow$ bbbb$\tau\tau$}
-#+LATEX_HEADER: \newcommand{\hhttgg}{HH $\rightarrow$ $\tau\tau\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\hhwwgg}{HH $\rightarrow$ WW$\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\hww}{H $\rightarrow$ W$^{\pm}$W$^{\mp*}$}
-#+LATEX_HEADER: \newcommand{\hzzfourl}{H $\rightarrow$ ZZ$^{*}$ $\rightarrow$ 4$\ell$}
-#+LATEX_HEADER: \newcommand{\hzz}{H $\rightarrow$ ZZ$^{*}$}
-#+LATEX_HEADER: \newcommand{\pphh}{pp $\rightarrow$ HH}
-#+LATEX_HEADER: \newcommand{\ppx}{pp $\rightarrow$ X}
+#+LATEX_HEADER: \newcommand{\hhbbzz}{$\mathrm{HH} \rightarrow \mathrm{bbZZ}$}
+#+LATEX_HEADER: \newcommand{\hhhbbbbbb}{$\mathrm{HHH} \rightarrow \mathrm{bbbbbb}$}
+#+LATEX_HEADER: \newcommand{\hhhbbbbgg}{$\mathrm{HHH} \rightarrow \mathrm{bbbb}\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\hhhbbbbtt}{$\mathrm{HHH} \rightarrow \mathrm{bbbb}\tau\tau$}
+#+LATEX_HEADER: \newcommand{\hhttgg}{$\mathrm{HH} \rightarrow \tau\tau\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\hhwwgg}{$\mathrm{HH} \rightarrow \mathrm{WW}\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\hww}{$\mathrm{H} \rightarrow \mathrm{W}^{\pm}\mathrm{W}^{\mp*}$}
+#+LATEX_HEADER: \newcommand{\hzzfourl}{$\mathrm{H} \rightarrow \mathrm{ZZ}^{*} \rightarrow 4\ell$}
+#+LATEX_HEADER: \newcommand{\hzz}{$\mathrm{H} \rightarrow \mathrm{ZZ}^{*}$}
+#+LATEX_HEADER: \newcommand{\pphh}{$\mathrm{pp} \rightarrow \mathrm{HH}$}
+#+LATEX_HEADER: \newcommand{\ppx}{$\mathrm{pp} \rightarrow \mathrm{X}$}
+#+LATEX_HEADER: \newcommand{\dzero}{\text{D}^{0}}
+#+LATEX_HEADER: \newcommand{\bszero}{\text{B}_{\text{s}}^{0}}
 #+LATEX_HEADER: \newcommand{\tautrimuon}{\tau \rightarrow \mu\mu\mu}
 #+LATEX_HEADER: \newcommand{\ttbar}{\text{t}\bar{\text{t}}}
 #+LATEX_HEADER: \newcommand{\bbbar}{\text{b}\bar{\text{b}}}
@@ -89,27 +91,27 @@
 #+LATEX_HEADER: \newcommand{\qqbar}{\text{q}\bar{\text{q}}}
 #+LATEX_HEADER: \newcommand{\tth}{$t\bar{t}\text{H}$}
 #+LATEX_HEADER: \newcommand{\vh}{$V\text{H}$}
-#+LATEX_HEADER: \newcommand{\xbb}{X $\rightarrow$ $\text{b}\bar{\text{b}}$}
-#+LATEX_HEADER: \newcommand{\xcc}{X $\rightarrow$ $\text{c}\bar{\text{c}}$}
-#+LATEX_HEADER: \newcommand{\xqq}{X $\rightarrow$ $\text{q}\bar{\text{q}}$}
-#+LATEX_HEADER: \newcommand{\xhhbbbb}{X $\rightarrow$ HH $\rightarrow$ bbbb}
-#+LATEX_HEADER: \newcommand{\xhhbbgg}{X $\rightarrow$ HH $\rightarrow$ bb$\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\xhhbbtt}{X $\rightarrow$ HH $\rightarrow$ bb$\tau\tau$}
-#+LATEX_HEADER: \newcommand{\xhhbbww}{X $\rightarrow$ HH $\rightarrow$ bbWW}
-#+LATEX_HEADER: \newcommand{\xhh}{X $\rightarrow$ HH}
-#+LATEX_HEADER: \newcommand{\xyhbbbb}{X $\rightarrow$ HY $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\xbb}{$\mathrm{X} \rightarrow \mathrm{b}\bar{\mathrm{b}}$}
+#+LATEX_HEADER: \newcommand{\xcc}{$\mathrm{X} \rightarrow \mathrm{c}\bar{\mathrm{c}}$}
+#+LATEX_HEADER: \newcommand{\xqq}{$\mathrm{X} \rightarrow \mathrm{q}\bar{\mathrm{q}}$}
+#+LATEX_HEADER: \newcommand{\xhhbbbb}{$\mathrm{X} \rightarrow \mathrm{HH} \rightarrow \mathrm{bbbb}$}
+#+LATEX_HEADER: \newcommand{\xhhbbgg}{$\mathrm{X} \rightarrow \mathrm{HH} \rightarrow \mathrm{bb}\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\xhhbbtt}{$\mathrm{X} \rightarrow \mathrm{HH} \rightarrow \mathrm{b}\tau\tau$}
+#+LATEX_HEADER: \newcommand{\xhhbbww}{$\mathrm{X} \rightarrow \mathrm{HH} \rightarrow \mathrm{bWW}$}
+#+LATEX_HEADER: \newcommand{\xhh}{$\mathrm{X} \rightarrow \mathrm{HH}$}
+#+LATEX_HEADER: \newcommand{\xyhbbbb}{$\mathrm{X} \rightarrow \mathrm{HY} \rightarrow \mathrm{bbbb}$}
 #+LATEX_HEADER: \newcommand{\xshhsm}{\sigma_{\text{HH}}^{\text{SM}}}
 #+LATEX_HEADER: \newcommand{\xshh}{\sigma_{\text{HH}}}
-#+LATEX_HEADER: \newcommand{\xyhbbgg}{X $\rightarrow$ Y(bb)H($\gamma\gamma$)}
-#+LATEX_HEADER: \newcommand{\xyhbbtt}{X $\rightarrow$ Y(bb)H($\tau\tau$)}
-#+LATEX_HEADER: \newcommand{\xyh}{X $\rightarrow$ YH}
-#+LATEX_HEADER: \newcommand{\xyy}{X $\rightarrow$ YY}
-#+LATEX_HEADER: \newcommand{\zbb}{Z $\rightarrow$ bb}
-#+LATEX_HEADER: \newcommand{\zhbbbb}{ZH $\rightarrow$ bbbb}
-#+LATEX_HEADER: \newcommand{\zllg}{Z $\rightarrow$ ll$\gamma$}
-#+LATEX_HEADER: \newcommand{\zll}{Z $\rightarrow$ ll}
-#+LATEX_HEADER: \newcommand{\zzbbbb}{ZZ $\rightarrow$ bbbb}
-#+LATEX_HEADER: \newcommand{\zzzhbbbb}{ZZ \slash ZH $\rightarrow$ bbbb}
+#+LATEX_HEADER: \newcommand{\xyhbbgg}{$\mathrm{X} \rightarrow \mathrm{Y(bb)H(}\gamma\gamma\mathrm{)}$}
+#+LATEX_HEADER: \newcommand{\xyhbbtt}{$\mathrm{X} \rightarrow \mathrm{Y(bb)H(}\tau\tau\mathrm{)}$}
+#+LATEX_HEADER: \newcommand{\xyh}{$\mathrm{X} \rightarrow \mathrm{YH}$}
+#+LATEX_HEADER: \newcommand{\xyy}{$\mathrm{X} \rightarrow \mathrm{YY}$}
+#+LATEX_HEADER: \newcommand{\zbb}{$\mathrm{Z} \rightarrow \mathrm{bb}$}
+#+LATEX_HEADER: \newcommand{\zhbbbb}{$\mathrm{ZH} \rightarrow \mathrm{bbbb}$}
+#+LATEX_HEADER: \newcommand{\zllg}{$\mathrm{Z} \rightarrow \mathrm{ll}\gamma$}
+#+LATEX_HEADER: \newcommand{\zll}{$\mathrm{Z} \rightarrow \mathrm{ll}$}
+#+LATEX_HEADER: \newcommand{\zzbbbb}{$\mathrm{ZZ} \rightarrow \mathrm{bbbb}$}
+#+LATEX_HEADER: \newcommand{\zzzhbbbb}{$\mathrm{ZZ/ZH} \rightarrow \mathrm{bbbb}$}
 
 # HGCAL
 #+LATEX_HEADER: \newcommand{\bsplits}{\texttt{bye\_splits}}
@@ -154,7 +156,7 @@
 
 # Particles
 #+LATEX_HEADER: \newcommand{\egamma}{$e/\gamma$}
-#+LATEX_HEADER: \newcommand{\jpsi}{$J/\psi$}
+#+LATEX_HEADER: \newcommand{\jpsi}{$\mathrm{J/}\psi$}
 #+LATEX_HEADER: \newcommand{\tauh}{$\tau_{\text{h}}$}
 
 #+LATEX_HEADER: \newcommand{\myparagraph}[1]{\paragraph{\large{#1}}~\vspace{.2cm}}

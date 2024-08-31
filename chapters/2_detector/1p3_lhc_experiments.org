@@ -2,76 +2,82 @@
 :CUSTOM_ID: sec:lhc_experiments
 :END:
 
-tunnel facility excavated for the LEP collider
+In the \ac{LHC}, proton beams circulate in counter-wise directions along two separate beam pipes and are made to converge in four \acp{IP}, as shown in [[fig:cern_acc_complex]].
+Such collision points, numbered 1, 2, 5 and 8, are located in underground experimental caverns, each attached to one or more experiments, and defining CERN's /North Area/, where \ac{SPS} provides proton beams.
+Other \acp{IP} were used by the \ac{LEP} experiments: the \ac{ALEPH}, at \ip{4}, and the \ac{OPAL}, at \ip{6}.
+The \acp{IP} for the \ac{DELPHI}, at \ip{8}, and the \ac{L3}, at \ip{2}, were reused by the \ac{LHCb} and \ac{ALICE} detectors, respectively [[cite:&lhc_operation]].
+In this section, we provide a summary for some of the physics experiments exploiting \ac{LHC}'s beams, before describing the \ac{CMS} detector at length in [[#sec:cms_detector]].
 
-In the following we provide a summary of some of the most emblematic physics experiments at CERN, before describing the \ac{CMS} detector in ref:sec:cms_detector.
-As shown in [[ref:fig:cern_acc_complex]], the \ac{LHC} presents four \acp{IP} where the proton beams currently converge in underground experimental caverns (1, 2, 5 and 8).
-Other \acp{IP} were used by the old \ac{LEP} experiments: the \ac{ALEPH} at \ip{4} and the \ac{OPAL} at \ip{6}.
-\Acp{IP} for \ac{L3} (\ip{2}) and \ac{DELPHI} (\ip{8}) were reused by \ac{ALICE} and the \ac{LHCb}, respectively [[cite:&lhc_operation]].
-
-\myparagraph{ATLAS}
-
-\noindent \Ac{ATLAS} [[cite:&atlas_collab]] is, with \ac{CMS}, one of the two general-purpose detectors at the \ac{LHC}.
-It sits at a total length of \SI{46}{\meter}, a diameter of \SI{25}{\meter}, and a weight of \SI{7e3}{\tonne}.
+* ATLAS
+The \ac{ATLAS} detector [[cite:&atlas_collab]] is, along with \ac{CMS}, one of the two general-purpose detectors at the \ac{LHC}.
+Located at \ip{1}, it makes up a total length of \SI{46}{\meter}, a diameter of \SI{25}{\meter}, and a weight of \SI{7000}{\tonne}.
 It comprises a series of concentric and hermetic detection layers to measure the different kinds of particles produced at the \ac{PV}.
-The \ac{ID} is the first of such detectors, devised to measure the direction, momentum and charge of charged particles.
+The \ac{ID} is the first of such subdetectors, devised to measure the charge, direction and momentum of charged particles.
 It includes a Pixel Detector, a \ac{SCT}, and a \ac{TRT}.
-The \num{\sim 92e6} \ac{Si} pixels are located just \SI{3.3}{\cm} away from the beamline, spread across four detection layers, and reach a \SI{10}{\um} precision.
+The \num{\sim 92e6} \ac{Si} pixels are located just \SI{3.3}{\cm} away from the beamline, spread across four detection layers, reaching a \SI{10}{\um} precision.
 The \ac{SCT} follows, containing \num{\sim 6e6} strips, for a total of \SI{60}{\meter\squared} of silicon material.
-It reaches a precision of \SI{25}{\um}.
-The last component of the \ac{ID} is the \ac{TRT}, which uses the different drift-tube gaseous technology, similar to what is present in the \ac{CMS} muon chambers.
+It attains a precision of \SI{25}{\um}.
+The last component of the \ac{ID} is the \ac{TRT}, which uses a drift-tube gaseous technology.
 The \ac{TRT} exploits the production of transition radiation to extract information on the particle type.
-Since the radiation is proportional to the particle mass, lighter particles will emit more photons.
-Separating electrons from hadrons thus becomes possible.
+The more relativistic a particle is, the more photons are released at the interface between two materials with different diffraction indexes.
+Since lighter particles travel faster, they will also produce more radiation.
+This principle enables the distinction of particles with equal charges and energies but different masses.
+For the specific case of \ac{ATLAS}, the \ac{TRT} provides a significant discrimination between electrons and charged pions in the \num{1} to \SI{100}{\GeV} energy range [[cite:&atlas_tdr]].
 A central \ac{NbTi} solenoid magnet surrounds the \ac{ID}, and provides the \SI{2}{\tesla} needed to bend the trajectories of charged tracks.
-Encircling the solenoid, a homogeneous liquid \ch{Ar} calorimeter serves as electromagnetic calorimeter [[cite:&calorimetry_fabjan]]. 
+Encircling the solenoid, a homogeneous liquid argon calorimeter serves as electromagnetic calorimeter [[cite:&calorimetry_fabjan]]. 
 The usage of noble liquids is a common choice in calorimeters due to their radiation resistant properties, ease of replacement, and good response uniformity.
-\ch{Ar} in particular, despite the not-so-short radiation length, is cheap, and thus easily replaceable in the advent of contamination.
-It also provides an intrinsically stable and linear energy response, and is relatively easy to segment in the longitudinal and transversal directions.
+Argon in particular, despite the not-so-short radiation length, is cheap, and thus easily replaceable in the advent of contamination.
+Argon also provides an intrinsically stable and linear energy response, and is relatively easy to segment in the longitudinal and transversal directions.
 The \ac{ATLAS} calorimeter notably features an "accordion" geometry with a honeycomb pattern, and works by ionisation.
 This particular geometry is motivated by the desire to eliminate projective azimuthal cracks [[cite:&accordion_atlas]].
 It is interesting to note that around half the signal comes in the form of scintillation light due to the recombination of electron-ion pairs.
 However, scintillation readouts is not included due to technical and geometrical challenges when extracting both charge and light signals.
 An excellent energy resolution can nevertheless be achieved [[cite:&fabiola_calorimetry]].
 The calorimeter features three segments in depth, the first having an extremely fine segmentation of 0.003 along \ac{eta}, to clearly separate prompt from $\pi^{0}$ photons up to $\pt\sim\!70\si{\GeV}$.
-This was optimized for the \hgg{} analysis.
-The calorimeter is preceded by a presampler which corrects the electron and positron energy loss due to upstream material, which includes the solenoid.
+The segmentation was optimized for the \hgg{} analysis.
+The calorimeter is preceded by a presampler which corrects the electron and positron energy losses due to upstream material, including the solenoid.
 To keep the argon liquid, the calorimeters are kept at \SI{-184}{\degree}.
 A tile \ac{HAD} calorimeter follows, made of alternating steel absorber and active \ac{Sci} plastic layers, read out by \acp{PMT}.
 Around \num{420000} tiles are present, weighting almost \SI{2900}{\tonne}.
 Next, the outer regions of \ac{ATLAS} are taken by a large muon spectrometer.
 Five different subdetectors provide precise (\SI{\sim 100}{\um}) and fast (\SI{\sim 2.5}{\micro\second}) muon momentum measurements: \acp{MDT}, \acp{RPC}, \acp{TGC}, \acp{sTGC} and Micromegas.
-The muon trajectories are deviated thanks to additional magnets, including two endcap magnets and the largest toroidal magnetic ever built, located in the center of the experiment, which took almost a year to install.
+The muon trajectories are bent thanks to additional magnets, including two endcap magnets and the largest toroidal magnetic ever built, located in the center of the experiment, which took almost a year to install.
 The magnets provide up to \SI{3.5}{\tesla}, and are located in between the muon subdetectors.
-Finally, a brief mention to the two-tiered trigger system: \ac{ATLAS} has implemented "trigger-level analysis" and "delayed stream" modes, which are similar to the \ac{CMS} scouting and parking strategies, respectively, discussed in [[ref:sec:cms_trigger_system]] [[cite:&atlas_delayed_stream]].
+Finally, a brief mention to the two-tiered trigger system: \ac{ATLAS} has implemented "trigger-level analysis" and "delayed stream" modes, which are similar to the \ac{CMS} scouting and parking strategies, respectively [[cite:&atlas_delayed_stream]].
+These strategies are discussed in [[#sec:parking_scouting]].
 
-\myparagraph{LHCb}
+* LHCb
+Instead of surrounding the entire collision point with an enclosed detector as \ac{ATLAS} and \ac{CMS} do, the \ac{LHCb} experiment [[cite:&lhcb_collab]], located at \ac{IP} 8, employs a single-arm forward spectrometer.
+The experiment includes large aperture subdetectors, from \num{10} to \SI{300}{\milli\radian}, placed perpendicularly to the beam axis.
+Given that \ac{LHCb}'s main purpose is the study of b-flavoured baryons as probes for \ac{NP}, its distinctive design can be readily explained: at current energies, the decay particles of b hadrons tend to travel close to the beam pipe.
+Phenomena studied by \ac{LHCb} include rare b meson decays, the possible existence of \ac{CP} violating asymmetries in b and c hadron decays, the precise measurement of the three interior angles of the \ac{CKM} matrix, $\bszero$ mixing, and tests for lepton flavour universality, among many others [[cite:&lhcb_hllhc_tdr]].
 
-\noindent Instead of surrounding the entire collision point with an enclosed detector as \ac{ATLAS} and \ac{CMS} do, the \ac{LHCb} experiment [[cite:&lhcb_collab]], located at \ac{IP} 8, employs a single-arm forward spectrometer.
-The experiment includes large aperture subdetectors (\SIrange{10}{300}{\milli\radian}) placed perpendicularly to the beam axis.
-Given that \ac{LHCb}'s main purpose is the study of $b$-flavoured baryons as probes for \ac{NP}, this distinctive design can be readily explained: the decay particles of $b$ hadrons tend to travel close to the line of the beam pipe.
-The design thus exploits to exploit the large $bb$ production cross section at the \ac{LHC}.
-Phenomena studied by \ac{LHCb} include rare B-meson decays, the possible existence of \ac{CP} violating asymmetries in $b$ and $c$ hadron decays, the precise measurement of the three interior angles of the \ac{CKM} matrix, $B_{s}$ mixing, or tests for lepton flavour universality, among many others [[cite:&lhcb_hllhc_tdr]].
-
-Given the asymmetric geometry of LHCb, to maximally exploit the volume of the underground cavern, the LHC optics is modified  with a displacement of the collision point by \SI{11.25}{\m} from the centre.
-Starting from the collision point, and moving outwards through \SI{21}{\m} and \SI{5.6}{\tonne} of subdetectors, \ac{LHCb} presents an array of semi-circular silicon-based detectors composing the \ac{VELO}, followed by the first \ac{RICH} detector, focused on low-momentum tracks.
+Given the asymmetric geometry of \ac{LHCb}, with all detectors located on the same side, the \ac{LHC} optics are modified so that the collision point is displaced \SI{11.25}{\m} from the centre, which maximally exploits the volume of the underground cavern for detector components [[cite:&bb_pairs1;&bbpairs2]].
+Starting from the collision point, and moving outwardly through \SI{21}{\m} and \SI{5.6}{\tonne} of subdetectors, \ac{LHCb} presents an array of semi-circular silicon-based detectors composing the \ac{VELO}, followed by the first \ac{RICH}, focused on low-momentum tracks.
 We note that particle identification is essential to distinguish pion, kaon and proton tracks, notably in flavour physics [[cite:&lhcb_hllhc_tdr]].
-Several layers of the tracker systems follow, separated by a warm dipole magnet [[cite:&lhcb_collab_tracker_tdr]], and a second \ac{RICH} detector lies just behind the tracker, to measure high-momentum tracks.
-We then find a Shashlik electromagnetic calorimeter and a hadronic calorimeter composed of iron and scintillator tiles.
-The muon system finalizes the design, enabling impactful measurements such as the study of $B_{s}^{0}\rightarrow\mu\mu$ decays.
+Several layers of the tracker systems follow, separated by a warm dipole magnet [[cite:&lhcb_collab_tracker_tdr]], and a second \ac{RICH} detector lies immediately behind the tracker, to measure high-momentum tracks.
+One then finds a Shashlik electromagnetic calorimeter and a hadronic calorimeter composed of iron and scintillator tiles.
+The muon system finalizes the design, enabling for instance the study of the rare $\bszero\rightarrow\mu\mu$ process.
+
+Concerning its trigger system, large beauty and charm cross sections required the reduction of the input maximal rate of at most \SI{30}{\mega\hertz} to \SI{\sim 12.5}{\kilo\hertz} in \run{2}.
+\Ac{LHCb} interestingly uses a trigger deferral system, where the time during which the \ac{LHC} is idle is repurposed for further processing.
+This time is part of a normal data taking year, with technical stops, maintenance work or time spent preparing for each new fill.
+To maximally utilize the deferral, the trigger is split into two layers, where the buffering only takes place after the first level, receiving the entirety of the selected data.
+Additional trigger improvements enabled the inclusion of offline quality information inside the trigger, raising the question of whether an additional offline reconstruction step was still required.
+A new "turbo" stream was therefore made available [[cite:&lhcb_turbo]], where the full physics analysis is performed, producing an output format one order of magnitude smaller than what is possible with the "full", standard stream.
+Many analyses have started using datasets thus produced, benefitting from the additional unprescaled events.
+We note that the "turbo" approach is extremely similar to the scouting methodology in \ac{CMS}, which is described in [[#sec:parking_scouting]].
+For \run{3}, the turbo mode share has been extended, and the hardware trigger was removed, meaning that \ac{LHCb} now supports a purely software trigger at \SI{30}{\mega\hertz}!
 
 \ac{LHCb} is also the sole \ac{LHC} experiment capable to run both in collider and fixed-target mode [[cite:&lhcb_fixed_target]].
-The \ac{SMOG} provides a mean to inject noble gases (\ch{He}, \ch{Ar}, \ch{Ne}) into \ac{VELO}.
-Despite smaller $\bbbar$ cross-sections and worse signal-to-background ratio, fixed-target experiments bring average $b$ flight lengths of a few~\si{\cm}, compared to a few~\si{\mm} in the collider mode, due to larger Lorentz boosts.
-The larger momenta of the final state particles in the lab also implies simpler triggering and tagging.
-Some result bforuhg forward by \ac{SMOG} include fixed-target \jpsi{} and $D^{0}$ production, and direct measurements of antiproton production [[cite:&antimatter_prod_fixed_target_lhcb]], which is relevant for \ac{DM} searches.
+The \ac{SMOG} provides the means to inject noble gases (\ch{He}, \ch{Ar}, \ch{Ne}) into \ac{VELO}.
+A fixed-target experiment brings many advantages.
+One can now explore collisions with targets of mass number between the ones in protons and \ch{Pb} ions, and with an energy range between \num{30} and \SI{115}{\GeV}, which corresponds to an uncharted territory between \ac{SPS} and the higher energies of the \ac{LHC} and \ac{RHIC}.
+Finally, the new approach can improve the understanding of nuclear and charm \acp{PDF}, the latter representing an important background for neutrino astronomy that must be precisely understood.
+Some results made possible by \ac{SMOG} include fixed-target \jpsi{} and $\dzero$ production, and direct measurements of antiproton production [[cite:&antimatter_prod_fixed_target_lhcb]], which is relevant for \ac{DM} searches.
 
-+ mention "turbo" mode similar to scouting [[cite:&lhcb_turbo]]
-[[cite:&bb_pairs1;&bbpairs2]]
-
-\myparagraph{ALICE}
-
-\noindent The \ac{ALICE} experiment [[cite:&alice]] is dedicated to heavy-ion physics, built to study strongly interacting \ac{QCD} matter at extreme energy densities, namely the \ac{QGP}.
+* ALICE
+The \ac{ALICE} experiment [[cite:&alice]] is dedicated to heavy-ion physics, built to study strongly interacting \ac{QCD} matter at extreme energy densities, namely the \ac{QGP}.
 It mostly considers \ch{Pb} ions, but also features lighter ions, proton-nucleus runs, and runs at lower energy.
 Located \SI{56}{\meter} underground at \ip{2}, weighting \SI{10}{\kilo\tonne}, and measuring \SI{26}{\meter} long, \SI{16}{\meter} high, and \SI{16}{\meter} wide, its design sets it apart from the other three main \ac{LHC} experiments.
 Clearly, it must cope with the extreme particle multiplicity anticipated in central \ch{Pb}-\ch{Pb} collisions, which could be up to three orders of magnitude larger than in typical \ac{pp} interactions at the same energy.
@@ -88,48 +94,46 @@ The experiment is surrounded by a giant octagonal solenoid magnet, reused from t
 Interestingly, the magnet is not perfectly centered around the \ac{LHC} beam, since the electron-positron beam at \ac{LEP} had a slightly lower alignment.
 Steel elements are therefore inserted to partially compensate the off-axis effect.
 
-\myparagraph{FASER}
+* FASER
+The \ac{FASER} [[cite:&faser]] experiment is designed to study the interactions of \si{\TeV} neutrinos via charged currents, and to look for long-lived \ac{BSM} particles, such as dark photons or axions.
+It studies an extremely forward $\eta > 8.5$ region, but is located at \SI{480}{\meter} from the \ac{ATLAS} \ac{IP}, a distance at which most \ac{SM} model particle rates are negligible, with the exceptions of neutrinos and muons.
+The detector benefitted from the reuse of spare \ac{LHCb} calorimeter modules and \ac{ATLAS} \acp{SCT}.
+The detector also includes trigger and timing detectors, and scintillator veto systems.
+Downstream, we find \ac{FASER}$\nu$ [[cite:&fasernu]], a subdetector consisting of multiple emulsion chambers interleaved with tungsten passive material, totalling approximately \SI{220}{\radl}, for a spatial resolution of \SI{\sim 400}{\nano\meter} per hit and a angular resolution of \SI{0.06}{\milli\radian} for \SI{1}{\cm} long tracks.
+The emulsion films are replaced every \num{\sim 3} months to mitigate \ac{PU} effects.
+The detector achieved the first ever direct obervation of neutrino interactions at a collider [[cite:&faser_neutrinos]], and has recently released the first neutrino cross section measurements [[cite:&PhysRevLett.133.021802]], consistent with the \ac{SM}.
 
-\noindent \ac{FASER}
+* SND@LHC
+The \ac{SND@LHC} [[cite:&snd]] is a compact and dedicated experiment designed to study neutrinos from all flavours produced in \ac{pp} collisions.
+It specifically focuses on neutrino cross-sections between \SI{350}{\GeV} and \SI{10}{\TeV} energies, a range currently unexplored.
+The detector also has the potential for detecting hypothetical \acp{FIP}.
+Located about \SI{480}{\meter} downstream from the ATLAS \ac{IP}, in a previously unused tunnel linking the \ac{LHC} to the \ac{SPS}, SND@LHC is strategically positioned to capture particles in the $7.2 < \eta < 8.4$ region, which remains out of reach for the larger experiments, and is complementary to the coverage of the \ac{FASER}$\nu$ experiment.
+At this \ac{eta} range, electron neutrinos and anti-neutrinos are overwhelmingly produced by the decay of charmed hadrons, which can therefore be studied by \ac{SND@LHC}.
+The detector consists of a hybrid system that combines upstream emulsion cloud chambers for tracking, each followed by a scintillating fibre plane for timing, with a downstream hadronic calorimeter and muon identification system.
+Tungsten is used as passive material to increase the neutrino containment.
+A veto system for muons is included in front of the emulsion chambers.
+This setup allows for the precise tracking and identification of different types of neutrino interactions.
+After its approval in 2021, \ac{SND@LHC} recently measured neutrinos for the first time  [[cite:&snd_neutrinos]].
 
-\myparagraph{SND@LHC}
+* LHCf
+The \ac{LHCf} detector [[cite:&LHCf_2008]] is designed to study particles emerging in the very forward region of collisions.
+Its primary goal is to improve our understanding of cosmic rays by simulating ultra-high-energy cosmic ray interactions using particles thrown forward by collisions at \ip{1}, the same \ac{IP} used by \ac{ATLAS}.
+These studies can help in the calibration and interpretation of larger cosmic rays experiments, such as the Pierre Auger Observatory [[cite:&auger]], or the Telescope Array Project[fn:: Which measured the "Amaterasu" particle, the third most energetic particle ever observed. The pole position still belongs to the 1991 "Oh-My-God" particle, boasting an impressive $(3.2 \pm 0.9) \times 10^{20}\,\si{\eV}$ energy.] [[cite:&telescope_array]].
+The setup of \ac{LHCf} consists of two small detectors located \SI{140}{\meter} from the \ac{ATLAS} \ac{IP}, weighting \SI{40}{\kg} only, and measuring $30 \times 80 \times 10 \,\si{\cm\cubed}$.
+Each detector includes a sampling calorimeter tower to measure the energy and transverse momentum of neutral particles, particularly photons and neutral pions, produced at very small angles relative to the proton beam direction.
+The detectors also include a tracker system, with silicon layers or scintillating fibers, depending on the location.
 
-\noindent \ac{SND@LHC}
+* TOTEM
+Being the fifth approved \ac{LHC} experiment, \ac{TOTEM} [[cite:&totem]], as its name implies, is dedicated to the precise measurement of \ac{pp} cross-sections in the forward region of the \ac{LHC}, and on understanding the dependence of the cross section with center-of-mass energy.
+The detector can also be exploited to study the structure of the proton, by measuring its elastic scattering over a wide momentum range, hopefully shedding some light on low-energy \ac{QCD} mechanics.
+All of its subdetectors, \acp{RP} and two particle Telescopes, detect charged particles emmited at \ac{CMS}'s \ac{IP} and include trigger capabilities.
+The silicon-made \acp{RP} localize the trajectory of scattered protons with a \SI{20}{\micro\meter} precision, being located on both sides of the \ac{IP} at distances of \SI{147}{\meter} and \SI{220}{\meter}.
+The telescopes, instead, measure the rate of inelastic scattering, being located in the \ac{CMS} experimental cavern, at \SI{10.5}{\meter} and \SI{13.5}{\meter} from either side of \ip{8}.
+Their goal is to measure the tracks of the charged particles produced in the \ac{PV}.
+\Ac{TOTEM} measurements can strongly impact the theoretical models feeded into the generators used by the larger \ac{LHC} experiments, such as \ac{CMS}.
 
-\myparagraph{LHCf}
-
-\noindent \ac{LHCf}
-
-\myparagraph{TOTEM}
-
-\noindent \ac{TOTEM}
-
-\myparagraph{MoEDAL}
-
-\noindent The \ac{MoEDAL} experiment [[cite:&moedal]], and its \run{3} update \ac{MoEDAL}-\ac{MAPP}, is located at \ip{8}, sharing the \ac{LHCb} experimental cavern.
+* MoEDAL
+The \ac{MoEDAL} experiment [[cite:&moedal]], together with its \run{3} update \ac{MAPP}, is located at \ip{8}, sharing the experimental cavern with \ac{LHCb}.
 It directly searches for the theorized magnetic monopole, together with other exotic particles that could indicate \ac{BSM}, such as "Q-balls", "dyons" (particles containing both electric and magnetic charges), particles with multiple charges, and even black hole remnants.
-The detector is composed of an array of of \num{10} sheets of plastic nuclear track detectors: an hypothetical new particle would break the molecular structure of the plastic during its traversal and reveal its trajectory by a series of holes.
+The detector is composed of an array of \num{10} sheets of plastic nuclear track detectors: an hypothetical new particle would break the molecular structure of the plastic during its traversal and reveal its trajectory with a series of holes.
 \Ac{MoEDAL} is positioned around the \ac{LHCb} \ac{VELO} subdetector, for a maximum surface area of \SI{25}{\meter\squared}.
-
-* Jona :noexport:
-    
-\begin{itemize}
-    \item \textbf{Large Hadron Collider forward (LHCf)} \\
-    The LHCf experiment \cite{LHCf_2008} is located at IP1 and shares the experimental cavern of ATLAS; its goal is the perfection of the hadron interaction models used in the study of extremely high-energy cosmic rays. It comprises two identical detectors located $\pm140\unit{m}$ from the collision point. This setup ensures the collection of data at zero-degree collision angle via the two imaging calorimeters made of tungsten plates, plastic scintillators, and position-sensitive sensors. This experiment is the smallest on the LHC accelerator, with each detector weighting $\sim40\unit{kg}$ for a total volume of $30\times80\times10\cm^{3}$.
-
-    \item \textbf{ForwArd Search ExpeRiment (FASER)} \\
-    The FASER experiment \cite{FASER_2022} is positioned on the beam collision axis line-of-sight $480\unit{m}$ from IP1 in a service tunnel, and has been installed during the LS2. It is designed  to search for new light and very-weakly-interacting particles. The detector is composed of a two-fold scintillator veto system, an interface tracker, a decay volume immersed in a $0.57\unit{T}$ magnetic field generated by a dipole magnet, a timing scintillator station, a tracking spectrometer surrounded by two dipole magnets generating a $0.57\unit{T}$ magnetic field, and an electromagnetic calorimeter system. The FASER detector is complemented by the FASER$\PGn$ \cite{FASERnu_2020} emulsion sub-detector, which extends the angular coverage and can detect neutrinos of all flavours produced at the LHC. The FASER detector has a $10\cm$ radius aperture, the FASER$\PGn$ sub-detector has a $25\times30\cm^2$ transverse surface, and the total length of the two together is $7\unit{m}$.
-
-    \item \textbf{Scattering and Neutrino Detector at the LHC (SND@LHC)} \\
-    The SND@LHC experiment \cite{SNDatLHC_2022} is positioned in a service tunnel $480\unit{m}$ from IP1, slightly off-axis from the beam collision axis, and has been installed during the LS2. It is designed to profit from the high flux of energetic neutrinos of all flavours from the LHC. The detector is composed of a hybrid system based on a target made of tungsten plates, interleaved with emulsion and electronic trackers, also acting as an electromagnetic calorimeter, and followed by a hadronic calorimeter and a muon identification system. The SND@LHC detector measures $1\times1\times2.6\unit{m}^3$ with a total weight of almost 1 tonne.
-
-    \item \textbf{Compact Muon Solenoid (CMS)} \\
-    The CMS experiment \cite{CMS_2008} is located at IP5; together with its companion detector ATLAS, it is a general-purpose detector pivotal to the discovery of the Higgs boson, and it was designed to probe a large spectrum of physics phenomena. While presenting the similar onion-like structure of ATLAS, the design choices of the CMS detector are largely different from those of its partner experiment. These choices lead to a substantially smaller detector with a diameter of $14.6\unit{m}$ and a length of $21.6\unit{m}$, but a weight of $12.5\cdot10^{3}$ tonnes, making it the heaviest detector at the LHC. Section \ref{CH2:CMS} gives a detailed description of the CMS detector.
-
-    \item \textbf{TOTal Elastic and diffractive cross section Measurement (TOTEM)} \\
-    The TOTEM experiment \cite{TOTEM_2008} is located at IP5 and shares the experimental cavern of CMS; it is designed to exploit a luminosity-independent method for the measurement of the total proton-proton cross-section and the study of elastic and diffractive proton scattering. The detector has a mirrored geometry with respect to the collision point; it comprises two tracking \textit{telescopes}: a cathode strip chamber telescope and a gas electron multiplier telescope, respectively placed at $\pm9\unit{m}$ and $\pm13.5\unit{m}$ from the IP. These are complemented by Roman Pots, which are silicon-based detectors, placed at $\pm147\unit{m}$ and $\pm220\unit{m}$ from IP5 for the detection of leading protons a few mm from the beam line.
-
-    \item \textbf{LHC beauty (LHCb)} \\
-    The LHCb experiment \cite{LHCb_2008} is located at IP8; it is designed to perform precision measurements of charge-parity (CP) properties of the SM and to study rare decays of $\PB$-hadrons, which could point to the string violation of the CP symmetry. The LHCb detector is unique in its layout, as it does not present an array of concentric subdetectors like the other three major experiments. Conversely, a single-arm forward spectrometer exploits the property of forward production of $\PB$-hadrons. Given the asymmetric geometry of LHCb, to maximally exploit the volume of the underground cavern, the LHC optics is modified at IP8 with a displacement of the collision point by $11.25\unit{m}$ from the centre. In order to increase the distance from the collision point, the LHCb experiment presents an array of semi-circular silicon-based detectors composing the Vertex Locator (VELO), followed by the first layers of the Tracker Turicensis (TT). The third component is the warm saddle-shaped magnet, followed by the additional layers of TT and two imaging Cherenckov counters for particle identification. Moving further away from the IP, we find the Shashlik electromagnetic calorimeter, and the iron and scintillator tiles hadronic calorimeter. The muon detectors complete the design at the opposite end of the IP. The LHCb detector measures $20\unit{m}$ in length and has an angular acceptance ranging from $10$ to $300\unit{mrad}$.
-
-\end{itemize}

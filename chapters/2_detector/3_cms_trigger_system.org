@@ -112,19 +112,19 @@ The \ac{CMS} \ac{HLT} system is constantly subject to updates and optimizations,
 :CUSTOM_ID: sec:parking_scouting
 :END:
 
-The quest for ever higher event rates given current technology limitations and experimental benefits that can be derived, has lead \ac{CMS} to explore the non-standard use of triggers.
+The quest for ever higher event rates given current technology limitations and experimental benefits has lead \ac{CMS} to explore a non-standard use of triggers.
 There are various constraints imposed on the trigger system and data processing framework which limit the number of events that can be selected, recorded and analyzed.
 Some examples include the \SI{\sim 100}{\kilo\hertz} \ac{L1} acquisition rate, which is limited by the need to avoid losing recording time if the readout system is not ready for a new event, the \ac{HLT} latency, which is constrained by the available number and speed of processing cores, or the available permanent storage space, which is distributed across disks and tape, the former providing faster access but reduced storage size.
-The absolute and relative cost of all these components has a strong impact on the overall capacity and structure of the computing farm.
+The absolute and relative costs of all hardware trigger components has a strong impact on the overall capacity and structure of the computing farm.
 
 #+NAME: fig:parking_scouting
-#+CAPTION: A schematic view of the typical \run{2} data flow during 2018, showing the data acquisition strategy with scouting and parking data streams, along with the standard data stream. A value of $\mathcal{L}_{\text{inst}} = 1.2 \times 10^{34}\,\si{\cm\squared\per\second}$ over a typical 2018 fill, corresponding to an average pileup of \num{38}, is considered. The average collision rate lies below the \SI{40}{\mega\hertz} frequency due to occasional but required gaps between consecutive bunch trains. The parking and scouting data streams have been significantly extended during \run{3}. Taken from [[cite:&parking_scouting1]].
+#+CAPTION: A schematic view of the typical \run{2} data flow during 2018, showing the data acquisition strategy with scouting and parking data streams, together with the standard data stream. A value of $\mathcal{L}_{\text{inst}} = 1.2 \times 10^{34}\,\si{\cm\squared\per\second}$ over a typical 2018 fill, corresponding to an average pileup of \num{38}, is considered. The average collision rate lies below the \SI{40}{\mega\hertz} frequency due to occasional but required gaps between consecutive bunch trains. The parking and scouting data streams have been significantly extended during \run{3}. Taken from [[cite:&parking_scouting1]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/parking_scouting.pdf]]
 #+END_figure
 
-In the following the parking and scouting strategies are presented [[cite:&parking_scouting1;&parking_scouting2;&parking_scouting_run3_cms]].
+In the following, the parking and scouting strategies are presented [[cite:&parking_scouting1;&parking_scouting2;&parking_scouting_run3_cms]].
 They are also summarised in [[fig:parking_scouting]].
 
 ** Parking
