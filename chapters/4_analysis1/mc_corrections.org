@@ -3,6 +3,21 @@
 :END:
 
 * Pileup reweighting
+During the \ac{LHC} \run{2} there were an average of 27, 38 and 37 \ac{pp} interactions per bunch crossing, for 2016, 2017 and 2018, respectively, as one can see in [[fig:lhc_lumi_results1]].
+A deterministic annealing algorithm [[cite:&annealing_algo]] is used in order to fit the \ac{PV}, obtain the total number of vertices and define an assignment of clustered tracks to different collisions, effectively identifying all interaction vertices.
+In a first step, tracks passing certain quality criteria are clustered mostly based on the their $z$ coordinate of closest approach to the beamline.
+The algorithm does not directly minimize the $\chi^{2}$ of the $z$ positions of vertices and tracks, but tries instead to find the most likely distribution of track-vertex assignments for a specific value of $\chi^{2}$, and then minimizes that distribution while keeping the system in a state of maximal probability.
+When compared to statistical mechanics, the annealing procedure is fully equivalent to gradual cooling, hence its name.
+In the second step, the clustered tracks are fitted three-dimensionally using the entirety of the available track information.
+The vertices are sorted according to the sum of $\pt^{2}$ of their associated tracks, and the vertex with the highest value is selected as the \ac{PV}.
+The other vertices in the event are assumed to have been originated from \ac{PU} collisions.
+
+The distribution of the number of interaction vertices in the \ac{MC} events do not exactly matches the one in data.
+To achieve a better match between data and simulations, a standard reweighting procedure as centrally recommended by the \ac{CMS} Collaboration for \run{2} is applied to \ac{MC} events.
+The provided \ac{PU} weights use a nominal \ac{MB}, inelastic \ac{pp} cross-section equal to \SI{69.2}{\milli\barn}, which is used as an input to produce the pileup histogram used for the reweighting.
+The cross section includes a 4.6% uncertainty, which must be taken into account when computing systematic uncertainties.
+This is discussed in [[#sec:syst_pu]].
+
 * Pileup jet identification
 * Jet energy smearing
 * Legacy trigger scale factors

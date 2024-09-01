@@ -79,7 +79,7 @@ In addition, the following is required:
 :CUSTOM_ID: sec:eletau_sel
 :END:
 
-+ An electron of $\left| \eta_{e} \right| < 2.5$ passing the \logicand{} between the =Tight= MVA non-iso-identification criteria (80% efficiency \ac{WP}), and the relative isolation requirement $I_{\text{rel}}^{e} < 0.1$.
++ An electron of $\left| \eta_{e} \right| < 2.5$ passing the \logicand{} between the =Tight= \ac{MVA} non-iso-identification criteria (80% efficiency \ac{WP}), and the relative isolation requirement $I_{\text{rel}}^{e} < 0.1$.
   The reconstructed electron production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$.
   The \ac{pt} threshold on the electron depends on the fired \ac{HLT} trigger path.
 + A hadronic tau of $|\eta_{\tau_{h}}| \leq 2.3$. The same $\Delta_{z}$ requirement as in the case of the electron is applied. The \ac{pt} threshold on the hadronic tau depends on the fired \ac{HLT} trigger paths
@@ -106,7 +106,7 @@ However, nothing forbids an event to include, on top of a hadronic tau, two muon
 For those cases, there would be multiple ways to choose the "correct" lepton, \ie{} the lepton truly coming from the relevant Higgs boson decay.
 To simplify the selection and avoid taking the wrong decision, events with a third lepton are rejected.
 Additionally, the following conditions must be true for the event to be rejected:
-+ An electron of $|\eta_{e}| < 2.5$ and $p_T > 10\,\si{\GeV}$. The electron passes the \logicand{} between the =Medium= MVA non-iso-identification criteria and the relative isolation requirement $I_{\text{rel}}^{e} < 0.3$. The reconstructed electron production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$;
++ An electron of $|\eta_{e}| < 2.5$ and $p_T > 10\,\si{\GeV}$. The electron passes the \logicand{} between the =Medium= \ac{MVA} non-iso-identification criteria and the relative isolation requirement $I_{\text{rel}}^{e} < 0.3$. The reconstructed electron production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$;
 + A muon of $|\eta_{\mu}| < 2.4$ and $p_T > 10\,\si{\GeV}$ and passing the =Medium= particle--flow muon and \texttt{HighPt} track muon identification criteria, plus the relative particle--flow and track isolation requirements, $I_{\text{rel}}^{\text{track-}\mu} < 0.3$ and $I_{\text{rel}}^{\text{PF-}\mu} < 0.3$, respectively. The reconstructed muon production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$.
 This veto also helps removing background events with two leptons and a fake \tauh{}, as for instance diboson processes, or fully leptonic decays of $\ttbar{}$.
   

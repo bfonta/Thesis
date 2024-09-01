@@ -1,0 +1,26 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:syst_shape
+:END:
+
+* Pileup reweighting uncertainty
+:PROPERTIES:
+:CUSTOM_ID: sec:syst_pu
+:END:
+
+* Hadronic $\tau$'s energy scale
+* Energy scale corrections for prompt electrons
+:PROPERTIES:
+:CUSTOM_ID: sec:syst_shape_genuine_electrons
+:END:
+
+Add that the shape uncertainties for muons are considered negligible and are not considered.
+If they were, they would be structured in the same way as described above for electrons.
+
+* Energy scale corrections for electrons and muons faking taus
+* Jet energy scale
+* Jet energy resolution
+* Scale factors for tau identification with DeepTau
+* Legacy trigger scale factors
+* Additional trigger scale factors
+* B-taggging scale factors
+* Scale factors for pile-up jet identification

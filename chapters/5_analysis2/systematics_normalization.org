@@ -1,0 +1,12 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:syst_norm
+:END:
+
+* Luminosity
+* Electrons and muon isolation and identificaton efficiencies
+* L1 prefiring
+* Pile-up reweighting uncertainty
+* QCD estimation uncertainty
+* Theoretical HH cross-section
+* Final state branching fraction
+* Cross-sections of simulated processes

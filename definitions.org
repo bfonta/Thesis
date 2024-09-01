@@ -111,6 +111,8 @@
 #+LATEX_HEADER: \newcommand{\zhbbbb}{$\mathrm{ZH} \rightarrow \mathrm{bbbb}$}
 #+LATEX_HEADER: \newcommand{\zllg}{$\mathrm{Z} \rightarrow \mathrm{ll}\gamma$}
 #+LATEX_HEADER: \newcommand{\zll}{$\mathrm{Z} \rightarrow \mathrm{ll}$}
+#+LATEX_HEADER: \newcommand{\zee}{$\mathrm{Z} \rightarrow ee$}
+#+LATEX_HEADER: \newcommand{\zmumu}{$\mathrm{Z} \rightarrow \mu\mu$}
 #+LATEX_HEADER: \newcommand{\zzbbbb}{$\mathrm{ZZ} \rightarrow \mathrm{bbbb}$}
 #+LATEX_HEADER: \newcommand{\zzzhbbbb}{$\mathrm{ZZ/ZH} \rightarrow \mathrm{bbbb}$}
 

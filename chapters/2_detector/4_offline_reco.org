@@ -141,6 +141,10 @@ The particles produced by \ac{PF} can be directly used in physics analyses.
 They are assembled into offline /physics objects/, which we describe in the following sections.
 
 * Muons
+:PROPERTIES:
+:CUSTOM_ID: sec:offline_reco_muons
+:END:
+
 # Reconstruction of PF elements
 A distinctive feature of \ac{CMS} is the presence of muon chambers for additional tracking, enabling a clear separation between muons and other charged particles.
 This happens in light of the low probability for a particle, other than a muon, to reach the muon detectors without being absorbed in the calorimeters.
@@ -168,6 +172,10 @@ At the level of the analyses, the criteria above are encoded in so-called \acp{W
 We note that the muon reconstruction and identification steps can be revisited whenever significant mismatches are found for charged hadrons between their measured tracker momenta and calorimetric energies.
 
 * Electrons
+:PROPERTIES:
+:CUSTOM_ID: sec:offline_reco_electrons
+:END:
+
 Given the significant material budget in the tracker, most electrons lose a sizeable fraction of their energy via bremsstrahlung emissions.
 The latter are extremely dependent on \ac{eta}, given the increasing amount of material budget a particle traverses for higher angles.
 A series of calorimeter energy clusters is thus created in the \ac{ECAL}, originated by all emitted photons cluster and an additional one from the electron.

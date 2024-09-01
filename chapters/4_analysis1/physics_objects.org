@@ -2,8 +2,112 @@
 :CUSTOM_ID: sec:physics_objects
 :END:
 
-* Electrons
++ intro
+  
 * Muons
+The muon selections applied in this work were originally based on the selections used by the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]], but have evolved according to analysis needs, further corrections, and sample updates.
+Muons are required to be reconstructed by the Tracker or the Global muon reconstruction algorithms, which were described in [[#sec:offline_reco_muons]].
+
+# isolation
+The isolation of muon candidates is defined as the sum of the \ac{pt} of \ac{PF} particles inside a $\Delta R < 0.4$ cone around the muon, relative to the $\pt^{\ell}$ of the muon:
+
+#+NAME: eq:pf-iso
+\begin{equation}
+\mathrm{I}_{rel}^{\ell} = \left( \sum  p_{T}^\mathrm{charged} + \max \left[ 0, \sum p_{T}^\mathrm{neutral-had} + \sum p_{T}^{\gamma} - \frac{1}{2} \sum p_{T}^\mathrm{PU} \right]
+    \right) / p_{T}^{\ell},
+\end{equation}
+
+\noindent where the $\sum \pt^\mathrm{charged}$, $\sum \pt^\mathrm{neutral-had}$, and $\sum \pt^{\gamma}$ are the scalar sums of the transverse momenta of charged hadrons originating from the \ac{PV}, neutral hadrons and photons, respectively, and the $\sum p_{T}^\mathrm{PU}$ is the sum of transverse momenta of charged hadrons not originating from the \ac{PV}.
+An additional isolation criteria $\mathrm{I}_{rel}^{\text{Trk}}$ is used for high \ac{pt} muons, using exclusively the energy measured in the tracker, in a cone of $\Delta R < 0.3$.
+
+# identification
+Three identification selections for PF muons are centrally recommended by \ac{CMS}, consisting on three \acp{WP}: =Loose=, =Medium= and =Tight=.
+In this analysis, the signal muon candidates are required to pass the =Tight= identification criteria and a $\mathrm{I}_{rel}^{\ell} < 0.15$ isolation cut.
+A correction factor is applied to \ac{MC} simulations to take into account differences with respect to data in the isolation and identification efficiencies of muons.
+These factors are derived from \zmumu{} events selected with a tag and probe technique and are provided by the \ac{CMS} Muon \ac{POG}.
+For vetoed muons, $\mathrm{I}_{rel}^{\ell} < 0.3$ is required separately for for the =Medium= and =Tight= \acp{WP}, and a \logicor{} of the latter is ensured.
+The veto selection is described in [[#sec:third_lepton_sel]].
+The \logicor{} is used since =Medium= identification is \SI{\sim 99}{\percent} efficient for muons reconstructed as tracker muons.
+Therefore, there will be a small number of events that fail =Medium= and pass =Tight=, since the latter is not a subset of the former.
+Then, for the veto only, we consider both WPs for correctness.
+@add note on Tag and Probe@
+
+# high pt WP
+An additional \ac{WP} is available, named =highPt=, which focuses on high \ac{pt} muons, and therefore =highPt= corrections for muons are not required.
+We justify this choice in [[tab:highPt_fractions]], where we show the fraction of events in \mutau{} where the first lepton, a muon, has a \ac{pt} larger than \SI{120}{\GeV}.
+The \ac{pt} threshold is defined to match the regime on which the =highPt= \ac{WP} could be considered, according to the \ac{CMS} Muon \ac{POG}.
+We include all radion signal samples and the two most important backgrounds, \ac{DY} and $\ttbar$.
+The fraction is small almost everywhere, and its maximum value is \SI{\sim 20}{\percent}.
+
+#+NAME: tab:highPt_fractions
+#+CAPTION: Fraction of events in the \mutau{} channel where the first lepton, a muon, has a \ac{pt} above \SI{120}{\GeV}, for the three analysis categories and for the baseline selection. The selections and categories are detailed in [[#sec:selection]].
+\begin{table}[h!]
+  \renewcommand{\arraystretch}{1.2}
+  \centering
+  \begin{tabular}{c|c|c|c|c}
+    Sample & \textbf{baseline} & \textbf{res1b} & \textbf{res2b} & \textbf{boostedL\_pnet} \\
+    \hline
+    Radion \SI{250}{\GeV}  & 0.001$\pm$0.014 & 0.001$\pm$0.023 & 0.001$\pm$0.020 & 0.000$\pm$1.000 \\
+    Radion \SI{260}{\GeV}  & 0.002$\pm$0.014 & 0.001$\pm$0.023 & 0.002$\pm$0.021 & 0.000$\pm$0.715 \\
+    Radion \SI{270}{\GeV}  & 0.004$\pm$0.014 & 0.002$\pm$0.023 & 0.001$\pm$0.021 & 0.000$\pm$1.000 \\
+    Radion \SI{280}{\GeV}  & 0.005$\pm$0.014 & 0.003$\pm$0.023 & 0.004$\pm$0.020 & 0.000$\pm$1.000 \\
+    Radion \SI{300}{\GeV}  & 0.007$\pm$0.015 & 0.005$\pm$0.024 & 0.004$\pm$0.022 & 0.000$\pm$0.503 \\
+    Radion \SI{320}{\GeV}  & 0.010$\pm$0.015 & 0.006$\pm$0.024 & 0.007$\pm$0.021 & 0.000$\pm$0.318 \\
+    Radion \SI{350}{\GeV}  & 0.017$\pm$0.013 & 0.012$\pm$0.022 & 0.016$\pm$0.020 & 0.040$\pm$0.192 \\
+    Radion \SI{400}{\GeV}  & 0.025$\pm$0.012 & 0.019$\pm$0.020 & 0.019$\pm$0.017 & 0.000$\pm$0.157 \\
+    Radion \SI{450}{\GeV}  & 0.043$\pm$0.011 & 0.035$\pm$0.018 & 0.037$\pm$0.016 & 0.065$\pm$0.087 \\
+    Radion \SI{500}{\GeV}  & 0.061$\pm$0.010 & 0.056$\pm$0.018 & 0.054$\pm$0.015 & 0.083$\pm$0.064 \\
+    Radion \SI{550}{\GeV}  & 0.070$\pm$0.012 & 0.072$\pm$0.020 & 0.064$\pm$0.017 & 0.049$\pm$0.056 \\
+    Radion \SI{600}{\GeV}  & 0.091$\pm$0.011 & 0.082$\pm$0.020 & 0.086$\pm$0.016 & 0.087$\pm$0.037 \\
+    Radion \SI{650}{\GeV}  & 0.106$\pm$0.010 & 0.103$\pm$0.021 & 0.103$\pm$0.016 & 0.093$\pm$0.027 \\
+    Radion \SI{700}{\GeV}  & 0.118$\pm$0.010 & 0.110$\pm$0.021 & 0.111$\pm$0.017 & 0.127$\pm$0.020 \\
+    Radion \SI{750}{\GeV}  & 0.133$\pm$0.010 & 0.119$\pm$0.022 & 0.125$\pm$0.018 & 0.141$\pm$0.017 \\
+    Radion \SI{800}{\GeV}  & 0.155$\pm$0.009 & 0.149$\pm$0.022 & 0.140$\pm$0.020 & 0.163$\pm$0.015 \\
+    Radion \SI{850}{\GeV}  & 0.157$\pm$0.009 & 0.126$\pm$0.024 & 0.148$\pm$0.021 & 0.166$\pm$0.013 \\
+    Radion \SI{900}{\GeV}  & 0.169$\pm$0.009 & 0.145$\pm$0.026 & 0.166$\pm$0.022 & 0.177$\pm$0.013 \\
+    Radion \SI{1000}{\GeV} & 0.182$\pm$0.012 & 0.150$\pm$0.038 & 0.165$\pm$0.034 & 0.193$\pm$0.016 \\
+    Radion \SI{1250}{\GeV} & 0.219$\pm$0.013 & 0.185$\pm$0.046 & 0.195$\pm$0.041 & 0.235$\pm$0.015 \\
+    Radion \SI{1500}{\GeV} & 0.205$\pm$0.016 & 0.188$\pm$0.062 & 0.202$\pm$0.052 & 0.205$\pm$0.019 \\
+    Radion \SI{1750}{\GeV} & 0.190$\pm$0.019 & 0.170$\pm$0.067 & 0.180$\pm$0.060 & 0.195$\pm$0.022 \\
+    Radion \SI{2000}{\GeV} & 0.189$\pm$0.022 & 0.159$\pm$0.084 & 0.218$\pm$0.087 & 0.188$\pm$0.026 \\
+    Radion \SI{2500}{\GeV} & 0.178$\pm$0.030 & 0.201$\pm$0.120 & 0.194$\pm$0.120 & 0.188$\pm$0.035 \\
+    Radion \SI{3000}{\GeV} & 0.149$\pm$0.040 & 0.093$\pm$0.175 & 0.065$\pm$0.186 & 0.165$\pm$0.048 \\
+    \ac{DY} & 0.013$\pm$0.005 & 0.011$\pm$0.017 & 0.012$\pm$0.045 & 0.063$\pm$0.174 \\
+    \ac{TT} & 0.068$\pm$0.001 & 0.023$\pm$0.001 & 0.018$\pm$0.001 & 0.157$\pm$0.014 \\
+  \end{tabular} 
+\end{table}
+
+* Electrons
+Just like for muons selections, the electron selections applied in this work were originally based on the selections used by the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]].
+The standard \ac{CMS} electron reconstruction algorithm is used for this analysis [[cite:&performance_muon_electron]], combining \ac{ECAL} and tracker information.
+Electron candidates are reconstructed from clusters of energy deposits in the \ac{ECAL}, which are then matched to tracks in the inner silicon tracker refitted by a \ac{GSF}, as discussed in [[#sec:offline_reco_electrons]].
+Given that the electron reconstruction relies heavily on the deposits in the \ac{ECAL}, electrons in the the $1.44 < |\eta| < 1.57$ transition region between the barrel and endcaps of the \ac{ECAL}, are excluded from this analysis, as they are typically not very well reconstructed.
+
+# isolation
+One of the most efficient ways to reject electron backgrounds is the usage of isolation energy sums, a generic class of discriminating variables that are constructed from the sum of the transverse momenta of \ac{PF} particles inside a $\Delta R < 0.3$ cone around the electron, with respect to the electron direction.
+To ensure that the energy from the electron is not included in the sum, it is necessary to define a veto region in the isolation cone.
+Three isolation components are separately considered for the electron identification in terms of their transverse momenta scalar sum: charged hadrons originating from the \ac{PV}, neutral hadrons and photons.
+The larger the energy of the incoming electrons, the larger the amount of energy spread around its direction in the various subdetectors.
+For this reason, the thresholds applied on the isolation quantities are parametrized as a function of the particle transverse energy.
+The isolation variables are corrected to mitigate the contribution from pileup [[cite:&performance_muon_electron]].
+
+# identification
+The electron identification uses a \ac{MVA} which has been updated and improved for \ac{CMS} \run{2} analyses.
+The discriminator is based on a \ac{BDT} [[cite:&tmva]] which combines several observables sensitive to the amount of bremsstrahlung along the electron trajectory, the three \ac{PF} isolation components and the energy density within the isolation cone, the geometrical and momentum matching between the electron trajectory and associated clusters, shower-shape observables, and electron conversion variables.
+The \ac{MVA} is tuned for achieving the best performance possible, and is trained on all electrons, regardless of whether they pass the trigger requirements or not.
+This MVA is tuned for electrons with $\pt>10\,\si{\GeV}$ and defines three categories based on electron \ac{eta}: two for the barrel and one for the endcap.
+For each \ac{MVA} category, a =Tight= \ac{WP} with 80% of signal efficiency, is used for signal electrons, as provided by the \ac{CMS} E/Gamma \ac{POG}.
+Veto electrons are instead required to pass the =Medium= \ac{WP}.
+The veto selection is described in [[#sec:third_lepton_sel]].
+A correction factor is applied to the \ac{MC} to take into account differences with respect to data in identification efficiencies of electrons.
+These factors are derived from \zee{} events selected with a tag and probe technique, and are also centrally provided by the \ac{CMS} E/Gamma \ac{POG}.
+
+# scaling and smearing
+Energy scaling and smearing corrections are applied to genuine electrons, again following the recommendations of the E/Gamma \ac{POG}.
+The correction is applied to \ac{MC} using a variable which represents the combined \ac{ECAL} and tracker electron energy after applying scale and smearing corrections.
+The corrections taken into account both in the selection of genuine electrons and in their veto.
+They also lead to several systematic shape uncertainties, as described in [[#sec:syst_shape_genuine_electrons]].
+
 * Taus
 :PROPERTIES:
 :CUSTOM_ID: sec:hadronic_taus
@@ -226,7 +330,6 @@ If the jet was not matched (and $\pt^{\text{Gen.}}$ is not available), then a st
 The resolution corrections are computed after applying the above jet energy corrections.
 The data/MC \acp{SF} usually vary between 1 and 1.2, but are larger in the transition region between the endcaps and the forward detectors.
 No significant dependences on the \ac{pt} and \ac{eta} of the jets are observed, except for the transition region [[cite:&jec_jer_performance]].
-
 
 * Missing transverse energy
 + The transverse momentum actually carried by invisible particles is systematically different from the true, corrected MET, due to the non-compensating nature of the calorimeters and to detector misalignment.

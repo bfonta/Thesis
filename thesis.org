@@ -69,7 +69,6 @@
 ** Monte Carlo generation
 #+INCLUDE: "chapters/2_detector/5_mc_generation.org"
 
-
 * Trigger primitives reconstruction for the HGCAL Level-1 trigger
 #+INCLUDE: "chapters/3_hgcal/0_intro.org"
 ** The High Luminosity LHC
@@ -94,7 +93,8 @@
 ** Discussion and future directions
 #+INCLUDE: "chapters/3_hgcal/6_hgcal_discussion.org"
 
-* \xhhbbtt{}: Strategy definition
+
+* Resonant search for \hhbbtt{}: Methods
 #+INCLUDE: "chapters/4_analysis1/analysis1_intro.org"
 ** Samples
 #+INCLUDE: "chapters/4_analysis1/samples.org"
@@ -123,31 +123,16 @@
 #+INCLUDE: "chapters/4_analysis1/control_regions.org"
 
 
-* \xhhbbtt{}: Limit extraction
+* Resonant search for \hhbbtt{}: Results
 #+INCLUDE: "chapters/5_analysis2/intro.org"
 ** Signal discrimination from background
 #+INCLUDE: "chapters/5_analysis2/pdnn.org"
 ** Systematic uncertainties
-#+INCLUDE: "chapters/5_analysis2/systematics.org"
+#+INCLUDE: "chapters/5_analysis2/systematics_intro.org"
 *** Normalization uncertainties
-**** Luminosity
-**** Electrons and muon isolation and identificaton efficiencies
-**** L1 prefiring
-**** Pile-up reweighting uncertainty
-**** QCD estimation uncertainty
-**** Theoretical HH cross-section
-**** Final state branching fraction
-**** Cross-sections of simulated processes
+#+INCLUDE: "chapters/5_analysis2/systematics_normalization.org"
 *** Shape uncertainties
-**** Hadronic $\tau$'s energy scale
-**** Energy scale corrections for electrons and muons faking taus
-**** Jet energy scale
-**** Jet energy resolution
-**** Scale factors for tau identification with DeepTau
-**** Legacy trigger scale factors
-**** Additional trigger scale factors
-**** B-taggging scale factors
-**** Scale factors for pile-up jet identification
+#+INCLUDE: "chapters/5_analysis2/systematics_shape.org"
 ** Statistical treatment
 *** Hypothesis testing with the modified frequentist approach
 #+INCLUDE: "chapters/statistics/hypothesis.org"
