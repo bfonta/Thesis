@@ -3,7 +3,7 @@
 :END:
 
 #+NAME: fig:res_X_diagrams
-#+CAPTION: Feynman diagrams for hypothetical resonant processes contributing to double Higgs pair production via \ac{ggF} (left) and \ac{VBF} (right).
+#+CAPTION: Feynman diagrams for hypothetical resonant processes contributing to double Higgs boson pair production via \ac{ggF} (left) and \ac{VBF} (right).
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/gg_X_HH.pdf]]
@@ -13,28 +13,28 @@
 
 The simplest imaginable signature of \ac{NP} consists in the production of an s-channel resonance decaying to a pair of \ac{SM} particles.
 In the context of HH searches, and in addition to the nonresonant approaches discussed in [[#sec:nonres_BSM_hh]], \ac{BSM} physics can be probed under the assumption that there indeed exists some new particle X with a mass within what the \ac{LHC} can produce, decaying to a pair of Higgs bosons, as shown in [[fig:res_X_diagrams]] for \ac{ggF} and \ac{VBF} processes.
-In that case, given enough experimental sensitivity, we would naively expect to see a "bump" in double Higgs mass distributions.
+In that case, given enough experimental sensitivity, we would naively expect to see a "bump" in double Higgs boson mass distributions.
 In practice, admitting such hypothetical particle exists, the excess might only be discernible through variables with a higher discriminative power, such as discriminators built out of \ac{ML} procedures.
 The experimental challenges of such kind of analysis is highlighted in [[#sec:analysis1_intro]].
 Here we instead focus on the very large number of theoretical models which can accomodate \xhh{} or \xyh{} processes, with Y being yet another \ac{BSM} scalar particle.
 It is experimentally unfeasible to address all such models separately.
-If that were the case, each model would require its own set of samples with varying parameters, such as the mass or the shapes of every resonance, adding also complications from the point of view of storage.
+If that were the case, each model would require its own set of samples with varying parameters, such as the mass or the shapes of every resonance, adding also complications from the storage point of view.
 Furthermore, analysis tools would have to be optimized for each sample type, requiring independent computing-intensive trainings, which take time to process and validate.
 Instead, the approach usually followed, including in this thesis, is to define a set of (as much as possible) model-independent benchmarks.
 Results are subsequently reinterpreted in the context of specific models.
 This enables a single Physics analysis to explore a broad class of models at once.
 
-In this section we nevertheless cover some of the theoretical approaches that are most often connected with resonant decays to HH and/or YH.
-The simplest model possible is the singlet model, which is covered in [[#sec:singlet_model]] since it is directly connected with the work discussed in that chapter.
+In this section, we nevertheless cover some of the theoretical approaches that are most often connected with resonant decays to HH and/or YH.
+The simplest model possible is the singlet model, which is covered in [[#sec:singlet_model]], since it is directly connected with the work discussed in [[#sec:interf_intro]].
 Here we instead discuss other options, which serve as a strong motivation to perform the HH searches described in further chapters.
 
 * Warped Extra Dimensions
 Generations of physicists have tried to incorporate quantum gravity in the \ac{SM} without much success so far.
-Despite its negligible effect at the energy scales probed in our experiments, the gravitational force is bound to become significant at close range, or alternatively, at very high energy, near the \SI{e19}{\GeV} Planck scale.
+Despite its negligible effect at the energy scales probed in our experiments, the gravitational force is bound to become significant at close range, or alternatively at very high energy, near the \SI{e19}{\GeV} Planck scale.
 One of the theories that tries to unify the four known forces is string theory, where the basic units of matter are multi-dimensional /branes/ instead of the zero-dimensional particles present in the \ac{SM}.
 The idea of additional dimensions was first introduced in the Kaluza-Klein model, which sought to extend general relativity to a five (4+1) dimensional space (four space dimensions and one time dimension).
 There, the existence of additional microscopic space dimensions was theorized.
-These dimensions would be /compactified/, or equivalently "curled up" and hidden from the macroscopic scale.
+Those dimensions would be /compactified/, or equivalently "curled up" and hidden from the macroscopic scale.
 Multiple theories use the concept of \acp{ED} to adress the shortcomings of the \ac{SM}.
 Whenever those theories are based on distorted space-time geometries, they are referred to as \ac{WED}.
 
@@ -47,21 +47,21 @@ The model helps explaining the surprising difference in scales between gravity a
 Instead of an extreme and unnatural fine-tuning, gravity could be concentrated in specific regions of the warped space-time, leading to a very weak version of gravity in our Universe, but stronger elsewhere.
 Furthermore, the Higgs mechanism can be added in the same way as in the \ac{SM}, confining the added doublet in [[eq:su2_doublet]] to the $\si{\TeV}$ brane.
 
-Importantly, especially for experimentalists, is the prediction of two new particles [[cite:&xanda_benchmarks_wed]].
-A \spin{2} particle appears as the mediator of the gravitational force, appropriately named "graviton".
+Importantly, the model predicts two new particles [[cite:&xanda_benchmarks_wed]].
+A \spin{2} resonance appears as the mediator of the gravitational force, appropriately named "graviton".
 Additionally, a new scalar is required by the size of the additional dimension, and is called "radion".
-For certain regions of the model's phase-space, both particles can decay to a pair of Higgs boson or pairs of W and Z bosons.
+For certain regions of the model's phase-space, both particles can decay to a pair of Higgs bosons or pairs of W and Z bosons.
 Searches at the \ac{LHC} are thus sensitive to these two hypothetical high mass particles.
 The thesis here reported explores the resonant \hhbbtt{} decay, where the signal samples in [[#sec:samples]] indeed refer to radion- and graviton-like particles.
-The radion and the Higgs boson can even be allowed to mix, although that scenario is not directly explored at analysis level.
+The radion and the Higgs boson can even be allowed to mix, although such scenario is not directly explored at analysis level.
 Related work in the context of a singlet model is covered in [[#sec:interf_intro]].
 
 * Two Higgs Doublet Model
-The \ac{2HDM}, as its name indicates, adds a second doublet field to the Higgs doublet introduced by the Higgs mechanism [[cite:&2hdm_1]].
+The \ac{2HDM}, as its name indicates, adds a second doublet field to the one already introduced by the Higgs mechanism [[cite:&2hdm_1]].
 This /ad-hoc/ choice is strongly motivated by multiple reasons.
 The simplest version of \ac{SUSY}, the \ac{MSSM}, cannot give mass to all quarks without the introduction of a second doublet [[cite:&susy]].
 One can thus say that the phenomenology of \ac{SUSY} is described by the \ac{2HDM}.
-Additionally, some axion models, among the ones not yet ruled out by experiments, require two doublets for their effective low-energy theory to function [[cite:&axions]].
+Additionally, some axion models, especially some not yet ruled out by experiments, require two doublets for their effective low-energy theory to function [[cite:&axions]].
 The \ac{2HDM} can also be made to accommodate the required baryon asymmetry to explain baryogenesis, with explicit or spontaneous \ac{CP} violation [[cite:&2hdm_2]].
 
 Following a similar recipe to what was done in the \ac{SM} in [[eq:su2_doublet]], we add two complex scalar \symtwo{} doublets with eight fields in total:
@@ -75,7 +75,6 @@ Following a similar recipe to what was done in the \ac{SM} in [[eq:su2_doublet]]
 \noindent At this point, a series of simplifications are usually done.
 \Ac{CP} is assumed to be conserved in the Higgs sector and not spontaneously broken, and some discrete symmetries are imposed to eliminate quartic terms odd in one of the two doublets, like $\phi_a^{\dagger}\phi_b\phi_b^{\dagger}\phi_b$.
 The most general potential one can then write is the following:
-
 #+NAME: eq:potential_2hdm
 \begin{equation}
 \begin{split}
@@ -140,8 +139,8 @@ Finally, the mass-squared terms for the scalars are given by:
 
 \noindent where $\lambda_{cde} = \lambda_c + \lambda_d + \lambda_e$.
 The mass-squared matrix can also be diagonalized, with an additional parameter $\alpha$ representing the corresponding rotation angle.
-A second angle $\beta$ can also be defined, by diagonalizing together the mass-squared matrices of the charged scalars and pseudoscalars.
-An important relationship with the two \acp{VEV}, often used for parameterisations, is:
+Finally, a second angle $\beta$ can be defined, by diagonalizing together the mass-squared matrices of the charged scalars and pseudoscalars.
+An important relationship with the two \acp{VEV} is defined, often used for parameterisations:
 
 #+NAME: eq:vev_ratio
 \begin{equation}
@@ -149,13 +148,13 @@ An important relationship with the two \acp{VEV}, often used for parameterisatio
 \end{equation}
 
 \noindent The two angles determine all interactions between the five "Higgs" fields and the vector gauge bosons and fermions, the latter by also adding Yukawa-like terms.
-In the end, the model predicts the mass-diagonalized H and X \ac{CP}-even neutral bosons (where H corresponds to the \ac{SM} Higgs boson), the \ac{CP}-odd pseudoscalar A, and two charged Higgs bosons $\text{H}^{\pm}$.
+In the end, the model predicts mass-diagonalized H and X \ac{CP}-even neutral bosons (where H corresponds to the \ac{SM} Higgs boson), a \ac{CP}-odd pseudoscalar A, and two charged Higgs bosons $\text{H}^{\pm}$.
 
 One should not forget that the potential in [[eq:potential_2hdm]] made some assumptions which, if relaxed, reveal even more complexity.
 For instance, \acp{FCNC} become possible at tree-level, despite being strongly constrained by experiments.
-Currently, scenarios with natural flavour conservation are usually preferred.
+Scenarios with natural flavour conservation are currently preferred.
 One can also require each Higgs doublet $\phi$ to only couple to charged fermions of one type, either up-type quarks, down-type quarks, or charged leptons.
-Adding on top the requirement of no \acp{FCNC}, as in the mass terms above, four types of \acp{2HDM} emerge based on which doublets couple to which fermion types:
+Adding on top the requirement of no \acp{FCNC}, as in the mass terms above, four types of \acp{2HDM} emerge, based on which doublets couple to which fermion types:
 + Type I: all charged fermions couple to $\phi_b$;
 + Type II: only up-type quarks couple to $\phi_b$;
 + Type X (lepton specific): only up-type and down-type quarks couple to $\phi_b$;
@@ -165,7 +164,7 @@ Further types can be defined based on \acp{FCNC}-related requirements.
 # Experimental constraints
 Current constraints from \ac{EW} precision data severely limit the allowed phase-space of the six free paramaters.
 For one, scenarios with mass degeneracy are preferred, where the masses of at least two of the additional Higgs bosons should be very similar [[cite:&2hdm_mass_degenerate]].
-Flavour observables also lead to strong constraints, in particular to lower bounds on $m_{\text{H}^{\pm}}$ \SI{\sim 600}{\GeV} in Type II and Type Y models.
+Flavour observables also lead to strong constraints, in particular to lower bounds on $m_{\text{H}^{\pm}} \sim 600\,\si{\GeV}$ in Type II and Type Y models.
 Measurements of Higgs boson couplings has so far constrained $\cos(\beta - \alpha)$ to small values, where $\cos(\beta - \alpha) \rightarrow 0$ is the /alignment limit/ in which the boson H becomes \ac{SM}-like.
 The couplings of the heavy Higgs bosons also depends on $\cos(\beta - \alpha)$, and for \acp{2HDM} models without mass degeneracy, decays of the type $\text{A} \rightarrow \text{Z} \text{X}$ and $\text{X} \rightarrow \text{Z} \text{A}$ exist, with large \acp{BR} that are not suppressed in the alignment limit.
 Searches performed at \ac{CMS} exclude high $\tan\beta$ values [[cite:&2hdm_cms_exclusion]].
@@ -174,13 +173,14 @@ In [[fig:2hdm_xhh]] we show \xhh{} \ac{BR} examples for Type I and II \acp{2HDM}
 #+NAME: fig:2hdm_xhh
 #+CAPTION: Branching fractions of \xhh{} decays in \acp{2HDM} of Type I (top) and Type II (bottom) in the $\cos(\beta-\alpha)$ vs. $\tan\beta$ plane for $\mx = 500\,\si{\GeV}$ (left) and in the $\mx$ vs. $\tan\beta$ plane for $\cos(\beta-\alpha) = 0.02$ (right). The branching fractions have been calculated with =2HDMC v1.8.0= [[cite:&2hdmc_1;&2hdmc_2]]. Taken from [[cite:&interf_studies]].
 #+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
+\centering
+#+ATTR_LATEX: :width .45\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/2HDM_XHH_a.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
+#+ATTR_LATEX: :width .45\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/2HDM_XHH_b.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
+#+ATTR_LATEX: :width .45\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/2HDM_XHH_c.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
+#+ATTR_LATEX: :width .45\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/2HDM_XHH_d.pdf]]
 #+END_figure
 
@@ -194,8 +194,9 @@ These new topologies are not suppressed in the alignment limit, and can thus dom
 Moreover, the 2HDM+S model is also experimentally consistent with the \xyh{} decay.
 Just like the \ac{MSSM} is linked to the \ac{2HDM}, the \ac{NMSSM} corresponds to a 2HDM+S model of Type II.
 Importantly, however, \ac{SUSY} models tend to be more strongly constrained by the measurements.
-One may continue adding doublets and singlets, for phenomenologies ever richer and more complex.
-A good example is the 3HDM and its variations (for istance, [[cite:&3hdm_variation]]).
+
+One may continue adding doublets and singlets, for ever richer phenomenologies.
+A good example is the 3HDM and its variations (for instance, [[cite:&3hdm_variation]]).
 These models go however well beyond the scope of this thesis.
 
 * Biblio :noexport:

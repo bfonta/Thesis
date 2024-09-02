@@ -4,15 +4,16 @@
 
 There has always been a deep connection between the symmetries in the Universe and the laws that dictate its behaviour.
 Geometrical patterns had been observed from ancient times; greeks for instance believed the motion of objects had to follow symmetrical trajectories, despite frequent discrepancies with observed data.
-Newton instead transferred the idea of symmetries to the equations describing the motion, rather than focusing on the solutions of the same equations.
+Newton instead transferred the idea of symmetries to the equations describing the motion, rather than focusing on the solutions of those same equations.
 In 1915, the synergy between symmetries and Nature became firmly established in Noether's famous theorem [[cite:&noether]], stating that for each continuous symmetry a conservation law ensues or that, conversely, every conservation law reflects an underlying symmetry.
-Energy conservation follows from the invariance of the laws of Physics under translations in time, the invariance under space translations leads to momentum conservation, and so forth [[cite:&griffiths]].
-In this section, the profound ideas that cement the \ac{SM} are described, covering the surprising way in which symmetries lead to all known forces and particle interactions.
+Energy conservation follows from the invariance of the laws of Physics under translations in time, the invariance under space translations leads to momentum conservation, and so forth.
+In this section, the profound ideas that cement the \ac{SM} are described, covering the surprising way in which symmetries lead to all known forces and particle interactions [[cite:&halzen_martin;&griffiths]].
 
 * Yang-Mills theory
-
-In the \ac{SM}, interactions are dictated by symmetry principles [[cite:&halzen_martin]], which were initially taken at a global level, \ie{} without depending on space-time points $x^{\mu} \equiv x$.
-Yang and Mills considered instead local transformations, starting from the Dirac lagrangian for two elementary half-integer spin fields $\psi$:
+Interactions are dictated by symmetry principles.
+For example, Einstein used the invariance under general coordinate transformations to establish the general theory of relativity in 1915.
+Initially taken at a global level, \ie{} without depending on space-time points $x^{\mu} \equiv x$, in 1953 Yang and Mills promoted the invariances to the /local/ realm.
+They started from the Dirac lagrangian for two elementary half-integer spin fields $\psi$:
 
 #+NAME: eq:yang_mills_lagrangian
 \begin{equation}
@@ -21,7 +22,7 @@ Yang and Mills considered instead local transformations, starting from the Dirac
 
 \noindent where $\psi$ is a two-component column vector, or spinor, and $\gamma^{\mu}$ are the Dirac $\gamma$ matrices.
 For simplicity, we here consider massless fields (we drop the $-m\bar{\psi}\psi$ term), without loss of generality.
-The original Yang-Mills theory required the fields to be invariant under a local non-Abelian \symtwo{} transformation:
+The original Yang-Mills theory /required/ the fields to be invariant under a local non-Abelian \symtwo{} transformation:
 
 #+NAME: eq:su2_transf
 \begin{equation}
@@ -41,31 +42,31 @@ The original Yang-Mills theory required the fields to be invariant under a local
 \end{equation}
 
 \noindent where $\pmb{\sigma}$ are the Pauli matrices, $\pmb{\lambda}(x)$ is a vector depending on space-time, and $g$ is a coupling constant analogous to the electric charge.
-Without further changes, the lagrangian in [[eq:yang_mills_lagrangian]] is not invariant to the local \symtwo{} transformation, since the derivative picks up an extra term:
+Without further changes, the lagrangian in [[eq:yang_mills_lagrangian]] is not invariant under the local \symtwo{} transformation, since the derivative picks up an extra term:
 
 #+NAME: eq:derivative_extra
 \begin{equation}
-\partial_{\mu}\psi(x) \rightarrow e^{-ig\pmb{\sigma}.\pmb{\lambda}(x)} \left[ \partial_{\mu} + i\pmb{\sigma}.\partial{}_{\mu}\pmb{\lambda}(x) \right] \psi(x) \: .
+\partial_{\mu}\psi(x) \rightarrow e^{-ig\pmb{\sigma}.\pmb{\lambda}(x)} \left[ \partial_{\mu} - ig\pmb{\sigma}\,\partial{}_{\mu}\pmb{\lambda}(x) \right] \psi(x) \: .
 \end{equation}
 
-\noindent If we really insist on the concept of local invariance, something has to be added to the lagrangian in order to cancel the new term in [[eq:derivative_extra]].
+\noindent If we insist on the concept of local invariance, something has to be added to the lagrangian in order to cancel the new term.
 This can be achieved by replacing the standard derivate $\partial_{\mu}$ by the /covariant derivative/:
 
 #+NAME: eq:covariant_derivative
 \begin{equation}
-D_{\mu} \equiv \partial_{\mu} + ig\pmb{\sigma}.\pmb{A}_{\mu} \: ,
+D_{\mu} \equiv \partial_{\mu} + ig\pmb{\sigma}\,\pmb{A}_{\mu} \: ,
 \end{equation}
 
-\noindent where a new set of /gauge fields/ $\pmb{A}_{\mu} = (A_{\mu}^{1}, A_{\mu}^{2}, A_{\mu}^{3})$ had to be introduced.
-It is highly non-trivial to find the transformation rule for $\pmb{A}_{\mu}$ that restores local \symtwo{} invariance to the lagrangian, but it does exist.
-Keeping only the first-order terms for the case of small $\pmb{\lambda}$, the solution is [[cite:&griffiths]]:
+\noindent where a new set of /gauge/[fn:: The term /gauge/ refers to the regulation of redundant degrees of freedom. It can be thought of as a historical misnomer for the word /phase/ [[cite:&halzen_martin]].] fields $\pmb{A}_{\mu} = (A_{\mu}^{1}, A_{\mu}^{2}, A_{\mu}^{3})$ had to be introduced.
+It is highly non-trivial to find the transformation rule for $\pmb{A}_{\mu}$ that restores local \symtwo{} invariance to the lagrangian.
+Keeping only the first-order terms for the case of small $\pmb{\lambda}$, the solution is:
 
 #+NAME: eq:gauge_transf_field
 \begin{equation}
 \pmb{A}_{\mu} \rightarrow \pmb{A}_{\mu} + \partial_{\mu}\pmb{\lambda} - 2g(\pmb{\lambda} \times \pmb{A}_{\mu}) \: .
 \end{equation}
 
-\noindent Finally, without forgeting the additional kinematic term brought by the new field, written as:
+\noindent Finally, without forgeting the additional kinematic term brought by the new field:
 
 #+NAME: eq:kin_term
 \begin{equation}
@@ -89,16 +90,16 @@ The same idea can however be generalized to many other non-abelian symmetry grou
 * Chromodynamics
 
 According to the \ac{SM}, each quark flavour comes in three colors: red, blue and green.
-Focusing on a particular flavour, we can express its free lagrangian exactly as in [[eq:yang_mills_lagrangian]], but where now the fields are a three-component column vector $\bar{\psi} \equiv (\bar{\psi}_{r} \bar{\psi}_{b} \bar{\psi}_{g})$ for the three colors.
-The lagrangian naturally exhibits a global \symthree{} symmetry, which we again make local.
-Under the \symthreec{} the fields transform as follows (compare to [[eq:su2_transf]]):
+We can express its free lagrangian exactly as in [[eq:yang_mills_lagrangian]], but where now the fields are a three-component column vector $\bar{\psi} \equiv (\bar{\psi}_{r} \, \bar{\psi}_{b} \, \bar{\psi}_{g})$ for the three colors.
+The lagrangian naturally exhibits a global \symthree{} symmetry, which we again require to be local.
+Under \symthreec{}, the fields transform as follows (compare to [[eq:su2_transf]]):
 
 #+NAME: eq:su3_transf
 \begin{equation}
 \psi(x) \rightarrow e^{-ig\pmb{\phi}.\pmb{\theta}}\psi(x)
 \end{equation}
 
-\noindent where $\pmb{\phi}$ represents the eight generators of \symthreec{}, also know as Gell-Mann matrices.
+\noindent where $\pmb{\phi}$ represents the eight generators of \symthreec{}, also know as Gell-Mann matrices, and $g$ symbolizes the strength of the interaction.
 As in [[eq:derivative_extra]], a covariant derivative is introduced to satisfy the local invariance request, which this time will include 8 gauge fields instead of three.
 The gauge fields also transform in a more complex way, due to the larger number of generators:
 
@@ -129,17 +130,16 @@ F^{i}_{\mu\nu} = \partial_{\mu}A^{i}_{\nu} - \partial_{\mu}A^{i}_{\nu} + gf^{ijk
 \end{equation}
 
 \noindent The lagrangian is invariant under local \symthreec{}, describing three fields interacting with eight massless vector fields, the gluons.
-Contrary to the Yang-Mills theory discussed above, scientists [[eq:lagrangian_qcd]] actually reproduces Nature's behaviour, describing the strong interaction.
-The strength of the interaction is parametrized by $g$, which is usually redefined as $\alpha_{\text{S}} = g^2 /4\pi$, the strong coupling. 
-Notice that, once more, the gluons must be massless for the invariance to hold.
+Contrary to the Yang-Mills theory discussed before, scientists believe [[eq:lagrangian_qcd]] actually reproduces reality, describing the strong interaction.
+The strength of the interaction is usually redefined as $\alpha_{\text{S}} = g^2 /4\pi$, the strong coupling. 
+Notice that, once more, the gluons must be massless for the local invariance to hold.
 The second term in [[eq:lagrangian_qcd]] will lead to multiple combinations in $A^{i}_{\mu}$, originating cubic and quartic interactions between gluons.
 
 * The Weinberg-Salam Model
-
 In 1956, and against most expectations, Wu observed that parity was maximally violated in beta decays of $\text{Co}^{60}$ [[cite:&wu_experiment]].
 This motivated the exploration of chiral theories, where left and right handed components behave differently under applied symmetries.
-Just as \ac{QED} had be obtained by imposing a \symone{} \ac{EM} local gauge invariance, it was postulated that the \ac{EM} and weak forces could be united into a single force by imposing invariance under a \symweak{} transformation.
-Under the latter, fermion fields of left chirality are represented as doublets, while right chirality fermions are singlets.
+Just as \ac{QED} had be obtained by imposing a \symone{} \ac{EM} local gauge invariance, it was postulated that the \ac{EM} and weak forces could be united into a single force by imposing invariance under a \symweak{} local transformation.
+Under the latter, fermion fields of left chirality are represented as doublets, as shown in [[eq:quarks_and_leptons]], while right chirality fermions are singlets.
 Dirac spinors can be decomposed into left- and right-handed chiral components L and R:
 
 #+NAME: eq:chiral_components
@@ -147,7 +147,7 @@ Dirac spinors can be decomposed into left- and right-handed chiral components L 
 \Psi_{\text{L}} = \frac{1}{2} \left( 1+\gamma^{5} \right) \binom{\psi}{\psi^{\prime}} = \binom{\psi_{\text{L}}}{\psi_{\text{L}}^{\prime}} \: , \:\:\: \psi_{\text{R}} = \frac{1}{2}(1-\gamma^{5}) \psi \: , \:\:\: \psi_{\text{R}}^{\prime} = \frac{1}{2}(1-\gamma^{5}) \psi^{\prime} \:,
 \end{equation}
 
-\noindent with the $\gamma^{5}$ matrix is defined as:
+\noindent with the $\gamma^{5}$ matrix defined as:
 
 #+NAME: eq:gamma_five
 \begin{equation}
@@ -164,16 +164,17 @@ Dirac spinors can be decomposed into left- and right-handed chiral components L 
 \mathcal{L} = \bar{\Psi}_{\text{L}}(i\slashed{D})\Psi_{\text{L}} +i\bar{\psi}_{\text{R}}\slashed{D}\psi_{\text{R}} + i\bar{\psi}^{\prime}_{\text{R}}\slashed{D}\psi_{\text{R}}^{\prime} \: ,
 \end{equation}
 
-\noindent where it becomes clear the generators of \symtwol{} are zero for the right singlets, and thus only the left chirality fields interacts with the W gauge bosons.
-This corresponds to Wu's observation mentioned above, where Nature does not treat left- and right-handed particles equally.
-If we follow the Yang-Mills approach as in [[eq:derivative_extra]], but for the \ac{EW} \symtwol{} transformation instead, the covariant derivative becomes:
+\noindent where it becomes clear the generators of \symtwol{} are zero for the right singlets, and thus only the left chirality fields interact with the W gauge bosons.
+This corresponds to Wu's observation mentioned above, that Nature does not treat left- and right-handed particles equally.
+If we follow the Yang-Mills approach as in [[eq:derivative_extra]], but for the \ac{EW} \symweak{} transformation instead, the covariant derivative becomes:
 
 #+NAME: eq:ew_covariant
 \begin{equation}
 D_{\mu} \equiv \partial_{\mu} + ig\pmb{T}\pmb{W}_{\mu} - ig^{\prime}\frac{\mathcal{Y}}{2}B_{\mu}
 \end{equation}
 
-\noindent with $T_{i} \equiv \sigma_{i}/2$ representing \symtwo{} generators given by [[eq:su2_transf]] for the left field, and 0 for the right fields, and $\mathcal{Y}$ standing for the generator of the \symoney{}, the hypercharge, which is divided by two for convention.
+\noindent with $T_{i} \equiv \sigma_{i}/2$ representing \symtwo{} generators given by [[eq:su2_transf]] for the left fields, and $\mathcal{Y}$ standing for the generator of the \symoney{}, the hypercharge, which is divided by two for convention.
+The couplings are represented by $g$ and $g^{\prime}$.
 Rewriting [[eq:ew_lagrangian_short]] we obtain:
 
 #+NAME: eq:ew_lagrangian_short
@@ -181,12 +182,19 @@ Rewriting [[eq:ew_lagrangian_short]] we obtain:
 \mathcal{L}_{\text{EW}} = \mathcal{L}_{\text{kin}} + \mathcal{L}_{\text{CC}} + \mathcal{L}_{\text{NC}} \: ,
 \end{equation}
 
-\noindent where the first term term refers to the kinematic terms of the gauge fieldswhere two kinematic terms are present, for the fermions and for the bosons, and interactions are encoded in the neutral and charged current terms, NC and CC, respectively.
-The kinematic terms describe the propagation of fermions and gauge bosons through space-time, and are given by:
+\noindent where the first term is purely kinematical, and interactions are encoded in the neutral and charged current terms, NC and CC, respectively.
+The kinematic term describes the propagation of fermions and gauge bosons through space-time, and is given by:
 
 #+NAME: eq:ew_lagrangian_long_kin
 \begin{equation}
-\mathcal{L}_{\text{kin}} = \bar{\Psi}_{\text{L}}(i\slashed{\partial})\Psi_{\text{L}} +\bar{\psi}_{\text{R}}(i\slashed{\partial})\psi_{\text{R}} + \bar{\psi}^{\prime}_{\text{R}}(i\slashed{\partial})\psi_{\text{R}}^{\prime} \:, \\[0.5em]
+\mathcal{L}_{\text{kin}} = \bar{\Psi}_{\text{L}}(i\slashed{\partial})\Psi_{\text{L}} +\bar{\psi}_{\text{R}}(i\slashed{\partial})\psi_{\text{R}} + \bar{\psi}^{\prime}_{\text{R}}(i\slashed{\partial})\psi_{\text{R}}^{\prime} - \frac{1}{4} W^{i}_{\mu\nu} W_{i}^{\mu\nu} - \frac{1}{4} B_{\mu\nu} B^{\mu\nu} \: , \\[0.5em]
+\end{equation}
+
+\noindent where the field strength tensors are given by:
+
+#+NAME: eq:field_tensors
+\begin{equation}
+W^{i}_{\mu\nu} = \partial_{\mu}W^{i}_{\nu} - \partial_{\nu}W^{i}_{\mu} + gf^{ijk}W_{\mu j}W_{\nu k} \: , \:\:\: B_{\mu\nu} = \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu} \: .
 \end{equation}
 
 \noindent By linearly combining the two gauge bosons as:
@@ -235,7 +243,7 @@ Indeed, by replacing the new fields back in [[eq:ew_lagrangian_long_nc]], we get
 g\sin\theta_{\text{W}}I_{3}+g^\prime\cos\theta_{\text{W}}\frac{\mathcal{Y}}{2} = eQ \: .
 \end{equation}
 
-\noindent The hypercharge $\mathcal{Y}$ multiplies the coupling $g^\prime$, and thus leaves spaces from some arbitariness in its value.
+\noindent The hypercharge $\mathcal{Y}$ multiplies the coupling $g^\prime$, and thus leaves space from some arbritariness in its value.
 With the appropriate choice of $\mathcal{Y}(\bar{\Psi}_{\text{L}})=-1$, and considering the quantum numbers of the leptons in the up and down components of the doublets in [[eq:quarks_and_leptons]], a set of equations can be obtained:
 
 #+NAME: eq:system_nijishima
@@ -270,26 +278,10 @@ The neutral current term can be finally rewritten as follows:
 
 \noindent The charged current interactions couple the left spinors and are mediated by two W bosons, while the interactions arising from the neutral current are mediated by the neutral Z boson and photon.
 Charged currents can change the particle's flavour, and connect only left-chirality fermions.
-
-The lagrangian in [[]] only requires one additional term, namely the kinematic terms for the four new guage fields.
-The full version is thus written as:
-
-#+NAME: eq:final_lagrangian
-\begin{equation}
-\mathcal{L}_{\text{EW}} = i\bar{\Psi}_{\text{L}}\slashed{D}\Psi_{\text{L}} + i\bar{\psi}_{\text{R}}\slashed{D}\psi_{\text{R}} + i\bar{\psi^{\prime}}_{\text{R}}\slashed{D}\psi^{\prime}_{\text{R}} - \frac{1}{4} W^{i}_{\mu\nu} W_{i}^{\mu\nu} - \frac{1}{4} B_{\mu\nu} B^{\mu\nu} \: ,
-\end{equation}
-
-\noindent where the field strength tensors are given by:
-
-#+NAME: eq:field_tensors
-\begin{equation}
-W^{i}_{\mu\nu} = \partial_{\mu}W^{i}_{\nu} - \partial_{\nu}W^{i}_{\mu} + gf^{ijk}W^{j}_{\mu}W^{c}_{\nu} \: , \:\:\: B_{\mu\nu} = \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu} \: .
-\end{equation}
-
-\noindent Once the last two kinematic terms in [[eq:final_lagrangian]] are developed, a rich structure of gauge boson interactions is revealed.
+Once the last two kinematic terms in [[eq:ew_lagrangian_long_kin]] are developed, a rich structure of gauge boson interactions is revealed.
 The theory thus predicts cubic and quartic gauge couplings: ZWW, $\gamma\text{W}\text{W}$, ZZWW, $\gamma\gamma\text{W}\text{W}$, $\gamma\text{Z}\text{W}\text{W}$ and WWWW.
 
-The model presented in this section does manage to integrate the \ac{EM} and weak forces into the same framework, into what constitued a resounding success.
-However, while photons and gluons are massless, vector bosons are known to be massive, while Dirac mass terms are not gauge invariant to the symmetries so far explored.
+The model presented in this section does manage to integrate the \ac{EM} and weak forces into the same framework, into what represented a resounding success.
+However, while photons and gluons are massless, vector bosons are known to be massive, but Dirac mass terms are not gauge invariant to the symmetries so far explored.
 We could add those terms anyways, but unrenormalizable divergences would appear, getting more severe at each additional loop order, making the theory unpredictive and ultimately meaningless.
 Fortunately, an alternative procedure was found.

@@ -7,48 +7,49 @@ In this section, we list the most prominent challenges a successfull future theo
 That high-energy collider physics has the potential to look for answers in many of the following topics is a statement for the relevance \ac{HEP} experiments still have in the general experimental landscape.
 
 + *Dark Matter*:
-  It has been know for almost a century that standard gravitational equations fail to describe the velocity distribution of stars around the centre of galaxies.
-  Assuming that the largest fraction of a galaxy's mass is found on its center, the tangential velocity of the stars should decrease with $r^{-1/2}$, being $r$ the distance to the centre of the galaxy.
-  Observations instead indicate that the tangential velocity decreases much more slowly, suggesting that the distribution of the mass in galaxies is proportional to $r$, implying a very significant non-luminous component: the "dark" matter.
-  Many experiments have provided independent measurements that seem to support the existence of dark matter, like \ac{CMB} measurements with the WMAP [[cite:&wmap]] and Planck [[cite:&planck_exp]], or the observation of the famous "bullet cluster" [[cite:&bullet_cluster1;&bullet_cluster2]].
+  It has been known for almost a century that standard gravitational equations fail to describe the velocity distribution of stars orbiting galaxies as a function of the distance $r$ from the galaxies' centers.
+  Assuming that the largest fraction of a galaxy's mass is found at its center, the tangential velocity of the stars should decrease with $r^{-1/2}$.
+  Observations instead indicate that it decreases much more slowly, suggesting that the mass distribution is proportional to $r$, implying a very significant non-luminous component: the "dark" matter.
+  Many experiments have provided independent measurements that seem to support the existence of dark matter, like the \ac{CMB} measurements with WMAP [[cite:&wmap]] and Planck [[cite:&planck_exp]], or the observation galaxy clusters, including the famous "bullet cluster" [[cite:&bullet_cluster1;&bullet_cluster2]].
   Some \ac{SM} extensions predict the existence of \acp{WIMP}, as \ac{SUSY}, \ac{WED} and little Higgs theories.
   They should pervade our Universe, and so might be observable directly via dedicated experiments, or produced at the \ac{LHC}.
   Alternative explanations for the observed discrepancies nevertheless exist, most notably \ac{MOND} theories [[cite:&mond]], but are generally disfavoured by the scientific community.
   
 + *Grand unification*:
-  At the \ac{EW} scale, the three coupling constants have somewhat similar value.
-  Significantly, the three couplings evolve with energy in such a way that their unification could be achievable at some higher energy,
-  within a generale symmetry group.
+  At the \ac{EW} scale, the three coupling constants present in the \ac{SM} have a somewhat similar value.
+  Significantly, they evolve with energy in such a way that their unification could be achievable at some higher energy,
+  assuming \ac{BSM} symmetries.
   \Acp{GUT} have been proposed with all-encompassing gauge symmetry groups, where convergences are achieved at grand unification scales (\SI{\approx e16}{\GeV}), often dependent on the presence of additional particles, which modify the running of the couplings.
-  These theories usually require proton decay, which as not been observed so far[fn:: I can't resist mentioning the futuristic possibility of using material taken from the Moon's depths to improve on current limits [[cite:&proton_decay_moon]], which are otherwise slowly reaching practical experimental ceilings.]: current lower bounds are set at around $10^{33}/10^{34}$ at 90% \ac{CL} [[cite:&kamiokande_proton;&kamiokande_proton2]].
+  These theories usually require proton decay, which has not been observed so far[fn:: I can't resist mentioning the futuristic possibility of using material taken from the Moon's depths to improve on current limits [[cite:&proton_decay_moon]], which are otherwise slowly reaching practical experimental ceilings.]: current lower bounds are set at around $10^{33}/10^{34}$ at 90% \ac{CL} [[cite:&kamiokande_proton;&kamiokande_proton2]].
   Even more dramatic is the absence of gravity from the current framework.
-  The quantization of general relativity as been shown to not be renormalizable, and cannot thus be integrated in the \ac{SM} as it is.
+  The quantization of general relativity as been shown to be non-renormalizable, and cannot thus be integrated in the \ac{SM} as it is.
 
 + *\Ac{CP} violation and baryogenesis*:
-  Sakharov identified the three necessary ingredients to explain a process capable of reproducing the observed asymmetry: /i/) lepton and baryon number violation, /ii/) at some point in time the Universe was out of thermal equilibrium, and /iii/) there must be a \ac{CP} violating interaction.
+  Sakharov identified three necessary ingredients to explain a process capable of reproducing the observed asymmetry: /i/) lepton and baryon number violation, /ii/) a Universe was out of thermal equilibrium at some point in time, and /iii/) a \ac{CP}-violating interaction.
   In the \ac{SM}, the violation of \ac{CP} symmetry can only be accomodated in the parameters of the \ac{CKM} and \ac{PMNS} matrices.
-  \Ac{CP} violation has already been studied in great depth in the quark sector, but the same is far from being the case in the neutrino sector.
-  Still, even assuming the observation of \ac{CP} violation in the \ac{PMNS} matrix, it seems unlikely that the \ac{SM} will be able to explain the full extent of the observed matter/anti-matter asymmetry in the Universe.
-  The required \ac{CP} violation could also be hidden in the strong \ac{SM} phase, an issue that can be tackled by introducing axions, which are also candidates for dark matter.
+  \Ac{CP} violation has already been studied in great depth in the quark sector, but the same is not the case for neutrinos.
+  However, even assuming the observation of \ac{CP} violation in the \ac{PMNS} matrix, it seems unlikely that the \ac{SM} will be able to explain the full extent of the observed matter/anti-matter asymmetry in the Universe.
+  The required \ac{CP} violation could also be hidden in the strong \ac{SM} phase, an issue that can be tackled by introducing axions, which have the advantage of also being dark matter candidates.
   
 + *The nature of neutrinos*:
-  There is a striking disparity between neutrino masses and the masses of all other \ac{SM} particle, including other fermions.
+  There is a striking disparity between neutrino masses and the masses of all other \ac{SM} particles, including other fermions.
   Dirac-type neutrinos imply unnaturally small Yukawa couplings to the Higgs boson, since the latter is proportional to the fermion mass.
   Majorana-particles might circumvent this issue via a seesaw-like mechanism, violating the lepton number [[cite:&seesaw_mech]].
-  The most striking evidence for Majorana-type neutrinos would be the observation of neutrinoless double $\beta\text{-decay}$ $(Z,A) \rightarrow (Z+2,A) + 2e^{-}$, with $Z$ the atomic number and $A$ the mass number), which cannot occur if the neutrinos are of Dirac-type.
+  The most striking evidence for Majorana-type neutrinos would be the observation of neutrinoless double $\beta\text{-decay}$ $(\text{Z},\text{A}) \rightarrow (\text{Z}+2,\text{A}) + 2e^{-}$, with Z the atomic number and A the mass number, which cannot occur if the neutrinos are of Dirac-type.
   The level of required experimental precision is however very high, and no definitive answer was found so far.
   Even the mass ordering of the three know neutrino families is not known.
-  Neutrino oscillation experiments have shed light on their non-zero masses, but they are unfortunately sensitive to squared-mass differences only, and thus it is not currently clear which of the neutrinos is the heaviest, and which one the lightest.
+  Neutrino oscillation experiments have shed light on their non-zero masses, but they are unfortunately sensitive to squared-mass differences only.
+  It is not currently clear which of the neutrinos is the heaviest, and which one the lightest.
 
 + *Dark energy*:
   The Universe has been shown to be in a state of accelerated expansion [[cite:&planck_exp]].
-  The concept of /dark energy/ is invoked to explain the phenomenon, as it introduces a repulsive force that counteracts the gravitational attraction, representing more than two thirds of the total energy in the present day observable Universe.
+  The concept of /dark energy/ is invoked to explain such phenomenon, as it introduces a repulsive force that counteracts the gravitational attraction, representing more than two thirds of the total energy in the present day observable Universe.
   This quantity can be found in general relativity, but is absent from the \ac{SM}.
 
 + *Unnaturalness of the Higgs mass*:
-  The Higgs boson mass seems to be precisely and unnaturally fine-tuned to have a value much lower than what would be expected from quantum arguments.
+  The Higgs boson mass seems to be precisely and unnaturally fine-tuned to have a much lower value than what would be expected from arguments coming from Quantum Mechanics.
   Indeed, quantum corrections from Higgs interactions with other particles should place $\mh$ at the level of the Planck scale, \ie{} 17 orders of magnitude larger than its measured value.
 
-Regardless of what may lie ahead, we are confident in saying that sometime, somewhere, the \ac{SM} sturdiness will crack, hinting at what lies beyond.
-In this thesis we took the risk of assuming the answer lies in double Higgs production.
+Regardless of what may lie ahead, we are confident in saying that sometime, somewhere, the \ac{SM}'s resilience will crack, hinting at what lies beyond.
+In this thesis we took the experimental risk of assuming the answer can be found in double Higgs production.
 Even if proved wrong, our choice will allow future work to get closer to the next big discovery.

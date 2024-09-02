@@ -4,20 +4,19 @@
 
 The \ac{SM} represents a remarkable triumph of modern physics, beautifully explaining all known \ac{EM}, weak and strong interactions, and establishing a profound connection between symmetries and governing equations which precisely predict the entire set of measurements so far performed at collider experiments.
 Precision tests confirm the \ac{SM} validity up to \ac{EW} scale energies, and the observed Higgs boson resembles the theorized one up to great precision.
-Models predicting complex "Higgs families", such as multiple flavours of \ac{SUSY} theories or \ac{2HDM} types, are getting less and less favoured as more data is collected and analyzed.
+Models predicting complex "Higgs families", such as multiple flavours of \ac{SUSY} theories or \ac{2HDM} types, are getting less favoured as more data is collected and analyzed.
 
-It is however worrying that some \ac{SM} elements are added in an /ad hoc/ fashion to reproduce experimental data.
-Taking the Yukawa couplings as an example, discussed in [[#sec:yukawa]], they are introduced to explain fermion masses, and coincidentally happen to work extremely well with the newly introduced Higgs doublet.
-In total, assuming neutrinos are of Dirac type (as opposed to Majorana fermions), the \ac{SM} brings \num{26} free parameters to the table: \num{12} Yukawa couplings, three coupling constants, namely the weak and strong couplings and Fermi's constant $\gf$, the two parameters describing the Higgs potential in [[eq:sm_orig_potential]], eight mixing angles for the \ac{PMNS} and \ac{CKM} matrices, and a strong \ac{CP} phase.
+It is however worrying that some \ac{SM} elements are empirically added to reproduce experimental data.
+Taking the Yukawa couplings as an example, discussed in [[#sec:yukawa]], they are introduced to explain fermion masses, and coincidentally happen to work extremely well with the newly introduced Higgs doublet, but nobody knows /why/ those terms are present in the first place.
+In total, assuming neutrinos of Dirac type (as opposed to Majorana fermions), the \ac{SM} brings \num{26} free parameters to the table: \num{12} Yukawa couplings, three coupling constants, namely the weak and strong couplings and Fermi's constant $\gf$, the two parameters describing the Higgs potential in [[eq:sm_orig_potential]], eight mixing angles for the \ac{PMNS} and \ac{CKM} matrices, and a strong \ac{CP} phase.
 The presence of so many parameters suggests that, despite its undeniable achievements, the \ac{SM} continues to be a model where parameters are chosen to match observations.
-Moreover, the entire theory rests on the \symfull{} gauge group.
-It remains unclear why this particular symmetry should be more relevant than a different one.
+Moreover, the entire theory rests on the \symfull{} gauge group, but it remains unclear why this particular symmetry should be more relevant than a different one.
 A series of patterns exists between the different parameters, hinting at an underlying yet unknown symmetry principle.
 Also unclear is the existence of exactly three generations of fermions.
 Could it also be connected to some underlying general truth, or are theoretical developments in Particle Physics stalled until the next paradigm shift is attained?
 
 From an experimental point of view, to successfully go beyond the \ac{SM} one ideally needs a physical process with high discovery potential on multiple fronts.
 Double Higgs pair production fits such description.
-In this section, after discussing the many clear discrepancies the \ac{SM} cannot convincingly explain, we discuss all the options currently explored to find \ac{NP} in HH processes, in both nonresonant ([[#sec:nonres_BSM_hh]]) and resonant ([[#sec:res_BSM_hh]]) analyses.
-The latter also establishes the basis for the significance of the \bbtt{} analysis work reported in [[ref:sec:analysis1_intro,sec:analysis2_intro]].
-Notably, even if no deviations or excesses are found, results will still be able to provide information about the world we live in: strong limits on the phase-space of many \ac{BSM} models, and the seemingly inescapable measurement of the Higgs boson self-coupling at a not-so-distant future time.
+In this section, after discussing the many clear discrepancies the \ac{SM} cannot convincingly explain, we discuss all the options currently explored to find \ac{NP} in HH processes, in both nonresonant ([[#sec:nonres_BSM_hh]]) and resonant ([[#sec:res_BSM_hh]]) processes.
+The latter also establishes the motivational basis for the \bbtt{} analysis work reported in [[ref:sec:analysis1_intro,sec:analysis2_intro]].
+Notably, even if no deviations or excesses are found, results will still be able to provide information about the world we live in: strong limits on the phase-space of many \ac{BSM} models, and the seemingly inevitable measurement of the Higgs boson self-coupling in a not-so-distant future.
