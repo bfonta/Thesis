@@ -3,15 +3,15 @@
 :END:
 
 Following the end of the Second World War, there was the need for Europe to stop the brain exodus to North America, and to establish a world-class research facility which could foster unity.
-The European Organization for Nuclear Research (CERN) was thus born in 1954, engaging in purely scientific endeavours, and excluding itself, as per its Convention [[cite:&CERNconvention]], from any connection to military actions, in a spirit of peace and open scientific exchange.
+The European Organization for Nuclear Research (CERN) was thus born in 1954, engaging in purely scientific endeavors, and excluding itself, as per its Convention [[cite:&CERNconvention]], from any connection to military actions, in a spirit of peace and open scientific exchange.
 
 Home of many atomic and particle physics experiments, CERN is nowadays widely known for its massive particle accelerator, the \ac{LHC}, built with a designed center-of-massy energy of \SI{14}{\TeV}.
-The \ac{LHC} sits at the border between France and Switzerland, close to Geneva, and spans an impressive \SI{27}{\kilo\meter} circumference of vacuum pipes, where beams of protons accelerate in opposite directions almost at the speed of light.
-The tunnel is located at a depth ranging between \num{45} and \SI{170}{\meter}, and was formerly used by \ac{LHC}'s predecessor, LEP, connected to the precise measurements of the mass of the W and Z bosons, among other parameters.
+The \ac{LHC} sits at the border between France and Switzerland, close to Geneva, and spans an impressive \SI{27}{\kilo\meter} ring of vacuum pipes, where beams of protons are accelerated in opposite directions almost at the speed of light.
+The tunnel is located at a depth ranging between \num{45} and \SI{170}{\meter}, and was formerly used by \ac{LHC}'s predecessor, LEP, which provided the high-energy electron and positron beams leading to the precise measurements of the W and Z boson masses, among other \ac{SM} parameters.
 The beams at the \ac{LHC} collide in four \acp{IP}, producing a myriad of decay products which are analyzed by large surrounding experiments.
-One of such machines is known as CMS, and represents the general particle physics experiment producing the data which serves as basis for the thesis you are now reading.
+One of such machines is known as CMS, and represents a general particle physics experiment producing the data which serves as basis for the thesis you are now reading.
 
-This Chapter provides a condensed summary of the elements and ideas behing the data production flow taking place at the \ac{LHC} and \ac{CMS}, from circulating proton bunches to the definition of measured physics objects, as used to extend the current knowledge on subatomic physics.
+This Chapter offers a condensed summary of the elements and ideas behind the data production flow taking place at the \ac{LHC} and \ac{CMS}, from circulating proton bunches to the definition of measured physics objects, expanding the current knowledge on subatomic physics.
 We describe the \ac{LHC} in [[#sec:lhc_intro]] and \ac{CMS} in [[#sec:cms_detector]].
 Given the scope of the thesis, namely the trigger work described in later chapters, we cover the \ac{CMS} trigger system in detail in [[#sec:cms_trigger_system]], and provide a concise description of how offline object reconstruction works in [[#sec:offline_reco]], giving special emphasis to the Particle Flow approach.
-We finalize the Chapter by discussing Monte Carlo generation within \ac{CMS}, also in light of the Monte Carlo activities developed within the timeframe of the thesis here reported.
+We finalize the Chapter by discussing Monte Carlo generation within \ac{CMS}, also in light of the Monte Carlo activities developed within the time-frame of the thesis here reported.

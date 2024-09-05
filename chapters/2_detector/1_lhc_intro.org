@@ -3,8 +3,8 @@
 :END:
 
 The \ac{LHC} is one of the largest scientific instruments ever built, being the current most powerful particle accelerator in the world.
-Designed to provide a maximum energy of \SI{6.8}{\TeV} per proton beam, it has gathered since its debut in 2010 a user community of \num{\sim 9000} scientists working in fundamental particle physics [[cite:&hllhc]].
-The main Physics motivation to built such a powerful and expensive machine was to search for the conjectured Higgs boson and understand the mechanism of \ac{EWSB}, which we covered in [[#sec:higgs_mechanism]].
-The \ac{LHC} was also meant to explore the $\si{TeV}$ scale, either via the existence of new resonances, or by the indirect manifestation of higher-energy and yet unknown particles, in order to answer some of the most profound questions in modern physics.
+Designed to provide a maximum energy of \SI{6.8}{\TeV} per proton beam, it has gathered since its 2010 debut a user community of \num{\sim 9000} scientists working in fundamental particle physics [[cite:&hllhc]].
+The main scientific motivation to built such a powerful and expensive machine was to search for the conjectured Higgs boson and understand the mechanism of \ac{EWSB}, which we covered in [[#sec:higgs_mechanism]].
+The \ac{LHC} is also intended to explore the $\si{TeV}$ scale, either via the existence of new resonances, or by the indirect manifestation of higher-energy and yet unknown particles, in order to answer some of the most profound questions in modern physics.
 Beyond its \ac{pp} collisions, the \ac{LHC} also collides lead ions, enabling the study of the /quark-gluon plasma/, an extremely dense and hot state of matter where quarks and gluons do not experience the strong force.
 In the following, we cover \ac{LHC}'s design and operations, and briefly describe some of its most iconic active experiments.

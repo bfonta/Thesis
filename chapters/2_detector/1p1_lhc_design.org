@@ -2,44 +2,44 @@
 :CUSTOM_ID: sec:lhc_design
 :END:
 
-The world-highest \SI{6.8}{\TeV} proton beam energies at the \ac{LHC} cannot be achieved without a complex chain of injection.
-The chain starts with the production of protons in the \ac{Linac4}, and continues in progressively more energetic acelerating rings, going first to the \ac{PSB}, then to the \ac{PS}, and finally into the \ac{SPS}, before being injected into the \ac{LHC}.
+The record-breaking \SI{6.8}{\TeV} proton beam energies at the \ac{LHC} cannot be achieved without a complex chain of injection.
+The chain starts with the production of protons in a \ac{Linac4}, and continues in accelerator rings of progressively higher energies, going first to the \ac{PSB}, then to the \ac{PS}, and finally into the \ac{SPS}, before being injected into the \ac{LHC}.
 The complete accelerator complex is illustrated in [[fig:cern_acc_complex]].
 
 #+NAME: fig:cern_acc_complex
-#+CAPTION:  The CERN accelerator complex. The \ac{LHC} is a \SI{27}{\kilo\meter} ring shown at the top in dark blue. Its the last of a complex chain of particle accelerators. The smaller machines are used in sequence to accelerate the proton beams that collide at four \acp{IP}, corresponding to the centre of ALICE, ATLAS, CMS and LHCb. Taken from [[cite:&lhc_complex]].
+#+CAPTION:  The CERN accelerator complex. The \ac{LHC} is the \SI{27}{\kilo\meter} ring shown at the top in dark blue. Its the last of a complex chain of particle accelerators with progressively higher beam energies. The smaller accelerators are used in sequence to accelerate the proton beams that collide at the four \acp{IP}, corresponding to the center of the ALICE, ATLAS, CMS and LHCb experiments, located at CERN's North Area. The East Area hosts instead multiple experiments connected to the Proton Synchrotron. Taken from [[cite:&lhc_complex]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/CERNaccelerators.pdf]]
 #+END_figure
 
-The \ac{Linac4} [[cite:&linac4]] is designed to boost negative hydrogen ions to high energies via radiofrequency cavities, and it has been the \ac{LHC} proton source since 2020.
-It is \SI{86}{\meter} long, is located \SI{12}{\meter} underground, and accelerates ions to \SI{160}{\MeV}, in a series of four stages.
-First, the magnetic field of a radio-frequency quadrupole reaches \SI{3}{\MeV}, then drift tubes arrive at \SI{50}{\MeV}, later a different set of linear accelerators attain \SI{100}{\MeV}, where finally so-called Pi-mode structures provide the final \SI{160}{\MeV} energy.
-During injection to the \ac{PSB}, the ions are stripped from their two electrons, leaving the individual protons, which in turn enable a larger particle multiplicities in the synchrotron, reduces beam losses and simplifies the injection procedure.
+The \ac{Linac4} [[cite:&linac4]] is designed to boost negative hydrogen ions to high energies via radio-frequency cavities, and it has been the proton source of the \ac{LHC} since 2020.
+It is \SI{86}{\meter} long and is located \SI{12}{\meter} underground, and accelerates ions in a series of four stages.
+First, the magnetic field of a radio-frequency quadrupole reaches \SI{3}{\MeV}, then drift tubes arrive at \SI{50}{\MeV}, later other linear accelerators attain \SI{100}{\MeV}, and finally so-called Pi-mode structures provide the final \SI{160}{\MeV} energy.
+During the injection in the \ac{PSB}, the ions are stripped from their two electrons, leaving only the individual protons.
+This enables larger particle multiplicities in the synchrotron, reduces beam losses and simplifies the injection procedure.
 The beam continues its path in the \SI{150}{\meter}-long \ac{PSB}, being accelerated to up to \SI{2}{\GeV}.
-From here the beams follow to the \ac{PS}, but are also sent to the ISOLDE experiment.
-The acceleration procedures continues with the \ac{PS}, CERN's first synchrotron, and \ac{SPS}, which reach energies of \num{25} and \SI{450}{\GeV}, respectively.
+From there the beams are directed to the \ac{PS}, which is also connected to physics experiments.
+The acceleration procedures continues with the \ac{PS}, CERN's first synchrotron, and the \ac{SPS}, reaching energies of \num{25} and \SI{450}{\GeV}, respectively.
 Specially built transfer lines connect the \ac{SPS} and \ac{LHC} ring tunnels, and fast kicker magnets are used to split the proton beam into two beamlines, which are then accelerated to their target energies using additional high frequency cavities.
 The \ac{SPS}, with its \SI{7}{\km} ring length and \num{1317} electromagnets, also directly provides proton beams for some experiments, such as NA61/SHINE, NA62 and COMPASS.
-It has also notably been involved in the discoveries of the W and Z boson, since at the time it was running as a proton-antiproton collider.
+It has also notably been involved in the discoveries of the W and Z boson, since in 1983 it was running as a proton-antiproton collider for the UA1 and UA2 experiments.
 
-The \ac{LHC} consists of a \SI{27}{\km} ring of \num{\sim 1600} \ac{NbTi} superconducting magnets cooled with \ch{He} at \SI{1.85}{\kelvin} with a number of accelerating structures to boost the energy of the particles along the way.
+The \ac{LHC} consists of a ring of \num{\sim 1600} \ac{NbTi} superconducting magnets cooled with \ch{He} at \SI{1.85}{\kelvin} with a number of accelerating structures to boost the energy of the particles along the way.
 The two separate beam pipes are kept at an ultrahigh vacuum reaching of \SI{\sim 10e-10}{\milli\bar}, a value almost as low as the pressure found at the surface of the Moon.
 The protons are packed into bunches separated by a time spacing $\Delta t_{\text{b}}$, forming /trains/.
 The more bunches per train, the higher the integrated luminosity becomes, and thus the beams are packed in long trains as close to each other as possible.
 However, there is a limit to it, since the kicker magnets have specific rise and fall times that must be taken into account, leading to complex /bunch schemes/.
 Once the beams achieve the desired energy, they are focused and put into collision in four specific \acp{IP} along the \ac{LHC}'s circumference, where each \ac{IP} is surrounded by a large physics experiment: ATLAS, ALICE, CMS, and LHCb.
-The ATLAS and CMS expertiments are two multi-purpose experiments with a broad and similar physics programme.
-LHCb and ALICE target instead more dedicated fields, namely flavour physics and heavy-ion physics, respectively.
-These and other detectors are succinctly described in [[#sec:lhc_experiments]].
-\Ac{CMS} in particular in described at length in [[#sec:cms_detector]], due to its immediate connection to this thesis.
 After some time, in which the luminosity steadily decreases due to losses in the collisions, the beam is dumped, and the injection procedure restarts.
+The ATLAS and CMS experiments are two multi-purpose experiments with a broad and similar physics programme.
+LHCb and ALICE target instead more specific branches, namely flavor physics and heavy-ion physics, respectively.
+These and other detectors are succinctly described in [[#sec:lhc_experiments]].
+\Ac{CMS} in particular is described at length in [[#sec:cms_detector]], due to its immediate connection to this thesis.
 
-A fundamental parameter of collider experiments is the /instantaneous luminosity/ $\mathcal{L}$, a quantity measuring the number of collisions taking place per unit of time and unit of area.
-If $\mathcal{L}$ is integrated over time, one obtains the /integrated luminosity/, a useful parameter to know how many collisions ocurred during a specified time period.
+A fundamental parameter of collider experiments is its /instantaneous luminosity/ $\mathcal{L}$, a quantity measuring the number of collisions taking place per unit of time and unit of area.
+If $\mathcal{L}$ is integrated over time, one obtains the /integrated luminosity/, a useful parameter to know how many collisions occurred during a specified time period.
 The total number of times a physics process takes place in a collider experiment, often referred to as the number of /events/, is given by the product between the process' cross section and its integrated luminosity:
-
 #+NAME: eq:lumi
 \begin{equation}
 N_{\text{events}} = \sigma \, \int\mathcal{L} \, ,
@@ -48,21 +48,20 @@ N_{\text{events}} = \sigma \, \int\mathcal{L} \, ,
 \noindent where the time integral refers to some unspecified time period, such as a full week, month or data-taking year.
 The equation shows that the observation of rare processes requires the production of more data, which can amount to longer data-taking periods and/or larger instantaneous luminosities.
 Assuming that the two \ac{LHC} beams are identical, that their transverse section is perfectly round, and that they are highly collimated, $\mathcal{L}$ is given by:
-
 #+NAME: eq:inst_lumi
 \begin{equation}
-\mathcal{L} = \mathcal{F} \, \frac{N_{\text{b}}^2 \, n_{\text{b}} \, f_{\text{rev}} \, \gamma}{4\pi \epsilon_{n} \beta^{*}} \:\:\: , \:\:\: \mathcal{F} = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{-1/2} \, ,
+\mathcal{L} = \mathcal{F} \, \frac{N_{\text{b}}^2 \, n_{\text{b}} \, f_{\text{rev}} \, \gamma}{4\pi \, \epsilon_{n} \, \beta^{*}} \:\:\: , \:\:\:\:\:\: \mathcal{F} = \left( 1 + \frac{\theta_{\text{c}}\sigma_z}{2\sigma_{xy}} \right)^{-1/2} \, ,
 \end{equation}
 
-\noindent where $N_{\text{b}}$ represents the number of particles in each of the $n_{\text{b}}$ bunches in the beam, $f_{\text{rev}}$ is the revolution frequency of the beam, $\gamma \equiv (1-v^2/c^2)^{-1/2}$ is the relativistic factor with $v$ being the beam linear velocity, $\mathcal{F}$ stands for a geometric factor accounting for the luminosity reduction caused by the crossing angle $\theta_{\text{c}}$ at the interaction point between the two beams with transverse and longitudinal \ac{rms} bunch sizes $\sigma_z$ and $\sigma_{xy}$, respectively, and $\epsilon_{n} \beta^*$ is related to the beam optics, where $\epsilon$ stands for the average \ac{rms} normalized emittances of the two beams, being the emittance a measure of the volume covered by the beam, and $\beta^*$ is the beta-function at the collision point [[cite:&tevatron_collider;&emittance_beta]].
-Some of these quantities are listed in [[tab:LHCparameters]] specifically for the \ac{LHC}.
+\noindent where $N_{\text{b}}$ represents the number of particles in each of the $n_{\text{b}}$ bunches in the beam, $f_{\text{rev}}$ is the revolution frequency of the beam, $\gamma \equiv (1-v^2/c^2)^{-1/2}$ is the relativistic factor with $v$ being the beam linear velocity, $\mathcal{F}$ stands for a geometric factor accounting for the luminosity reduction caused by the crossing angle $\theta_{\text{c}}$ at the interaction point between the two beams with transverse and longitudinal \ac{rms} bunch sizes $\sigma_z$ and $\sigma_{xy}$, respectively, and $\epsilon_{n} \, \beta^*$ is related to beam optics, where $\epsilon_{n}$ stands for the average \ac{rms} normalized emittance of the two beams, being the emittance a measure of the volume covered by the beam, and $\beta^*$ is the beta-function at the collision point [[cite:&tevatron_collider;&emittance_beta]].
+Some of these quantities are listed in [[tab:LHCparameters]], specifically for the design values of the \ac{LHC}.
 
 #+NAME: tab:LHCparameters
 #+CAPTION: Nominal design parameters of the LHC machine in its \ac{pp} collisions configuration.
 #+ATTR_LATEX: :placement [!h] :center t :align l|c|c :environment mytablewiderrows
 | Description                       | Parameter        | Value                  |
 |-----------------------------------+------------------+------------------------|
-| Centre-of-mass energy             | $\sqrt{s}$       | \SI{14}{\TeV}          |
+| Center-of-mass energy             | $\sqrt{s}$       | \SI{14}{\TeV}          |
 | Number of particles per bunch     | $N_{\text{b}}$   | \num{1.15e11}          |
 | Number of bunches per beam        | $n_{\text{b}}$   | \num{2808}             |
 | Revolution frequency              | $f_{\text{rev}}$ | \SI{11.2}{\kilo\hertz} |
@@ -74,16 +73,15 @@ Some of these quantities are listed in [[tab:LHCparameters]] specifically for th
 | Longitudinal bunch \ac{rms} at IP | $\sigma_{xy}$         | \SI{16.7}{\um}         |
 
 The desired luminosity increase inevitably leads to a larger number of multiple \ac{pp} interactions per bunch crossing, a phenomenon known as /\ac{PU}/.
-The average of such number is given by:
-
+The average of such quantity is given by:
 #+NAME: eq:pileup
 \begin{equation}
-\langle\mu\rangle = \frac{\mathcal{L}\,\sigma_{pp}^{\text{inelastic}}}{n_bf_{\text{rev}}} \, ,
+\langle\mu\rangle = \frac{\mathcal{L}\,\sigma_{pp}^{\text{inelastic}}}{n_bf_{\text{rev}}} \: ,
 \end{equation}
 
-\noindent where $\sigma_{\text{pp}}^{\text{inelastic}}$ is the inelastic \ac{pp} cross section, measured to be $68.6 \pm 0.5 \, (\text{syst}) \pm 1.6 \, (\text{lumi}) \, \si{\milli\barn}$ at \SI{13}{\TeV} [[cite:&inelastic_pp_13tev]].
-The \ac{PU} represents a limitation on the physics sensitivity to any collider experiment.
-Firstly, the larger it is, the larger will the radiation levels the detectors will be subject to.
+\noindent where $\sigma_{\text{pp}}^{\text{inelastic}}$ is the inelastic \ac{pp} cross section, measured to be $68.6 \, \pm \, 0.5 \, (\text{syst}) \pm 1.6 \, (\text{lumi}) \, \si{\milli\barn}$ at \SI{13}{\TeV} [[cite:&inelastic_pp_13tev]].
+The \ac{PU} represents a limitation on the physics sensitivity in any collider experiment.
+Firstly, the larger it is, the larger will the radiation levels be for the detectors.
 When the increase in luminosity is very significant, new or upgraded detectors might be required, as extensively discussed in [[#sec:intro_tps]].
-More sophisticated data analysis techniques are also needed, to disentangle the interesting processes produced at the \ac{PV} from all generally low-energy products coming from \ac{PU} vertices.
-Therefore, unless considerable efforts are undertaken, the increase in luminosity can negatively impact the sensitivity to the observation of new physics phenomena.
+Secondly, more sophisticated data analysis techniques are also needed, to disentangle the interesting processes produced at the \ac{PV} from all generally low-energy products coming from \ac{PU} vertices.
+Therefore, unless considerable efforts are undertaken, the increase in luminosity can negatively impact the sensitivity to the observation of \ac{NP}.
