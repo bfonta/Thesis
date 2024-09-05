@@ -54,7 +54,8 @@ Since the on-shell to off-shell cross section ratio is proportional to the width
 
 #+NAME: tab:higgs_production_xsecs
 #+CAPTION: Relative abudnaces and cross sections plus corresponding uncertainties for the most significant Higgs boson production modes, at $\sqrt{s}=13\,\text{TeV}$, for $\mh = 125.09\,\si{\GeV}$ [[cite:&YellowReport4]].
-#+ATTR_LATEX: :placement [!h] :center t :align l|l|l :environment mytablewiderrows
+#+ATTR_LATEX: :placement [!h] :center t :align ccl :environment mytablewiderrows
+|-----------------+----------------------+---------------------------------------------------------------------------------------------------|
 | Production mode | Approx. fraction [%] | Cross section [$\si{\pico\barn}$]                                                                 |
 |-----------------+----------------------+---------------------------------------------------------------------------------------------------|
 | ggF             |                87.30 | $48.61^{+4.27\%}_{-6.49\%}\,\text{(theory)} \pm 1.85\%\,\text{(PDF)}^{+2.59\%}_{-2.62\%}(\astrong)$ |
@@ -64,6 +65,7 @@ Since the on-shell to off-shell cross section ratio is proportional to the width
 | ttH             |                 0.90 | $0.5065^{+5.8\%}_{-9.2\%}$                                                                        |
 | bbH             |                 0.87 | $0.4863^{+20.1\%}_{-23.9\%}$                                                                      |
 | tH (t-channel)  |                 0.13 | $0.07426^{+6.5\%}_{-14.7\%}$                                                                      |
+|-----------------+----------------------+---------------------------------------------------------------------------------------------------|
 
 The Higgs boson is created via a series of production modes, the most important of which are shown in [[fig:H_production_diagrams]] and listed in [[tab:higgs_production_xsecs]], where cross sections are provided for $\sqrt{s}=13\,\si{\TeV}$ (\run{2}), with $\mh = 125.09\,\si{\GeV}$.
 Looking at [[fig:single_higgs_xsec_br]] (left), we can expect a slight cross section increase for the current \run{3} at $\sqrt{s}=13.6\,\si{\TeV}$.

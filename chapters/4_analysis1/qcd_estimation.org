@@ -1,4 +1,0 @@
-* Validation 
-+ Varying the DeepTau working points used, thus modifying the C and D regions, and comparing the C/D ratio yield with the one obtained with the nominal C and D DeepTau working points.
-+ Define a sideband region by inverting the $m_{\tau\tau}$ and $m_{bb}$ mass cuts, and compare the QCD estimate with direct data-MC subtraction in the sideband
-+ It is also possible to define additional validation regions, one "signal-like" and the other "background-like" to mimic the transfer factor that will be applied to the signal regions

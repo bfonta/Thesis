@@ -26,6 +26,9 @@ The datasets are split across the three analysis channels as follows:
 They are removed by appropriate kinematic cuts described in [[#sec:triggers]].
 
 * Background samples
+:PROPERTIES:
+:CUSTOM_ID: sec:samples_bckg
+:END:
 When interested in a particular process, one wants to measure as many events as possible.
 This can be done by increasing the collected luminosity, but also by improving the efficiency and/or acceptance of the experiment to the /signal/ of interest.
 In the case of this thesis' analysis, we want to make sure all hypothetical \xhhbbtt{} events are recorded.
@@ -41,35 +44,105 @@ This becomes particularly noticeable when the backgrounds have cross sections se
 By far the most important reducible background in the \xhhbbtt{} analysis is multijet production,
 where gluon- or quark-initiated jets are misidentified as $\tau$ or b candidates.
 It mostly affects the \tautau{} channel, since the leptonic selections in the other two channels supress the multijet contribution.
-In what follows we also refer to this source as "QCD background".
+In what follows we also refer to this source as "\ac{QCD}" background.
 Other reducible backgrounds are the \ac{DY} production of a $\tau$ pair in association with a light quark pair, $\ttbar$ production with the decay of at least one of its W bosons to quarks, and the production of W bosons in association with light jets, where the latter are misidentified as either leptons or b jets.
 
 The irreducible backgrounds are instead those which final state particle content is identical to the signal of interest.
 The production of $\ttbar$ pairs dominates in this regard, namely when the decay is fully leptonic, as $\ttbar\to\bbbar\,\text{W}^{\pm} \text{W}^{\mp} \rightarrow  \bbbar\,\ell^{\pm} \bar{\nu_{\ell}} \tau^{\mp} \nu_{\tau}$, where $\ell$ can refer to electrons, muons or taus.
 This background affects all the considered analysis channels.
 The second most prominent irreducible background is again \ac{DY} lepton pair production, but this time with the additional jets being specifically b jets: $\text{Z}/\gamma^{*} + \bbbar \rightarrow \ell\ell + \bbbar$.
+Finally, backgrounds with a W boson plus jets are substantial for the baseline selection as described in [[#sec:selection]], but is strongly suppressed by later categorization, specifically b-jet tagger requirements.
+The categorization is discussed in [[#sec:categorization]].
+Note that the inclusive W + jets sample is used in the $0 \le \htvar < 70\,\si{\GeV}$ only for simplicity, in order to not overlap with the samples binned in $\htvar$.
+The \ac{DY}, instead, exploits the full available event multiplicity, and the \ac{MC} must therefore be appropriately weighted, as described in [[#sec:drellyan_bckg]].
 
-On top, several minor background components are taken into account:
-+ double gauge boson: WW, ZZ, WZ;
-+ triple gauge boson: WWW, WWZ, WZZ, ZZZ;
-+ single top: t-channel and s-channel, being the latter much less common;
-+ electroweak: W or Z plus jets;
-+ single Higgs boson: \ac{ggF}, \ac{VBF}, and in association with a W or Z boson;
-+ top quark pairs: $\ttbar\text{H}$, $\ttbar\text{W}$, $\ttbar\text{Z}$, $\ttbar\text{WW}$, $\ttbar\text{WZ}$, $\ttbar\text{ZZ}$.
-
-\noindent All the above should be negligible given their small cross sections, and one would naively think they can be ignored.
+On top of the major sources above, several minor backgrounds are also taken into account.
+All sources are listed in [[ref:tab:background_xsecs1,tab:background_xsecs2]], together with their generators and cross-sections.
+The number of events refers to the 2016 samples, and is meant simply to give an idea of the multiplicity of each sample.
+The order of magnitude tends to be the same for all data-taking periods.
+Most background sources, except for the ones already discussed, should be negligible given their small cross sections, and one would naively think they can be ignored.
 However, not only the total process rate matters, but also its shape.
 Some low cross section processes can peak under the \bbtt{} maximum, as is for instance the case with $\ttbar\text{H}$.
 This can be observed in the \ditau{} mass regression described in [[#sec:tautau_regression]].
+The background samples are generated based on state-of-the-art theoretical calculations at \ac{LO}, \ac{NLO} and \ac{NNLO}, and are used to optimize the event selection, to evaluate efficiencies, and to compute systematic uncertainties.
+The samples are also used to extract all sorts of \ac{SF} corrections, as detailed in [[#sec:mc_corrections]].
 
-The background samples are generated based on state-of-the-art theoretical calculations at \ac{LO} or \ac{NLO}, and are used to optimize the event selection and to evaluate the efficiency, acceptance and to compute systematic uncertainties.
-The samples are also used to extract all sorts of \ac{SF} corrections.
+#+NAME: tab:background_xsecs1
+#+CAPTION: List of background samples used in the \xhhbbtt{} analysis (part 1), together with their cross sections at \SI{13}{\TeV} and generators. The number of events is given for the 2016 data-taking period as an example, but the same sample tends to have the same order of magnitude of number of events for all periods. The \ac{DY} and W + jets samples are stitched together and rescaled to the cross section of the inclusive sample.
+#+ATTR_LATEX: :placement [!h] :center t :align lccc :environment mytablewiderrows
+|-----------------------------------------------+----------------------+-------------+---------------------------------------|
+| *Process*                                       | *MC generator*         | *# Events*    | $\pmb{\sigma\,[}\text{\textbf{pb}}\pmb{]}$ |
+|-----------------------------------------------+----------------------+-------------+---------------------------------------|
+| W + jets: inclusive                           | LO =MadGraph v2.6.5=   | \num{8.3e7} |                              59375.00 |
+| W + jets: binned in $\htvar$                  | LO =MadGraph v2.6.5=   | various     |                                    -- |
+|-----------------------------------------------+----------------------+-------------+---------------------------------------|
+| DY + jets: inclusive                          | NNLO =MadGraph v2.6.5= | \num{7.4e7} |                               6077.22 |
+| DY + jets: binned in $\pt^{\text{Z}}$         | NLO =MadGraph v2.6.5=  | various     |                                    -- |
+| DY + jets: binned in jet multiplicity         | NLO =MadGraph v2.6.5=  | various     |                                    -- |
+|-----------------------------------------------+----------------------+-------------+---------------------------------------|
+| EWK $\text{W}^{-}$ + 2 jets, $\text{W} \rightarrow \ell\nu$ | LO =MadGraph v2.6.5=   | \num{2.2e6} |                                 20.25 |
+| EWK $\text{W}^{+}$ + 2 jets, $\text{W} \rightarrow \ell\nu$ | LO =MadGraph v2.6.5=   | \num{2.0e6} |                                 25.62 |
+| EWK Z + 2 jets, $\text{Z} \rightarrow \ell\ell$              | LO =MadGraph v2.6.5=   | \num{4.5e5} |                                 3.987 |
+|-----------------------------------------------+----------------------+-------------+---------------------------------------|
+| $\ttbar$: fully-leptonic                      | NLO =Powheg 2.0=       | \num{4.4e7} |                                  84.1 |
+| $\ttbar$: semi-leptonic                       | NLO =Powheg 2.0=       | \num{1.4e8} |                                347.55 |
+| $\ttbar$: semi-hadronic                       | NLO =Powheg 2.0=       | \num{1.1e8} |                                359.44 |
+|-----------------------------------------------+----------------------+-------------+---------------------------------------|
+| single top: tW channel + antitop              | NLO =Powheg 2.0=       | \num{2.6e6} |                                 35.85 |
+| single top: tW channel + top                  | NLO =Powheg 2.0=       | \num{2.5e6} |                                 35.85 |
+| single top: t-channel + antitop               | NLO =Powheg 2.0=       | \num{2.9e7} |                                 80.95 |
+| single top: t-channel + top                   | NLO =Powheg 2.0=       | \num{5.6e7} |                                136.02 |
+| single top: s-channel + antitop               | NLO =Powheg 2.0=       | \num{5.3e6} |                                 7.104 |
+| single top: s-channel + top                   | NLO =Powheg 2.0=       | \num{5.5e6} |                                 3.549 |
+|-----------------------------------------------+----------------------+-------------+---------------------------------------|
+
+#+NAME: tab:background_xsecs2
+#+CAPTION: List of background samples used in the \xhhbbtt{} analysis (part 2), together with their cross sections at \SI{13}{\TeV} and generators. The number of events is given for the 2016 data-taking period as an example, but the same sample tends to have the same order of magnitude of number of events for all periods.
+#+ATTR_LATEX: :placement [!h] :center t :align lccc :environment mytablewiderrows
+|---------------------------------------------------------+---------------------+-------------+---------------------------------------|
+| *Process*                                                 | *MC generator*        | *# Events*    | $\pmb{\sigma\,[}\text{\textbf{pb}}\pmb{]}$ |
+|---------------------------------------------------------+---------------------+-------------+---------------------------------------|
+| ZZ                                                      | LO =Pythia8=          | \num{1.2e6} |                                16.523 |
+| WW                                                      | LO =Pythia8=          | \num{1.6e7} |                                 118.7 |
+| WZ                                                      | LO =Pythia8=          | \num{7.6e6} |                                 47.13 |
+| WWW                                                     | NLO =MadGraph v2.6.5= | \num{6.9e4} |                                 0.209 |
+| WWZ                                                     | NLO =MadGraph v2.6.5= | \num{6.7e4} |                                 0.168 |
+| WZZ                                                     | NLO =MadGraph v2.6.5= | \num{1.4e5} |                                 0.057 |
+| ZZZ                                                     | NLO =MadGraph v2.6.5= | \num{7.2e4} |                                0.0147 |
+|---------------------------------------------------------+---------------------+-------------+---------------------------------------|
+| $\ttbar\text{WH}$                                       | LO =MadGraph v2.6.5=  | \num{1.6e5} |                               0.00114 |
+| $\ttbar\text{ZH}$                                       | LO =MadGraph v2.6.5=  | \num{1.6e5} |                               0.00113 |
+| $\ttbar\text{W}$ + jets, $\text{W} \rightarrow \ell\nu$               | NLO =MadGraph v2.6.5= | \num{3.3e6} |                                0.2043 |
+| $\ttbar\text{W}$ + jets, $\text{W} \rightarrow \text{q}\text{q}$ | NLO =MadGraph v2.6.5= | \num{3.1e5} |                                0.4062 |
+| $\ttbar\text{Z}$ + jets                                 | NLO =MadGraph v2.6.5= | \num{6.1e6} |                                0.2529 |
+| $\ttbar\text{WW}$                                       | LO =MadGraph v2.6.5=  | \num{3.1e5} |                              0.006967 |
+| $\ttbar\text{ZZ}$                                       | LO =MadGraph v2.6.5=  | \num{1.5e5} |                              0.001386 |
+| $\ttbar\text{WZ}$                                       | LO =MadGraph v2.6.5=  | \num{1.6e5} |                               0.00158 |
+|---------------------------------------------------------+---------------------+-------------+---------------------------------------|
+| ZH, \hbb{}, \zll{}                                      | NLO =Powheg 2.0=      | \num{2.2e6} |                                 0.052 |
+| ZH, \hbb{}, \zqq{}                                      | NLO =Powheg 2.0=      | \num{4.6e6} |                                  0.36 |
+| ZH, \htt{}                                              | NLO =Powheg 2.0=      | \num{2.4e6} |                                0.0554 |
+| $\text{W}^{+}\text{H}$, \htt{}                          | NLO =Powheg 2.0=      | \num{2.0e6} |                               0.05268 |
+| $\text{W}^{-}\text{H}$, \htt{}                          | NLO =Powheg 2.0=      | \num{2.0e6} |                                0.0334 |
+| $\text{q}\bar{\text{q}} \rightarrow \text{H}$, \htt{}            | NLO =Powheg 2.0=      | \num{1.5e6} |                                 0.237 |
+| $g\bar{g} \rightarrow \text{H}$, \htt{}                          | NLO =Powheg 2.0=      | \num{6.4e6} |                                3.0469 |
+| $\ttbar\text{H}$ + jet, \hnotbb{}                       | LO =MadGraph v2.6.5=  | \num{4.9e6} |                               0.17996 |
+| $\ttbar\text{H}$ + jet, \hbb{}                          | LO =MadGraph v2.6.5=  | \num{5.2e6} |                                0.2953 |
+| $\ttbar\text{W}$ + jets, $\text{W} \rightarrow \ell\nu$               | LO =MadGraph v2.6.5=  | \num{3.3e6} |                                0.2161 |
+|---------------------------------------------------------+---------------------+-------------+---------------------------------------|
+| \ac{SM} \hhbbtt{}                                       | LO =MadGraph v2.6.5=  | \num{4e5}   |                                0.0031 |
+|---------------------------------------------------------+---------------------+-------------+---------------------------------------|
 
 * Signal samples
-The signal samples used to model the resonant \xhh{} processes refer to \spin{0} and \spin{2} processes, corresponding to the radion and graviton hypothesis, respectively.
-@improve@
+The signal samples used to model the resonant \xhh{} processes refer to \spin{0} and \spin{2} processes, corresponding to the radion and graviton hypotheses, respectively.
+The models used for the \ac{ggF} signal samples used in our analysis were introduced in Ref. [[cite:&xanda_benchmarks_wed]], which defines a set of common parameter benchmarks multiple analyses can agree on.
+This is crucial for comparisons and combinations across different channels.
 
 * MC reweighting
+:PROPERTIES:
+:CUSTOM_ID: sec:mc_reweighting
+:END:
+
 The reweighting and normalisation of \ac{MC} background samples is essential to model the processes accurately and to establish a sound comparison with data.
 The same is true for signal sample, except into what concerns the overall normalisation, since the cross-section of resonant processes is arbitrarily defined.
 The reweighting of \ac{MC} samples is performed as follows, depending on the sample and data-taking period:

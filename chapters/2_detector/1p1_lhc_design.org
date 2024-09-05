@@ -76,7 +76,7 @@ Some of these quantities are listed in [[tab:LHCparameters]] specifically for th
 The desired luminosity increase inevitably leads to a larger number of multiple \ac{pp} interactions per bunch crossing, a phenomenon known as /\ac{PU}/.
 The average of such number is given by:
 
-#+NAME: pileup
+#+NAME: eq:pileup
 \begin{equation}
 \langle\mu\rangle = \frac{\mathcal{L}\,\sigma_{pp}^{\text{inelastic}}}{n_bf_{\text{rev}}} \, ,
 \end{equation}

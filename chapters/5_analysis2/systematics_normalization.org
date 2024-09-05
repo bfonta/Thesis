@@ -2,11 +2,136 @@
 :CUSTOM_ID: sec:syst_norm
 :END:
 
+All systematic uncertainties should be assumed to have an impact on the shape of related distributions, and not simply on their rate.
+However, if for a specific systematic source it is verified that shape modifications are negligible when compared to the expected sensitivity of the analysis, donwgrading an uncertainty to be normalization-only has two important advantages.
+The first relates to the much lower analysis complexity involved.
+For each additional shape systematic, an extra set of variables representing the corresponding variations must be computed, processed and stored.
+This is also valid for the inference step of the final discriminant described in [[#sec:pdnn]], as long as the variables being varied serve as the input for the \ac{pDNN}: one must assess how much changes in the input affect the discriminant output, for each mass point and spin hypothesis.
+The second advantage comes from the time taken to run the binned maximum likelihood fit.
+A shape systematic is naturally more time-consuming, given that the binned distributions include more parameters than one single rate.
+
+We list below the normalization uncertainties used by our analysis to describe systematic variations.
+They affect the number of expected events associated to a given physics process.
+The specific uncertainties are often suggested by dedicated \ac{CMS} \acp{POG}, or are instead devised by the analysts themselves and then approved by the Collaboration during the many review steps the work is subject to.
+Individual procedures are ocasionally based on similar ideas covered in past \ac{CMS} \bbtt{} analysis, where some shape variations have been shown negligible.
+
 * Luminosity
-* Electrons and muon isolation and identificaton efficiencies
-* L1 prefiring
-* Pile-up reweighting uncertainty
+The uncertainty on the luminosity measurement is estimated by the \ac{CMS} Lumi \ac{POG}.
+Different sources of uncertainties on the luminosity measurement are considered and their correlations are reported in [[tab:LumiUnc]].
+These values are obtained from dedicated Van-der-Meer scans and stability of detector response during the data taking.
+These uncertainties are applied to the signals and to all the background processes estimated from \ac{MC} simulation only.
+The normalization of the \ac{QCD} background is obtained from data and hence not subject to luminosity uncertainties.
+
+#+NAME: tab:LumiUnc
+#+CAPTION: Luminosity uncertainties for all data-taking years, explicitly separating correlated and uncorrelated sources, in percentage.
+#+ATTR_LATEX: :placement [!h] :center t :align lccc :environment mytablewiderrows
+|-----------------------+------+------+------|
+| Uncertainty           | 2016 | 2017 | 2018 |
+|-----------------------+------+------+------|
+| 2016, uncorrelated    |  2.2 |   -- |   -- |
+| 2017, uncorrelated    |   -- |  2.0 |   -- |
+| 2018, uncorrelated    |   -- |   -- |  1.5 |
+|-----------------------+------+------+------|
+| 2016-2017, correlated | 0.75 | 0.65 |   -- |
+| 2017-2018, correlated |   -- | 0.42 | 0.28 |
+|-----------------------+------+------+------|
+| all years, correlated |  0.9 |  9.8 |  2.0 |
+|-----------------------+------+------+------|
+
+* Electron and muon isolation and identificaton efficiencies
+The uncertainties on electron and muon identification and isolation efficiencies are determined from the uncertainties on the \acp{SF} describing discrepancies between \ac{MC} and data.
+A value of 1% for both electrons and muons is obtained.
+
 * QCD estimation uncertainty
+The \ac{QCD} background, which is estimated from data using the ABCD method as described in [[#sec:multijet_bckg]], is potentially affected by different sources of systematic uncertainty.
+Assuming that the contribution of the \ac{QCD} background is constant in all the 4 regions, one can define three uncertainties sources:
++ *Shape uncertainty*:
+  Since the shape of the \ac{QCD} contribution can be estimated from two regions, B and C, a shape uncertainty can be obtained by comparing the shapes issued from the two choices.
++ *Uncertainty on yield correction factor*:
+  The statistical uncertainty on the correction factors B/D and C/D is a normalization uncertainty defined as the sum in quadrature of the statistical uncertainties on the event yields in the concerned regions.
+  The value of this uncertainty ranges from 5% to 100% depending on the category, channel and year considered.
++ *Additional uncertainty*:
+  The first validation procedure described in [[#sec:multijet_bckg]] uses different =DeepTau= \acp{WP} to ensure the multijet estimation does not depend on the tau isolation.
+  In the few cases where a dependency is observed, an additional uncertainty is taken into account.
+[[tab:QCDUnc]] shows the QCD normalization uncertainties for all years, channels and categories considered. For each cell, the first number is the statistical uncertainty on the yield correction factor,
+while the second (if it appears) is the additional uncertainty as defined above. The cell is empty if no QCD could be estimated (as either regions B, C or D have negative yield). 
+
+#+NAME: tab:QCDUnc
+#+CAPTION: QCD normalization uncertainties, taking into account all uncertainty sources. A cell is empty if no \ac{QCD} could be estimated due to negative B, C or D region yields.
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{cccccc}
+    \hline \\[-1em]
+    \textbf{Category} & \textbf{Channel} & \textbf{2016} & \textbf{2016 APV} & \textbf{2017} & \textbf{2018} \\ [+0.2em]\hline \\[-1em]
+
+    \multirow{3}{*}{boosted} & \tautau{} & -- & 62.0 & --   & 57.0 \\
+                             & \mutau{}  & -- & --   & --   & --   \\
+                             & \eletau{} & -- & --   & 44.6 &      \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{3}{*}{res1b}   & \tautau{} & 8.8   & 6.7 & 6.4  & 4.8  \\
+                             & \mutau{}  & 7.4   & 5.4 & 6.3  & 3.8  \\
+                             & \eletau{} & 17.2  & 9.2 & 10.9 & 11.2 \\ [+0.3em]\hline \\[-1em]
+
+    \multirow{3}{*}{res2b}   & \tautau{} & 55.5 & 35.0 & 36.2 & 25.6 \\
+                             & \mutau{}  & 24.1 & 16.1 & 16.0 & 10.0 \\
+                             & \eletau{} & --   & --   & --          \\ [+0.3em]\hline \\[-1em]
+\end{tabular}
+\end{table}
+
 * Theoretical HH cross-section
+Uncertainties on the theoretical \ac{SM} \ac{ggF} HH cross section correspond to $\pm 3\%\,(\text{PDF} + \astrong\text{)}$, $^{+2.2\%}_{-5\%}\,(\text{scale})$ and $\pm2.6\%\,(\mt)$.
+These uncertainties are included only when quoting the limit with respect to the \ac{SM} and for the likelihood scans, and not for the cross section upper limit.
+For the \ac{ggF} samples an additional normalization systematic is added to model the normalization dependence on the $\kl$ and $\kt$ parameters.
+
 * Final state branching fraction
+Two different normalization systematics are obtained by propagating the theoretical uncertainties on the Higgs decays to $\bbbar$ and $\tau\tau$, assuming $\mh=125\,\si{\GeV}$.
+We here list the values with their total uncertainties [[cite:&YellowReport4]]:
++ $\mathcal{B}(\text{H} \rightarrow \text{bb}) = 0.5824 \pm ^{1.25\%}_{-1.27\%}$,
++ $\mathcal{B}(\text{H} \rightarrow \tau\tau) = 0.06272 \pm 1.65\%$.
+These uncertainties must be included only when quoting the limit with respect to the inclusive \xhh{} process, which requires using the above \acp{BR}.
+
 * Cross-sections of simulated processes
+For $\ttbar$, W + jets, single top, single Higgs and multi-boson backgrounds, uncertainties due to the imperfect knowledge normalizations of the simulated processes are considered, with the values reported in [[tb:BackgroundTheoryUnc]].
+
+#+NAME: tb:BackgroundTheoryUnc
+#+CAPTION: Theorical uncertainties on the background production cross sections.
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{ccc}
+    \hline \\[-1em]
+    \textbf{Process} & \textbf{Uncertainty} & \textbf{Value [\%]} \\ [+0.2em]\hline \\[-1em]
+
+    \multirow{3}{*}{ZH} & QCD scale  & $+3.8$/$-3.0$ \\
+                        & PDF        & $\pm 1.3$     \\
+                        & $\astrong$ & $\pm 0.9$     \\[+0.3em]\hline \\[-1em]
+
+    \multirow{3}{*}{WH} & QCD scale  & $+0.5$/$-0.7$ \\
+                        & PDF        & $\pm 1.7$     \\
+                        & $\astrong$ & $\pm 0.9$     \\[+0.3em]\hline \\[-1em]
+
+    \multirow{3}{*}{ttH} & QCD scale  & $+5.8$/$-9.2$ \\
+                         & PDF        & $\pm 3.0$     \\
+                         & $\astrong$ & $\pm 2$       \\[+0.3em]\hline \\[-1em]
+
+    \multirow{3}{*}{ggH} & QCD scale  & $\pm 3.9$ \\
+                         & PDF        & $\pm 1.9$ \\
+                         & $\astrong$ & $\pm 2.6$ \\[+0.3em]\hline \\[-1em]
+
+    \multirow{3}{*}{qqH} & QCD scale  & $+0.4$/$-0.3$ \\
+                         & PDF        & $\pm 2.1$     \\
+                         & $\astrong$ & $\pm 0.5$     \\[+0.3em]\hline \\[-1em]
+
+    \multirow{2}{*}{$\ttbar$} & QCD scale  & $+2.4$/$-3.5$ \\
+                              & PDF        & $\pm 4.2$     \\[+0.3em]\hline \\[-1em]
+
+    single top & QCD scale  & $+4.2$/$-3.5$ \\[+0.3em]\hline \\[-1em]
+    tW         & QCD scale  & $\pm5.4$          \\[+0.3em]\hline \\[-1em]
+    W          & QCD scale  & $+0.8$/$-0.4$ \\[+0.3em]\hline \\[-1em]
+    EWK        & QCD scale  & $+2.0$          \\[+0.3em]\hline \\[-1em]
+    VV         & QCD scale  & $+10.0$         \\[+0.3em]\hline \\[-1em]
+    VVV        & QCD scale  & $+10.0$         \\[+0.3em]\hline \\[-1em]
+
+\end{tabular}
+\end{table}

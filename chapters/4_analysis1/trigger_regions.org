@@ -92,11 +92,12 @@ For \eletau{} and \mutau{}, the lepton is by definition considered lepton #1; in
 #+NAME: fig:compare_gains
 #+CAPTION: Comparison, for the three analysis channels, of the weighted number of signal events obtained after applying the ``standard'' ($\text{bigtau}=\text{False}$) and ``bigtau'' ($\text{bigtau}=\text{True}$) trigger regions. In all channels the standard region provides an improvement for intermediate masses. Equivalently, the legacy triggers are more efficient to signal than the \stau{} trigger. This unexpected result can be due to a \ac{pt} cut on the tau track, not present in the legacy triggers. The plots refer to the \spin{2} hypothesis, but the results for \spin{0} are very similar.
 #+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/etau_test_compare_gains.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
+#+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/mutau_test_compare_gains.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
+#+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/tautau_test_compare_gains.pdf]]
 #+END_figure
 

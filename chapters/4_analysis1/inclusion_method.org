@@ -19,7 +19,6 @@ Correlations might exist between triggers, so we rewrite $x_{1j}\epsilon_{1j}x_{
 (note the commutativity $\epsilon_{1j}\epsilon_{2|1j} = \epsilon_{2j}\epsilon_{1|2j}$), where $\epsilon_{i}(q_{j}) \equiv \epsilon_{ij}$ simplifies the notation.
 Using Bayes' theorem, we express the efficiency product as an \textit{intersection efficiency} $\epsilon_{1\cap2j}$, representing the fraction of events passing triggers 1 and 2, plus some reference trigger, relative to all events that pass the same reference trigger.
 The probability becomes:
-
 #+NAME: eq:example3
 \begin{align}
   P_{j} &= x_{1j}\epsilon_{1j} + x_{2j}\epsilon_{2j} + x_{3j}\epsilon_{3j} + \cdots \nonumber \\

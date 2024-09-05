@@ -162,7 +162,7 @@ The strategy depends on the performance of the \ac{HLT} algorithm which must, as
 In the future there will always be the possibility to extend the current standard trigger to some specific scouting phase-space regions if some unexpected behaviour is observed.
 
 The scouting stream was premiered in \run{1} to search for dijet resonances with jets reconstructed only from the calorimeter energy deposits.
-This was considerably extended in \run{2}, with the addition of jet, muon and electron \ac{PF} candidates to the scouting event record, closing the gap with respect to the standard \ac{CMS} data.
+This was considerably extended in \run{2}, with the addition of jet, muon and electron candidates to the scouting event record, closing the gap with respect to the standard \ac{CMS} data.
 As an example, studies of \ac{BSM} low-mass dimuon resonances were able to reach a threshold close to twice the muon mass [[cite:&dimuon_low_trigger]].
 The scouting stream in the on-going \run{3} has strongly benefitted from the inclusion of \ac{GPU} processors and related software infrastructure at \ac{HLT} level [[cite:&patatrack]].
 The data-scouting bandwidth is currently \SI{\sim 30}{\kilo\hertz}, ten times higher than the standard data stream.

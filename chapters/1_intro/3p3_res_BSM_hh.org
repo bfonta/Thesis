@@ -48,8 +48,8 @@ Instead of an extreme and unnatural fine-tuning, gravity could be concentrated i
 Furthermore, the Higgs mechanism can be added in the same way as in the \ac{SM}, confining the added doublet in [[eq:su2_doublet]] to the $\si{\TeV}$ brane.
 
 Importantly, the model predicts two new particles [[cite:&xanda_benchmarks_wed]].
-A \spin{2} resonance appears as the mediator of the gravitational force, appropriately named "graviton".
-Additionally, a new scalar is required by the size of the additional dimension, and is called "radion".
+A \spin{2} resonance appears as the mediator of the gravitational force, appropriately named "graviton", and a new scalar is required by the size of the additional dimension, being called "radion".
+Assuming the \ac{NWA}, the phenomenology of a \ac{ggF}-produced radion is identical to the phenomenology of a heavy Higgs scenario [[cite:&xanda_benchmarks_wed]], which lessens model-related dependencies.
 For certain regions of the model's phase-space, both particles can decay to a pair of Higgs bosons or pairs of W and Z bosons.
 Searches at the \ac{LHC} are thus sensitive to these two hypothetical high mass particles.
 The thesis here reported explores the resonant \hhbbtt{} decay, where the signal samples in [[#sec:samples]] indeed refer to radion- and graviton-like particles.
@@ -200,5 +200,5 @@ A good example is the 3HDM and its variations (for instance, [[cite:&3hdm_variat
 These models go however well beyond the scope of this thesis.
 
 * Biblio :noexport:
-+ introduce spin0 and spin2 models here?
++ "Para o radion eu peguei um modelo de Higgs efetivo e adaptei os acoplamentos e para o spin2 tambem esta citado la o original."
 + cite [[cite:&xanda_benchmarks_wed]]

@@ -13,3 +13,6 @@
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis2/final_limits_spin2.pdf]]
 #+END_figure
+
++ The reduction of the sensitivity around $\mx = 280\,\si{\GeV}$ is a consequence of the shape of the tt background, that peaks about this value,
++ see cadamuro

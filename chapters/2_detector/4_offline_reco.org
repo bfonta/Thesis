@@ -34,24 +34,30 @@ As an example, the energy resolution of the \ac{CMS} \ac{HCAL} is $\sim 100\%/\s
 #+END_figure
 
 * Particle-flow
-Inspired by what had been done at \ac{LEP}, specifically \ac{ALEPH} [[cite:&aleph]], and for the first time in hadron colliders, \ac{CMS} decided to adopt a different reconstruction paradigm.
-It is the enhanced energy, position and time resolution from the optimized combination of all subdetectors that defines the \ac{PF} approach [[cite:&particle_flow;&plow_milos;&pflow_matt_nguyen]].
-Some limitations are nevertheless present, and caused concern on the successful implementation of \ac{PF}, especially given the complex \ac{pp} and \ch{Pb}\ch{Pb} environments.
-The fact that the calorimeters are placed inside the magnetic field reduces the probability for a charged particle to preshower, facilitating the matching between tracks and energy deposits in the calorimeter.
-However, the existence of a significant amount of tracker material limits this approach.
-Additionally, the moderately granular \ac{HCAL} has a relatively poor energy and position resolutions.
-Nevertheless, and despite not being designed with \ac{PF} in mind, \ac{CMS} seriously benefitted from it, with very substantial improvements in calorimetric resolution and response, and in other metrics too, such as \ac{PU} mitigation, or the particle type composition in an event.
-Among the features that enabled a successfull \ac{PF} reconstruction at \ac{CMS}, we mention:
+:PROPERTIES:
+:CUSTOM_ID: sec:offline_reco_pf
+:END:
+
+Inspired by what had been done at \ac{LEP}, specifically \ac{ALEPH} [[cite:&aleph]], \ac{CMS} decided to adopt a novel reconstruction paradigm, named \ac{PF}, for the first time in hadron colliders.
+The \ac{PF} approach is characterized by an enhanced energy, position and time resolution from the optimized combination of all \ac{CMS} subdetectors [[cite:&particle_flow;&plow_milos;&pflow_matt_nguyen]].
+Despite not being designed with \ac{PF} in mind, \ac{CMS} seriously benefitted from it, with very substantial improvements in calorimetric resolution and response, in \ac{PU} mitigation, and in particle type identification.
+Among the features that enable a successfull \ac{PF} reconstruction at \ac{CMS}, we find:
 
 + a highly-segmented tracker, producing trajectories of charged particles up to $\pt\sim 1\,\si{\TeV}$, and with an efficiency of \SI{\sim 90}{\percent}, down to \SI{\sim 500}{\MeV};
 + a granular \ac{EM} calorimeter, providing a clear separation between neighbouring particles, the capability of matching calorimetric deposits with tracks, and the discrimination of different particles in jets, namely charged hadrons, neutral hadrons and photons, up to $\pt\sim\!1\,\si{\TeV}$;
 + a strong magnetic field, disentangling contributions from charged and neutral particles; the \SI{4.9}{\tesla\meter} bending power can be compared to \ac{ATLAS}, \ac{ALEPH}, or to Tevatron experiments, all with less than \SI{3}{\tesla\meter}.
 + very precise muon detectors.
 
+Some limitations are nevertheless present, and historically caused concern on the successful implementation of \ac{PF}, especially given the complex \ac{pp} and \ch{Pb}\ch{Pb} environments.
+The existence of a significant amount of tracker material in front of the calorimeters represents a limitation, inasmuch as it increases the probability for a charged particle to preshower, making the matching between tracks and energy deposits in the calorimeter harder to accomplish.
+This is the case in spite of the placement of the calorimeters inside the solenoid, which is meant to improve the matching.
+Additionally, the \ac{HCAL} is known to have a relatively poor energy and position resolutions.
+However, the holistic \ac{PF} approach was ultimately able to surmount all challenges, proving itself robust, and sitting at the basis of all \ac{CMS} reconstruction techniques.
+
 The \ac{PF} reconstruction follows the dataflow schematically shown in [[fig:pflow_diagram]].
 Its building blocks are calorimeter hits, and trajectories in the tracker and muon chambers, also known as /tracks/.
-A series of \ac{CMSSW} "producers" sequentially convert the inputs into higher-complexity objects, starting from /\ac{PF} Tracks/ and /\ac{PF} clusters/.
-Eventually, the information between all subdetectors is linked, producing /\ac{PF} blocks/ that are used to create the final /\ac{PF} candidates/.
+A series of \ac{CMSSW} "producers" sequentially convert the inputs into higher-complexity objects, starting from \ac{PF} /tracks/ and \ac{PF} /clusters/.
+Eventually, the information between all subdetectors is linked, producing \ac{PF} /blocks/ that are used to create the final \ac{PF} /candidates/.
 The latter correspond to the building blocks for all physics objects used in \ac{CMS} analyses.
 
 #+NAME: fig:pflow_diagram
@@ -61,26 +67,24 @@ The latter correspond to the building blocks for all physics objects used in \ac
 [[~/org/PhD/Thesis/figures/detector/PFlowDiagram.pdf]]
 #+END_figure
 
-\myparagraph{PF Tracks}
-
-\noindent Reconstructing charged particles consists on recreating their trajectories from individual hits, and extracting particle properties from those trajectories.
-Even though considering loose requirements on hit multiplicity and hit energy tresholds should improve the performance of any algorithm, the additional hit multiplicity also brings more misreconstruted tracks.
-The increase reaches \SI{\sim 80}{\percent} when the track $\pt$ threshold is reduced from \num{900} to \SI{300}{\MeV} and the total number of hits to make a track is decreased from 8 to 5.
+** PF Tracks
+Reconstructing charged particles consists on recreating their trajectories from individual hits, and extracting particle properties from those trajectories.
+Even though looser requirements on hit multiplicity and hit energy tresholds should improve the performance of any algorithm, the additional multiplicity also adds misreconstruted tracks.
+The increase reaches \SI{\sim 80}{\percent} when the track $\pt$ threshold is reduced from \num{900} to \SI{300}{\MeV} and the total number of hits to build a track is decreased from 8 to 5.
 Indeed, the additional hits can be randomly assigned in such a way as to produce a high momentum track, degrading the overall \ac{PF} resolution.
-In order to increase the tracking efficiency without affecting the misreconstructed track rate, an iterative tracking algorithm was devised, where a combinatorial track finder based on \acp{KF} [[cite:&tracker_kf]] is sequentially applied \num{\sim 10} times.
+In order to increase the tracking efficiency without affecting the misreconstructed track rate, an iterative tracking algorithm was devised, where a combinatorial track finder procedure based on \acp{KF} [[cite:&tracker_kf]] is sequentially applied \num{\sim 10} times.
 At every iteration a set of hits is selected based on quality criteria imposed on tracks and hits.
 Selected hits are masked and not considered in subsequent iterations.
-The progressive decrease of hit density in the event enables to loosen the applied quality criteria to lower and lower values, and thus improve the overall efficiency, without affecting track purity[fn:: By /efficiency/ we mean the number of selected items from all available items, and by /purity/ we instead mean the number of "true" items, as matched to some ground truth, with respect to all selected items.].
+The progressive decrease of hit density in the event enables to loosen the applied quality criteria to lower and lower values, and thus improve the overall efficiency, without affecting track purity[fn:: By /efficiency/ we mean the number of selected items from all available items, and by /purity/ we instead mean the number of "true" items, as defined by some ground truth, with respect to all selected items.].
 Tracks with $\pt$ as small as \SI{200}{\MeV} can be measured.
 Given the lower energy of hits after each iteration, the purity is kept stable by running more and more refined algorithms at each ensuing iteration.
 The iterations separately target tracks with low hit multiplicity, displaced tracks, nuclear interactions and their secondaries, or the core of high-$\pt$ jets.
 The last iterations specifically focus on the reconstruction of muon tracks, by exploiting hits in the muon detectors.
 
-\myparagraph{PF Clusters}
-
-\noindent The \ac{PF} clustering algorithm runs separately in most calorimeter subdetectors: barrel and endcaps for the \ac{ECAL} and \ac{HCAL}, and the two preshower layers.
-The task is particularly challenging given constant overlaps between photons, neutral and charged hadrons, and electrons with their breamsstrahlung energy deposits.
-Clustering also plays an essential role in cases where the tracker underperforms: low track efficiency or high track $\pt$.
+** PF Clusters
+The \ac{PF} clustering algorithm runs separately in most calorimeter subdetectors: barrel and endcaps for the \ac{ECAL} and \ac{HCAL}, and the two preshower layers.
+The task is particularly challenging given constant overlaps between photons, neutral and chargedk hadrons, and electrons with their breamsstrahlung energy deposits.
+Clustering also plays an essential role in cases where the tracker underperforms, which happens for low track efficiencies or high track $\pt$ values.
 The algorithm starts by defining /seeds/, which correspond to detector elements with an energy larger than its neighbours and larger than a predefined threshold.
 Topological clusters are then built, centered on the seeds, based on the physical connection of neighbouring cells with energies larger than a given S/N threshold.
 An iterative algorithm based on a Gaussian mixing model is used to reconstruct clusters within the topological clusters.
@@ -101,25 +105,24 @@ Both calibrations are done as a function of cluster energy and \ac{eta}.
 The \ac{HAD} calibration is also done separately for \ac{HAD} showers leaving energy in both calorimeters or in the \ac{HAD} section alone.
 
 # HAD Calibration
-\ac{HAD} showers are in general much more complex than \ac{EM} showers.
-Additionally, \ac{HAD} showers include \ac{EM} and non-\ac{EM} components.
+\ac{HAD} showers are in general much more complex than \ac{EM} showers, due to the involvement of the strong interaction.
+Neutral hadrons, often neutrons, can only interact via nuclear reactions, while charged hadrons can also ionize the atoms of the medium being traversed.
+These showers include both \ac{EM} and non-\ac{EM} components.
 It is known that the \ac{EM} component represents around one third of the shower energy, at low energies.
 However, the \ac{EM} fraction increases very significantly with energy, mainly due to additional $\pi^{0}$ mesons decaying to $\gamma\gamma$.
-This implies that the \ac{HAD} detector response is intrinsically non-linear, contrary to what happens for \ac{EM} showers.
-Moreover, hadronic showers also interact via the strong force.
-An immediate consequence is the existence of a fraction of dissipated energy which is fundamentally undetectable, the so-called /invisible energy/.
-Indeed, nuclear interactions can ionize or excite the calorimeter's atoms or molecules, breaking their nuclear binding energy.
-This energy is lost for calorimetric purposes.
-The effect is not negligible: $30\text{-}40\%$ of the non-\ac{EM} energy of hadronic showers is lost via these undetected processes.
+The observed change implies that the \ac{HAD} detector response is intrinsically non-linear, contrary to what happens for \ac{EM} showers.
+Moreover, an immediate consequence of the introduction of the strong force is the existence of a fraction of dissipated energy which is fundamentally undetectable, the so-called /invisible energy/.
+Indeed, high energy hadrons can break apart the calorimeter's nuclei via nuclear interactions, and the binding energy connecting those nuclei is lost for calorimetric purposes.
+The effect is not negligible: \num{30} to \SI{40}{\percent} of the non-\ac{EM} energy of hadronic showers is lost via these undetected processes.
 Would the invisible energy fraction be the same for every event and no resolution degradation would be expected.
 Unfortunately, \ac{HAD} showers are prone to very large event-to-event fluctuations, caused by the large variety of strong interactions that can occur during the shower's development.
 Because of these fluctuations, the energy resolution of hadron calorimeters is usually significantly worse than the \ac{EM} energy resolution [[cite:&wigmans]].
-These two facts, invisible energy and non-linearity, lead to stark differences between \ac{EM} and \ac{HAD} responses, and justify the existence of separate calibration steps.
+These two facts, invisible energy and non-linearity, lead to stark differences between \ac{EM} and \ac{HAD} responses.
+Whenever this happens, as is the case for \ac{CMS}, calorimeters are said not be /non-compensating/, which justifies the existence of separate calibration steps.
 On top, barrel and endcap regions are calibrated separately to deal with different cell sizes and thresholds.
 
-\myparagraph{PF Linking}
-
-\noindent A linking algorithm proceeds to connect \ac{PF} elements coming from different subdetectors into /\ac{PF} blocks/, using only its $(\eta,\phi)$ nearest neighbours to reduce time complexity.
+** PF Linking
+A linking algorithm proceeds to connect \ac{PF} elements coming from different subdetectors into /\ac{PF} blocks/, using only its $(\eta,\phi)$ nearest neighbours to reduce time complexity.
 Once a link is found, depending on selection criteria associated to the particles being linked, a distance or quality metric is associated to it.
 Links are established in a detector- and particle-dependent way.
 In total, five types exist, linking the individual \ac{PF} tracks and \ac{PF} clusters, based on proximity conditions:
@@ -129,9 +132,8 @@ In total, five types exist, linking the individual \ac{PF} tracks and \ac{PF} cl
 /iv/) link tracks to other tracks sharing a common seconday vertex, and
 /v/) link tracks with muon detector information, forming global muons and tracker muons.
 
-\myparagraph{Identification and reconstruction}
-
-\noindent Once \ac{PF} blocks are formed, the identification and reconstruction sequence follows a fixed order:
+** Identification and reconstruction
+Once \ac{PF} blocks are formed, the identification and reconstruction sequence follows a fixed order:
 1. muon candidates are identified and reconstructed, and their \ac{PF} tracks and \ac{PF} clusters are removed from the block;
 2. electrons, including the collection of all bremsstrahlung photons, plus energetic and isolated photons are also identified, and all corresponding \ac{PF} elements are masked;
 3. remaining tracks with a large uncertainty are masked, decreasing the track misreconstruction rate, but increasing the inefficiency for some high-$\pt$ charged hadrons, which are anyways more precisely measured in the calorimeters;
@@ -166,7 +168,7 @@ We can mention variables such as the track fit $\chi^{2}$, the number of hits pe
 Firstly, isolated global muons are identified using criteria based on the inner tracks and calorimetric deposits within a certain distance from the muon direction.
 Concerning muons inside jets, tighter criteria are required, since \ac{PF} tends to create spurious neutral particles whenever charged hadrons are identified as muons.
 On the reverse side, when muons are identified as charged hadrons, neutral particles will have their energy "eaten out" by the algorithm.
-Finally, nonisolated global muons are selected using criteria which aim at suppressing muons from in-flight decays and hadronic longitudinal leaks.
+Finally, non-isolated global muons are selected using criteria which aim at suppressing muons from in-flight decays and hadronic longitudinal leaks.
 The full selection details is rather complex and detailed, and is fully explained in [[cite:&performance_muon_cms]].
 At the level of the analyses, the criteria above are encoded in so-called \acp{WP}, to be discussed in [[#sec:selection]].
 We note that the muon reconstruction and identification steps can be revisited whenever significant mismatches are found for charged hadrons between their measured tracker momenta and calorimetric energies.
@@ -217,18 +219,73 @@ The improvement in the association of converted bremsstrahlung photons to their 
 #+END_figure
 
 * Hadrons
-The particles left to be identified after muons, electrons and isolated photons have been removed are the neutral and charged hadrons, nonisolated photons from hadronic decays (most notably $\pi^{0}\text{s}$), and occasional muons from early decay of charged hadrons [[cite:&particle_flow]].
+The particles left to be identified after muons, electrons and isolated photons have been removed are the neutral and charged hadrons, non-isolated photons from hadronic decays (most notably $\pi^{0}\text{s}$), and occasional muons from early decays of charged hadrons [[cite:&particle_flow]].
 Photons and neutral hadrons are built from calorimetric clusters not linked to any track.
 Precedence is given to photons, given their significant energy fraction in hadronic jets and hadronically decaying $\tau\text{s}$.
 Outside the tracker acceptance ($|\eta|>2.5$), neutral and charged hadrons are undistinguishable, and the above precedence is not longer justifiable.
-In those regions, the presence of \ac{HCAL} clusters serves as discriminative factor between photons and all kinds of hadrons, which both have \ac{ECAL} deposits.
-Remaining \ac{HCAL} clusters are linked to potentially remaining tracks, which are in turn linked to potentially remaining \ac{ECAL} clusters, to form single charged hadrons.
-After calibration, in case the track momenta does not match the calorimetric energy, the difference is interpreted as the presence of an additional photon and potentially a neutral hadron, based on energy and resolution considerations.
-If no mismatch is present, then no additional neutral particle is identified, and the charged hadron momentum is improved by performing a $\chi^{2}$ fit to the associated tracks and clusters.
-The fit is particularly significant for situations with low resolution tracks, usually at high energies or large \ac{eta} values, and ensures a gradual shift between tracker-dominated low energy and cluster-dominated high energy measurements.
-Additional muons can be searched for in the rare cases where the calibrated cluster energy is much smaller than the track momenta sum.
-The description in this section serves as basis for the more complex algorithms reconstructing hadronic tau decays, which are briefly described in [[#sec:physics_objects]], and are essential for the \xhhbbtt{} analysis.
+In those regions, the presence of \ac{HCAL} clusters serves as a discriminative factor between photons and all kinds of hadrons, both being associated to \ac{ECAL} deposits.
+Remaining \ac{HCAL} clusters are linked to remaining tracks, which are in turn linked to remaining \ac{ECAL} clusters, forming single charged hadrons.
+After the calibration, whenever the track momenta does not match the calorimetric energies, the difference is interpreted as the presence of an additional photon and eventually a neutral hadron, based on energy and resolution considerations.
+If no mismatch is found, no additional neutral particle is identified, and the estimate for the charged hadron momenta is improved by performing a $\chi^{2}$ fit to the associated tracks and clusters.
+The fit is particularly helpful for situations with low resolution tracks, usually at high energies or large \ac{eta} values, and ensures a gradual shift between tracker-dominated low energy and cluster-dominated high energy measurements.
+Additional muons are searched for if the calibrated cluster energy is much smaller than the track momenta sum, but this rarely happens.
+The description in this section serves as the basis for the complex algorithms that reconstruct hadronic tau decays, and which are briefly described in [[#sec:physics_objects]], proving essential for the \xhhbbtt{} analysis.
 
+* Taus
+:PROPERTIES:
+:CUSTOM_ID: sec:offline_reco_taus
+:END:
+
+The tau lepton, despite theoretically similar to the two other leptons, has fundamentally different properties.
+For one, and contrary to the electron, which is stable, and to the muon, which can travel large distances before decaying, the very short $(290.3\pm0.5)\times10^{-15}\,\si{\second}$ tau lifetime [[cite:&PDG]] implies that it cannot currently be observed directly, as a $\tau$ lepton will travel on average just a few millimiters before decaying.
+Secondly, its mass makes it the only hadronically-decaying lepton.
+In fact, it does so approximately 2/3 of the time, while the remaining decays proceed leptonically, to electrons or muons.
+The decay modes of the $\tau$ are listed in [[tab:tau_decays]], and can be categorized in terms of the number of charged particles, or /prongs/, the final state includes.
+Due to charge conservation, \taus{} can only decay to an odd number of prongs, and usually decays with five or more prongs are neglected due to their extremely low \acp{BR}.
+The decay itself can happen via a meson resonance, or directly to the hadrons, which consist of pions on \SI{\sim 98}{\percent} of occurrences, with the rest being kaons [[cite:&PDG]].
+
+#+NAME: tab:tau_decays
+#+CAPTION: $\tau$ lepton branching fractions, where $\text{h}^{\pm/\mp}$ symbolizes any charged hadron [[cite:&PDG]].
+#+ATTR_LATEX: :placement [!h] :center t :align lcc :environment mytablewiderrows
+| Decay mode                                         | Meson resonance             | $\mathcal{B}$ [%] |
+|----------------------------------------------------+-----------------------------+-------------------|
+| $e\nu_{e}\nu_{\tau}$                                      |                             |              17.8 |
+| $\mu\nu_{\mu}\nu_{\tau}$                                      |                             |              17.4 |
+| *all leptonic decays*                                |                             |              35.2 |
+|----------------------------------------------------+-----------------------------+-------------------|
+| $\text{h}^{\pm}\nu_{\tau}$                                |                             |              11.5 |
+| $\text{h}^{\pm}\pi^{0}\nu_{\tau}$                           | $\rho(770)$                    |              26.0 |
+| $\text{h}^{\pm}\pi^{0}\pi^{0}\nu_{\tau}$                      | $\text{a}_{\text{1}}(1260)$ |               9.5 |
+| $\text{h}^{\pm}\text{h}^{\mp}\text{h}^{\pm}\nu_{\tau}$      | $\text{a}_{\text{1}}(1260)$ |               9.8 |
+| $\text{h}^{\pm}\text{h}^{\mp}\text{h}^{\pm}\pi^{0}\nu_{\tau}$ |                             |               4.8 |
+| other hadronic decays                              |                             |               3.2 |
+| *all hadronic decays*                                |                             |              64.8 |
+
+In general, the hadronic decays can be differentiated from quark or gluon jets by the isolation of the decay products, their collimation and their multiplicity [[cite:&particle_flow]].
+Tau leptons can also be mimicked as electrons and muons by decays with one charged track, and by decays with one prong plus a few photons, which can interpreted as an electron plus its bremstrahlung radiation.
+The individual particles reconstructed by \ac{PF} are fed into the \ac{CMS}-specific \ac{HPS} algorithm [[cite:&HPS1;&HPS2;&HPS3]], which is responsible for hadronic $\tau$ reconstruction.
+The task is rather complex, since a plethora of decay particles exists.
+Neutral hadrons, on one hand, decay to photons ($\pi^{0}\rightarrow\gamma\gamma$) which quickly convert to electron-positron pairs in the material of the tracker.
+Charged hadrons, instead, amount to kaons and pions, and can be produced with different multiplicities.
+The algorithm starts by reconstructing neutral hadrons, which consists of collecting energy deposits in /strips/, \ie{} dynamically-sized regions along (\ac{eta}, \ac{phi}) which are created by the magnetic bending of electrons and positrons.
+The momenta of the strips amounts to the vectorial sum of all its components.
+Next, charged hadrons satisfying $\pt>0.5\,\si{\GeV}$ and coming from the \ac{PV} are reconstructed.
+They can fit into multiple topologies, as shown in [[tab:tau_decays]], and when appropriate, the combination of charged hadrons with strips is required to be compatible with the masses of the $\rho$ or $a_{1}$ resonances.
+Candidates with particles outside the so-called /signal cone/ are also rejected, where the cone is defined as $3\,\si{\GeV}/\pt(\tau_{\text{h}})$, capturing the dependence with the system's boost.
+The cone size is bounded between 0.1 at low \ac{pt} and 0.05 at high \ac{pt}.
+An /isolation cone/ with a process-dependent radius of 0.3 or 0.5 is also defined, in order to reduce the misidentification probability of \tauhs{} as jets.
+A series of \ac{BDT} classifiers is also exploited for further discrimination.
+Finally, in case multiple \tauh{} candidates satisfy the requirements, only the one with the highest \ac{pt} is kept, such that only one candidate is defined per jet.
+
+The perfomances of \ac{HPS} during \run{2} are very dependent on the process and on the kinematics, and are presented in detail in Ref. [[cite:&HPS1]].
+One is generally concerned with the misidentification probabilities of jets, electrons and muons, and with the identification efficiencies of hadronically-decaying \taus{}.
+In a nutshell, the misidentification probabilities for leptons are extremely small, often at subpercent level given appropriate \ac{WP} choices.
+Jet misidentification tends to be a bit higher, but still usually below 1%, and never above 2%.
+Concerning efficiencies, they are \ac{WP}-dependent too, lying always above 90% for \ac{DY} events and above 86% for $\ttbar{}$ events.
+Finally, the \ac{HPS} algorithm can recover events with two prongs, where one extra track was "lost".
+This happens for 19% of the 3-prong decays and for 13% of the 3-prong+$\pi^{0}$ decays.
+We finalize by noting that 2-prong recovered events are not considered in the analysis, since for most analyses the background increase brought by the extra events outweighs the increase in efficiency.
+We thus follow the general \ac{CMS} recommendations, and consider only 1-prong and 3-prong events, with or without an additional neutral pion.
 * Jets
 :PROPERTIES:
 :CUSTOM_ID: sec:offline_jet_object
@@ -269,23 +326,27 @@ A detailed description of such criteria is discussed in [[#sec:physics_objects]]
 Required corrections such as jet energy scales and resolutions are also covered there.
 
 * Missing transverse energy
- Due to the extremely low cross-sections involved, neutrinos are not detected by the \ac{CMS} experiment, or, for that matter, by any \ac{LHC} experiment.
- In an event, the presence of a transverse momentum imbalance, which could be naively seen as the violation of momentum conservation, can therefore be attributed to neutrinos, neglecting other effects arising to due imperfect efficiencies and acceptances for other objects.
- Another source for the imbalance might instead be brought by hypothetical \ac{BSM} particles which interact very weakly with the detector.
- These effects lead to /missing transverse momentum/, or MET, which is defined as the negative vector sum of all $N$ reconstructed particles:
+:PROPERTIES:
+:CUSTOM_ID: sec:offline_reco_met
+:END:
 
- #+NAME: eq:met
- \begin{equation}
- \ptmiss = - \sum_{i=0}^{N}\vec{p}_{\text{T,i}}^{\hspace{1mm}} \, ,
- \end{equation}
+Due to the extremely low cross-sections involved, neutrinos are not detected by the \ac{CMS} experiment, or, for that matter, by any \ac{LHC} experiment.
+In an event, the presence of a transverse momentum imbalance, which could be naively seen as the violation of momentum conservation, can therefore be attributed to neutrinos, neglecting other effects arising to due imperfect efficiencies and acceptances for other objects.
+Another source for the imbalance might instead be brought by hypothetical \ac{BSM} particles which interact very weakly with the detector.
+These effects lead to /missing transverse momentum/, or MET, which is defined as the negative vector sum of all $N$ reconstructed particles:
 
- \noindent which are the visible particles interacting via the electromagnetic and strong forces in the final state of collisions.
+#+NAME: eq:met
+\begin{equation}
+\ptmiss = - \sum_{i=0}^{N}\vec{p}_{\text{T,i}}^{\hspace{1mm}} \, ,
+\end{equation}
 
- Despite the optimized combination of \ac{PF} tracks and clusters described previously, the probability of particle misreconstruction and misidentification is not zero, albeit small.
- In some rare cases, an artificially large $\ptmiss$ is reconstructed in the event, most often caused by a misidentified or misreconstructed high-$\pt$ muon.
- These usually correspond to genuine cosmic muons that traverse \ac{CMS} in coincidence with the \ac{LHC} bunch crossing, and are identified by comparing their trajectories with the beam axis.
- Other reasons include a completely wrong muon momentum, due to wrong inner track association, a decay in flight, significant synchrotron radiation, or interactions in the steel yoke.
- For all the above, a dedicated event post-processing is employed in the \ac{PF} approach. 
+\noindent which are the visible particles interacting via the electromagnetic and strong forces in the final state of collisions.
 
- We finalize this section by noting that the measured MET is systematically different from the true MET.
- Applied corrections are described in the analysis chapters, namely in [[#sec:physics_objects]].
+Despite the optimized combination of \ac{PF} tracks and clusters described previously, the probability of particle misreconstruction and misidentification is not zero, albeit small.
+In some rare cases, an artificially large $\ptmiss$ is reconstructed in the event, most often caused by a misidentified or misreconstructed high-$\pt$ muon.
+These usually correspond to genuine cosmic muons that traverse \ac{CMS} in coincidence with the \ac{LHC} bunch crossing, and are identified by comparing their trajectories with the beam axis.
+Other reasons include a completely wrong muon momentum, due to wrong inner track association, a decay in flight, significant synchrotron radiation, or interactions in the steel yoke.
+For all the above, a dedicated event post-processing is employed in the \ac{PF} approach. 
+
+We finalize this section by noting that the measured MET is systematically different from the true MET.
+Applied corrections are described in the analysis chapters, namely in [[#sec:physics_objects]].

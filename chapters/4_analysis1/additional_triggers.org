@@ -31,7 +31,7 @@ Whenever data and MC trigger efficiencies exhibit differences, \acp{SF} are appl
 This is described in [[#sec:mc_corrections]].
 
 #+NAME: tab:trigger_met_stau
-#+CAPTION: Trigger paths used in the \mumu{} channel for the three years of data-taking and the corresponding integrated luminosity recorded with each. Within each year, the logical =OR= of all the paths is always intended. The paths requiring one \tauh{} have changed during the 2018 data-taking after the implementation of the \ac{HPS} algorithm. The Isolation (Iso) criteria reported in the table are explained in the text.
+#+CAPTION: Trigger paths used in the \eletau{}, \mutau{} and \tautau{} channels for the three years of data-taking and the corresponding integrated luminosity. Within each year, the \logicor{} of all the paths is always intended. The paths requiring one \tauh{} have changed during the 2018 data-taking after the implementation of the \ac{HPS} algorithm. The Isolation (Iso) criteria reported in the table are explained in the text.
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{10pt}

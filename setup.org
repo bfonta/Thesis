@@ -17,11 +17,10 @@
 #+LATEX_HEADER: \usepackage{multirow}
 #+LATEX_HEADER: \setlength{\columnseprule}{0pt}
 #+LATEX_HEADER: \setlength\columnsep{10pt}
-#+LATEX_HEADER: \usepackage[french]{babel}
 #+LATEX_HEADER: \label{form}
 
-# ##### font type
-#+LATEX_HEADER: \usepackage{tgheros}
+# #+LATEX_HEADER: \usepackage{lineno}
+# #+LATEX_HEADER: \linenumbers
 
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{margin=1in}
@@ -30,13 +29,13 @@
 #+LATEX_HEADER: \newcommand{\PhDTitle}{Titre de la thèse (sur plusieurs lignes si nécessaire, 4 voire 5)}
 #+LATEX_HEADER: \newcommand{\PhDname}{Bruno Afonso Fontana Santos Alves}
 #+LATEX_HEADER: \newcommand{\NNT}{20XXIPPAXXXX}
-#+LATEX_HEADER: \newcommand{\ecodoctitle}{Dénomination}
-#+LATEX_HEADER: \newcommand{\ecodocacro}{Sigle}
-#+LATEX_HEADER: \newcommand{\ecodocnum}{000}
-#+LATEX_HEADER: \newcommand{\PhDspeciality}{voir spécialités par l'ED}
-#+LATEX_HEADER: \newcommand{\PhDworkingplace}{Nom de l'établissement}
-#+LATEX_HEADER: \newcommand{\defenseplace}{Ville de soutenance}
-#+LATEX_HEADER: \newcommand{\defensedate}{Date}
+#+LATEX_HEADER: \newcommand{\ecodoctitle}{Institut Polytechnique de Paris}
+#+LATEX_HEADER: \newcommand{\ecodocacro}{ED IP Paris}
+#+LATEX_HEADER: \newcommand{\ecodocnum}{626}
+#+LATEX_HEADER: \newcommand{\PhDspeciality}{Physique des particules}
+#+LATEX_HEADER: \newcommand{\PhDworkingplace}{École polytechnique}
+#+LATEX_HEADER: \newcommand{\defenseplace}{Palaiseau}
+#+LATEX_HEADER: \newcommand{\defensedate}{12 novembre 2024}
 
 #+LATEX_HEADER: \newcommand{\logoEt}{etab}
 #+LATEX_HEADER: \newcommand{\vpos}{0.1}
@@ -46,44 +45,39 @@
 #+LATEX_HEADER: \newcommand{\hpostt}{6.1}
 
 # Membre n°1 (Président) / Member n°1 (President)
-#+LATEX_HEADER: \newcommand{\jurynameA}{Prénom Nom}
-#+LATEX_HEADER: \newcommand{\juryadressA}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\jurynameA}{Luca Malgeri}
+#+LATEX_HEADER: \newcommand{\juryadressA}{XXXXXX, CERN (Genève)}
 #+LATEX_HEADER: \newcommand{\juryroleA}{Président}
 
 # Membre n°2 (Rapporteur) / Member n°2 (Reviewer)
-#+LATEX_HEADER: \newcommand{\jurynameB}{Prénom Nom}
-#+LATEX_HEADER: \newcommand{\juryadressB}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\jurynameB}{Aleandro Nisati}
+#+LATEX_HEADER: \newcommand{\juryadressB}{XXXXXX, INFN (Roma)}
 #+LATEX_HEADER: \newcommand{\juryroleB}{Rapporteur}
 
 # Membre n°3 (Rapporteur) / Member n°3 (Reviewer)
-#+LATEX_HEADER: \newcommand{\jurynameC}{Prénom Nom}
-#+LATEX_HEADER: \newcommand{\juryadressC}{Statut, Établissement (Unité de recherche)}
-#+LATEX_HEADER: \newcommand{\juryroleC}{Rapporteur}
+#+LATEX_HEADER: \newcommand{\jurynameC}{Rebeca Gonzalez Suarez}
+#+LATEX_HEADER: \newcommand{\juryadressC}{XXXXXX, XXXXXX}
+#+LATEX_HEADER: \newcommand{\juryroleC}{Rapporteure}
 
 # Membre n°4 (Examinateur) / Member n°4 (Examiner)
-#+LATEX_HEADER: \newcommand{\jurynameD}{Prénom Nom}
-#+LATEX_HEADER: \newcommand{\juryadressD}{Statut, Établissement (Unité de recherche)}
+#+LATEX_HEADER: \newcommand{\jurynameD}{Giovanni Marchiori}
+#+LATEX_HEADER: \newcommand{\juryadressD}{Chargé de recherche, APC (Paris)}
 #+LATEX_HEADER: \newcommand{\juryroleD}{Examinateur}
 
 # Membre n°5 (Directeur de thèse) / Member n°5 (Thesis supervisor)
-#+LATEX_HEADER: \newcommand{\jurynameE}{Prénom Nom}
-#+LATEX_HEADER: \newcommand{\juryadressE}{Statut, Établissement (Unité de recherche)}
-#+LATEX_HEADER: \newcommand{\juryroleE}{Directeur de thèse}
+#+LATEX_HEADER: \newcommand{\jurynameE}{Ilaria Brivio}
+#+LATEX_HEADER: \newcommand{\juryadressE}{XXXXXX, INFN (Bologne)}
+#+LATEX_HEADER: \newcommand{\juryroleE}{Examinatrice}
 
-# Membre n°6 (Co-directeur de thèse) / Member n°6 (Thesis co-supervisor)
-#+LATEX_HEADER: \newcommand{\jurynameF}{Prénom Nom}
-#+LATEX_HEADER: \newcommand{\juryadressF}{Statut, Établissement (Unité de recherche)}
-#+LATEX_HEADER: \newcommand{\juryroleF}{Co-directeur de thèse}
+# Membre n°6 (Directeur de thèse) / Member n°6 (Thesis supervisor)
+#+LATEX_HEADER: \newcommand{\jurynameF}{Andrew Gilbert}
+#+LATEX_HEADER: \newcommand{\juryadressF}{Professeur, LLR (Palaiseau)}
+#+LATEX_HEADER: \newcommand{\juryroleF}{Examinateur}
 
-# Membre n°7 (Invité) / Member n°7 (Guest)
-#+LATEX_HEADER: \newcommand{\jurynameG}{Prénom Nom}
-#+LATEX_HEADER: \newcommand{\juryadressG}{Statut, Établissement (Unité de recherche)}
-#+LATEX_HEADER: \newcommand{\juryroleG}{Invité}
-
-# Membre n°8 (Invité) / Member n°8 (Guest)
-#+LATEX_HEADER: \newcommand{\jurynameH}{Prénom Nom}
-#+LATEX_HEADER: \newcommand{\juryadressH}{Statut, Établissement (Unité de recherche)}
-#+LATEX_HEADER: \newcommand{\juryroleH}{Invité}
+# Membre n°7 (Directeur de thèse) / Member n°7 (Thesis supervisor)
+#+LATEX_HEADER: \newcommand{\jurynameG}{Roberto Salerno}
+#+LATEX_HEADER: \newcommand{\juryadressG}{Directeur de recherche, LLR (Palaiseau)}
+#+LATEX_HEADER: \newcommand{\juryroleG}{Directeur de thèse}
 
 #+LATEX_HEADER: \label{layout}
 
@@ -129,6 +123,3 @@
 #+LATEX_HEADER: \DeclareSIUnit \nequiv {n_{eq}/cm^2}
 #+LATEX_HEADER: \DeclareSIUnit \inch {''}
 #+LATEX_HEADER: \sisetup{range-phrase = \text{--}}
-
-# #+LATEX_HEADER: \usepackage{lineno}
-# #+LATEX_HEADER: \linenumbers

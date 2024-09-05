@@ -2,37 +2,382 @@
 :CUSTOM_ID: sec:mc_corrections
 :END:
 
+Despite the occasional existence of alternative data-driven techniques, physics analyses usually rely on \ac{MC} simulations for most of its steps.
+From studying the selection efficiency of various thresholds, to training discriminants and perform the final maximum likelihood fits for signal  extraction, \ac{MC} samples are absolutely crucial.
+However, they do not always perfectly match the observed data.
+To avoid introducing biases in the final result, discrepancies between data and \ac{MC} should be understood, and ultimately corrected.
+The correction is done with the application of \acp{SF}, commonly defined as the ratio between data and \ac{MC}.
+In this section, we detail all \ac{MC} corrections applied in our analysis, including its reasons and methods.
+Often, but now always, \acp{SF} are centrally provided by the \ac{CMS} Collaboration, so that multiple analyses can benefit form them.
+
 * Pileup reweighting
-During the \ac{LHC} \run{2} there were an average of 27, 38 and 37 \ac{pp} interactions per bunch crossing, for 2016, 2017 and 2018, respectively, as one can see in [[fig:lhc_lumi_results1]].
-A deterministic annealing algorithm [[cite:&annealing_algo]] is used in order to fit the \ac{PV}, obtain the total number of vertices and define an assignment of clustered tracks to different collisions, effectively identifying all interaction vertices.
+In the following, we start by providing a brief description of how the primary and \ac{PU} vertices are determined within \ac{CMS}.
+A deterministic annealing algorithm [[cite:&annealing_algo]] is used to fit the \ac{PV}, obtain the total number of vertices and define an assignment of clustered tracks to different collisions, effectively identifying all interaction vertices.
 In a first step, tracks passing certain quality criteria are clustered mostly based on the their $z$ coordinate of closest approach to the beamline.
 The algorithm does not directly minimize the $\chi^{2}$ of the $z$ positions of vertices and tracks, but tries instead to find the most likely distribution of track-vertex assignments for a specific value of $\chi^{2}$, and then minimizes that distribution while keeping the system in a state of maximal probability.
 When compared to statistical mechanics, the annealing procedure is fully equivalent to gradual cooling, hence its name.
-In the second step, the clustered tracks are fitted three-dimensionally using the entirety of the available track information.
+In a second step, the clustered tracks are fitted three-dimensionally using the entirety of the available track information.
 The vertices are sorted according to the sum of $\pt^{2}$ of their associated tracks, and the vertex with the highest value is selected as the \ac{PV}.
 The other vertices in the event are assumed to have been originated from \ac{PU} collisions.
+During the \ac{LHC} \run{2} there were an average of 27, 38 and 37 \ac{pp} interactions per bunch crossing, for 2016, 2017 and 2018, respectively, as one can see in [[fig:lhc_lumi_results1]].
 
-The distribution of the number of interaction vertices in the \ac{MC} events do not exactly matches the one in data.
-To achieve a better match between data and simulations, a standard reweighting procedure as centrally recommended by the \ac{CMS} Collaboration for \run{2} is applied to \ac{MC} events.
-The provided \ac{PU} weights use a nominal \ac{MB}, inelastic \ac{pp} cross-section equal to \SI{69.2}{\milli\barn}, which is used as an input to produce the pileup histogram used for the reweighting.
+The distribution of the number of interaction vertices in \ac{MC} events does not exactly matches the one in data.
+To achieve a better match, a standard reweighting procedure is applied to \ac{MC} events, as centrally recommended by the \ac{CMS} Collaboration for \run{2}.
+The provided \ac{PU} weights use a nominal Minimum Bias, inelastic \ac{pp} cross-section equal to \SI{69.2}{\milli\barn}, which is used as an input to produce the pileup histogram used for reweighting.
 The cross section includes a 4.6% uncertainty, which must be taken into account when computing systematic uncertainties.
 This is discussed in [[#sec:syst_pu]].
 
+
 * Pileup jet identification
+Since all jets with $\pt<50\,\si{\GeV}$ not passing the =Loose= \ac{WP} of the \ac{PU} jet discriminator are rejected, a set of \acp{SF} is applied as recommended centrally by \ac{CMS}.
+
 * Jet energy smearing
-* Legacy trigger scale factors
+The jet smearing procedure is discussed in [[#sec:jets]].
+Add more...
+
+* Level-1 trigger prefiring
+The time measurement of \ac{ECAL} was observed to shift in 2016 and 2017, causing the wrong \ac{BX} to fire the trigger.
+The effect was not propagated to \ac{L1} \acp{TP}, leading to a significant loss of events.
+Indeed, \acp{TP} with large \ac{eta} values were mistakenly associated to the previous \ac{BX}, and because at \ac{L1} two consecutive bunch crossings are not allowed to fire, the correct \ac{BX} can be vetoed if enough \ac{ECAL} energy is found in an adjacent \ac{BX}, removing the event.
+Even if the event is kept, \acp{TP} in the \ac{BX} following the prefired one are ignored.
+The effect strongly depends on \ac{pt} and \ac{eta}, reaching values larger than 50% for high \ac{pt} jets, in a $2.75<|\eta|<3$ window.
+
+A similar effect is also present in the Muon Chambers, where the \ac{BX} assignment of the muon candidates can be wrong due to the limited time resolution of the muon detectors.
+This effect is most pronounced in 2016, but it is also non-zero for both 2017 and 2018, being taken into account in all years.
+The associated prefiring rate is stable for $\pt>25\,\si{\GeV}$, but affects the almost entirety of the available $\eta$ range.
+The magnitude of the rate varies between 0% and a 3%.
+We note that \ac{UL} samples are the first set of \ac{CMS} \run{2} samples for which this effect is taken into account.
+
+The prefiring shifts are not described by the simulations. 
+\Ac{MC} simulations are thus corrected via a reweighting procedure.
+The final MC event weight $w$ is obtained as the product of the non-prefiring probability $P$ for all affected objects, measured using efficiencies $\varepsilon$ computed with unprefirable events:
+
+#+NAME: prefiring_weight
+\begin{equation}
+w = 1 - P(\text{prefiring}) = \prod_{i=\text{photons, jets, muons}}\left(1 - \varepsilon_{i}^{\text{pref}}(\eta,\pt)\right).
+\end{equation}
+
+\noindent As an example, if in a particular bin 5% of the events prefired, \ac{MC} events in that bin will be scaled down by a factor of $1 - 0.05 = 0.95$.
+Less events will thus be considered, as expected.
+ 
+* Lepton trigger scale factors
+:PROPERTIES:
+:CUSTOM_ID: sec:lepton_trigger_sfs
+:END:
+
+Whenever an event belongs to a phase-space region where more than one trigger is active, the computation of the corresponding trigger efficiency
+must take into account the \logicor{} between the triggers that could have fired.
+The efficiency for events firing more than one trigger would otherwise be incorrect, since those events would be taken into account multiple times; twice for two triggers, thrice for three, and so on.
+This idea was already discussed in [[#sec:inclusion_method]], and the probability that at least one out of all considered triggers fires is given by [[eq:prob_or]].
+
+In our analysis, the \mutau{} and \eletau{} final states include both a single-lepton and a cross-lepton trigger, where the latter is composed of two trigger /legs/.
+By leg we mean an element of a \ac{HLT} path requiring specific selections on a physics object.
+Legs within a full path follow a \logicand{} approach: the \ac{HLT} path fires only if all independent legs fired.
+The \ac{HLT} trigger paths used for \xhhbbtt{} have been presented in [[#sec:legacy_triggers]].
+
+The corresponding \acp{SF} must take into account the efficiency of the \logicor{} between the two triggers used in the leptonic channels.
+Assuming the efficiencies of the two legs of the cross trigger to be independent, the efficiency of the \logicor{} can be factorized and computed from the efficiencies of the single objects, following [[eq:prob_or]] closely:
+
+#+NAME: eq:prob_or_legacy
+\begin{equation}
+\text{Eff} = \varepsilon_{\text{L}} + \varepsilon_{\ell} \, \varepsilon_{\tau} - \varepsilon_{\ell} \, \varepsilon_{\tau} \, \varepsilon_{\text{L}|\ell} \: ,
+\end{equation}
+
+\noindent where $\varepsilon_{\text{L}}$ is the single-lepton trigger efficiency, $\varepsilon_{\ell}$ represents the cross-lepton trigger efficiency for the \tauele{} or \taumu{} leg, and $\varepsilon_{\tau}$ stands for the cross lepton trigger efficiency for the \tauh{} leg.
+$\varepsilon_{\text{L}|\ell}$ stands for the single lepton efficiency given that the lepton leg of the cross trigger fired.
+We write the latter explicitly given the extreme correlation between those two trigger elements.
+Note that we could shift from the probabilities in [[eq:prob_or]] to actual efficiencies because the latter are being computed in phase-space bins, and not for single events, where the notion of efficiency is meaningless.
+[[eq:prob_or_legacy]] can be understood by taking into account the three terms shown in [[fig:single_cross_wenn_diagram]], which again follows [[eq:prob_or]].
+
+
+#+NAME: fig:single_cross_wenn_diagram
+#+CAPTION: Venn diagram illustrating the single- and cross-trigger phase-spaces together with their intersection, as considered for the \mutau{} and \eletau{} channels. The meaning of the different efficiency terms $\varepsilon$ is described in the text. [[eq:prob_or_legacy]] is obtained by summing the two separate efficiencies and subtracting their intersection, following [[eq:prob_or]]. The result represents the probability for an event to pass the single-lepton or the cross-lepton trigger. The fact that the L and $\ell$ triggers are essentially the same, modulos a $\pt$ threshold, enables to use the simplified alternative shown in [[eq:single_cross_eff_trick]].
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .8\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/single_cross_venn_diagram.pdf]]
+#+END_figure
+
+[[eq:prob_or_legacy]] is correct, but the Tau \ac{POG} does not provide $\varepsilon_{\text{L}|\ell}$ out of the box.
+That would imply knowing beforehand which triggers each analysis would chose, and store all possible combinations, which is highly unpractical.
+Instead, the analyzers are left with the task of deriving the analysis' \acp{SF} themselves.
+We can avoid doing so by exploiting the extreme similarity of the single lepton trigger and the lepton leg of the cross trigger.
+Indeed, assuming noise-free triggers, $\varepsilon_{\text{L}|\ell}$ should be exactly one, as the two triggers are identical with the exception of the \ac{pt} threshold, which is lower for the cross lepton trigger leg.
+For those cases, which we expect to be the vast majority, the last term of [[eq:prob_or_legacy]] reduces to $\varepsilon_{\ell} \, \varepsilon_{\tau}$.
+In other words, one trigger is a subset of the other.
+However, due to (admittedly rare) trigger inefficiencies, it might happen that the single lepton trigger fires and the other does not.
+For those cases $\varepsilon_{\text{L}} > \varepsilon_{\ell}$, and thus $\varepsilon_{\ell|\text{L}} = 1$ (but $\varepsilon_{\text{L}|\ell} \ne 1$, in general).
+Using Bayes' theorem, we can express $\varepsilon_{\ell}\,\varepsilon_{\text{L}|\ell}$ as $\varepsilon_{\text{L}}\,\varepsilon_{\ell|\text{L}}$, which is simplified to $\varepsilon_{\text{L}}$.
+Finally, using a =min()= operand we can choose whichever expression is correct for both situations above.
+We thus obtain the following formula, which is used for the \mutau{} and \eletau{} channels, and which depends only on POG-provided SFs:
+
+#+NAME: eq:single_cross_eff_trick
+\begin{equation}
+  \text{Eff} = \varepsilon_{\text{L}} + \varepsilon_{\ell} \, \varepsilon_{\tau} - \min(\varepsilon_{\text{L}}, \varepsilon_{\ell}) \, \varepsilon_{\tau},
+\end{equation}
+
+\noindent The formula is equivalent to [[eq:prob_or_legacy]].
+Avoiding the calculation of an additional efficiency term removed the concern of increased trigger scale factor uncertainties.
+The \smu{} trigger and $\tau\text{-legs}$ efficiencies and \acp{SF} are provided by the \ac{CMS} \acp{POG}, while the remaining lepton triggers are kindly provided by the authors of the $\gamma\gamma\rightarrow \tau\tau$ analysis [[cite:&ggtott]].
+The SFs depend on the \ac{eta} and \ac{pt} of the object.
+In [[ref:fig:eff_maps_etau_2017,fig:eff_maps_mutau_2017,fig:eff_maps_etau_2018,fig:eff_maps_mutau_2018]] we provide examples for the used data efficiency maps in 2017 and 2018 for the \eletau{} and \mutau{} channels.
+
+#+NAME: fig:eff_maps_etau_2017
+#+CAPTION: \Sele{} (left) and \celetau{} (right) (\ac{pt}, \ac{eta}) trigger efficiency maps for 2017.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/SingleCrossComparison_ETau_UL17.pdf]]
+#+END_figure
+
+#+NAME: fig:eff_maps_mutau_2017
+#+CAPTION: \Smu{} (left) and \cmutau{} (right) (\ac{pt}, \ac{eta}) trigger efficiency maps for 2017. Please notice the different \ac{pt} range.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/SingleCrossComparison_MuTau_UL17.pdf]]
+#+END_figure
+
+#+NAME: fig:eff_maps_etau_2018
+#+CAPTION: \Sele{} (left) and \celetau{} (right) (\ac{pt}, \ac{eta}) trigger efficiency maps for 2018.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/SingleCrossComparison_ETau_UL18.pdf]]
+#+END_figure
+
+#+NAME: fig:eff_maps_mutau_2018
+#+CAPTION: \Smu{} (left) and \cmutau{} (right) (\ac{pt}, \ac{eta}) trigger efficiency maps for 2018. Please notice the different \ac{pt} range.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/SingleCrossComparison_MuTau_UL18.pdf]]
+#+END_figure
+
+For the \tautau{} final state, \ditau{} trigger efficiencies and \acp{SF} are provided by the =Tau= \ac{POG} in the context of the \ac{SM} \htt{} analysis.
+They are measured using $\text{Z} \rightarrow \tau\tau \rightarrow \mu\nu_{\mu}\nu_{\tau} \tau_{\text{h}} \nu_{\tau}$ events selected with the tag and probe technique, and cover the \logicor{} of the three trigger paths used.
+The \acp{SF} also depend on the $\eta$ and \ac{pt} of the object.
+Considering the additional \SI{5}{\GeV} threshold applied to \taus{}, the \ditau{} trigger includes cuts at $\pt > 40\,\si{\GeV}$.
+
+
 * Single tau trigger scale factors
+A \stau{} trigger has been exploited for the first time in \ac{CMS} \bbtt{} analyses.
+More details are given in [[#sec:additional_triggers]].
+Flat \acp{SF} for the \stau{} trigger are also provided by the =Tau= \ac{POG}, which recommends their usage in the region where the trigger efficiency plateaus, defined to be \SI{10}{\GeV} above their trigger threshold (\SI{130}{\GeV} for 2016 and \SI{190}{\GeV} for 2017 and 2018).
+The recommended \acp{SF} can be inspected in [[tab:singleTauSFs]].
+They are used to correct the \ac{MC} event-by-event.
+The corrections is applied only to events within the \stau{} region, as detailed in discussed in [[#sec:tautau_sel]].
+
+#+NAME: tab:singleTauSFs
+#+CAPTION: \Stau{} trigger \acp{SF} as recommended by the =Tau= \ac{POG}. The corresponding \ac{HLT} paths are defined in [[tab:trigger_met_stau]].
+#+ATTR_LATEX: :placement [!h] :center t :align cc :environment mytablewiderrows
+|------+-----------------|
+| Year | \Stau{} \ac{SF} |
+|------+-----------------|
+| 2016 | $0.88 \pm 0.08$   |
+| 2017 | $1.08 \pm 0.10$   |
+| 2018 | $0.87 \pm 0.11$   |
+|------+-----------------|
+
 * MET trigger scale factors
 :PROPERTIES:
 :CUSTOM_ID: sec:met_trigger_sfs
 :END:
 
+A $\metnomu$ trigger has been exploited for the first time, inspired by the past high-mass resonoant \bbtt{} analysis [[cite:&higgs_bbtautau_hy]].
+More details are given in [[#sec:additional_triggers]].
+Contrary to what happens for the \stau{} trigger, no \ac{SF} are centrally available for \ac{MET} triggers, and they are thus derived in the context of this analysis.
+The efficiency of \ac{MET} triggers is in general challenging to calculate given that, by construction, \ac{MET} contains all objects present in the event.
+No dataset can therefore be used as an orthogonal reference, or denominator in the efficiency computation, against which to measure the \ac{MET} trigger efficiency.
+However, by removing the contribution of muons in the definition of MET, as shown in [[eq:metnomu]], events triggered by muon triggers become orthogonal to the $\metnomu$ trigger, which is the one used in this analysis.
+We thus measure the efficiency $\varepsilon$ of the $\metnomu$ trigger in data and \ac{MC}, independently for the four data periods under consideration (2016 pre- and post-VFP, 2017 and 2018), according to:
+
+#+NAME: eq:met_eff
+\begin{equation}
+  \varepsilon(\metnomu) = \frac{\textrm{Analysis}\:\:\textrm{Selection}\:\:\&\&\:\: \textrm{Single-}\mu\:\:\textrm{Trigger} \:\:\&\&\:\: \metnomu\:\:\textrm{Trigger}}{\textrm{Analysis}\:\:\textrm{Selection}\:\:\&\&\:\: \textrm{Single-}\mu\:\:\textrm{Trigger}} \: ,
+\end{equation}
+
+\noindent where ``Analysis Selection'' refers to the selection described in [[#sec:selection]], plus the existence of two b-jet candidates without =DeepFlavour= requirements.
+Note that we explicitly enforce the \smu{} trigger to be fired: =IsoMu24= in 2016 and 2018 and =IsoMu27= in 2017.
+The additional requirement defines a robust reference for the efficiency.
+This can be seen in [[fig:single_muon_eff]], where we show that the efficiency of the \smu{} is, by construction, identical to one.
+The three most important sources of background in the \mumu{} channel are taken into account for the \ac{MC} efficiency computation: $\ttbar{}$, \ac{DY} and W+jets.
+We apply a selection similar to the ones detailed in [[#sec:tau_pair_sel]], but considering the \mumu{} channel.
+Since the \mumu{} channel is not part of the three analysis channels, we can use all its events while keeping orthogonality to the analysis.
+No additional cut is needed to define orthogonal phase-space regions, avoiding a decrease in statistics.
+We require two muons with $\pt > 15\,\si{\GeV}$ each and other selections as defined in [[#sec:mutau_sel]].
+A custom binning is set so to sufficiently sample the efficiency curves, especially in the turn-on region.
+To smoothen out the fluctuations in efficiencies, a sigmoid function is fit to both data and \ac{MC} efficiency curves in their turn-on regions.
+The sigmoid function depends on three parameters:
+#+NAME: eq:sigmoid
+\begin{equation}
+  f(x, a, b, c) = \frac{c}{1+e^{-a(x-b)}}
+\end{equation}
+
+\noindent Four sets of acp{SF} are calculated, one per data period, as the ratio of the data sigmoid curve and \ac{MC} sigmoid curve, as shown in [[ref:fig:metnomu_sf_2016,fig:metnomu_sf_2016APV,fig:metnomu_sf_2017,fig:metnomu_sf_2018]].
+In order to obtain the best possible fit result, the range of the sigmoid fit is varied, and multiple values are tested.
+We find that a good result is obtained for all data periods by starting the fit at \SI{150}{\GeV} and ending it at \SI{350}{\GeV}.
+Values after \SI{350}{\GeV} can be fit by a horizontal line.
+Multiple starting values are tried and compared, and we find that they do not significantly impact the fit's result, except when using the full range, as illustrated in [[fig:compare_ratios_ranges]].
+For validation purposes, we also derive $\metnomu$ \acp{SF} using the \mutau{} channel to make a comparison with the \mumu{} ones, following the selection described in [[#sec:mutau_sel]].
+They are found to be compatible within statistical uncertainties, as shown in [[fig:compare_ratios_channels]].
+For completeness, we also compare the used \mumu{} $\metnomu$ \ac{SF} curves across the four data periods in [[fig:compare_ratios_years]].
+Differences can arise from changes in conditions across different years.
+In 2017, the =HLT_PFMETNoMu120_PFMHTNoMu120_IDTight= trigger was not active in the last runs, as explained in [[#sec:met_ineff_2017]].
+
+#+NAME: fig:metnomu_sf_2016
+#+CAPTION: $/metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2016. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_16_mumu_MET.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_16_mutau_MET.pdf]]
+#+END_figure
+
+#+NAME: fig:metnomu_sf_2016APV
+#+CAPTION: $/metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2016 APV. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_16APV_mumu_MET.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_16APV_mutau_MET.pdf]]
+#+END_figure
+
+#+NAME: fig:metnomu_sf_2017
+#+CAPTION: $/metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2017. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_17_mumu_MET.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_17_mutau_MET.pdf]]
+#+END_figure
+
+#+NAME: fig:metnomu_sf_2018
+#+CAPTION: $/metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2018. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_18_mumu_MET.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_18_mutau_MET.pdf]]
+#+END_figure
+
+The \acp{SF} are used to correct the \ac{MC} event-by-event, only for events within the \ac{MET} region, as discussed in [[#sec:trigger_regions]], and after applying a turn-on cut.
+The cut is set to \SI{180}{\GeV} for all eras.
+The value is chosen based on the control distributions shown in [[ref:fig:met_sf_control_etau_2018,fig:met_sf_control_mutau_2018,fig:met_sf_control_tautau_2018]] and in [[#sec:met_sf_controlregions]].
+Whenever an event has a $\metnomu$ value above \SI{350}{\GeV}, the \ac{SF} is taken to be exactly 1 for all eras.
+Uncertainties are calculated using the uncertainties from the sigmoid fit and applying error-propagation for the ratio.
+The uncertainty values of the sigmoid functions at the upper limit of the fit range are used whenever the event has a $\metnomu$ value lying above the fit validity range.
+The turn-on cut at \SI{180}{\GeV} prevents this from happening for values below the fit validity range.
+Despite the low statistics involved, one can see that the MET SFs improve the description of the observed data.
+
+#+NAME: fig:single_muon_eff
+#+CAPTION: \Smu{} data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2018. By construction, the efficiencies and scale factors are equal to one. This happens because the \smu{} trigger is enforced in the definition of the $\metnomu$ efficiency in [[eq:met_eff]]. A similar requirement is applied for all other data-taking periods.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .8\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_Canvas1D_Data_Mu_MC_TT_DY_WJets_mumu_metnomu_et_TRG_IsoMu24_CUTS_NoCut_default.pdf]]
+#+END_figure
+
+#+NAME: fig:compare_ratios_channels
+#+CAPTION: $\metnomu$ data and MC trigger efficiencies (top panels) and corresponding SFs (lower panels), for 2016 (top left), 2016APV (top right), 2017 (bottom left) and 2018 (bottom right). \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. The \acp{SF} are observed to be compatible between the \mutau{} and \mumu{} channels, within statistical uncertainties.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2016.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2016APV.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2017.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2018.pdf]]
+#+END_figure
+
+#+NAME: fig:compare_ratios_ranges
+#+CAPTION: $\metnomu$ data and MC trigger efficiencies (top panels) and corresponding SFs (lower panels), for the four data periods. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. We tested five different fit ranges, and zoomed in the turn-on region to better display differences. All fits are reasonably compatible except for the full range fit, which cannot describe the data. We decided to use the fit starting at \SI{150}{\GeV} for all data periods.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2016.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2016APV.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2017.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2018.pdf]]
+#+END_figure
+
+#+NAME: fig:compare_ratios_years
+#+CAPTION: Comparison between the $\metnomu$ \acp{SF} used in the analysis between all data periods. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. All triggers become fully efficient starting from $\metnomu \sim 300\,\si{\GeV}$.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .65\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_years.pdf]]
+#+END_figure
+
+#+NAME: fig:met_sf_control_etau_2018
+#+CAPTION: Comparison of chosen distributions without (left) and with (right) $\metnomu$ \acp{SF}, for events triggered only by the $\metnomu$ trigger, in 2018. We display the $\tau(\pt)$ (top), $\tau(|\eta|)$ (middle) and $\metnomu$ (bottom) for the \eletau{} channel. The $\metnomu$ \acp{SF} decrease the data to \ac{MC} mismatch. Events triggered by \ac{MET} with $\metnomu$ below \SI{180}{\GeV} are removed from the \ac{SR}.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_ETau_NoSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_ETau_WithSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_ETau_NoSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_ETau_WithSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_ETau_NoSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_ETau_WithSF.pdf]]
+#+END_figure
+
+#+NAME: fig:met_sf_control_mutau_2018
+#+CAPTION: Comparison of chosen distributions without (left) and with (right) $\metnomu$ \acp{SF}, for events triggered only by the $\metnomu$ trigger, in 2018. We display the $\tau(\pt)$ (top), $\tau(|\eta|)$ (middle) and $\metnomu$ (bottom) for the \mutau{} channel. The $\metnomu$ \acp{SF} decrease the data to \ac{MC} mismatch. Events triggered by \ac{MET} with $\metnomu$ below \SI{180}{\GeV} are removed from the \ac{SR}.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_MuTau_NoSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_MuTau_WithSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_MuTau_NoSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_MuTau_WithSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_MuTau_NoSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_MuTau_WithSF.pdf]]
+#+END_figure
+
+#+NAME: fig:met_sf_control_tautau_2018
+#+CAPTION: Comparison of chosen distributions without (left) and with (right) $\metnomu$ \acp{SF}, for events triggered only by the $\metnomu$ trigger, in 2018. We display the $\tau(\pt)$ (top), $\tau(|\eta|)$ (middle) and $\metnomu$ (bottom) for the \tautau{} channel. The $\metnomu$ \acp{SF} decrease the data to \ac{MC} mismatch. Events triggered by \ac{MET} with $\metnomu$ below \SI{180}{\GeV} are removed from the \ac{SR}.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_TauTau_NoSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_TauTau_WithSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_TauTau_NoSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_TauTau_WithSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_TauTau_NoSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_TauTau_WithSF.pdf]]
+#+END_figure
+
 ** MET trigger inefficiency in 2017
+:PROPERTIES:
+:CUSTOM_ID: sec:met_ineff_2017
+:END:
+
 We can see that in 2017 the trigger does not becomes fully efficient for high $\metnomu$ values.
 This is because the ~HLT_PFMETNoMu120_PFMHTNoMu120_IDTight~ trigger was not active in the last runs of 2017.
 To recover the missing luminosity, we decided to consider instead, for 2017 only, the \logicor{} between ~HLT_PFMETNoMu120_PFMHTNoMu120_IDTight~ and ~H2LT_PFMETNoMu120_PFMHTNoMu120_IDTight_PFHT6F~.
-We can see in ref:fig:lumi_vs_runnumber_2017 that the new trigger collects more data during the last few runs in 2017.
-Indeed, looking at the recomputed efficiency and SF plot in ref:fig:eff_mumu_2017, considering the two triggers taken together, we can observe a full recovery of the lost efficiency.
+We can see in [[fig:lumi_vs_runnumber_2017]] that the new trigger collects more data during the last few runs in 2017.
+Indeed, looking at the recomputed efficiency and SF plot in [[fig:eff_mumu_2017]], considering the two triggers taken together, we can observe a full recovery of the lost efficiency.
 
 #+NAME: fig:lumi_vs_runnumber_2017
 #+CAPTION: Recorded luminosity as a function of the run number, for the 2017 data-taking period. The two $\metnomu$ triggers considered for the analysis in 2017 are shown. While the one with the $\httt$ cut (empty red circles) was not active in the first runs,  it collected all available luminosity once it was on. This enables to recover some luminosity lost by the trigger shown in blue crosses, as one can see by looking at the last few runs, where a discrepancy exists. We consider the \logicor{} of the two triggers in the analysis.
@@ -44,42 +389,41 @@ Indeed, looking at the recomputed efficiency and SF plot in ref:fig:eff_mumu_201
 #+NAME: fig:eff_mumu_2017
 #+CAPTION: $\metnomu$ data and MC trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2017. The left (right) plot was obtained in the \mumu (\mutau{}) channel as described in the text. The \mumu{} channel is used for validation, while \mumu is used to extract the analysis \acp{SF}. \acp{SF} are extracted from the ratio of the data and MC sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
 #+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
+#+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_17_mumu_MET.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
+#+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_17_mutau_MET.pdf]]
 #+END_figure
 
-* B-tag reshaping
+
+* B-Tag reweighting
 :PROPERTIES:
 :CUSTOM_ID: sec:btag_reshape
 :END:
 
-To account for discrepancies in the b-tag performance in MC, the whole b-tagging discriminant distribution in MC is corrected
-to match the one in data, following the shape calibration procedure recommended by the b-Tag and Vertexing POG.
-%
-For each MC event with a given jet configuration, the event weight $\omega$ is computed as:
-\[
+To account for discrepancies in the \btag{} performance in \ac{MC}, the entire \ac{MC} \btag{} discriminant distribution is corrected to match the one in data, following the shape calibration procedure recommended by the \ac{CMS} =b-Tag + Vertexing= \ac{POG}.
+For each \ac{MC} event with a given jet configuration, the event weight $\omega$ is computed as:
+
+#+NAME: eq:btag_reweighting
+\begin{equation}
 \omega = \prod_i^{N_{jets}} SF\left(D_i,  p_{Ti}, \eta_i \right)
-\]
-where the scale factors SF are provided by the BTV POG as a function of the discriminator score,
-transverse momentum and pseudo-rapidity of the jets.
-%
-The event weights computed with this method should change only the shape of the b-tagging discriminant.
-Before applying any b-tag selection criteria, expected event yields should be preserved: this means that the number of events
-(i.e. the sum of event weights) before and after applying b-tag weights should be identical.
-In order to ensure this, the sum of event weights before and after applying b-tag event weights, without requiring any b-tag selection,
-is computed. The ratio $r = \sum \omega_{\text{before}} / \sum \omega_{\text{after}}$ represents a phase-space extrapolation
-and is multiplied to the b-tag event weight. The values of these $r$ factors are reported in [[tab:btag_rfactor]].
+\end{equation}
+
+\noindent where the \ac{SF} are provided by the \ac{CMS} =BTV= \ac{POG} as a function of the discriminator score, transverse momentum and pseudo-rapidity of the jets.
+The event weights computed with this method should change only the shape of the \btag{} discriminant.
+Before applying any \btag{} selection criteria, expected event yields should be preserved: this means that the number of events (\ie{} the sum of event weights) before and after applying \btag{} weights should be identical.
+In order to ensure this, the sum of event weights before and after applying \btag{} event weights, without requiring any \btag{} selection, is computed.
+The ratio $r = \sum \omega_{\text{before}} / \sum \omega_{\text{after}}$ represents a phase-space extrapolation and is multiplied to the \btag{} event weight.
+The values of these $r$ factors are reported in [[tab:btag_rfactor]].
 
 #+NAME: tab:btag_rfactor
-#+CAPTION: Values of the $r$ factors used to correct the b-tag event weights and preserve the normalization of the MC samples.
+#+CAPTION: Values of the $r$ factors used to correct the \btag{} event weights and preserve the normalization of the \ac{MC} samples.
 \begin{table}[htbp]
     \centering
     \setlength{\tabcolsep}{10pt}
-    \begin{tabular}{lll}
+    \begin{tabular}{ccc}
 	\hline \\[-1em]
-	Year & Final state & $r$ factor \\ \hline \\[-1em]
+	Year & Decay channel & $r$ factor \\ \hline \\[-1em]
 	\multirow{3}{*}{2016} & \mutau{}  & 1.0081 \\
 			      & \eletau{} & 1.0068 \\
 			      & \tautau{} & 1.0103 \\[+0.3em] \hline \\[-1em]
@@ -92,14 +436,97 @@ and is multiplied to the b-tag event weight. The values of these $r$ factors are
     \end{tabular}
 \end{table}
 
-* Particle Net SFs
-:PROPERTIES:
-:CUSTOM_ID: sec:pnet_sfs
-:END:
-
 * DeepTau scale factors for hadronic $\tau$'s
 :PROPERTIES:
 :CUSTOM_ID: sec:deep_tau_sfs
 :END:
 
+Data/\ac{MC} discrepancies in the identification efficiency of the hadronically-decaying taus must be corrected.
+Different \acp{WP} of the =DeepTau= algorithm are employed for the selection of the $\tau\tau$ pair, as described in detail in [[#sec:hadronic_taus]].
+
+#+NAME: fig:deepTauComparison
+#+CAPTION: Comparison of the $\Delta R$ distribution with the baseline selection between the two leptons in the \tautau{} channel before (left) and after (right) updating the =DeepTauVSjet= scale factors for 2016, as instructed by the \ac{CMS} =Tau= \ac{POG}. The agreement improves significantly.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/plot_ditau_deltaR_baseline_SR_TauTau_old_deepTauSF.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/plot_ditau_deltaR_baseline_SR_TauTau_new_deepTauSF.pdf]]
+#+END_figure
+
+The \acp{SF} related to the hadronically decaying taus for the =DeepTau= algorithm are applied following the recommendations of the \ac{CMS} =Tau= \ac{POG} for \ac{UL} datasets:
++ For genuine taus, the scale factors are provided per data period (2016 pre- and post-VFP, 2017 and 2018) in bins of the tau decay mode, and the \ac{pt} dependency is fitted using linear functions in the $[20;140]\,\si{\GeV}$ range.
+  \taus{} with $\pt > 140\,\si{\GeV}$ have separate corrections binned in \ac{pt}: $]140; 200]$ and $]200; \infty[\,\si{\GeV}$.
+  The \acp{SF} used here represent an update by the =Tau= \ac{POG} over what was previously considered, leading to a significant data/MC improvement for 2016, as seen in [[fig:deepTauComparison]].
++ For genuine electrons misidentified as taus, the \acp{SF} are provided split into barrel and endcap regions.
++ For genuine muons misidentified as taus, the \acp{SF} are provided binned as a function of $\eta$.
+
+\noindent For the leptonic decays of the tau candidates, \taudecaymu{} or \taudecayele{}, the same \acp{SF} used by the \htt{} analysis are used here.
+
 * Lepton scale factors
+** Electron and muon scale factors
+In order to correct possible disagreements between data and \ac{MC} regarding the reconstruction and identification of electrons and muons in the \eletau{} and \mutau{} channels, specific \acp{SF} are applied to events in these channels.
+These correction factors are provided, binned as a function of the \ac{pt} and \ac{eta} of the leptons, by the \ac{CMS} =EGamma= and =Muon= \acp{POG}.
+
+** Tau Energy Scale corrections
+The \ac{TES} corrections are provided by the \ac{CMS} =Tau= \ac{POG}.
+They are binned in the four decay modes, based on the number of neutral and charged decay products.
+For genuine \taus{}, we consider the scenarios with one prong, one prong and one neutral, three prongs, and three prongs plus one neutral.
+For electrons misidentified as taus, only the first two scenarios are considered, while for muons misidentified as taus, no energy scale correction is required, since it happens very rarely.
+
+* Particle Net SFs
+:PROPERTIES:
+:CUSTOM_ID: sec:pnet_sfs
+:END:
+
+# introduction
+Our analysis considers the mass-decorrelated \ac{PNet} \xbb{} algorithm for its boosted category, as explained in [[#sec:jets]].
+In particular, a selection cut is applied on the Low Purity \ac{WP} of the algorithm's score, defined in [[eq:pnet]].
+Since the jet tagger is trained on \ac{MC} samples only, and the latter do not perfectly agree with data, cutting on the tagger score inevitably leads to data/\ac{MC} mismodellings.
+As usual, discrepancies must be corrected with appropriate \acp{SF}.
+Corrections vary depending on the \ac{MC} sample considered, since the jets are generated by different physics processes.
+Given the development timescale of the \ac{PNet} algorithm, no centrally provided \acp{SF} are yet defined for \run{2} background samples; only for signal-like signatures.
+A custom derivation of \acp{SF} for all backgrounds samples is thus necessary.
+
+# background SFs
+The procedure developed to compute background \ac{PNet} \acp{SF} starts from the observation that the analysis is dominated by \ac{DY} and $\ttbar$ background sources.
+In \ac{DY} (plus jets), the "fat", or merged bb jet most likely comes from random gluon or quark jets, and decaying to a pair of b quarks.
+The \acp{SF} are derived in the \mumu{} \ac{CR}, on top of which a tight invariant mass cut is applied around the Z boson mass, in order to obtain a \ac{DY}-enriched sample.
+For the case of $\ttbar$, one of the b quarks much likely comes from a top decay, and the second jet is combinatorial.
+To derive the $\ttbar$ \acp{SF}, the \eletau{} and \mutau{} \acp{SR} are combined in a region of high $\ttbar$ purity, by considering events with a \ditau{} mass above \SI{130}{\GeV}.
+The obtained \ac{DY} and $\ttbar$ regions suffer from a relatively small number of events in the boosted category.
+The \acp{SF} are obtained in \ac{pt} distributions with three \ac{pt} bins, as follows:
+#+NAME: eq:pnet_effs
+\begin{equation}
+  \varepsilon_{\text{PNet}}(\pt) = \frac{\text{Boosted CR} \:\:\&\&\:\: \text{Score}_{\,\text{PNet}} > \text{Loose}}{\text{Boosted CR}} \: ,
+\end{equation}
+
+\noindent where "Boosted CR" refers to the \acp{CR} described above with events having at least one AK8 jet, and the year-dependent \ac{PNet} scores can be inspected in [[tab:bTagWPs]] (right), where the \ac{WP} choice was already discussed in [[#sec:categorization]].
+The \acp{SF} are then simply calculated as:
+#+NAME: eq:pnet_sfs
+\begin{equation}
+\text{SF}_{k} = \frac{ \varepsilon_{\text{PNet}} \left[ \text{Data} - \sum_{j \neq k}^{\text{N}_{\text{MC}}} \text{MC}_{j} \right]  }{ \varepsilon_{\text{PNet}} \left[ \text{MC} \right] } \: ,
+\end{equation}
+
+\noindent where $k \in {\text{DY},\, \ttbar}$, and $\text{N}_{\text{MC}}$ is the number of \ac{MC} samples our analysis considers
+The equation explicitly states that all backgrounds are removed from the data except the one for which the \acp{SF} are being computed.
+
+# introduce signal SFs?
+Considering now signal-like processes with a bb decay, methods to derive \acp{SF} are already available within the \ac{CMS} Collaboration, and the development of a custom method is therefore not necessary.
+Available methods always use "proxy jets", since it is experimentally very difficult to isolate a pure region of \hbb{} jets from data [[cite:&calib_pnet_run2]].
+In particular, the \acp{SF} are here computed with the "sfBDT" method, which uses as proxy jets a large collection of multijet $g \rightarrow \text{b}\bar{\text{b}}$ events with additional selections.
+To ensure that the proxy jets are similar to the target signal-like jets, a \ac{BDT} is developed to select a subset of multijet events exhibiting similar characteristics to the bb signal.
+The \ac{BDT}, from which the \ac{SF} method derives its name, was originally developed for the $\text{V}\text{H}(\rightarrow c\bar{c})$ analysis [[cite:&vh_cc_cms]].
+
+# conclusion
+Three sets of \acp{SF} are thus defined.
+Two sets for \ac{DY}-like and $\ttbar\text{-like}$ backgrounds, and one for signal-like signatures.
+Each separate \ac{MC} background is associated to one of these sets, depending on its topology:
++ processes with vector bosons and potentially jets are \ac{DY}-like: W+jets and \ac{EW} processes in association with a vector boson;
++ processes enriched with top quarks are $\ttbar\text{-like}$: tW, single top, \tth{}, TTW, TTZ, TTWW;
++ processes with \hbb{} or \zbb{} signatures are signal-like: ZH, WZ, ZZ, WWZ, WZZ, ZZZ, TTWZ, TTZZ, TTWH.
+\noindent More than one association is possible for some of the backgrounds, especially those including more particles.
+At the same time, processes with lower cross sections do not significantly impact final results.
+The chosen \ac{SF} set is therefore not particularly important for those cases.
+
+

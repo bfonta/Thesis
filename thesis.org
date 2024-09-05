@@ -113,10 +113,10 @@
 #+INCLUDE: "chapters/4_analysis1/physics_objects.org"
 ** Selection and Categorization
 #+INCLUDE: "chapters/4_analysis1/selection.org"
-** $\tau\tau$ mass regression
+** Mass regression of the tau lepton pair
 #+INCLUDE: "chapters/4_analysis1/tautau_regression.org"
-** QCD background estimation
-#+INCLUDE: "chapters/4_analysis1/qcd_estimation.org"
+** Modelling of background processes
+#+INCLUDE: "chapters/4_analysis1/backgrounds.org"
 ** Monte Carlo corrections
 #+INCLUDE: "chapters/4_analysis1/mc_corrections.org"
 ** Control regions
@@ -135,8 +135,9 @@
 #+INCLUDE: "chapters/5_analysis2/systematics_shape.org"
 ** Statistical treatment
 *** Hypothesis testing with the modified frequentist approach
-#+INCLUDE: "chapters/statistics/hypothesis.org"
+#+INCLUDE: "chapters/5_analysis2/hypothesis.org"
 *** The maximum likelihood method
+#+INCLUDE: "chapters/5_analysis2/likelihood.org"
 ** Results
 *** Limits
 #+INCLUDE: "chapters/5_analysis2/final_limits.org"
@@ -160,7 +161,8 @@
 * Conclusions
 #+INCLUDE: "chapters/7_conclusions/conclusions.org"
 
-* BEFORE APPENDIX :ignore:
+
+* APPENDIX OPTIONS:ignore:
 #+LATEX: \appendix
 
 * Appendix
@@ -168,6 +170,7 @@
 #+INCLUDE: "chapters/appendixes/atlas_results.org"
 ** General control distributions
 ** MET SF control distributions
+#+INCLUDE: "chapters/appendixes/met_sf_controlregions.org"
 
 
 * List of acronyms

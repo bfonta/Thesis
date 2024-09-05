@@ -159,7 +159,7 @@ To make things even more complicated, neutral hadrons can only interact strongly
 It can thus happen that an hadronic shower loses its energy mostly via \ac{EM} interactions, but a single hadron can also penetrate the full \ac{ECAL} length without releasing any energy whatsoever.
 A shower can also lose its energy by releasing nucleons from the medium.
 The binding energy required to release those nucleons is called /invisible energy/, since it is inherently undetectable and thus lost for calorimetric measurements.
-All of these reasons lead to a hadronic resolution that is generally much worse than the \ac{EM} one, and can only be improved by correlating the information from multiple subdetectors with a \ac{PF} approach.
+All of these reasons lead to a hadronic resolution that is generally much worse than the \ac{EM} one, and can only be improved by correlating the information from multiple subdetectors with software techniques described in [[#sec:offline_reco_pf]].
 On average, only 1/3 of the energy of a hadron shower is deposited in \ac{ECAL}.
 The scale of the shower development is largely dominated by the nuclear interaction length, \si{\nucintl}.
 Importantly, the absorption of hadronic showers tends to require much more material than the absorption of \ac{EM} showers at the same energy.

@@ -88,7 +88,6 @@ The original Yang-Mills theory turned out to be of little use, on account of sta
 The same idea can however be generalized to many other non-abelian symmetry groups, and ended up representing the basis of the \symcolor{} color symmetry for strong interactions and of the isospin-hypercharge \symweak{} symmetry for weak interactions.
 
 * Chromodynamics
-
 According to the \ac{SM}, each quark flavour comes in three colors: red, blue and green.
 We can express its free lagrangian exactly as in [[eq:yang_mills_lagrangian]], but where now the fields are a three-component column vector $\bar{\psi} \equiv (\bar{\psi}_{r} \, \bar{\psi}_{b} \, \bar{\psi}_{g})$ for the three colors.
 The lagrangian naturally exhibits a global \symthree{} symmetry, which we again require to be local.
@@ -105,7 +104,7 @@ The gauge fields also transform in a more complex way, due to the larger number 
 
 #+NAME: eq:gauge_transf_su3
 \begin{equation}
-\pmb{A}_{\mu} \rightarrow \pmb{A}_{\mu} + \partial_{\mu}\pmb{\phi} - 2g(\pmb{\phi} \times \pmb{A}_{\mu}) \: , \:\:\: (\pmb{\phi} \times \pmb{A}_{\mu})_{i} = \sum_{j,k=1}^{8}f^{ijk}\phi^{j}A_{\mu}^{k} \: ,
+\pmb{A}_{\mu} \rightarrow \pmb{A}_{\mu} + \partial_{\mu}\pmb{\phi} - 2g(\pmb{\phi} \times \pmb{A}_{\mu}) \: , \:\:\: (\pmb{\phi} \times \pmb{A}_{\mu})^{i} = \sum_{j,k=1}^{8}f^{ijk}\phi^{j}A_{\mu}^{k} \: ,
 \end{equation}
 
 \noindent where the $f^{ijk}$ symbols denote the structure constants of \symthreec{}, defined based on the following commutation rules:
@@ -126,7 +125,7 @@ The gauge fields also transform in a more complex way, due to the larger number 
 
 #+NAME: eq:kinematic_qcd
 \begin{equation}
-F^{i}_{\mu\nu} = \partial_{\mu}A^{i}_{\nu} - \partial_{\mu}A^{i}_{\nu} + gf^{ijk}A^{j}_{\mu}A^{k}_{\nu} \: .
+F^{i}_{\mu\nu} = \partial_{\mu}A^{i}_{\nu} - \partial_{\mu}A^{i}_{\nu} + 2gf^{ijk}A^{j}_{\mu}A^{k}_{\nu} \: .
 \end{equation}
 
 \noindent The lagrangian is invariant under local \symthreec{}, describing three fields interacting with eight massless vector fields, the gluons.

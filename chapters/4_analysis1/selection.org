@@ -64,7 +64,7 @@ For a visualization of the kinematic trigger region cuts, refer once more to the
 Events are required to pass any of the triggers described in [[#sec:triggers]] and the offline leptons are required to match the \ac{HLT} ones.
 In addition, the following is required:
 
-** Muon + Tau channel
+** \mutau{} channel
 :PROPERTIES:
 :CUSTOM_ID: sec:mutau_sel
 :END:
@@ -74,7 +74,7 @@ In addition, the following is required:
 + A hadronic tau of $|\eta_{\tau_{\text{h}}}| \leq 2.3$ ($2.1$ for events firing only the cross-$\mu\tau$ trigger). The same $\Delta_{z}$ requirement as in the case of the muon is applied. The \ac{pt} threshold on the hadronic tau depends on the \ac{HLT} trigger path fired.
 + Muon and hadronic tau are required to have opposite electric charge and a $\Delta \text{R} (\mu, \tau_{\text{h}}) > 0.4$ spatial separation.
 
-** Electron + Tau channel
+** \eletau{} channel
 :PROPERTIES:
 :CUSTOM_ID: sec:eletau_sel
 :END:
@@ -85,7 +85,7 @@ In addition, the following is required:
 + A hadronic tau of $|\eta_{\tau_{h}}| \leq 2.3$. The same $\Delta_{z}$ requirement as in the case of the electron is applied. The \ac{pt} threshold on the hadronic tau depends on the fired \ac{HLT} trigger paths
 + Electron and hadronic tau are required to have opposite electric charge and a $\Delta \text{R} (e, \tau_{\text{h}}) > 0.4$ spatial separation.
 
-** Tau + Tau channel
+** \tautau{} channel
 :PROPERTIES:
 :CUSTOM_ID: sec:tautau_sel
 :END:
@@ -215,7 +215,8 @@ The network aims at discriminating \xhhbbtt{} signal events from background, and
 #+NAME: fig:categories_scheme
 #+CAPTION: Descriptive scheme of the event categorization.
 #+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
+\centering
+#+ATTR_LATEX: :width .6\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/AnalysisFlowDiagram.pdf]]
 #+END_figure
 

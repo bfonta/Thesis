@@ -12,13 +12,17 @@ For the same reason, \ac{ggF} is also the production mode considered in the anal
 In the following, we provide a more detailed description of each production mode:
 
 #+NAME: fig:HH_prod_energy
-#+ATTR_LATEX: :width .9\textwidth
 #+CAPTION: HH production cross section as a function of the center of mass energy for the six largest HH production channels at /pp/ colliders. The thickness of the lines corresponds to the scale and PDF uncertainties added linearly. Gluon fusion dominates for the entire energy range. The figure is taken from [[cite:&HH_xsec_running]].
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .9\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/HH_production_energy.pdf]]
+#+END_figure
 
 #+NAME: tab:HH_production_xsec
 #+CAPTION: Relative abundances and inclusive cross-sections plus uncertainties for the most significant HH production modes at $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$ in the \ac{NNLO} \ac{FT} approximation for $\mh = 125\,\si{\GeV}$. Taken from [[cite:&lhc_wg4_twiki]].
-#+ATTR_LATEX: :placement [!h] :center t :align l|l|l :environment mytablewiderrows
+#+ATTR_LATEX: :placement [!h] :center t :align ccl :environment mytablewiderrows
+|--------------------------------+----------------------+---------------------------------------------------------------------------------------------------|
 | Production mode                | Approx. fraction [%] | Cross section [$\si{\femto\barn}$]                                                                |
 |--------------------------------+----------------------+---------------------------------------------------------------------------------------------------|
 | ggHH                           |                90.22 | $30.77^{+2.2\%}_{-5\%}(\text{scale})^{+4.0\%}_{-18.0\%}\%(\mt)\pm1.5\%(\text{PDF})\pm1.7\%(\astrong)$ |
@@ -28,7 +32,7 @@ In the following, we provide a more detailed description of each production mode
 | $\text{W}^{-}\text{H}\text{H}$ |                 0.51 | $0.173_{-1.3\%}^{+1.2\%}(\text{scale})\pm2.8\%(\text{PDF}+\astrong)$                                  |
 | ttHH                           |                 2.22 | $0.756_{-15.0\%}^{+4.3\%}(\text{scale})\pm3.3\%(\text{PDF}+\astrong)$                                 |
 | tqHH                           |                 0.08 | $0.0289_{-3.6\%}^{+5.5\%}(\text{scale})\pm4.7\%(\text{PDF}+\astrong)$                                 |
-
+|--------------------------------+----------------------+---------------------------------------------------------------------------------------------------|
 ** Gluon fusion
 The $\text{g}\text{g} \rightarrow \text{H}\text{H}$ gluon fusion is the most important production mechanism of Higgs boson pairs at hadron colliders [[cite:&hllhc_physics]].
 Contrary to single Higgs \ac{ggF}, in HH phenomenology two diagrams participate at lowest order.
