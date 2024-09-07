@@ -65,6 +65,7 @@
 #+LATEX_HEADER: \newcommand{\hbb}{H $\rightarrow$ bb}
 #+LATEX_HEADER: \newcommand{\hnotbb}{H $\nrightarrow$ bb}
 #+LATEX_HEADER: \newcommand{\htt}{H $\rightarrow$ $\tau\tau$}
+#+LATEX_HEADER: \newcommand{\hmumu}{H $\rightarrow$ $\mu\mu$}
 #+LATEX_HEADER: \newcommand{\hcc}{H $\rightarrow$ cc}
 #+LATEX_HEADER: \newcommand{\hgg}{$\mathrm{H} \rightarrow \gamma\gamma$}
 #+LATEX_HEADER: \newcommand{\hhbbbbtt}{$\mathrm{HH} \rightarrow \mathrm{bbbb}\tau\tau$}
@@ -157,7 +158,7 @@
 #+LATEX_HEADER: \newcommand{\longshut}[1]{Long Shutdown~#1}
 #+LATEX_HEADER: \newcommand{\mumu}{$\tau_{\mu}\tau_{\mu}$}
 #+LATEX_HEADER: \newcommand{\hhbtag}{\texttt{HH-bTag}}
-#+LATEX_HEADER: \newcommand{\btag}{b-Tag}
+#+LATEX_HEADER: \newcommand{\btag}{b-tag}
 #+LATEX_HEADER: \newcommand{\mutau}{$\tau_{\mu}\tau_{\text{h}}$}
 #+LATEX_HEADER: \newcommand{\phase}[1]{Phase~#1}
 #+LATEX_HEADER: \newcommand{\rescat}[1]{\textbf{res#1b}}
@@ -168,7 +169,7 @@
 #+LATEX_HEADER: \newcommand{\ztwo}{$\mathbb{Z}_2$}
 
 # Particles
-#+LATEX_HEADER: \newcommand{\egamma}{$e/\gamma$}
+#+LATEX_HEADER: \newcommand{\egamma}{$e\mathrm{/}\gamma$}
 #+LATEX_HEADER: \newcommand{\jpsi}{$\mathrm{J/}\psi$}
 #+LATEX_HEADER: \newcommand{\tauh}{$\tau_{\text{h}}$}
 #+LATEX_HEADER: \newcommand{\tauele}{$\tau_{e}$}

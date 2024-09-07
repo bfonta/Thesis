@@ -27,6 +27,8 @@ Once the issue was addressed, the rest of the year was devoted to \ch{Pb}-\ch{Pb
 Despite the leak, operations in 2024 have been extremely efficient, with the \ac{LHC}'s 10000\textsuperscript{th} fill reached on August 21\textsuperscript{st}.
 The \SI{250}{\invfb} delivered luminosity target that had been initially set for \run{3} will likely be achieved, given the current value above \SI{150}{\invfb}.
 2024 is the most productive year in \ac{LHC}'s history so far.
+We refer to the collection of the first three runs as "\phase{1}", while the period in which the next version of the \ac{LHC} will be operational is called "\phase{2}".
+The \ac{LHC} upgrade is discussed in detail in [[#sec:hllhc]],
 
 #+NAME: fig:lhc_lumi_results1
 #+CAPTION: Luminosity and \ac{PU} values. All plots include the still ongoing \run{3}, and are thus subject to future changes. (Left) Luminosity delivered by the \ac{LHC} and recorded by \ac{CMS} as a function of time, from the start of \run{1} to the present day. (Right) Average number of \ac{pp} interactions per bunch crossing for all data-taking years. The mean values per data-taking year are shown, together with the inelastic \ac{pp} cross sections for all different center-of-mass energies considered at the \ac{LHC}. Taken from [[cite:&pileup_twiki]].
@@ -38,7 +40,7 @@ The \SI{250}{\invfb} delivered luminosity target that had been initially set for
 #+END_figure
 
 #+NAME: fig:lhc_lumi_results2
-#+CAPTION: Cumulative luminosity delivered to \ac{CMS} versus time during stable beams at nominal center-of-mass energy, for all data-taking years. Gaps in time correspond to regular end-of-year shutdowns or \acp{LS}. The plot includes the still ongoing \run{3}, and is thus subject to future changes. Taken from [[cite:&pileup_twiki]].
+#+CAPTION: Cumulative luminosity delivered to \ac{CMS} during stable beams at nominal center-of-mass energy, as a function of time, for all data-taking years. Gaps in time correspond to regular end-of-year shutdowns or \acp{LS}. The plot includes the still ongoing \run{3}, and is thus subject to future changes. Taken from [[cite:&pileup_twiki]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.15\textwidth :center
 \hspace{-1.8cm} [[~/org/PhD/Thesis/figures/hgcal/lhc/int_lumi_cumulative_pp.pdf]]

@@ -222,7 +222,7 @@ Differences can arise from changes in conditions across different years.
 In 2017, the =HLT_PFMETNoMu120_PFMHTNoMu120_IDTight= trigger was not active in the last runs, as explained in [[#sec:met_ineff_2017]].
 
 #+NAME: fig:metnomu_sf_2016
-#+CAPTION: $/metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2016. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
+#+CAPTION: $\metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2016. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -232,7 +232,7 @@ In 2017, the =HLT_PFMETNoMu120_PFMHTNoMu120_IDTight= trigger was not active in t
 #+END_figure
 
 #+NAME: fig:metnomu_sf_2016APV
-#+CAPTION: $/metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2016 APV. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
+#+CAPTION: $\metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2016 APV. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -242,7 +242,7 @@ In 2017, the =HLT_PFMETNoMu120_PFMHTNoMu120_IDTight= trigger was not active in t
 #+END_figure
 
 #+NAME: fig:metnomu_sf_2017
-#+CAPTION: $/metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2017. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
+#+CAPTION: $\metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2017. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -252,7 +252,7 @@ In 2017, the =HLT_PFMETNoMu120_PFMHTNoMu120_IDTight= trigger was not active in t
 #+END_figure
 
 #+NAME: fig:metnomu_sf_2018
-#+CAPTION: $/metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2018. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
+#+CAPTION: $\metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2018. The left (right) plot was obtained in the \mumu{} (\mutau{}) channel as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \ac{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -401,15 +401,14 @@ Indeed, looking at the recomputed efficiency and SF plot in [[fig:eff_mumu_2017]
 :CUSTOM_ID: sec:btag_reshape
 :END:
 
-To account for discrepancies in the \btag{} performance in \ac{MC}, the entire \ac{MC} \btag{} discriminant distribution is corrected to match the one in data, following the shape calibration procedure recommended by the \ac{CMS} =b-Tag + Vertexing= \ac{POG}.
+To account for discrepancies in the \btag{} performance in \ac{MC}, the entire \ac{MC} \btag{} discriminant distribution is corrected to match the one in data, following the shape calibration procedure recommended by the \ac{CMS} BTV \ac{POG}.
 For each \ac{MC} event with a given jet configuration, the event weight $\omega$ is computed as:
-
 #+NAME: eq:btag_reweighting
 \begin{equation}
-\omega = \prod_i^{N_{jets}} SF\left(D_i,  p_{Ti}, \eta_i \right)
+\omega = \prod_i^{\text{N}_{\text{jets}}} \text{SF} \left( \text{D}^i,\, \pt^i,\, \eta^i \right)
 \end{equation}
 
-\noindent where the \ac{SF} are provided by the \ac{CMS} =BTV= \ac{POG} as a function of the discriminator score, transverse momentum and pseudo-rapidity of the jets.
+\noindent where the \ac{SF} are provided by the \ac{CMS} BTV \ac{POG} as a function of the discriminator score D, the \ac{pt} and the \ac{eta} of the jets.
 The event weights computed with this method should change only the shape of the \btag{} discriminant.
 Before applying any \btag{} selection criteria, expected event yields should be preserved: this means that the number of events (\ie{} the sum of event weights) before and after applying \btag{} weights should be identical.
 In order to ensure this, the sum of event weights before and after applying \btag{} event weights, without requiring any \btag{} selection, is computed.

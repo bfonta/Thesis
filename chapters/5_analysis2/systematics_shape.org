@@ -38,7 +38,7 @@ We also recall that \ac{PU} variations are additionally used to correct the norm
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .4\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis2/nvtx_mm.png]]
+[[~/org/PhD/Thesis/figures/analysis2/nvtx_mm_log.pdf]]
 #+ATTR_LATEX: :width .4\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis2/rho_mm.png]]
 #+END_figure
@@ -146,7 +146,7 @@ The uncertainties arising from the application of the trigger \acp{SF} do not mo
 
 * B-tagging scale factors
 Uncertainties on \btag{} \acp{SF} are provided by the \ac{CMS} =BTV= \ac{POG}.
-The impact on the purity of b-jets is estimated by varying the contamination from /udsg+c/ and /b+c/ jets in heavy and light flavor regions, respectively, by $\pm 20\%$.
+The impact on the purity of b-jets is estimated by varying the contamination from udsg+c and b+c jets in heavy and light flavor regions, respectively, by $\pm 20\%$.
 Additionally, statistical fluctuations are accounted for by providing weights where statistical uncertainties in each bin of the \btag{} discriminant are multiplied by linear and quadratic functions.
 Finally, a dedicated statistical uncertainty is also considered for charm-initated jets.
 @understand@

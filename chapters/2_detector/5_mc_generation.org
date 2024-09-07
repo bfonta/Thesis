@@ -2,108 +2,103 @@
 :CUSTOM_ID: sec:mc_gen
 :END:
 
-The usage of simulated samples, or \ac{MC}, is indispensable in \ac{HEP}, from modelling signal processes to assessing the impact of new analysis methods.
-The development of algorithms for future detectors would be impossible without dedicated simulations, which estimate fundamental quantities such as responses as resolutions, before the hardware is put in place, and provide training data and optimization potential to a series of algorithms.
-\Ac{MC} samples are also essential to compare measured data to what is expected, giving handles for all sorts of calibration procedures and other correction techniques.
-It goes without saying that \ac{MC} samples are a fundamental ingredient in this thesis, for the \xhhbbtt{} analysis as well as for the detector's work.
+The usage of simulated \ac{MC} samples is indispensable in \ac{HEP}, from modeling signal processes to assessing the impact of new analysis methods and studying the behavior of particles in a detector.
+The development of future experiments would be impossible without dedicated simulations, which estimate fundamental quantities such as responses and resolutions before the hardware is put in place, and provide training data and optimization potential to a series of algorithms.
+\Ac{MC} samples are also essential to compare measured data to what is expected, giving handles for all sorts of calibration procedures and correction techniques.
+It goes without saying that \ac{MC} samples are a fundamental ingredient in this thesis, for the work related to the \ac{CMS} detector in [[#sec:intro_tps]] as well as for the \xhhbbtt{} analysis in [[ref:sec:analysis1_intro,sec:analysis2_intro]].
 
-Throughout the following chapters, the so-called full simulation, or =FullSim=, is used, creating samples with a single particle for dedicated detector studies, or performing instead the complete simulation of \hhbbtt{} events.
-=FullSim= corresponds to a detailed simulation of the entire experimental setup, including the propagation of particles through all detector components, the interaction of particles with the detector material, and the response of the various detectors components.
-The simulation of \ac{MC} events follows a well-defined processing chains in \ac{CMS}, and is defined such that simulation and measured experimental data are processed in very similar ways.
-Indeed, after the simulation phase, the two chains are identical, and produce identical data formats to be used by analysists.
-Output objects are eventually stored in different files, where files with the same event content share a common data tier, such as =RAW=, =RECO= or =AOD=.
+The so-called full simulation, or =FullSim=, is used throughout this thesis for creating samples with a single particle in dedicated detector studies, or to perform instead the complete simulation of \ac{SM} and \ac{BSM} \hhbbtt{} events.
+The =FullSim= corresponds to a detailed simulation of the entire experimental setup, including the propagation of particles through all detector components, the interaction of particles with the detector material, and the response of the various detectors components.
+The simulation of \ac{MC} events follows a well-defined processing chain in \ac{CMS}, being structured such that simulation and measured experimental data are processed in similar ways.
+Indeed, after the simulation phase, the two chains are identical, and produce identical data formats to be used by analysts.
+Output objects are eventually stored in different files, where files with the same event content share a common data tier, such as RAW, RECO or AOD.
 The general procedure is illustrated in [[fig:simulation]], and described in what follows.
 
 #+NAME: fig:simulation
-#+CAPTION: Illustration of the generation workflow of \ac{MC} and data samples within the \ac{CMS} Collaboration. The second part of the chain, starting from the RAW data format, is identical for both types of samples. The \ac{PU} premixing technique is drawn using a dashed square to remember the reader that the classical and premixing techniques are not used simultaneously. The dashed double-headed arrow between the two DIGI formats represents the communication required to validate the \ac{MC} chain, which in addition emulates the \ac{L1} and \ac{HLT} triggers. The vast majority of \ac{CMS} analyses uses either the MiniAOD or NanoAOD formats. The latter will become more and more dominant as analysis teams adapt their frameworks.
+#+CAPTION: Illustration of the generation workflow of \ac{MC} and data samples as defined within the \ac{CMS} Collaboration. After the simulated RAW format is produced and the hits and clusters are measured, the chain is identical for data and simulated samples. The \ac{PU} premixing technique is drawn using a dashed square to remember the reader that the classical and premixing techniques are not used simultaneously. The dashed double-headed arrow between the two DIGI formats represents the communication required to validate the \ac{MC} chain, which in addition emulates the \ac{L1} and \ac{HLT} triggers. The vast majority of \ac{CMS} analyses uses either the MiniAOD or NanoAOD formats. The latter is becoming more dominant, being more lightweight and faster to process.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth
 [[~/org/PhD/Thesis/figures/detector/FullSimulation.pdf]]
 #+END_figure
 
+* GEN
+The first step involves the /generation/ (GEN) of the physics processes of interest from theoretical principles [[cite:&cms_offline_computing]].
+Generated processes, handled by an event generator, exhibit an enormous variety.
+\Ac{CMS} relies on a rich set of event generators such as =Herwig= [[cite:&herwig1;&herwig2;&herwig3]], =Pythia= [[cite:&pythia1;&pythia2]], =Sherpa= [[cite:&sherpa1]], =PowHeg= [[cite:&powheg]] or =MadGraph= [[cite:&madgraph]].
+The analysis discussed in this thesis most often uses the last two generators, as described in [[#sec:samples]].
+Event generators try to accurately describe the intrinsically random nature of \ac{HEP} collisions or particle decays, using a set of probability distributions to model the subatomic particles produced, along with many of their properties, storing intermediate stages of the event modeling along the way [[cite:&pythia2]].
+Generators aim at describing what an event looks like before interacting with detector elements.
+A generic \ac{pp} collision is usually generated with separate components for practical purposes, namely the hard scattering of two partons, radiative corrections, parton showering (initial and final state radiation), \acp{MPI}, \acp{BBR} and hadronisation.
+All of the above components, with the exception of the hard collision, are collectively referred as the \ac{UE} which, contrary to \ac{PU}, is characterized by having the same vertex as the hard scattering event.
+The \acp{BBR} are what remains after a parton is scattered out of each of the two initial beam hadrons, while the \acp{MPI} are additional soft or semi-hard parton-parton scatterings which occur within the same hadron-hadron collision [[cite:&CMS_Tunes]].
+The \ac{UE} is the unavoidable accompanying activity to hard \ac{pp} scattering processes, representing a background for most measurements and searches.
+To further complicate matters, the \ac{UE} activity is not constant on an event-by-event basis, and so its contribution cannot be subtracted.
+The \ac{MC} modeling can however be tuned by leveraging measurements sensitive to \ac{UE} activity.
+In fact, the full properties of an event cannot be calculated from first principles only.
+A set of \ac{QCD} parameters is thus derived to precisely describe the \ac{UE}.
+These parameters are known as /tunes/, resulting from a complex fitting procedure which, at least in the case of =Pythia=, uses data from \ac{CDF} and \ac{CMS} at different energies.
 #+NAME: fig:event_gen
-#+CAPTION: Simplified illustration of the structure of a $\ttbar$ event, as modelled by =Pythia=. Incoming momenta are depicted as crossed ($p \rightarrow -p$), to avoid \acp{BBR} and outgoing \ac{ISR} emissions to criss-cross the central part of the diagram. Taken from [[cite:&pythia_manual]].
+#+CAPTION: Simplified illustration of the structure of a $\ttbar$ event, as modeled by =Pythia=. Incoming momenta are depicted as crossed ($p\rightarrow -p$) in order to avoid \acp{BBR} and outgoing \ac{ISR} emissions to criss-cross the central part of the diagram. Taken from [[cite:&pythia_manual]].
 #+BEGIN_figure
-#+ATTR_LATEX: :width .74\textwidth :center
+\centering
+#+ATTR_LATEX: :width .6\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/event.pdf]]
-#+ATTR_LATEX: :width .25\textwidth :center
+#+ATTR_LATEX: :width .2\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/eventLegend.pdf]]
 #+END_figure
 
-\myparagraph{GEN}
-
-\noindent The first step involves the /generation/ (GEN) of the physics processes of interest from theoretical principles [[cite:&cms_offline_computing]].
-Generated processes exhibit an enormous variety depending on their purpose.
-This step is handled by an event generator.
-\Ac{CMS} relies on a rich set of event generators such as =Herwig= [[cite:&herwig1;&herwig2;&herwig3]], =Pythia= [[cite:&pythia1;&pythia2]], =Sherpa= [[cite:&sherpa1]], =PowHeg= [[cite:&powheg]] or =MadGraph= [[cite:&madgraph]].
-The latter is the most often used generator for matrix elements, including in this thesis ([[#sec:interf_methodology]]).
-Event generators try to accurately describe the intrinsically random nature of \ac{HEP} collisions or particle decays, using a set of probability distributions to model the list of subatomic particles produced, along with many of their properties, storing intermediate stages of the event modelling along the way [[cite:&pythia2]].
-Generators aim at describing what an event looks like before interacting with detector elements.
-A generic \ac{pp} collisions is usually generated with separate components for practical purposes, including the hard scattering of two partons, radiative corrections, parton showering (\ac{ISR} plus \ac{FSR}), \acp{MPI}, \acp{BBR} and hadronisation.
-All of the above components, with the exception of the hard collision, are collectively referred as the \ac{UE} which, contrary to \ac{PU}, is characterised by having the same vertex as the hard scatter.
-The \acp{BBR} are what remains after a parton is scattered out of each of the two initial beam hadrons, while the \acp{MPI} are additional soft or semi-hard parton-parton scatterings which occur within the same hadron-hadron collision [[cite:&CMS_Tunes]].
-The \ac{UE} is the unavoidable accompanying activity to hard \ac{pp} scattering processes, representing a background to collider observables for most measurements and searches.
-To further complicate matters the \ac{UE} activity is not constant on an event-by-event basis, and so its contribution cannot be subtracted.
-The \ac{MC} modelling can however be tuned by leveraging measurements sensitive to \ac{UE} activity.
-In fact, the full properties of an event cannot be calculated from first principles only.
-A set of \ac{QCD} parameters is thus derived to precisely describe the \ac{UE}.
-These parameters are known as /tunes/, resulting from a complex fitting procedure which (at least for =Pythia=) uses data from \ac{CDF} and \ac{CMS} at different energies.
-	
-\myparagraph{SIM}
-
-\noindent As soon as the process under study is generated, it is the task of the /simulation/ (SIM) step to use the GEN output to model the interaction of particles with the detector material.
+* SIM
+As soon as the process under study is generated, it is the task of the /simulation/ (SIM) step to use the GEN output to model the interaction of particles with the detector material, producing energy deposits in different detector elements.
 In \ac{CMS}, this is done using one of two frameworks.
-The first one, known as =FastSim=, relies on a simplified version of the \ac{CMS} geometry with infinitely thin material layers, and includes simple parameterised interaction models.
-On the other hand, a fully detailed but time consuming simulation is carried out by =Geant4= [[cite:&geant4_1;&geant4_2]], which is a widely used software toolkit to simulate the passage of particles through matter, and which has access to the full \ac{CMS} geometry.
-Comparing =FastSim= with =Geant4=, the former is \num{\sim 20} times faster, processing and reproduces the same output within a 10% uncertainty  [[cite:&fastsim]].
-It is used whenever the additional precision brought by =Geant4= is not required, as is the case for systematic uncertainty studies for top quark measurements, or when the speed-up is essential, which might happen for large parameter scans, as in some \ac{SUSY} signal scans.
+The first one, known as =FastSim=, relies on a simplified version of the \ac{CMS} geometry with infinitely thin material layers, and includes simple parameterized interaction models.
+On the other hand, a fully detailed but time consuming simulation is carried out by =Geant4= [[cite:&geant4_1;&geant4_2]] within the =FullSim=, which is a widely used software toolkit to simulate the passage of particles through matter, and which has access to the full \ac{CMS} geometry.
+Comparing =FastSim= with =Geant4=, the former is \num{\sim 20} times faster, processing and reproducing the same output within a 10% uncertainty  [[cite:&fastsim]].
+It is used whenever the additional precision brought by =Geant4= is not required, as is for instance the case for certain systematic uncertainty studies, and also when the speed-up is essential, which can happen for large parameter scans, as in some \ac{SUSY} signal scans.
 In this thesis, all \ac{MC} samples were simulated using =Geant4=.
 The geometry embedded in =Geant4= is continuously updated, reflecting the changes that are currently taking place for the \ac{HL-LHC}.
-The simulation produces energy deposits in different detector elements.
 
-\myparagraph{DIGI}
-
-\noindent The analog output of the SIM step is converted into digital signals in a step called /digitisation/ (DIGI).
-The goal is to mimic the digital output format produced by the detector electronics, including noise, readout logic, and pulse shaping and digitisation.
-The =FastSim= digitisation is very similar to the =FullSim= one [[cite:&fastsim]].
+* DIGI
+The analog output of the SIM step is converted into digital signals, in a step called /digitization/ (DIGI).
+The goal is to mimic the digital output format produced by the detector electronics, including noise, readout logic, pulse shaping and digitization, and \ac{L1} emulation.
+The =FastSim= digitization is very similar to the =FullSim= one [[cite:&fastsim]].
 The \ac{L1} trigger is emulated at this stage, ensuring consistency with the actual data processing.
-Importantly, also the \ac{PU} is simulated at this step, and depends on the concept of \ac{MB} events.
-\Ac{MB} events model inelastic \ac{pp} collisions, named after the very loose and thus "unbiased" trigger used to select them.
+Importantly, the \ac{PU} is also simulated at this step, and depends on the concept of \ac{MB} events.
+\Ac{MB} events model inelastic \ac{pp} collisions, named after the very loose and thus "unbiased" triggers used to select them.
 In \ac{CMS}, the \ac{MB} trigger is based on the \ac{HF} calorimeter ($3<|\eta|<5)$, specifically on the energy registered by its \acp{TT}.
-There are two ways to produce samples with simulated \ac{PU}: premix and classical mixing [[cite:&pileup_production]].
-Classical mixing requires the prior production of multiple \ac{MB} events with steps GEN and SIM, which will constitute the \ac{PU} sample.
-The primary simulated event is digitized together with the \ac{MB} events, where the former needs the to know the distribution according to which the \ac{PU} should be simulated.
+
+There are two ways of producing samples with simulated \ac{PU}: /premix/ and /classical mixing/ [[cite:&pileup_production]].
+Classical mixing requires the prior production of multiple \ac{MB} events with the GEN and SIM steps.
+The primary simulated event is digitized together with the \ac{MB} events, where information regarding the \ac{PU} distribution is needed.
 For the premix technique, instead, the \ac{PU} sample is digitized separately, before the primary event generation takes place, and can be reused multiple times.
-As a consequence, the digitisation steps needs to be run only for the primary event, and not for the \ac{PU}, making the premix method much faster and less CPU consuming than the classical mixing.
-The premix technique is an essential requirement in the \ac{CMS} offline procedding chain during \ac{HL-LHC}, given the prohibitive I/O levels required to sustain the classical aproach.
+As a consequence, the digitization steps needs to be run only for the primary event, and not for the \ac{PU}, making the premix method much faster and less CPU consuming than the classical mixing.
+The premix technique is an essential requirement in the \ac{CMS} offline processing chain during the \ac{HL-LHC}, given the prohibitive I/O levels required to sustain the classical approach.
 	
-\myparagraph{RAW and Reconstruction}
-
-\noindent The output of the DIGI step si reformatted and packed into the RAW data format, which is the format required to emulate the \ac{HLT}, and also exactly matches the format used by the detector.
+* RAW and Reconstruction
+The output of the DIGI step is reformatted and packed into the RAW data format, which is the format required to emulate the \ac{HLT}, and which also exactly matches the format used by the detector.
 From this moment on, the \ac{MC} and data processing chains follow identical steps.
-
-The next step consists on unpacking the RAW data back to the DIGI format.
+Next, the RAW data is unpacked back to the DIGI format.
 This is required in order to compare the DIGI output with the simulated one for validation purposes.
 From the DIGI format the offline /reconstruction/ begins, being explained in detail in [[#sec:offline_reco]].
-The output of the reconstruction is called RECO, which contains detailed information on the physics objects that were reconstructed, and is reprocessed a few times per period of collected data.
+The output of the reconstruction is called RECO, containing detailed information on the physics objects that were reconstructed, and is reprocessed a few times per data collection period.
 When using =FastSim=, the same reconstruction is used except for the tracker, where a simplified version aims at reducing \ac{CPU} time [[cite:&fastsim]].
-The first processing iteration is called =PromptReco= and occurs within \num{\sim 48} hours of data collection and a second named =ReReco= follows at the end of the yearly data-taking period.
-During the \acp{LS} additional reprocessings can be requested, called Legacy and Ultra-Legacy, the latter being used for the \xhhbbtt{} analysis reported in this thesis.
+The first processing iteration is called =PromptReco= and occurs within \num{\sim 48} hours of data collection, and a second named =ReReco= follows at the end of the yearly data-taking period.
+During the \acp{LS}, additional reprocessing iterations can be requested, called first Legacy and then Ultra-Legacy.
 Every new iteration improves on the detector calibration with respect to previous iterations.
 However, analyses usually do not need all the detail provided by the RECO format, which is large ($\sim 3\,\si{\mega\byte}/\text{event}$) and thus inefficient.
-Instead, smaller and less detailed formats are available with progressively less information and reduced precision, focusing on what most analyses use: the AOD, MiniAOD [[cite:&miniaod]] and NanoAOD [[cite:&nanoaod]] \ac{CMS} data formats.
-The HH analysis reported later in this thesis took advantage of the MiniAOD format.
-Future iterations of the same analysis in \run{3} will upgrade to use NanoAOD, which should provide faster turnarounds.
+Instead, smaller and less detailed formats are available with progressively less information and reduced precision, focusing on the quantities most analyses use
+The data formats are called AOD, MiniAOD [[cite:&miniaod]] and NanoAOD [[cite:&nanoaod]].
+The \xhhbbtt{} analysis reported in this thesis used the Ultra-Legacy MiniAOD data format.
+Future iterations of the same analysis in \run{3} will upgrade to NanoAOD, which should provide faster processing times.
 Central processing tools are naturally compatible with the MiniAOD and NanoAOD data formats.
 
-From now up to the end of the \ac{HL-LHC} program we can anticipate a virtuous feedback loop between accumulated data and the theoretical work which improves the quality of \ac{MC} samples.
-Updates will be also driven by the need for generating larger and larger samples for the most common processes, and for efficiently managing parameter variations for uncertainty studies.
-We should expect some developments along the directions of a precision increase for inclusive observables, technical improvements for fast and efficient generation of events, and improvements in the modelling of the hadronization and \acp{UE} [[cite:&hllhc_physics]].
+From now up to the end of the \ac{HL-LHC} program, we can anticipate a virtuous feedback loop between accumulated data and the theoretical work improving the quality of \ac{MC} samples.
+Updates will be also driven by the need to generate larger and larger samples for the most common processes, and to efficiently manage parameter scans for uncertainty studies.
+We should expect some developments along the directions of a precision increase for inclusive observables, technical improvements for fast and efficient generation of events, and improvements in the modeling of the hadronization and \acp{UE} [[cite:&hllhc_physics]].
 
 * Activities as Monte Carlo contact
 I started my currently on-going activities as \ac{CMS} ttH+HH \ac{MC} contact on June 2023, as part of the Higgs \ac{MC} group.
-During this time I generated more than \num{1000} samples, covering mostly nonresonant HH \run{3} \ac{MC} requests, for 2022 and 2023, and contributed to the common central \ac{CMS} Higgs \ac{MC} Gitlab repository.
-The requests cover the vast majority of HH samples that will be used for \run{3} nonresonant HH analyses, including \ac{ggF}, \ac{VBF} and \ac{BSM} samples with $\kt \ne 1$, for \num{\sim 15} final states.
-Besides generating samples, the contact position also requires following the requests closely, requesting submission priority updates, and serving as an intermediary between users, who request the samples, and overall \ac{MC} contacts and Higgs conveners, who approve requests and priority changes.
+During this time I generated more than \num{1000} samples, covering mostly nonresonant HH \run{3} \ac{MC} requests, for 2022 and 2023, and contributed to the common Higgs \ac{MC} software tools.
+The requests cover the vast majority of HH samples that will be used for \run{3} nonresonant HH analyses, including \ac{ggF}, \ac{VBF} and \ac{BSM} samples with $\kl \ne 1$, for \num{\sim 15} final states.
+Besides sample generation, the contact position also requires following requests closely, request submission priority updates, and serve as an intermediary between users, who request the samples, and overall \ac{MC} contacts and \ac{CMS} Higgs conveners, who approve requests and priority changes.
 
 

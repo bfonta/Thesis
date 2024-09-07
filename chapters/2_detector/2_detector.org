@@ -2,5 +2,15 @@
 :CUSTOM_ID: sec:cms_detector
 :END:
 
-+ introducao geral
- 
+\Ac{CMS} can be found in the french village of Cessy, located \SI{100}{\meter} underground, and is undoubtedly one of the most complex scientific instruments ever built.
+It derives its perceived "compactness" from a comparison with \ac{ATLAS}, since it is twice as small but twice as heavy.
+Its acronym is also relate to two fundamental components of \ac{CMS}'s structure, namely an imposing \SI{4}{\tesla} solenoid magnet, and a large system of muon detectors which provide an exquisite muon resolution.
+A community composed of almost 6300 people works for the success of \ac{CMS}, where approximately 2100 physicists, 1400 undergraduate students, 1200 PhD students and 1100 engineers are included.
+The experiment spans five continents, with the involvement of 57 countries and regions, totaling 247 institutes at the time of writing.
+
+The \ac{CMS} experiment was officially proposed in 1992, with the primary goals of discovering the Higgs boson and exploring \ac{BSM} physics at the \si{\TeV} scale.
+Key to this objective were the \hzzfourl{} and \hgg{} physics channels, which required an excellent \ac{EM} calorimeter for effective electron and photon detection.
+Nevertheless, all subdetectors in \ac{CMS} were designed to be versatile, and capable of measuring a wide range of physics processes across various energies, making \ac{CMS} truly a multi-purpose detector, as the hundreds of diverse papers so far published can attest.
+
+In this Section we start by defining the \ac{CMS} coordinate system which will be used across the remaining Chapters of this thesis.
+Next, a detailed description of individual components of \ac{CMS} is provided, since they represent the basis for understanding the trigger, reconstruction and simulation strategies later discussed.
