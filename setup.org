@@ -26,7 +26,7 @@
 #+LATEX_HEADER: \geometry{margin=1in}
 
 # ##### PhD Structure
-#+LATEX_HEADER: \newcommand{\PhDTitle}{Titre de la thèse (sur plusieurs lignes si nécessaire, 4 voire 5)}
+#+LATEX_HEADER: \newcommand{\PhDTitle}{Search for resonant Higgs boson pair production in the bb$\tau\tau$ decay channel and developments in the reconstruction of trigger primitives for the future High Granularity Calorimeter with the CMS detector at the LHC}
 #+LATEX_HEADER: \newcommand{\PhDname}{Bruno Afonso Fontana Santos Alves}
 #+LATEX_HEADER: \newcommand{\NNT}{20XXIPPAXXXX}
 #+LATEX_HEADER: \newcommand{\ecodoctitle}{Institut Polytechnique de Paris}

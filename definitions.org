@@ -26,6 +26,7 @@
 #+LATEX_HEADER: \newcommand{\mhh}{m_{\text{HH}}}
 #+LATEX_HEADER: \newcommand{\mh}{m_{\text{H}}}
 #+LATEX_HEADER: \newcommand{\mtt}{m_{t\bar{t}}}
+#+LATEX_HEADER: \newcommand{\mtautau}{m_{\tau\tau}}
 #+LATEX_HEADER: \newcommand{\mbb}{m_{\text{b}\bar{\text{b}}}}
 #+LATEX_HEADER: \newcommand{\mt}{m_{\text{t}}}
 #+LATEX_HEADER: \newcommand{\mw}{m_{\text{W}}}

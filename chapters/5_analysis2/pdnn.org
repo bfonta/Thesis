@@ -2,4 +2,122 @@
 :CUSTOM_ID: sec:pdnn
 :END:
 
-+ The process of determining an estimate ˆθ of some unknown parameter θ from observed data is called inference. [[cite:&lista]]
++ The process of determining an estimate $\theta$ of some unknown parameter $\theta$ from observed data is called inference. [[cite:&lista]]
+
+The \ac{DNN} represents a function with a given (usually large) number of parameters, mapping a vector of input features into a vector of class probabilities.
+Each event is categorized according to one of three possible classes: resonant \ac{ggF} \bbtt{} signal, \ac{DY} background or $\ttbar$ background.
+The parameters of the network are optimized, or learned, so that the network is better able to discriminate different classes.
+This is achieved via a /training/ procedure, which is in this case /supervised/, \ie{} it uses labelled data.
+In a nutshell, the optimization procedure is performed via /backpropagation/ [[cite:&backprop]], where the parameters of the network are iteratively adjusted.
+The procedure minimises a /loss function/, which quantifies the difference between predicted class probabilities and true class labels.
+The parameters are adjusted by calculating the derivative of the loss function with respect to the network parameters. 
+Each parameter is updated in the direction of the negative gradient of the loss function, scaled by a factor called /learning rate/.
+
+The adoption of \ac{DL} in the \xhhbbtt{} analysis naturally arises from the wish to extract the best possible limits with current technology.
+The latest nonresonant \hhbbtt{} analysis [[cite:&higgs_bbtautau_nonres]] has already exploited such techniques, following the approach introduced in Ref. [[cite:&prospects_hh_hllhc_2018]], achieving significant improvements with respect to previous publications.
+However, while in the nonresonant analysis one wished to extract the \ac{SM} HH signal alone, in the resonant analysis here presented such discrimination must be done for each signal sample, associated to a given mass and spin hypothesis.
+In order to create an optimal discriminant for N signal samples, one could define N separate discriminants, and optimize all of them separately.
+This approach is however impractical given $\text{N} = 25$ in our use case, and would lead to prohibitevely large resource needs.
+In addition, using a single network would enable the properties of under-populated mass points to be extrapolated from neighbouring mass points.
+
+Parametrised networks [[cite:&parameterised_nn]] provide a solution to these issues.
+One single network is trained, receiving as additional inputs the hypotheses to be classified.
+Parameterised learning has already been tested in this scenario and found to be useful in [[cite:&angelas_thesis]].
+Additionally, we have observed that the \ac{pDNN} here developed is more performant than a non-parameterized version with similar architecture and size.
+Despite the performance improvement, the parameterised approach introduces some complexities.
+During the training of the model, explained in detail in [[#sec:training]], the signal events are passed to the network together with their mass and spin values.
+For the background, the mass and spin are randomly sampled from all hypothesis being tested.
+During inference, the mass and spin features are fixed to one combination, such that the network's response is given for one specific hypothesis.
+This means that $\text{N} \times 2$ predictions must be generated per event.
+[[tab:training_inference]] summarizes the approach.
+
+#+NAME: tab:training_inference
+#+CAPTION: Treatment of resonance mass and spin values during training and inference with the analysis \ac{pDNN}. N stands for the number of resonance mass values, and the number 2 represents the two spin hypothesis. $m$ and $s$ refer to specific mass and spin values, respectively.
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{ccc}
+    \hline \\[-1em]
+     & \textbf{Sample Type} & \textbf{Description} \\ [+0.3em]\hline \\[-.8em]
+
+    \multirow{2}{*}{\textbf{Training}} & Background & Randomly sample $m$ and $s$ from all possible values. \\[+0.3em]
+                                       & Signal     & Use the $m$ and $s$ the signal sample was generated with. \\ [+0.3em]\hline \\[-.8em]
+
+    \multirow{4}{*}{\textbf{Inference}} & Data  & Generate a prediction for each event $\text{N}\times2$ times. \\[+0.3em]
+                                        & Background & Generate a prediction for each event $\text{N}\times2$ times. \\[+0.3em]
+
+                                        & \multirow{2}{*}{Signal} & Generate a prediction using the $m$ and $s$ the signal \\
+                                        &                         & was made with; used for the expected limits. \\ [+0.3em]\hline \\[-1em]
+\end{tabular}
+\end{table}
+
+Before describing in detail the architecture and training of the model in [[ref:sec:architecture,sec:training]], we briefly mention the challenges introduced by the parameterized approach in the determination of systematic uncertainties.
+Given that $\text{N} \times 2 = 50$ are defined, and each of those predictions has an independent set of associated systematic uncertainties, the total number of systematic uncertainties to be considered increases enormously.
+For each variation affecting the input features of the \ac{pDNN}, a corresponding systematic uncertainty must be computed for all 50 combinations.
+A significant part of this thesis was devoted to process, distribute and store all the data necessary to correctly compute systematic uncertainties within a parameterised approach.
+
+* Architecture
+:PROPERTIES:
+:CUSTOM_ID: sec:architecture
+:END:
+
+The network follows a densely connected structure [[cite:&huang2018densely]], prepended by a \ac{LBN} [[cite:&Erdmann_2019]] and the regression head of the network described in [[#sec:tautau_regression]].
+The total set of input features is split into the subset of features for the $\mtautau$ regression network and the subset of features fed into the \ac{LBN}, which receives all four vector components of the two reconstructed leptons and the two reconstructed b-jets of the event. 
+The outputs of these two networks are concatenated in an intermediate layer and fed into a densely connected \ac{DNN}, which consists of 8 densely connected hidden layers, each containing 128 nodes.
+This architecture has shown to smoothen the surface of the loss function [[cite:&li2018visualizing]], helping the training procedure when using large networks [[cite:&he2015deep]].
+A dropout [[cite:&dropout]] of 5% is is considered.
+Batch-normalisation layers are added after the concatenation of the two heads and before every dense layer [[cite:&batchnorm]];
+Swish-1 activation functions for hidden layers [[cite:&swish]];
+For both \tautau-regression network and the LBN, categorical features are embedded using entity embeddings [[cite:&cat_embed]].
+The architecture is illustrated in [[fig:combined_model]].
+
+#+NAME: fig:combined_model
+#+CAPTION: Architecture of the combined model consisting of the $\mtautau$ regression network, the \ac{LBN} and the densely connected \ac{DNN}. The weights of the regression network are ...
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/combined_model.pdf]]
+#+END_figure
+
+* Training
+:PROPERTIES:
+:CUSTOM_ID: sec:training
+:END:
+
+When training a \ac{DNN}, one should ensure that the network can generalize to unseen data.
+This is crucial, as networks can suffer from /overfitting/, in which sufficiently large networks, after enough time, perfectly fit the data they were trained on, but are unable to make predictions on different datasets.
+This is a consequence of fitting irrelevant information, rather than its dominant features.
+In order to avoid overfitting, the available samples are divided into two subsets.
+The first is used for training, and the second for /validation/, \ie{} for evaluating the performance of the network in an unbiased way, using data it has never seen.
+This procedure works, but has the disadvantage of holding out a portion of the data, leading to an increase of the statistical uncertainty associated to each prediction.
+A strategy was therefore chosen such that all samples can be used, in a procedure where $k$ \ac{NN} discriminants are associated to $k$ subsets of the full dataset, or /folds/.
+Each \ac{NN} is trained on $k-1$ folds, with the remaining fold being held out for validation.
+No two \acp{NN} are validated with the same fold, ensuring that the full data is used.
+Each \ac{NN} is initialized with an independent "He-Uniform" weight-initialization scheme [[cite:&he2015weights]]. 
+After the training, the predictions are averaged out across all discriminants.
+
+The training data consist of all background samples and resonant \ac{ggF} \bbtt{} signal samples, for all 4 data-taking periods.
+The three analysis channels and three analysis categories are included, as defined in [[#sec:selection]].
+
+# inputs
+The following 3 classes of input features are considered:
++ *continuous*: all continuous features listed in [[tab:input_features]], already used by the $\mtautau$ regression model, and additional inputs to the \ac{LBN}, namely the $\tau\tau$ and bb four-momenta;
++ *categorical*: \ditau{} decay channel, the charges of the reconstructed \taus{}, the data-taking period, and a boolean value standing for whether an AK8 jet is present in the event;
++ *parameterised*: the mass and spin vlaues representing the hypotheses being tested.
+        
+# training loop
+One step of the training loop is generally referred to as an /epoch/, which corresponds to one full pass of the training data through the network.
+The data is processed in /batches/, each with a size of 4096 events.
+The ADAM optimizer [[cite:&adam]] is considered, starting with a learning rate set to 0.003.
+As the training progresses, the learning rate is reduced so that the minimum of the loss function is not overshoot.
+A dynamic learning rate scheduler steadily decreases the learning rate based on the validation loss.
+The training is stopped as soon as 10 epochs have passed without the improvement of the validation loss.
+
+Since the network utilises the already-optimized weights of the \tautau-regression head, care must be taken during optimisation such that its weights are not changed to values resulting in lower performance.
+For this reason, the weights of the $\mtautau$ regression network are only added to the forward-pass of the training after 150 training steps. Additionally, the connection between the \tautau-regression network and the densely connected DNN is fed through a /fade-in/ layer.
+The purpose of this layer is to slowly introduce the output of the $\mtautau$ regression network to the densely connected \ac{DNN}, such that the weights of the latter are not changed too abruptly.
+This is achieved by multiplying the outputs of the connection between the two networks by a factor which is slowly increased over time.
+This factor is linearly increased from zero to one over 20 epochs, and starting from epoch 150.
+
+Finally, all of the classes are represented in equal fractions within each batch.
+This is required to prevent the discriminant to ignore signal events, given that they represent a minority when taking the full background plus signal datasets into account.

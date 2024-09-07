@@ -2,4 +2,41 @@
 :CUSTOM_ID: sec:analysis2_intro
 :END:
 
-+ Discuss the advent of DNNs
+The previous Chapter described in detail what in simple words amounts to a lenghty and complex data processing step.
+We covered techniques that have been repeated and refined over the years, performing selections, estimates and corresponding validations with one goal only: improve the analysis sensitivity.
+This Chapter finally substantiates all these efforts into a quantifiable measurement.
+Simply put, we want to state whether the observed data matches the backgrounds, and thus the \ac{SM}, or if it can alternatively accommodate one or more of the proposed signal excesses.
+To find potential differences, we need a /discriminating variable/ sensitive to the underlying probability distributions of data and backgrounds.
+The higher the discrimination power of such observable, the more sensitive the analysis becomes, equating to the possibility of measuring smaller and smaller \ac{BSM} cross sections.
+Conversely, would such observable be poorly defined, and the analysis would not be able to detect \ac{NP}, even if abundant.
+Therefore, the choice of the discriminating variable is of dramatic importance, representing the nexus of all analysis decisions so far taken.
+
+Historically, \ac{HEP} discriminants were built out of kinematical and topological variables related to the events, as those are expected to encode the most information concerning the processes under study[fn::Matrix element discriminants are ocasionally employed, as they have been shown to provide the maximal information for the description of the underlying physics processes. The approach is often applied via the MELA package [[cite:&mela1;&mela2;&mela3;&mela4;&mela5]].].
+Instead, for the case of multiple analyses, including the resonance search covered in this thesis, the combined invariant mass of the final states, or a modified version thereof, was usually considered.
+Such a choice naturally stems from the "bumpy" signature expected, \ie{} the presence of a localized excess over a broadly distributed background.
+
+Since then, a paradigm shift took place: machine learning techniques, and in particular \ac{DL}, became widespread, due to exponential improvements in classification and regression capabilities.
+Despite being based on established principles [[cite:&perceptron;&Linnainmaa;&backprop]], \acp{DNN} rose to prominence only \num{\sim 15} years ago, but are today used in most industries, companies and academic institutions around the world, for tasks as varied as language generation, visual recognition, machine translation and fraud detection, among many, many others.
+The main reasons that lead to such a technological shift were the increased computational power, the introduction of new high-performant \ac{NN} architectures, and crucially the vast amounts of available data, which lie at the center of most \ac{DL} techniques.
+\Ac{HEP} has accompanied the trend, exploiting all sorts of \ac{DL} techniques to improve the performances of analyses, algorithms, and recently even triggers, achieving improvements that clearly stand above what has been predicted.
+
+In this Chapter we thus explain how various \ac{DL} techniques are leveraged to define a robust discriminating variable, described in [[#sec:pdnn]].
+In the Section that follows, we describe all systematic uncertainties taken into account, both arising from variations to the inputs of the \ac{DL} procedure, and also to shifts to the several event corrections described in [[#sec:mc_corrections]].
+The quantification of the differences between two alternative scenarios is the task of the statistical treatment presented in [[#sec:hypotheses]], which leads to the results in [[#sec:results_intro]].
+
+
+
+
+In fact, the chosen quantity is meant to optimally encode the relevant information which all the steps of the analysis were able to provide, so that the presence of a signal can be inferred.
+At its core, the idea simply lies on the certainty we can have that a particular data event is more likely to belong to the background or to the signal of interest.
+In the limiting case where the chosen variable has an underlying distribution that matches what is seen in the background and in the signal, no conclusion can be drawn.
+It is thus imperative to construct the most discriminant variable possible.
+The capability of distinguishing between two alternative scenarios, or /hypothesis/, is discussed in [[#sec:hypotheses]].
+
+
+# Jona
+The results of the exploration of the Higgs boson pair (HH) production in the \bbtt{} decay
+channel are presented in this Chapter alongside the statistical framework employed for the pur-
+pose. Nevertheless, it is worth it at this point to assemble a panoramic view of all the steps
+necessary to produce these results as described in the previous Chapters and schematically de-
+picted in Figure 5.3.

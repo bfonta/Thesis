@@ -1,3 +1,38 @@
 :PROPERTIES:
 :CUSTOM_ID: sec:likelihood
 :END:
+
+#+NAME: eq:joint_probability
+\begin{equation}
+\mathcal{P}(\pmb{\vec{x}}|\pmb{\vec{\xi}}\hspace{1mm}) = f(x_1|\pmb{\vec{\xi}}\hspace{1mm})dx_1 \cdot f(x_2|\pmb{\vec{\xi}}\hspace{1mm})dx_2 \cdot ... \cdot f(x_n|\pmb{\vec{\xi}}\hspace{1mm})dx_n
+\end{equation}
+
+#+NAME: eq:extended_probability
+\begin{equation}
+\mathcal{P}(\pmb{\vec{x}}|\pmb{\vec{\mu}},\pmb{\vec{\theta}}\hspace{1mm}) = \text{Pr}(n|\nu(\pmb{\vec{\mu}},\pmb{\vec{\theta}}\hspace{1mm})) \cdot \prod_{i=1}^{n}f(x_i|\pmb{\vec{\mu}},\pmb{\vec{\theta}}\hspace{1mm})dx_i
+\end{equation}
+
+#+NAME: eq:bayesian_nuisance
+\begin{equation}
+\rho(\pmb{\vec{\theta}}|\pmb{\vec{\widetilde{\theta}}}\hspace{1mm}) \sim p(\pmb{\vec{\widetilde{\theta}}}|\pmb{\vec{\theta}}\hspace{1mm}) \cdot \pi_{\theta}(\pmb{\vec{\theta}}\hspace{1mm})
+\end{equation}
+
+#+NAME: eq:extended_nuisance_probability
+\begin{equation}
+\mathcal{P}(\pmb{\vec{x}},\pmb{\vec{\widetilde{\theta}}}|\mu,\pmb{\vec{\theta}}\hspace{1mm}) = \text{Pr}(n|\mu\cdot s(\pmb{\vec{\theta}}\hspace{1mm})+b(\pmb{\vec{\theta}}\hspace{1mm})) \cdot \prod_{i=1}^{n}f(x_i|\pmb{\vec{\theta}}\hspace{1mm})dx_i \cdot p(\pmb{\vec{\widetilde{\theta}}}|\pmb{\vec{\theta}}\hspace{1mm})
+\end{equation}
+
+#+NAME: eq:likelihood1
+\begin{equation}
+\mu\cdot s_j(\pmb{\vec{\theta}}\hspace{1mm})+b_j(\pmb{\vec{\theta}}\hspace{1mm}) = \int_{x_j^{\text{min}}}^{x_j^{\text{max}}} f(x|\pmb{\vec{\theta}}\hspace{1mm})dx
+\end{equation}
+
+#+NAME: eq:likelihood2
+\begin{equation}
+\mathcal{L}(n,\pmb{\vec{\widetilde{\theta}}}|\mu,\pmb{\vec{\theta}}\hspace{1mm}) \equiv \prod_j\frac{(\mu\cdot s_j(\pmb{\vec{\theta}}\hspace{1mm})+b_j(\pmb{\vec{\theta}}\hspace{1mm}))^{n_j}}{n_j!} e^{-(\mu\cdot s_j(\pmb{\vec{\theta}}\hspace{1mm})+b_j(\pmb{\vec{\theta}}\hspace{1mm}))} \cdot p(\pmb{\vec{\widetilde{\theta}}}|\pmb{\vec{\theta}}\hspace{1mm})
+\end{equation}
+
+#+NAME: eq:likelihood3
+\begin{equation}
+\rho(\pmb{\vec{\theta}}|\pmb{\vec{\widetilde{\theta}}};\pmb{\vec{\kappa}}) = \frac{1}{\sqrt{2\pi}\ln{\pmb{\vec{\kappa}}}} \cdot \exp{-\left(\frac{\ln{(\pmb{\vec{\theta})}/\pmb{\vec{\widetilde{\theta}}}\hspace{1mm}}}{2\ln{\pmb{\vec{\kappa}}}}\right)^2}\cdot\frac{1}{\pmb{\vec{\theta}}}
+\end{equation}

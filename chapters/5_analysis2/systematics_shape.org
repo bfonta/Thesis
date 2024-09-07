@@ -37,9 +37,9 @@ We also recall that \ac{PU} variations are additionally used to correct the norm
 #+CAPTION: Comparisons between data and \ac{MC} of two of the most sensitive variables to \ac{PU}: the number of \acp{PV} (left) and the mean energy density (right), using 2017 \ac{UL} conditions. Courtesy of Pedro Silva.
 #+BEGIN_figure
 \centering
-#+ATTR_LATEX: :width .4\textwidth :center
+#+ATTR_LATEX: :width .45\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis2/nvtx_mm_log.pdf]]
-#+ATTR_LATEX: :width .4\textwidth :center
+#+ATTR_LATEX: :width .45\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis2/rho_mm.png]]
 #+END_figure
 

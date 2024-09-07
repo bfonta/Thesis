@@ -48,10 +48,13 @@ In what follows we also refer to this source as "\ac{QCD}" background.
 Other reducible backgrounds are the \ac{DY} production of a $\tau$ pair in association with a light quark pair, $\ttbar$ production with the decay of at least one of its W bosons to quarks, and the production of W bosons in association with light jets, where the latter are misidentified as either leptons or b jets.
 
 The irreducible backgrounds are instead those which final state particle content is identical to the signal of interest.
-The production of $\ttbar$ pairs dominates in this regard, namely when the decay is fully leptonic, as $\ttbar\to\bbbar\,\text{W}^{\pm} \text{W}^{\mp} \rightarrow  \bbbar\,\ell^{\pm} \bar{\nu_{\ell}} \tau^{\mp} \nu_{\tau}$, where $\ell$ can refer to electrons, muons or taus.
+The production of $\ttbar$ pairs dominates in this regard, namely when the decay is fully-leptonic, as $\ttbar\to\bbbar\,\text{W}^{\pm} \text{W}^{\mp} \rightarrow  \bbbar\,\ell^{\pm} \bar{\nu_{\ell}} \tau^{\mp} \nu_{\tau}$, where $\ell$ can refer to electrons, muons or taus.
 This background affects all the considered analysis channels.
+To give an idea, as stated in [[tab:background_xsecs1]], the $\ttbar$ cross section amounts to \SI{84.1}{\pico\barn} in the fully-leptonic channel only, against the expected \ac{SM} HH cross section of \SI{\sim 31}{\femto\barn}.
 The second most prominent irreducible background is again \ac{DY} lepton pair production, but this time with the additional jets being specifically b jets: $\text{Z}/\gamma^{*} + \bbbar \rightarrow \ell\ell + \bbbar$.
-Finally, backgrounds with a W boson plus jets are substantial for the baseline selection as described in [[#sec:selection]], but is strongly suppressed by later categorization, specifically b-jet tagger requirements.
+The inclusive \ac{DY} cross section is 5 orders of magnitude larger than the \ac{SM} HH cross section.
+Finally, backgrounds with a W boson plus jets are substantial for the baseline selection as described in [[#sec:selection]], and have a cross section even larger than the backgrounds above.
+However, W + jets is strongly suppressed by the analysis categorization step, specifically b-jet tagger requirements.
 The categorization is discussed in [[#sec:categorization]].
 Note that the inclusive W + jets sample is used in the $0 \le \htvar < 70\,\si{\GeV}$ only for simplicity, in order to not overlap with the samples binned in $\htvar$.
 The \ac{DY}, instead, exploits the full available event multiplicity, and the \ac{MC} must therefore be appropriately weighted, as described in [[#sec:drellyan_bckg]].
@@ -134,9 +137,15 @@ The samples are also used to extract all sorts of \ac{SF} corrections, as detail
 |---------------------------------------------------------+---------------------+-------------+---------------------------------------|
 
 * Signal samples
-The signal samples used to model the resonant \xhh{} processes refer to \spin{0} and \spin{2} processes, corresponding to the radion and graviton hypotheses, respectively.
-The models used for the \ac{ggF} signal samples used in our analysis were introduced in Ref. [[cite:&xanda_benchmarks_wed]], which defines a set of common parameter benchmarks multiple analyses can agree on.
+The signal samples used to model the resonant \xhh{} process refer to \ac{ggF} radion and graviton models, corresponding to \spin{0} and \spin{2} processes, respectively.
+The models are introduced in Ref. [[cite:&xanda_benchmarks_wed]], which defines a set of common benchmarks multiple analyses can agree on.
 This is crucial for comparisons and combinations across different channels.
+Analyses within the \ac{ATLAS} Collaboration also use the same \spin{2} model.
+The model used for the \spin{0} resonance is instead different, but equivalent when the zero-interference \ac{NWA} approach is considered, which is so far the case in the vast majority of \ac{HEP} analyses.
+In [[#sec:interf_intro]] we discuss an alternative approach.
+
+The samples are generated at \ac{LO} with =MadGraph v2.6.5=, and =Pythia8= is used for the hadronization, assuming the \ac{NWA}, having usually on the order of \num{e5} events, depending on spin, mass, and data-taking period.
+The mass range considered for both resonances is identical, covering the following values: \num{250}, \num{260}, \num{270}, \num{280}, \num{300}, \num{320}, \num{350}, \num{400}, \num{450}, \num{500}, \num{550}, \num{600}, \num{650}, \num{700}, \num{750}, \num{800}, \num{850}, \num{900}, \num{1000}, \num{1250}, \num{1500}, \num{1750}, \num{200}, \num{2500} and \SI{3000}{\GeV}.
 
 * MC reweighting
 :PROPERTIES:

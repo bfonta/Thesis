@@ -2,4 +2,21 @@
 :CUSTOM_ID: sec:tautau_regression
 :END:
 
++ introduce svfit:
+  the invariant mass of the $\tau\tau$ pair is reconstructed using the SVfit algorithm [[cite:&svfit]] that is based on a likelihood function which quantifies the level of compatibility between a Higgs mass hypothesis and the measured momenta of the visible $\tau$ decay products plus the missing transverse energy reconstructed in the event.
+  The SVfit algorithm improves the invariant mass reconstruction so that it is closer to 125 GeV for \htt{} events, when compared to the simple visible mass of the taus (or even the visible mass plus the missing transverse energy), therefore allowing a better identification of the signal events.
+
++ a brief description of how the training procedure of a \ac{DNN} works is available in [[#sec:pdnn]].
 + show one distribution with peaking ttH
+
+#+NAME: tab:input_features
+#+CAPTION: Lists of input variables used by the deep neural network for signal extraction. The first part of the table reports input variables in descending order of importance evaluated random forest models. The second part of the table reports the additional six categorical input features with no specific ordering criterion.
+#+ATTR_LATEX: :placement [!h] :center t :align c|c| :environment mytablewiderrows
+|--------------+-----------------------------------------------------------------|
+| Variable     | Description                                                     |
+|--------------+-----------------------------------------------------------------|
+| =DeepJetCvsB=  | Charm versus bottom \textsc{DeepJet} discriminator score        |
+| =DeepJetCvL=   | Charm versus light flavour \textsc{DeepJet} discriminator score |
+| $\mtautau$   | Invariant mass of the \htt{} candidate                          |
+| $\mbb$       | Invariant mass of the \hbb{} candidate                          |
+|--------------+-----------------------------------------------------------------|

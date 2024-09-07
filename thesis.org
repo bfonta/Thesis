@@ -1,5 +1,6 @@
 #+LATEX_CLASS: mimosis
 #+LATEX_CLASS_OPTIONS: [a4paper,12pt]
+#+EXPORT_FILE_NAME: thesis
 #+SETUPFILE: setup.org
 #+SETUPFILE: definitions.org
 #+EXCLUDE_TAGS: noexport
@@ -7,11 +8,10 @@
 
 * OPTIONS START :ignore:
 #+LATEX: \input{cover}
-# #### default spacing is 14pt
 #+LATEX: \fontsize{12pt}{13pt}\selectfont
 #+TOC: headlines 2
 
-* Higgs boson pair production in the Standard Model and beyond
+* Higgs Boson Pair Production in the Standard Model and Beyond
 #+INCLUDE: "chapters/1_intro/0_intro.org"
 ** The Standard Model of Particle Physics
 #+INCLUDE: "chapters/1_intro/1_sm_intro.org"
@@ -46,6 +46,7 @@
 *** Combining direct with indirect searches
 #+INCLUDE: "chapters/1_intro/4p3_combinations.org"
 
+
 * The CMS Detector at the LHC
 #+INCLUDE: "chapters/2_detector/0_cern.org"
 ** The Large Hadron Collider
@@ -69,7 +70,8 @@
 ** Monte Carlo generation
 #+INCLUDE: "chapters/2_detector/5_mc_generation.org"
 
-* Trigger primitives reconstruction for the HGCAL Level-1 trigger
+
+* Reconstruction of Trigger Primitives for the HGCAL Level-1 Trigger
 #+INCLUDE: "chapters/3_hgcal/0_intro.org"
 ** The High Luminosity LHC
 #+INCLUDE: "chapters/3_hgcal/1_hllhc.org"
@@ -94,7 +96,7 @@
 #+INCLUDE: "chapters/3_hgcal/6_hgcal_discussion.org"
 
 
-* Resonant search for \hhbbtt{}: Methods
+* Resonant Search for \hhbbtt{}: Setting the Stage
 #+INCLUDE: "chapters/4_analysis1/analysis1_intro.org"
 ** Samples
 #+INCLUDE: "chapters/4_analysis1/samples.org"
@@ -123,9 +125,9 @@
 #+INCLUDE: "chapters/4_analysis1/control_regions.org"
 
 
-* Resonant search for \hhbbtt{}: Results
+* Resonant Search for \hhbbtt{}: Extracting the Limits
 #+INCLUDE: "chapters/5_analysis2/intro.org"
-** Signal discrimination from background
+** Signal extraction
 #+INCLUDE: "chapters/5_analysis2/pdnn.org"
 ** Systematic uncertainties
 #+INCLUDE: "chapters/5_analysis2/systematics_intro.org"
@@ -134,19 +136,21 @@
 *** Shape uncertainties
 #+INCLUDE: "chapters/5_analysis2/systematics_shape.org"
 ** Statistical treatment
+#+INCLUDE: "chapters/5_analysis2/stats_intro.org"
 *** Hypothesis testing with the modified frequentist approach
 #+INCLUDE: "chapters/5_analysis2/hypothesis.org"
 *** The maximum likelihood method
 #+INCLUDE: "chapters/5_analysis2/likelihood.org"
 ** Results
-*** Limits
+#+INCLUDE: "chapters/5_analysis2/results_intro.org"
+*** Exclusion limits
 #+INCLUDE: "chapters/5_analysis2/final_limits.org"
 *** Comparison with other resonant \bbtt{} results
-** Prospects for resonant and non-resonant HH searches
+** Prospects for HH searches
 #+INCLUDE: "chapters/5_analysis2/prospects.org"
 
 
-* Effects of finite width and interference
+* Going Beyond the Narrow Width Approximation in HH Resonant Searches
 #+INCLUDE: "chapters/6_interf_studies/intro.org"
 ** The Stability of the Electroweak Vaccum
 #+INCLUDE: "chapters/6_interf_studies/ew_phase_transition.org"
@@ -164,6 +168,7 @@
 
 * APPENDIX OPTIONS:ignore:
 #+LATEX: \appendix
+
 
 * Appendix
 ** ATLAS results on double Higgs production
