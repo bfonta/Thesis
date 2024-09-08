@@ -23,13 +23,13 @@
 #+INCLUDE: "chapters/1_intro/1p3_higgs_mechanism.org"
 *** Phenomenology and experimental status of Higgs boson physics
 #+INCLUDE: "chapters/1_intro/1p4_higgs_exp_status.org"
-** Higgs boson pair phenomenology in the SM
+** Higgs Boson Pair Phenomenology in the SM
 #+INCLUDE: "chapters/1_intro/2_dihiggs.org"
 *** Production modes
 #+INCLUDE: "chapters/1_intro/2p1_production_modes.org"
 *** Final states
 #+INCLUDE: "chapters/1_intro/2p2_final_states.org"
-** Going beyond the SM
+** Going Beyond the SM
 #+INCLUDE: "chapters/1_intro/3_bsm_intro.org"
 *** SM shortcomings
 #+INCLUDE: "chapters/1_intro/3p1_short_comings.org"
@@ -37,7 +37,7 @@
 #+INCLUDE: "chapters/1_intro/3p2_nonres_BSM_hh.org"
 *** Resonant BSM HH Production
 #+INCLUDE: "chapters/1_intro/3p3_res_BSM_hh.org"
-** Experimental status of HH Physics
+** Experimental Status of HH Physics
 #+INCLUDE: "chapters/1_intro/4_hh_exp_status.org"
 *** Direct searches
 #+INCLUDE: "chapters/1_intro/4p1_direct_searches.org"
@@ -67,7 +67,7 @@
 #+INCLUDE: "chapters/2_detector/3_cms_trigger_system.org"
 ** Offline Reconstruction
 #+INCLUDE: "chapters/2_detector/4_offline_reco.org"
-** Monte Carlo generation
+** Monte Carlo Generation
 #+INCLUDE: "chapters/2_detector/5_mc_generation.org"
 
 
@@ -77,7 +77,7 @@
 #+INCLUDE: "chapters/3_hgcal/1_hllhc.org"
 *** Physics Motivation
 #+INCLUDE: "chapters/3_hgcal/1p1_hllhc_physics.org"
-** The High Granularity Calorimeter and other detector upgrades
+** The High Granularity Calorimeter and Other Detector Upgrades
 *** Detector Upgrades in CMS
 #+INCLUDE: "chapters/3_hgcal/2p1_cms_detector_upgrades.org"
 *** The CMS Phase-2 Trigger System
@@ -86,13 +86,13 @@
 #+INCLUDE: "chapters/3_hgcal/2p3_hgcal_introduction.org"
 *** Detector upgrades in other LHC experiments
 #+INCLUDE: "chapters/3_hgcal/2p4_hllhc_detector_upgrades.org"
-** The reconstruction of trigger primitives in HGCAL
+** The Reconstruction of Trigger Primitives in HGCAL
 #+INCLUDE: "chapters/3_hgcal/3_hgcal_trigger_primitives.org"
-** Development of a simplified HGCAL geometry and event processing chain
+** Development of a Simplified HGCAL Geometry and Event Processing Chain
 #+INCLUDE: "chapters/3_hgcal/4_event_geom_developments.org"
-** Cluster splitting
+** Cluster Splitting
 #+INCLUDE: "chapters/3_hgcal/5_cluster_splits.org"
-** Discussion and future directions
+** Discussion and Future Directions
 #+INCLUDE: "chapters/3_hgcal/6_hgcal_discussion.org"
 
 
@@ -111,48 +111,54 @@
 #+INCLUDE: "chapters/4_analysis1/trigger_regions.org"
 *** Note on the inclusion method
 #+INCLUDE: "chapters/4_analysis1/inclusion_method.org"
-** Physics objects
+** Physics Objects
 #+INCLUDE: "chapters/4_analysis1/physics_objects.org"
 ** Selection and Categorization
 #+INCLUDE: "chapters/4_analysis1/selection.org"
-** Mass regression of the tau lepton pair
+** Mass Regression of the Tau Lepton Pair
 #+INCLUDE: "chapters/4_analysis1/tautau_regression.org"
-** Modelling of background processes
+** Modelling of Background Processes
 #+INCLUDE: "chapters/4_analysis1/backgrounds.org"
-** Monte Carlo corrections
+** Monte Carlo Corrections
 #+INCLUDE: "chapters/4_analysis1/mc_corrections.org"
-** Control regions
+** Control Regions
 #+INCLUDE: "chapters/4_analysis1/control_regions.org"
 
 
 * Resonant Search for \hhbbtt{}: Extracting the Limits
 #+INCLUDE: "chapters/5_analysis2/intro.org"
-** Signal extraction
+** Signal Extraction
 #+INCLUDE: "chapters/5_analysis2/pdnn.org"
-** Systematic uncertainties
+** Systematic Uncertainties
 #+INCLUDE: "chapters/5_analysis2/systematics_intro.org"
-*** Normalization uncertainties
+*** Normalization Uncertainties
 #+INCLUDE: "chapters/5_analysis2/systematics_normalization.org"
-*** Shape uncertainties
+*** Shape Uncertainties
 #+INCLUDE: "chapters/5_analysis2/systematics_shape.org"
-** Statistical treatment
+** Statistical Treatment
 #+INCLUDE: "chapters/5_analysis2/stats_intro.org"
-*** Hypothesis testing with the modified frequentist approach
+*** Hypothesis Testing
 #+INCLUDE: "chapters/5_analysis2/hypothesis.org"
-*** The maximum likelihood method
+*** The Neyman-Pearson Lemma
+#+INCLUDE: "chapters/5_analysis2/lemma.org"
+*** The Maximum Likelihood Method
 #+INCLUDE: "chapters/5_analysis2/likelihood.org"
+*** Finding a Signal in HEP Experiments
+#+INCLUDE: "chapters/5_analysis2/cls.org"
+*** Expected and Observed Limits
+#+INCLUDE: "chapters/5_analysis2/exp_vs_obs.org"
 ** Results
 #+INCLUDE: "chapters/5_analysis2/results_intro.org"
-*** Exclusion limits
+*** Exclusion Limits
 #+INCLUDE: "chapters/5_analysis2/final_limits.org"
-*** Comparison with other resonant \bbtt{} results
-** Prospects for HH searches
+*** Comparison with Other Results
+** Prospects for HH Searches
 #+INCLUDE: "chapters/5_analysis2/prospects.org"
 
 
 * Going Beyond the Narrow Width Approximation in HH Resonant Searches
 #+INCLUDE: "chapters/6_interf_studies/intro.org"
-** The Stability of the Electroweak Vaccum
+** The Stability of the Electroweak Vacuum
 #+INCLUDE: "chapters/6_interf_studies/ew_phase_transition.org"
 ** The Singlet Model
 #+INCLUDE: "chapters/6_interf_studies/singlet_model.org"

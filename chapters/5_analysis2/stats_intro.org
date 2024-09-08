@@ -2,5 +2,6 @@
 :CUSTOM_ID: sec:stats_intro
 :END:
 
-# Jona
-# The statistical method employed in this search is the modified frequentist approach originally developed at the time of LEP , which was refined for the discovery of the Higgs boson (H) in 2012 and already used for the combination of the results from the ATLAS and CMS collaborations \cite{Cowan_2011,CMS-NOTE-2011-005}. This methodology involves the evaluation of the incompatibility between the observed data and two distinct hypotheses: the signal plus background hypothesis, also referred to as the \textit{null hypothesis} ($H_0$), and the background-only hypothesis, also referred to as the \textit{alternative} or \textit{alternate hypothesis} ($H_1$). This approach relies on the utilization of binned or parametric distributions of selected observables within each category of the search (in this analysis, binned distributions are employed). Therefore, after finalizing the analysis strategy summarised in the introduction to this Chapter, a discriminating observable is selected and strategically optimized to effectively distinguish signals from background contributions. 
+The search reported in this thesis makes use of the /modified frequentist approach/, a statistical method originally developed for Higgs boson searches at \ac{LEP} [[cite:&cls1]].
+Since then, it has been extensively used by searches and combinations from the \ac{LHC} experiments, notably for the combination paper reporting the observation of the Higgs [[cite:&asimov;&stat_procedure_comb_higgs]].
+We start by introducing the idea of hypothesis testing in [[#sec:hypotheses]] and describe the in ...

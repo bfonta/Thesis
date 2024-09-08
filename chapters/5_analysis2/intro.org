@@ -11,7 +11,7 @@ The higher the discrimination power of such observable, the more sensitive the a
 Conversely, would such observable be poorly defined, and the analysis would not be able to detect \ac{NP}, even if abundant.
 Therefore, the choice of the discriminating variable is of dramatic importance, representing the nexus of all analysis decisions so far taken.
 
-Historically, \ac{HEP} discriminants were built out of kinematical and topological variables related to the events, as those are expected to encode the most information concerning the processes under study[fn::Matrix element discriminants are ocasionally employed, as they have been shown to provide the maximal information for the description of the underlying physics processes. The approach is often applied via the MELA package [[cite:&mela1;&mela2;&mela3;&mela4;&mela5]].].
+Historically, \ac{HEP} discriminants were built out of kinematical and topological variables related to the events, as those are expected to encode the most information concerning the processes under study[fn::Matrix element discriminants are ocasionally employed, as they have been shown to provide the maximal information for the description of the underlying physics processes. They can only be successfully applied for "clean" backgrounds, without multijets, for instance. The approach is applied via the MELA package [[cite:&mela1;&mela2;&mela3;&mela4;&mela5]].].
 Instead, for the case of multiple analyses, including the resonance search covered in this thesis, the combined invariant mass of the final states, or a modified version thereof, was usually considered.
 Such a choice naturally stems from the "bumpy" signature expected, \ie{} the presence of a localized excess over a broadly distributed background.
 

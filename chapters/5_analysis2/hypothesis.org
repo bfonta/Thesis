@@ -1,38 +1,31 @@
 :PROPERTIES:
 :CUSTOM_ID: sec:hypotheses
 :END:
-
-
-+ Andrew: mention we consider the assymptotic limit and cite "the paper everybody cites"
   
-
-In statistics, the term /hypothesis/ indicates a given set of predicted probabilities, against which one compares observed data.
-The hypothesis generally assumed as true is traditionally called the /null hypothesis/, or $H_{0}$, while the hypothesis we are comparing with the null are dubbed /alternative/, or $H_{1}$, $H_{2}$, $H_{3}$, ...
-Hypothesis denote \acp{PDF} $f$ which depend on the data measured $x = (x_1,x_2,x_3,...)$ and eventually on free parameters $\theta = (\theta_1,\theta_2,\theta_3,...)$ which are in turn estimated from data.
-To measure the agreement between a given hypothesis and the data being measured, one constructs a function of the variables being measured, called /test statistic/, or $t(x)$.
-Each hypothesis implies a different \ac{PDF} for the test statistic, denoted as $f(t|H_0)$, $f(t|H_1)$, $f(t|H_2)$, ...
-One usually aims at constructing the simplest test statistic enabling the largest discrimination possible between hypothesis being compared.
-In order for accepting or rejecting a given $H_0$, one has to define a test statistic /cut/ $t_{\text{cut}}$ establishing an acceptance and a rejection region.
-The decision is then made by comparing the observed value of $t(x)$ with the agreed $t_{\text{cut}}$.
-When
+In statistics, the term /hypothesis/ refers to a statement one can make based on the agreement of the observed data with a given predictive model [[cite:&glen_cowan]].
+The hypothesis being assessed is traditionally called the /null hypothesis/, or $H_{0}$, against which a series of /atlernative/ hypotheses can be compared: $H_{1}$, $H_{2}$, $H_{3}$, ...
+Hypothesis denote \acp{PDF} $f(x;\theta)$ which depend on the measured data $x = (x_1,x_2,x_3,...)$ and potentially on free parameters $\theta = (\theta_1,\theta_2,\theta_3,...)$ which are estimated from data.
+To measure the agreement between a given hypothesis and the data being measured, one constructs a function of the variables being measured, called /test statistic/, or $t(x;\theta)$.
+Each hypothesis implies a different \ac{PDF} for the test statistic, denoted as $g(t|H_0)$, $g(t|H_1)$, $g(t|H_2)$, ...
+One usually tries to construct the simplest test statistic enabling the largest discrimination possible between the hypotheses being compared.
+In order to accept or reject a given $H_0$, one has to define a test statistic /cut/ $\tcut$ establishing an acceptance and a rejection region.
+The decision is then made by comparing the observed value of $t(x;\theta)$ with the $\tcut$ previously defined.
+When the value of $t(x;\theta)$ is within the acceptance region, the null hypothesis is said to be /accepted/; otherwise, it is /rejected/.
+Naturally, $\tcut$ can be arbitrarily chosen, affecting the sizes of the acceptance and rejection regions.
+In general, $\tcut$ is defined so to provide a significance level $\alpha$ according to some common threshold, oftentimes 5% or 10%:
 
 #+NAME: eq:significance_level
 \begin{equation}
-\alpha = \int_{t_{cut}}^{\infty} g(t|H_{0})dt
+\alpha = \int_{\tcut}^{\infty} g(t|H_{0})dt \: .
 \end{equation}
+
+\noindent The larger $\alpha$, the harder it becomes to reject $H_0$, and the smaller become /false negatives/, where $H_0$ is rejected despite being true.
+Conversely, the probability for the $H_0$ to be accepted given that $H_1$ is true is called a /false positive/, and is given by:
 
 #+NAME: eq:inverse_power
 \begin{equation}
-\beta = \int_{-\infty}^{t_{cut}} g(t|H_{1})dt
+\beta = \int_{-\infty}^{\tcut} g(t|H_{1})dt \: ,
 \end{equation}
 
-
-
-
-[[cite:&glen_cowan]]
-
-
-
-
-* Additional bibliography :noexport:
-+ 
+\noindent where $1-\beta$ is called the /power/ of the test.
+The smaller $\tcut$ is, the smaller $\beta$ will become, creating a "powerful" test in what concerns the discrimination against alternative hypotheses.

@@ -8,7 +8,8 @@ The parameters one wishes to access can be categorized in two classes:
 + *Parameters of Interest*:
   Representing the end goal of the experiments, \acp{POI} define the underlying probability distributions a particular analysis wishes to measure.
   In the case of the \xhhbbtt{} analysis, one wants to know whether the \spin{0} and \spin{2} models can describe the observed data, on top of the expected background.
-  This corresponds to the definition of a /signal strength modifier/ $\mu$, the \ac{POI} which compares the measured cross sections with the ones predicted by the model, in our case the \ac{SM}: $\mu \equiv \sigma_{\text{obs.}}/\sigma_{\text{SM}}$.
+  This corresponds to the definition of a single \ac{POI} which scales the signal, the /signal strength modifier/ $\mu \equiv \sigma_{\text{obs.}}/\sigma_{\text{signal}}$.
+  The signal is normalized to an arbitrary value, $\sigma\times\mathcal{B}=1\,\si{\femto\barn}$ in our case.
   Measuring $\mu \ne 0$ would indicate the presence of a \ac{BSM} signal.
   In [[#sec:likelihood]] we explain how this \ac{POI} is encoded in the maximum likelihood approach to extract the final results.
 + *Nuisance parameters*:

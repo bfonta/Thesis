@@ -2,37 +2,76 @@
 :CUSTOM_ID: sec:likelihood
 :END:
 
-#+NAME: eq:joint_probability
+A common task in statistics arises when, given a finite data sample $x = (x_1, x_2, \dots , x_n)$, being $n$ the number of measurements, we wish to estimate the parameters $\varphi = (\varphi_1, \varphi_2, \dots , \varphi_n)$ that define the underlying $f(x;\varphi)$ \ac{PDF} hypothesis.
+Assuming the hypothesis to be true, the probability to find the first measurement in the interval $[x_1, x_1 + dx_1]$ is simply given by the product between $f(x;\varphi)$ and the interval $dx_1$.
+If all measurements $x$ are independent, the probability to find all measurements $i$ in a $[x_i, x_i + dx_i]$ interval is given by the product of all individual probabilities.
+If $f(x;\varphi)$ truly describes the underlying data, a high probability is expected for the data to be measured where the \ac{PDF} predicts it to be.
+In other words, we can define the /likelihood function/ $L$:
+#+NAME: eq:likelihood
 \begin{equation}
-\mathcal{P}(\pmb{\vec{x}}|\pmb{\vec{\xi}}\hspace{1mm}) = f(x_1|\pmb{\vec{\xi}}\hspace{1mm})dx_1 \cdot f(x_2|\pmb{\vec{\xi}}\hspace{1mm})dx_2 \cdot ... \cdot f(x_n|\pmb{\vec{\xi}}\hspace{1mm})dx_n
+L(\varphi) = \prod_{i=1}^{n} f(x_i;\varphi) \: ,
 \end{equation}
 
-#+NAME: eq:extended_probability
+\noindent where the dependence on the intervals was removed since $dx_i$ do not depend on the parameters, and $L$ does not depend on the data $x$, which is treated as fixed, or equivalently, the data collection is over.
+The likelihood can be seen as the probability of observing the data, given a set of (unknown) model parameters, where we set $L(\varphi) \equiv L(x|\varphi)$ for brevity.
+Therefore, the parameters that maximize such probability are the ones which maximize $L(\varphi)$.
+We can thus search for the /maximum likelihood estimator/, by finding the highest maximum of the likelihood.
+
+It is often the case that $n$ is itself a Poisson random variable with mean $\nu$.
+This is true in \ac{HEP}, given the stochastic nature of any given physics process.
+For these cases, the /extended likelihood function/ is employed:
+#+NAME: eq:ext_likelihood
 \begin{equation}
-\mathcal{P}(\pmb{\vec{x}}|\pmb{\vec{\mu}},\pmb{\vec{\theta}}\hspace{1mm}) = \text{Pr}(n|\nu(\pmb{\vec{\mu}},\pmb{\vec{\theta}}\hspace{1mm})) \cdot \prod_{i=1}^{n}f(x_i|\pmb{\vec{\mu}},\pmb{\vec{\theta}}\hspace{1mm})dx_i
+L(\nu,\varphi) = \frac{e^{-\nu}}{n!} \prod_{i=1}^{n} \nu \, f(x_i;\varphi) \: .
 \end{equation}
 
-#+NAME: eq:bayesian_nuisance
+\noindent In practice, the /log-likelihood/ $\log L$ is usally considered, since it is mathematically much easier to treat:
+#+NAME: eq:loglikelihood
 \begin{equation}
-\rho(\pmb{\vec{\theta}}|\pmb{\vec{\widetilde{\theta}}}\hspace{1mm}) \sim p(\pmb{\vec{\widetilde{\theta}}}|\pmb{\vec{\theta}}\hspace{1mm}) \cdot \pi_{\theta}(\pmb{\vec{\theta}}\hspace{1mm})
+\log L(\nu,\varphi) = - \nu + \sum_{i=1}^{n} \log \left[ \sum_{j=1}^{m} \nu \, \varphi_{j} \, f_j(x_i) \right] \: ,
 \end{equation}
 
-#+NAME: eq:extended_nuisance_probability
+\noindent where it was assummed that $\nu$ does not depend on $\varphi$, and all terms not depending on the parameters were dropped.
+As the logarithm is a monotonically increasing function, the maxima of $L$ will also maximize $\log L$.
+
+# binned data
+The analysis reported in this thesis uses binned distributions, and thus one can see the \acp{PDF} as vectors, representing the event yield in all the bins of the distributions satisfying all analysis' selections and categories.
+A binned approach is here preferred for simplicity and computation efficiency.
+For $n_\text{tot}$ observations, the expectation values $\nu = (\nu_1, \nu_2, \dots, v_N)$ of the number of entries $n = (n_1, n_2, \dots, n_N)$ in the $N$ bins is given by:
+#+NAME: eq:expectation_bins
 \begin{equation}
-\mathcal{P}(\pmb{\vec{x}},\pmb{\vec{\widetilde{\theta}}}|\mu,\pmb{\vec{\theta}}\hspace{1mm}) = \text{Pr}(n|\mu\cdot s(\pmb{\vec{\theta}}\hspace{1mm})+b(\pmb{\vec{\theta}}\hspace{1mm})) \cdot \prod_{i=1}^{n}f(x_i|\pmb{\vec{\theta}}\hspace{1mm})dx_i \cdot p(\pmb{\vec{\widetilde{\theta}}}|\pmb{\vec{\theta}}\hspace{1mm})
+\nu_{i}(\varphi) = n_\text{tot} \int_{x_i^{\text{min}}}^{x_i^{\text{max}}} f(x; \varphi) dx \: ,
 \end{equation}
 
-#+NAME: eq:likelihood1
+\noindent where $x_i^{\text{min}}$ and $x_i^{\text{max}}$ represent the bin limits.
+
+# nuisances
+Following the parameter classification discussed in [[#sec:systematics]], in \ac{HEP} the parameters $\varphi$ are usually split into the \ac{POI} $\mu$ and nuisances $\theta$.
+The estimation of nuisance parameters is denoted $\tilde{\theta}$.
+We express our degree of belief that the real values $\theta$ are correctly represented by the estimates $\tilde{\theta}$ with a Bayesian probability density function $\rho(\theta_i | \tilde{\theta}_i)$.
+Using Bayes' theorem, one can convert $\rho$ into a frequentist probability $p(\tilde{\theta}_i | \theta_i)$, by using a uniform prior \ac{PDF} representing our full ignorance before the experiment takes place.
+For the case of the resonant analysis here reported, the functional form of $\rho(\theta_i | \tilde{\theta}_i)$ is given by the log-normal function:
+#+NAME: eq:log_normal
 \begin{equation}
-\mu\cdot s_j(\pmb{\vec{\theta}}\hspace{1mm})+b_j(\pmb{\vec{\theta}}\hspace{1mm}) = \int_{x_j^{\text{min}}}^{x_j^{\text{max}}} f(x|\pmb{\vec{\theta}}\hspace{1mm})dx
+\rho(\theta_i|\tilde{\theta}_i ; \kappa) = \frac{1}{\sqrt{2\pi}\ln{\kappa}} \, \exp \left[ -\left( \frac{\ln{(\theta_i)}/\tilde{\theta}_i}{2\ln{\kappa}} \right)^2 \right] \, \frac{1}{\theta_i} \: ,
 \end{equation}
 
-#+NAME: eq:likelihood2
+\noindent which is the recommended choice for multiplicative corrections, like all the ones used in \xhhbbtt{}.
+For small uncertainties, [[eq:log_normal]] with $\kappa = 1 + \varepsilon$ is identical to a Gaussian distribution of width $\varepsilon$, but can describe positively defined observables by going to zero at $\theta_i=0$.
+
+In \ac{HEP}, it is customary to write the expected signal event yield as $s$ and the expected background event yield as $b$.
+This enables to explicitly encode a dependence on the signal strength modifier $\mu$ as follows:
+#+NAME: eq:"Equation label"
 \begin{equation}
-\mathcal{L}(n,\pmb{\vec{\widetilde{\theta}}}|\mu,\pmb{\vec{\theta}}\hspace{1mm}) \equiv \prod_j\frac{(\mu\cdot s_j(\pmb{\vec{\theta}}\hspace{1mm})+b_j(\pmb{\vec{\theta}}\hspace{1mm}))^{n_j}}{n_j!} e^{-(\mu\cdot s_j(\pmb{\vec{\theta}}\hspace{1mm})+b_j(\pmb{\vec{\theta}}\hspace{1mm}))} \cdot p(\pmb{\vec{\widetilde{\theta}}}|\pmb{\vec{\theta}}\hspace{1mm})
+\nu_{i}(\mu,\theta) = \mu \, s_i(\theta) + b_i(\theta) \: ,
 \end{equation}
 
-#+NAME: eq:likelihood3
+\noindent where $\nu_{i}$ refers to the expected values of the bin entries in [[eq:expectation_bins]].
+Often, the null hypothesis corresponds to $\mu = 0$, while the alternative hypothesis stands for the presence of a \ac{BSM} signal with $\mu \neq 0$.
+Putting together all ingredients above, one can write the full expression of the likelihood in [[eq:ext_likelihood]], as considered for the binned \xhhbbtt{} analysis with systematic uncertainties:
+#+NAME: eq:ext_likelihood
 \begin{equation}
-\rho(\pmb{\vec{\theta}}|\pmb{\vec{\widetilde{\theta}}};\pmb{\vec{\kappa}}) = \frac{1}{\sqrt{2\pi}\ln{\pmb{\vec{\kappa}}}} \cdot \exp{-\left(\frac{\ln{(\pmb{\vec{\theta})}/\pmb{\vec{\widetilde{\theta}}}\hspace{1mm}}}{2\ln{\pmb{\vec{\kappa}}}}\right)^2}\cdot\frac{1}{\pmb{\vec{\theta}}}
+L(\mu,\theta) = \prod_{i=1}^{n} \frac{e^{-\left[ \mu \, s_i(\theta) + b_i(\theta) \right] }}{n_i!}  \left[ \mu \, s_i(\theta) + b_i(\theta) \right] \, p(\tilde{\theta}_i | \theta_i)
 \end{equation}
+
+\noindent where the last term can be determined using [[eq:log_normal]].
