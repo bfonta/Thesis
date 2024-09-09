@@ -9,6 +9,27 @@
 * OPTIONS START :ignore:
 #+LATEX: \input{cover}
 #+LATEX: \fontsize{12pt}{13pt}\selectfont
+#+LATEX: \input{start/dedication_page}
+
+* Summary
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+#+INCLUDE: "start/summary_en.org"
+
+* Résumé
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+#+INCLUDE: "start/summary_fr.org"
+
+* Acknowledgements
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+#+INCLUDE: "start/acknowledgements.org"
+
+* TOC :ignore:
 #+TOC: headlines 2
 
 * Higgs Boson Pair Production in the Standard Model and Beyond
@@ -172,7 +193,7 @@
 #+INCLUDE: "chapters/7_conclusions/conclusions.org"
 
 
-* APPENDIX OPTIONS:ignore:
+* APPENDIX OPTIONS :ignore:
 #+LATEX: \appendix
 
 

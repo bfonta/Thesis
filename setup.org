@@ -44,6 +44,9 @@
 #+LATEX_HEADER: \newcommand{\vpostt}{0.1}
 #+LATEX_HEADER: \newcommand{\hpostt}{6.1}
 
+# Dedication
+#+LATEX_HEADER: \input{start/setup_dedication}
+
 # Membre n°1 (Président) / Member n°1 (President)
 #+LATEX_HEADER: \newcommand{\jurynameA}{Luca Malgeri}
 #+LATEX_HEADER: \newcommand{\juryadressA}{XXXXXX, CERN (Genève)}
