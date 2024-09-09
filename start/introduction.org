@@ -1,0 +1,8 @@
+More than ten years have passed since the observation of the Higgs boson by the CMS and ATLAS Collaborations at the CERN Large Hadron Collider (LHC).
+What seemed the first of a series of discoveries bound to reshape the field of Particle Physics, surprisingly turned into an impressive statement of the solid foundations upon which the Standard Model (SM) of Particle Physics is built.
+Despite its success, the SM cannot be the ultimate answer to all mysteries the Universe still conceals; multiple theoretical issues and cosmological observations show otherwise.
+The work reported in this Thesis provides a contribution to the search for signs of New Physics (NP), via the analysis of computer simulations and data collected by the CMS experiment, and through studies and software developments for the future High Granularity Calorimeter (HGCAL), one of the major upgrades that CMS will soon encounter with the coming of the High-Luminosity LHC (HL-LHC).
+
+the bbtt channel has historically provided the best performances, being one of the three "silver bullets" of double Higgs boson physics.
+
+The Thesis is organizes as follows...

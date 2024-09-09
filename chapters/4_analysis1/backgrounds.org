@@ -16,7 +16,9 @@ Firstly, large samples are needed, especially in the distribution tails of the \
 Secondly, the misidentification of quark and gluon jets as \tauh{} candidates suffers from imperfect modelling, since detector effects are hard to quantify.
 As a consequence, the \ac{QCD} multijet background is estimated via a data-driven method, exploiting jet-enriched regions.
 
-The method is dubbed ABCD, where the analysis phase-space is divided into four regions, based on the isolation of the tau lepton and on the electric charges of the lepton pairs.
+The basic idea is to find fully uncorrelated variables upon which the \ac{SR} selection depends on, and invert the cuts to obtain signal-free regions.
+The latter can be used to estimate both the shape and the normalization of the \ac{QCD} background in the \ac{SR}, without using it directly.
+The method is dubbed ABCD, and explicitly divides the analysis phase-space into four regions, based on the isolation of the tau lepton and on the electric charges of the lepton pairs.
 One of the regions is the \ac{SR}, as defined in [[#sec:selection]] for each category, while the others are sidebands used to estimate the background in the \ac{SR}.
 The tau pairs are classified as SS when they have the same charge sign, or OS, when the signs are opposite.
 In [[fig:QCDregions]] we illustrate how the phase-space is divided, where region A denotes the \ac{SR}.
@@ -96,6 +98,19 @@ This sideband region has been defined by inverting the $\mtt$ and $\mbb$ mass cu
 Again, the \ac{QCD} estimation obtained with the ABCD method was found to be in good agreement with the \ac{MC}-subtracted data in this sideband, validating the \ac{QCD} estimations obtained in the analysis.
 In the third and final test, it is verified that the shapes extracted from the B and C regions are indeed compatible.
 Being all tests successful, the ABCD method is used for estimating the multijet background in the \xhhbbtt{} analysis, as it had already been the case with previous analysis iterations.
+
+Some alternative methods have historically been explored for multijet estimation.
+Parametric fits of data sidebands are probably the easiest to implement, but require narrow resonances and \ac{QCD}-pure sidebands.
+Some variations of the ABCD method have instead been explored, adopting more than four regions.
+The idea is that some residual correlations can exist between the two variables defining the ABCD phase-space.
+By adding an "E" and "F" regions, one can leverage the additional information from the added sidebands to better estimate the multijet background.
+This method is appropriately called "alphabet", and has been extended into higher-dimensionality spaces [[cite:&corcodilos_thesis]].
+Additionally, the transfer factors can be learned by \acp{DNN} or \acp{BDT}, such as in the resolved \ac{CMS} \hhbbbb{} analysis [[cite:&bbbb_resolved_cms]].
+Despite all possible improvements, it is important to state that the main drive for the proposals above is the possibility to obtain a very precise estimate leading to smaller related systematic uncertainties.
+However, the \xhhbbtt{} measurement is currently limited by statistical uncertainties, and so the reduction of systematic uncertanties is not as important as for other analysis with larger cross-sections.
+We think for instance about the \hgg{} process [[cite:&higgs_mass_cms]], where the mass of the Higgs has currently similar contributions from statistical and systematic uncertainty sources.
+On top, the definition of additional phase-space regions tends to increase statistical uncertanties.
+Overall, taking also into account the systematics discussed in [[#sec:syst_norm]], the ABCD method is deemed sufficient for the analysis here reported.
 
 * Drell-Yan
 :PROPERTIES:

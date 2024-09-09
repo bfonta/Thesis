@@ -2,123 +2,90 @@
 :CUSTOM_ID: sec:prospects
 :END:
 
-The HL-LHC [[cite:&hllhc]], introduced in [[#sec:hllhc]], is planned to commence data-taking in 2029 and aims to deliver a \ac{pp} collision data set corresponding to approximately \SI{3000}{\invfb}, at an unprecedented centre-of-mass energy of \SI{14}{\TeV}.
-In order to cope with the foreseen extreme conditions, major upgrades for many \ac{CMS} subdetectors are being investigated, as described in [[#sec:cms_detector_upgrades]], and the online and offline trigger and event reconstruction software will be rewritten, as detailed in [[#sec:phase2_trigger_system]], in order to fully exploit the potential of the upgraded detector.
-All ongoing software and hardware upgrades are put forward due to their scientifical motivation, which is quantified via projection studies.
-These provide an estimate of sensitivities to \ac{BSM} processes within the context of the \ac{HL-LHC}.
-In this section, we present an overview for the resonant and nonresonant HH results that the future increase in luminosity is expected to bring, focusing on the \bbtt{} channel.
+The results presented in the previous section used the full \ac{CMS} \run{2} data.
+We here discuss the future of Higgs boson pair production, considering future data-taking periods at the \ac{LHC} and \ac{HL-LHC}.
+
+* Run 3
+At the time of writing, \run{3} has already collected more data than \run{2}, and should reach \SI{\sim 250}{\invfb} until the end of 2025.
+Multiple analyses are being prepared, with \hhbbbb{} studies being quite advanced.
+As for the \bbtt{} channel, both nonresonant and resonant searches are being explored, including the \ac{EFT} approach, to be published within the next few years.
+What is clear is that the luminosity increase will necessarily bring more sensitivity.
+Assuming the standard naive $s/\sqrt{b}$ scaling, where the number of signal events $s$ stands above the background Poisson noise $\sqrt{b}$, the sensitivity increases with $\sqrt{L}$, being $L$ the integrated luminosity.
+Concerning upper limits on the cross section of interest, in the absence of a signal, the scaling will be inversely proportional to the statistical uncertainty of the background.
+Upper limits are thus expected to scale with $1/\sqrt{L}$.
+Thus, doubling the luminosity should enable an improvement of the order of 30%.
+We should however realistically expect larger improvements [[cite:&lumi_scaling]].
+On one hand, the increase in luminosity, besides adding more events in known regions, opens up the way to observables that were not previously available.
+Examples are regions with large invariant mass or \ac{pt} final states, which had so far been empty.
+New and dedicated reconstruction techniques can thus enhance analysis sensitivities via signatures which were previously absent.
+Furthermore, the data increase often also enables to better control systematic uncertainties.
+This fact is however likely not to be important for HH studies, since they will remain statistically dominated.
+To recap, we should expect improvements larger than the naive scaling, without any modification on current analysis strategies.
+
+On top, one has to consider improvements stemming from improved methods.
+New machine learning methods applied to all sorts of discriminants have the potential to make current results quickly obsolete.
+The most prominent example is the mass-decorrelated \ac{PNet} [[cite:&particle_net]].
+Beyond its current AK4 an AK8 jet-tagging capabilities, notably reconstructing merged $\bbbar$ and $\ccbar$ topologies, \ac{PNet} has been extended with jet flavour classification, jet mass regression, and even $\tau\tau$ tagging.
+\Ac{PNet} has for instance already been used for energy regression in the context of jet energy scale calibrations, improving energy response resolution by \SI{\sim 15}{\percent} [[cite:&pnet_jet_calibration]].
+Based on performance measurements, it is likely that some top or boson tagging with \ac{PNet} will be slowly replaced by updated versions based on the state-of-the-art transformer technology [[cite:&transformer]].
+Needless to say, the impact on HH analyses, including \bbtt{} topologies, is expected to be serious.
+
+Improvements due to novel trigger strategies are also to be expected, delivered both by the new data scouting and parking streams cite:&parking_scouting_run3_cms, and also by the implementation of \ac{PNet} b-tagging directly at \ac{HLT}.
+The improved tagger enables one to lower \hhbbbb{} and \hhbbtt{} jet \ac{pt} thresholds and $\htvar$ selections.
+Completely new triggers have also been added; for the \bbtt{} analysis we can mention new 4j+2b and 4j+1b+1\tauh{} paths, the latter only from 2024 onwards.
+Using a different approach, as discussed in [[#sec:parking_scouting]], the introduction of VBF and HH parking streams has already been shown to massively impact HH studies (see [[fig:hh_parking_improv]]).
+Finally, the inclusion of \ac{PNet} $\tau\text{-tagging}$ at trigger level is being envisaged, and might still be done during \run{3}.
+When considering all the improvements above, trigger efficiencies are expected to increase by more than 60% for \bbtt{}, and more than 80% for \bbbb{}.
+
+Further improvements on \bbtt{} topologies are also certainly envisageable.
+There is currently an on-going effort to explore extremely boosted \bbtt{} topologies, considering $\mx$ values of at least \SI{1}{\TeV}.
+Such topologies require significantly different analysis strategies.
+The analysis is dominated by the presence of \ac{MET}, given the large Higgs boson boosts.
+Importantly, the $\tau$ pair is also extremely boosted, and the conventional \ac{HPS} algorithm fails; different tools must thus be developed, being \ac{PNet} a possibility.
+A future combination between the results produced in this Thesis and potential high mass results should improve the limits at large $\mx$ values.
+In the meantime, \run{3} \bbtt{} analyses are already exploring the possible addition of boosted $\tau$ leptons.
+Finally, has shown in [[#sec:final_limits]], including the results derived in this Thesis in a full resonant combination will certainly improve the exclusion limits and intermediate mass values.
+
+We also draw a quick note on ZZ and ZH processes, since they represent standard candles to validate HH analyses, given their cross sections 31 and 8 times larger than the \ac{SM} cross section, respectively, and their similar decay topologies.
+A recently published resolved \zzzhbbbb{} analysis [[cite:&zz_zh_bbbb]] uses a series of advanced background estimation techniques that might be useful in future HH studies.
+A particularly promising example is the usage of synthetic datasets to successfully validate \ac{QCD} estimates, using the "hemisphere mixing technique" [[cite:&hemisphere_mixing]].
+Pseudo-data might be exploited in the future also to measure \ac{QCD}-related systematics directly in the analysis \ac{SR}.
+A similar strategy, given appropriate modifications, would be applicable to \bbtt{} analyses.
+The analysis here reported was also developed within the same time period as a similarly defined \zzbbtt{} analysis, enabling helpful discussions.
+Future exchanges between such similar topologies might enrich the field, and ultimately provide better sensitivities in multiple channels at once.
+
+* HL-LHC
+The future of HH studies can also be envisaged beyond \run{3}, namely during the next phase of the \ac{LHC} phase [[cite:&hllhc]].
+As introduced in [[#sec:hllhc]], such gigantic update should commence data-taking in 2029, delivering up to \SI{4000}{\invfb} \ac{pp} collisions, at a centre-of-mass energy of \SI{14}{\TeV}.
 The measurement of the Higgs self-coupling will arguably become the nexus of all \ac{HEP} research until the 2040s, should no interesting excess or deviation be measured by then.
+Further constraints on $\kl$ and \ac{EFT} couplings will certainly be achieved.
+Current limits on $\kl$, and also on \ac{EFT} couplings, will be further challenged by the addition of yet unexplored HH production modes and decay channels.
+Regardless, HH studies will continue to be statistically-dominated, despite a possible increase in the importance of theoretical uncertainties.
+On top of the recent $\kvv=0$ exclusion, and assuming $\kl=1$, we believe nonresonant Higgs boson pair production will be measured via a multi-channel combination by the end of the \ac{HL-LHC} the latest [[cite:&higgs_10_years]], perhaps after a combination with \ac{ATLAS}.
 
-* The \zzzhbbbb{} analysis
-The ZZ and ZH processes represent standard candles to validate the HH analyses, given that they have cross-sections 31 and 8 times larger than the \ac{SM} ones, respectively, and are therefore expected to be observed before the \bbbb{} process.
-The recently published resolved \zzzhbbbb{} analysis [[cite:&zz_zh_bbbb]] uses a series of advanced background estimation techniques to successfully validate a \ac{QCD} estimate using synthetic datasets ([[sec:qcd_bkgd_problem]]).
-
-In order to model the \ac{QCD} background, a control region is defined by requiring three b-tagged jets instead of four.
-The dataset thus obtained, so as to reproduce the \ac{SR}, is weighted by two sets of weights, ti account for additional jet activity and subsisting kinematic mismatches.
-The weights are derived in a di-jet mass sideband.
-
-The analysis introduces a \ac{DNN} architecture especially designed to handle the b-quark pairing combinatorics: the \ac{HCR} network.
-A detailed explanation is outside the scope of this work, but suffices to say that it is used to discriminate signal from background, to define the background model kinematic weights, and to differentiate \ac{QCD} from $\ttbar{}$ in the technique of [[sec:hemisphere_mixing]].
-
-The final fit is validated using the synthetic dataset, without statistical fluctuations, and using one of the mixed models as the four-tag data. Systematics behaved as expected and the result was compatible with a zero signal strength.
-The observed (expected) 95% CL upper limits on the production cross sections correspond to 3.8 (3.8) and 5.0 (2.9) times the \ac{SM} prediction, for the \zzbbbb{} and \zhbbbb{} processes, respectively.
-The analysis indicates that ZH will likely be ovserved first.
-
-* The problem with \ac{QCD} simulations
-<<sec:qcd_bkgd_problem>>
-
-Many analysis in CMS include quark- or gluon- induced jets in their final state particles.
-This is also the case for some HH analysis, including the most sensitive ones (since they include a pair of b-jets) [[cite:&higgs_bbtautau_nonres;&bbgg_cms;&bbbb_resolved_cms;&bbbb_boosted_cms]].
-\ac{QCD} backgrounds are often significant, and sometimes dominant, as in \bbbb{} analysis, where the second most common source of background, $\ttbar$, is almost an order of magnitude less common.
-Unfortunately, currently available \ac{QCD} simulations lack the required precision and statistics for a robust background estimate, particulary in the higher energy distribution tails.
-
-Data-driven methods are therefore usually employed to model the \ac{QCD} background.
-These usualy take the form of "ABCD-like" methods, where \acp{CR} are defined in such a way as to ensure orthogonality with respect to the \ac{SR}.
-Some variants exist, such as (possibly high-dimensional) "alphabet" [[cite:&corcodilos_thesis]] and "fake factor" [[cite:&fake_factor_method;&higgs_bbtautau_hy]] methods, but the general principles, especially in the context of this work, are similar.
-The basic idea is to find fully uncorrelated variables upon which the \ac{SR} selection depends on, and invert the cuts to obtain signal-free regions.
-The latter can be used to estimate both the shape and the normalization of the \ac{QCD} background in the \ac{SR}, without using it directly.
-
-To give an example, in the most recent \bbtt{} non-resonant analysis [[cite:&higgs_bbtautau_nonres]], the \tau isolation and the relative sign of the charges of the two leptons are used to create three \acp{CR} around the analysis \ac{SR} (opposite-charged leptons and well isolated \tau's). Defining B, C and D as three \acp{CR} where B has equally charged leptons and tight isolation, C has opposite charged leptons and loose isolation, and D has both cuts inverted, the shape of the \ac{SR} can be inferred either by B or C and the normalization by B/D or C/D, respectively.
-In the resolved \bbbb{} analysis [[cite:&bbbb_resolved_cms]], instead, the control regions are defined based on the invariant mass of the two Higgses and on the number of b-tagged jets.
-The \ac{SR}, having 4 b-jets, has its \ac{QCD} background modeled from events in \acp{CR} with 3-bjets.
-It is assumed that kinematic properties are similar between \acp{CR} and the \ac{SR}. 
-
-In all cases, the background is derived in a signal-free region, and thus requires an extrapolation to a different region of the phase-space.
-In order to validate the extrapolation, a \ac{VR} is usually employed.
-However, the definition of an additional region will necessarily deplete the signal region.
-Additionally, the extrapolation cannot be directly tested, since the \ac{VR} differs from the signal region inasmuch as it will not be signal-enriched.
-Finally, both \acp{CR} and \acp{VR} often have low statistics, and become a dominant source of systematic uncertainties.
-Indeed, finite data in \acp{VR} imply an "inherent limitation on the capability to validate the performance of the background model" [[cite:&zz_zh_bbbb]].
-There is therefore a need to develop new methods to estimate and validate the \ac{QCD} background estimation that are not sensitive to low statistics.
-In addition, it would be beneficial to directly test the ABCD extrapolation in the \ac{SR}.
-
-
-* Hemisphere mixing
-<<sec:hemisphere_mixing>>
-
-The hemisphere mixing technique [[cite:&hemisphere_mixing]] first creates a library of "hemispheres", which arise from the splitting of events along the plane orthogonal to the transverse thrust axis.
-The latter is in turn defined as the axis where the sum of the absolute values of the $\pt$ projections of the all the jets in the event is maximal.
-The splitting is done using a sample of events with four b-tagged jets, thus "pure" in signal events.
-For each hemisphere a set of four variables is calculated: mass, longitudinal momentum, and transverse momentum perpendicular and parallel to the thrust axis.
-A second pass on data mixes pairs of hemispheres by minimizing the distance of two hemispheres in terms of a normalized sum of the summary variables.
-The two hemispheres must belong to different events.
-
-The paper here discussed [[cite:&zz_zh_bbbb]] contributes with two improvements to the original hemisphere mixing technique.
-Firstly, the mixing step is performed with 3-tagged data in order to increase statistics and make (4-tagged) signal contamination negligible.
-Statistics are also increased by lowering the b-tag \ac{WP} used on the three jets.
-Secondly, the non-negligible presence of $\ttbar{}$ events is mitigated by removing such events from the mixing stage.
-This is done event-by-event via a classification with the \ac{HCR} network, which calculates the probability P(M) for each event to be multijet, where a random number X is generated between 0 and 1. If $\text{X} > \text{P(M)}$, the event is rejected.
-
-For the validation of the background model, we have to ensure the size of the synthetic dataset is comparable to the one used for the model.
-The hemisphere dataset is thus sub-sampled, and 15 separate mixed models are formed, given the available statistics.
-Systematic uncertainties of the \ac{QCD} modeling are determined using the synthetic dataset in three different ways:
-1. Differences between mixed models, arising from limited statistics, are quantified by using their average;
-2. The background model is compared with the mixed models in the signal region;
-3. An unconstrained signal template is added to the signal + background fit to verify if a spurious signal can be mimicked by the background model. This fit is compared with a background-only fit and found to be in agreement.
-
-Importantly, and despite not yet being used in the most recent \bbbb{} results, a principled and precise way of measuring the most important systematics directly in the \ac{SR} is now available.
-We note that, given appropirate modifications, a similar method could be extended to the \bbtt{} analysis.
-
-* Resonant searches
-:PROPERTIES:
-:CUSTOM_ID: sec:prospects_res
-:END:
-
-Current projection studies [[cite:&interf_studies]] focus on the most sensitive HH decay channels, namely \bbgg{}, \bbtt{}, and \bbbb{}.
-The studies are based on the resonant HH and YH searches from the \ac{CMS} full \run{2} data set (\SI{138}{\invfb}), as summarized in [[tab:hh_res_refs]].
+However, should an excess be found, the priorities of which HH studies to pursue would be quickly modified.
+In the following, we present instead an overview for the projected resonant HH results at the \ac{HL-LHC} [[cite:&interf_studies]].
+The studies, based on the \ac{CMS} full \run{2} resonant HH and YH searches, focus on the most sensitive HH decay channels, namely \bbgg{}, \bbtt{}, and \bbbb{}, as listed in [[tab:hh_res_refs]].
+For \bbtt{} channel, the used HY analysis did not probe $\my=125\,\si{\GeV}$, and thus $\my=120\,\si{\GeV}$ was considered and verified to be identical, given the available sensitivity.
+Individual channels are statistically combined to take advantage of their complementary sensitivity to different \ac{BSM} phase-space regions. 
+The expected cross section upper limits at \SI{95}{\percent} \ac{CL} are provided as a function of the masses of the \ac{BSM} scalars, $\mx$ and $\my$.
+Where appropriate, the signal cross sections are scaled to the centre-of-mass energy of \SI{14}{\TeV}.
+The efficiency in the reconstruction and identification of photons, leptons, jets and b-jets, as well as the resolution in their energy and momentum measurements are assumed to be unchanged with respect to \phase{1}.
+The experimental sensitivity expected at the \ac{HL-LHC} is derived using three systematic uncertainty scenarios, detailed in Ref. [[cite:&interf_studies]].
+Ordered from the most to the least conservative, they are called "S1", "S2" and "statistical only". 
+For the \bbtt{} channel, 95% \ac{CL} cross section upper limits are derived for $\mx$ within \num{300} and \SI{1000}{\GeV}.
+The expected upper limits at 95% \ac{CL} on the \xhhbbtt{} cross section projected to \SI{3000}{\invfb} are shown for \bbtt{} channel and for the combination of the three most sensitive HH channels in [[fig:prospects_combination]], for \spin{0}.
 
 #+NAME: tab:hh_res_refs
-#+CAPTION: References for the resonant HH and YH production analyses considered in the combonations discussed in the text, at the end of the \ac{HL-LHC}.
-#+ATTR_LATEX: :placement [!h] :center t :align c|c|
+#+CAPTION: References for the resonant HH and YH production analyses considered in the combinations discussed in the text and shown in [[fig:prospects_combination]], where results have been projected to \ac{HL-LHC} luminosities.
+#+ATTR_LATEX: :placement [!h] :center t :align c|c :environment mytablewiderrows
+|----------------------+-------------------------|
 | Final state          | Reference               |
 |----------------------+-------------------------|
 | \bbtt{}              | [[cite:&higgs_bbtautau_hy]] |
 | \bbgg{}              | [[cite:&higgs_bbgg_hy]]     |
 | \bbbb{} (merged-jet) | [[cite:&higgs_bbbb_hy]]     |
-
-Individual channels are statistically combined to take advantage of their complementary sensitivity to different \ac{BSM} phase-space regions. 
-The expected upper limits at \SI{95}{\percent}~\ac{CL} on the cross sections of the \ac{BSM} processes of interest are provided as a function of the mass of the \ac{BSM} scalars, $\mx$ and $\my$.
-Where appropriate, the signal cross sections are scaled to the centre-of-mass energy of \SI{14}{\TeV}.
-The efficiency in the reconstruction and identification of photons, leptons, jets and b-jets, as well as the resolution in their energy and momentum measurements are assumed to be unchanged with respect to \phase{1}.
-The experimental sensitivity expected at the \ac{HL-LHC} is derived using the following three systematic uncertainty scenarios, ordered from the most to the least conservative:
-
-+ S1:
-  All systematics are assumed unchanged with respect to \run{2}.
-  This is an over-conservative scenario, as the \ac{CMS} upgrades, the very large data set available for experimental calibrations, and the better reconstruction techniques under development are expected to substantial reduce several systematic uncertainties.
-  Advancements in the theory calculations are also expected to reduce theoretical uncertainties.
-  
-+ S2:
-  The theory uncertainties are halved, while the experimental uncertainties are set according to the recommendations of [[cite:&HLHELHC]].
-
-+ Statistical only:
-  The limits are derived considering only the statistical uncertainty in data, and are thus under-conservative.
-
-For the \bbtt{} channel, 95%~\ac{CL} cross section upper limits are derived for $\mx$ within \num{300} and \SI{1000}{\GeV}.
-The systematic uncertainty with the largest impact in S1 comes from the limited size of the MC simulation used for the background estimation. 
-In S2, the statistical uncertainties on the simulated events are assumed to be negligible, and the main systematic uncertainties arise from the efficiencies of the b-jet and $\tau$ identification and misidentification.
-The projected results from the channels considered are statistically combined. 
-Systematic uncertainties affecting multiple channels are treated as correlated among all the input channels.
-The expected upper limits at 95%~\ac{CL} on the \xhhbbtt{} cross section projected to \SI{3000}{\invfb} are shown for \bbtt{} channel and for the combination of the three most sensitive HH channels in [[fig:prospects_combination]], for \spin{0}.
+|----------------------+-------------------------|
 
 #+NAME: fig:prospects_combination
 #+CAPTION: Expected upper limits at 95%, on the product of the cross section for the production of a \spin{0} resonance X and the branching fraction $\mathcal{B}(\text{X} \rightarrow \text{HH})$, as a function of $\mx$, for an integrated luminosity of \SI{3000}{\invfb}. Shown are the effects of the different systematic uncertainty scenarios, which are explained in the text. (Left) \bbtt{} decay channel [[cite:&higgs_bbtautau_hy]]. (Right) Combination of the three analysis shown in [[tab:hh_res_refs]], including \bbtt{}. Taken from [[cite:&interf_studies]].
@@ -129,47 +96,25 @@ The expected upper limits at 95%~\ac{CL} on the \xhhbbtt{} cross section project
 [[~/org/PhD/Thesis/figures/analysis2/prospects_combination.pdf]]
 #+END_figure
 
-+ comment the results
-+ @compare combination result with the bbtt result from this thesis@
-+ also mention the YH results (without plots)
+Comparing the combination result with this Thesis' \spin{0} result shown in [[fig:result1]], one can unsurprisingly conclude that very significant improvements are expected for the \ac{HL-LHC} period, across the full $\mx$ range.
+The benefits are even more noticeable when performing the full combination.
+In parallel, \xyh{} analyses, where the Y scalar decays to $\bbbar$, are also projected into the future, considering the same three scenarios.
+Interestingly, the \bbtt{} final state is shown to drive the sensitivity when both X and Y scalar have a low mass, and also when they both have a high mass, for the same reasons as the ones discussed in [[#sec:direct_searches]].
 
-* Nonresonant searches
-:PROPERTIES:
-:CUSTOM_ID: sec:prospects_nonres
-:END:
+In conclusion, it should by now be clear that HH studies, either in their resonant or nonresonant versions, have vast potential for exploration up to the end of the \ac{HL-LHC}.
+Despite not being yet clear which ground-breaking accelerators and experiments will follow the \ac{HL-LHC}, it is hard to imagine a future in \ac{HEP} where the pair production of Higgs bosons does not take center stage.
 
-The near future promises further constraints on $\kl$ and on \ac{EFT} couplings in the context of nonresonant HH searches.
-Yet unexplored HH production modes and decay channels are currently being studied.
-On top of the recent $\kvv=0$ exclusion, and assuming $\kl=1$, we hope to measure nonresonant HH via a multi-channel combination by the end of the \ac{HL-LHC} [[cite:&higgs_10_years]].
-Uncertainties are still dominated by the lack of statistics, but \ac{ggF} theory uncertainties might become important in the future.
 
-For the moment, Run3 is an opportunity to bring improvements before the start of the \ac{HL-LHC}.
-New techniques, including better estimates of \ac{QCD} background and new machine learning methods, will make existing results quickly obsolete.
-The usage of \ac{PNet} [[cite:&particle_net]] for \tau-initiated jets and the application of transformer technology to jet tagging [[cite:&transformer]] might have a strong impact.
-This opens up a potentially large phase-space for boosted $H\rightarrow bb/cc/a\tau\tau$ analyses.
-Run 3 will extend \ac{PNet}'s tasks, with jet flavour classification, $\tau\tau$ identification and jet mass regression.
-It has already been used for energy regression in the context of jet energy scale calibrations, improving energy response resolution by \SI{\sim 15}{\percent} [[cite:&pnet_jet_calibration]].
-
-Additionally, an improved trigger strategy has been implemented, considering both data scouting and parking cite:&parking_scouting_run3_cms, and with the inclusion of \ac{PNet} b-tagging directly in the trigger.
-New triggers will benefit \bbtt{} analysis with the added 4j+2b and 4j+1b+1\tauh{} paths (the latter in 2024 only).
-\Ac{pt} thresholds will be lower for \hhbbbb{} and \hhbbtt{}.
-The inclusion of \ac{PNet} \tau-tagging at trigger level is being envisaged, and might be done still during Run3.
-We also expect that some HH analysis might benefit from the inclusion of synthetic datasets, as discussed in [[sec:hemisphere_mixing]].
-The first \ac{CMS} Run3 HH results will soon be available.
-
-+ first run3 single higgs result [[cite:&cms_higgs_gg_run3]]
-
-+ reduce bbH background to HH: [[https://indico.cern.ch/event/1291157/contributions/5876805/attachments/2898998/5083322/240718_ICHEP_bbHforHH.pdf][talk]]
-
-+ giovanni marchiori ICHEP [[https://indico.cern.ch/event/1291157/contributions/5876729/attachments/2899194/5088459/2024_07_18%20-%20ICHEP2024%20-%20Higgs%20physics%20opportunities%20at%20the%20FCC.pdf][talk]]
-  
 * Additional bibliography :noexport:
++ [ ] first run3 single higgs result [[cite:&cms_higgs_gg_run3]]
++ [ ] reduce bbH background to HH: [[https://indico.cern.ch/event/1291157/contributions/5876805/attachments/2898998/5083322/240718_ICHEP_bbHforHH.pdf][talk]]
++ [ ] giovanni marchiori ICHEP [[https://indico.cern.ch/event/1291157/contributions/5876729/attachments/2899194/5088459/2024_07_18%20-%20ICHEP2024%20-%20Higgs%20physics%20opportunities%20at%20the%20FCC.pdf][talk]]
 + [[https://indico.cern.ch/event/1404329/contributions/5903658/attachments/2834334/4953058/Tau_Trigger_Apr_10th_BA-4.pdf][PNet for \tau's]] (TSG meeting)
 + Cite various parking data streams [[cite:&parking_scouting]]  
 + [[https://indico.cern.ch/event/1342837/contributions/5653121/attachments/2760253/4806661/20231120_DeepDive_HH.pdf][DeepDive_HH]], Marko Stamenkovic
 + [[cite:&hllhc_physics]] (pages 22 and 23)
 + mention briefly HE-LHC [[cite:&hllhc_physics]]
-** 4b novel techniques
 + [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-20-005&tp=an&id=2316&ancode=HIG-20-005][HIG-20-005]] (4b resolved)
 + [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=HIG-22-011&tp=an&id=2605&ancode=HIG-22-011][HIG-22-011]] (ZZ/ZH->4b)
-  + [[https://indico.cern.ch/event/1275872/][DeepDive QCD modelling]]
++ [[https://indico.cern.ch/event/1275872/][DeepDive QCD modelling]]
+    

@@ -17,14 +17,12 @@ The above channels drive the sensitivity of combinations, but are complemented b
 In the \ac{ggF} production process only, \ac{CMS} obtained results on \hhbbzz{} [[cite:&cms_hh_bbzz]] and on the extremely rare \hhttgg{} decay ($\mathcal{B}\approx0.028\%$) [[cite:&gammagammatautau]].
 The latter is not used in the combinations reported below.
 Taking into account both \ac{ggF} and \ac{VBF}, \ac{CMS} also has multilepton (HH decaying to WWWW, $\text{W}\text{W}\tau\tau$ and $\tau\tau\tau\tau$) [[cite:&cms_hh_multileptons]], \hhbbww{} [[cite:&cms_hh_bbww]] and \hhwwgg{} [[cite:&cms_hh_wwgg]] analyses.
-
 #+NAME: fig:HH_nonres_comb_xsec
 #+CAPTION: Upper limits at 95% \ac{CL} on the SM signal strength $\mu = \xshh / \xshhsm$. The inner (green) and outer (yellow) bands indicate the regions containing 68% and 95%, respectively, of the limits on $\mu$ expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the post-fit values of the uncertainties. Figure taken from [[cite:&summary_hig_twiki]].
 #+BEGIN_figure
-#+ATTR_LATEX: :width .7\textwidth
+#+ATTR_LATEX: :width .65\textwidth
 [[~/org/PhD/Thesis/figures/intro/limits_HH_SM_Mar2023.pdf]]
 #+END_figure
-
 The most up-to-date Run2 HH combination constrains the observed (expected) HH cross section to $\xshh < 3.4\;(2.5)\;\xshhsm$, as shown in [[fig:HH_nonres_comb_xsec]].
 The limit is also interpreted as a function of the $\kl$ and $\kvv$ coupling modifiers, observing $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively, a t 95% \ac{CL}.
 The coupling modifier results are shown for individual channels in [[fig:HH_nonres_comb_c2v]], and compared to the theory prediction in [[fig:scan_comb_cms_nature]].

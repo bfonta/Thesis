@@ -69,7 +69,7 @@ This enables to explicitly encode a dependence on the signal strength modifier $
 \noindent where $\nu_{i}$ refers to the expected values of the bin entries in [[eq:expectation_bins]].
 Often, the null hypothesis corresponds to $\mu = 0$, while the alternative hypothesis stands for the presence of a \ac{BSM} signal with $\mu \neq 0$.
 Putting together all ingredients above, one can write the full expression of the likelihood in [[eq:ext_likelihood]], as considered for the binned \xhhbbtt{} analysis with systematic uncertainties:
-#+NAME: eq:ext_likelihood
+#+NAME: eq:ext_likelihood_final
 \begin{equation}
 L(\mu,\theta) = \prod_{i=1}^{n} \frac{e^{-\left[ \mu \, s_i(\theta) + b_i(\theta) \right] }}{n_i!}  \left[ \mu \, s_i(\theta) + b_i(\theta) \right] \, p(\tilde{\theta}_i | \theta_i)
 \end{equation}

@@ -11,7 +11,7 @@ To test a given value of the signal strenght modifier $\mu$, we define the /\ac{
 \end{equation}
 
 \noindent where $\hat{\mu}$ and $\hat{\theta}$ in the denominator are the maximum likelihood estimators of $\mu$ and $\theta$, respectively, and $\hat{\theta}_{\mu}$ denotes the value of $\theta$ that maximizes the likelihood for a given $\mu$.
-In other words, the denominator is the unconditional maximized likelihood function, obtained when the minimization is performed simultaneously on $\mu$ and $\theta$.
+In other words, the denominator is the unconditional maximized likelihood function, obtained when the minimization is performed simultaneously on $\mu$ and $\theta$, while the numerator is conditioned on the value of $\mu$ being probed.
 $\lambda(\mu)$ is by construction bounded between 0 and 1, and higher values correspond to better compatibilities between the data and $\mu$.
 
 The nuisance parameters introduced in [[eq:log_normal]] make the profile likelihood broader, reflecting the information lost due to systematic uncertainties.
@@ -28,17 +28,15 @@ q_0 \equiv \left\{
         -2\ln{\lambda(0)} & \mbox{if } \hat{\mu}\geq0 \\
                 0 & \mbox{if } \hat{\mu}<0
         \end{array}
-      \right. \:\:\: ,
+      \right. \:\:\: .
 \end{equation}
 
-\noindent 
-
-The level of agreement between the data and the hypothesized $\mu$ value can be expressed by the /p-value/.
-The p-value represents the probability, under the assumption of the null hypothesis, of obtaining a result equal or more extreme (less compatible) than the one obtained with the measured value of the test statistic $q_{\mu}^{\text{obs.}}$.
+\noindent The level of agreement between the data and the hypothesized $\mu$ value can be expressed by the /p-value/.
+The p-value represents the probability, under the assumption of the null hypothesis, of obtaining a result equal or more extreme (less compatible) than the one obtained with the measured value of the test statistic, $q_{0}^{\text{obs.}}$ for excesses.
 The formal definition is given by:
 #+NAME: eq:pvalue_limit
 \begin{equation}
-p = \int_{q_{0}^{\text{obs.}}}^{\infty} f(q_{0} | \mu=0) dq_{0} \: ,
+p = \int_{q_{0}^{\text{obs.}}}^{\infty} f(q_{0} | \mu=0) \, dq_{0} \: ,
 \end{equation}
 
 \noindent which can be converted into a significance Z, using a one-side Gaussian integral, often used to report results in \ac{HEP} publications:
@@ -68,16 +66,14 @@ q_{\mu} \equiv \left\{
 The test statistic is set to zero for $\hat{\mu}>\mu$ because, in the specific case of an upper limit, such a situation would not be interpreted as a rejection of the null hypothesis, as we would be probing a value of $\mu$ that lies closer to the background-only hypothesis than the maximum likelihood estimator $\hat{\mu}$.
 
 The test statistic in [[eq:upper_limits]] can be exploited to define exclusion limits via the modified frequentist confidence level criterion [[cite:&cls1;&cls2]].
-Given $q_{\mu}^{\text{obs.}}$, we calculate the probabilities for $q_{\mu}$ to be equal or larger under the null or alternative hypothesis:
-
+Given $q_{\mu}^{\text{obs.}}$, we calculate the probabilities for $q_{\mu}$ to be equal or larger under the null or alternative hypotheses:
 #+NAME: eq:pvalue_like
 \begin{align}
-  p_{s+b} &= P(q_{\mu} \geq q_{\mu}^{\text{obs.}} | \, s + b) = \int_{q_{\mu}^{\text{obs.}}}^{\infty} f(q_{\mu} | \, s+b) \, dq_{0} \nonumber \\
-  p_{b} &= P(q_{0} \geq q_{0}^{\text{obs.}} | \, b) = \int_{q_{0}^{\text{obs.}}}^{\infty} f(q_{0} | \, b) \, dq_{0}
+  p_{s+b} &= P(q_{\mu} \geq q_{\mu}^{\text{obs.}} | \, s + b) = \int_{q_{\mu}^{\text{obs.}}}^{\infty} f(q_{\mu} | \, s+b) \, dq_{\mu} \nonumber \\
+  p_{b} &= P(q_{\mu} \geq q_{\mu}^{\text{obs.}} | \, b) = \int_{q_{\mu}^{\text{obs.}}}^{\infty} f(q_{\mu} | \, b) \, dq_{\mu}
 \end{align}
 
 \noindent A given signal strength $\mu$ is said to be excluded at a confidence level $\text{CL} = 1 - \alpha$ if one finds:
-
 #+NAME: eq:cls
 \begin{equation}
     \text{CL}_{\text{s}}(\mu) \equiv \frac{p_{s+b}}{p_b} < \alpha

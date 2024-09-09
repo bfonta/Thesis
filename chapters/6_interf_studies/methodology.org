@@ -40,7 +40,7 @@ The samples are created according to the following parameter grid, using $\kl = 
 + $\sina$: \num{0.00}, \num{0.10}, \num{0.20}, \num{0.30}, \num{0.40}, \num{0.50}, \num{0.60}, \num{0.70}, \num{0.80}, \num{0.90}, \num{0.95}, \num{0.99};
 + $\lhhx$ [\si{\GeV}]: \num{-600}, \num{-500}, \num{-400}, \num{-300}, \num{-200}, \num{-100}, \num{-50}, \num{0}, \num{50}, \num{100}, \num{200}, \num{300}, \num{400}, \num{500}, \num{600}.
 
-\noindent The values of $\mx$ are chosen based on the signal samples used in the HH combination presented in [[#sec:prospects_res]].
+\noindent The values of $\mx$ are chosen based on the signal samples used in the HH combination presented in [[#sec:prospects]].
 The resonant, nonresonant, and total HH cross sections in the singlet model for each combination of grid points are generated separately, to what amounts to a very computationally intensive task, with the parallel generation of \num{4860} grid points.
 The nonresonant cross section is obtained by setting the $g_{\text{X} kk}$ coupling in [[eq:singlet_couplings]] to zero, and the resonant-only cross section by setting $g_{\text{H} kk}$ to zero.
 We perform parameter scans in $\mx$, $\sina$, and $\lhhx$ for the three cross sections above, and additionally for the /interference ratio/, defined as:

@@ -2,7 +2,7 @@
 :CUSTOM_ID: sec:samples
 :END:
 
-The analysis uses \SI{137.2}{\invfb} of \run{2} \ac{UL} data collected at $\sqrt{s}=13\,\si{\TeV}$ during 2016 (\SI{35.9}{\invfb}), 2017 (\SI{41.5}{\invfb}) and 2018 (\SI{59.8}{\invfb}) at \ac{CMS}.
+The analysis uses \SI{138}{\invfb} of \run{2} \ac{UL} data collected at $\sqrt{s}=13\,\si{\TeV}$ during 2016 (\SI{35.9}{\invfb}), 2017 (\SI{41.5}{\invfb}) and 2018 (\SI{59.8}{\invfb}) at \ac{CMS}.
 
 * Data samples
 As seen in [[#sec:hlt]], \ac{CMS} structures its datasets in \acp{PD}, each defined by a unique set of \ac{HLT} (a "soup of triggers"), where the inclusion of an event implies the latter triggered at least one of the paths.

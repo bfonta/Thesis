@@ -8,8 +8,10 @@
 
 * OPTIONS START :ignore:
 #+LATEX: \input{cover}
+#+LATEX: \pagenumbering{roman}
 #+LATEX: \fontsize{12pt}{13pt}\selectfont
 #+LATEX: \input{start/dedication_page}
+
 
 * Summary
 :PROPERTIES:
@@ -17,11 +19,13 @@
 :END:
 #+INCLUDE: "start/summary_en.org"
 
+
 * Résumé
 :PROPERTIES:
 :UNNUMBERED: t
 :END:
 #+INCLUDE: "start/summary_fr.org"
+
 
 * Acknowledgements
 :PROPERTIES:
@@ -29,8 +33,21 @@
 :END:
 #+INCLUDE: "start/acknowledgements.org"
 
+
 * TOC :ignore:
 #+TOC: headlines 2
+#+LATEX: \clearpage
+#+LATEX: \pagenumbering{arabic}
+
+
+* Introduction
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+#+LATEX: \addcontentsline{toc}{chapter}{Introduction}
+#+INCLUDE: "start/introduction.org"
+#+LATEX: \clearpage
+
 
 * Higgs Boson Pair Production in the Standard Model and Beyond
 #+INCLUDE: "chapters/1_intro/0_intro.org"
@@ -190,8 +207,13 @@
 
 
 * Conclusions
-#+INCLUDE: "chapters/7_conclusions/conclusions.org"
-
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+#+LATEX: \addcontentsline{toc}{chapter}{Conclusions}
+#+INCLUDE: "end/conclusions.org"
+#+INCLUDE: "end/quote.tex"
+#+LATEX: \clearpage
 
 * APPENDIX OPTIONS :ignore:
 #+LATEX: \appendix

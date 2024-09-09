@@ -147,7 +147,7 @@ Additionally, three new parking strategies have been introduced:
   As shown in [[fig:hh_parking_improv]], double and triple Higgs analyses benefit enormously from these developments, with much increased signal efficiencies.
 
 #+NAME: fig:hh_parking_improv
-#+CAPTION: Trigger efficiencies as a function of the invariant double Higgs mass for simulated samples. $\kl=1$ is assumed in both plots. Very significant efficiency increases are also observed in the \hhhbbbbbb{} and \hhhbbbbtt{} analyses. (Left) \hhbbbb{}, considering the full \run{2}, 2022 and 2023 data-taking periods. (Right) \hhbbtt{} in 2023 only. Taken from [[cite:&parking_hh_twiki]]; also available in [[cite:&parking_scouting_run3_cms]].
+#+CAPTION: Trigger efficiencies as a function of the invariant mass of Higgs boson pairs for simulated samples. $\kl=1$ is assumed in both plots. Very significant efficiency improvements are observed in the \hhhbbbbbb{} and \hhhbbbbtt{} analyses, driven by the inclusion of the HH parking stream. (Left) \hhbbbb{}, considering the full \run{2}, 2022 and 2023 data-taking periods. (Right) \hhbbtt{} in 2023 only. Taken from [[cite:&parking_hh_twiki]]; also available in [[cite:&parking_scouting_run3_cms]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/parking_bbbb_accept_gain.pdf]]

@@ -4,25 +4,33 @@
 
 + compare also to HY analysis [[cite:&higgs_bbtautau_hy]]
 + Importantly, the results of this work hint at a the strongest limit than the one in [[fig:res_comb_xhh]], opening a window for further improvements in the combination, still with \run{2} data.
++ at \SI{1}{\TeV}, our result is a factor of 2 better than the result of \ac{ATLAS} ("resonant HH production at a mass of 1 TeV and corresponding to a local (global) significance of \SI{3.1}{\sigma} (\SI{2}{\sigma})"
   
-#+NAME: fig:result_spin0
-#+CAPTION: Final limits for \spin{0}.
+#+NAME: fig:result1
+#+CAPTION: Final limits for \spin{0} and \spin{2}.
 #+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis2/final_limits_spin0.pdf]]
+\centering
+#+ATTR_LATEX: :width .85\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/spin0_no_legend_box.pdf]]
+#+ATTR_LATEX: :width .85\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/spin2_no_legend_box.pdf]]
 #+END_figure
 
-#+NAME: fig:result_spin2
+#+NAME: fig:result2
 #+CAPTION: Final limits for \spin{2}.
 #+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis2/final_limits_spin2.pdf]]
+\centering
+#+ATTR_LATEX: :width .85\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/spin0_vs_Atlas_CMSHY.pdf]]
+#+ATTR_LATEX: :width .85\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/spin0_vs_CMScomb.pdf]]
 #+END_figure
-
 
 + The reduction of the sensitivity around $\mx = 280\,\si{\GeV}$ is a consequence of the shape of the tt background, that peaks about this value,
 + see cadamuro
-
++ explain the observed trends in the limits (backgrounds, boosted taus)
++ mention the combination plots in [[fig:res_comb_xhh]]
+  
 * Pulls (maybe a different section??)
 (copiado do Jona)
 An important check to be performed is the control of the impact of the nuisance parameters on the result of the analysis by evaluating the so-called /pulls/ and /impacts/.
