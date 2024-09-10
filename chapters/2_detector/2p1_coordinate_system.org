@@ -3,7 +3,7 @@
 :END:
 
 \Ac{CMS} follows a right-handed coordinate system, where the origin is placed at the \ac{IP}.
-Following the diagram in [[fig:coords2]], the $x\text{-axis}$ points towards the center of the \ac{LHC} ring and thus roughly to \ac{ATLAS}, the $y\text{-axis}$ points vertically upward, and the $z\text{-axis}$ points towards the Jura mountains.
+Following the diagram in [[fig:coords2]], the $x\text{-axis}$ points towards the center of the \ac{LHC} ring, the $y\text{-axis}$ points vertically upward, and the $z\text{-axis}$ points towards the Jura mountains.
 The cylindrical structure of \ac{CMS} naturally favors the use of a cylindrical coordinate system, given by:
 #+NAME: eq:xyzcoords
 \begin{equation}
@@ -15,11 +15,6 @@ z = \text{R} \cos \theta
 \end{equation}
 
 \noindent where $x$, $y$ and $z$ are the standard 3D Cartesian coordinates, the radial coordinate is given by $\text{R}=\sqrt{x^2 + y^2}$, the azimuthal angle $\phi$ is measured in the $x\text{-}y$ plane from the $x\text{-axis}$, and the polar angle $\theta$ is measured from the $z\text{-axis}$ in the $y\text{-}z$ plane.
-One can also use the above to define a Lorentz-invariant spatial separation between two particles, which will be often used in later chapters:
-#+NAME: eq:deltar
-\begin{equation}
-\Delta\text{R} = \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}
-\end{equation}
 
 #+NAME: fig:coords2
 #+CAPTION: The coordinate system of the \ac{CMS} detector, with the \ac{IP} at its origin. The geographical location of \ac{CMS} with respect to the other large \ac{LHC} experiments is also provided. Courtesy of Izaak Neutelings [[cite:&izaak_neutelings]].
@@ -43,8 +38,9 @@ This explains why detector elements are often uniformly spaced in rapidity.
 
 However, we note that, contrary to what happens in accelerators colliding fundamental particles, rapidity uniformity does not hold true for individual \ac{pp} collisions, given the partonic distributions within each colliding proton.
 Different collisions can have wildly different rest frames.
-Additionally, due to the absence of detector components along the longitudinal direction at high $|\eta|$, which would interfere with the \ac{pp} beams, the momentum along the $z\text{-axis}$ remains unknown.
-It is thus beneficial to use variables that do not depend on $p_z$, being also Lorentz-invariant for boosts along the longitudinal direction.
+Additionally, due to the absence of detector components along the longitudinal direction close to the beamline, which would interfere with the \ac{pp} beams, the momentum along the $z\text{-axis}$ remains unknown.
+Most importantly, the momentum fraction carried along the $z\text{-axis}$ by each colliding parton is also unknown, as well as the longitudinal boost of the rest frame of the collision.
+It is thus beneficial to use variables that do not depend on $p_z$, being also Lorentz-invariant for those longitudinal boosts.
 The full energy and 3D momentum of a particle is thus replaced by the transverse momentum $p_\text{T}$ and the transverse mass $m_\text{T}$:
 #+NAME: eq:transverse_momenta
 \begin{equation}
@@ -68,6 +64,11 @@ A new quantity is thus defined, dependent solely on the angle $\theta$ and illus
 \noindent In the limit of large momenta, the rapidity and pseudorapidity become equal, but $y<\eta$ is always verified.
 Differences of \ac{eta} are thus also Lorentz invariant for $p \gg m$.
 Note that, despite the rapidity being finite, \ac{eta} can be infinite for particles produced at $\theta=0\si{\degree}$ or $\theta=180\si{\degree}$.
+One can also use the above to define a Lorentz-invariant spatial separation between two particles, which will be often used in later chapters:
+#+NAME: eq:deltar
+\begin{equation}
+\Delta\text{R} = \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}
+\end{equation}
 
 #+NAME: fig:coords1
 #+CAPTION: (Left) Schematic of different \ac{eta} values and their correspondence with the polar angle $\theta$. (Right) Standard coordinate system at \ac{CMS}, represented in relation to the \ac{LHC} and its experiments, and including the pseudorapidity. Courtesy of Izaak Neutelings [[cite:&izaak_neutelings]].

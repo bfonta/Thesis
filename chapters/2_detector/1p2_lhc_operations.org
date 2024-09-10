@@ -20,7 +20,7 @@ After the end of \run{2}, it was time for further detector refurbishments.
 For \ac{CMS}, this notably included new electronics for the hadronic calorimeter.
 
 The last \ac{LHC} run, naturally called \run{3}, is currently ongoing, having started in 2022 and with an end planned for next year, in 2025.
-It features a slightly higher beam energy, sitting at \SI{6.8}{\TeV}, approaching \ac{LHC}'s design value.
+It features a slightly higher center-of-mass energy, sitting at \SI{13.6}{\TeV}, approaching \ac{LHC}'s design value.
 Unfortunately, another \ch{He} leak was responsible for a complete halt of operations on September 2023.
 The culprit was eventually identified: a tree fell on Swiss power-lines, originating a power glitch that lead to the quench of an inner triplet magnet and the mentioned leak.
 Once the issue was addressed, the rest of the year was devoted to \ch{Pb}-\ch{Pb} collisions at \SI{5.36}{\TeV}.

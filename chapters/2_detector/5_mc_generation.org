@@ -5,27 +5,28 @@
 The usage of simulated \ac{MC} samples is indispensable in \ac{HEP}, from modeling signal processes to assessing the impact of new analysis methods and studying the behavior of particles in a detector.
 The development of future experiments would be impossible without dedicated simulations, which estimate fundamental quantities such as responses and resolutions before the hardware is put in place, and provide training data and optimization potential to a series of algorithms.
 \Ac{MC} samples are also essential to compare measured data to what is expected, giving handles for all sorts of calibration procedures and correction techniques.
-It goes without saying that \ac{MC} samples are a fundamental ingredient in this thesis, for the work related to the \ac{CMS} detector in [[#sec:intro_tps]] as well as for the \xhhbbtt{} analysis in [[ref:sec:analysis1_intro,sec:analysis2_intro]].
+It goes without saying that \ac{MC} samples are a fundamental ingredient in this Thesis, for the work related to the \ac{CMS} detector in [[#sec:intro_tps]] as well as for the \xhhbbtt{} analysis in [[ref:sec:analysis1_intro,sec:analysis2_intro]].
 
-The so-called full simulation, or =FullSim=, is used throughout this thesis for creating samples with a single particle in dedicated detector studies, or to perform instead the complete simulation of \ac{SM} and \ac{BSM} \hhbbtt{} events.
+#+NAME: fig:simulation
+#+CAPTION: Illustration of the generation workflow of \ac{MC} and data samples as defined within the \ac{CMS} Collaboration. After the simulated RAW format is produced and the hits and clusters are measured, the chain is identical for data and simulated samples. The \ac{PU} premixing technique is drawn using a dashed square to remember the reader that the classical and premixing techniques are not used simultaneously. The dashed double-headed arrow between the two DIGI formats represents the communication required to validate the \ac{MC} chain, which in addition emulates the \ac{L1} and \ac{HLT} triggers. The vast majority of \ac{CMS} analyses uses either the MiniAOD or NanoAOD formats. The latter is becoming more dominant, being more lightweight and faster to process.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/detector/FullSimulation.pdf]]
+#+END_figure
+
+The so-called full simulation, or =FullSim=, is used throughout this Thesis for creating samples with a single particle in dedicated detector studies, or to perform instead the complete simulation of \ac{SM} and \ac{BSM} \hhbbtt{} events.
 The =FullSim= corresponds to a detailed simulation of the entire experimental setup, including the propagation of particles through all detector components, the interaction of particles with the detector material, and the response of the various detectors components.
 The simulation of \ac{MC} events follows a well-defined processing chain in \ac{CMS}, being structured such that simulation and measured experimental data are processed in similar ways.
 Indeed, after the simulation phase, the two chains are identical, and produce identical data formats to be used by analysts.
 Output objects are eventually stored in different files, where files with the same event content share a common data tier, such as RAW, RECO or AOD.
 The general procedure is illustrated in [[fig:simulation]], and described in what follows.
 
-#+NAME: fig:simulation
-#+CAPTION: Illustration of the generation workflow of \ac{MC} and data samples as defined within the \ac{CMS} Collaboration. After the simulated RAW format is produced and the hits and clusters are measured, the chain is identical for data and simulated samples. The \ac{PU} premixing technique is drawn using a dashed square to remember the reader that the classical and premixing techniques are not used simultaneously. The dashed double-headed arrow between the two DIGI formats represents the communication required to validate the \ac{MC} chain, which in addition emulates the \ac{L1} and \ac{HLT} triggers. The vast majority of \ac{CMS} analyses uses either the MiniAOD or NanoAOD formats. The latter is becoming more dominant, being more lightweight and faster to process.
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth
-[[~/org/PhD/Thesis/figures/detector/FullSimulation.pdf]]
-#+END_figure
-
 * GEN
 The first step involves the /generation/ (GEN) of the physics processes of interest from theoretical principles [[cite:&cms_offline_computing]].
 Generated processes, handled by an event generator, exhibit an enormous variety.
-\Ac{CMS} relies on a rich set of event generators such as =Herwig= [[cite:&herwig1;&herwig2;&herwig3]], =Pythia= [[cite:&pythia1;&pythia2]], =Sherpa= [[cite:&sherpa1]], =PowHeg= [[cite:&powheg]] or =MadGraph= [[cite:&madgraph]].
-The analysis discussed in this thesis most often uses the last two generators, as described in [[#sec:samples]].
+\Ac{CMS} relies on a rich set of event generators such as =Herwig= [[cite:&herwig1;&herwig2;&herwig3]], =Sherpa= [[cite:&sherpa1]], =Pythia= [[cite:&pythia1;&pythia2]], =PowHeg= [[cite:&powheg]] or =MadGraph= [[cite:&madgraph]].
+The analysis discussed in this Thesis most often uses the last three generators, as described in [[#sec:samples]].
 Event generators try to accurately describe the intrinsically random nature of \ac{HEP} collisions or particle decays, using a set of probability distributions to model the subatomic particles produced, along with many of their properties, storing intermediate stages of the event modeling along the way [[cite:&pythia2]].
 Generators aim at describing what an event looks like before interacting with detector elements.
 A generic \ac{pp} collision is usually generated with separate components for practical purposes, namely the hard scattering of two partons, radiative corrections, parton showering (initial and final state radiation), \acp{MPI}, \acp{BBR} and hadronisation.
@@ -54,7 +55,7 @@ The first one, known as =FastSim=, relies on a simplified version of the \ac{CMS
 On the other hand, a fully detailed but time consuming simulation is carried out by =Geant4= [[cite:&geant4_1;&geant4_2]] within the =FullSim=, which is a widely used software toolkit to simulate the passage of particles through matter, and which has access to the full \ac{CMS} geometry.
 Comparing =FastSim= with =Geant4=, the former is \num{\sim 20} times faster, processing and reproducing the same output within a 10% uncertainty  [[cite:&fastsim]].
 It is used whenever the additional precision brought by =Geant4= is not required, as is for instance the case for certain systematic uncertainty studies, and also when the speed-up is essential, which can happen for large parameter scans, as in some \ac{SUSY} signal scans.
-In this thesis, all \ac{MC} samples were simulated using =Geant4=.
+In this Thesis, all \ac{MC} samples were simulated using =Geant4=.
 The geometry embedded in =Geant4= is continuously updated, reflecting the changes that are currently taking place for the \ac{HL-LHC}.
 
 * DIGI
@@ -74,7 +75,7 @@ As a consequence, the digitization steps needs to be run only for the primary ev
 The premix technique is an essential requirement in the \ac{CMS} offline processing chain during the \ac{HL-LHC}, given the prohibitive I/O levels required to sustain the classical approach.
 	
 * RAW and Reconstruction
-The output of the DIGI step is reformatted and packed into the RAW data format, which is the format required to emulate the \ac{HLT}, and which also exactly matches the format used by the detector.
+The output of the DIGI step is reformatted and packed into the RAW data format, which is the format required to emulate the \ac{HLT}, and which also exactly matches the format the detector outputs.
 From this moment on, the \ac{MC} and data processing chains follow identical steps.
 Next, the RAW data is unpacked back to the DIGI format.
 This is required in order to compare the DIGI output with the simulated one for validation purposes.
@@ -87,7 +88,7 @@ Every new iteration improves on the detector calibration with respect to previou
 However, analyses usually do not need all the detail provided by the RECO format, which is large ($\sim 3\,\si{\mega\byte}/\text{event}$) and thus inefficient.
 Instead, smaller and less detailed formats are available with progressively less information and reduced precision, focusing on the quantities most analyses use
 The data formats are called AOD, MiniAOD [[cite:&miniaod]] and NanoAOD [[cite:&nanoaod]].
-The \xhhbbtt{} analysis reported in this thesis used the Ultra-Legacy MiniAOD data format.
+The \xhhbbtt{} analysis reported in this Thesis used the Ultra-Legacy MiniAOD data format.
 Future iterations of the same analysis in \run{3} will upgrade to NanoAOD, which should provide faster processing times.
 Central processing tools are naturally compatible with the MiniAOD and NanoAOD data formats.
 

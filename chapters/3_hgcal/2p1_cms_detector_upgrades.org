@@ -86,7 +86,7 @@ By far the most important upgrade in the \ac{CMS} calorimeters will happen in th
 This revolutionary calorimeter is described in full in [[#sec:hgcal_intro]], and we here focus on the remaining updates, most of them happening in the barrel section [[cite:&calo_barrel_upgrade]]. \Ac{ECAL} control and safety systems will also be completely replaced cite:&barrel_upgrade_safety.
 
 Unlike for most \ac{CMS} subdetectors discussed in this section, the changes are not directly driven by the increase in radiation levels.
-Contrary to what happens in the endcaps, the crystals in the barrel region are capable of handling the environment of \phase{2}, especially when cooled from a nominal \phase{1} temperature of \SI{18}{\degree} down to \SI{9}{\degree}, as it is currently planned.
+Contrary to what happens in the endcaps, the crystals in the barrel region are capable of handling the environment of \phase{2}, especially when cooled from a nominal \phase{1} temperature of \SI{18}{\celsius} down to \SI{9}{\celsius}, as it is currently planned.
 Indirectly, however, the higher luminosities and \acp{PU}, lead to modifications at the \ac{L1} trigger level, namely the latency and rate increase to \SI{12.5}{\micro\second} and \SI{750}{\kilo\hertz}, respectively.
 Both the \ac{FE} and \ac{BE} of the \ac{EB} will be fully replaced, as illustrated in [[fig:ecalupgrade]] (left).
 The upgrades are meant to provide precise timing measurements, limit power dissipation, and increase the granularity of barrel \acp{TP} to a single crystal level, versus the current $5\times5$ arrays.

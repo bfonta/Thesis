@@ -47,7 +47,7 @@ In \ac{CMS}, pixels occupy the inner region and are immediately surrounded by th
   The detectors are surrounded by "service cylinders", which provide all needed readout and control circuits, as well as cooling tubes and power lines ([[fig:tracker2]], left).
   Despite the presence of one extra layer, the material budget has been substantially reduced to a minimum in the endcaps and more dramatically in the barrel, by a factor of \SI{\sim 60}{\percent}: electronic boards on the cylinders were placed outside the tracker acceptance, and special materials were employed for the mechanical structure and \ch{CO2} cooling system ([[fig:tracker2]], right).
   This is intended to decrease phenomena such as unintended multiple scattering, pair production, and nuclear interactions, which can create /preshowers/, \ie{} particle showers developing before reaching the calorimeters.
-  The cooling itself runs at \SI{-10}{\degree} and 30% relative humidity.
+  The cooling itself runs at \SI{-10}{\celsius} and 30% relative humidity.
   The cooling, besides dissipating the generated power, also helps to mitigate the effects of damage to the \ac{Si} pixels.
   Each pixel provides a spatial resolution of \SI{10}{\um} and \SI{20}{\um} along the transverse and longitudinal directions, respectively.
 
@@ -58,7 +58,7 @@ In \ac{CMS}, pixels occupy the inner region and are immediately surrounded by th
   The \ac{TOB} (\ac{TEC}) are located a bit further, and comprise \num{6} layers (\num{9} disks).
   Roughly half of the modules are double-sided, made of two independent single-sided modules glued back-to-back with a relative rotation of \SI{100}{\milli\radian}.
   This allows the determination of the third spatial component, while single-sided modules access 2D positions only [[cite:&tracker_double_sided]].
-  All components are cooled at \SI{-15}{\degree}.
+  All components are cooled at \SI{-15}{\celsius}.
   The barrel extends up to \SI{116}{\cm} in radius, and the endcaps reaches \SI{282}{\cm} in depth.
   The strips achieve a resolution between \num{20} and \SI{50}{\um} in the transverse plane, and between \num{200} and \SI{500}{\um} in the longitudinal direction.
   The \ac{CMS} strips are the world largest tracking system ever, with \num{93000} strips covering \SI{198}{\meter\squared}.
@@ -195,7 +195,7 @@ At normal incidence, the bending power of \SI{4.9}{\tesla\meter} a provides a st
 As an example, a \SI{20}{\GeV} $\pt$ charged particle deviates \SI{\sim 5}{\cm} in the transverse plane at the surface of \ac{ECAL} (at \SI{1.29}{\meter} from the \ac{PV}), which is enough to distinguish it from a photon coming from the same direction.
 The precise bending is estimating using a 3D magnetic field map, with an accuracy of less than \SI{0.1}{\percent} [[cite:&particle_flow]].
 We can roughly get the right numbers by applying the $\text{R}=\text{p}/\text{q}\,\text{B}$ formula, where R is the radius of the trajectory in the transverse plane, q the particle's charge and p it's momentum, and B the value of a constant magnetic field.
-The magnet is cooled by liquid \ch{He}, and must thus operate at \SI{-269}{\degree}.
+The magnet is cooled by liquid \ch{He}, and must thus operate at \SI{-269}{\celsius}.
 It is for this reason enclosed in a vacuum vessel made of two stainless steel cylinders.
 In order to contain the magnetic flux, the solenoid is surrounded by a return yoke, which is conveniently interleaved with the muon chambers to additionally provide structural support and increase muons momentum resolution.
 

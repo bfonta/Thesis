@@ -2,8 +2,8 @@
 :CUSTOM_ID: sec:lhc_design
 :END:
 
-The record-breaking \SI{6.8}{\TeV} proton beam energies at the \ac{LHC} cannot be achieved without a complex chain of injection.
-The chain starts with the production of protons in a \ac{Linac4}, and continues in accelerator rings of progressively higher energies, going first to the \ac{PSB}, then to the \ac{PS}, and finally into the \ac{SPS}, before being injected into the \ac{LHC}.
+The record-breaking \SI{13.6}{\TeV} proton center-of-mass energies at the \ac{LHC} cannot be achieved without a complex chain of injection.
+The chain starts with the extraction of protons from a simple hydrogen bottle[fn::Around three \SI{1.5}{\meter}-tall bottles are used per year of operation.], within \ac{Linac4}, and continues in accelerator rings of progressively higher energies, going first to the Booster, then to the \ac{PS}, and finally into the \ac{SPS}, before being injected into the \ac{LHC}.
 The complete accelerator complex is illustrated in [[fig:cern_acc_complex]].
 
 #+NAME: fig:cern_acc_complex
@@ -13,12 +13,12 @@ The complete accelerator complex is illustrated in [[fig:cern_acc_complex]].
 [[~/org/PhD/Thesis/figures/detector/CERNaccelerators.pdf]]
 #+END_figure
 
-The \ac{Linac4} [[cite:&linac4]] is designed to boost negative hydrogen ions to high energies via radio-frequency cavities, and it has been the proton source of the \ac{LHC} since 2020.
+The \ac{Linac4} [[cite:&linac4]] is designed to boost negative hydrogen ions [[cite:&negative_h]] to high energies via radio-frequency cavities, and it has been the proton source of the \ac{LHC} since 2020.
 It is \SI{86}{\meter} long and is located \SI{12}{\meter} underground, and accelerates ions in a series of four stages.
 First, the magnetic field of a radio-frequency quadrupole reaches \SI{3}{\MeV}, then drift tubes arrive at \SI{50}{\MeV}, later other linear accelerators attain \SI{100}{\MeV}, and finally so-called Pi-mode structures provide the final \SI{160}{\MeV} energy.
-During the injection in the \ac{PSB}, the ions are stripped from their two electrons, leaving only the individual protons.
+During the injection in the Booster, the ions are stripped from their two electrons, leaving only the individual protons.
 This enables larger particle multiplicities in the synchrotron, reduces beam losses and simplifies the injection procedure.
-The beam continues its path in the \SI{150}{\meter}-long \ac{PSB}, being accelerated to up to \SI{2}{\GeV}.
+The beam continues its path in the \SI{150}{\meter}-long Booster, being accelerated to up to \SI{2}{\GeV}.
 From there the beams are directed to the \ac{PS}, which is also connected to physics experiments.
 The acceleration procedures continues with the \ac{PS}, CERN's first synchrotron, and the \ac{SPS}, reaching energies of \num{25} and \SI{450}{\GeV}, respectively.
 Specially built transfer lines connect the \ac{SPS} and \ac{LHC} ring tunnels, and fast kicker magnets are used to split the proton beam into two beamlines, which are then accelerated to their target energies using additional high frequency cavities.
@@ -35,7 +35,7 @@ After some time, in which the luminosity steadily decreases due to losses in the
 The ATLAS and CMS experiments are two multi-purpose experiments with a broad and similar physics programme.
 LHCb and ALICE target instead more specific branches, namely flavor physics and heavy-ion physics, respectively.
 These and other detectors are succinctly described in [[#sec:lhc_experiments]].
-\Ac{CMS} in particular is described at length in [[#sec:cms_detector]], due to its immediate connection to this thesis.
+\Ac{CMS} in particular is described at length in [[#sec:cms_detector]], due to its immediate connection to this Thesis.
 
 A fundamental parameter of collider experiments is its /instantaneous luminosity/ $\mathcal{L}$, a quantity measuring the number of collisions taking place per unit of time and unit of area.
 If $\mathcal{L}$ is integrated over time, one obtains the /integrated luminosity/, a useful parameter to know how many collisions occurred during a specified time period.

@@ -105,7 +105,7 @@
 #+INCLUDE: "chapters/2_detector/3_cms_trigger_system.org"
 ** Offline Reconstruction
 #+INCLUDE: "chapters/2_detector/4_offline_reco.org"
-** Monte Carlo Generation
+** MC Generation and Data Processing
 #+INCLUDE: "chapters/2_detector/5_mc_generation.org"
 
 
@@ -195,15 +195,15 @@
 
 
 * Going Beyond the Narrow Width Approximation in HH Resonant Searches
-#+INCLUDE: "chapters/6_interf_studies/intro.org"
+#+INCLUDE: "chapters/6_interf_studies/0_intro.org"
 ** The Stability of the Electroweak Vacuum
-#+INCLUDE: "chapters/6_interf_studies/ew_phase_transition.org"
+#+INCLUDE: "chapters/6_interf_studies/1_ew_phase_transition.org"
 ** The Singlet Model
-#+INCLUDE: "chapters/6_interf_studies/singlet_model.org"
+#+INCLUDE: "chapters/6_interf_studies/2_singlet_model.org"
 ** Methodology
-#+INCLUDE: "chapters/6_interf_studies/methodology.org"
+#+INCLUDE: "chapters/6_interf_studies/3_methodology.org"
 ** Results
-#+INCLUDE: "chapters/6_interf_studies/interf_results.org"
+#+INCLUDE: "chapters/6_interf_studies/4_interf_results.org"
 
 
 * Conclusions

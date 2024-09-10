@@ -10,7 +10,7 @@ The experiment spans five continents, with the involvement of 57 countries and r
 
 The \ac{CMS} experiment was officially proposed in 1992, with the primary goals of discovering the Higgs boson and exploring \ac{BSM} physics at the \si{\TeV} scale.
 Key to this objective were the \hzzfourl{} and \hgg{} physics channels, which required an excellent \ac{EM} calorimeter for effective electron and photon detection.
-Nevertheless, all subdetectors in \ac{CMS} were designed to be versatile, and capable of measuring a wide range of physics processes across various energies, making \ac{CMS} truly a multi-purpose detector, as the hundreds of diverse papers so far published can attest.
+Nevertheless, all subdetectors in \ac{CMS} were designed to be versatile, and capable of measuring a wide range of physics processes across various energies, making \ac{CMS} truly a multi-purpose detector, as the more than 1000 diverse papers so far published can attest.
 
-In this Section we start by defining the \ac{CMS} coordinate system which will be used across the remaining Chapters of this thesis.
+In this Section we start by defining the \ac{CMS} coordinate system which will be used across the remaining Chapters of this Thesis.
 Next, a detailed description of individual components of \ac{CMS} is provided, since they represent the basis for understanding the trigger, reconstruction and simulation strategies later discussed.

@@ -5,8 +5,8 @@
 At the \ac{LHC}, proton beams circulating in counter-wise directions along two separate beam pipes converge in four \acp{IP}.
 Such locations, numbered \ac{IP} 1, 2, 5 and 8, are located in underground experimental caverns, each attached to one or more experiments.
 They are part of CERN's North Area, where \ac{SPS} provides proton beams.
-Other \acp{IP} were used by the \ac{LEP} experiments: ALEPH[fn::Apparatus for LEP PHysics], at \ip{4}, and OPAL[fn::Omni-Purpose Apparatus for LEP], at \ip{6}.
-The \acp{IP} for DELPHI[fn::DEtector with Lepton Photon and Hadron Identification], at \ip{8}, and L3[fn::Third LEP Experiment], at \ip{2}, were reused by the \ac{LHCb} and the \ac{ALICE} detectors, respectively [[cite:&lhc_operation]].
+Other \acp{IP} were used by the \ac{LEP} experiments: ALEPH[fn:: Apparatus for LEP PHysics], at \ip{4}, and OPAL[fn:: Omni-Purpose Apparatus for LEP], at \ip{6}.
+The \acp{IP} for DELPHI[fn:: DEtector with Lepton Photon and Hadron Identification], at \ip{8}, and L3[fn:: Third LEP Experiment], at \ip{2}, were reused by the \ac{LHCb} and the \ac{ALICE} detectors, respectively [[cite:&lhc_operation]].
 In this section, we provide a summary for some of the physics experiments exploiting \ac{LHC} beams, before describing the \ac{CMS} detector at length in [[#sec:cms_detector]].
 
 * ATLAS
@@ -34,18 +34,22 @@ This particular geometry is motivated by the desire to eliminate projective azim
 It is interesting to note that around half the signal comes in the form of scintillation light due to the recombination of electron-ion pairs.
 However, scintillation readouts are not included due to technical and geometrical challenges when extracting both charge and light signals.
 An excellent energy resolution can nevertheless be achieved [[cite:&fabiola_calorimetry]].
-The calorimeter features three segments in depth, the first having an extremely fine segmentation of 0.003 along \ac{eta}, to clearly separate prompt photons from $\pi^{0}$ photons, up to $\pt\sim\,70\si{\GeV}$.
+The calorimeter features three segments in depth, the first having an extremely fine segmentation of 0.003 along \ac{eta}[fn:: The pseudorapidity $\eta$ is defined in [[#sec:coordinate_system]].], to clearly separate prompt photons from $\pi^{0}$ photons, up to $\pt\sim\,70\si{\GeV}$.
 The segmentation was optimized for the \hgg{} analysis.
 The calorimeter is preceded by a presampler which corrects the electron and positron energy losses due to the presence of upstream material, including the solenoid.
-To keep the argon liquid, the calorimeters are kept at \SI{-184}{\degree}.
+To keep the argon liquid, the calorimeters are kept at \SI{-184}{\celsius}.
 A tile hadronic calorimeter follows, made of alternating steel absorber and active \ac{Sci} plastic layers, read out by \acp{PMT}.
 Around \num{420000} tiles are present, weighting almost \SI{2900}{\tonne}.
-Finally, the outer regions of \ac{ATLAS} are occupied a large muon spectrometer.
+Finally, the outer regions of \ac{ATLAS} are occupied by a large muon spectrometer.
 Five different subdetectors provide precise (\SI{\sim 100}{\um}) and fast (\SI{\sim 2.5}{\micro\second}) muon momentum measurements: Monitored Drift Tubes, \acp{RPC}, Thin Gap Chambers, Small-Strip Thin Gap Chambers, and Micromegas.
 The muon trajectories are bent thanks to additional magnets, including two endcap magnets and the largest toroidal magnet ever built, located in the center of the experiment, which took almost a year to install.
 The magnets provide up to \SI{3.5}{\tesla}, and are located in between the muon subdetectors.
-We conclude by mentioning the two-tiered trigger system: \ac{ATLAS} has implemented "trigger-level analysis" and "delayed stream" modes, which are similar to the \ac{CMS} scouting and parking strategies, respectively [[cite:&atlas_delayed_stream]].
-These strategies are discussed in [[#sec:parking_scouting]].
+
+We conclude by mentioning the two-tiered trigger system [[cite:&atlas_trigger]].
+The first level, or L1, is based on two independent systems using information from the calorimeters or muon detectors.
+The decision of whether to keep the event at L1 is made in combination with multiple subsystems.
+Selected events are then sent to the \ac{ATLAS} online software-based High-Level Trigger, where algorithms perform event reconstruction at a \SI{3}{\kilo\hertz} output rate.
+\ac{ATLAS} has implemented "trigger-level analysis" and "delayed stream" modes [[cite:&atlas_delayed_stream]], which are respectively similar to the \ac{CMS} scouting and parking strategies discussed in [[#sec:parking_scouting]].
 
 * LHCb
 Instead of surrounding the entire collision point with an enclosed detector as \ac{ATLAS} and \ac{CMS} do, the \ac{LHCb} experiment [[cite:&lhcb_collab]], located at \ac{IP} 8, employs a single-arm forward spectrometer.
@@ -64,7 +68,7 @@ Concerning its trigger system, large beauty and charm cross sections required th
 \Ac{LHCb} interestingly uses a trigger deferral system, where the time when the \ac{LHC} is idle is repurposed for further processing.
 This time is part of a normal data-taking year, with technical stops, maintenance work or time spent preparing for each new fill.
 To maximally utilize the deferral, the trigger is split into two layers, where the buffering only takes place after the first level, receiving the entirety of the selected data.
-Additional trigger improvements enabled the inclusion of offline quality information inside the trigger, raising the question of whether an additional offline reconstruction step was still required.
+Additional trigger improvements enabled the inclusion of offline-quality information inside the trigger, raising the question of whether an additional offline reconstruction step was still required.
 A new "turbo" stream was therefore made available [[cite:&lhcb_turbo]], where the full physics analysis is performed, producing an output format one order of magnitude smaller than what is possible with the "full", standard stream.
 Many analyses have started using datasets produced with the new trigger stream, benefiting from the additional unprescaled events.
 We note that the "turbo" approach is extremely similar to the scouting methodology in \ac{CMS}, which is described in [[#sec:parking_scouting]].
@@ -74,8 +78,9 @@ For \run{3}, the turbo mode share has been extended, and the hardware trigger wa
 The \ac{SMOG} provides the means to inject noble gases (\ch{He}, \ch{Ar}, \ch{Ne}) into \ac{VELO}.
 A fixed-target experiment brings many advantages.
 One can explore collisions with targets of mass number between the ones of protons and \ch{Pb} ions, and with an \num{30} to \SI{115}{\GeV} energy range, which corresponds to an uncharted territory, between the energies provided by \ac{SPS} and the higher energies reached by the \ac{LHC} or the Relativistic Heavy Ion Collider, located at Brookhaven National Laboratory, in New York.
-Finally, the new approach can improve the understanding of nuclear and charm \acp{PDF}, the latter representing an important background for neutrino astronomy that must be precisely understood.
-Some results made possible by \ac{SMOG} include fixed-target \jpsi{} and $\dzero$ production, and direct measurements of antiproton production [[cite:&antimatter_prod_fixed_target_lhcb]], which is relevant for \ac{DM} searches.
+Finally, the new approach can improve the understanding of nuclear and charm \acp{PDF}, and thus test different aspects of \ac{QCD}.
+Understanding charm production also has important consequences for neutrino astronomy, since charmed hadrons from cosmic rays produce neutrinos that represent a large background to extra-galactic neutrino signals [[cite:&charm_nu_bckgd]].
+Some other results made possible by \ac{SMOG} include fixed-target \jpsi{} and $\dzero$ production, and direct measurements of antiproton production [[cite:&antimatter_prod_fixed_target_lhcb]], which is relevant for \ac{DM} searches.
 
 * ALICE
 The \ac{ALICE} experiment [[cite:&alice]] is dedicated to heavy-ion physics, built to study strongly interacting \ac{QCD} matter at extreme energy densities, namely the \ac{QGP}.

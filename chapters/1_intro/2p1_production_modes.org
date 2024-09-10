@@ -55,7 +55,7 @@ On the other hand, the same effect increases the sensitivity to \ac{NP}, since \
 ** Vector Boson fusion
 The \ac{VBF} HH process, or $\text{q}\text{q}^{\prime} \rightarrow jj\text{H}\text{H}$, where $j$ stands for a jet, besides including $\lh{3}$, exhibits a dependence on the cubic ($\kv$) and quartic ($\kvv$) couplings of the Higgs boson to vector gauge bosons, as shown in [[fig:HH_production_diagrams_vbf]].
 The two forward jets provide a powerful discriminative handle.
-In addition, theoretical arguments lead to suppressed hadron production in the central \ac{eta} regions of the detector, between the two jets [[cite:&zeppenfeld]].
+In addition, theoretical arguments lead to suppressed hadron production in the central regions of the detector, between the two jets [[cite:&zeppenfeld]].
 Therefore, and despite its cross section more than 18 times smaller than for \ac{ggF}, \ac{VBF} HH provides a clear signature that suppresses the multijet background.
 
 #+NAME: fig:HH_production_diagrams_vbf

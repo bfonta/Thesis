@@ -297,7 +297,7 @@ We thus follow the general \ac{CMS} recommendations, and consider only 1-prong a
 
 Since quarks and gluons carry color charge, they must obey \ac{QCD} /confinement/, according to which only colorless states are allowed.
 As a consequence, once a hard collision takes place, ejected quarks and gluons are immediately associated to other colored objects, forming colorless hadrons in a process called /hadronisation/.
-The group of all newly formed colorless hadrons is called a /jet/, since all its constituents travel in approximately the same direction, outlining a narrow cone shape, of course dependent on the algorithm used for the its reconstruction.
+The group of all newly formed colorless hadrons is called a /jet/, since all its constituents travel in approximately the same direction, outlining a narrow cone shape.
 In \ac{CMS}, jets are reconstructed from charged and neutral \ac{PF} candidates, 85% of which are photons and charged hadrons, via the anti-$\ktalgo$ algorithm [[cite:&antikt]].
 This algorithm, designed to be insensitive to the effect of soft radiation, defines the following two distance parameters, themselves inspired by previous clustering algorithms [[cite:&kt;&cambridge_aachen_1;&cambridge_aachen_2]]:
 #+NAME: eq:jet_antikt
@@ -320,7 +320,7 @@ The algorithm proceeds iteratively as follows:
   /b/) if $d_{ij} > d_{i}^{\text{B}}$, the iteration ends and $i$ is defined as a new jet and removed from the list of particles and pseudo-jets;
 + the procedure is repeated until no particles or pseudo-jets are left and a list of jets has been produced.
 \noindent In \ac{CMS}, \ac{PF} objects are feeded to the =FASTJET= package [[cite:&fastjet]], which runs the anti-$\ktalgo$ with $\text{R}=0.4$, 0.8 or 1.5 depending on the intended jet cone size.
-In the resonant HH analysis detailed in this thesis, the first two values are employed, for resolved and boosted topologies, respectively.
+In the resonant HH analysis detailed in this Thesis, the first two values are employed, for resolved and boosted topologies, respectively.
 The jet four-momentum is computed as the vector sum of all the four-momenta of clustered \ac{PF} candidates.
 As shown in [[fig:pflow_gains]] (right), the anti-$\ktalgo$ together with the \ac{PF} approach allows the reconstruction of \SI{\sim 90}{\percent} of the jet constituents, representing a dramatic performance improvement especially at lower energies.
 Jet resolutions in \ac{CMS} are quite energy-dependent, at around 15-20% for $\pt\sim30\,\si{\GeV}$, $10\%$ for $\pt\sim100\,\si{\GeV}$, and 5% for $\pt\sim1\,\si{\TeV}$ [[cite:&jet_resolution_run2]].
