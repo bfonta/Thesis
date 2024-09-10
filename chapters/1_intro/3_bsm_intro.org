@@ -6,7 +6,7 @@ The \ac{SM} represents a remarkable triumph of modern physics, beautifully expla
 Precision tests confirm the \ac{SM} validity up to \ac{EW} scale energies, and the observed Higgs boson resembles the theorized one up to great precision.
 Models predicting complex "Higgs families", such as multiple flavours of \ac{SUSY} theories or \ac{2HDM} types, are getting less favoured as more data is collected and analyzed.
 
-It is however worrying that some \ac{SM} elements are empirically added to reproduce experimental data.
+It is however striking that some \ac{SM} elements are empirically added to reproduce experimental data.
 Taking the Yukawa couplings as an example, discussed in [[#sec:yukawa]], they are introduced to explain fermion masses, and coincidentally happen to work extremely well with the newly introduced Higgs doublet, but nobody knows /why/ those terms are present in the first place.
 In total, assuming neutrinos of Dirac type (as opposed to Majorana fermions), the \ac{SM} brings \num{26} free parameters to the table: \num{12} Yukawa couplings, three coupling constants, namely the weak and strong couplings and Fermi's constant $\gf$, the two parameters describing the Higgs potential in [[eq:sm_orig_potential]], eight mixing angles for the \ac{PMNS} and \ac{CKM} matrices, and a strong \ac{CP} phase.
 The presence of so many parameters suggests that, despite its undeniable achievements, the \ac{SM} continues to be a model where parameters are chosen to match observations.

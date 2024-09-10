@@ -13,7 +13,7 @@ In this section, the profound ideas that cement the \ac{SM} are described, cover
 Interactions are dictated by symmetry principles.
 For example, Einstein used the invariance under general coordinate transformations to establish the general theory of relativity in 1915.
 Initially taken at a global level, \ie{} without depending on space-time points $x^{\mu} \equiv x$, in 1953 Yang and Mills promoted the invariances to the /local/ realm.
-They started from the Dirac lagrangian for two elementary half-integer spin fields $\psi$:
+They started from the Dirac Lagrangian for two elementary half-integer spin fields $\psi$:
 
 #+NAME: eq:yang_mills_lagrangian
 \begin{equation}
@@ -21,7 +21,7 @@ They started from the Dirac lagrangian for two elementary half-integer spin fiel
 \end{equation}
 
 \noindent where $\psi$ is a two-component column vector, or spinor, and $\gamma^{\mu}$ are the Dirac $\gamma$ matrices.
-For simplicity, we here consider massless fields (we drop the $-m\bar{\psi}\psi$ term), without loss of generality.
+For simplicity, we here consider massless fields (we do not introduce the $-m\bar{\psi}\psi$ term), without loss of generality.
 The original Yang-Mills theory /required/ the fields to be invariant under a local non-Abelian \symtwo{} transformation:
 
 #+NAME: eq:su2_transf
@@ -42,14 +42,14 @@ The original Yang-Mills theory /required/ the fields to be invariant under a loc
 \end{equation}
 
 \noindent where $\pmb{\sigma}$ are the Pauli matrices, $\pmb{\lambda}(x)$ is a vector depending on space-time, and $g$ is a coupling constant analogous to the electric charge.
-Without further changes, the lagrangian in [[eq:yang_mills_lagrangian]] is not invariant under the local \symtwo{} transformation, since the derivative picks up an extra term:
+Without further changes, the Lagrangian in [[eq:yang_mills_lagrangian]] is not invariant under the local \symtwo{} transformation, since the derivative picks up an extra term:
 
 #+NAME: eq:derivative_extra
 \begin{equation}
 \partial_{\mu}\psi(x) \rightarrow e^{-ig\pmb{\sigma}.\pmb{\lambda}(x)} \left[ \partial_{\mu} - ig\pmb{\sigma}\,\partial{}_{\mu}\pmb{\lambda}(x) \right] \psi(x) \: .
 \end{equation}
 
-\noindent If we insist on the concept of local invariance, something has to be added to the lagrangian in order to cancel the new term.
+\noindent If we insist on the concept of local invariance, something has to be added to the Lagrangian in order to cancel the new term.
 This can be achieved by replacing the standard derivate $\partial_{\mu}$ by the /covariant derivative/:
 
 #+NAME: eq:covariant_derivative
@@ -58,7 +58,7 @@ D_{\mu} \equiv \partial_{\mu} + ig\pmb{\sigma}\,\pmb{A}_{\mu} \: ,
 \end{equation}
 
 \noindent where a new set of /gauge/[fn:: The term /gauge/ refers to the regulation of redundant degrees of freedom. It can be thought of as a historical misnomer for the word /phase/ [[cite:&halzen_martin]].] fields $\pmb{A}_{\mu} = (A_{\mu}^{1}, A_{\mu}^{2}, A_{\mu}^{3})$ had to be introduced.
-It is highly non-trivial to find the transformation rule for $\pmb{A}_{\mu}$ that restores local \symtwo{} invariance to the lagrangian.
+It is highly non-trivial to find the transformation rule for $\pmb{A}_{\mu}$ that restores local \symtwo{} invariance to the Lagrangian.
 Keeping only the first-order terms for the case of small $\pmb{\lambda}$, the solution is:
 
 #+NAME: eq:gauge_transf_field
@@ -73,7 +73,7 @@ Keeping only the first-order terms for the case of small $\pmb{\lambda}$, the so
 \mathcal{L}_{\text{Kin}} = -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} \: , \:\:\: F_{\mu\nu} \equiv \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} - ig[A_{\mu},A_{\nu}] \: ,
 \end{equation}
 
-\noindent the new, local invariant lagrangian becomes:
+\noindent the new, local invariant Lagrangian becomes:
 
 #+NAME: eq:ew_lagrangian
 \begin{equation}
@@ -85,12 +85,12 @@ Since a term of the form $A_{k}A^{k}$ is not invariant under the gauge transform
 Crucially, it is the insistence on local gauge invariance which leads to three new vector gauge fields.
 
 The original Yang-Mills theory turned out to be of little use, on account of starting from the assumption that there are two elementary half-integer spin particles with exactly the same mass, which were never observed.
-The same idea can however be generalized to many other non-abelian symmetry groups, and ended up representing the basis of the \symcolor{} color symmetry for strong interactions and of the isospin-hypercharge \symweak{} symmetry for weak interactions.
+However, the same idea could be generalized to many other non-abelian symmetry groups, and ended up representing the basis of the \symcolor{} color symmetry for strong interactions and of the isospin-hypercharge \symweak{} symmetry for weak interactions.
 
 * Chromodynamics
 According to the \ac{SM}, each quark flavour comes in three colors: red, blue and green.
-We can express its free lagrangian exactly as in [[eq:yang_mills_lagrangian]], but where now the fields are a three-component column vector $\bar{\psi} \equiv (\bar{\psi}_{r} \, \bar{\psi}_{b} \, \bar{\psi}_{g})$ for the three colors.
-The lagrangian naturally exhibits a global \symthree{} symmetry, which we again require to be local.
+We can express its free Lagrangian exactly as in [[eq:yang_mills_lagrangian]], but where now the fields are a three-component column vector $\bar{\psi} \equiv (\bar{\psi}_{r} \, \bar{\psi}_{b} \, \bar{\psi}_{g})$ for the three colors.
+The Lagrangian naturally exhibits a global \symthree{} symmetry, which we again require to be local.
 Under \symthreec{}, the fields transform as follows (compare to [[eq:su2_transf]]):
 
 #+NAME: eq:su3_transf
@@ -114,7 +114,7 @@ The gauge fields also transform in a more complex way, due to the larger number 
 \left[ \frac{\phi^{i}}{2}, \frac{\phi^{j}}{2} \right] = if^{ijk}\frac{\phi^{k}}{2} \: .
 \end{equation}
 
-\noindent Adding the gluon kinetic term, we obtain the complete \ac{QCD} lagrangian for massless fields:
+\noindent Adding the gluon kinetic term, we obtain the complete \ac{QCD} Lagrangian for massless fields:
 
 #+NAME: eq:lagrangian_qcd
 \begin{equation}
@@ -128,7 +128,7 @@ The gauge fields also transform in a more complex way, due to the larger number 
 F^{i}_{\mu\nu} = \partial_{\mu}A^{i}_{\nu} - \partial_{\mu}A^{i}_{\nu} + 2gf^{ijk}A^{j}_{\mu}A^{k}_{\nu} \: .
 \end{equation}
 
-\noindent The lagrangian is invariant under local \symthreec{}, describing three fields interacting with eight massless vector fields, the gluons.
+\noindent The Lagrangian is invariant under local \symthreec{}, describing three fields interacting with eight massless vector fields, the gluons.
 Contrary to the Yang-Mills theory discussed before, scientists believe [[eq:lagrangian_qcd]] actually reproduces reality, describing the strong interaction.
 The strength of the interaction is usually redefined as $\alpha_{\text{S}} = g^2 /4\pi$, the strong coupling. 
 Notice that, once more, the gluons must be massless for the local invariance to hold.
@@ -156,7 +156,7 @@ Dirac spinors can be decomposed into left- and right-handed chiral components L 
 \end{pmatrix} \: .
 \end{equation}
 
-\noindent With the notation above, the lagrangian can be written as:
+\noindent With the notation above, the Lagrangian can be written as:
 
 #+NAME: eq:lagrangian_covariants
 \begin{equation}
@@ -203,7 +203,7 @@ W^{i}_{\mu\nu} = \partial_{\mu}W^{i}_{\nu} - \partial_{\nu}W^{i}_{\mu} + gf^{ijk
 W_{\mu}^{\pm} = \frac{1}{\sqrt{2}}\left( W_{\mu}^{1} \mp W_{\mu}^{2} \right) \: ,
 \end{equation}
 
-\noindent we can create a term representing charged currents, forming two new massive bosons corresponding to the observed \ac{SM} positive and negative W fields:
+\noindent we can create a term representing charged currents, forming two bosons corresponding to the observed \ac{SM} positive and negative W fields:
 
 #+NAME: eq:ew_lagrangian_long_cc
 \begin{align}

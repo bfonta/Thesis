@@ -18,15 +18,13 @@ In practice, admitting such hypothetical particle exists, the excess might only 
 The experimental challenges of such kind of analysis is highlighted in [[#sec:analysis1_intro]].
 Here we instead focus on the very large number of theoretical models which can accomodate \xhh{} or \xyh{} processes, with Y being yet another \ac{BSM} scalar particle.
 It is experimentally unfeasible to address all such models separately.
-If that were the case, each model would require its own set of samples with varying parameters, such as the mass or the shapes of every resonance, adding also complications from the storage point of view.
+If that were the case, each model would require its own set of simulated data with varying parameters, such as the mass or the shapes of every resonance, adding also complications from the storage point of view.
 Furthermore, analysis tools would have to be optimized for each sample type, requiring independent computing-intensive trainings, which take time to process and validate.
 Instead, the approach usually followed, including in this thesis, is to define a set of (as much as possible) model-independent benchmarks.
-Results are subsequently reinterpreted in the context of specific models.
+Results can be subsequently reinterpreted in phenomenological studies, in the context of more specific models.
 This enables a single Physics analysis to explore a broad class of models at once.
-
-In this section, we nevertheless cover some of the theoretical approaches that are most often connected with resonant decays to HH and/or YH.
 The simplest model possible is the singlet model, which is covered in [[#sec:singlet_model]], since it is directly connected with the work discussed in [[#sec:interf_intro]].
-Here we instead discuss other options, which serve as a strong motivation to perform the HH searches described in further chapters.
+In this Section we instead discuss other options, which serve as a strong motivation to perform the HH searches described in further chapters.
 
 * Warped Extra Dimensions
 Generations of physicists have tried to incorporate quantum gravity in the \ac{SM} without much success so far.
@@ -49,10 +47,10 @@ Furthermore, the Higgs mechanism can be added in the same way as in the \ac{SM},
 
 Importantly, the model predicts two new particles [[cite:&xanda_benchmarks_wed]].
 A \spin{2} resonance appears as the mediator of the gravitational force, appropriately named "graviton", and a new scalar is required by the size of the additional dimension, being called "radion".
-Assuming the \ac{NWA}, the phenomenology of a \ac{ggF}-produced radion is identical to the phenomenology of a heavy Higgs scenario [[cite:&xanda_benchmarks_wed]], which lessens model-related dependencies.
+Assuming the \ac{NWA}, where the width of the new resonance is assumed to be negligible compared to the detector's energy resolution, the phenomenology of a \ac{ggF}-produced radion is identical to the phenomenology of a heavy Higgs scenario [[cite:&xanda_benchmarks_wed]], which lessens model-related dependencies.
 For certain regions of the model's phase-space, both particles can decay to a pair of Higgs bosons or pairs of W and Z bosons.
 Searches at the \ac{LHC} are thus sensitive to these two hypothetical high mass particles.
-The thesis here reported explores the resonant \hhbbtt{} decay, where the signal samples in [[#sec:samples]] indeed refer to radion- and graviton-like particles.
+The Thesis here reported explores the resonant \hhbbtt{} decay, where the signal samples in [[#sec:samples]] indeed refer to radion- and graviton-like particles.
 The radion and the Higgs boson can even be allowed to mix, although such scenario is not directly explored at analysis level.
 Related work in the context of a singlet model is covered in [[#sec:interf_intro]].
 

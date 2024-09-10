@@ -2,14 +2,7 @@
 :CUSTOM_ID: sec:higgs_mechanism
 :END:
 
-#+NAME: fig:symmetries
-#+CAPTION: (Left) Shells of two species of sea snails, exhibiting similar characteristics with opposite spiral symmetries. (Middle) A plastic strip being compressed along its longitudinal axis conveys the idea of spontaneous symmetry breaking. Taken from [[cite:&griffiths]]. (Right) Shape of the Higgs potential, also known as "mexican hat", which minima break the symmetry of the \ac{SM} Lagrangian.
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/Symmetries.pdf]]
-#+END_figure
-
-The Higgs mechanism revolutionized Particle Physics, and has driven \ac{HEP} experiments and studies for the past \num{\sim 50} years, of which this thesis is a mere example.
+The Higgs mechanism revolutionized Particle Physics, and has driven \ac{HEP} experiments and studies for the past \num{\sim 50} years, of which this thesis is a good illustration.
 The mechanism is responsible for generating the masses of the W and Z gauge bosons, and for explaining the masses of fermions.
 It is deeply connected to the stability of the \ac{EW} vacuum, and thus possibly the fate of our Universe, it can have a role in baryogenesis [[cite:&electroweak_baryogenesis]], and its homonymous particle might even be identified as the possible inflaton of the primordial Universe [[cite:&inflaton]].
 Despite its central role in modern particle physics, the Higgs mechanism is at its core based on a relatively simple phenomenon, that of symmetry breaking, which is widely present in Nature (see [[fig:symmetries]], left).
@@ -19,17 +12,22 @@ We instead speak of /spontaneous/ symmetry breaking when the states of a system 
 The true symmetry of the system is simply hidden by the necessary choice of an asymmetrical lower energy state.
 We can for instance think of a plastic rod being compressed along its longitudinal axis ([[fig:symmetries]], middle): before applying a vertical force the system is symmetric under rotations, but after being compressed the ground state necessarily breaks the symmetry[fn:: Spontaneous symmetry breaking is also present in bleeding edge diffusion models for content generation [[cite:&spontaneous_breaking_diffusion]]!].
 
-In the context of \ac{HEP}, the presence of an additional scalar field spontaneously breaks the symmetry of the original \ac{EW} lagrangian in [[eq:ew_lagrangian_short]].
-A $\text{SU}(2)_{\text{L}}$ doublet with 4 scalar real fields is introduced:
+#+NAME: fig:symmetries
+#+CAPTION: (Left) Shells of two species of sea snails, exhibiting similar characteristics with opposite spiral symmetries. (Middle) A plastic strip being compressed along its longitudinal axis conveys the idea of spontaneous symmetry breaking. Taken from [[cite:&griffiths]]. (Right) Shape of the Higgs potential, also known as "mexican hat", which minima break the symmetry of the \ac{SM} Lagrangian.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/Symmetries.pdf]]
+#+END_figure
 
+In the context of \ac{HEP}, the presence of an additional scalar field spontaneously breaks the symmetry of the original \ac{EW} Lagrangian in [[eq:ew_lagrangian_short]].
+A $\text{SU}(2)_{\text{L}}$ doublet with 4 scalar real fields is introduced:
 #+NAME: eq:su2_doublet
 \begin{equation}
 \phi = \binom{\phi^+}{\phi^0} = \frac{1}{\sqrt{2}} \binom{\phi^1+i\phi^2}{\phi^3+i\phi^4} \: ,
 \end{equation}
 
 \noindent where $\phi$ must be a scalar due to space isotropy and homogeneity arguments.
-To add this term to the \ac{SM} lagrangian, we introduce an additional lagrangian term with standard kinetic and potential terms:
-
+To add this term to the \ac{SM} Lagrangian, we introduce an additional Lagrangian term with standard kinetic and potential terms:
 #+NAME: eq:higgs_lagrangian_short
 \begin{equation}
 \mathcal{L}_{\text{H}} = \left( D_{\mu}\phi \right)^{\dag}\left( D^{\mu}\phi \right) - \text{V}_{\text{H}}(\phi^{\dag}\phi) \: ,
@@ -37,7 +35,6 @@ To add this term to the \ac{SM} lagrangian, we introduce an additional lagrangia
             
 \noindent where $D_{\mu}$ is the covariant derivative introduced in [[eq:ew_covariant]].
 The potential term above can be written as:
-
 #+NAME: eq:sm_orig_potential
 \begin{equation}
 \text{V}_{\text{H}}(\phi^{\dag}\phi) = -\mu^2\phi^{\dag}\phi + \lambda\left(\phi^{\dag}\phi\right)^2\,, \:\:\:\: \text{with}\:\:\: \mu^{2} \, , \, \lambda>0  \: ,
@@ -47,17 +44,15 @@ The potential term above can be written as:
 The minima of the potential are clearly not located at $\phi=0$, but satisfy instead $|\phi^{2}| = \mu^{2} / 2\lambda$, which describes a circle in the complex plane.
 Once a particular minimum is chosen, the $\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\text{Y}}$ symmetry is broken, but the ground state remains invariant under the $\text{U(1)}_{\text{EM}}$ symmetry, since it stays parallel to $\phi^{0}$.
 By defining the \ac{VEV} as $v=\mu/\sqrt{\lambda}$ and expanding around the true minimum, the field is treated as a fluctuation around the ground state, and can be rewritten as:
-
 #+NAME: eq:expand_potential
 \begin{equation}
-\phi(x) = \frac{1}{\sqrt{2}} \exp \left[ \frac{i\sigma_{i}\theta^{i}(x)}{v} \right] \binom{0}{v + \text{H}(x)} \: ,
+\phi(x) = \frac{1}{\sqrt{2}} \exp \left[ \frac{i\sigma_{j}\theta^{j}(x)}{v} \right] \binom{0}{v + \text{H}(x)} \: ,
 \end{equation}
 
-\noindent where the sum across $i$ is implied.
+\noindent where the sum across $j$ is implied.
 [[eq:expand_potential]] is interpreted as the presence of a scalar real massive field H and three massless fields $\theta^{i}$.
 The massless fields follow from Goldstone's theorem [[cite:&goldstone]], which states that whenever a continuous symmetry is not apparent in the ground state, or spontaneously broken, a number of massless bosons will be generated equal to the number of the broken generators of the symmetry, three in this case.
 By applying the /unitary gauge/ transformation on top, we can easily see that the $\theta^{i}$ bosons are unphysical:
-
 #+NAME: eq:unitary_gauge
 \begin{equation}
 \phi(x) \rightarrow e^{-\frac{i}{v}\sigma_j\theta^j(x)} \phi(x) = \frac{1}{\sqrt{2}} \binom{0}{v+\text{H}(x)} \: .
@@ -65,8 +60,7 @@ By applying the /unitary gauge/ transformation on top, we can easily see that th
 
 \noindent Only one scalar field remains, corresponding to a new scalar boson, the Higgs particle.
 The Higgs field is the only known scalar field in Nature.
-Using the definition of covariant derivative in [[eq:ew_covariant]] plus the unitary gauge in the lagrangian [[eq:higgs_lagrangian_short]], we obtain:
-
+Using the definition of covariant derivative in [[eq:ew_covariant]] plus the unitary gauge in the Lagrangian [[eq:higgs_lagrangian_short]], we obtain:
 #+NAME: eq:higgs_lagrangian_full
 \begin{equation}
   \begin{split}
@@ -77,14 +71,12 @@ Using the definition of covariant derivative in [[eq:ew_covariant]] plus the uni
 \end{equation}
 
 \noindent where the Higgs mass term in the first line establishes a new free parameter of the theory, $\mh = \sqrt{2\lambda}v = \sqrt{2}\mu$, and the second line shows mass terms for the W and Z gauge bosons:
-
 #+NAME: eq:wz_masses_formula
 \begin{equation}
 \mw^{2} = \frac{g^{2}v^{2}}{4} \: , \:\:\:\: \mz^{2} = \frac{(g^{2}+g^{\prime2})v^{2}}{4} \: .
 \end{equation}
 
 \noindent These masses have been experimentally measured to be [[cite:&wmasscomb;&zmasscomb;&cdf_wzmass]]:
-
 #+NAME: eq:wz_masses_measured
 \begin{equation}
 \mw = 80.3692 \pm 0.0133 \,\si{\GeV} \: , \:\:\:\: \mz = 91.1880 \pm 0.0020 \,\si{\GeV} \: .
@@ -92,21 +84,19 @@ Using the definition of covariant derivative in [[eq:ew_covariant]] plus the uni
 
 \noindent The unitary gauge effectively removed the Goldstone bosons $\theta^{i}$, which were absorbed as additional degrees of freedom of the weak gauge bosons, corresponding to their longitudinal polarizations.
 We can finally introduce the Higgs potential $\text{V}_{\text{H}}$ as it is usually presented:
-
 #+NAME: eq:sm_potential
 \begin{equation}
 \text{V}_{\text{H}}(\text{H}) = \frac{1}{2}\mh^{2}\text{H}^{2} + \lh{3}v\text{H}^{3} + \frac{\lh{4}}{4}\text{H}^{4} \: ,
 \end{equation}
 
 \noindent with the self-couplings defined as:
-
 #+NAME: eq:self_couplings
 \begin{equation}
 \lh{3} = \frac{\gf}{\sqrt{2}}\mh^{2} = \frac{\mh^{2}}{2v^{2}} \simeq 0.13 \:,\:\:\:\: \lh{3} = \lh{4} \: .
 \end{equation}
 
 \noindent We can conclude that the Higgs self-couplings are fully determined in the \ac{SM}, given the measurements of $\mh$ and $v$, the latter fixed by Fermi's constant $\gf$, which is in turn measured via muon decays.
-From an experimental point of view, the Higgs boson provides a unique opportunity to perform a \ac{SM} closure test, independently from the gauge interactions of the \ac{EW} sector.
+From an experimental point of view, the measurement of $\lh{3}$ thus provides a unique opportunity to perform a \ac{SM} closure test, independently from the gauge interactions of the \ac{EW} sector.
 
 * The Yukawa couplings
 :PROPERTIES:
@@ -116,15 +106,13 @@ From an experimental point of view, the Higgs boson provides a unique opportunit
 The Higgs mechanism represents an economical way to provide mass to the weak bosons in the theory.
 It can also be shown that the new massive bosons preserve renormalizability [[cite:&hooft]].
 However, a second feat is yet to be achieved: justify the existence of fermion masses.
-To do so, Yukawa (renormalizable) $\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\text{Y}}$ invariant terms are added to the \ac{SM} lagrangian, coupling left to right chiral fields:
-
+To do so, Yukawa (renormalizable) $\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\text{Y}}$ invariant terms are added to the \ac{SM} Lagrangian, coupling left to right chiral fields:
 #+NAME: eq:yukawa_lagrangian
 \begin{equation}
 \mathcal{L}_{\text{Yukawa}} = -y_{f^\prime} \left( \bar{\Psi}_{\text{L}}\phi\psi_{\text{R}}^{\prime} + \bar{\psi}^{\prime}_{\text{R}}\phi^{\dagger} \Psi_L \right) - y_{f}\left(\bar{\Psi}_{\text{L}} \tilde{\phi} \psi_{\text{R}} + \bar{\psi}_{\text{R}} \tilde{\phi}^{\dagger} \Psi_L \right) \: ,
 \end{equation}
 
 \noindent where $\psi$ and $\psi^{\prime}$ denote up and down fermions ($I_3 = 1/2$ and $I_3 = −1/2$, respectively, see [[eq:chiral_components]]), and:
-
 #+NAME: eq:yukawa_definitions
 \begin{equation}
 \tilde{\phi} = i\sigma_{2}\phi^{*} = \binom{\phi_{0}^{*}}{-\phi_{+}^{*}} \hspace{3mm} \xmapsto[]{\hspace{1mm} \text{EWSB} \hspace{1mm}} \:\:\: \frac{1}{\sqrt{2}}\binom{v+\text{H}(x)}{0} \: .
@@ -134,7 +122,6 @@ To do so, Yukawa (renormalizable) $\text{SU(2)}_{\text{L}}\otimes\text{U(1)}_{\t
 Note that fermion mass terms of the form $m\bar{\psi}\psi$ are forbidden by gauge invariance, and it is the addition of the Higgs doublet that changes the scenario.
 
 After \ac{EWSB}, using [[eq:unitary_gauge]] and [[eq:yukawa_definitions]], and summing over fermion up and down types, [[eq:yukawa_lagrangian]] is simplified to:
-
 #+NAME: eq:fermion_masses
 \begin{equation}
 \mathcal{L}_{\text{Yukawa}} = - \sum_f m_f\left( \bar{\psi}_\text{L} \psi_{\text{R}} + \bar{\psi}_\text{R} \psi_{\text{L}} \right) \left( 1 + \frac{\text{H}}{v} \right) \: ,
@@ -143,8 +130,7 @@ After \ac{EWSB}, using [[eq:unitary_gauge]] and [[eq:yukawa_definitions]], and s
 \noindent with new $m_{f} = y_{f}v/\sqrt{2}$ mass terms for the fermions.
 Very importantly, we have simplified the calculations: [[eq:yukawa_lagrangian]] can be expressed as a series of mass terms only after diagonalizing the original Yukawa matrices that multiply the fields.
 The process of diagonalization implies that the lepton fields are not mass eigenstates; they have to be redefined as in $\psi^{\prime} \rightarrow U\psi$.
-When the redefinition is propagated back to the full \ac{EW} lagrangian, only the term containing charged currents is modified:
-
+When the redefinition is propagated back to the full \ac{EW} Lagrangian, only the term containing charged currents is modified:
 #+NAME: eq:ckm_lagrangian
 \begin{equation}
 \mathcal{L}_{\text{CC}} = \frac{e}{\sqrt{2}\sin\theta_{\text{W}}} W_{\mu}^{+} V_{\text{CKM}} \, \bar{\psi}_{\text{L}}\gamma^\mu\psi_{\text{L}}^{\prime}  + \text{h.c.} \:,
@@ -154,7 +140,6 @@ When the redefinition is propagated back to the full \ac{EW} lagrangian, only th
 The \ac{CKM} matrix describes the mixing between all quark generations, and makes possible the existence of flavour-changing charged currents in the \ac{SM}.
 This is not the case for leptons, where couplings to charged W's only happen within each generation; a decay like $e^{-} \rightarrow \nu_{\mu} W^{-}$ is not allowed.
 The values of the \ac{CKM} matrix are shown in the following:
-
 #+NAME: eq:ckm_matrix1
 \begin{equation}
 \begin{pmatrix}
@@ -171,7 +156,6 @@ V_{\text{CKM}}
 \end{pmatrix}
 \: ,
 \end{equation}
-
 #+NAME: eq:ckm_matrix2
 \begin{equation}
 | V_{\text{CKM}} | = 
@@ -192,15 +176,15 @@ This is for instance why top quarks decay virtually always to b quarks, and othe
 The \ac{SM} therefore explains fermion masses by introducing 12 /ad hoc/ Yukawa coupling terms between the Higgs field and all fermion fields, breaking the symmetry between the three lepton families.
 At the same time, the origin or fundamental reason for such terms remains unknown, with the masses being free parameters of the theory.
 The Higgs mechanism does however predict a proportionality between its couplings and the masses of all fermions and gauge bosons (recall [[eq:higgs_lagrangian_full]]).
-This has been experimentally verified by the CMS and ATLAS Collaboration, and is shown in [[fig:linear_fermions_bosons]].
+This has been experimentally verified by the \ac{CMS} and \ac{ATLAS} Collaboration, and is shown in [[fig:linear_fermions_bosons]].
 The Higgs field also has an enormous impact in other fronts.
 As we will see in [[#sec:dihiggs]], there is a strong link between the $\lh{3}$ and $\lh{4}$ self-couplings and the stability of the vacuum, and the Higgs boson is also speculated to be connected to inflation, dark matter production, and baryogenesis.
 The last item is also discussed in [[#sec:ewpt]].
 
-Despite strongly motivated, and serving as the main motivation for building the \ac{LHC}, all the above was a matter of pure speculation until very recently.
-Since the mass of the new boson was a free parameter of the theory, there was no definitive guarantee that a Higgs particle could be produced in a \ac{HEP} experiment. 
+Despite strongly motivated, and serving as the main motivation for building the \ac{LHC}, all the above remained uncertain until very recently.
+Additionally, since the mass of the new boson was a free parameter of the theory, there was no definitive guarantee that a Higgs particle could be produced in a \ac{HEP} experiment. 
 However, some considerations on unitarity and perturbative behaviour conveyed some optimism, implying upper limits of $\mh \lesssim 700\,\si{\GeV}$ [[cite:&higgs_mass_up_bound1;&higgs_mass_up_bound2]], and to lower limits driven by vaccum stability arguments, where the nontrivial minima at $v \neq 0$ would disappear if $\mh$ was too small [[cite:&higgs_mass_down_bound]].
-The Higgs boson was finally jointly discovered by the CMS and ATLAS experiments, and was announced to the world on July 2012 [[cite:&CMS_Higgs_discovery1;&CMS_Higgs_discovery2;&ATLAS_Higgs_discovery]].
+The Higgs boson was finally jointly discovered by the \ac{CMS} and \ac{ATLAS} experiments, and was announced to the world on July 2012 [[cite:&CMS_Higgs_discovery1;&CMS_Higgs_discovery2;&ATLAS_Higgs_discovery]].
 All measurements so far suggest that the new particle truly is the predicted \ac{SM} scalar Higgs boson, with zero charge and a mass slightly above \SI{125}{\GeV}.
 Interestingly, the value found for $\mh$ almost perfectly maximizes the product of the 14 branching ratios of the \ac{SM} Higgs boson into the known fermion and boson pairs [[cite:&higgs_br_maximum1]].
 It is not known if this fact is accidental or if it instead hints at a deeper yet hidden theory, but it certainly increases the richness of Higgs physics to be explored at the \ac{LHC} and beyond.
@@ -213,6 +197,7 @@ It is not known if this fact is accidental or if it instead hints at a deeper ye
 #+END_figure
 
 * Additional bibliography :noexport:
++ @update with w mass measurement if on time@
 + [[https://archive.org/details/QuarksAndLeptonsAnIntroductoryCourseInModernParticlePhysicsHalzenMartin/page/n343/mode/2up][Halzen & Martin]]
 + [[https://www-nature-com.ezproxy.cern.ch/articles/s42254-021-00341-2][Higgs prospects review]]
 + [[https://journals.aps.org/prd/pdf/10.1103/PhysRevD.101.075023][Determining the shape of the Higgs potential at future colliders]]

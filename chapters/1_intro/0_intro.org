@@ -2,17 +2,18 @@
 :CUSTOM_ID: sec:intro_intro
 :END:
 
-There is hardly a more successful theoretical framework across all Sciences than the \ac{SM} of Particle Physics.
-Despite colossal experimental efforts, including the most sophisticated (and expensive) accelerators and detectors ever built, together with the involvement of thousands of scientists and engineers, all hundreds of petabytes of data so far produced match \ac{SM} predictions, in an inspiring demonstration of scientific accomplishment.
-And yet, we know the \ac{SM} to be incomplete, from the surprising behaviour of rotation curves of galaxies, to a mysterious form of energy permeating the entire Universe, or the apparent absence of a charge-mirrored world which should naively exist in identical proportions to the world we inhabit.
+The \ac{SM} of Particle Physics is undoubtedly one of the most successful theoretical frameworks in all of Science.
+Despite colossal experimental efforts, including the most sophisticated particle accelerators and detectors ever built, together with the involvement of thousands of scientists and engineers, most of the hundreds of petabytes of data so far produced match \ac{SM} predictions, in an inspiring demonstration of scientific accomplishment.
+And yet, we know the \ac{SM} to be incomplete, from the surprising behaviour of rotation curves of galaxies, to a mysterious form of energy permeating the entire Universe, or the apparent absence of a charge-mirrored world.
 
-Soon after the Higgs boson was discovered at the CERN LHC [[cite:&ATLAS_Higgs_discovery;&CMS_Higgs_discovery1;&CMS_Higgs_discovery2]], studies of its properties followed, in what seemed a natural and quick way to reach \ac{NP}.
-While some of these properties still remain underconstrained by the experiments, none of the highly anticipated new resonances have been discovered, whereas all experimental studies confirm the agreement of the collected data on the Higgs particle with the \ac{SM}.
-\ac{NP} could unfortunately lie at such high energies to substantiate the dreaded "particle desert" scenario, a vast region between $\si{\TeV}$ and \ac{BSM} scales where no resonances exist, making future discoveries impossible in the foreseeable future.
+Soon after the Higgs boson was discovered by the \ac{ATLAS} and \ac{CMS} Collaborations at the CERN LHC [[cite:&ATLAS_Higgs_discovery;&CMS_Higgs_discovery1;&CMS_Higgs_discovery2]], studies of its properties followed, in what seemed a natural and quick way to observe \ac{NP}.
+While some of these properties still remain underconstrained by the experiments, none of the highly anticipated new resonances have been discovered, such as the ones predicted by \ac{SUSY}.
+\ac{NP} could unfortunately lie at such high energies to substantiate the dreaded "particle desert" scenario: a vast region between $\si{\TeV}$ and \ac{BSM} scales where no resonances exist.
+Future discoveries would then become impossible in the foreseeable future.
 Notwithstanding, such fears might prove wrong, as a single unexpected discovery would overturn the current state of affairs.
-After discovering the top quark, physicists had to wait 17 years for the Higgs boson; the next momentous discovery could very well lie around the corner.
+After discovering the top quark [[cite:&top_discovery1;&top_discovery2]], physicists had to wait 17 years for the Higgs boson; the next momentous discovery could very well lie around the corner.
 
-The production of Higgs boson pairs (HH) arguably represents our best chance to observe the unfolding of new phenomena.
+The production of Higgs boson pairs (HH) arguably represents one of the best probes to observe the unfolding of new phenomena, especially since it is still mostly unexplored.
 Alongside the ability to search for \ac{BSM} resonances, the interaction of two Higgs bosons should enable the determination of one of the fundamental \ac{SM} parameters still left to be measured: the Higgs boson self-coupling.
 This quantity is profoundly connected to the internals of \ac{EWSB} and the stability of the \ac{EW} vacuum, and its measurement could lead to a revolution in the not-so-distant future.
 
@@ -21,4 +22,3 @@ The first section sets the tone, by detailing the underlying mechanisms of the \
 Next, we devote our attention to Higgs phenomenology, most notably HH production and decay.
 We then present the reasons that lead us to believe something lies beyond the current theory, specifically discussing resonant and nonresonant HH analyses, just like the one presented in this thesis.
 We conclude by summarizing the experimental status of HH physics, highlighting both direct and indirect searches, and a combination of the two.
-

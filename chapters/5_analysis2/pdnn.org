@@ -46,8 +46,8 @@ This means that $\text{N} \times 2$ predictions must be generated per event.
     \multirow{4}{*}{\textbf{Inference}} & Data  & Generate a prediction for each event $\text{N}\times2$ times. \\[+0.3em]
                                         & Background & Generate a prediction for each event $\text{N}\times2$ times. \\[+0.3em]
 
-                                        & \multirow{2}{*}{Signal} & Generate a prediction using the $m$ and $s$ the signal \\
-                                        &                         & was made with; used for the expected limits. \\ [+0.3em]\hline \\[-1em]
+                                        & \multirow{2}{*}{Signal} & Generate a prediction using the $m$ and $s$ \\
+                                        &                         &  the signal was made with. \\ [+0.3em]\hline \\[-1em]
 \end{tabular}
 \end{table}
 

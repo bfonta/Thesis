@@ -212,7 +212,6 @@
 :END:
 #+LATEX: \addcontentsline{toc}{chapter}{Conclusions}
 #+INCLUDE: "end/conclusions.org"
-#+INCLUDE: "end/quote.tex"
 #+LATEX: \clearpage
 
 * APPENDIX OPTIONS :ignore:
@@ -220,11 +219,12 @@
 
 
 * Appendix
-** ATLAS results on double Higgs production
+** Summary of ATLAS results on Higgs boson pair production
 #+INCLUDE: "chapters/appendixes/atlas_results.org"
-** General control distributions
+#+LATEX: \clearpage
 ** MET SF control distributions
 #+INCLUDE: "chapters/appendixes/met_sf_controlregions.org"
+#+LATEX: \clearpage
 
 
 * List of acronyms

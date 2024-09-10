@@ -36,7 +36,7 @@ In the following, we provide a more detailed description of each production mode
 ** Gluon fusion
 The $\text{g}\text{g} \rightarrow \text{H}\text{H}$ gluon fusion is the most important production mechanism of Higgs boson pairs at hadron colliders [[cite:&hllhc_physics]].
 Contrary to single Higgs \ac{ggF}, in HH phenomenology two diagrams participate at lowest order.
-The first involves a heavy quark "triangle" loop, just like for single Higgs production, radiating two Higgs bosons from the virtual Higgs particle.
+The first involves a heavy quark "triangle" loop, just like for single Higgs production, radiating two Higgs bosons from another Higgs particle.
 It is shown in [[fig:HH_production_diagrams_ggf]] (left), where the dependence on the self-coupling $\lh{3}$ and on the top Yukawa coupling $y_{t}$ is clear.
 A second "box" diagram exists, shown in [[fig:HH_production_diagrams_ggf]] (right), involving only the top Yukawa coupling.
 The amplitude of the two diagrams is overwhelmingly dominated by the top quark contribution; the mass of the second-heaviest quark, the b, is \num{\sim 40} smaller, and its contribution to the HH \ac{ggF} cross section amounts to \SI{\sim 0.3}{\percent}, being usually neglected due to the current experimental sensitivity [[cite:&bquark_contribution_ggf]].

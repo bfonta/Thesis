@@ -11,7 +11,7 @@
 
 As discussed in [[#sec:short_comings]], despite the impressive success of the \ac{SM}, we know that it must be incomplete.
 One of the big questions still left unanswered relates to the nature of the \ac{EWSB} of the Higgs field.
-When the Universe was very young, at extremely high temperatures, it was energetically favourable for the Higgs field to be zero everywhere.
+When the Universe was very young, at extremely high temperatures, it was energetically favorable for the Higgs field to be zero everywhere.
 Only around a hundred picoseconds after the Big Bang, with a stark temperature drop, was the symmetry broken.
 It is currently unknown how \ac{EWSB} takes place, specifically which kind of phase transition drives it.
 According to the \ac{SM}, the crossover should be smooth [[cite:&ewpt_type]], but such scenario is considered unnatural by some, due to the extreme distance between \ac{EW} and Planck scales.
@@ -22,14 +22,14 @@ The false potential minima would allow sudden phase transitions via the sci-fi-e
 It is however important to note that, based on current $\mt$ and $\alpha_{\text{S}}$ constraints [[cite:&vacuum_stability_2024]], our Universe could be metastable without additional states.
 The stability conditions are ruled by the running of the self-coupling with energy, in a function that also depends on the Higgs boson and top quark masses.
 For $\lh{3}$ at a certain energy scale, quantum tunneling from the current potential minimum to a lower minimum becomes possible.
-In [[fig:dead_or_alive]] we can see measurements of $\mt$ and $\mh$ overlayed on stability regions.
-The current measurements seems to favour a scenario where the tunneling probability timescale is comparable to or longer than the age of the Universe, while remaining meta-stable.
+In [[fig:dead_or_alive]], we can see measurements of $\mt$ and $\mh$ overlayed on stability regions.
+The current measurements seem to favor a scenario where the tunneling probability timescale is comparable to or longer than the age of the Universe, while remaining meta-stable.
 Despite the absence of a one-to-one correspondence between $\lh{3}$ and the vacuum instability, the measurement of the self-coupling could nevertheless shed light on whether the long-term existence of the electroweak vacuum is not guaranteed in Nature, or if a yet unknown mechanism ensures stability [[cite:&cadamuro_review]].
 We again point out the importance of HH production in the possible observation of variations of the Higgs potential, which might be connected to \ac{EWPT}, elucidating the matter-antimatter asymmetry experienced in our Universe [[cite:&hllhc_physics]]
 [[cite:&vacuum_stability_2024]].
 
 #+NAME: fig:dead_or_alive
-#+CAPTION: Regions of absolute stability (green), meta-stability (yellow) and instability (red) of the \ac{SM} vacuum in the $\mt-\mh$ plane. Current measures tend towards a meta-stable Universe. (Left) Zoomed-out version. (Right) Zoomed-in version, also displaying the measured $\mh$ and $\mt$ experimental range, where the gray areas denote the allowed regions with their 1, 2 and \SI{3}{\sigma} countours. The color gradient indicates the size of the theoretical uncertainties. Taken from [[cite:&vacuum_stab]].
+#+CAPTION: Regions of absolute stability (green), meta-stability (yellow) and instability (red) of the \ac{SM} vacuum in the $\mt-\mh$ plane. Current measures tend towards a meta-stable Universe. (Left) Zoomed-out version. (Right) Zoomed-in version, also displaying the measured $\mh$ and $\mt$ experimental range, where the gray areas denote the allowed regions with their 1, 2 and \SI{3}{\sigma} contours. The color gradient indicates the size of the theoretical uncertainties. Taken from [[cite:&vacuum_stab]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/interferences/DeadOrAlive.pdf]]

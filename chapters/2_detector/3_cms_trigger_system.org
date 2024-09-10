@@ -9,10 +9,11 @@ Collision and data rates are thus much higher than the rate at which data can be
 This implies a throughput reduction by a factor of \num{e4}.
 
 #+NAME: fig:cms_xsec_summary
-#+CAPTION: Summary of the cross section measurements of \ac{SM} processes at \ac{CMS}. The process name, center-of-mass energy of the measurement, and related publication are reported on the left of the panel; the integrated luminosity used for each result is reported on the right. Values are to be compared to the total proton-proton interaction cross section of about \SI{e11}{\pico\barn}. Taken from [[cite:&summary_smp_twiki]].
+#+CAPTION: Summary of selected \ac{CMS} cross section measurements of high-energy processes. Measurements performed at different \ac{LHC} \ac{pp} collision energies are marked by unique symbols and the coloured bands indicate the combined statistical and systematic uncertainty of the measurement. Grey bands indicate the uncertainty of the corresponding \ac{SM} theory predictions. Shaded hashed bars indicate the excluded cross section region for a production process the measured 95% \ac{CL} upper limit on the process indicated by the solid line of the same colour. Values span around 14 orders of magnitude. Taken from [[cite:&trigger_stairway]].
 #+BEGIN_figure
+\centering
 #+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/detector/CMSCrossSectionsSummary.pdf]]
+[[~/org/PhD/Thesis/figures/detector/CMSCrossSectionsSummary2.pdf]]
 #+END_figure
 
 However, among all events produced in \ac{CMS}, only a small fraction carries physical significance.

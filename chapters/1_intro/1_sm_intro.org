@@ -6,11 +6,11 @@ Little did Thomson know, in 1897, that the observed deflection of a stream of ch
 Following the discovery of the electron, Rutherford famously demonstrated the structure of the atom, and soon after Bohr managed to develop a mathematical framework predicting the spectrum of Hydrogen.
 Discoveries followed at great pace: Chadwick's neutrons, Planck's and Einstein's quanta.
 Theoretical and experimental developments continued for half a century, facing frequent obstacles, but eventually reaching a surprisingly effective framework, capable of describing wildly diverse natural phenomena: from the core of an atom to interstellar space.
-This overarching theory is known as the \ac{SM} of Particle Physics, sitting at the base of all scientific knowledge.
+This overarching theory is known as the \ac{SM} of Particle Physics, which serves as the foundation of modern \ac{HEP}.
 
 This section provides a standard description of the \ac{SM}, covering its major aspects, focusing on the items most relevant for later sections.
 The building blocks of the \ac{SM} are listed, hopefully providing a terse but clear picture of what is currently known at the most fundamental level.
 It immediately follows a description of the far-reaching relationship between abstract symmetries and measurable interactions, and its impact on the development of the \ac{SM} as we know it.
 Inconsistencies are elegantly solved with the Higgs mechanism, discussed in [[#sec:higgs_mechanism]]; a revolutionary idea defining the modern understanding of Particle Physics.
 There, elementary particles acquire mass, and a new scalar is introduced, the Higgs boson, a central piece of the experimental programme of current high-energy collider experiments.
-We finalize the first Chapter by presenting a concise account of the phenomenology and experimental status of Higgs physics: the quantities worth measuring, and the results such measurements have so far yielded.
+We finalize this first Section by presenting a concise account of the phenomenology and experimental status of single Higgs physics: the quantities worth measuring, and the results such measurements have so far yielded.

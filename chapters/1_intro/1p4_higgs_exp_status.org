@@ -4,7 +4,7 @@
 
 The measurements of Higgs properties at the LHC are in general challenging, given the low cross sections involved.
 The most sensitive analyses to single Higgs boson processes are the ones featuring the \hgg{} and \hzzfourl{} decay channels.
-Both are quite rare in the \ac{SM}, with the diphoton channel not even being allowed at tree level, since the Higgs boson couples to mass.
+Both are quite rare in the \ac{SM}, with the diphoton channel not even being allowed at tree level, since the Higgs boson couples to massive particles.
 They however possess extremely clean photonic or leptonic signatures, with relatively few competing background processes.
 The two channels have been responsible for increasingly precise measurements of the properties of the Higgs boson, namely its spin-parity $J^{P} = 0^{+}$ [[cite:&CMS_Hparity;&ATLAS_Hparity]], and its mass, here shown for the \hzzfourl{} channel in \run{1} + \run{2} combinations [[cite:&higgs_mass_cms_run2;&atlas_higgs_4l_mass]]:
 #+NAME: eq:mass_higgs_4l
@@ -67,17 +67,17 @@ Since the on-shell to off-shell cross section ratio is proportional to the width
 | tH (t-channel)  |                 0.13 | $0.07426^{+6.5\%}_{-14.7\%}$                                                                      |
 |-----------------+----------------------+---------------------------------------------------------------------------------------------------|
 
-The Higgs boson is created via a series of production modes, the most important of which are shown in [[fig:H_production_diagrams]] and listed in [[tab:higgs_production_xsecs]], where cross sections are provided for $\sqrt{s}=13\,\si{\TeV}$ (\run{2}), with $\mh = 125.09\,\si{\GeV}$.
-Looking at [[fig:single_higgs_xsec_br]] (left), we can expect a slight cross section increase for the current \run{3} at $\sqrt{s}=13.6\,\si{\TeV}$.
+The Higgs boson is created via a series of production modes, the most important of which are shown in [[fig:H_production_diagrams]] and listed in [[tab:higgs_production_xsecs]], where cross sections are provided for a center-of-mass energy of $\sqrt{s}=13\,\si{\TeV}$, with $\mh = 125.09\,\si{\GeV}$.
+Looking at [[fig:single_higgs_xsec_br]] (left), we can expect a cross section increase for higher energies.
 By far the most dominant production mode is \ac{ggF}, which as a consequence is also the most targeted by physics analyses at \ac{LHC} experiments.
 One order of magnitude below, the \ac{VBF} and VH "Higgs-strahlung" associated production modes follow, the latter split into WH and ZH, where WH includes processes with the two charged W bosons.
-The \ac{VBF} production mode, despite its small cross section, has a striking experimental signature with its two additional jets, which usually have a large \ac{pt} and are produced back-to-back.
+The \ac{VBF} production mode, despite its small cross section, has a striking experimental signature with its two additional jets, which usually have a large dijet invariant mass, and are produced back-to-back.
 \Ac{VBF} and VH also enable to probe the Higgs coupling to vector bosons, which is not present in \ac{ggF}.
 The ttH and tH channels have an even smaller cross section, but can provide additional information on the top quark Yukawa coupling.
 Among the listed production modes, only bbH and tH have not yet been measured at the \ac{LHC}.
 The former recently had a dedicated \ac{CMS} search observing a 95% \ac{CL} upper limit of 3.7 times the expected \ac{SM} cross section value [[cite:&cms_bbh]].
 Once measured, it will serve as a further test for the Higgs coupling to bottom quarks.
-A fact worth noting are the absolute and relative dependences of the various production modes with the Higgs boson \ac{pt} shown in [[fig:single_higgs_xsec_br]].
+Facts worth noting are the absolute and relative dependences of the various production modes with the Higgs boson \ac{pt} shown in [[fig:single_higgs_xsec_br]].
 As the energy of the Higgs boson increases, the relationship between production modes is drastically effected.
 Above $\pt^{\text{H}} \approx 550\,\si{\GeV}$ VH becomes the second most common production mode, and it even surpasses \ac{ggF} at the admittedly very high $\pt^{\text{H}} \approx 1250\,\si{\GeV}$ value.
 This illustrates the dynamic nature of Higgs physics.
@@ -117,14 +117,16 @@ The final state decays of the Higgs boson is "maximally rich" [[cite:&higgs_br_m
 We list the most common decay channels in [[tab:higgs_decay_br]] and show their Feynman diagrams in [[fig:HH_decay_diagrams]].
 The \hbb{} decay dominates, but suffers from an exceedingly large multijet background, plus significant resonant \zbb{} background, and has never been observed in \ac{ggF}.
 Similar issues arise in \ac{VBF}, despite the additional handles provided by the jets, since the cross section is greatly reduced.
-Instead, associated VH production is used, since the additional boson decays to leptons, which leave a clean signature in the detector.
+Instead, associated VH production is used, since the additional boson can decay to leptons, which leave a clean signature in the detector.
 The multijet background is even larger for \hcc{}, given the lower masses involved.
-Again, its production in association with vector bosons decaying leptonically is explored, imposing modest constraints on its cross section and on the charm Yukawa coupling [[cite:&higgs_to_charm_atlas]].
-As seen before, the "golden channels" are \hgg{} and mostly \hzzfourl{}, with very small couplings but an experimentally clean signature.
-The very rare $\text{H} \rightarrow \text{Z}\gamma$ has been recently combined between \ac{CMS} and \ac{ATLAS}, leading to an evidence (\SI{3.4}{\sigma}) for the first time [[cite:&cms_higgs_zgamma]].
-Notice that all decays with particles lighter than muons, such as light quarks or electrons, are completely out of reach from current or future detectors unless \ac{BSM} effects come into play.
+Again, its production in association with vector bosons decaying leptonically is explored, imposing constraints on its cross section and on the charm Yukawa coupling [[cite:&higgs_to_charm_atlas]].
+It is important to note that such a decay channel would have seemed impossible to measure just a few years ago.
+Less surprinsingly, the "golden channels" \hgg{} and mostly \hzzfourl{} continue to provide excellent results, despite their very small couplings, but relying on their experimentally clean signature.
+The very rare $\text{H} \rightarrow \text{Z}\gamma$ process has been recently combined between \ac{CMS} and \ac{ATLAS}, leading to an evidence (\SI{3.4}{\sigma}) for the first time [[cite:&cms_higgs_zgamma]].
+Notice that most decays with particles lighter than muons, such as light quarks or electrons, are extremely hard to measure in current or future detectors unless \ac{BSM} effects come into play.
 These final states have extremely small predicted couplings to the Higgs boson.
 To give an example, the $\text{H} \rightarrow e^{+}e^{-}$ decay is predicted to have a branching ratio $\mathcal{B}$ of \num{\sim 5e-9}, but the most recent \ac{CMS} 95% \ac{CL} upper limits excludes \num{3e-4} only [[cite:&higgs_to_electrons]], with similar results by \ac{ATLAS} [[cite:&higgs_to_ee_atlas]].
+However, the measurement of the electron Yukawa coupling at a future electron-positron collider cannot be for the moment completely excluded [[cite:&electron_yukawa]].
 The two experiments have also been probing \ac{LFV} processes such as $\text{H} \rightarrow e\mu$, $\text{H} \rightarrow \tau\mu$ and $\text{H} \rightarrow \tau\mu$, reaching better and better sensitivities up to \num{e-5}, and other rare decays, such as Higgs boson decays to $\text{J}/\psi$ or its excited states.
 Of particular relevance for \ac{CMS} are the observation of \htt{} [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]] and the first evidence for $\text{H} \rightarrow \mu\mu$ [[cite:&H2mumu]].
 

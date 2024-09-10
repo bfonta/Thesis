@@ -2,7 +2,7 @@
 :CUSTOM_ID: sec:hh_exp_status
 :END:
 
-As I write these lines, \run{3} at the \ac{LHC} is on-going, and many results will be complemented by updated analysis iterations at \SI{13.6}{\TeV}, exploiting more data and more performant experimental techniques.
+As I write these lines, data-taking at the \ac{LHC} is on-going, and many results will be complemented by updated analysis iterations at \SI{13.6}{\TeV}, exploiting more data and more performant experimental techniques.
 This will also be the case for HH resonant and nonresonant processes.
 Nevertheless, one cannot forget the plethora of results \run{1} and \run{2} provided, consistently beating experimental expectations.
 Many searches for Higgs boson pair production have been performed by the \ac{CMS} and the \ac{ATLAS} experiments.
@@ -17,7 +17,7 @@ The shape of the Higgs potential can really be only fully determined from a comb
 Given the correlations between $\lh{3}$ and $\lh{4}$, any hypothetical $\kl$ deviation will provide information on the quartic coupling [[cite:&Stylianou_2024]].
 Despite the vanishingly small cross-section at \SI{\sim 0.1}{\pico\barn} and smaller branching ratios ($\mathcal{B}(\text{HH}\rightarrow\text{bbbb})\approx0.33$ while $\mathcal{B}(\text{HHHH}\rightarrow\text{bbbbbb})\approx0.19$, for instance), triple production can add some constraining power to $\kl$ without requiring the quartic Higgs coupling modifier to be set to one in HH + HHH combinations.
 \Ac{CMS} is currently initiating studies with the \bbbbbb{} and \bbbbgg{} final states.
-However, given current sensitivity constraints, HHH analyses might become relevant in future colliders only.
+However, given current sensitivity constraints, HHH analyses can become relevant in future colliders only.
 
 * Additional bibliography :noexport:
 + B2G Summary plots: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsB2G

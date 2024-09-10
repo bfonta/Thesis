@@ -25,7 +25,7 @@ That high-energy collider physics has the potential to look for answers in many 
   The quantization of general relativity as been shown to be non-renormalizable, and cannot thus be integrated in the \ac{SM} as it is.
 
 + *\Ac{CP} violation and baryogenesis*:
-  Sakharov identified three necessary ingredients to explain a process capable of reproducing the observed asymmetry: /i/) lepton and baryon number violation, /ii/) a Universe was out of thermal equilibrium at some point in time, and /iii/) a \ac{CP}-violating interaction.
+  Sakharov identified three necessary ingredients to explain a process capable of reproducing the observed matter-antimatter asymmetry: /i/) lepton and baryon number violation, /ii/) a Universe was out of thermal equilibrium at some point in time, and /iii/) a \ac{CP}-violating interaction.
   In the \ac{SM}, the violation of \ac{CP} symmetry can only be accomodated in the parameters of the \ac{CKM} and \ac{PMNS} matrices.
   \Ac{CP} violation has already been studied in great depth in the quark sector, but the same is not the case for neutrinos.
   However, even assuming the observation of \ac{CP} violation in the \ac{PMNS} matrix, it seems unlikely that the \ac{SM} will be able to explain the full extent of the observed matter/anti-matter asymmetry in the Universe.

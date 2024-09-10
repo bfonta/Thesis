@@ -12,8 +12,7 @@
 The sensitivity of certain \ac{HEP} processes is occasionally dominated by a single final state.
 In single Higgs physics, for instance, the \hzzfourl{} is often regarded as a "golden channel", since it has a large signal-to-background ratio, with a flatish background under the Higgs boson peak, and possesses an extremely detector-friendly final state, which benefits from the good electron and muons resolution in \ac{CMS} and \ac{ATLAS}.
 Another example can be provided in the context of B-Physics, where the $\bszero \rightarrow \mu\mu$ and $\text{B}^{0} \rightarrow \mu\mu$ decays are equally seen as "golden", taking once again into account the exquisite muon resolutions in \ac{CMS}, and are highly suppressed in the \ac{SM}, making these rare channels particular sensitive to \ac{BSM} effects [[cite:&cms_bs]].
-On the contrary, double Higgs production does not include a single sensitivity-dominant channel.
-The available final states, also considering experimental constraints, are illustrated in [[fig:HH_final_states]], where no single channel dominates the sensitivity to the couplings of interest.
+On the contrary, double Higgs production does not include a single sensitivity-dominating channel.
 Instead, a vast measurement programme has to be established, considering multiple final states, and foreseeing their subsequent combination.
 Three channels are nevertheless more sensitive than the others: \bbbb{}, \bbgg{} and \bbtt{}.
 They are collectively referred as "silver bullets", since their combined measurement drives most of the sensitivity in HH physics:
@@ -26,3 +25,4 @@ They are collectively referred as "silver bullets", since their combined measure
   It is the channel considered for the analysis later described in this thesis.
 \noindent The remaining channels have a limited impact on the final sensitivity, but are nevertheless explored.
 They potentiate the development of new techniques that can be later transferred to other analyses, they can be sensitive to very particular and unexpected \ac{BSM} signatures, and they can provide the combined additional small gain required to observe a new process.
+The available final states are illustrated in [[fig:HH_final_states]].

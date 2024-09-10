@@ -7,59 +7,9 @@ While mentioning some results from the \ac{ATLAS} Collaboration in [[#sec:atlas_
 Refer to [[fig:HH_final_states]] for a glimpse of all results so far produced, with the many explored final states.
 All results are compatible with the \ac{SM}.
 
-* Nonresonant searches
-We start by mentioning the most sensitive analyses, namely the "silver bullets", and focus on the most recent results for each channel.
-The \ac{ggF} and \ac{VBF} \hhbbbb{} processes have been studied in their boosted [[cite:&atlas_hh_bbbb_boost]] and resolved [[cite:&bbbb_resolved_cms]] topologies, relative to their b-jets.
-For the first time, associated production with a vector gauge boson was also considered [[cite:&vhh_4b_cms]].
-Jointly studying \ac{ggF} and \ac{VBF}, \hhbbtt{} [[cite:&higgs_bbtautau_nonres]] and \hhbbgg{} [[cite:&bbgg_cms]] results were also produced with good performances.
-
-The above channels drive the sensitivity of combinations, but are complemented by others, now mentioned.
-In the \ac{ggF} production process only, \ac{CMS} obtained results on \hhbbzz{} [[cite:&cms_hh_bbzz]] and on the extremely rare \hhttgg{} decay ($\mathcal{B}\approx0.028\%$) [[cite:&gammagammatautau]].
-The latter is not used in the combinations reported below.
-Taking into account both \ac{ggF} and \ac{VBF}, \ac{CMS} also has multilepton (HH decaying to WWWW, $\text{W}\text{W}\tau\tau$ and $\tau\tau\tau\tau$) [[cite:&cms_hh_multileptons]], \hhbbww{} [[cite:&cms_hh_bbww]] and \hhwwgg{} [[cite:&cms_hh_wwgg]] analyses.
-#+NAME: fig:HH_nonres_comb_xsec
-#+CAPTION: Upper limits at 95% \ac{CL} on the SM signal strength $\mu = \xshh / \xshhsm$. The inner (green) and outer (yellow) bands indicate the regions containing 68% and 95%, respectively, of the limits on $\mu$ expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the post-fit values of the uncertainties. Figure taken from [[cite:&summary_hig_twiki]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .65\textwidth
-[[~/org/PhD/Thesis/figures/intro/limits_HH_SM_Mar2023.pdf]]
-#+END_figure
-The most up-to-date Run2 HH combination constrains the observed (expected) HH cross section to $\xshh < 3.4\;(2.5)\;\xshhsm$, as shown in [[fig:HH_nonres_comb_xsec]].
-The limit is also interpreted as a function of the $\kl$ and $\kvv$ coupling modifiers, observing $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively, a t 95% \ac{CL}.
-The coupling modifier results are shown for individual channels in [[fig:HH_nonres_comb_c2v]], and compared to the theory prediction in [[fig:scan_comb_cms_nature]].
-Importantly, the $\kvv$ result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
-The above combination fixes all coupling modifiers except one to have their \ac{SM} value.
-One can additionally perform a $(\kl,\kvv)$ simultaneous fit to \ac{ggF} and \ac{VBF} HH processes, as shown in [[cite:&higgs_10_years]].
-
-#+NAME: fig:HH_nonres_comb_c2v
-#+CAPTION: 95% confidence intervals on $\kl$ (left) and $\kvv$ (right), superimposed by the best fit value on this parameter, assuming \ac{SM} values for the $\kt$, $\kv$ and $\kvv$ coupling modifiers. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to a \SI{1}{\sigma} interval. The quoted expected upper limits are evaluated with the post-fit values of the uncertainties. Results are taken from the references marked next to each individual measurement. 
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/exclusion_kl_Mar2023.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/exclusion_C2V_Mar2023.pdf]]
-#+END_figure
-
-#+NAME: fig:scan_comb_cms_nature
-#+CAPTION: Combined expected and observed 95% CL upper limits on the HH production cross section as a function of $\kl$ (left) and $\kvv$ (right), assuming \ac{SM} values for the $\kt$, $\kv$ and $\kvv$ coupling modifiers. The green and yellow bands represent the \SI{1}{\sigma} and \SI{2}{\sigma} extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross section (its \SI{1}{\sigma} uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95% CL. Taken from [[cite:&higgs_10_years]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/scan_kl_nature.pdf]]
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/scan_k2v_nature.pdf]]
-#+END_figure
-
-We conclude by mentioning two very recent results, produced after the combinations above.
-The first refers to the \hhbbvv{} analysis [[cite:&cms_hh_bbvv_hadr]], which covers so far unexplored all-hadronic final states, with a 13% \ac{BR}.
-Despite the absence of a relevant $\kl$ constrain, the analysis focus on the boosted regime to better constrain $\kvv$, almost excluding $\kvv=0$ by itself.
-The analysis represents the first use of the novel Particle Transformer algorithm [[cite:&transformer]], briefly covered in [[#sec:prospects]], to tag a merged $\text{H}\rightarrow\text{V}\text{V} \rightarrow 4\text{q}$ jet.
-The second result consists on using \ac{VBS} production of $\text{W}^{\pm}\text{W}^{\pm}\text{H}(\rightarrow \text{b}\bar{\text{b}})$ to constrain HHWW couplings, considering only W leptonic channels [[cite:&wwh_kvv_cms_theory;&wwh_kvv_cms]].
-The diagrams also include $\lh{3}$, but given the experimental sensitivity the analysis focuses instead on $\kvv$, being mostly sensitive to $\text{V}=\text{W}$ due to the lepton selection.
-The final constraints are competitive with other subleading channels.
-These new ideas show the potential for a continued deliver of high-quality results in the years to come, always hoping for larger improvements than anticipated.
-
 * Resonant searches
 The \ac{CMS} Collaboration has very recently performed a combination of multiple \run{2} resonant analyses [[cite:&interf_studies]][fn:: This is the same study which incldes the material presented in [[#sec:interf_intro]], and which I helped reviewing during my thesis.], considering both the \xhh{} and the \xyh{} topologies, with X and Y being \ac{BSM} scalars which could reflect the theories described in [[#sec:res_BSM_hh]].
-In the same work, interpretations are done for different theories, establishing  exclusion limits on the model's parameters.
+In the same work, interpretations are done for different theories, establishing exclusion limits on the model's parameters.
 Individual analyses extract 95% \ac{CL} upper limits on the resonant HH production as a function of the resonance mass $\mx$.
 When YH limits are drawn, an additional dependence on $\my$ is included.
 In total, six searches are considered, targeting a variety of final states.
@@ -111,9 +61,61 @@ The exclusion upper limits tend to be of around \num{50}, \num{5}, and \SI{0.3}{
 
 The \xhhbbtt{} result obtained in this thesis represents an enormous improvement over the first of such studies in \ac{CMS}, which used only 2016 data [[cite:&cms_hh_bbtt]].
 This work also improves on the techniques of its nonresonant counterpart [[cite:&higgs_bbtautau_nonres]].
+As reported in [[#sec:final_limits]], the expected results are even better than the most recent \ac{CMS} resonant combination at an intermediate mass range.
 A \xyhbbtt{} has also been published by \ac{CMS} [[cite:&cms_hh_bbtt]], not obtaining limits for a \SI{125}{\GeV} Higgs boson.
 An interpolation was nevertheless performed and is shown in [[fig:res_comb_xhh]].
 Comparisons are discussed in [[#sec:final_limits]].
+
+* Nonresonant searches
+For nonresonant analyses, we start by mentioning the most sensitive decay channels, namely the "silver bullets", and focus on the most recent results for each channel.
+The \ac{ggF} and \ac{VBF} \hhbbbb{} processes have been studied in their boosted [[cite:&bbbb_boosted_cms]] and resolved [[cite:&bbbb_resolved_cms]] topologies, relative to their b-jets, the former managing to exclude $\kvv=0$ at 6.3 standard deviations.
+For the first time, associated production with a vector gauge boson was also considered [[cite:&vhh_4b_cms]].
+Jointly studying \ac{ggF} and \ac{VBF}, \hhbbtt{} [[cite:&higgs_bbtautau_nonres]] and \hhbbgg{} [[cite:&bbgg_cms]] results were also produced with good performances.
+
+The above channels drive the sensitivity of combinations, but are complemented by others, now mentioned.
+In the \ac{ggF} production process only, \ac{CMS} obtained results on \hhbbzz{} [[cite:&cms_hh_bbzz]] and on the extremely rare \hhttgg{} decay ($\mathcal{B}\approx0.028\%$) [[cite:&gammagammatautau]].
+The latter is not used in the combinations reported below.
+Taking into account both \ac{ggF} and \ac{VBF}, \ac{CMS} also has multilepton (HH decaying to WWWW, $\text{W}\text{W}\tau\tau$ and $\tau\tau\tau\tau$) [[cite:&cms_hh_multileptons]], \hhbbww{} [[cite:&cms_hh_bbww]] and \hhwwgg{} [[cite:&cms_hh_wwgg]] analyses.
+#+NAME: fig:HH_nonres_comb_xsec
+#+CAPTION: Upper limits at 95% \ac{CL} on the SM signal strength $\mu = \xshh / \xshhsm$. The inner (green) and outer (yellow) bands indicate the regions containing 68% and 95%, respectively, of the limits on $\mu$ expected under the background-only hypothesis. The quoted expected upper limits are evaluated with the post-fit values of the uncertainties. Figure taken from [[cite:&summary_hig_twiki]].
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .8\textwidth
+[[~/org/PhD/Thesis/figures/intro/limits_HH_SM_Mar2023.pdf]]
+#+END_figure
+The most up-to-date Run2 HH combination constrains the observed (expected) HH cross section to $\xshh < 3.4\;(2.5)\;\xshhsm$, as shown in [[fig:HH_nonres_comb_xsec]].
+The limit is also interpreted as a function of the $\kl$ and $\kvv$ coupling modifiers, observing $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively, at 95% \ac{CL}.
+The coupling modifier results are shown for individual channels in [[fig:HH_nonres_comb_c2v]], and compared to the theory prediction in [[fig:scan_comb_cms_nature]].
+Importantly, the $\kvv$ result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
+The above combination fixes all coupling modifiers except one to have their \ac{SM} value.
+One can additionally perform simultaneous fits in \ac{ggF} and \ac{VBF} HH processes of $(\kl,\kvv)$ and $(\kl,\kt)$, as shown in Refs.[[cite:&higgs_10_years]] and [[cite:&bbgg_cms]], respectively.
+
+#+NAME: fig:HH_nonres_comb_c2v
+#+CAPTION: 95% confidence intervals on $\kl$ (left) and $\kvv$ (right), superimposed by the best fit value on this parameter, assuming \ac{SM} values for the $\kt$, $\kv$ and $\kvv$ coupling modifiers. The blue (black) hashed band indicates the observed (expected) excluded regions, respectively. The band around the best fit value corresponds to a \SI{1}{\sigma} interval. The quoted expected upper limits are evaluated with the post-fit values of the uncertainties. Results are taken from the references marked next to each individual measurement. 
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/exclusion_kl_Mar2023.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/exclusion_C2V_Mar2023.pdf]]
+#+END_figure
+
+#+NAME: fig:scan_comb_cms_nature
+#+CAPTION: Combined expected and observed 95% CL upper limits on the HH production cross section as a function of $\kl$ (left) and $\kvv$ (right), assuming \ac{SM} values for the $\kt$, $\kv$ and $\kvv$ coupling modifiers. The green and yellow bands represent the \SI{1}{\sigma} and \SI{2}{\sigma} extensions beyond the expected limit, respectively; the red solid line (band) shows the theoretical prediction for the HH production cross section (its \SI{1}{\sigma} uncertainty). The areas to the left and to the right of the hatched regions are excluded at the 95% CL. Taken from [[cite:&higgs_10_years]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/scan_kl_nature.pdf]]
+#+ATTR_LATEX: :width .5\textwidth :center
+[[~/org/PhD/Thesis/figures/scan_k2v_nature.pdf]]
+#+END_figure
+
+We conclude by mentioning two very recent results, produced after the combinations above.
+The first refers to the \hhbbvv{} analysis [[cite:&cms_hh_bbvv_hadr]], which covers so far unexplored all-hadronic final states, with a 13% \ac{BR}.
+Despite the absence of a relevant $\kl$ constrain, the analysis focus on the boosted regime to better constrain $\kvv$, almost excluding $\kvv=0$ by itself.
+The analysis represents the first use of the novel Particle Transformer algorithm [[cite:&transformer]], briefly covered in [[#sec:prospects]], to tag a merged $\text{H}\rightarrow\text{V}\text{V} \rightarrow 4\text{q}$ jet.
+The second result consists on using \ac{VBS} production of $\text{W}^{\pm}\text{W}^{\pm}\text{H}(\rightarrow \text{b}\bar{\text{b}})$ to constrain HHWW couplings, considering only W leptonic channels [[cite:&wwh_kvv_cms_theory;&wwh_kvv_cms]].
+The diagrams also include $\lh{3}$, but given the experimental sensitivity the analysis focuses instead on $\kvv$, being mostly sensitive to $\text{V}=\text{W}$ due to the lepton selection.
+The final constraints are competitive with other subleading channels.
+These new ideas show the potential for a continued deliver of high-quality results in the years to come, always hoping for larger improvements than anticipated.
 
 * Comment from Rainer :noexport:
 "bbtt is really a YH analysis which was requested to exclude the mY=mH points due to strategic considerations by L2 management. Hence no dedicated paper and no spin 2. For our HH combination, an interpolation was made, which is described in the combination subsection (end of Sec 2). This was because management saw another dedicated HH analysis coming which was supposed to give better sensitivity for HH. But it never converged.
