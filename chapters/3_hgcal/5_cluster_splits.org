@@ -3,11 +3,11 @@
 :END:
 
 The framework described in [[#sec:event_geom_developments]] is put to use in a concrete scenario.
-Before the start of the thesis here described, it had been observed that the \ac{L1} \ac{S2} chain, for uncoverted photon events, ocasionally identified more clusters than the number of unconverted photons originally generated in the detector.
+Before the start of the thesis here described, it had been observed that the \ac{L1} \ac{S2} chain, for unconverted photon events, occasionally identified more clusters than the number of unconverted photons originally generated in the detector.
 For a single photon, this corresponds to measuring two energy clusters from just one generated particle.
 We say that the cluster that should have been measured was "split", hence the term /cluster splits/.
 At the \ac{TPG} level of the reconstruction, each cluster should ideally correspond to a single particle.
-A different behaviour can degrade the detector's energy and position resolution, since:
+A different behavior can degrade the detector's energy and position resolution, since:
 + particles can be reconstructed with a lower energy than their true energy when only one cluster passes additional selections, since the energy distribution across the clusters can be asymmetric;
 + particles can be reconstructed with a shifted position when only one cluster passes additional selections, since part of the energy deposits will not contribute to the position calculation (see [[eq:weighted_position]]);
 + the multiplicity of particles in the event can be affected, when both clusters are interpreted as separate particles.
@@ -35,11 +35,11 @@ In other words, immediately adjacent bins, in both the \rz{} and \ac{phi} dimens
 Differences are extremely dependent on the bin widths, but the effect is very pronounced with current \ac{S2} parameters.
 The inhomogeneities are illustrated by the black dots in [[fig:tcmov]].
 The non-uniformities introduce nonphysical biases, as the distribution of deposited energy in \coordsa{} bins might not closely follow the true one in the detector.
-Whenever the \ac{TC}-to-bin mapping is such that an intermediate bin has fewer \acp{TC} compared to their neighbours, the energy deposited by single particles can follow a pattern with two maxima along \ac{phi}.
+Whenever the \ac{TC}-to-bin mapping is such that an intermediate bin has fewer \acp{TC} compared to their neighbors, the energy deposited by single particles can follow a pattern with two maxima along \ac{phi}.
 As a consequence, the seeding step, as described in [[#sec:hgcal_trigger_primitives]], finds two seeds.
 Since each seed originates a cluster, two clusters are formed from a single particle.
 The degradation of the detector's energy response and position resolution ensues.
-The effect is overwhelmignly more present in the low \rz{} region, where bins are finer and \ac{TC} multipicity fluctuations larger.
+The effect is overwhelmingly more present in the low \rz{} region, where bins are finer and \ac{TC} multiplicity fluctuations larger.
 
 #+NAME: fig:tcmov
 #+CAPTION: Number of \acp{TC} present as function of the \ac{phi} bin index, for the lowest \rz{} bin, where differences between adjacent bins is the most extreme. Black dots show the original distribution, and red dots show the \ac{TC} distribution after running the =bye-splits= algorithm with $\lambda=0$. Related results show that the bin positions assigned to \acp{TC}, with respect to their true positions, are always less than \SI{2}{\cm} for all layers and \rz{} bins.
@@ -55,7 +55,7 @@ In what follows, we propose a solution which does not impact hardware resources.
 
 * The bye-splits iterative algorithm
 
-Cluster splits are mostly located in the high-\rapidity{} region, where bins are smaller in the cartesian space and \ac{TC} counts are less homogeneous along adjacent bins.
+Cluster splits are mostly located in the high-\rapidity{} region, where bins are smaller in the Cartesian space and \ac{TC} counts are less homogeneous along adjacent bins.
 Splits are also present virtually along \ac{phi} only, since \rz{} bins are larger, and thus less subject to \ac{TC} multiplicity fluctuations.
 In other words, \ac{TC} non-uniformity is much more prominent along \ac{phi}.
 For the purpose of this thesis, I have developed the \bsplits{} algorithm, which aims at reducing the variance of \ac{TC} across all \ac{phi} bins for a constant \rz{} value.
@@ -81,11 +81,11 @@ A pseudo-random number $x$ is sampled from an uniform distribution $\mathcal{U}(
 
 \noindent The randomness in [[eq:side]] ensures that the shape of the distribution of \ac{TC} counts along \ac{phi} is kept, while turning \ac{TC} migrations more likely on the side where differences is counts are larger.
 In fact, had we simply used the absolute value of the differences to choose the side, all \ac{TC} distributions would lose some of its distinct shape properties.
-Our method instead "squashes" the distributions, tring as much as possible to maintain the original shape.
+Our method instead "squashes" the distributions, trying as much as possible to maintain the original shape.
 Once a side is chosen, the shift of a \ac{TC} is executed taking into account the relative distribution of \ac{TC} counts in the sliding window.
 For a sliding window size of \num{3}, there are four types of \ac{TC} distributions, as also illustrated in [[fig:italgo]]:
-+ "valleys", where the central bin has less \ac{TC} counts than its neighbours;
-+ "mountains", where the central bin has more \ac{TC} counts than its neighbours;
++ "valleys", where the central bin has less \ac{TC} counts than its neighbors;
++ "mountains", where the central bin has more \ac{TC} counts than its neighbors;
 + "ascent", where \ac{TC} counts increase from left to right;
 + "descent", where \ac{TC} counts decrease from left to right.
 The \ac{TC} shift is always performed from the bin with more \acp{TC} to the bin with less \acp{TC}.
@@ -106,7 +106,7 @@ We note that the direction in which the sliding window moves should not impact t
 However, the iterative nature of the algorithm does not ensure this condition.
 We experimentally run the algorithm in both directions and observe no noticeable difference.
 An important constraint is brought by the number and distance of bin migrations, which should be minimized.
-By "distance" we mean the physical cartesian displacement of a \ac{TC} relative to its original location.
+By "distance" we mean the physical Cartesian displacement of a \ac{TC} relative to its original location.
 Despite the wish to reduce cluster splitting, the final \ac{TC}-to-bin mapping should still reflect the overall physical positions of \acp{TC}, or else other energy- or position-related biases can impact the \acp{TP}.
 The algorithm is therefore run with a single \ac{phi} bin shift per iteration.
 For $\lambda=0$, we verify that all \acp{TC} move less than \SI{2}{\cm} along \ac{phi}, which implies they moved to their immediately adjacent bins only.
@@ -132,13 +132,13 @@ The algorithm is thus a strong candidate for the final design of the reconstruct
 # Adapted versions of \bsplits{} are currently also being considered to address \ac{TC} assignment to \ac{phi} bins in the upstream \ac{ECON-T}/\ac{S1} interface.
 
 #+NAME: fig:ratio_bsplits
-#+CAPTION: Dependence of the ratio of cluster splits with the parameter $\lambda$, which controls the stopping condition of \bsplits{} (see [[eq:termination]]). The blue line represents the fraction of cluster splits with the default chain, also implemented in \ac{CMSSW}. The red dots refer to the custom framework with \bsplits{}. The more agressive the algorithm is, the more cluster splits are removed. Following [[eq:termination]], a value of $\lambda=0$ indicates the most agressive stopping condition.
+#+CAPTION: Dependence of the ratio of cluster splits with the parameter $\lambda$, which controls the stopping condition of \bsplits{} (see [[eq:termination]]). The blue line represents the fraction of cluster splits with the default chain, also implemented in \ac{CMSSW}. The red dots refer to the custom framework with \bsplits{}. The more aggressive the algorithm is, the more cluster splits are removed. Following [[eq:termination]], a value of $\lambda=0$ indicates the most aggressive stopping condition.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/RatioByeSplits.pdf]]
 #+END_figure
 #+NAME: fig:split
-#+CAPTION: Example of a cluster split for a single photon event in the \coordsa{} space, where colors represent energy deposited per bin in \tmip{} units. The orange cross shows the position of the generated uncoverted photon. The top (bottom) row shows the same event before (after) applying the smearing step. The left (right) column displays the event not considering (considering) the \bsplits{} algorithm, where the red (black) crosses point to the position of the reconstructed clusters. Generated and reconstructed clusters become superimposed after running \bsplits{}.
+#+CAPTION: Example of a cluster split for a single photon event in the \coordsa{} space, where colors represent energy deposited per bin in \tmip{} units. The orange cross shows the position of the generated unconverted photon. The top (bottom) row shows the same event before (after) applying the smearing step. The left (right) column displays the event not considering (considering) the \bsplits{} algorithm, where the red (black) crosses point to the position of the reconstructed clusters. Generated and reconstructed clusters become superimposed after running \bsplits{}.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/ClusterSplits.pdf]]
@@ -161,7 +161,7 @@ Alternative approaches were therefore explored to mitigate cluster splits, tryin
 New approaches could be easily tested thanks to the framework described in [[#sec:event_geom_developments]].
 Three methods are tested, and they all reduce cluster splits dramatically.
 
-+ *Seeding window increase*: The size of the seeding window along \ac{phi} was increased to \num{2} bins, while keeping the size along \rz{} set to \num{1} bin. This enables the seeding step to "look further", and notice whether a particular area of the phase-space has two local maxima. The window has access to \num{14} neighbours instead of \num{8}. Results are displayed on the right column of [[fig:byesplits_res]], where it becomes clear that cluster splits are virtually completely removed, with  a performance clearly superior to \bsplits{}. However, each window requires six additional firmware comparators, increasing resource consumption.
++ *Seeding window increase*: The size of the seeding window along \ac{phi} was increased to \num{2} bins, while keeping the size along \rz{} set to \num{1} bin. This enables the seeding step to "look further", and notice whether a particular area of the phase-space has two local maxima. The window has access to \num{14} neighbors instead of \num{8}. Results are displayed on the right column of [[fig:byesplits_res]], where it becomes clear that cluster splits are virtually completely removed, with  a performance clearly superior to \bsplits{}. However, each window requires six additional firmware comparators, increasing resource consumption.
   
 + *Smearing kernel update*: Apply a "flat-top" kernel instead of the default one:
 
@@ -175,7 +175,7 @@ Three methods are tested, and they all reduce cluster splits dramatically.
       \right]
   \end{equation}
 
-  The current smoothing kernel applies a larger weight to the central bin, while the updated one has a "flat" weigth scheme around the central bin.
+  The current smoothing kernel applies a larger weight to the central bin, while the updated one has a "flat" weight scheme around the central bin.
   This is equivalent to share the bin energy between central bins along \ac{phi}, causing local non-uniformities in the energy deposits to become blurred out, removing cluster splits.
   This methods has a result almost identical to the previous one.
 
@@ -194,15 +194,15 @@ These results suggest that the requirements of algorithms needing more resources
 :CUSTOM_ID: sec:using_detector_coordinates
 :END:
 
-\ac{HGCAL}'s geometry uses non-cartesian coordinates to cover the hexagonal tessellation of its \ch{Si} modules and sensors, as shown in [[fig:hgcal_hexag_coords]] (left and middle).
-The algorithms running in the \ac{BE} consider instead projective and/or cartesian coordinates.
+\ac{HGCAL}'s geometry uses non-Cartesian coordinates to cover the hexagonal tessellation of its \ch{Si} modules and sensors, as shown in [[fig:hgcal_hexag_coords]] (left and middle).
+The algorithms running in the \ac{BE} consider instead projective and/or Cartesian coordinates.
 The latter are used because they enable to access the full detector in a single 2D plane, and are ideal for vectorized data processing.
 However, biases are created once the phase-space where measurements are taken is matched to bins defined in a different space.
 The cluster splits described in [[#sec:origin_cluster_splits]] represent a good example.
 Additionally, the current \coordsa{} bins imply a complex firmware routing of \acp{TC} to bins, which is further complicated by the varying bin area.
 
 I explored the possibility of using detector coordinates for the \ac{HGCAL} \ac{TPG} reconstruction.
-Hexagonal coordinates bring a (moderate) increase in algorithmic complexity for navigation and neighbour query across detector elements.
+Hexagonal coordinates bring a (moderate) increase in algorithmic complexity for navigation and neighbor query across detector elements.
 Additionally, and as discussed in [[#sec:hgcal_coordinates]], further complications arise from the coexistence of two different hexagonal coordinates, which must be integrated.
 Finally, detector coordinates are not projective, which implies considering groups of a few consecutive layers only.
 On the positive side, using coordinates that follow the geometry of the detector should immediately remove any existing bias, including cluster splits.
@@ -240,17 +240,17 @@ The coordinate translation from local \coordsb{} to global ($u^{\prime},v^{\prim
 Notably, they can be expressed as powers of \num{2}, easing their inclusion in the firmware.
 The effect can be seen in [[fig:hexag_coords]], where the end result of the translation of seven modules is shown in detector and rectangular spaces.
 Both spaces are functionally identical, but the second helps visualizing what the alternative seeding step considers.
-The result of the same translation for a simulated single unoconverted photon event is shown in [[fig:hexag_coords_event]].
+The result of the same translation for a simulated single unconverted photon event is shown in [[fig:hexag_coords_event]].
 
 #+NAME: fig:hexag_coords
-#+CAPTION: Illustration for the global hexagonal coordinate system used for the alternative seeding based on detector coordinates. Brown shows \acp{TC} belonging to the central module, while cyan shows the first-order neigbours that have to be considered when applying a size \num{1} seeding window to all \acp{TC} in the central module. Each \ac{TC} only has \num{6} neighbours. (Left) Detector space. (Right) The same detector elements converted to a square grid-like space, helpful to visualize the structure of the seeding window in hexagonal coordinates. The bins contained within the dashed lines represent the bins that a naive seeding implementation would have to store in memory for each module being processed.
+#+CAPTION: Illustration for the global hexagonal coordinate system used for the alternative seeding based on detector coordinates. Brown shows \acp{TC} belonging to the central module, while cyan shows the first-order neighbors that have to be considered when applying a size \num{1} seeding window to all \acp{TC} in the central module. Each \ac{TC} only has \num{6} neighbors. (Left) Detector space. (Right) The same detector elements converted to a square grid-like space, helpful to visualize the structure of the seeding window in hexagonal coordinates. The bins contained within the dashed lines represent the bins that a naive seeding implementation would have to store in memory for each module being processed.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/HexagonalCoordinates.pdf]]
 #+END_figure
 
 #+NAME: fig:hexag_coords_event
-#+CAPTION: Projection of \acp{TC} in four layers (\num{9}, \num{11}, \num{13} and \num{15}) of a simulated single unconverted photon event. The layers correspond to the shower maximum region. Each \ac{TC} has \num{6} neighbours only, not \num{8} as the rectangular space might suggest. (Left) Detector space. (Right) The same detector elements converted to a square grid-like space.
+#+CAPTION: Projection of \acp{TC} in four layers (\num{9}, \num{11}, \num{13} and \num{15}) of a simulated single unconverted photon event. The layers correspond to the shower maximum region. Each \ac{TC} has \num{6} neighbors only, not \num{8} as the rectangular space might suggest. (Left) Detector space. (Right) The same detector elements converted to a square grid-like space.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/HexagonalCoordinatesEvent.pdf]]
@@ -259,10 +259,10 @@ The result of the same translation for a simulated single unoconverted photon ev
 The internal logic of the alternative seeding is very similar to the default seeding algorithm.
 Once the coordinate translation in [[eq:matrix]] is applied, the algorithm searches for local seeding maxima.
 Given the non-projective nature of the coordinates, we choose to consider the projection of $(u^{\prime},v^{\prime})$ for layers \num{9}, \num{11}, \num{13} and \num{15}, corresponding to the \ac{EM} shower maximum region.
-Contrary to standard cartesian coordinates, each hexagonal bin only has \num{6} neighbours.
+Contrary to standard Cartesian coordinates, each hexagonal bin only has \num{6} neighbors.
 Less comparators are thus required at firmware level.
 When seeding one module, the information of nearby modules must be available to correctly compute seeds at the module's boundaries.
-The brown and cyan colors of [[fig:hexag_coords]] represent the central modules and the \ac{TC} neighbours for a seeding window of size \num{1}.
+The brown and cyan colors of [[fig:hexag_coords]] represent the central modules and the \ac{TC} neighbors for a seeding window of size \num{1}.
 These considerations become relevant if the seeding is run in parallel for multiple modules in the firmware.
 The algorithm itself can be easily parallelized at \ac{TC} level, where each brown bin would correspond to a separate instance.
 The dashed lines contain the bins in a square-grid which would have to be kept in memory if running all instances in parallel, using some kind of shared memory in a naive implementation.
@@ -291,3 +291,5 @@ The algorithm is observed to have a "perfect efficiency" at 0 \ac{PU}, meaning t
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/UVDist.pdf]]
 #+END_figure
+
+#  LocalWords:  noindent

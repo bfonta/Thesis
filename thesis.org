@@ -9,7 +9,7 @@
 * OPTIONS START :ignore:
 #+LATEX: \input{cover}
 #+LATEX: \pagenumbering{roman}
-#+LATEX: \fontsize{12pt}{13pt}\selectfont
+#+LATEX: \fontsize{12pt}{12pt}\selectfont
 #+LATEX: \input{start/dedication_page}
 
 

@@ -16,10 +16,12 @@ Extensive detector upgrades are therefore required for many \ac{LHC} experiments
 The operational scenario of the \ac{HL-LHC} is continuously evolving, with some uncertainties still present.
 Given past delays and current unknowns, it is still soon to definitely confirm current operational plans.
 
-#+ATTR_LATEX: :width 1.\textwidth
-#+CAPTION: The \ac{HL-LHC} project timeline [[cite:&hllhc_website]]. \run{3} is currently on-going, and the \ac{HL-LHC} is planned to start collecting data in 2029, following three years of \ac{LHC} shutdown for detector upgrades. Data collection should end in the early 2040's. Current plans are still subject to change.
 #+NAME: fig:hllhc
+#+CAPTION: The \ac{HL-LHC} project timeline [[cite:&hllhc_website]]. \run{3} is currently on-going, and the \ac{HL-LHC} is planned to start collecting data in 2029, following three years of \ac{LHC} shutdown for detector upgrades. Data collection should end in the early 2040's. Current plans are still subject to change.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
 [[~/org/PhD/Thesis/figures/hgcal/hllhc.pdf]]
+#+END_figure
 
 #+NAME: fig:lumi_plans_hllhc
 #+CAPTION: Planned peak and integrated luminosities during the \ac{HL-LHC}. Three data-taking runs are foreseen, interspersed by three \acp{LS}. Two scenarios with different \ac{YETS} durations are shown, where shorter stops have the potential for significant integrated luminosity increases. The schedule was last updated on January 2022. Taken from [[cite:&hllhc_evolution_paper2]].
@@ -39,10 +41,10 @@ The increase in luminosity provided by the \ac{HL-LHC} will provide a significan
 This notably applies to W mass $\mw$ and weak mixing angle $\thw$ measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
 \num{\sim 2e6} W boson events will be collected per week, leading to a statistical sensitivity of about \SI{10}{\MeV} for the W mass, and significantly lower for cross-section measurements.
 The added luminosity might also help solving the tension between old $\theta_{W}$ measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result [[cite:&weak_mixing_angle_cms]], which agrees with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
-Concerning \ac{VBF} and \ac{VBS} processes, despite the overall lower cross-section, of about one order of magnitude with respect to the \ac{ggF} production, the presence of additional hard and forward jets enables a very significant reduction of the multijet background.
+Concerning \ac{VBF} and \ac{VBS} processes, despite the overall lower cross-section, of about one order of magnitude with respect to the \ac{ggF} production, the presence of additional hard and forward jets enables a very significant reduction of the multi-jet background.
 This is particularly true for large rapidity separations $\Delta \dijetrap \gtrsim 4.5$ and di-jet invariant masses
 $\dijetmass \gtrsim \SI{700}{\GeV}$, where \ac{VBF} production dominates over \ac{ggF}.
-In \ac{VBS}, measurements of longitudinal scattering of two Vs ($\text{V}=\text{W},\,\text{Z}$) is particularly enticing, as it is still unknown whether the Higgs alone can avoid a divergent behaviour of the scattering amplitude at high energies, violating unitarity [[cite:&vbs2]].
+In \ac{VBS}, measurements of longitudinal scattering of two Vs ($\text{V}=\text{W},\,\text{Z}$) is particularly enticing, as it is still unknown whether the Higgs alone can avoid a divergent behavior of the scattering amplitude at high energies, violating unitarity [[cite:&vbs2]].
 The longitudinal component of the $V$ bosons is in particular tightly connected to the Higgs mechanism and \ac{EWSB}, since massless particles only have transversal components.
 However, differential measurements of gauge boson polarization is harder given the reduced cross-section of the longitudinal-only components.
 Would unitarity be violated, particle probability would no longer be conserved: the calculated number of $V$ pairs produced in the interaction would exceed the incident flux [[cite:&thomson]].
@@ -55,8 +57,8 @@ The \ac{HL-LHC} will enable an increase in the kinematic reach for jet and photo
 This will in turn reduce the associated experimental uncertainties, improving \ac{PDF} modeling.
 High-$\pt$ b-jets are sensitive to higher-order corrections, parton shower modeling and \acp{PDF}.
 Therefore, investigating the b-jet contribution to the total jet cross section enables to test the available theoretical predictions.
-The shape of the distributions of jets of various flavours will also be known with a higher precision, especially in the tails.
-On the photon side, diphotons with high invariant mass are ideal probes to test the \ac{SM} and search for \ac{BSM}. In particular, prompt photons do not interact with other final state particles, enabling a precise study of \ac{QCD} [[cite:&diphoton_cdf]].
+The shape of the distributions of jets of various flavors will also be known with a higher precision, especially in the tails.
+On the photon side, di-photons with high invariant mass are ideal probes to test the \ac{SM} and search for \ac{BSM}. In particular, prompt photons do not interact with other final state particles, enabling a precise study of \ac{QCD} [[cite:&diphoton_cdf]].
 The \ac{HL-LHC} will enable a more precise knowledge of photon related cross-sections.
 For the first time, the \ac{HL-LHC} will make possible the measurement of quantum correlations between partons in the proton by precisely studying differential distributions.
 This brings an improvement in \ac{DPS} modeling, which has been so far very limited.
@@ -79,6 +81,14 @@ In parallel, a whole plethora of \ac{QCD}-related measurements can be performed 
 The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross-sections, increasing their discovery potential.
 
 * Higgs Physics
+#+NAME: fig:hh_nonres_projections
+#+CAPTION: Evolution of the expected and observed upper limits on the HH production cross-section. The figure compares results from early \ac{LHC} \run{2} data (\SI{35.9}{\invfb}) with full \ac{LHC} \run{2} data (\SI{138}{\invfb}), and \ac{HL-LHC} projections (\SI{3000}{\invfb}). At the end of the \ac{HL-LHC} it should be possible to challenge the \ac{SM} prediction (red line) with the result of the analysis of multiple final states, possibly in combination with \ac{ATLAS}. Taken from [[cite:&higgs_10_years]].
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .6\textwidth
+[[~/org/PhD/Thesis/figures/intro/hh_nonres_projections.pdf]]
+#+END_figure
+
 The Higgs boson programme will remain at the forefront of \ac{CMS} research, with the \num{150} million Higgs bosons and \num{120} thousand Higgs boson pairs expected to be produced at the end of the \ac{HL-LHC} phase.
 The precision of the Higgs couplings will improve by a factor of \num{\sim 4}, with most couplings measured to a \SI{2}{\percent} precision.
 After the expected observation of $H \rightarrow \mu\mu$ already at \run{3}, the $H \rightarrow Z\gamma$ channel will share the same fate during \phase{2} [[cite:&higgs_10_years]], despite its uncertainty remaining statistically driven.
@@ -87,7 +97,7 @@ Indeed, current projections (see ref:fig:hh_nonres_projections) suggest that the
 Comparing \run{2} results with current full \run{2} upper cross-section limits, we see that an improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
 The improvement over the luminosity baseline is due to multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels [[cite:&andre_david_higgs_ten_years]].
 Past results have consistently surpassed initial estimates, and thus provide an optimistic view on future triple and quartic Higgs coupling measurements, which will surely be the most precise ever.
-A series of new techniques should provide significant improvements, starting from \run{3} and extending into the \ac{HL-LHC}, including new machine learning approaches or better estimates of \ac{QCD} multijet background.
+A series of new techniques should provide significant improvements, starting from \run{3} and extending into the \ac{HL-LHC}, including new machine learning approaches or better estimates of \ac{QCD} multi-jet background.
 The usage of \ac{PNet} [[cite:&particle_net]] for $\tau\text{-initiated}$ jets and the application of transformer technology to jet tagging [[cite:&transformer]] are expected to boost HH sensitivity.
 Additionally, an improved trigger strategy has been implemented, considering both data scouting and parking cite:&parking_scouting_run3_cms, and including \ac{PNet} b-tagging and $\tau\text{-tagging}$ at trigger level, as discussed in [[#sec:phase2_trigger_system]].
 We also expect some HH analysis to benefit from the inclusion of synthetic datasets [[cite:&zz_zh_bbbb]].
@@ -95,13 +105,6 @@ As discussed in ref:sec:indirect_searches, indirect searches can also add a cont
 The precision of \ac{EFT} couplings will also benefit from the increased number of events.
 Finally, yet unexplored HH production modes and decay channels are expected to be added, given the phase-space extension brought by the \ac{HL-LHC} [[cite:&higgs_10_years]].
 In conclusion, the next decade looks extremely promising for Higgs Physics.
-
-#+NAME: fig:hh_nonres_projections
-#+ATTR_LATEX: :width .5\textwidth
-#+CAPTION: Evolution of the expected and observed upper limits on the HH production cross-section. The figure compares results from early \ac{LHC} \run{2} data (\SI{35.9}{\invfb}) with full \ac{LHC} \run{2} data (\SI{138}{\invfb}), and \ac{HL-LHC} projections (\SI{3000}{\invfb}). At the end of the \ac{HL-LHC} it should be possible to challenge the \ac{SM} prediction (red line) with the result of the analysis of multiple final states, possibly in combination with \ac{ATLAS}. Taken from [[cite:&higgs_10_years]].
-[[~/org/PhD/Thesis/figures/intro/hh_nonres_projections.pdf]]
-
-
 
 * Lumi measurements can improve due to :noexport:
 + [[cite:&hllhc_physics]]

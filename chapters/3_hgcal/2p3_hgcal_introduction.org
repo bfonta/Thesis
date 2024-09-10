@@ -6,15 +6,15 @@ Running conditions during the \ac{HL-LHC} data collection will be much harsher a
 This is particularly true for the \ac{CMS} endcap regions, given the large radiation levels expected closer to the beam axis.
 The forward \ac{ECAL} and \ac{HCAL} were however designed to sustain an integrated luminosity of up to \SI{500}{\invfb}.
 This is because scintillation-based solutions are very sensitive to ionizing radiation [[cite:&wigmans_new_developments]].
-The formation of color centres during irradiation has already lead to a stark $\eta\text{-dependent}$ reduction of the transparency of existing \ch{PbWO4} endcap crystals, often by values above 90%.
+The formation of color centers during irradiation has already lead to a stark $\eta\text{-dependent}$ reduction of the transparency of existing \ch{PbWO4} endcap crystals, often by values above 90%.
 Despite the possible recover through spontaneous or thermal annealing which can mitigate the opaqueness brought by photons [[cite:&annealing_calorimeter]], irreversible damage is caused by hadrons, mostly charged pions of \SI{\sim 1}{\GeV} [[cite:&wigmans2;&wigmans]].
 Given the \num{6} to \num{8} times larger luminosities expected for the full \ac{HL-LHC} data-taking period, with respect to the \ac{LHC}, a drastic degradation of the physics performance seems unavoidable (see [[fig:lumi_plans_hllhc]]).
 Negative effects would be evident almost from the start [[cite:&hgcal_technical_proposal]].
 
 The \ac{CMS} experiment thus foresees the complete replacement of its endcap calorimeters, introducing the ambitious \ac{HGCAL} project [[cite:&hgcalTDR]].
 The \ac{HGCAL} will be a sampling calorimeter, with fine transverse and longitudinal granularity, capable of fully exploiting the physics events produced under the expected extreme radiation conditions.
-It will proeminently feature \ac{Si} as active material in the regions closer to the \ac{pp} interaction vertex, and thus more impacted by incoming radiation.
-This approach departs from other more established technologies, for instance the use of liquified noble gases, as done in \ac{ATLAS} [[cite:&fabiola_calorimetry]].
+It will prominently feature \ac{Si} as active material in the regions closer to the \ac{pp} interaction vertex, and thus more impacted by incoming radiation.
+This approach departs from other more established technologies, for instance the use of liquefied noble gases, as done in \ac{ATLAS} [[cite:&fabiola_calorimetry]].
 \ac{Si} has the potential to bring a high signal-to-noise ratio, since only \SI{3.6}{\eV} are needed to produce an electron-hole pair [[cite:&fabiola_calorimetry]], but it was mainly chosen for its ability to cope with fluences 50% higher than the ones expected by the end of Phase-2.
 Alternatives to \ac{HGCAL} were originally considered, such as an optical Shashlik calorimeter [[cite:&shashlik_cms]] and a Dual Readout calorimeter, but were in the end judged less performant.
 # It was preferred over alternatives such as diamond [[cite:&diamond_sensors]], silicon carbide, \ch{GaAs} and \ch{GaN}.
@@ -29,7 +29,7 @@ Alternatives to \ac{HGCAL} were originally considered, such as an optical Shashl
 The proposed novel \ac{HGCAL} design includes a \ac{CE-E} with \ac{Si} as active material in the first \num{26} layers, as shown in [[fig:hgcal_side_view]].
 Each layer is composed of $\mathcal{O}(300)$ \SI{8}{\inch} hexagonal \ac{Si} modules, which shape is chosen to cover the available circular transversal area more efficiently than rectangles, keeping the ability to tesselate the plane perpendicular to the beamline without introducing unmanageable hardware and mechanical challenges.
 The choice is also related to the circular cross-section of grown \ac{Si} cylindrical ingots, leading to less wasted material.
-Each \ac{Si} module is composed of a sucession of hexagonal layers featuring, in order, a \ac{PCB}, or hexaboard, a \ac{Si} sensor, a \SI{105}{\um} Kapton foil, and a \ch{CuW} baseplate.
+Each \ac{Si} module is composed of a succession of hexagonal layers featuring, in order, a \ac{PCB}, or hexaboard, a \ac{Si} sensor, a \SI{105}{\um} Kapton foil, and a \ch{CuW} baseplate.
 The Kapton foil provides insulation between the sensor back-plane and the baseplate, which is held at ground [[cite:&hgcalTDR]].
 Full modules are mounted on either side of a \SI{6.2}{\mm} thick \ch{Cu} cooling plate which forms, together with the module baseplates, the absorber.
 Each module groups individual \ac{Si} cells, or channels, which constitute the atomic detection unit of \ac{HGCAL}.
@@ -63,7 +63,7 @@ It is expected that an increase of bias voltage throughout the lifetime of the d
 The S/N also benefits from using \ac{Si} cells with low capacitance, since the latter increases electronic noise.
 
 #+NAME: fig:layers_layout
-#+CAPTION: Representation of the \ac{Si} sensor layout in CE-E and CE-H layers. While CE-E layers are made only of Si as active material, CE-H layers are hybrid, containing both \ac{Si} and \ac{Sci}. Two possible cell sizes are defined, constituting the low- and high-density regions in each layer. The radial changes in colour transparency indicate different silicon thicknesses: \num{300}, \num{200}, and \SI{120}{\um}. The solid black line marks the boundary between the high-density and low-density regions. The succession of green and yellow colours delimit the \SI{60}{\degree} cassettes. For the hybrid layer, the blue lines in the \ac{Sci} section and the red lines in the silicon section delimit the \SI{30}{\degree} cassettes. Taken from [[cite:&tarabini_thesis]].
+#+CAPTION: Representation of the \ac{Si} sensor layout in CE-E and CE-H layers. While CE-E layers are made only of Si as active material, CE-H layers are hybrid, containing both \ac{Si} and \ac{Sci}. Two possible cell sizes are defined, constituting the low- and high-density regions in each layer. The radial changes in color transparency indicate different silicon thicknesses: \num{300}, \num{200}, and \SI{120}{\um}. The solid black line marks the boundary between the high-density and low-density regions. The succession of green and yellow colors delimit the \SI{60}{\degree} cassettes. For the hybrid layer, the blue lines in the \ac{Sci} section and the red lines in the silicon section delimit the \SI{30}{\degree} cassettes. Taken from [[cite:&tarabini_thesis]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth
 [[~/org/PhD/Thesis/figures/hgcal/layer_structure.pdf]]
@@ -73,12 +73,13 @@ Different thicknesses are considered (\num{300}, \num{200}, and \SI{120}{\um}) g
 The number of electron-hole pairs created by a passing charged particle increases with sensor thickness.
 However, charge collection is optimized in thinner sensors, given the high radiation which creates traps in the \ac{Si}.
 At the same time, noise depends on the presence of leakage current, which is linearly proportional to the sensor thickness and to the integrated fluence, which in turn also increases power dissipation within the sensors [[cite:&hgcalTDR;&sensors_thickness]].
-Thinner sensors are thus prefered for regions exposed to higher fluences.
+Thinner sensors are thus preferred for regions exposed to higher fluences.
 
 #+NAME: tab:Si_sensors_parameters
 #+CAPTION: Features of the \ac{Si} sensors. The \ac{Si} cell size defines two regions, namely the high-density and low-density regions [[cite:&hgcalTDR;&hgcal_lateral_layout]].
-#+ATTR_LATEX: :placement [!h] :center t :align c|c|c|c :environment mytablewiderrows
-| Tickness [\si{\um}]                                   | \num{120}  | \num{200}                | \num{300}  |
+#+ATTR_LATEX: :placement [!h] :center t :align lccc :environment mytablewiderrows
+|-------------------------------------------------------+------------+--------------------------+------------|
+| Thickness [\si{\um}]                                   | \num{120}  | \num{200}                | \num{300}  |
 |-------------------------------------------------------+------------+--------------------------+------------|
 | Cell size [\si{\cm\squared}]                          | \num{0.56} | \num{0.56} or \num{1.26} | \num{1.26} |
 | Maximum expected fluences [$\times10^{15}$ \unit{\nequiv}] | \num{7}    | \num{7}                  | \num{1.5}  |
@@ -86,11 +87,12 @@ Thinner sensors are thus prefered for regions exposed to higher fluences.
 | Capacitance [\si{\pico\farad}]                        | \num{48}   | \num{29} or \num{67}     | \num{45}   |
 | Initial S/N for a MIP                                 | \num{4.5}  | \num{6}                  | \num{11}   |
 | Smallest S/N for a MIP after \SI{3000}{\invfb}        | \num{2.2}  | \num{2.3}                | \num{4.7}  |
+|-------------------------------------------------------+------------+--------------------------+------------|
 
 The \ac{HAD} section includes \num{7} silicon-only layers followed by \num{14} hybrid layers composed of both \ac{Si} sensors and \ac{Sci} plastic tiles, where the scintillation light is read out by \acp{SiPM}.
 We refer to the \ac{Si} layers in the \ac{HAD} section as \ac{CE-H}.
 The \ac{Si} sensors are placed closer to the beamline, and the cheaper plastic tiles at lower \ac{eta} values instead (see [[ref:fig:hgcal_side_view]]).
-Concerning the \ac{Si} sensors, their baseplate is made of carbon fibre, with a negligible contribution to the \ac{CE-H} stainless steel absorber material.
+Concerning the \ac{Si} sensors, their baseplate is made of carbon fiber, with a negligible contribution to the \ac{CE-H} stainless steel absorber material.
 The scintillators cover an area of \SI{\sim 400}{\meter\squared} for a total of \num{\sim 240} thousand channels.
 Individual tiles have varying sizes due to the triangular shape of the cassettes, running from \SI{\sim 4}{\cm\squared} closer to the beam axis, to \SI{\sim 32}{\cm\squared} near the outer edges.
 Cassettes placed in the \ac{HAD} section have a similar architecture to the ones in the \ac{CE-E}, but they are much larger and thus span a \SI{30}{\degree} angle instead of \SI{60}{\degree} to facilitate the final assembly.
@@ -137,7 +139,7 @@ In the \ac{HL-LHC} environment, a robust vertex identification becomes possible 
 [[~/org/PhD/Thesis/figures/hgcal/FluenceHGCAL.pdf]]
 #+END_figure
 
-In summary, while sustaining the doses and fluences[fn:: The fluence is relevant for silicon detectors, while the dose is an important parameter for electronics and scintilators.] shown in [[fig:dose_fluence_hgcal]], the \ac{HGCAL} fulfils the following requirements for its upgrade [[cite:&hgcalTDR]]:
+In summary, while sustaining the doses and fluences[fn:: The fluence is relevant for silicon detectors, while the dose is an important parameter for electronics and scintillators.] shown in [[fig:dose_fluence_hgcal]], the \ac{HGCAL} fulfills the following requirements for its upgrade [[cite:&hgcalTDR]]:
 
 + ensure the lateral compactness of showers thanks to sufficient material density;
 + ensure high transverse and longitudinal granularities;
@@ -150,7 +152,8 @@ A summary of some of the parameters of \ac{HGCAL} is provided in [[tab:HGCALpara
 
 #+NAME: tab:HGCALparameters
 #+CAPTION: Summary of some of the properties of \ac{HGCAL}.
-#+ATTR_LATEX: :placement [!h] :center t :align c|c :environment mytablewiderrows
+#+ATTR_LATEX: :placement [!h] :center t :align lc :environment mytablewiderrows
+|-------------------------------------+-------------------------------|
 | Parameter                           | Value                         |
 |-------------------------------------+-------------------------------|
 | $\eta$ coverage                        | $1.5 \lesssim \eta \lesssim 3.0$ |
@@ -165,6 +168,7 @@ A summary of some of the parameters of \ac{HGCAL} is provided in [[tab:HGCALpara
 | Number of plastic tile boards       | \num{4000}                    |
 | Number of \ac{CE-E} layers          | \num{26}                      |
 | Number of \ac{CE-H} (hybrid) layers | \num{21} (\num{14})           |
+|-------------------------------------+-------------------------------|
 
 The most recent 2018 and 2021 testbeams hint at the future performance of \ac{HGCAL}.
 The used prototype resembles the final calorimeter in the \ac{CE-E} and silicon \ac{CE-H} sections, including \SI{300}{\um}-thick modules with \SI{1.1}{\cm\squared} \ac{Si} cells, for a total of 28 \ac{CE-E} layers.
@@ -179,6 +183,6 @@ The timing resolution for positron showers was measured in 2018 to be \SI{\sim 2
 Single channels in the SKIROC2-CMS chip [[cite:&skiroc]] were shown to achieve \SI{\sim 60}{\pico\second}, compatible with the electronics specifications.
 Overall, the results point to a successful operation of the \ac{HGCAL} at the \ac{HL-LHC}.
   
-* Additional bilbiography :noexport:
+* Additional bibliography :noexport:
 + [[https://cernbox.cern.ch/files/spaces/eos/user/j/jsauvan/01-Projects/2408_thesis-Bruno?tiles-size=1&items-per-page=100&view-mode=resource-table][Comments JB]]
 + [[https://indico.cern.ch/event/1334651/contributions/5622989/attachments/2741546/4769493/HGCal_10232023.pdf][CE-H cassettes]]

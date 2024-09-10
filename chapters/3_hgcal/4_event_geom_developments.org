@@ -23,10 +23,10 @@ It also powers the studies presented in [[#sec:cluster_splitting]].
 The framework is currently being used by multiple people at \ac{LLR}, serving as a foundational basis for a significant portion of their work.
 The code has been presented at the international PyHEP 2023 Workshop [[cite:&bruno_pyhep23]], including a live demonstration in a web application.
 The application was deployed using CERN's \ac{PaaS}, which is based on =OKD4= (=OpenShift4=), and conveniently enables a project to be directly built from a =git= repository via the \ac{S2I} service.
-The \ac{PaaS} also provides access to CERN's network filesystem, where geometry and event data are stored.
+The \ac{PaaS} also provides access to CERN's network file-system, where geometry and event data are stored.
 The application might become useful in years to come for sharing information, for visualization, and for tuning parameters directly from the \ac{GUI}.
 Indeed, since everything is implemented in =Python=, connecting the visualization to the actual data processing becomes straightforward with the definition of simple code callbacks.
-The callbacks are activated after a button pressing, a dropdown menu selection, or similar.
+The callbacks are activated after a button pressing, a drop-down menu selection, or similar.
 The geometry and specific events are deployed via interactive =Python= visualization libraries, which I used to write 2D and 3D visualizations.
 Concerning 3D visualizations, I wrote a proof-of-concept that was later developed by a different student, and was presented in the live demonstration mentioned above.
 I have also demonstrated how to potentially merge visualizations from different libraries using =Flask= [[cite:&flask]].
@@ -55,11 +55,11 @@ Each detector element is uniquely identified by a set of two coordinates, plus t
 
 ** Silicon coordinates
 
-The \ac{Si} region is characterised by hexagonal-shaped modules and detector cells.
+The \ac{Si} region is characterized by hexagonal-shaped modules and detector cells.
 There are thus two sets of /axial coordinates/ [[cite:&red_blob_games]] applied at the level of one full layer, where one coordinate point corresponds to one module, and at the level of the module, where one coordinate point corresponds to a single \ac{TC} (or \ac{Si} cell).
 Each sampling layer has its own independent coordinates, for both endcaps.
 Given the flat-top and pointy-top relative orientations of the hexagons within their respective phase-spaces, the two coordinate systems in \ac{Si} are not aligned.
-This further complicates /navigation/ in such a coordinate system, which is by default more complex than a cartesian system.
+This further complicates /navigation/ in such a coordinate system, which is by default more complex than a Cartesian system.
 Each \ac{TC} (or cell) within a module is uniquely identified by a set of $u$ and $v$ indexes, and each module within a layer is uniquely identified by a set of $U$ and $V$ indexes.
 Multiple module orientations are possible, affecting the direction of the $(u,v)$ eigenvectors.
 In the remainder of this section we consider a single orientation for simplicity, as the logic is kept unchanged.
@@ -84,17 +84,17 @@ Information on low and high granularity \ac{Si} modules is also not present, sin
 Finer mesh details such as partial \ac{Si} wafers or variations in the spacing between sensors is not included.
 What is included is the position and representation of every detector element across the full range of the endcaps, and its mapping to the correct geometry coordinates for later association with event information.
 
-The \ac{Si} section is implemented as a series of diamond-shaped elements representing \acp{TC}, arranged in a hexagonal fashion to mimick the \ac{Si} modules.
+The \ac{Si} section is implemented as a series of diamond-shaped elements representing \acp{TC}, arranged in a hexagonal fashion to mimic the \ac{Si} modules.
 The structure replicates the three-fold configuration of \ac{Si} \acp{TC}.
 Modules are drawn by shifting the position of a single "root" module along \coordsc{} \ac{HGCAL} coordinates.
 Despite the perfect plane tesselation ensured by hexagonal coordinates, not all modules or \acp{TC} should be drawn, as shown in [[fig:hgcal_hexag_coords]] (left), where the hexagons in white do not have a physical counterpart.
-The framework ensures unphysical modules are skipped.
+The framework ensures nonphysical modules are skipped.
 The real physical dimensions of the modules are carefully taken into account, such that the positions of \acp{TC} are displayed in real data units, in \si{\cm}.
 Due to the diamond-shaped \acp{TC} and to geometry-related shifts, the alignment of \acp{TC} relative to their true position, as provided by \ac{CMSSW}, becomes ambiguous.
 At least two approaches exists:
 
-1. perfectly align the \ac{TC} within a hexagonal module, which leads to a worse match of each \ac{TC} centre relative to their true center;
-2. sligthly misalign module "three-folds", leading to a less appealing visualization that however better displays the true position of \acp{TC}.
+1. perfectly align the \ac{TC} within a hexagonal module, which leads to a worse match of each \ac{TC} center relative to their true center;
+2. slightly misalign module "three-folds", leading to a less appealing visualization that however better displays the true position of \acp{TC}.
 
 \noindent The second method is used because, though less visually appealing, produces element positions closer to the real ones.
 This geometrical limitation can be appreciated in [[fig:si_sci_custom_geoms_detail]]., where method #2 is applied.
@@ -114,8 +114,8 @@ All \acp{TC} are displayed as annular wedges.
 The validation of the geometry is performed by overlaying true \ac{TC} positions as provided by \ac{CMSSW} with custom positions, as shown in [[fig:si_sci_custom_geoms_detail]].
 Both module-centered and corner-centered geometries are present in different \ac{HGCAL} layers.
 The successful validation of the custom geometry thus requires the addition (subtraction) of a relative vertical shift to odd (even) \ac{CE-H} \ac{Si} layers, corresponding to approximately half the height of a module.
-After the correction, very good agreements are found across the entire detector: the \ac{TC} positions in both the \ac{Si} and \ac{Sci} sections perfectly align, modulos the visual ambiguity in the \ac{Si} section discussed above (and shown on the left plot of [[fig:si_sci_custom_geoms_detail]]).
-The gometries can be compared in [[fig:si_sci_custom_geoms]].
+After the correction, very good agreements are found across the entire detector: the \ac{TC} positions in both the \ac{Si} and \ac{Sci} sections perfectly align, modulo the visual ambiguity in the \ac{Si} section discussed above (and shown on the left plot of [[fig:si_sci_custom_geoms_detail]]).
+The geometries can be compared in [[fig:si_sci_custom_geoms]].
 
 #+NAME: fig:si_sci_custom_geoms
 #+CAPTION: Comparison between the official \ac{CMSSW} \ac{HGCAL} geometry (top) and the geometry developed in this work (bottom). We show an example for \ac{CE-E} (left) and \ac{CE-H} (right) layers, with their zoomed-in and zoomed-out versions. Adapted from [[cite:&bruno_pyhep23]]. 

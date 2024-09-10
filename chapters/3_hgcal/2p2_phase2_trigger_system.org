@@ -32,7 +32,7 @@ The full architecture of the \phase{2} \ac{L1} trigger is illustrated in [[fig:l
 The upgrade of the barrel and endcap calorimeters will be exploited to process high-granularity data to produce cluster-related variables, leading to calorimetric \acp{TP}.
 Additionally, using the \acp{HF} will extend the \ac{eta} coverage up to $\eta=5$.
 The \ac{GCT} assembles all \acp{TP} and builds calorimeter-only objects, such as hadronically decaying taus, $e/\gamma$ candidates, jets and energy sums.
-The data is then sent to the correlators with a \SI{5}{\micro\second} latency, which also corresponds to the \ac{HGCAL} allowed latency, of which \SI{1}{\micro\second} is used only for transfering the data from the \ac{BE} to the \ac{GCT}.
+The data is then sent to the correlators with a \SI{5}{\micro\second} latency, which also corresponds to the \ac{HGCAL} allowed latency, of which \SI{1}{\micro\second} is used only for transferring the data from the \ac{BE} to the \ac{GCT}.
 Some global calorimetric quantities are sent directly to the \ac{GT}, within \SI{9}{\micro\second} maximum.
 A detailed description of the reconstruction of trigger primitives in the future \ac{HGCAL} will be provided in [[#sec:hgcal_trigger_primitives]], as it is closely related to part of the work developed in the context of this thesis.
 
@@ -63,7 +63,7 @@ The outputs from the \ac{GCT}, \ac{GMT}, \ac{GTT}, and \ac{CT} are merged, and c
 Examples of such correlations are $\Delta \eta$, $\Delta\text{R}$, and invariant masses between trigger objects.
 An event accept or reject decision is made based on a menu of \num{\sim 1000} algorithms, expected to continuously evolve based on lessons learned during data-taking.
 Improved hardware capabilities, together with striking advancements in available software libraries for firmware implementation and testing, like =hls4ml= [[cite:&hls4ml]], bring new \ac{NN}-based algorithms to the table.
-Some examples include autoencoders to keep potential \ac{NP} events from being rejected.
+Some examples include auto-encoders to keep potential \ac{NP} events from being rejected.
 Despite \ac{NN}'s high resource consumption, current hardware capabilities suggest that their inclusion is feasible, also given that the \ac{GT}'s logic is expected to run at frequencies at least \num{6} times larger than the proton collision rate.
 Other functionalities of the \ac{GT} include the setting of prescales and the monitoring of trigger rates.
 The \ac{GT} also serves as an interface to external triggers, such as the ones related to the \ac{CTPPS} experiment, or to beam and luminosity monitoring.
@@ -84,7 +84,7 @@ Moreover, the scouting will enable a detailed monitoring of the entire trigger s
 Finally, the scouting will introduce some complementary luminosity measurements based on observed physics processes.
 
 * HLT
-The \phase{2} \ac{HLT} will analyse the full \SI{750}{\kilo\hertz} \ac{L1} output, which translates to a \SI{\sim 50}{\tera\bit\per\second} throughput, with the event size increasing to approximately \SI{8.5}{\mega\byte}.
+The \phase{2} \ac{HLT} will analyses the full \SI{750}{\kilo\hertz} \ac{L1} output, which translates to a \SI{\sim 50}{\tera\bit\per\second} throughput, with the event size increasing to approximately \SI{8.5}{\mega\byte}.
 The \num{30}-fold throughput increase with respect to \phase{1} IS mostly driven by the upgraded tracker and the new \ac{HGCAL}, which bring a tremendous increase in granularity.
 The reconstruction of these high granularity objects will be based on iterative procedures, namely Kalman filter algorithms with deterministic annealing for the tracker, and \ac{TICL} for \ac{HGCAL} [[cite:&hlt_phase2_thiago]].
 The goal of the \ac{HLT} online selection will be to balance the following three key elements [[cite:&hlttdr]]:
@@ -95,9 +95,9 @@ The goal of the \ac{HLT} online selection will be to balance the following three
 The decision by \ac{CMS} to adopt a heterogeneous \ac{HLT} farm already in \run{3} inaugurates a novel trigger approach which will be further explored and extended during \phase{2}.
 The offline reconstruction workflow is expected to be offloaded to \acp{GPU} by 50% and 80% by the end of \run{4} and \run{5}, respectively [[cite:&refCUDA1]].
 This estimate includes the detectors not yet installed, such as \ac{HGCAL}.
-The adoption of a heterogeneous architecture also potentially reduces the computing cost necessary to satisfy the CMS physics programme, since computation on GPUs might be cheaper than on CPUs [[cite:&refCUDA2]].
+The adoption of a heterogeneous architecture also potentially reduces the computing cost necessary to satisfy the CMS physics programme, since computation on \acp{GPU} might be cheaper than on \acp{CPU} [[cite:&refCUDA2]].
 Other potential improvements are currently being explored, such as the migration from traditional \ac{CMS} data formats to \acp{SoA}, for better \ac{CPU} and \ac{GPU} utilization.
 Additionally, the rewriting of many algorithms to parallelization-friendly versions will boost their performance.
-Furthermore, some approaches to write truly heterogneneous code via abstract interfaces is being considered, in order to improve code reuse (and this avoid code duplication), and avoid the axcessive dependence on particular vendor of \ac{CPU} and/or \ac{GPU} processors.
+Furthermore, some approaches to write truly heterogeneous code via abstract interfaces is being considered, in order to improve code reuse (and this avoid code duplication), and avoid the excessive dependence on particular vendor of \ac{CPU} and/or \ac{GPU} processors.
 The =alpaka= cite:&alpaka1;&alpaka2;&alpaka3 and =Kokkos= [[cite:&kokkos1;&kokkos2]] portability libraries represent some of the most promising solutions. to reduce code duplication and dependency on the architecture of a particular vendor [[cite:&hlt_run3_gpus;&hlt_alpaka]].
 

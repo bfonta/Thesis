@@ -15,7 +15,7 @@ The pixel detector originally installed has already been replaced during the tec
 Its structure is designed with accessibility in mind, such that an update of the pixels does not imply moving the strips.
 The channel occupancy is required to stay within 0.1% for the pixels and 1% for the strips, which is quite demanding at \num{200} \ac{PU}.
 The track separation is also expected to be improved relative to the one currently observed for high-energy jets, where hits are merged at the level of the pixels.
-Following the recent upgrade, the material budget of the tracker should also be decreased, since it negatively affects the donwstream calorimeters and overall \ac{PF} reconstruction.
+Following the recent upgrade, the material budget of the tracker should also be decreased, since it negatively affects the downstream calorimeters and overall \ac{PF} reconstruction.
 The tracker will also be integrated in the \ac{L1} trigger chain for the first time, enabling the reconstruction of trigger tracks up to $|\eta|=2.4$ in a \ac{PF}-like approach (see [[#sec:phase2_trigger_system]]), and requiring updated reconstruction algorithms, to avoid losing selection efficiency.
 
 The tracker will thus be entirely replaced, with considerably increased granularity and \ac{eta} coverage extended up to $|\eta| \sim 4.0$, both for the pixels and strips [[cite:&cms_tracker_phase2_tdr]].
@@ -33,7 +33,7 @@ The updates will bring better resolutions and lower fake rates.
   For the three inner layers, /pixel-strips/ are used, where each module has \num{\sim 1000} strips and \num{\sim 30000} pixels.
   The barrel pixel-strips measure a third spatial coordinate, constraining the $z$ coordinate of the primary vertex to a \SI{1}{\mm} region, helping in vertex discrimination.
   Contrary to the current tracker, the future barrel \ac{OT} will have its first three layers tilted, perpendicularly oriented relative to the \ac{IP}.
-  This mechanically challenging layout is meant to recover from inefficiencies arising due to particles traversing near-adjacent double-sided modules, in consecutive layers, which cannot communicate with eachother (see [[fig:tracker_update]], and compare it with [[fig:tracker]]).
+  This mechanically challenging layout is meant to recover from inefficiencies arising due to particles traversing near-adjacent double-sided modules, in consecutive layers, which cannot communicate with each other (see [[fig:tracker_update]], and compare it with [[fig:tracker]]).
 
 #+NAME: fig:tracker_update
 #+CAPTION: Diagram of one quarter of the \phase{2} tracker layout in R-$z$ view. The \ac{IT} green (yellow) lines correspond to pixel modules made of two (four) readout chips. In the \ac{OT}, the blue and red lines represent the two types of modules described in the text. The dashed lines provide visual guidance for the \ac{eta} coordinate. Adapted from [[cite:&cms_tracker_phase2_tdr]].
@@ -53,7 +53,7 @@ The synergy between the tracker and the \ac{MTD} will enable the association of 
 The latter is tightly connected with the di-Higgs measurement performed in this thesis, as detailed in [[#sec:analysis1_intro]], where precision timing can bring an additional \SI{\sim 20}{\percent} signal yield.
 Another interesting cooperation strategy can be envisaged with the calorimeters, especially \ac{HGCAL} (introduced in [[#sec:hgcal_intro]]), which will also provide timing measurements with a similar precision, and can thus be used to ensure compatibility with \ac{MTD} measurements.
 To be noted that, contrary to \ac{HGCAL}, the \ac{MTD} will not impose energy thresholds, and so should be able to give meaningful timing measurements for lower momentum charged particles.
-Other benefits are forseen, like better measurements of $\tau$ lepton decays due to the improved \ac{MET} reconstruction quality, or improved \ac{VBF} tagging.
+Other benefits are foreseen, like better measurements of $\tau$ lepton decays due to the improved \ac{MET} reconstruction quality, or improved \ac{VBF} tagging.
 
 The \ac{MTD} will be located in the gap between the tracker and the calorimeters, in both the barrel as the \ac{BTL}, and in endcap regions, as the \acp{ETL}, having a \SI{28}{\meter\squared} surface area.
 In the \ac{BTL}, crystal bars read out by a pair of \acp{SiPM} have a granularity implying a 7% occupation per crystal at \num{200} \ac{PU}.
@@ -81,7 +81,6 @@ All in all, the \ac{MTD} will help \ac{CMS} maintaining its current performances
 #+END_figure
 
 * Calorimeters
-
 By far the most important upgrade in the \ac{CMS} calorimeters will happen in the endcaps, namely the \ac{HGCAL}.
 This revolutionary calorimeter is described in full in [[#sec:hgcal_intro]], and we here focus on the remaining updates, most of them happening in the barrel section [[cite:&calo_barrel_upgrade]]. \Ac{ECAL} control and safety systems will also be completely replaced cite:&barrel_upgrade_safety.
 
@@ -90,19 +89,19 @@ Contrary to what happens in the endcaps, the crystals in the barrel region are c
 Indirectly, however, the higher luminosities and \acp{PU}, lead to modifications at the \ac{L1} trigger level, namely the latency and rate increase to \SI{12.5}{\micro\second} and \SI{750}{\kilo\hertz}, respectively.
 Both the \ac{FE} and \ac{BE} of the \ac{EB} will be fully replaced, as illustrated in [[fig:ecalupgrade]] (left).
 The upgrades are meant to provide precise timing measurements, limit power dissipation, and increase the granularity of barrel \acp{TP} to a single crystal level, versus the current $5\times5$ arrays.
-This last point reduced backgrounds significantly, enabling the calorimetric trigger thresholds to remain at levels which allow performatnn physics analyses, namely on precision Higgs physics.
-The improved timing will be interestigly also responsible for a better noise filtering and, in conjunction with the increased trigger granularity, is expected to completely remove occasional spurious energy "spikes" in the \acp{APD}, since they have a different time development with respect to standard scintillation pulses, as shown in [[fig:ecalupgrade]] (right).
+This last point reduced backgrounds significantly, enabling the calorimetric trigger thresholds to remain at levels which allow performant physics analyses, namely on precision Higgs physics.
+The improved timing will be interestingly also responsible for a better noise filtering and, in conjunction with the increased trigger granularity, is expected to completely remove occasional spurious energy "spikes" in the \acp{APD}, since they have a different time development with respect to standard scintillation pulses, as shown in [[fig:ecalupgrade]] (right).
 Spikes are formed from direct ionization in the \ac{APD} which results in a faster signal rise and decay time [[cite:&calo_barrel_studies]].
 The timing resolution targets \SI{\sim 30}{\pico\second}, enabling constraints of \SI{\sim 1}{\cm} on the longitudinal position of the collision vertices.
 
 #+NAME: fig:ecalupgrade
-#+CAPTION: (Left) Illustration of the upgrade strategy for the \ac{EB}: the mecahnical structure will remain, while the full electronics will be replaced. (Right) Illustration for the shape difference between a spike pulse shape (black) and a scintillation pulse shape (red), enabling a clear separation. Adapted from [[cite:&calo_barrel_studies]].
+#+CAPTION: (Left) Illustration of the upgrade strategy for the \ac{EB}: the mechanical structure will remain, while the full electronics will be replaced. (Right) Illustration for the shape difference between a spike pulse shape (black) and a scintillation pulse shape (red), enabling a clear separation. Adapted from [[cite:&calo_barrel_studies]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/ECALUpgrade.pdf]]
 #+END_figure
 
-In what concerns the barrel \ac{HCAL}, detailed longetivity studies allowed to conclude that the replacement of scintillators or fibers will not be necessary, given the detector location further away from the high radiation zone.
+In what concerns the barrel \ac{HCAL}, detailed longevity studies allowed to conclude that the replacement of scintillators or fibers will not be necessary, given the detector location further away from the high radiation zone.
 The high \ac{eta} regions will still suffer a degradation of a factor of \num{2} or \num{3}, but this will be largely offset by the recent \ac{FE} \ac{SiPM} upgrade, which addressed all concerns on signal degradation.
 The \ac{SiPM} have a higher efficiency than \ac{HPD}, and will continue to be used during the full duration of the \ac{HL-LHC}.
 However, the \ac{BE} cannot support the rate increase planned for \ac{L1}, and so it will be updated accordingly, following the \ac{EB} design.
@@ -142,6 +141,6 @@ These new \acp{RPC} have been specifically designed to handle high hit rates.
 The existing \ac{BRIL} project is responsible for \num{14} technical systems.
 They monitor beam losses and radiation in the \ac{CMS} cavern, provide beam timing, enable the abortion of the beam to protect individual detector components, and measure the beam-induced background and luminosity values.
 For the \ac{HL-LHC}, \ac{BRIL} aims at measuring the luminosity within a \SI{1}{\percent} uncertainty, against the \SI{1.4}{\percent} obtained in 2022.
-The improvement is for instance required by multiple single Higgs cross-section measruements [[cite:&cms_upgrade_phase2]].
+The improvement is for instance required by multiple single Higgs cross-section measurements [[cite:&cms_upgrade_phase2]].
 The precision increase will be achieved thanks to the new bunch-by-bunch Fast Beam Condition Monitor luminometer, which will be independent from central \ac{CMS} services and will be able to provide measurements also when \ac{LHC} beams will not be stable.
 Providing \ac{CMS} with a fast feedback on \ac{LHC} beam conditions is crucial, since a continuous beam assessment can protect the sensitive \ac{CMS} subdetectors.

@@ -15,7 +15,7 @@ The =bye-splits= algorithm represents a viable options to be implemented at the 
 
 Several future research directions are available and required.
 Of particular note, only 0 \ac{PU} single photon guns were studied in depth.
-Despite checks on \num{200} \ac{PU} samples suggesting a correct data processing behaviour, extensive studies are necessary.
+Despite checks on \num{200} \ac{PU} samples suggesting a correct data processing behavior, extensive studies are necessary.
 In particular, any algorithm to be added to \ac{S2} must be exposed to the challenging \num{200} \ac{PU} environment, and compared to existing alternatives.
 To give an example, the presence of \ac{PU} background noise might affect the capability to mitigate cluster splits.
 In addition, different types of particles must be tested, such as taus, hadrons and \acp{LLP}.
@@ -30,10 +30,10 @@ Eventually all algorithms must be implemented and tested in the firmware before 
 This becomes increasingly crucial as the \ac{HGCAL} installation deadline approaches.
 A logical and much awaited extension of this chapter's work consists on using modern tools to include the new seeding algorithm in \acp{FPGA}.
 The idea is to rewrite the current implementations in a pragma-enriched \texttt{C++} version, which can be converted to \ac{RTL} via =Vitis= / =Vivado= \ac{HLS} [[cite:&vitis_hls]].
-\Ac{RTL} can be converted to a bitstream by =Vivado=, which is used as configuration data to program the \acp{FPGA}.
+\Ac{RTL} can be converted to a bit-stream by =Vivado=, which is used as configuration data to program the \acp{FPGA}.
 One of the challenges lies on writing the \ac{RTL} interface between the modules processed by the \ac{ECON-T} and the \ac{BE} algorithms.
 # A data structure to pass the \acp{TC} in a module should be defined, together with a mapping between \coordsb{} and the \ac{TC} positions in the data structure.
 
 On a final note, I believe the \ac{HGCAL} \ac{L1} chain represents an ideal playground to test modern optimization approaches with deep learning and/or automatic differentiation [[cite:&automatic_differentiation]].
 A robust parameter tuning of all algorithms would clearly fit the needs of the \ac{TPG}, and would most certainly improve physics performance.
-However, pragmaticity should rule in the final years before \ac{HGCAL}'s deployment, and priorities should be such that they provide a working \ac{TPG} chain within the imposed constraints and deadlines.
+However, pragmaticism should rule in the final years before \ac{HGCAL}'s deployment, and priorities should be such that they provide a working \ac{TPG} chain within the imposed constraints and deadlines.

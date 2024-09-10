@@ -2,4 +2,24 @@
 :CUSTOM_ID: sec:intro_tps
 :END:
 
-+ intro
+There is no doubt the crux of a measurement lies in its detector, and in how it converts a physical quantity into a quantifiable signal.
+Likewise, as most scientists can readily appreciate, the decisions made by a triggering step have dramatic consequences for the data which is ultimately recorded.
+Yet, in between these two stages, a simple, relatively unknown, but meticulous series of extremely constrained operations takes place, creating the conditions which define whether a specific measured signal is interesting from a Physics perspective.
+We are naturally referring to Trigger Primitives (TPs), the essential ingredient of any \ac{L1} Trigger decision.
+The reconstruction of \acp{TP} is severely limited by bandwidth and latency budgets, by the cost of hardware and the space it occupies, and even by cable connections.
+
+With the upcoming \ac{HL-LHC} and its intense radiation levels, the computation of \acp{TP} will gather even more relevance, as it will enable the control of otherwise unmanageable data rates.
+This Chapter covers reconstruction methods applied to the groundbreaking \ac{HGCAL}, a new subdetector to be placed in the CMS endcap regions.
+Its extreme longitudinal and lateral segmentations, despite potentiating fantastic resolutions, also brings enormous data rates, which can only be contained with the definition of discriminative quantities, the development of clever algorithms and the implementation of reliable software and firmware.
+
+In this Chapter, my contributions to the reconstruction of \acp{TP} for the \ac{HGCAL} are described, together with how they impact future developments.
+I have started by designing and implementing mitigation techniques for the splitting of energy clusters, an event topology where the \ac{TP} chain mistakenly interprets a single particle as many.
+These developments have in turn lead to the introduction of promising new reconstruction approaches, for instance considering different coordinate systems.
+Future improvements are now straightforward, given the software infrastructure put in place.
+
+We start by introducing the \ac{HL-LHC}, giving a strong focus on the physics reasons motivating its installation, ultimately providing a meaning for all the efforts reported in this Chapter.
+We proceed with a detailed description of \ac{HGCAL}, a fantastic detector bound to revolutionize calorimetry.
+We cannot stress enough how \ac{HGCAL} breaks the frontiers of what can be done with a calorimeter, paving the way for exciting physics-inspired software and firmware developments.
+In Section [[#sec:hgcal_trigger_primitives]], we detail how the reconstruction is currently defined.
+Such knowledge is useful to conceptualize the framework described in [[#sec:event_geom_developments]], which is then exploited in [[#sec:cluster_splitting]] to produce a series of results related to cluster splitting and beyond.
+We conclude the Chapter by discussing possible future steps.
