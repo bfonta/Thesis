@@ -113,8 +113,6 @@
 #+INCLUDE: "chapters/3_hgcal/0_intro.org"
 ** The High Luminosity LHC
 #+INCLUDE: "chapters/3_hgcal/1_hllhc.org"
-*** Physics Motivation
-#+INCLUDE: "chapters/3_hgcal/1p1_hllhc_physics.org"
 ** The High Granularity Calorimeter and Other Detector Upgrades
 *** Detector Upgrades in CMS
 #+INCLUDE: "chapters/3_hgcal/2p1_cms_detector_upgrades.org"
