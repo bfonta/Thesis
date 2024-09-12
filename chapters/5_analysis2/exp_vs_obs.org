@@ -13,6 +13,8 @@ During the blinded stage, the analysis' sensitivity is assessed via /expected re
 However, computing the median significance of a dataset is a computationally-intensive task, requiring the generation of large quantities of pseudo-data.
 A different approach is possible, by exploiting the asymptotic limit of the \ac{PRL}.
 
++ introduce Wilk's theorem: when a large dataset is available, assuming some regularity conditions on the likelihood, any test statistic based on the \ac{PRL} can be approximated by a $\chi^{2}$ distribution with $k$ degrees of freedom, being $k$ given by the number of \acp{POI} [[cite:&Wilks:1938dza]]
+  
 Such properties enable the definition of the Asimov dataset [[cite:&asimov]], a representative dataset where all observed quantities (\ac{POI} and nuisances) are set to their expected values, and statistical fluctuations are not considered.
 
 Once all possible issues in the analysis have been addressed and understood, the /unblinding/ step can proceed, in which the maximum likelihood fit provides the /observed/ result.

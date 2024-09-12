@@ -2,42 +2,14 @@
 :CUSTOM_ID: sec:analysis1_intro
 :END:
 
-This Chapter covers the latest iteration of the resonant \xhhbbtt{} analysis performed at \ac{CMS}, based on the complete \run{2} data.
-It represents a gigantic improvenent over the first of such studies, which used 2016 data only [[cite:&cms_hh_bbtt]]
-The analysis was initially based on the previous nonresonant \bbtt{} analysis [[cite:&higgs_bbtautau_nonres]], and has been diverging ever since, reflecting changes arising due to dataset updates, and also to several improvements: /i/) trigger strategy update, /ii/) selection (modest) update, /iii/) optimization of the boosted category, /iv/) retraining of the \hhbtag{} algorithm, /v/) replacement of the $m_{\tau\tau}$ regression algorithm, /vi/) replacement of the final discriminant, and /vii/) various updates of systematic uncertainties.
-A large fraction of the work was devoted to fixing countless bugs, which will not be addressed for the sake of interest and brevity.
-
-#+NAME: fig:analysis_fow
-#+CAPTION: Analysis Flow
-#+BEGIN_figure
-\centering
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/AnalysisFlow.pdf]]
-#+END_figure
-
-The physics analysis reported in this Thesis exploits \ac{pp} collision data recorded at a centre-of-mass energy $\sqrt{s}=13\,\si{\TeV}$ by the \ac{CMS} experiment during \run{2}, for a total of \SI{138}{\invfb}.
-Its strategy develops uponThis search is based on the previous publication of 2016 \cite{HHbbtautau2016} and improves it by introducing several upgrades to the analysis flow, from better trigger selection to improved signal extraction, from enhanced signal modelling to strengthened limit setting.
-
-
-
-The content reported in this chapter and the next are the result of the work of an analysis team.
-It corresponds to one additional analysis iteration for \hhbbtt{} processes, built upon work performed for both resonant and nonresonant types of the same analyses done with older \ac{CMS} datasets.
-I do not claim to be the sole author of all the sections that follow.
-I was instead one of the main analyzers, and contributed to the following:
-+ Trigger strategy: adding $\metnomu$ and \stau{} triggers, derive their \acp{SF}, define trigger regions, remove event overlap, correct older implementations of the legacy triggers ([[#sec:triggers]]).
-+ Selection: extend kinematic selection of multiple objects to exploit the new trigger above, update some lepton selections and veto, compute efficiencies  ([[#sec:selection]]).
-+ Tau leptons: apply new $\tau$ identification \acp{SF} ([[#sec:deep_tau_sfs]]).
-+ Background: estimation of $\ttbar{}$ \acp{SF} (not currently needed).
-+ Systematic uncertainties: implement electron, tau and jet energy corrections/resolutions, and propagate them to \ac{MET} ([[#sec:systematics]]).
-+ General: code rewrite and optimization, job processing, visualization, limit extraction, documentation, review.
-  
-* Motivation
-
-The exploration of \xhh{} is primarily motivated by the many theoretical models in place that predict the existence of an additional scalar decaying to two Higgs bosons, as covered in [[#sec:res_BSM_hh]]: \acp{WED}, \acp{2HDM}, \ac{SUSY}, ...
-It also benefits from sharing a common set of approaches with the nonresonant HH analysis, so much so that on occasion the resonant and nonresonant results are joinly published.
+The study of topologies involving a pair of Higgs bosons is immediately associated to the precise determination of the shape of the Higgs potential, and its consequences such a measurement can bring to the field of \ac{HEP}.
+There is however another way of framing such processes, namely by hypothesizing the existence of a \ac{BSM} particle, massive enough to decay into a Higgs boson pair: \xhh{}.
+The exploration of such topologies is primarily driven by the profusion of well-motivated theoretical models predicting the existence of resonances coupled to the Higgs sector.
+Examples of the aforementioned models have been provided in [[#sec:res_BSM_hh]]: certain \ac{SUSY} flavors, \acp{WED}, and models where one or more singlets or doublets are added, much in the vein the successful ideas introduced by the Higgs Mechanism ([[#sec:higgs_mechanism]]).
+The observation of a new resonant state would immediately revolutionize Particle Physics, representing the first definitive evidence of \ac{BSM} physics at a collider experiment.
 
 #+NAME: fig:event_display_res2b_2016
-#+CAPTION: \ac{CMS} event display for a \hhbbtt{} event in 2016. Three views are shown (refer to [[#sec:coordinate_system]]), namely $R$ vs $z$ (left) and 3D in cartesian coordinates (right). Red and blue represent, respectively, \ac{ECAL} and \ac{HCAL} energy deposits, where the magnitude is proxied by the dimension of each bar. Tracks are represented in green. The event passed the \rescat{2} selection. The selection of the analysis categories is defined in [[ref:sec:categorization]].
+#+CAPTION: \ac{CMS} event display for a \hhbbtt{} event in 2016. Three views are shown (refer to [[#sec:coordinate_system]]), namely $R$ vs $z$ (left) and 3D in Cartesian coordinates (right). Red and blue represent, respectively, \ac{ECAL} and \ac{HCAL} energy deposits, where the magnitude is proxied by the dimension of each bar. Tracks are represented in green. The event passed the \rescat{2} selection. The selection of the analysis categories is defined in [[ref:sec:categorization]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_RhoZ.pdf]]
@@ -45,24 +17,74 @@ It also benefits from sharing a common set of approaches with the nonresonant HH
 [[~/org/PhD/Thesis/figures/intro/EvDisp_2016_tauTau_res2b_3D.pdf]]
 #+END_figure
 
-The specific choice of the \bbtt{} decay channel was already justified in [[#sec:final_states]], and comes from the balance between background contamination and \ac{BR} size.
-It has consistently been observed to be one of the top performant HH channels, together with \bbgg{} and \bbbb{}.
-A \ac{SM} \hhbbtt{} event display is shown in [[fig:event_display_res2b_2016]].
-Its topology consists on the presence of two jets initiated by a b quark and two tau leptons, all compatible with a trajectory coming from the collision's \ac{PV}.
-The b-jets must be discriminated against other types of particles, mostly jets, using techniques discussed in [[#sec:physics_objects]].
-The tau leptons are unstable, and decay to lighter particles in \SI{2.9E-13}{\second} [[cite:&PDG]], via leptonic or hadronic decays, as illustrated in [[fig:tau_decay_modes]].
+The specific choice of the \bbtt{} decay channel was already justified in [[#sec:final_states]].
+It has consistently been observed to be one of the top performant HH channels, due to a balance between background contamination and \ac{BR} size.
+Its decay topology is experimentally rather complex, consisting on and two tau leptons and two jets initiated by a b quark, all compatible with a trajectory coming from the collision's \ac{PV}.
+The tau leptons are themselves unstable, and decay to lighter particles in \SI{2.9E-13}{\second} [[cite:&PDG]], via leptonic or hadronic decays, as illustrated in [[fig:tau_decay_modes]].
 Leptonic decays include either an electron or a muon, plus \ac{MET} in the form of neutrinos.
-Hadronic decays are more complex, featuring zero, one or more neutral and charged hadrons, described in [[#sec:hadronic_taus]].
-It is worth noticing that the \mumu{} channel, despite not being used to extract the final results, is very much useful as a \ac{CR} for \ac{DY} and $\ttbar$ backgrounds, and is used to extract the \acp{SF} for the \ac{MET} trigger presented in [[#sec:met_trigger_sfs]].
+Hadronic decays are more complex, featuring zero, one or more neutral and charged hadrons, as described in [[#sec:hadronic_taus]].
+It is worth noticing that the \mumu{} channel, despite not being used to extract the final results, is utilized as a \ac{CR} for \ac{DY} and $\ttbar$ backgrounds, and is used to extract \acp{SF} for the \ac{MET} trigger presented in [[#sec:met_trigger_sfs]].
+Concerning the other Higgs boson candidates, the b-jets it decays into must be discriminated against other types of particles, mostly lighter jets, using techniques discussed in [[#sec:physics_objects]].
+All the above hints at the complexities of the \bbtt{} channel, which encompasses most topologies a collider experiment can be exposed to.
+A \ac{SM} \hhbbtt{} \ac{CMS} event display is shown in [[fig:event_display_res2b_2016]], recorded on July 5\textsuperscript{th} 2016.
 
 #+NAME: fig:tau_decay_modes
-#+CAPTION: Illustration of the nine combinations two tau leptons can decay into (left), with corresponding letponic and hadronic feynamn diagrams (right). Six decays are considered in the \xhhbbtt{} analysis, highlighted in orange and corresponding to 88% of the total \ac{BR}. The gray box shows the decays that were not considered in the limits, due to very large backgrounds, which make them much less sensitive than the remaining channels. The \mumu{} channel is however used to derive trigger \acp{SF} and to define a background control region. All decay channels include at least one neutrino, and thus \ac{MET}.
+#+CAPTION: Illustration of the nine combinations two tau leptons can decay into (left), with corresponding leptonic and hadronic Feynman diagrams (right). Six decays are considered in the \xhhbbtt{} analysis, highlighted in orange and corresponding to 88% of the total \ac{BR}. The gray box shows the decays that were not considered in the limits, due to very large backgrounds, which make them much less sensitive than the remaining channels. The \mumu{} channel is however used to derive trigger \acp{SF} and to define a background control region. All decay channels include at least one neutrino, and thus \ac{MET}.
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/TauDMs.pdf]]
 #+END_figure
   
-Finally, a recent result [[cite:&atlas_bbtt_res]] of the \ac{ATLAS} Collaboration on the \xhhbbtt{} process observed a small excess at $\mx\sim 1\,\si{\TeV}$ with a local (global) significance of \SI{3.1}{\sigma} (\SI{2.0}{\sigma}).
-The analysis presented in this work thus aims to replicate the excess with the \ac{CMS} experiment, or instead show it to be (yet another) statistical fluctuation.
+Finally, our analysis is also strongly motivated by a recent result of the \ac{ATLAS} Collaboration on the \xhhbbtt{} process [[cite:&atlas_bbtt_res]].
+There, a small excess is observed at $\mx\sim 1\,\si{\TeV}$, with a local (global) significance of \SI{3.1}{\sigma} (\SI{2.0}{\sigma})[fn:: Local and global significances are explained in [[#sec:cls]]].
+The analysis presented in this work thus aims to replicate the excess with the \ac{CMS} experiment, or instead demonstrate it to be a statistical fluctuation.
 It is thus fundamental to obtain a sensitivity at least as good as the one from the \ac{ATLAS} result, especially close to the $\mx$ region where the tension was observed.
-  
+
+The analysis strategy represents an enormous improvement over the latest iteration of the resonant \xhhbbtt{} analysis performed at \ac{CMS}, which used 2016 data only [[cite:&cms_hh_bbtt]].
+Besides the almost four-fold increase in luminosity, the analysis strategy has been completely revamped, and not many similarities remain.
+The current strategy was instead initially based on the recent \ac{CMS} nonresonant \bbtt{} publication [[cite:&higgs_bbtautau_nonres]].
+However, a series of important upgrades has since been implemented, as summarized in [[tab:improvements]].
+It is worth remarking that the resonant and nonresonant studies mutually benefit from each other.
+Just like the work here presented benefited from decisions made in the past, upgrades in the analysis here presented are already being used for \run{3} \bbtt{} analyses to be published in the future.
+Our analysis exploits \ac{pp} collision data recorded at a $\sqrt{s}=13\,\si{\TeV}$ center-of-mass energy by the \ac{CMS} experiment during \run{2}, for a total of \SI{138}{\invfb}.
+
+#+NAME: tab:improvements
+#+CAPTION: List of improvements adopted in the resonant \xhhbbtt{} analysis with respect to the previous \ac{CMS} \bbtt{} analyses. The updates cover all stages of the workflow illustrated in [[fig:analysis_flow]]. All improvements are explained in detail in this or in [[#sec:analysis2_intro]]. 
+#+ATTR_LATEX: :placement [!h] :center t :align ll :environment mytablewiderrows
+|--------------+---------------------------------------------------------------------------------|
+| Stage        |                                                                                 |
+|--------------+---------------------------------------------------------------------------------|
+| Samples      | Updated to \ac{UL} datasets                                                     |
+|              | Considering =MET= datasets                                                        |
+| Selection    | Various updates, notably enlarging phase-space at low \ac{pt} and high \ac{eta} |
+|              | Optimization of the boosted category                                            |
+|              | Retraining of the \hhbtag{} algorithm                                           |
+|              | New $\mtt$ regression algorithm                                                 |
+| Discriminant | New parameterized \ac{DNN} algorithm                                            |
+| Statistics   | Additional systematic uncertainties                                             |
+|--------------+---------------------------------------------------------------------------------|
+
+# disclaimer
+It should be clear that the work reported in this Chapter and in [[#sec:analysis2_intro]] does not correspond to the efforts of a single person, but rather the collective work of an (international) analysis team.
+I can however claim to have been one the main analyzers, with contributions on multiple fronts.
+I was deeply involved in the definition and implementation of the new trigger strategy, including the computation of $\metnomu$ triggers \acp{SF}, the definition of trigger regions, the removal of event overlaps, and the improvement of older implementations of the legacy triggers.
+I have updated some of the analysis selections, either due to updates brought by the \ac{UL} datasets, or in order to extend the available phase-space.
+The introduction or upgrade of multiple corrections was also done as a part of my thesis: new $\tau$ identification \acp{SF}, electron, tau and jet energy corrections and resolutions, including their propagation to the definition of \ac{MET}.
+This was strongly related to the computation of systematic uncertainties, where I was also played a major role.
+I also ported an estimation technique for $\ttbar$ background \acp{SF}, developed for the \bbtt{} nonresonant analysis, which is however currently believed not to be required.
+More generally, I was involved in virtually all steps of the rewrite and optimization of the analysis software, in the documentation and review process of the work, and on the production of results, in the form of binned distributions and final limits.
+
+#+NAME: fig:analysis_flow
+#+CAPTION: Illustration of the analysis workflow. Each stage is covered in detail in later Sections of this Chapter. The strategy can be visualized in different stages, starting with the selection of the \run{2} data and \ac{MC} samples to consider. A series of triggers is then applied, in order to select events which might have a \bbtt{} topology. A series of selection cuts is then applied, constructing individual objects, and then pairs. Three categories are defined to enhance the analysis sensitivity. This information, together with a large number of \ac{MC} \acp{SF}, is used as input to our \ac{pDNN} discriminant, which assigns a probability for an event to be signal or background. Such a variables is exploited in a binned maximum likelihood fit to extract 95% \acp{CL}, where systematic uncertainties are includes as nuisances.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/AnalysisFlow.pdf]]
+#+END_figure
+
+# summary
+In this Chapter we set the stage for the signal extraction and statistical analysis in [[#sec:analysis2_intro]].
+We describe the data, triggers and physics objects in [[ref:sec:samples,sec:triggers,sec:physics_objects]], respectively.
+We then detail the several selection and categorization steps in [[#sec:selection]], and a new algorithm which performs the regression of the invariant mass of the $\tau\tau$ pair in [[#sec:tautau_regression]].
+We conclude this first analysis Chapter by covering the way in which backgrounds are modeled and corrected, in [[ref:sec:backgrounds,sec:mc_corrections]].
+The full analysis workflow is illustrated in [[fig:analysis_flow]].

@@ -3,9 +3,10 @@
 :END:
 
 #+NAME: fig:cross_trigger_ex
-#+CAPTION: Illustration of the benefits brought by a cross trigger, in the ($\pt(\ell)$, $\pt(\tau_{\text{h}})$) phase-space, with $\ell$ representing an electron or muon. The dashed lines and arrows indicate the regions covered by the respective triggers. In transparent blue we show the region covered by the single lepton trigger, while in transparent red we highlight the region added by the cross trigger, increasing the analysis event acceptance. The extra tau leg requirement enables to decrease the lepton leg threshold relative to the single trigger. Triggers also depend on other variables, making the real multi-dimensional picture more complex.
+#+CAPTION: Simplified illustration of the benefits brought by a cross trigger. This example shows the $\pt(\ell)$ vs. $\pt(\tau_{\text{h}})$ phase-space, with $\ell$ representing an electron or a muon. In blue we show the region covered by the single lepton trigger, while in red we highlight the region added by the cross trigger, increasing the analysis event acceptance. The dashed lines and arrows indicate the regions covered by the respective triggers. The additional tau leg in the cross trigger enables to decrease the lepton leg threshold, relative to the single trigger. Triggers also depend on other variables, making a realistic multi-dimensional picture more complex.
 #+BEGIN_figure
-#+ATTR_LATEX: :width .9\textwidth :center
+\centering
+#+ATTR_LATEX: :width .7\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/cross_trigger.pdf]]
 #+END_figure
 

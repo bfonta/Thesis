@@ -137,15 +137,21 @@ The samples are also used to extract all sorts of \ac{SF} corrections, as detail
 |---------------------------------------------------------+---------------------+-------------+---------------------------------------|
 
 * Signal samples
-The signal samples used to model the resonant \xhh{} process refer to \ac{ggF} radion and graviton models, corresponding to \spin{0} and \spin{2} processes, respectively.
-The models are introduced in Ref. [[cite:&xanda_benchmarks_wed]], which defines a set of common benchmarks multiple analyses can agree on.
+The signal samples used to model the resonant \xhhbbtt{} process refer to \ac{ggF} radion and graviton models, corresponding to \spin{0} and \spin{2} processes, respectively, where the Higgs bosons are forced to decay into a pair of b quarks and a pair of $\tau$ leptons.
+The models are introduced in Ref.[[cite:&xanda_benchmarks_wed]], which defines a set of common benchmarks multiple analyses can agree on.
 This is crucial for comparisons and combinations across different channels.
 Analyses within the \ac{ATLAS} Collaboration also use the same \spin{2} model.
-The model used for the \spin{0} resonance is instead different, but equivalent when the zero-interference \ac{NWA} approach is considered, which is so far the case in the vast majority of \ac{HEP} analyses.
-In [[#sec:interf_intro]] we discuss an alternative approach.
+The model employed for \spin{0} is instead different.
+It is however equivalent when the \ac{NWA} approach is considered, which is so far the case for the vast majority of \ac{HEP} analyses.
+In [[#sec:interf_intro]] we discuss an alternative approach to the \ac{NWA}.
 
-The samples are generated at \ac{LO} with =MadGraph v2.6.5=, and =Pythia8= is used for the hadronization, assuming the \ac{NWA}, having usually on the order of \num{e5} events, depending on spin, mass, and data-taking period.
-The mass range considered for both resonances is identical, covering the following values: \num{250}, \num{260}, \num{270}, \num{280}, \num{300}, \num{320}, \num{350}, \num{400}, \num{450}, \num{500}, \num{550}, \num{600}, \num{650}, \num{700}, \num{750}, \num{800}, \num{850}, \num{900}, \num{1000}, \num{1250}, \num{1500}, \num{1750}, \num{200}, \num{2500} and \SI{3000}{\GeV}.
+The samples are generated at \ac{LO} with =MadGraph v2.6.5=, and =Pythia8= is used for the hadronization, assuming the \ac{NWA}.
+The samples usually have on the order of \num{e5} events, depending on spin, mass, and data-taking period.
+The mass range considered for both resonances is identical: \num{250}, \num{260}, \num{270}, \num{280}, \num{300}, \num{320}, \num{350}, \num{400}, \num{450}, \num{500}, \num{550}, \num{600}, \num{650}, \num{700}, \num{750}, \num{800}, \num{850}, \num{900}, \num{1000}, \num{1250}, \num{1500}, \num{1750}, \num{200}, \num{2500} and \SI{3000}{\GeV}.
+We do not consider mass below \SI{250}{\GeV} since that would imply a virtual Higgs.
+There is no fundamental principle that forbids such a process, but the width of the Higgs boson is so small as to make such a process experimentally unobservable.
+On the large mass side, we stop at \SI{3}{\TeV} since higher mass points are not expected to provide a better sensitivity, due to presence of boosted \taus{}, for which our analysis is not optimised.
+Additionally, a dedicated \ac{CMS} high mass analysis with the same final state is currently being worked on by a different analysis team.
 
 * MC reweighting
 :PROPERTIES:

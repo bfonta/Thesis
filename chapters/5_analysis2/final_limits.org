@@ -26,11 +26,48 @@
 [[~/org/PhD/Thesis/figures/analysis2/spin0_vs_CMScomb.pdf]]
 #+END_figure
 
-+ The reduction of the sensitivity around $\mx = 280\,\si{\GeV}$ is a consequence of the shape of the tt background, that peaks about this value,
++ the decrease in efficiency for high $\mx$ values is due to the topology of the tau leptons, which get extremely boosted, and are thuis not reconstructed by \ac{HPS}
++ at lower masses, instead, the sensitivity progressively gets worse due to the increase of backgrounds
++ the particular sensitivity reduction at around $\mx = 280\,\si{\GeV}$ is a consequence of the shape of the $\ttbar$ background, which peaks at about this value,
 + see cadamuro
 + explain the observed trends in the limits (backgrounds, boosted taus)
 + mention the combination plots in [[fig:res_comb_xhh]]
++ ask Tobias per channel and poer category limits
++ compare result also with 2016 result, mentioning scaling with lumi (lumi increased by a factor of 2, so we should expect an naive improvement of the order of 2, but we got around 10 instead)
   
+#+NAME: tab:final_limits
+#+CAPTION: Numerical values of the cross sections shown in [[ref:fig:result1,fig:result2]], in \si{\femto\barn}. The combination was taken from Ref. [[cite:&interf_studies]], and the result from \ac{ATLAS} was taken from [[cite:&atlas_bbtt_res]]. The \bbtt{} result included in the combination refers to Ref. [[cite:&higgs_bbtautau_hy]]
+#+ATTR_LATEX: :placement [!h] :center t :align lcccc :environment mytablewiderrows
+|-------------------+----------+----------+------------+-----------------|
+| $\mx$ [\si{\GeV}] | \spin{0} | \spin{2} | \ac{ATLAS} | CMS Combination |
+|-------------------+----------+----------+------------+-----------------|
+|               250 |   223.63 |          |            |                 |
+|               260 |   619.14 |          |            |                 |
+|               270 |   685.55 |          |            |                 |
+|               280 |   689.45 |          |            |                 |
+|               300 |   570.31 |          |            |                 |
+|               320 |   455.08 |          |            |                 |
+|               350 |   297.85 |          |            |                 |
+|               400 |   143.07 |          |            |                 |
+|               450 |    71.78 |          |            |                 |
+|               500 |    37.60 |          |            |                 |
+|               550 |    28.81 |          |            |                 |
+|               600 |    21.00 |          |            |                 |
+|               650 |    20.02 |          |            |                 |
+|               700 |    15.14 |          |            |                 |
+|               750 |    12.21 |          |            |                 |
+|               800 |    10.25 |          |            |                 |
+|               850 |    10.25 |          |            |                 |
+|               900 |     8.30 |          |            |                 |
+|              1000 |     6.35 |          |            |                 |
+|              1250 |     6.35 |          |            |                 |
+|              1500 |     8.30 |          |            |                 |
+|              1750 |     9.28 |          |            |                 |
+|              2000 |    12.21 |          |            |                 |
+|              2500 |    21.00 |          |            |                 |
+|              3000 |    33.69 |          |            |                 |
+|-------------------+----------+----------+------------+-----------------|
+
 * Pulls (maybe a different section??)
 (copiado do Jona)
 An important check to be performed is the control of the impact of the nuisance parameters on the result of the analysis by evaluating the so-called /pulls/ and /impacts/.
@@ -38,3 +75,5 @@ The pull is defined as the deviation of the value of $\hat{\theta}$ (ML estimato
 The impact is defined as the shift $\Delta\mu$ induced on the \ac{POI} when each nuisance is fixed to $\hat{\theta} \pm 1\,\sigma$, while all other nuisances are fixed to their maximum profiled likelihood estimate $\hat{\theta}$.
 Show plot here if available.
 
+(Davide)
+if the pull is constrained it means that the uncertainty we retrieve from the fit is lower that what was given in input to the fit so we have enough sensitivity to obtain a better number than the one that was estimated

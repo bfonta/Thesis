@@ -103,7 +103,7 @@
 #+LATEX_HEADER: \newcommand{\xcc}{$\mathrm{X} \rightarrow \mathrm{c}\bar{\mathrm{c}}$}
 #+LATEX_HEADER: \newcommand{\xhhbbbb}{$\mathrm{X} \rightarrow \mathrm{HH} \rightarrow \mathrm{bbbb}$}
 #+LATEX_HEADER: \newcommand{\xhhbbgg}{$\mathrm{X} \rightarrow \mathrm{HH} \rightarrow \mathrm{bb}\gamma\gamma$}
-#+LATEX_HEADER: \newcommand{\xhhbbtt}{$\mathrm{X} \rightarrow \mathrm{HH} \rightarrow \mathrm{b}\tau\tau$}
+#+LATEX_HEADER: \newcommand{\xhhbbtt}{$\mathrm{X} \rightarrow \mathrm{HH} \rightarrow \mathrm{bb}\tau\tau$}
 #+LATEX_HEADER: \newcommand{\xhhbbww}{$\mathrm{X} \rightarrow \mathrm{HH} \rightarrow \mathrm{bWW}$}
 #+LATEX_HEADER: \newcommand{\xhh}{$\mathrm{X} \rightarrow \mathrm{HH}$}
 #+LATEX_HEADER: \newcommand{\xqq}{$\mathrm{X} \rightarrow \mathrm{q}\bar{\mathrm{q}}$}

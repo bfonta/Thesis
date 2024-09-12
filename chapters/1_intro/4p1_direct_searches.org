@@ -19,7 +19,7 @@ YH searches are included in the HH results by evaluating the Y scalar at the mas
 All results use the \ac{NWA} and \ac{SM} Higgs branching fractions.
 
 #+NAME: fig:res_comb_xhh
-#+CAPTION: Searches for Higgs boson pairs resonant production. Observed and expected 95% \ac{CL} upper limits on $\sigma\mathcal{B}$ for the \ac{ggF} production of a \spin{0} resonance X (left) and a \spin{2} resonance G (right). Individual results and statistical combinations are shown, where observed limits are indicated with solid lines and expected limits with dashed lines. Taken from [[cite:&interf_studies]].
+#+CAPTION: Searches for Higgs boson pairs resonant production. Observed (solid lines) and expected (dashed lines) 95% \ac{CL} upper limits on $\sigma\mathcal{B}$ for the \ac{ggF} production of a \spin{0} resonance X (left) and a \spin{2} resonance G (right). Individual results and statistical combinations are shown, where observed limits are indicated with solid lines and expected limits with dashed lines. Taken from [[cite:&interf_studies]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/comb_res_hh_spin0.pdf]]

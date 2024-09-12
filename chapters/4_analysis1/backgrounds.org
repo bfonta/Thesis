@@ -189,4 +189,4 @@ In the case of the W + jets background, the same happens after requiring b-tagge
 The single Higgs production cross section is also tiny compared to the dominant backgrounds.
 However, \ac{ggF} and \ac{VBF} production of single Higgs, also in association with a vector boson or a pair of top quarks (ttH), have similar decay products when compared to the \hhbbtt{} signal, and are therefore considered as backgrounds too.
 Backgrounds with a Higgs consider $\mh = 125\,\si{\GeV}$.
-Finally, the non-resonant Higgs boson pair production is also considered as a background source, assuming $\lh{3} = 1$.
+Finally, the nonresonant Higgs boson pair production is also considered as a background source, assuming $\lh{3} = 1$.
