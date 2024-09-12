@@ -160,7 +160,6 @@
 ** Control Regions
 #+INCLUDE: "chapters/4_analysis1/control_regions.org"
 
-
 * Resonant Search for \hhbbtt{}: Extracting the Limits
 #+INCLUDE: "chapters/5_analysis2/intro.org"
 ** Signal Extraction

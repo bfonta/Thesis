@@ -58,7 +58,8 @@ Some of these quantities are listed in [[tab:LHCparameters]], specifically for t
 
 #+NAME: tab:LHCparameters
 #+CAPTION: Nominal design parameters of the LHC machine in its \ac{pp} collisions configuration.
-#+ATTR_LATEX: :placement [!h] :center t :align l|c|c :environment mytablewiderrows
+#+ATTR_LATEX: :placement [!h] :center t :align lcc :environment mytablewiderrows
+|-----------------------------------+------------------+------------------------|
 | Description                       | Parameter        | Value                  |
 |-----------------------------------+------------------+------------------------|
 | Center-of-mass energy             | $\sqrt{s}$       | \SI{14}{\TeV}          |
@@ -71,6 +72,7 @@ Some of these quantities are listed in [[tab:LHCparameters]], specifically for t
 | Collision angle                   | $\theta_{\text{c}}$   | \SI{285}{\micro\radian}     |
 | Transverse bunch \ac{rms} at IP   | $\sigma_z$            | \SI{7.55}{\cm}         |
 | Longitudinal bunch \ac{rms} at IP | $\sigma_{xy}$         | \SI{16.7}{\um}         |
+|-----------------------------------+------------------+------------------------|
 
 The desired luminosity increase inevitably leads to a larger number of multiple \ac{pp} interactions per bunch crossing, a phenomenon known as /\ac{PU}/.
 The average of such quantity is given by:

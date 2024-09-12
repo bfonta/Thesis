@@ -104,7 +104,6 @@ Interestingly, the \bbtt{} final state is shown to drive the sensitivity when bo
 In conclusion, it should by now be clear that HH studies, either in their resonant or nonresonant versions, have vast potential for exploration up to the end of the \ac{HL-LHC}.
 Despite not being yet clear which ground-breaking accelerators and experiments will follow the \ac{HL-LHC}, it is hard to imagine a future in \ac{HEP} where the pair production of Higgs bosons does not take center stage.
 
-
 * Additional bibliography :noexport:
 + [ ] first run3 single higgs result [[cite:&cms_higgs_gg_run3]]
 + [ ] reduce bbH background to HH: [[https://indico.cern.ch/event/1291157/contributions/5876805/attachments/2898998/5083322/240718_ICHEP_bbHforHH.pdf][talk]]

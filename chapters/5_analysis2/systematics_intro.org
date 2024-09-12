@@ -22,7 +22,30 @@ The parameters one wishes to access can be categorized in two classes:
 Uncertainties related to the \acp{POI} caused by data fluctuations alone are denoted /statistical uncertainties/.
 Instead, the propagation of the imperfect knowledge of the analysis' nuisance parameters adds /systematic uncertainties/ to the final measurement.
 The careful measurement of systematics plays a central role in any physics analysis, as they can dramatically affect the sensitivity of the result.
-In this section we list the many sources of systematic uncertainties considered in the \xhhbbtt{} analysis that are included in the limit extraction described in [[#sec:final_limits]].
+In this section, we list the many sources of systematic uncertainties considered in the \xhhbbtt{} analysis that are included in the limit extraction described in [[#sec:final_limits]].
 Systematic uncertainties affecting only the yield of a given signal or background process are detailed in [[#sec:syst_norm]], and systematics additionally affecting the shape of the final discriminating variable are listed in [[#sec:syst_shape]].
+They are summarized in [[tab:summary_systs]].
 
+#+NAME: tab:summary_systs
+#+CAPTION: Summary of all normalization and shape systematic uncertainties considered in this work, described in [[#sec:syst_norm]] and [[#sec:syst_shape]]. respectively.
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{cl}
+    \hline \\[-1em]
+    \textbf{Uncertainty Type} & \textbf{Uncertainty List} \\ [+0.3em]\hline \\[-.8em]
+
+    \multirow{3}{*}{\textbf{Normalization}} & Luminosity, electron and muon isolation and \ac{ID} efficiencies, \\
+                                            & QCD estimation uncertainty, theoretical HH cross section, \\
+                                            & final state \acp{BR}, cross sections of simulated processes \\[+0.3em]\hline \\[-.8em]
+
+    \multirow{5}{*}{\textbf{Shape}} & L1 prefiring, \ac{PU} reweighting uncertainty, \tauh{} energy scale, \\
+                                    & energy \acp{SF} for prompt electrons, energy \acp{SF} for $e/\mu \rightarrow \tau$ fakes, \\
+                                    & jet energy scales and resolutions, \acp{SF} for tau \ac{ID}, \\
+                                    & trigger \acp{SF}, b-tagging \acp{SF}, \ac{PU} jet \ac{ID}, \\
+                                    & \ac{MC} finite sample size \\[+0.3em]\hline \\[-.8em]
+
+
+\end{tabular}
+\end{table}
 

@@ -1,22 +1,22 @@
-We perform a search for the resonant production of a pair of Higgs bosons (HH), decaying into a pair of b quarks and a pair of $\tau$ leptons, with the CMS experiment at the CERN Large Hadronic Collider (LHC).
+We perform a search for the resonant production of a pair of Higgs bosons (HH), decaying into a pair of b quarks and a pair of $\tau$ leptons, with the CMS experiment at the CERN Large Hadron Collider (LHC).
 The analysis exploits proton-proton collisions at a center-of-mass energy of $13\,\si{\TeV}$, for a total of \SI{138}{\invfb} collected during the 2016, 2017 and 2018 data-taking years.
-The gluon-fusion production mode is considered, together with two \spin{0} and \spin{2} hypotheses.
-This resonant process is strongly motivated by a series of theories able to address current shortcomings of the Standard Model (SM).
+The gluon-fusion production mode is considered, together with \spin{0} and \spin{2} hypotheses.
+This resonant process is strongly motivated by a series of theories able to address current shortcomings of the \ac{SM}.
 The decay channel is instead known for its experimental benefits, namely a relatively clean final state signature, balanced by a moderate branching fraction of 7.3%.
 Additionally, the results of a similar search have been recently reported by the ATLAS Collaboration, where a small tension with the \ac{SM} was recorded at a resonance mass of \SI{1}{\TeV}.
 The physics analysis here performed thus aims at confirming or rejecting such an excess.
-Expected upper limits at a 95% confidence level are set on the production of New Physics (NP) signatures, showcasing a compelling improvement over past CMS and ATLAS results.
-Furthermore, this work tackles a major simplification exploited by resonant searches in High Energy Physics (HEP), namely the Narrow Width Approximation (NWA), which assumes that hypothetical new resonances do not significantly interfere with the underlying SM physics.
-We show that the current level of sensitivity of double Higgs boson analyses is such as to put into question the correctness of the NWA, hinting at the necessity of altogether avoiding such approximation in future HH analyses.
+Expected upper limits at a 95% confidence level are set on the production of New Physics signatures, showcasing a compelling improvement over past CMS and ATLAS results.
+Furthermore, this work tackles a major simplification exploited by resonant searches in High Energy Physics, namely the Narrow Width Approximation (NWA), which assumes that the width of new resonances is negligible when compared to the detector's resolution, ignoring potential interference effects.
+We show that the current sensitivity level of double Higgs boson analyses is such as to put into question the correctness of the NWA, hinting at the necessity of altogether avoiding such approximation in future HH analyses.
 
 This work is also concerned with sensitivity improvements from a detector perspective.
-The upcoming High-Luminosity LHC (HL-LHC) will bring extremely high radiation levels and large numbers of collisions per proton bunch crossing, which can only be sustained by a very significant detector upgrade programme within CMS.
+The upcoming High-Luminosity LHC (HL-LHC) will bring large numbers of collisions per proton bunch crossing and extremely high radiation levels, which can only be sustained by a very significant detector upgrade programme within CMS.
 One of the upgraded sections will be the endcaps, where the novel High Granularity Calorimeter (HGCAL) will be installed.
 The HGCAL provides ample opportunities for studies and optimizations, and will certainly become a cornerstone of the upcoming CMS HL-LHC phase, providing high spatial and timing resolutions to improve the online and offline reconstruction of physics data.
 Central to the HGCAL will be the CMS trigger system, which will have to withstand the large rates expected from the HL-LHC.
-We have specifically developed new algorithms to enable the robust reconstruction of Trigger Primitives (TPs), the building blocks of the first level of the online trigger system in CMS.
+We have specifically developed new algorithms to enable the robust reconstruction of Trigger Primitives, the building blocks of the first level of the online trigger system in CMS.
 The algorithms include techniques to mitigate the wrongful creation of several energy clusters from single particles, and the computation of calorimetric quantities within a modified coordinate system.
-These developments are part of a reconstruction framework, implemented from scratch, which provides a simplified version of HGCAL's geometry.
+These developments are part of a reconstruction framework, implemented from scratch, which also provides a simplified version of HGCAL's geometry.
 Future efforts will benefit from such tools.
 
 

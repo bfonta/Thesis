@@ -46,10 +46,15 @@ On the other hand, the same effect increases the sensitivity to \ac{NP}, since \
 \ac{BSM} HH studies are thus strongly motivated, as the one presented in [[#sec:analysis1_intro]].
 
 #+NAME: fig:HH_production_diagrams_ggf
-#+CAPTION: Feynman diagrams for double Higgs gluon fusion production. The two diagrams have amplitudes of similar magnitudes, but interfere destructively. The quark loops are completely dominated by the top quark. (Left) Triangle diagram, characterised by the Higgs self-coupling and the coupling of the Higgs to top quarks. (Right) Box diagram, with two contributions from Higgs-top couplings.
+#+CAPTION: Feynman diagrams for double Higgs gluon fusion production. The box (top) and triangle (bottom) diagrams have amplitudes of similar magnitudes, but interfere destructively. The quark loops are dominated by the top quark. The triangle diagram is characterised by the Higgs self-coupling and the coupling of the Higgs to top quarks. Box diagrams include two contributions from Higgs-top couplings.
 #+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth
-[[~/org/PhD/Thesis/figures/intro/ProductionHH_ggf.pdf]]
+\centering
+#+ATTR_LATEX: :width .4\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/ggHH_box1.pdf]]
+#+ATTR_LATEX: :width .4\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/ggHH_box2.pdf]]
+#+ATTR_LATEX: :width .4\textwidth :center
+[[~/org/PhD/Thesis/figures/intro/ggHH_triangle.pdf]]
 #+END_figure
 
 ** Vector Boson fusion

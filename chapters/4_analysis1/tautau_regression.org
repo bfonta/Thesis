@@ -9,6 +9,8 @@
 + a brief description of how the training procedure of a \ac{DNN} works is available in [[#sec:pdnn]].
 + show one distribution with peaking ttH
 
++ SVFit is computatinally expensive and has problems reconstructing the Higgs at low masses
+    
 #+NAME: tab:input_features
 #+CAPTION: Lists of input variables used by the deep neural network for signal extraction. The first part of the table reports input variables in descending order of importance evaluated random forest models. The second part of the table reports the additional six categorical input features with no specific ordering criterion.
 #+ATTR_LATEX: :placement [!h] :center t :align c|c| :environment mytablewiderrows

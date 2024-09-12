@@ -1,0 +1,32 @@
+\documentclass[tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\usepackage{subcaption}
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+\begin{document}
+
+% gluon fusion
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex at (0,1.5) (h) {H};
+    \vertex at (1.33,1.5) (kappa);
+    \vertex at (2.66,3) (centertop);
+    \vertex at (2.66,0) (centerbot);
+    \vertex at (4,3) (finaltop) {$\gamma/\mathrm{Z}$};
+    \vertex at (4,0) (finalbot) {$\gamma$};
+    
+    \diagram* {
+      (h) -- [scalar] (kappa),
+      (kappa) -- [boson, edge label = W] (centertop) -- [boson] (finaltop),
+      (kappa) -- [boson, edge label = W, swap] (centerbot) -- [boson] (finalbot),
+      (centertop) -- [boson, edge label = W] (centerbot),
+    };
+  \end{feynman}
+
+  \fill[green] (kappa) circle (3pt);
+  \node[green] at ($(kappa) + (-0.25,0.25)$) {$\kappa_{\mathrm{W}}$};
+  \fill[black] (centertop) circle (2pt);
+  \fill[black] (centerbot) circle (2pt);
+\end{tikzpicture}
+
+\end{document}

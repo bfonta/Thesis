@@ -7,7 +7,19 @@ It represents a gigantic improvenent over the first of such studies, which used 
 The analysis was initially based on the previous nonresonant \bbtt{} analysis [[cite:&higgs_bbtautau_nonres]], and has been diverging ever since, reflecting changes arising due to dataset updates, and also to several improvements: /i/) trigger strategy update, /ii/) selection (modest) update, /iii/) optimization of the boosted category, /iv/) retraining of the \hhbtag{} algorithm, /v/) replacement of the $m_{\tau\tau}$ regression algorithm, /vi/) replacement of the final discriminant, and /vii/) various updates of systematic uncertainties.
 A large fraction of the work was devoted to fixing countless bugs, which will not be addressed for the sake of interest and brevity.
 
-* Disclaimer
+#+NAME: fig:analysis_fow
+#+CAPTION: Analysis Flow
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/AnalysisFlow.pdf]]
+#+END_figure
+
+The physics analysis reported in this Thesis exploits \ac{pp} collision data recorded at a centre-of-mass energy $\sqrt{s}=13\,\si{\TeV}$ by the \ac{CMS} experiment during \run{2}, for a total of \SI{138}{\invfb}.
+Its strategy develops uponThis search is based on the previous publication of 2016 \cite{HHbbtautau2016} and improves it by introducing several upgrades to the analysis flow, from better trigger selection to improved signal extraction, from enhanced signal modelling to strengthened limit setting.
+
+
+
 The content reported in this chapter and the next are the result of the work of an analysis team.
 It corresponds to one additional analysis iteration for \hhbbtt{} processes, built upon work performed for both resonant and nonresonant types of the same analyses done with older \ac{CMS} datasets.
 I do not claim to be the sole author of all the sections that follow.

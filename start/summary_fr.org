@@ -1,1 +1,20 @@
-Ceci N'est Pas Une Pipe
+Nous presentons une analyse de la production résonante de paires de bosons de Higgs (HH), se désintégrant en quarks b et en leptons $\tau$, avec l'expérience CMS au Grand Collisionneur de Hadrons (LHC) du CERN.
+L'analyse exploite les \SI{138}{\invfb} de données de collisions proton-proton collectés entre 2016 et 2018 à une énergie au centre de masse de $13\,\si{\TeV}$.
+Ce processus résonant est fortement motivé par un grand nombre de théories capables de répondre aux lacunes actuelles du Modèle Standard (SM).
+Le canal de désintégration étudié présente plusieurs avantages expérimentaux, à savoir une signature de l'état final relativement pure, équilibrée par un rapport d’embranchement modérée de 7.3%.
+Les résultats d'une étude similaire ont été récemment publiés par la collaboration ATLAS, rapportant une tension avec le SM pour une masse invariante du système HH d'environ \SI{1}{\TeV}.
+L'analyse effectuée ici vise donc à confirmer ou à rejeter un tel excès.
+Les limites supérieures attendues, avec un niveau de confiance de 95%, sont fixées sur la production de signatures de nouvelle physique, et représentent une amélioration considérable par rapport aux résultats antérieurs de CMS et d'ATLAS.
+Par ailleurs, ces travaux s'attaquent à une simplification majeure exploitée par les recherches résonantes en physique des hautes énergies, à savoir l'Approximation de Faible Largeur (NWA), qui suppose que la largeur des nouvelles résonances est négligeable par rapport à la résolution du détecteur, ignorant les effets d'interférence potentiels.
+Nous montrons que le niveau de sensibilité actuel des analyses HH est tel qu'il remet en question la validité de la NWA, ce qui laisse présager la nécessité d'éviter complètement cette approximation dans des analyses futures.
+
+Les travaux décrits portent également sur l'amélioration de la sensibilité des détecteurs.
+Le futur LHC à haute luminosité (HL-LHC) apportera un grand nombre de collisions par croisement de paquets de protons et des niveaux de radiation extrêmement élevés, qui ne pourront être soutenus que par un programme très important de mise à niveau des détecteurs au sein de CMS.
+L'une des sections modernisées sera celle des bouchons, où le nouveau calorimètre à haute granularité (HGCAL) sera installé.
+Le HGCAL offre de nombreuses possibilités d'études et d'optimisations, et deviendra certainement une pierre angulaire de la prochaine phase HL-LHC de CMS, en fournissant des résolutions spatiales et temporelles élevées pour améliorer la reconstruction en ligne et hors ligne des données de physique.
+Le système de déclenchement de CMS, qui devra supporter les flux de données importants attendus du HL-LHC, sera critique pour le HGCAL.
+Nous avons spécifiquement développé de nouveaux algorithmes pour permettre la reconstruction robuste des primitives de déclenchement, les éléments constitutifs du premier niveau du système de déclenchement en ligne de CMS.
+Ces algorithmes comprennent des techniques permettant d'atténuer la création erronée de plusieurs groupes d'énergie à partir de particules individuelles, et le calcul de quantités calorimétriques dans un système de coordonnées modifié.
+Ces développements font partie d'outils de reconstruction, mis en œuvre à partir de zéro, qui fournissent également une version simplifiée de la géométrie de HGCAL.
+Les efforts futurs bénéficieront de ces outils.
+
