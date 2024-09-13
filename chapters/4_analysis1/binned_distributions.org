@@ -1,0 +1,99 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:binned_distributions
+:END:
+
+Having defined the entire analysis worflow from datasets to \ac{MC} corrections, we can finally provide some examples which illustrate the kinematic phase-space covered by the analysis, and the relative importance of different background sources.
+Distributions are available in [[ref:fig:etau_distributions,fig:mutau_distributions,fig:tautau_distributions]], where the three analysis decay channels and three categories are represented.
+In [[fig:cr_distributions]], we additionally provide examples of similar distributions in the two \acp{CR} introduced in [[#sec:control_regions]].
+These distributions are used to evaluate the overall \ac{MC} agreement with data, and were fundamental to understand whether additional corrections were required.
+The statistical procedure to extract final results uses instead the analysis \ac{DNN} discriminant, which is a topic for the next Chapter.
+
+#+NAME: fig:etau_distributions
+#+CAPTION: Binned distributions for the \eletau{} channel. Details are provided in the text.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+END_figure
+
+#+NAME: fig:mutau_distributions
+#+CAPTION: Binned distributions for the \mutau{} channel. Details are provided in the text.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+END_figure
+
+#+NAME: fig:tautau_distributions
+#+CAPTION: Binned distributions for the \tautau{} channel. Details are provided in the text.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+END_figure
+
+#+NAME: fig:cr_distributions
+#+CAPTION: Binned distributions in the \ac{DY} (top row) and $\ttbar$ (bottom row) \acp{CR}. Details are provided in the text.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+END_figure

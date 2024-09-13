@@ -26,6 +26,7 @@
 #+LATEX_HEADER: \newcommand{\mgg}{m_{\gamma\gamma}}
 #+LATEX_HEADER: \newcommand{\mhh}{m_{\text{HH}}}
 #+LATEX_HEADER: \newcommand{\mhtnomu}{\text{MHT}_{\text{no-}\mu}}
+#+LATEX_HEADER: \newcommand{\mht}{\text{MHT}}
 #+LATEX_HEADER: \newcommand{\mh}{m_{\text{H}}}
 #+LATEX_HEADER: \newcommand{\mtautau}{m_{\tau\tau}}
 #+LATEX_HEADER: \newcommand{\mtt}{m_{t\bar{t}}}
@@ -153,8 +154,8 @@
 #+LATEX_HEADER: \newcommand{\hhbtag}{\texttt{HH-bTag}}
 #+LATEX_HEADER: \newcommand{\ie}{i.e.}
 #+LATEX_HEADER: \newcommand{\ip}[1]{IP#1}
-#+LATEX_HEADER: \newcommand{\logicand}[1]{\texttt{logical~AND}}
-#+LATEX_HEADER: \newcommand{\logicor}[1]{\texttt{logical~OR}}
+#+LATEX_HEADER: \newcommand{\logicand}[1]{logical-\texttt{AND}}
+#+LATEX_HEADER: \newcommand{\logicor}[1]{logical-\texttt{OR}}
 #+LATEX_HEADER: \newcommand{\longshut}[1]{Long Shutdown~#1}
 #+LATEX_HEADER: \newcommand{\mumu}{$\tau_{\mu}\tau_{\mu}$}
 #+LATEX_HEADER: \newcommand{\mutau}{$\tau_{\mu}\tau_{\text{h}}$}

@@ -333,16 +333,21 @@ Required corrections such as jet energy scales and resolutions are also covered 
 :CUSTOM_ID: sec:offline_reco_met
 :END:
 
-Due to the extremely low cross-sections involved, neutrinos are not detected by the \ac{CMS} experiment, or, for that matter, by any of the four large \ac{LHC} experiments.
+Due to the extremely low cross-sections involved, neutrinos are not detected by the \ac{CMS} experiment or any of other four large \ac{LHC} experiments.
 In an event, the presence of a transverse momentum imbalance, which could be naively seen as the violation of momentum conservation, can therefore be attributed to neutrinos, neglecting other effects arising to due imperfect efficiencies and acceptances for other objects.
 Another source for the imbalance might instead come from hypothetical \ac{BSM} particles interacting very weakly with the detector.
-These effects lead to /missing transverse momentum/, or MET, which is defined as the negative vector sum of all N reconstructed particles:
+These effects lead to /missing transverse momentum/, or MET, which is defined as the negative vector sum of all N reconstructed \ac{PF} particles in an event:
 #+NAME: eq:met
 \begin{equation}
-\ptmiss = - \sum_{i=0}^{\text{N}}\vec{p}_{\text{T,i}}^{\hspace{1mm}} \: ,
+\ptmiss = - \sum_{i}^{\text{N}}\vec{p}_{\text{T},\,i}^{\hspace{1mm}} \: ,
 \end{equation}
-
-\noindent which are the visible particles interacting via the electromagnetic and strong forces in the final state of the collisions.
+\noindent which are the visible particles in the final state of the collisions.
+We also mention a closely-related quantity called MHT, but applied only to the event's \ac{PF} jets only:
+#+NAME: eq:mht
+\begin{equation}
+\overrightarrow{\mht} = - \sum_{i}^{\text{N}^{\text{PF}}_{\text{jets}}}\vec{E}_{\text{T},\,i}^{\hspace{1mm}} \: .
+\end{equation}
+\noindent which represents the vectorial sum of the jet transverse energies.
 
 Despite the optimized combination of \ac{PF} tracks and clusters previously described, the probability of particle misreconstruction and misidentification is not zero, albeit small.
 In some rare cases, an artificially large $\ptmiss$ is reconstructed in the event, most often caused by a misidentified or misreconstructed high-$\pt$ muon.

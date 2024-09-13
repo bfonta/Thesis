@@ -3,13 +3,12 @@
 :END:
 
 The offline data events are recorded with a set of \ac{L1}+\ac{HLT} triggers directly related to the analysis decay channels.
-The goal is to minimise the number of \hhbbtt{} events lost, extending the analysis acceptance.
-This is why modern analyses often consider a large set of different \ac{HLT} trigger paths, since every bit of acceptance increase matters, especially for processes as rare as double Higgs production.
-This idea remains true for the present /resonant/ search, given that more events tends to equate to more stringent exclusion limits.
-However, it is also true that one should expect diminishing returns for each additional trigger considered.
-Taking also into account the complexities associated to data processing and trigger corrections, a balance must be found in which and how many triggers to consider.
+The goal is to minimise the number of lost \hhbbtt{} events, extending the analysis acceptance and maximizing the sensitivity to \ac{BSM} signals.
+This is why analyses often consider a large set of different \ac{HLT} trigger paths, since all sources of increased acceptance matter, especially for processes as rare as double Higgs production.
+More event equates to more stringent exclusion limits, or luckily to the observation of some previously hidden resonance.
+However, it is also true that one expects diminishing returns for each additional trigger considered.
+Taking also into account the complexities associated to data processing and trigger corrections, a balance must be found.
 
-The trigger strategy employed in this work extends the strategy used in the previous \ac{CMS} resonant \bbtt{} result [[cite:&higgs_bbtautau_hy]], which used 2016 data only.
-In that analysis, each channel was associated with a specific trigger type: \eletau{} (\mutau{}) was selected with a trigger requiring one electron (muon), and \tautau{} used a trigger requiring two tau leptons.
+The trigger strategy employed in this work extends the strategy used in the previous \ac{CMS} \run{2} nonresonant \bbtt{} result [[cite:&higgs_bbtautau_nonres]], which in itself already represents an extension of the strategy considered for the 2016 analysis [[cite:&cms_hh_bbtt]].
 In the following, we detail the new triggers used in the resonant \hhbbtt{} analysis for the first time, and explain in which phase-space regions they are applied.
-
+The \logicor{} is always intended whenever several \ac{HLT} paths are applied simultaneously to the same events.

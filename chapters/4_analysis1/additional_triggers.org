@@ -2,36 +2,38 @@
 :CUSTOM_ID: sec:additional_triggers
 :END:
 
-Triggers were added that had not been present in previous iterations of the analysis.
-The aim of the additions is to extend the available phase-space, increasing signal acceptance.
+Triggers which had not been present in previous analysis' iterations have been added to our analysis.
+The aim of the inclusions is to extend the available phase-space, increasing signal acceptance.
 The first novelty is the usage of an unprescaled $\metnomu$ trigger.
 This variable closely follows [[eq:met]], but reconstructed muons are explicitly removed from its definition:
-
 #+NAME: eq:metnomu
 \begin{equation}
-\ptmiss = - \sum_{i}^{N_{\text{particles}}}\vec{p}_{\text{T,i}} \: + \: \sum_{j}^{N_{\text{muons}}}\vec{p}_{\text{T,j}} \, .
+\metnomu = - \sum_{i}^{\text{N}_{\text{particles}}}\vec{p}_{\text{T},\,i} \, + \, \sum_{j}^{\text{N}_{\text{muons}}}\vec{p}_{\text{T},\,j} \: .
 \end{equation}
-
-\noindent This quantity is extremely useful when computing \ac{MET} trigger \acp{SF}, as described in [[#sec:met_trigger_sfs]].
-The \ac{MET} trigger above is used in all channels, exploiting the low lepton \ac{pt} kinematic region not covered by other triggers.
-This trigger also enables to reach high-\ac{eta} events that would otherwise not be kept by the cross-lepton triggers, since no $\eta$ cut is enforced.
-Given the additional $\pt$ thresholds one has to apply on top of the \ac{HLT} thresholds, as described in [[#sec:selection]], the $\metnomu$ trigger brings more events than one can initially think, since the actual regions not accessible by the legacy triggers becomes larger.
+\noindent The above quantity is introduced for the computation of $\metnomu$ trigger \acp{SF}, as described in [[#sec:met_trigger_sfs]].
+Following the same logic, a similar $\mhtnomu$ quantity can be defined by extending [[eq:mht]], and removing contributions from \ac{PF} muons.
+The $\metnomu$ trigger requires the $\metnomu$ and $\mhtnomu$ of the event to lie above \SI{120}{\GeV}.
+The new trigger is used in all channels, exploiting the low lepton \ac{pt} kinematic region not covered by legacy triggers.
+The $\metnomu$ trigger also enables to reach $\text{high-}|\eta|$ events that would otherwise not be kept by the cross lepton triggers, since no $|\eta|$ cut is enforced.
+Even leptonic triggers without explicit $|\eta|$ cuts are limited by the kinematic range of their corresponding trigger \acp{SF}.
+Furthermore, given the additional $\pt$ thresholds one has to apply on top of the \ac{HLT} thresholds, as described in [[#sec:selection]], the $\metnomu$ trigger brings more events than one might initially think.
 We also expect the $\metnomu$ trigger to become more and more significant with increasing $\mx$.
-For low resonance masses, the two Higgs bosons are close to be back-to-back in the laboratory frame, and \ac{MET} (and $\metnomu$) will thus largely cancel.
-As $\mx$ increases, the bosons become more and more collimated, increasing \ac{MET}, which is brought mostly by the neutrinos of the $\tau$ decays.
-The same reason indicates that the \tautau{} channel should be the one benefitting the most from the added $\metnomu$ trigger, also taking into account the \ac{pt} hard thresholds of the $\text{di-}\tau$ trigger, when compared to the legacy triggers in the other decay channels.
-Finally, given some \ac{SF}-related constraints discussed in [[#sec:met_trigger_sfs]], we have also removed events with $\metnomu$ lower than \SI{150}{\GeV} from all data-taking periods.
+For low resonance masses, the two Higgs bosons lie close to a back-to-back topology in the laboratory frame, and \ac{MET} (and $\metnomu$) largely cancel.
+As $\mx$ increases, the bosons become more and more collimated, leading to a \ac{MET} increase driven by the neutrinos from $\tau$ decays.
+Taking into account the hard \ac{pt} thresholds of the $\text{di-}\tau$ trigger when compared to legacy triggers in other decay channels, and the fact that the acceptance increase applies to two \tauhs{} rather than one, we expect the \tautau{} channel to benefit the most from the added trigger.
+Finally, we have imposed a $\metnomu$ threshold of \SI{150}{\GeV} for all data-taking periods, to take into account the turn-on of the trigger.
+This choice is detailed in [[#sec:met_trigger_sfs]], where the corresponding \ac{SF} are derived.
 
-A single-$\tau$ trigger is additionally added in all channels, for events with exactly one high-\ac{pt} \tauh{}.
+A \stau{} trigger is also added for the first time to our analysis, requesting a hadronic tau lepton \ac{pt} above \SI{180}{\GeV} for 2017 and 2018, and above \SI{140}{\GeV} for 2016.
+The trigger covers events with exactly one high-\ac{pt} \tauh{}.
 When both leptons have a high \ac{pt}, the legacy triggers are used, since they have a larger efficiency, as discussed in [[#sec:trigger_regions]] and shown in [[fig:compare_gains]].
-We note that the $\metnomu$ trigger also adds acceptance for high-\ac{pt} \tauh{}s, given the single-$\tau$ trigger \ac{eta} cut at 2.1.
+We note that the $\metnomu$ trigger also extends the acceptance for high-\ac{pt} \tauhs{}, given the $|\eta|<2.1$ of the \stau{} trigger.
 
-The most significant selections included in the additional $\metnomu$ and \stau{} triggers are listed separately in [[tab:trigger_met_stau]].
-Whenever data and MC trigger efficiencies exhibit differences, \acp{SF} are applied to the MC trigger efficiencies.
-This is described in [[#sec:mc_corrections]].
+The most significant selections included in the newly added $\metnomu$ and \stau{} triggers are listed in [[tab:trigger_met_stau]].
+Trigger \acp{SF} are applied to correct for discrepancies between data and \ac{MC} trigger efficiencies, as described in [[#sec:mc_corrections]].
 
 #+NAME: tab:trigger_met_stau
-#+CAPTION: Trigger paths used in the \eletau{}, \mutau{} and \tautau{} channels for the three years of data-taking and the corresponding integrated luminosity. Within each year, the \logicor{} of all the paths is always intended. The paths requiring one \tauh{} have changed during the 2018 data-taking after the implementation of the \ac{HPS} algorithm. The Isolation (Iso) criteria reported in the table are explained in the text.
+#+CAPTION: Trigger paths used in the \eletau{}, \mutau{} and \tautau{} channels for the three years of data-taking and corresponding integrated luminosity values. Within each year, the \logicor{} of all the paths is always intended, also including the triggers in the legacy region. The paths requiring one \tauh{} were updated during the 2018 data-taking after the implementation of the \ac{HPS} algorithm. The Isolation (Iso) criteria reported in the table are explained in the text.
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{10pt}
@@ -43,11 +45,12 @@ This is described in [[#sec:mc_corrections]].
                           & One \tauh{}, $\pt>140\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, VLoose Iso          & 33.3 \\ [+0.3em]\hline \\[-1em]
 
     \multirow{3}{*}{2017} & $\metnomu>120\,\si{\GeV}$, $\mhtnomu>120\,\si{\GeV}$                                                    & 40.6 \\
-                          & $\metnomu>120\,\si{\GeV}$, $\mhtnomu>120\,\si{\GeV}$, $\htvar>120\,\si{\GeV}$                           & 36.7 \\
+                          & $\metnomu>120\,\si{\GeV}$, $\mhtnomu>120\,\si{\GeV}$, $\htvar>60\,\si{\GeV}$                           & 36.7 \\
                           & One \tauh{}, $\pt>180\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, Medium Iso          & 41.5 \\ [+0.3em]\hline \\[-1em]
 
     \multirow{2}{*}{2018} & $\metnomu>120\,\si{\GeV}$, $\mhtnomu>120\,\si{\GeV}$                                                    & 59.8 \\
-                          & One \tauh{}, $\pt>180\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, Medium Iso          & 59.8 \\
-                          & One \tauh{}, $\pt>180\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, 1 prong, Medium Iso & 59.8 \\ [+0.3em]\hline \\[-1em]
+                          & One \tauh{}, $\pt>180\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, Medium Iso          & 59.8 \\ [+0.3em]\hline \\[-1em]
+
+                          %% & One \tauh{}, $\pt>180\,\si{\GeV}$, $|\eta|<2.1$, $\pt{}^{\text{track}}>50\,\si{\GeV}$, 1 prong, Medium Iso & 59.8 \\ [+0.3em]\hline \\[-1em]
 \end{tabular}
 \end{table}

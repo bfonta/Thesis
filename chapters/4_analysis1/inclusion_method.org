@@ -2,7 +2,7 @@
 :CUSTOM_ID: sec:inclusion_method
 :END:
 
-In this section we provide a brief overview of a general method for estimating \acp{SF} of the \logicor{} of any number of triggers.
+For completeness, we provide a brief overview of a general method for estimating \acp{SF} of the \logicor{} of any number of triggers.
 The implementation and testing of the method represented a significant part of my PhD, but ended up not being fully exploited by reasons detailed below.
 We nevertheless describe the underlying idea, hoping it can serve as basis for future work.
 
@@ -55,7 +55,7 @@ The improvement is observed only for the variable being used, namely the lepton 
 This encouraging result can be explained since our custom \acp{SF} are calculated with kinematics specific to \xhhbbtt{}, while central \acp{SF} must be general enough to be used by multiple analyses.
 Variables not correlated with the used \ac{pt} are not affected.
 
-The method just presented was not applied to the \xhhbbtt{} analysis, despite being fully implemented and despite the preliminary validation.
+The method just presented was not applied to the \xhhbbtt{} analysis, despite being fully implemented and despite a preliminary validation.
 This can be explained by the fact that the complete validation would require more time, which would not be then dedicated to work on the analysis as a whole.
 There were also significant challenges in defining appropriate reference triggers and datasets for each intersection combination, correct and possibly multi-dimensional binnings for each variable $q$, and the integration of custom \acp{SF} with \acp{SF} centrally provided by \ac{CMS}.
 Additionally, the project was experimental, and there was no guarantee the final result would converge into robust and usable corrections.

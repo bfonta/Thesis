@@ -15,7 +15,7 @@ In the following we detail the selections on leptons and b-jets in [[ref:sec:tau
 Following the selection of particle candidates, a loose rectangular cut is applied on the invariant mass of the $\mtt$ and $\mbb$ pairs, as described in [[#sec:mass_cut]]
 Finally, binned distributions of the event distributions are used to train the dedicated \ac{NN} discriminants.
 
-* Tau lepton pair
+* Tau Lepton Pair
 :PROPERTIES:
 :CUSTOM_ID: sec:tau_pair_sel
 :END:
@@ -110,7 +110,7 @@ Additionally, the following conditions must be true for the event to be rejected
 + A muon of $|\eta_{\mu}| < 2.4$ and $p_T > 10\,\si{\GeV}$ and passing the =Medium= particle--flow muon and \texttt{HighPt} track muon identification criteria, plus the relative particle--flow and track isolation requirements, $I_{\text{rel}}^{\text{track-}\mu} < 0.3$ and $I_{\text{rel}}^{\text{PF-}\mu} < 0.3$, respectively. The reconstructed muon production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$.
 This veto also helps removing background events with two leptons and a fake \tauh{}, as for instance diboson processes, or fully leptonic decays of $\ttbar{}$.
   
-* B quark pair
+* B Quark Pair
 :PROPERTIES:
 :CUSTOM_ID: sec:b_pair_sel
 :END:
@@ -220,6 +220,14 @@ The network aims at discriminating \xhhbbtt{} signal events from background, and
 [[~/org/PhD/Thesis/figures/analysis1/AnalysisFlowDiagram.pdf]]
 #+END_figure
 
+** Resolved jets
+** Boosted jets
+
+* Invariant Mass Cut
+:PROPERTIES:
+:CUSTOM_ID: sec:mass_cut
+:END:
+
 * Categorization
 :PROPERTIES:
 :CUSTOM_ID: sec:categorization
@@ -228,11 +236,10 @@ The network aims at discriminating \xhhbbtt{} signal events from background, and
 These cuts remove the tails of the mass spectrum, and outliers in these regimes, easing the task of discriminators further down in the analysis chain.
 It also allow to define control regions with low signal contamination, useful to assess the proper modelling of some of the main analysis' backgrounds.
 
-* Invariant mass cut
+* Control Regions
 :PROPERTIES:
-:CUSTOM_ID: sec:mass_cut
+:CUSTOM_ID: sec:control_regions
 :END:
-
-* Resolved jets
-
-* Boosted jets
+As we can see in @insert figure reference@ for the \ac{DY} \ac{CR}, the data/MC agreement improves significantly when requiring a strong b-tag identification \ac{WP}.
+This is due to bad modelization of the light jets coming with the \ac{DY} simulation, which has also been observed in the nonresonant \bbtt{} analysis [[cite:&higgs_bbtautau_nonres]].
+Ultimately, the categories which matter are the ones being fitted, here the one where the ~DeepJet~ requirement is applied.

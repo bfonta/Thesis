@@ -112,6 +112,8 @@
 #+LATEX_HEADER: \Crefname{chapter}{Chapter}{Chapters}
 #+LATEX_HEADER: \crefname{appendix}{Appendix}{Appendices}
 #+LATEX_HEADER: \Crefname{appendix}{Appendix}{Appendices}
+#+LATEX_HEADER: \newcommand*{\newcite}{Ref.~\cite}% Prepend \cite with Ref.~
+
 
 #+LATEX_HEADER: \DeclareSIUnit \rap {\eta}
 #+LATEX_HEADER: \DeclareSIUnit \std {\sigma}

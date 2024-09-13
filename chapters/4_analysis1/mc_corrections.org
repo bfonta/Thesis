@@ -375,7 +375,7 @@ Despite the low statistics involved, one can see that the MET SFs improve the de
 
 We can see that in 2017 the trigger does not becomes fully efficient for high $\metnomu$ values.
 This is because the ~HLT_PFMETNoMu120_PFMHTNoMu120_IDTight~ trigger was not active in the last runs of 2017.
-To recover the missing luminosity, we decided to consider instead, for 2017 only, the \logicor{} between ~HLT_PFMETNoMu120_PFMHTNoMu120_IDTight~ and ~H2LT_PFMETNoMu120_PFMHTNoMu120_IDTight_PFHT6F~.
+To recover the missing luminosity, we decided to consider instead, for 2017 only, the \logicor{} between ~HLT_PFMETNoMu120_PFMHTNoMu120_IDTight~ and ~H2LT_PFMETNoMu120_PFMHTNoMu120_IDTight_PFHT60~.
 We can see in [[fig:lumi_vs_runnumber_2017]] that the new trigger collects more data during the last few runs in 2017.
 Indeed, looking at the recomputed efficiency and SF plot in [[fig:eff_mumu_2017]], considering the two triggers taken together, we can observe a full recovery of the lost efficiency.
 

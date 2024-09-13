@@ -121,3 +121,37 @@ This factor is linearly increased from zero to one over 20 epochs, and starting 
 
 Finally, all of the classes are represented in equal fractions within each batch.
 This is required to prevent the discriminant to ignore signal events, given that they represent a minority when taking the full background plus signal datasets into account.
+
+
+* Distributions
+
++ mention unblinding
++ describe flat-s
++ whenever the QCD is negative or zero its contribution is removed from the histograms
+  
+#+NAME: fig:pdnn_distributions
+#+CAPTION: Distribution of the \ac{pDNN} score for the \eletau{} (top row), \mutau{} (middle row) and \tautau{} (bottom row) channels, in 2018. The three analysis categories are also shown, namely \rescat{1} (left column), \rescat{2} (middle column) and \boostcat{} (right column). The signal distribution is mostly flat, and is scaled to the product of the \bbtt{} \ac{BR} with the expected limits shown in [[#sec:final_limits]] for visualization. The plots are partially unblinded, for all background dominated bins lying below 0.8. Details are provided in the text.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_etau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_etau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_etau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_mutau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved1b_noak8_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_resolved2b_first_os_iso_spin_0_mass_1000.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/dnn/shapes_cat_2018_tautau_boosted_notres2b_os_iso_spin_0_mass_1000.pdf]]
+#+END_figure
+
+* Biblio :ignore:
++ [[https://res-hbt-dnn-outputs.web.cern.ch/prod8/][dnn plots]]

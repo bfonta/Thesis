@@ -139,13 +139,13 @@
 
 ** Triggers
 #+INCLUDE: "chapters/4_analysis1/triggers.org"
-*** Legacy triggers
+*** Legacy Triggers
 #+INCLUDE: "chapters/4_analysis1/legacy_triggers.org"
-*** Additional triggers
+*** Additional Triggers
 #+INCLUDE: "chapters/4_analysis1/additional_triggers.org"
-*** Analysis trigger regions
+*** Analysis Trigger Regions
 #+INCLUDE: "chapters/4_analysis1/trigger_regions.org"
-*** Note on the inclusion method
+*** Discussion on the Inclusion Method
 #+INCLUDE: "chapters/4_analysis1/inclusion_method.org"
 ** Physics Objects
 #+INCLUDE: "chapters/4_analysis1/physics_objects.org"
@@ -158,7 +158,8 @@
 ** Monte Carlo Corrections
 #+INCLUDE: "chapters/4_analysis1/mc_corrections.org"
 ** Control Regions
-#+INCLUDE: "chapters/4_analysis1/control_regions.org"
+#+INCLUDE: "chapters/4_analysis1/binned_distributions.org"
+
 
 * Resonant Search for \hhbbtt{}: Extracting the Limits
 #+INCLUDE: "chapters/5_analysis2/intro.org"
@@ -218,6 +219,9 @@
 * Appendix
 ** Summary of ATLAS results on Higgs boson pair production
 #+INCLUDE: "chapters/appendixes/atlas_results.org"
+#+LATEX: \clearpage
+** Final results in table format
+#+INCLUDE: "chapters/appendixes/table_results.org"
 #+LATEX: \clearpage
 ** MET SF control distributions
 #+INCLUDE: "chapters/appendixes/met_sf_controlregions.org"
