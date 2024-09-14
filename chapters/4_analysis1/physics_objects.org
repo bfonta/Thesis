@@ -6,13 +6,13 @@ In this Section, we define the physics objects and related quantities which are 
 We focus on the objects used by the analysis, which happen to cover a wide variety: electrons, muons, tau leptons and \ac{MET} for the \htt{} decay, and jets for the \hbb{} decay.
 Within the \ac{CMS} Collaboration, dedicated teams called \acp{POG} are responsible for the definition, calibration and validation of specific objects.
 As such, some selection and calibration procedures are often common to a broad range of physics analyses.
-In the context of our analysis, we had interactions with the EGamma, Tau, Muon, BTV (b-tagging an dvertexing) and JetMET, including during review steps internal to \ac{CMS}.
+In the context of our analysis, we had interactions with the EGamma, Tau, Muon, BTV (b-tagging and vertexing) and JetMET, including during review steps internal to \ac{CMS}.
 We follow \ac{POG} recommendations whenever possible.
 
 * Muons
 The muon selections applied in this work were originally based on the selections used by the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]], but have evolved according to updated analysis needs, further corrections, and sample updates.
 Muons are required to be reconstructed by the Tracker or the Global muon reconstruction algorithms, which were described in [[#sec:offline_reco_muons]].
-The muon selections later presented in [[#sec:mutau_sel]] apply kinematic, isolation and \ac{ID} thresholds.
+The muon selections later presented in [[tab:max_min_cuts]] apply kinematic, isolation and \ac{ID} thresholds.
 In the following we define both isolation and \ac{ID}.
 
 # isolation
@@ -34,7 +34,7 @@ Three \ac{ID} selections for PF muons are centrally recommended by \ac{CMS}, in 
 In this analysis, the signal muon candidates are required to pass the =Tight= \ac{ID}, which uses global muons.
 On top, requirements are applied on the number of hits in the muon chambers, strip tracker, and pixel detectors, plus a quality condition on the $\chi^{2}$ fit of the track.
 The selections aim at decreasing the misidentification of other particles as muons.
-The main background sources are cosmic rays, punchthrough hadrons[fn:: Hadrons escaping the calorimeter and leaving energy deposits in the muon system.] and products of in-flight secondary decays.
+The main background sources are cosmic rays, punch-through hadrons[fn:: Hadrons escaping the calorimeter and leaving energy deposits in the muon system.] and products of in-flight secondary decays.
 
 # cuts
 A correction factor is applied to \ac{MC} simulations to take into account differences with respect to data in the isolation and \ac{ID} efficiencies of muons.
@@ -110,7 +110,7 @@ As shown in [[tab:deeptau_wps]], the efficiencies range from 40 to 98% for jets,
 The $\text{jet} \rightarrow \tau$ misidentification rate varies jet \ac{pt} and quark flavor.
 It has been estimated to be 0.43% for a genuine $\tau$ \ac{ID} efficiency of 70%, using simulated W + jets events.
 The same rate for electrons and muons is 2.60(0.03)% for a genuine \tauh{} \ac{ID} efficiency of 80($>99$)%.
-Significant updates are being put in place, mostly for \run{3} analyses, including using newer and extended data for training, improved training techniques, and optimized hyperparameter tuning [[cite:&deeptau_run3]].
+Significant updates are being put in place, mostly for \run{3} analyses, including using newer and extended data for training, improved training techniques, and optimized hyper-parameter tuning [[cite:&deeptau_run3]].
 
 #+NAME: tab:deeptau_wps
 #+CAPTION: \Ac{ID} efficiencies of \tauhs{} for all =DeepTau= \acp{WP}, considering its three classes. The efficiencies are measured with \htt{} samples for \tauhs{} in a $30 < \pt < 70\,\si{\GeV}$ range [[cite:&deeptau]].
@@ -277,5 +277,5 @@ We also apply \ac{MET} quality filters provided by the JetMET \ac{POG}, in order
 + Events where the \ac{PV} is not of good quality are rejected.
 + A beam halo filter is used, to reduce the non negligible probability of high-energy halo muons to interact in the calorimeters. Such interactions can create clusters of up to several hundreds of \si{\GeV}.
 + Events with problematic dead cell \ac{TP} energy recovery are removed.
-+ Events where a large unphysical \ac{MET} is erroneously reconstructed due to the presence of additional muons are rejected.
++ Events where a large nonphysical \ac{MET} is erroneously reconstructed due to the presence of additional muons are rejected.
 + Additional filters are applied to reject events with high \ac{HCAL} or \ac{ECAL} noise.

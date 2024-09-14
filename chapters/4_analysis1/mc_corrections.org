@@ -162,7 +162,7 @@ More details are given in [[#sec:additional_triggers]].
 Flat \acp{SF} for the \stau{} trigger are also provided by the Tau \ac{POG}, which recommends their usage in the region where the trigger efficiency plateaus, defined to be \SI{10}{\GeV} above their trigger threshold (\SI{130}{\GeV} for 2016 and \SI{190}{\GeV} for 2017 and 2018).
 The recommended \acp{SF} can be inspected in [[tab:singleTauSFs]].
 They are used to correct the \ac{MC} event-by-event.
-The corrections is applied only to events within the \stau{} region, as detailed in discussed in [[#sec:tautau_sel]].
+The corrections is applied only to events within the \stau{} region, as detailed in discussed in [[#sec:selection]].
 
 #+NAME: tab:singleTauSFs
 #+CAPTION: \Stau{} trigger \acp{SF} as recommended by the Tau \ac{POG}. The corresponding \ac{HLT} paths are defined in [[tab:trigger_met_stau]].
@@ -201,7 +201,7 @@ The three most important sources of background in the \mumu{} channel are taken 
 We apply a selection similar to the ones detailed in [[#sec:tau_pair_sel]], but considering the \mumu{} channel.
 Since the \mumu{} channel is not part of the three analysis channels, we can use all its events while keeping orthogonality to the analysis.
 No additional cut is needed to define orthogonal phase-space regions, avoiding a decrease in statistics.
-We require two muons with $\pt > 15\,\si{\GeV}$ each and other selections as defined in [[#sec:mutau_sel]].
+We require two muons with $\pt > 15\,\si{\GeV}$ each and other selections as defined in [[tab:max_min_cuts]].
 A custom binning is set so to sufficiently sample the efficiency curves, especially in the turn-on region.
 To smoothen out the fluctuations in efficiencies, a sigmoid function is fit to both data and \ac{MC} efficiency curves in their turn-on regions.
 The sigmoid function depends on three parameters:
@@ -215,7 +215,7 @@ In order to obtain the best possible fit result, the range of the sigmoid fit is
 We find that a good result is obtained for all data periods by starting the fit at \SI{150}{\GeV} and ending it at \SI{350}{\GeV}.
 Values after \SI{350}{\GeV} can be fit by a horizontal line.
 Multiple starting values are tried and compared, and we find that they do not significantly impact the fit's result, except when using the full range, as illustrated in [[fig:compare_ratios_ranges]].
-For validation purposes, we also derive $\metnomu$ \acp{SF} using the \mutau{} channel to make a comparison with the \mumu{} ones, following the selection described in [[#sec:mutau_sel]].
+For validation purposes, we also derive $\metnomu$ \acp{SF} using the \mutau{} channel to make a comparison with the \mumu{} ones, following the selection described in [[tab:max_min_cuts]].
 They are found to be compatible within statistical uncertainties, as shown in [[fig:compare_ratios_channels]].
 For completeness, we also compare the used \mumu{} $\metnomu$ \ac{SF} curves across the four data periods in [[fig:compare_ratios_years]].
 Differences can arise from changes in conditions across different years.

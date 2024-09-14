@@ -2,54 +2,90 @@
 :CUSTOM_ID: sec:selection
 :END:
 
-+ define "baseline selection" somewhere
-  
-In this section we cover the various selection stages performed on the events collected by the analysis triggers.
-Given the rarity of HH processes, it is imperative to measure as many \hhbbtt{} events as possible.
-The selection is achieved by targeting the topologies of interest, focusing first on single physics objects, such as b-jets and tau lepton decay products in the \bbtt{} case, and later on pairs of such quantities, reconstructing the decays of the two Higgs bosons.
-Next, a set of /categories/ is defined, \ie{} independent event subsets with defining properties.
-The categories are created in order to boost the sensitivity of a dedicated /discriminant/, which is not required to look at the full dataset.
-The discrimination step, covered in [[#sec:analysis2_intro]], consists on distinguishing interesting signal events from the unavoidable associated background.
-Recent improvements in discrimination algorithms can in most cases perform a selection significantly better than what even a very good physical intuition achieves.
-Therefore, the general idea for an initial selection is to prioritize the maximization of the event acceptance to the \xhhbbtt{} signal.
-The full analysis flow is illustrated in @XXXXXXX@.
-In the following we detail the selections on leptons and b-jets in [[ref:sec:tau_pair_sel,sec:b_pair_sel]], and proceed with the description of the categorization in [[#sec:categorization]], which separates events into two resolved and one boosted category, relative to the boost of the b-jets.
-Following the selection of particle candidates, a loose rectangular cut is applied on the invariant mass of the $\mtt$ and $\mbb$ pairs, as described in [[#sec:mass_cut]]
-Finally, binned distributions of the event distributions are used to train the dedicated \ac{NN} discriminants.
+The observation of \xhhbbtt{} naturally requires the capability to precisely reconstruct the two pairs of b-jets and tau leptons.
+Having introduced all single physics objects included in the \bbtt{} topology, we can now describe in detail the full event selection, which aims at providing the subset of events processed that match the signal of interest.
+However, the selection should not be too strict, or equivalently lead to a very high \bbtt{} purity; that could hinder analysis steps to come, and specifically affect the final discriminator, by reducing its training data size.
+Given the rarity of HH processes, it is imperative to measure as many \hhbbtt{} events as possible; the goal of the selection is to maximize signal acceptance.
+
+The selection starts from the data passing the analysis triggers, and is performed in various stages, as also highlighted in [[fig:analysis_flow]].
+The stages proceed in order, by targeting single objects first, such as b-jets, leptons and \tauhs{}, and later pairs of such quantities, as defined by the decays of the two Higgs bosons.
+Once the two H candidates have been found, an additional two-dimensional invariant mass cut is applied on the $\mbb$ and $\mtautau$ plane, to further restrict the phase-space of interest, removing potential outliers, and to provide validation \acp{CR}.
+A categorization step immediately follows, where /categories/ are defined.
+This step separates events according to the topology of the b-quark pair, creating two resolved and one boosted category.
+The categories are created in order to boost the sensitivity of a dedicated /discriminant variable/, which is described in the next Chapter.
+
+In the following, we detail the selection cuts applied to leptons and b-jets in [[ref:sec:tau_pair_sel,sec:b_pair_sel]], and mention the invariant mass cut in [[#sec:mass_cut]].
+We then proceed by describing the categorization in [[#sec:categorization]].
+Finally, we provide the definitions of the two \acp{CR} used in the analysis, which are used to train the discriminant and are visualized in [[#sec:control_regions]].
 
 * Tau Lepton Pair
 :PROPERTIES:
 :CUSTOM_ID: sec:tau_pair_sel
 :END:
-Instead, all events lying above the minimum accepted $\pt$ ($|\eta|$) values are considered: \SI{10}{\GeV} (2.5) for electrons, \SI{15}{\GeV} (2.4) for muons and \SI{20}{\GeV} (2.3) for \tauhs{}.
-The values originate from hard limits imposed by the isolation and identification trigger \acp{SF} used in the analysis.
 
-This step aims at identifying the visible decay products of one of the \SI{125}{\GeV} Higgs boson decaying into a $\tau$ pair.
-Selected signal events are required to have at least one $\tau$ candidate that decays hadronically and has been reconstructed by the \ac{HPS} algorithm.  
-The \dtvtwopone{} discriminator [[cite:&deeptau]] identifies $\tau$'s, distinguishing them from jets, electrons and muons.
-Both =DeepTau= and \ac{HPS} were described in [[#sec:hadronic_taus]].
-As mentioned there, \ac{HPS} decay modes with two prongs are explicitly rejected.
-Furthermore, all events assigned the $\text{h}^{\pm}\pi^{0}\pi^{0}\nu_{\tau}$ topology are analysed as though they correspond to $\text{h}^{\pm}\pi^{0}\nu_{\tau}$.
-This happens since the former decay is much rarer than the latter, and the \ac{HPS} algorithm is not tuned to reconstruct decays containing two $\pi^0\text{s}$.
-The conversion is also taken into account when applying the \dtvtwopone{} \acp{SF}, as described in [[#sec:deep_tau_sfs]]
-The identification requirement applied to hadronic \taus{} is the =Medium= \ac{WP} of the =DeepTauVSjet= algorithm, the =Tight= =DeepTauVSmu= \ac{WP}, and the =VVLoose= =DeepTauVSe= discriminator.
-The choice of \acp{WP} is related to the \acp{WP} used by the Tau \ac{POG} to derive \acp{SF} for genuine \taus{}, which have a dependency on =DeepTauVSmu= and =DeepTauVSe=.
-The reasoning is to use corrections as close to POG recommendations as possible, to reach a good data/MC agreement in all relevant parts of the parameter space.
+This step aims at identifying the visible decay products of one of the \SI{125}{\GeV} Higgs bosons decaying to a $\tau$ pair.
+Selected signal events are required to have at least one $\tau$ candidate decaying hadronically and that has been reconstructed by the \ac{HPS} algorithm.  
+The =DeepTau= discriminator [[cite:&deeptau]] identifies \tauhs{}, distinguishing them from jets, electrons and muons.
+Due to charge conservation, \ac{HPS} decay modes with two prongs are explicitly rejected.
+Furthermore, all events assigned the $\text{h}^{\pm}\pi^{0}\pi^{0}\nu_{\tau}$ topology are analyzed as though they were $\text{h}^{\pm}\pi^{0}\nu_{\tau}$.
+This happens because the former is much rarer than the latter, and the \ac{HPS} algorithm is not tuned to reconstruct decays containing two $\pi^0\text{s}$.
+This same assignment is also taken into account when applying =DeepTau= \acp{SF}, as described in [[#sec:deep_tau_sfs]]
+The identification requirement applied to \tauhs{} is the =Medium= \ac{WP} of the =DeepTauVSjet= algorithm, the =Tight= =DeepTauVSmu= \ac{WP}, and the =VVLoose= =DeepTauVSe= discriminator.
+Their efficiencies are listed in [[tab:deeptau_wps]].
+The choice of \acp{WP} is related to the \acp{WP} used by the Tau \ac{POG} to derive \acp{SF} for genuine \tauhs{}, which have a dependency on =DeepTauVSmu= and =DeepTauVSe=.
+The reasoning is to use corrections as close to POG recommendations as possible, in order to reach a good data/MC agreement in all relevant parts of the parameter space.
 
-For events containing at least one \tauh{} candidate, a first loop is performed over the offline objects looking for muon and electron candidates passing the baseline selection criteria, according to some specific priority rules.
-An event is classified as \mutau{} if a muon is found, or is otherwise classified as \eletau{} if an electron is found.
-If neither a muon or electron are found, the event is classified as \tautau{}, as long as a second hadronic $\tau$ is present.
-In the \mutau{} and \eletau{} final states, legs are ordered inside each pair by assigning the first position to the leptonic leg, either a muon or an electron.
-In the \tautau{} final state both legs permutations are built and sorted, as described in [[#sec:tautau_sel]].
+#+NAME: tab:max_min_cuts
+#+CAPTION: List of the minimum $\pt$ and maximum $|\eta|$ thresholds considered for electron, muon and tau lepton candidates. These value are a consequence of hard limits imposed by object-specific \acp{SF},as provided by the relevant \acp{POG}. Leptons firing triggers with tighter \ac{pt} cuts must apply the thresholds according to [[eq:ptTreshold]].
+#+ATTR_LATEX: :placement [!h] :center t :align lcc :environment mytablewiderrows
+|------------+--------------------------+-------------|
+| *Object*     | $\pmb{\pt\,[\si{\GeV}]}$ | $\pmb{\vert\eta\vert}$ |
+|------------+--------------------------+-------------|
+| Electron   |                       10 |         2.5 |
+| Muon       |                       15 |         2.4 |
+| Tau lepton |                       20 |         2.3 |
+|------------+--------------------------+-------------|
 
-This strategy was chosen because it maximizes the purity of the event while removing event overlaps among the three different final states.
-A third lepton veto is applied to all events, discarding events where an additional electron or muon, besides the 2 leptons used to build the \ditau{} pair, is present.
-A description of the selections applied to identify additional electrons and muons is given in [[#sec:third_lepton_sel]].
+All events lying above the minimum $\pt$ or below the maximum $|\eta|$ values reported in [[tab:max_min_cuts]] are considered.
+The values come from hard limits imposed by the isolation and \ac{ID} trigger \acp{SF} used in the analysis.
+Importantly, the limits are not driven by \ac{HLT} cuts, since such a choice would defeat the purpose of the $\metnomu$ trigger.
+We look for lepton candidates passing simple kinematical, isolation and \ac{ID} criteria, as described in [[tab:chn_sel]].
+After all lepton candidates have been inspected, the analysis channels are defined according to specific priority rules.
+An event is classified as \mutau{} if a single muon candidate passes all criteria.
+If two muons pass the criteria, the event becomes \mumu{}
+In case no muon is selected, we check whether any electron was selected.
+In a similar way, in case a single electron candidate is present, the event is associated the \eletau{} channel.
+If two electrons are present, the event would be assigned the \eleele{} channel, but it is instead discarded, as we are not taking this channel into consideration.
+If neither muons or electrons are found, the event is classified as \tautau{}, as long as a two \tauhs{} are present.
+Within each pair, leptons are ordered as follows, depending on the channel:
++ $\pmb{\tau_{e}\tau_{\text{h}}}$ *and* $\pmb{\tau_{\mu}\tau_{\text{h}}}$: \mutau{} and \eletau{}: the first position is assigned to the leptonic leg, either a muon or an electron.
++ $\pmb{\tau_{\text{h}}\tau_{\text{h}}}$:
+  The pairs are first sorted according to the =DeepTau= score of the first lepton.
+  If the two first legs have the same isolation, the highest \ac{pt} of first leg is used to order the pair.
+  If the \ac{pt} is also identical, \ie{} the pairs share the same first leg, the pair with the most isolated second leg is preferred.
+  If ambiguity is still present, priority is given to the pair with the highest \ac{pt} of the second leg.
 
+\noindent This channel classification strategy was chosen because it maximizes event purity while removing event overlaps among the three different final states.
+Finally, as described in [[#sec:third_lepton_sel]], a third lepton veto is applied to all events.
+Any event where an electron or muon is present, on top of the 2 leptons used to build the \ditau{} pair, is discarded.
+
+#+NAME: tab:chn_sel
+#+CAPTION: Selections defining the analysis channels. Besides the ones noted in the table, opposite charges are requested between the two leptons, and the \ac{pt} thresholds follow [[eq:ptTreshold]], except when the the leptons fired only \ac{MET}, in which case no specific cuts are requested, and [[tab:max_min_cuts]] is followed. The $|\eta|$ cut on the second lepton in \eletau{} and \mutau{} can be 2.1 if the event only fires the cross trigger. With the exception of not applying a $\Delta_{xy}$ cut on \tauhs{}, the $\Delta_{xy}$ and $\Delta_{z}$ cuts below are equal for the two pair objects, are are provided in \si{\mm}.
+#+ATTR_LATEX: :placement [!h] :center t :align lccccccccc :environment mytablewiderrows
+|-----------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
+| *Chn.*      | $\pmb{\vert\eta_1\vert}$ | $\pmb{\text{ID}_1}$ | $\pmb{\text{Iso}_1}$ | $\pmb{\vert\eta_2\vert}$ | $\pmb{\text{ID}_2}$ | $\pmb{\text{Iso}_2}$ | $\pmb{\Delta_{xy}}$ | $\pmb{\Delta_{z}}$ | $\pmb{\Delta\text{R}(\ell_1,\ell_2)}$ |
+|-----------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
+| \eletau{} |           2.5 | \texttt{Tight}      |                  0.1 |           2.3 | \texttt{DeepTau}    | \texttt{DeepTau}     |           0.45 |           2.0 |                        0.4 |
+| \mutau{}  |           2.4 | \texttt{Tight}      |                 0.15 |           2.3 | \texttt{DeepTau}    | \texttt{DeepTau}     |           0.45 |           2.0 |                        0.4 |
+| \tautau{} |           2.3 | \texttt{DeepTau}    |     \texttt{DeepTau} |           2.3 | \texttt{DeepTau}    | \texttt{DeepTau}     |             -- |           2.0 |                        0.4 |
+| \mumu{}   |           2.4 | \texttt{Tight}      |                 0.15 |           2.4 | \texttt{Tight}      | 0.30                 |           0.45 |           2.0 |                        0.4 |
+|-----------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
+
++ add table caption to main text as well
+  
 A subsequent check that the event is firing the trigger path associated to the selected final states and that the selected offline leptons are geometrically matched to the online ones is performed.
 With respect to the 2016 data analysis, the use of cross-triggers allows for a much lower threshold on the $\pt$ of the $\tau$ leptons, hence the request of a fixed cut on the lepton $\pt$ is dropped from the \ditau{} pair selection.
 Instead, each reconstructed offline lepton is required to pass a \ac{pt} threshold depending on the \ac{HLT} trigger path fired by the event:
-
 #+NAME: eq:ptTreshold
 \begin{equation}
   \pt^{\text{offline}} \, \geq \, \pt^{\text{HLT}}\ + \, \text{threshold}\:,
@@ -65,37 +101,6 @@ For a visualization of the kinematic trigger region cuts, refer once more to the
 Events are required to pass any of the triggers described in [[#sec:triggers]] and the offline leptons are required to match the \ac{HLT} ones.
 In addition, the following is required:
 
-** \mutau{} channel
-:PROPERTIES:
-:CUSTOM_ID: sec:mutau_sel
-:END:
-
-+ A muon with $|\eta_{\mu}| < 2.4$ passing tight particle--flow muon and track muon identification criteria plus the relative particle-flow and track isolation requirements $\mathcal{I}_{\text{rel}}^{\text{track-}\mu} < 0.15$ and $\mathcal{I}_{\text{rel}}^{\text{PF-}\mu} < 0.15$.
-  The reconstructed muon production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$;
-+ A hadronic tau of $|\eta_{\tau_{\text{h}}}| \leq 2.3$ ($2.1$ for events firing only the cross-$\mu\tau$ trigger). The same $\Delta_{z}$ requirement as in the case of the muon is applied. The \ac{pt} threshold on the hadronic tau depends on the \ac{HLT} trigger path fired.
-+ Muon and hadronic tau are required to have opposite electric charge and a $\Delta \text{R} (\mu, \tau_{\text{h}}) > 0.4$ spatial separation.
-  
-** \eletau{} channel
-:PROPERTIES:
-:CUSTOM_ID: sec:eletau_sel
-:END:
-
-+ An electron of $\left| \eta_{e} \right| < 2.5$ passing the \logicand{} between the =Tight= \ac{MVA} non-iso-identification criteria (80% efficiency \ac{WP}), and the relative isolation requirement $\mathcal{I}_{\text{rel}}^{e} < 0.1$.
-  The reconstructed electron production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$.
-  The \ac{pt} threshold on the electron depends on the fired \ac{HLT} trigger path.
-+ A hadronic tau of $|\eta_{\tau_{h}}| \leq 2.3$. The same $\Delta_{z}$ requirement as in the case of the electron is applied. The \ac{pt} threshold on the hadronic tau depends on the fired \ac{HLT} trigger paths
-+ Electron and hadronic tau are required to have opposite electric charge and a $\Delta \text{R} (e, \tau_{\text{h}}) > 0.4$ spatial separation.
-
-** \tautau{} channel
-:PROPERTIES:
-:CUSTOM_ID: sec:tautau_sel
-:END:
-
-+ Two hadronic \taus{} with $|\eta_{\tau}| \leq 2.3$. A vertex requirement of $\Delta_{z} < 0.2\,\si{\cm}$ is applied. The lower \ac{pt} threshold applied on hadronic taus is \SI{40}{\GeV} for the three years when considering the \ditau{} trigger (\SI{35}{\GeV} + \SI{5}{\GeV}, see [[eq:ptTreshold]]).
-  In the regions covered by the $\metnomu$ and \stau{} triggers the threshold goes down to \SI{20}{\GeV}, which corresponds to the minimum value for which the Tau \ac{POG} \acp{SF} are valid;
-+ Tau lepton pairs are at first sorted according to the =DeepTau= isolation of their first leg. If the two first legs have the same isolation, the highest \ac{pt} of first leg is used to order the pair. If the \ac{pt} is also the same, \ie{} the pairs share the same first leg, the pair with the most isolated second leg is preferred. If ambiguity is still present, priority is given to the pair with the highest \ac{pt} of the second leg;
-+ After all pairs have been sorted, the first pair with opposite charged \taus{}, satisfying $\Delta \text{R} (\tau_{\text{h}}, \tau_{\text{h}}) > 0.4$, where both \tauhs{} pass their baseline selection, is chosen. The remaining pairs are discarded.
-
 ** Third lepton veto
 :PROPERTIES:
 :CUSTOM_ID: sec:third_lepton_sel
@@ -103,7 +108,7 @@ In addition, the following is required:
 
 Some events can include multiple leptons, and their choice becomes a matter of some ambiguity.
 I mentioned above \mutau{} events take precedence over \eletau{} events, and therefore at the decay channel level no ambiguity is present.
-However, nothing forbids an event to include, on top of a hadronic tau, two muons, or two electrons, as long as they satisfy the requirements in [[ref:sec:mutau_sel,sec:eletau_sel]].
+However, nothing forbids an event to include, on top of a hadronic tau, two muons, or two electrons, as long as they satisfy the requirements in [[tab:chn_sel]].
 For those cases, there would be multiple ways to choose the "correct" lepton, \ie{} the lepton truly coming from the relevant Higgs boson decay.
 To simplify the selection and avoid taking the wrong decision, events with a third lepton are rejected.
 Additionally, the following conditions must be true for the event to be rejected:
@@ -234,8 +239,13 @@ The network aims at discriminating \xhhbbtt{} signal events from background, and
 :CUSTOM_ID: sec:categorization
 :END:
 
+@ define "baseline selection" somewhere @
+
 These cuts remove the tails of the mass spectrum, and outliers in these regimes, easing the task of discriminators further down in the analysis chain.
 It also allow to define control regions with low signal contamination, useful to assess the proper modelling of some of the main analysis' backgrounds.
+
+In the extraction of the final results, each category is fitted separately.
+Differences in categories can help constrain the likelihood fit.
 
 * Control Regions
 :PROPERTIES:

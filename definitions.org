@@ -146,7 +146,6 @@
 #+LATEX_HEADER: \newcommand{\celetau}{$\text{cross-}e\tau$}
 #+LATEX_HEADER: \newcommand{\cmutau}{$\text{cross-}\mu\tau$}
 #+LATEX_HEADER: \newcommand{\ditau}{$\text{di-}\tau$}
-#+LATEX_HEADER: \newcommand{\dtvtwopone}{\texttt{DeepTau v2p1}}
 #+LATEX_HEADER: \newcommand{\eg}{e.g.}
 #+LATEX_HEADER: \newcommand{\eleele}{$\tau_{\mu}\tau_{\text{h}}$}
 #+LATEX_HEADER: \newcommand{\elemu}{$\tau_{\mu}\tau_{\text{h}}$}
