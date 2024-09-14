@@ -150,7 +150,7 @@ In [[ref:fig:eff_maps_etau_2017,fig:eff_maps_mutau_2017,fig:eff_maps_etau_2018,f
 [[~/org/PhD/Thesis/figures/analysis1/SingleCrossComparison_MuTau_UL18.pdf]]
 #+END_figure
 
-For the \tautau{} final state, \ditau{} trigger efficiencies and \acp{SF} are provided by the =Tau= \ac{POG} in the context of the \ac{SM} \htt{} analysis.
+For the \tautau{} final state, \ditau{} trigger efficiencies and \acp{SF} are provided by the Tau \ac{POG} in the context of the \ac{SM} \htt{} analysis.
 They are measured using $\text{Z} \rightarrow \tau\tau \rightarrow \mu\nu_{\mu}\nu_{\tau} \tau_{\text{h}} \nu_{\tau}$ events selected with the tag and probe technique, and cover the \logicor{} of the three trigger paths used.
 The \acp{SF} also depend on the $\eta$ and \ac{pt} of the object.
 Considering the additional \SI{5}{\GeV} threshold applied to \taus{}, the \ditau{} trigger includes cuts at $\pt > 40\,\si{\GeV}$.
@@ -159,13 +159,13 @@ Considering the additional \SI{5}{\GeV} threshold applied to \taus{}, the \ditau
 * Single tau trigger scale factors
 A \stau{} trigger has been exploited for the first time in \ac{CMS} \bbtt{} analyses.
 More details are given in [[#sec:additional_triggers]].
-Flat \acp{SF} for the \stau{} trigger are also provided by the =Tau= \ac{POG}, which recommends their usage in the region where the trigger efficiency plateaus, defined to be \SI{10}{\GeV} above their trigger threshold (\SI{130}{\GeV} for 2016 and \SI{190}{\GeV} for 2017 and 2018).
+Flat \acp{SF} for the \stau{} trigger are also provided by the Tau \ac{POG}, which recommends their usage in the region where the trigger efficiency plateaus, defined to be \SI{10}{\GeV} above their trigger threshold (\SI{130}{\GeV} for 2016 and \SI{190}{\GeV} for 2017 and 2018).
 The recommended \acp{SF} can be inspected in [[tab:singleTauSFs]].
 They are used to correct the \ac{MC} event-by-event.
 The corrections is applied only to events within the \stau{} region, as detailed in discussed in [[#sec:tautau_sel]].
 
 #+NAME: tab:singleTauSFs
-#+CAPTION: \Stau{} trigger \acp{SF} as recommended by the =Tau= \ac{POG}. The corresponding \ac{HLT} paths are defined in [[tab:trigger_met_stau]].
+#+CAPTION: \Stau{} trigger \acp{SF} as recommended by the Tau \ac{POG}. The corresponding \ac{HLT} paths are defined in [[tab:trigger_met_stau]].
 #+ATTR_LATEX: :placement [!h] :center t :align cc :environment mytablewiderrows
 |------+-----------------|
 | Year | \Stau{} \ac{SF} |
@@ -444,7 +444,7 @@ Data/\ac{MC} discrepancies in the identification efficiency of the hadronically-
 Different \acp{WP} of the =DeepTau= algorithm are employed for the selection of the $\tau\tau$ pair, as described in detail in [[#sec:hadronic_taus]].
 
 #+NAME: fig:deepTauComparison
-#+CAPTION: Comparison of the $\Delta R$ distribution with the baseline selection between the two leptons in the \tautau{} channel before (left) and after (right) updating the =DeepTauVSjet= scale factors for 2016, as instructed by the \ac{CMS} =Tau= \ac{POG}. The agreement improves significantly.
+#+CAPTION: Comparison of the $\Delta R$ distribution with the baseline selection between the two leptons in the \tautau{} channel before (left) and after (right) updating the =DeepTauVSjet= scale factors for 2016, as instructed by the \ac{CMS} Tau \ac{POG}. The agreement improves significantly.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -453,10 +453,10 @@ Different \acp{WP} of the =DeepTau= algorithm are employed for the selection of 
 [[~/org/PhD/Thesis/figures/mc_corrections/plot_ditau_deltaR_baseline_SR_TauTau_new_deepTauSF.pdf]]
 #+END_figure
 
-The \acp{SF} related to the hadronically decaying taus for the =DeepTau= algorithm are applied following the recommendations of the \ac{CMS} =Tau= \ac{POG} for \ac{UL} datasets:
+The \acp{SF} related to the hadronically decaying taus for the =DeepTau= algorithm are applied following the recommendations of the \ac{CMS} Tau \ac{POG} for \ac{UL} datasets:
 + For genuine taus, the scale factors are provided per data period (2016 pre- and post-VFP, 2017 and 2018) in bins of the tau decay mode, and the \ac{pt} dependency is fitted using linear functions in the $[20;140]\,\si{\GeV}$ range.
   \taus{} with $\pt > 140\,\si{\GeV}$ have separate corrections binned in \ac{pt}: $]140; 200]$ and $]200; \infty[\,\si{\GeV}$.
-  The \acp{SF} used here represent an update by the =Tau= \ac{POG} over what was previously considered, leading to a significant data/MC improvement for 2016, as seen in [[fig:deepTauComparison]].
+  The \acp{SF} used here represent an update by the Tau \ac{POG} over what was previously considered, leading to a significant data/MC improvement for 2016, as seen in [[fig:deepTauComparison]].
 + For genuine electrons misidentified as taus, the \acp{SF} are provided split into barrel and endcap regions.
 + For genuine muons misidentified as taus, the \acp{SF} are provided binned as a function of $\eta$.
 
@@ -465,7 +465,7 @@ The \acp{SF} related to the hadronically decaying taus for the =DeepTau= algorit
 * Lepton scale factors
 ** Electron and muon scale factors
 In order to correct possible disagreements between data and \ac{MC} regarding the reconstruction and identification of electrons and muons in the \eletau{} and \mutau{} channels, specific \acp{SF} are applied to events in these channels.
-These correction factors are provided, binned as a function of the \ac{pt} and \ac{eta} of the leptons, by the \ac{CMS} =EGamma= and =Muon= \acp{POG}.
+These correction factors are provided, binned as a function of the \ac{pt} and \ac{eta} of the leptons, by the \ac{CMS} EGamma and Muon \acp{POG}.
 
 ** Tau Energy Scale corrections
 The \ac{TES} corrections are provided by the \ac{CMS} =Tau= \ac{POG}.

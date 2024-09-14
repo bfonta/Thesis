@@ -2,143 +2,118 @@
 :CUSTOM_ID: sec:physics_objects
 :END:
 
-+ intro
-+ explain what are \acp{POG}, and list the relevant ones: =EGamma=, =Tau=, =Muon=, =BTV=, =JetMET=...
-  
+In this Section, we define the physics objects and related quantities which are used for event selection in [[#sec:selection]].
+We focus on the objects used by the analysis, which happen to cover a wide variety: electrons, muons, tau leptons and \ac{MET} for the \htt{} decay, and jets for the \hbb{} decay.
+Within the \ac{CMS} Collaboration, dedicated teams called \acp{POG} are responsible for the definition, calibration and validation of specific objects.
+As such, some selection and calibration procedures are often common to a broad range of physics analyses.
+In the context of our analysis, we had interactions with the EGamma, Tau, Muon, BTV (b-tagging an dvertexing) and JetMET, including during review steps internal to \ac{CMS}.
+We follow \ac{POG} recommendations whenever possible.
+
 * Muons
-The muon selections applied in this work were originally based on the selections used by the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]], but have evolved according to analysis needs, further corrections, and sample updates.
+The muon selections applied in this work were originally based on the selections used by the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]], but have evolved according to updated analysis needs, further corrections, and sample updates.
 Muons are required to be reconstructed by the Tracker or the Global muon reconstruction algorithms, which were described in [[#sec:offline_reco_muons]].
+The muon selections later presented in [[#sec:mutau_sel]] apply kinematic, isolation and \ac{ID} thresholds.
+In the following we define both isolation and \ac{ID}.
 
 # isolation
-The isolation of muon candidates is defined as the sum of the \ac{pt} of \ac{PF} particles inside a $\Delta R < 0.4$ cone around the muon, relative to the $\pt^{\ell}$ of the muon:
-
-#+NAME: eq:pf-iso
+One of the most efficient ways to reject backgrounds for lepton candidates is the usage of isolation quantities, a generic class of discriminating variables that are constructed
+from the \ac{pt} sum of \ac{PF} particles inside a cone around the lepton, relative to its \ac{pt}.
+#+NAME: eq:pf_iso
 \begin{equation}
-\mathrm{I}_{rel}^{\ell} = \left( \sum  p_{T}^\mathrm{charged} + \max \left[ 0, \sum p_{T}^\mathrm{neutral-had} + \sum p_{T}^{\gamma} - \frac{1}{2} \sum p_{T}^\mathrm{PU} \right]
-    \right) / p_{T}^{\ell},
+\mathcal{I}_{\text{rel}}^{\ell} = \frac{ \sum  p_{T}^\mathrm{charged} + \max \left[ 0, \sum p_{T}^\mathrm{neutral} + \sum p_{T}^{\gamma} - \frac{1}{2} \sum p_{T}^\mathrm{PU} \right] }{ p_{T}^{\ell} } \:\: , \text{with } \ell=\mu,e ,
 \end{equation}
-
-\noindent where the $\sum \pt^\mathrm{charged}$, $\sum \pt^\mathrm{neutral-had}$, and $\sum \pt^{\gamma}$ are the scalar sums of the transverse momenta of charged hadrons originating from the \ac{PV}, neutral hadrons and photons, respectively, and the $\sum p_{T}^\mathrm{PU}$ is the sum of transverse momenta of charged hadrons not originating from the \ac{PV}.
-An additional isolation criteria $\mathrm{I}_{rel}^{\text{Trk}}$ is used for high \ac{pt} muons, using exclusively the energy measured in the tracker, in a cone of $\Delta R < 0.3$.
+\noindent where the $\sum \pt^\mathrm{charged}$, $\sum \pt^\mathrm{neutral}$, and $\sum \pt^{\gamma}$ are the scalar sums of the transverse momenta of charged hadrons originating from the \ac{PV}, neutral hadrons and photons, respectively, and the $\sum p_{T}^\mathrm{PU}$ is the sum of transverse momenta of charged hadrons not originating from the \ac{PV}.
+Notice that [[eq:pf_iso]] is valid both for muons and for electrons.
+For the case of muon candidates, the cone is defined with $\Delta\text{R} < 0.4$.
+An additional isolation criteria $\mathcal{I}_{\text{rel}}^{\text{Trk}}$ is used for high \ac{pt} muons, using exclusively the energy measured in the tracker, in a $\Delta\text{R} < 0.3$ cone.
+The isolation criteria help disentangling prompt muons from muons originating from heavy-flavor quark decays, and from charged particles in jets misidentified as muons.
+In this analysis, we required $\mathcal{I}_{\text{rel}}^{\mu} < 0.15$.
 
 # identification
-Three identification selections for PF muons are centrally recommended by \ac{CMS}, consisting on three \acp{WP}: =Loose=, =Medium= and =Tight=.
-In this analysis, the signal muon candidates are required to pass the =Tight= identification criteria and a $\mathrm{I}_{rel}^{\ell} < 0.15$ isolation cut.
-A correction factor is applied to \ac{MC} simulations to take into account differences with respect to data in the isolation and identification efficiencies of muons.
-These factors are derived from \zmumu{} events selected with a tag and probe technique and are provided by the \ac{CMS} Muon \ac{POG}.
-For vetoed muons, $\mathrm{I}_{rel}^{\ell} < 0.3$ is required separately for for the =Medium= and =Tight= \acp{WP}, and a \logicor{} of the latter is ensured.
-The veto selection is described in [[#sec:third_lepton_sel]].
-The \logicor{} is used since =Medium= identification is \SI{\sim 99}{\percent} efficient for muons reconstructed as tracker muons.
-Therefore, there will be a small number of events that fail =Medium= and pass =Tight=, since the latter is not a subset of the former.
-Then, for the veto only, we consider both WPs for correctness.
-@add note on Tag and Probe@
+Three \ac{ID} selections for PF muons are centrally recommended by \ac{CMS}, in the form of =Loose=, =Medium= and =Tight= \acp{WP}.
+In this analysis, the signal muon candidates are required to pass the =Tight= \ac{ID}, which uses global muons.
+On top, requirements are applied on the number of hits in the muon chambers, strip tracker, and pixel detectors, plus a quality condition on the $\chi^{2}$ fit of the track.
+The selections aim at decreasing the misidentification of other particles as muons.
+The main background sources are cosmic rays, punchthrough hadrons[fn:: Hadrons escaping the calorimeter and leaving energy deposits in the muon system.] and products of in-flight secondary decays.
+
+# cuts
+A correction factor is applied to \ac{MC} simulations to take into account differences with respect to data in the isolation and \ac{ID} efficiencies of muons.
+These factors are derived from \zmumu{} events selected with a Tag & Probe technique (see the note below), and are provided by the \ac{CMS} Muon \ac{POG}.
+For vetoed muons, $\mathcal{I}_{\text{rel}}^{\ell} < 0.3$ is required separately for the \logicor{} for two \acp{WP}, =Medium= and =Tight=.
+The \logicor{} because since =Tight= is not a subset of the =Medium=, and therefore there will be a small number of events that fail =Medium= and pass =Tight=.
+The veto selection on leptons is described in [[#sec:third_lepton_sel]].
 
 # high pt WP
-An additional \ac{WP} is available, named =highPt=, which focuses on high \ac{pt} muons, and therefore =highPt= corrections for muons are not required.
-We justify this choice in [[tab:highPt_fractions]], where we show the fraction of events in \mutau{} where the first lepton, a muon, has a \ac{pt} larger than \SI{120}{\GeV}.
-The \ac{pt} threshold is defined to match the regime on which the =highPt= \ac{WP} could be considered, according to the \ac{CMS} Muon \ac{POG}.
-We include all radion signal samples and the two most important backgrounds, \ac{DY} and $\ttbar$.
-The fraction is small almost everywhere, and its maximum value is \SI{\sim 20}{\percent}.
+An additional \ac{WP} is available, dedicated to muons with a \ac{pt} above \SI{120}{\GeV}.
+Given the fraction of such muons in our analysis, as listed in [[#sec:highpt_muons]], a decision was made not to consider \acp{SF} for the high-\ac{pt} \ac{WP}.
+Moreover, binned distributions indicate a good agreement between muon data and \ac{MC}.
+Such distributions are shown at the end of this Chapter, in [[#sec:binned_distributions]].
 
-#+NAME: tab:highPt_fractions
-#+CAPTION: Fraction of events in the \mutau{} channel where the first lepton, a muon, has a \ac{pt} above \SI{120}{\GeV}, for the three analysis categories and for the baseline selection. The selections and categories are detailed in [[#sec:selection]]. The signal samples refer to the radion \spin{0} hypothesis.
-#+ATTR_LATEX: :placement [!h] :center t :align ccccc :environment mytablewiderrows
-|-----------------+---------------+---------------+---------------+---------------|
-| Sample          | *baseline*      | *res1b*         | *res2b*         | *boosted*       |
-|-----------------+---------------+---------------+---------------+---------------|
-| \SI{250}{\GeV}  | $0.001\pm0.014$ | $0.001\pm0.023$ | $0.001\pm0.020$ | $0.000\pm1.000$ |
-| \SI{260}{\GeV}  | $0.002\pm0.014$ | $0.001\pm0.023$ | $0.002\pm0.021$ | $0.000\pm0.715$ |
-| \SI{270}{\GeV}  | $0.004\pm0.014$ | $0.002\pm0.023$ | $0.001\pm0.021$ | $0.000\pm1.000$ |
-| \SI{280}{\GeV}  | $0.005\pm0.014$ | $0.003\pm0.023$ | $0.004\pm0.020$ | $0.000\pm1.000$ |
-| \SI{300}{\GeV}  | $0.007\pm0.015$ | $0.005\pm0.024$ | $0.004\pm0.022$ | $0.000\pm0.503$ |
-| \SI{320}{\GeV}  | $0.010\pm0.015$ | $0.006\pm0.024$ | $0.007\pm0.021$ | $0.000\pm0.318$ |
-| \SI{350}{\GeV}  | $0.017\pm0.013$ | $0.012\pm0.022$ | $0.016\pm0.020$ | $0.040\pm0.192$ |
-| \SI{400}{\GeV}  | $0.025\pm0.012$ | $0.019\pm0.020$ | $0.019\pm0.017$ | $0.000\pm0.157$ |
-| \SI{450}{\GeV}  | $0.043\pm0.011$ | $0.035\pm0.018$ | $0.037\pm0.016$ | $0.065\pm0.087$ |
-| \SI{500}{\GeV}  | $0.061\pm0.010$ | $0.056\pm0.018$ | $0.054\pm0.015$ | $0.083\pm0.064$ |
-| \SI{550}{\GeV}  | $0.070\pm0.012$ | $0.072\pm0.020$ | $0.064\pm0.017$ | $0.049\pm0.056$ |
-| \SI{600}{\GeV}  | $0.091\pm0.011$ | $0.082\pm0.020$ | $0.086\pm0.016$ | $0.087\pm0.037$ |
-| \SI{650}{\GeV}  | $0.106\pm0.010$ | $0.103\pm0.021$ | $0.103\pm0.016$ | $0.093\pm0.027$ |
-| \SI{700}{\GeV}  | $0.118\pm0.010$ | $0.110\pm0.021$ | $0.111\pm0.017$ | $0.127\pm0.020$ |
-| \SI{750}{\GeV}  | $0.133\pm0.010$ | $0.119\pm0.022$ | $0.125\pm0.018$ | $0.141\pm0.017$ |
-| \SI{800}{\GeV}  | $0.155\pm0.009$ | $0.149\pm0.022$ | $0.140\pm0.020$ | $0.163\pm0.015$ |
-| \SI{850}{\GeV}  | $0.157\pm0.009$ | $0.126\pm0.024$ | $0.148\pm0.021$ | $0.166\pm0.013$ |
-| \SI{900}{\GeV}  | $0.169\pm0.009$ | $0.145\pm0.026$ | $0.166\pm0.022$ | $0.177\pm0.013$ |
-| \SI{1000}{\GeV} | $0.182\pm0.012$ | $0.150\pm0.038$ | $0.165\pm0.034$ | $0.193\pm0.016$ |
-| \SI{1250}{\GeV} | $0.219\pm0.013$ | $0.185\pm0.046$ | $0.195\pm0.041$ | $0.235\pm0.015$ |
-| \SI{1500}{\GeV} | $0.205\pm0.016$ | $0.188\pm0.062$ | $0.202\pm0.052$ | $0.205\pm0.019$ |
-| \SI{1750}{\GeV} | $0.190\pm0.019$ | $0.170\pm0.067$ | $0.180\pm0.060$ | $0.195\pm0.022$ |
-| \SI{2000}{\GeV} | $0.189\pm0.022$ | $0.159\pm0.084$ | $0.218\pm0.087$ | $0.188\pm0.026$ |
-| \SI{2500}{\GeV} | $0.178\pm0.030$ | $0.201\pm0.120$ | $0.194\pm0.120$ | $0.188\pm0.035$ |
-| \SI{3000}{\GeV} | $0.149\pm0.040$ | $0.093\pm0.175$ | $0.065\pm0.186$ | $0.165\pm0.048$ |
-| \ac{DY}         | $0.013\pm0.005$ | $0.011\pm0.017$ | $0.012\pm0.045$ | $0.063\pm0.174$ |
-| \ac{TT}         | $0.068\pm0.001$ | $0.023\pm0.001$ | $0.018\pm0.001$ | $0.157\pm0.014$ |
-|-----------------+---------------+---------------+---------------+---------------|
+** Brief note on the Tag & Probe
+This technique is often used in \ac{HEP} to measure the efficiency of a given process directly from data.
+In a nutshell, for resonances decaying to two leptons, such as \zmumu{} or \zee{}, one of the leptons, the /tag/, is identified with tight selection criteria, while the other lepton, the /probe/, has to satisfy very loose criteria only.
+The probe is matched to the tag by verifying the invariant mass of the tag + probe system, which should match the mass of the decaying resonance.
+The tag is used to trigger the resonance, while the probe is exploited to make an unbiased estimate of the efficiency, since very little selections were applied on it.
+The efficiency is measured by computing the ratio between passing probes and all available probes.
 
 * Electrons
-Just like for muons selections, the electron selections applied in this work were originally based on the selections used by the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]].
-The standard \ac{CMS} electron reconstruction algorithm is used for this analysis [[cite:&performance_muon_electron]], combining \ac{ECAL} and tracker information.
-Electron candidates are reconstructed from clusters of energy deposits in the \ac{ECAL}, which are then matched to tracks in the inner silicon tracker refitted by a \ac{GSF}, as discussed in [[#sec:offline_reco_electrons]].
-Given that the electron reconstruction relies heavily on the deposits in the \ac{ECAL}, electrons in the the $1.44 < |\eta| < 1.57$ transition region between the barrel and endcaps of the \ac{ECAL}, are excluded from this analysis, as they are typically not very well reconstructed.
+Just like for muons, the electron selections applied in this work were originally based on the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]].
+The standard \ac{CMS} electron reconstruction algorithm is used [[cite:&performance_muon_electron]], combining \ac{ECAL} and tracker information.
+Electron candidates are reconstructed from clusters of energy deposits in the \ac{ECAL}, which are then matched to tracks in the inner silicon tracker, as discussed in [[#sec:offline_reco_electrons]].
+Given that the electron reconstruction heavily relies on the deposits in the \ac{ECAL}, electrons in the the $1.44 < |\eta| < 1.57$ transition region between the barrel and endcaps of the \ac{ECAL} are excluded from this analysis, as they are typically of low reconstruction quality.
 
 # isolation
-One of the most efficient ways to reject electron backgrounds is the usage of isolation energy sums, a generic class of discriminating variables that are constructed from the sum of the transverse momenta of \ac{PF} particles inside a $\Delta R < 0.3$ cone around the electron, with respect to the electron direction.
-To ensure that the energy from the electron is not included in the sum, it is necessary to define a veto region in the isolation cone.
-Three isolation components are separately considered for the electron identification in terms of their transverse momenta scalar sum: charged hadrons originating from the \ac{PV}, neutral hadrons and photons.
-The larger the energy of the incoming electrons, the larger the amount of energy spread around its direction in the various subdetectors.
-For this reason, the thresholds applied on the isolation quantities are parametrized as a function of the particle transverse energy.
-The isolation variables are corrected to mitigate the contribution from pileup [[cite:&performance_muon_electron]].
+When defining the isolation for electrons, a $\Delta\text{R} < 0.3$ cone is defined around the electron, with respect to the electron direction, and [[eq:pf_iso]] is used.
+In this analysis, we required $\mathcal{I}_{\text{rel}}^{e} < 0.1$ for electrons in the \eletau{} channel, and $\mathcal{I}_{\text{rel}}^{e} < 0.3$ for vetoed electrons.
 
 # identification
-The electron identification uses a \ac{MVA} which has been updated and improved for \ac{CMS} \run{2} analyses.
-The discriminator is based on a \ac{BDT} [[cite:&tmva]] which combines several observables sensitive to the amount of bremsstrahlung along the electron trajectory, the three \ac{PF} isolation components and the energy density within the isolation cone, the geometrical and momentum matching between the electron trajectory and associated clusters, shower-shape observables, and electron conversion variables.
-The \ac{MVA} is tuned for achieving the best performance possible, and is trained on all electrons, regardless of whether they pass the trigger requirements or not.
-This MVA is tuned for electrons with $\pt>10\,\si{\GeV}$ and defines three categories based on electron \ac{eta}: two for the barrel and one for the endcap.
-For each \ac{MVA} category, a =Tight= \ac{WP} with 80% of signal efficiency, is used for signal electrons, as provided by the \ac{CMS} E/Gamma \ac{POG}.
-Veto electrons are instead required to pass the =Medium= \ac{WP}.
-The veto selection is described in [[#sec:third_lepton_sel]].
-A correction factor is applied to the \ac{MC} to take into account differences with respect to data in identification efficiencies of electrons.
-These factors are derived from \zee{} events selected with a tag and probe technique, and are also centrally provided by the \ac{CMS} E/Gamma \ac{POG}.
+The electron \ac{ID} uses a \ac{MVA} which has been updated and improved for \ac{CMS} \run{2} analyses.
+The discriminator is based on a \ac{BDT} [[cite:&tmva]] combining several observables sensitive to bremsstrahlung along the trajectory of the electron, to \ac{PF} isolation components and the energy density within the isolation cone, to shower-shape variables, to variables related to electron conversion, and to the matching between the trajectory of the electron and its related clusters.
+The \ac{MVA} is trained on all electrons, regardless of whether they pass the trigger requirements or not, and is then tuned for electrons with $\pt>10\,\si{\GeV}$
+Three categories are defined based on electron \ac{eta}: two in the barrel and one in the endcap.
+Signal electrons require the =Tight= \ac{WP}, which has a \SI{\sim 70}{\percent} signal efficiency, while veto electrons must pass the =Medium= \ac{WP}, which has a \SI{\sim 80}{\percent} efficiency [[cite:&performance_muon_electron]].
+The full veto selection is described in [[#sec:third_lepton_sel]].
+A correction factor is applied to the \ac{MC} to take into account differences with respect to data in \ac{ID} efficiencies of electrons.
+These factors are derived from \zee{} events, also selected with a Tag & Probe technique.
 
 # scaling and smearing
-Energy scaling and smearing corrections are applied to genuine electrons, again following the recommendations of the E/Gamma \ac{POG}.
+Energy scaling and smearing corrections are applied to genuine electrons, following the recommendations of the E/Gamma \ac{POG}.
 The correction is applied to \ac{MC} using a variable which represents the combined \ac{ECAL} and tracker electron energy after applying scale and smearing corrections.
-The corrections taken into account both in the selection of genuine electrons and in their veto.
+The corrections are taken into account both in the selection of genuine electrons and in their veto.
 They also lead to several systematic shape uncertainties, as described in [[#sec:syst_shape_genuine_electrons]].
 
-* Taus
+* Hadronic Tau Leptons
 :PROPERTIES:
 :CUSTOM_ID: sec:hadronic_taus
 :END:
-@add sentence summarizing the Tau section in the CMS chapter@
-
-In the context of the \xhhbbtt{} analysis, hadronic $\tau$ decays are the most important $\tau$ decays, given their large \ac{BR}.
-This is also the case for many other analyses.
-There is thus a strong interest in improving the $\tau$ performance reconstruction as much as possible.
-The reconstruction of hadronically-decaying \taus{} is thus complemented by dedicated \ac{DNN} algorithms.
-In \run{2}, =DeepTau= [[cite:&deeptau]] has demonstrated good performances, and is used in our analysis.
-Its goal is to perform the identification of \taus{}, disentangling those objects from electrons, muons, or quark- and gluon-initiated jets.
-It uses information from all \ac{CMS} subdetectors, including variables used by \ac{HPS} or previous $\tau$ identification algorithms to reconstruct hadronic \taus{}.
+Hadronically-decaying tau leptons are reconstructed by the \ac{HPS} algorithm, which targets multiple decay modes, as was described in [[#sec:offline_reco_taus]].
+Its goal is to combined \ac{PF} information in jets to discriminate between $\tau$ jets and other jets, usually light jets from quarks and gluons.
+In our analysis, as well as in others, hadronically-decaying \taus{} are the most important $\tau$ decays, given their large \ac{BR}.
+There is thus a strong interest in improving the $\tau$ reconstruction performance, leading to the implementation of dedicated algorithms.
+In \run{2}, =DeepTau= [[cite:&deeptau]] has demonstrated good performances, and is used in our analysis on top of \ac{HPS}.
+As a consequence, there is no need to use more traditional quantities, like the ones described above for muon and electron candidates.
+The goal of the =DeepTau= algorithm is to disentangle \tauhs{} from quark- and gluon-initiated jets, and also from electrons and muons, which can occasionally mimic a hadronic tau lepton decay. 
+It uses information from all \ac{CMS} subdetectors, including variables used by \ac{HPS}.
 It also considers information on candidates reconstructed within the \ac{HPS} tau signal and isolation cones, such as track and cluster properties and kinematics.
-A multi-layered \ac{CNN}-based architecture is employed, with a loss function which gives precedence to the classification performance of \tauhs{}.
-In total, the algorithm is trained with 140 million of \tauh{} candidates, and validated with 10 million.
-The final discriminators $D$ against electrons, muons are jets are based on a softmax activation function, and are given by:
-
+A multi-layered \ac{CNN}-based architecture is employed.
+In total, the algorithm is trained with 140 million \tauh{} candidates, and validated with 10 million.
+The final discriminators $D$ against electrons, muons and jets are the result of a softmax activation function, and are computed as follows:
 #+NAME: eq:deeptau
 \begin{equation}
 y_{\alpha} = \frac{e^{x_{\alpha}}}{\sum_{\beta}e^{x_{\beta}}} \:\:\: , \:\:\: D_{\alpha} = \frac{y_{\tau}}{y_{\tau} + y_{\alpha}}
 \end{equation}
-
-\noindent with $\alpha \in {\text{jet}, \mu, e}$.
-The discrimnators are also referred as =DeepTauVSjet= / =DeepTauVSe= / =DeepTauVSmu= for $D_{\text{jet}}$ / $D_{mu}$ / $D_{e}$, respectively.
-The expected \tauh{} identification efficiencies are obtained with the validation samples, and are defined as the efficiencies for genuine \tauhs{} in a \htt{} sample that are reconstructed as \tauhs{} with $30 < \pt < 170 \,\si{\GeV}$ to pass a particular discriminator \ac{WP}.
-The efficiencies range from 40 to 98% for jets, from 60 to 99.5% for electrons, and from 99.5 to 99.95% for muons, depending on the chosen \ac{WP}.
-The $\text{jet} \rightarrow \tau$ misidentification rate depends on the \ac{pt} and quark flavor of the jet, and in simulated W production events with jets it has been estimated to be 0.43% for a genuine $\tau$ identification efficiency of 70%.
-The same rate for electrons and muons is 2.60 (0.03)% for a genuine \tauh{} identification efficiency of 80 ($>99\%$).
-Significant updates are being put in place, mostly for \run{3} analyses, including using more recent and extended data for training, improved training techniques, and optimised hyperparameter tuning [[cite:&deeptau_run3]].
+\noindent with $\alpha \in {\text{jet}, \mu, e}$, and $x$ representing the four output nodes: $x_{\text{jet}}$, $x_{\mu}$, $x_{e}$ and $x_{\tau_{\text{h}}}$.
+The discriminators are also known as =DeepTauVSjet=, =DeepTauVSe= and =DeepTauVSmu= for $D_{\text{jet}}$, $D_{\mu}$ and $D_{e}$, respectively.
+The expected \tauh{} \ac{ID} efficiencies are obtained with validation samples.
+The efficiencies for a particular =DeepJet= \ac{WP} are defined using genuine \tauhs{} in a \htt{} sample, where the \taus{} are reconstructed as \tauhs{} in a $30 < \pt < 170 \,\si{\GeV}$ range, and have passed that same \ac{WP}.
+As shown in [[tab:deeptau_wps]], the efficiencies range from 40 to 98% for jets, from 60 to 99.5% for electrons, and from 99.5 to 99.95% for muons, depending on the \ac{WP}.
+The $\text{jet} \rightarrow \tau$ misidentification rate varies jet \ac{pt} and quark flavor.
+It has been estimated to be 0.43% for a genuine $\tau$ \ac{ID} efficiency of 70%, using simulated W + jets events.
+The same rate for electrons and muons is 2.60(0.03)% for a genuine \tauh{} \ac{ID} efficiency of 80($>99$)%.
+Significant updates are being put in place, mostly for \run{3} analyses, including using newer and extended data for training, improved training techniques, and optimized hyperparameter tuning [[cite:&deeptau_run3]].
 
 #+NAME: tab:deeptau_wps
-#+CAPTION: Identification efficiencies of \tauhs{} for the different =DeepTau= \acp{WP}, in its three object-focused variants. The efficiencies are measured with \htt{} samples for \tauhs{} with $30 < \pt < 70\,\si{\GeV}$ [[cite:&deeptau]].
+#+CAPTION: \Ac{ID} efficiencies of \tauhs{} for all =DeepTau= \acp{WP}, considering its three classes. The efficiencies are measured with \htt{} samples for \tauhs{} in a $30 < \pt < 70\,\si{\GeV}$ range [[cite:&deeptau]].
 #+ATTR_LATEX: :placement [!h] :center t :align ccccccccc :environment mytablewiderrows
 |------------------+---------+--------+-------+--------+-------+--------+---------+----------|
 |                  | =VVTight= | =VTight= | =Tight= | =Medium= | =Loose= | =VLoose= | =VVLoose= | =VVVLoose= |
@@ -154,43 +129,43 @@ Significant updates are being put in place, mostly for \run{3} analyses, includi
 :END:
 
 The \ac{CMS} \ac{PF} algorithm creates a list of particle candidates which account for all tracker and muon tracks, and for all energy deposits in the calorimeters above a certain threshold. 
-These particles are assembled into jets using the anti-$\ktalgo$ clustering algorithm, described in [[#sec:offline_jet_object]], with distance parameters of 0.4 for AK4 jets and 0.8 for AK8 jets.
-AK4 jets are required to satisfy $\pt > 20\,\si{\\GeV}$ and to not overlap with the two leptons from the \htt{} decay, via an angular selection of $\Delta R(j,\tau) < 0.5$.
-Since tracking information is only available in the central region of the CMS detector and the b-tagging process heavily relies on tracking information,
-all b-jet candidates are required to have $|\eta| < 2.5$ for the 2017 and 2018 datasets, while $|\eta| < 2.4$ is required in 2016.
+This information is assembled into jets using the anti-$\ktalgo$ clustering algorithm, described in [[#sec:offline_jet_object]], with distance parameters of 0.4 for AK4 jets and 0.8 for AK8 jets.
+AK4 jets are required to satisfy $\pt > 20\,\si{\\GeV}$ and to not overlap with the two leptons from the \htt{} decay, with an angular selection of $\Delta\text{R}(\text{jet},\tau) < 0.5$.
+Since tracking information is only available in the central region of the CMS detector and the b-tagging process heavily relies on it, all b-jet candidates are required to have $|\eta| < 2.5$ for the 2017 and 2018 datasets, while $|\eta| < 2.4$ is required in 2016.
 The difference in \ac{eta} coverage between different years stems from the new \ac{CMS} pixel detector installed during the \phase{1} upgrade [[cite:&pixel_detector_eta_coverage]].
 A more detailed description of jets coming from b quarks and identified as b-jets follows below.
-The recommended set of jet energy corrections are applied to both AK4 and AK8 jets in Data and MC as described in [[#sec:jets_corrections]].
+The recommended set of jet energy corrections are applied to both AK4 and AK8 jets in data and \ac{MC}, as described in [[#sec:jets_corrections]].
 
-Some jets must ocasionally be vetoed due to their low reconstruction quality, or because they originate from electronic noise.
-A \ac{PF} jet identification criterion is available to \ac{CMS} users, and all AK4 jets in our analysis are required to pass its =Tight= \ac{WP}.
+Some jets must occasionally be vetoed due to their low reconstruction quality, or because they originate from electronic noise.
+A \ac{PF} jet \ac{ID} criterion is available to \ac{CMS} analyzers, and all AK4 jets in our analysis are required to pass its =Tight= \ac{WP}.
 The criterion is based on many jet observables, including the multiplicity of charged hadrons, the energy fraction deposited in \ac{ECAL} by hadrons, and the fraction of hadrons clustered within the jet.
 The efficiency is around 98/99% or more for all \ac{eta} values, with a background rejection above 98% at $|\eta|<2.7$.
 
-It can also happen for jets to have a \ac{PU} origin, and be unrelated to the \ac{PV}.
+Jets are also often produced by \ac{PU}, being unrelated to the \ac{PV}.
 These jets often result from the overlap of many low-energy jets, being thus broader than \ac{PV} jets.
-To avoid all such background jets, AK4 jets satisfying $\pt < 50\,\si{\GeV}$ are required to pass the =Loose= \ac{WP} of the discriminant.
+To avoid such background jets, AK4 jets satisfying $\pt < 50\,\si{\GeV}$ are required to pass the =Loose= \ac{WP} of the discriminant.
 The discriminant uses a \ac{BDT} to find an optimized decision boundary using information related to jet shape, object multiplicity and compatibility with the \ac{PV}.
 
 Jets from b-quarks originating from the decay of high \ac{pt} Higgs bosons are often close enough to be merged into a single large radius jet by the anti-$\ktalgo$ algorithm, forming an AK8 jet.
 In our analysis, the \ac{GNN}-based \ac{PNet} algorithm [[cite:&particle_net]] is used to discriminate \hbb{} decays from the multijet background, as detailed below.
-We require AK8 jets to satisfy $\pt > 250\,\si{\GeV}$, to not overlap with the two analysis leptons ($\Delta R(\text{jet},\tau) < 0.8$).
+We require AK8 jets to satisfy $\pt > 250\,\si{\GeV}$, and to not overlap with the two analysis leptons: $\Delta\text{R}(\text{jet},\tau) < 0.8$.
 The jets must also have a =SoftDrop= mass above \SI{30}{\GeV}, where =SoftDrop= [[cite:&softdrop]] is a boosted jet grooming algorithm which removes soft and wide-angle radiation, aiming at mitigating the effects from contamination of \ac{ISR}, \ac{UE} and \ac{PU}.
 
-** Identification of b-jets
+** Identification of B-jets
+Jets originated by the hadronization of b quarks distinguish themselves from other jets, inasmuch as they contain particles known to be relatively long-lived.
+Such b mesons and hadrons can thus decay with a displacement of a few millimeters with respect to the \ac{PV}, defining the so-called /secondary vertex/.
+Additionally, b hadrons decay into electrons or muons with a probability of \SI{\sim 20}{\percent}.
+Distance parameters and displaced leptons can thus be exploited for discriminative purposes [[cite:&btag_performance]].
+
 During \run{1}, the b-jet reconstruction algorithms available within \ac{CMS} worked by manually building discriminative variables.
 The most advanced, the Combined Secondary Vertex (CSV) algorithm, used the secondary vertex mass and the number of tracks in a jet, among other variables.
-Deep learning techniques first appeared in \run{2}, starting with =deepCSV= [[cite:&deep_csv]], and later =deepJet= [[cite:&deepjet;&deepjet_performance]], which is based on \acp{CNN} and \acp{RNN}, and is used in this work's analysis for the resolved categories.
-Further improvements, particularly the widespread adoption of \acp{GNN}, have lead to \ac{PNet} [[cite:&particle_net]], used for the boosted category, and finally to \ac{ParT} [[cite:&transformer]], which exploits the state-of-the-art transformer technology [[cite:&transformers]].
+Deep learning techniques first appeared in \run{2}, starting with =DeepCSV= [[cite:&deep_csv]], and later =DeepJet= [[cite:&deepjet;&deepjet_performance]], which is based on \acp{CNN} and \acp{RNN}.
+Further improvements, particularly the widespread adoption of \acp{GNN}, have lead to \ac{PNet} [[cite:&particle_net]], and finally to \ac{ParT} [[cite:&transformer]], which exploits the state-of-the-art transformer technology [[cite:&transformers]], and should start being used in \run{3}.
 
 In our analysis, AK4 jets originating from b quarks are identified using the =DeepJet= algorithm.
 In order to separate b-jets from other jets, =DeepJet= combines secondary vertex properties, track-based variables and \ac{PF} jet constituents (neutral and charged candidates) in a \ac{DNN}.
-It then classifies jets into six different categories.
-Three of those are summed together to define a single discriminator used to tag b-jets in physics analyses:
-+ at least two b hadrons;
-+ exactly one b hadron decaying hadronically;
-+ exactly one b hadron decaying leptonically.
-The thresholds on the =DeepJet= discriminator value corresponding to the =Loose=, =Medium= and =Tight= \acp{WP} are shown in [[tab:bTagWPs]] (left).
+It then classifies jets into six different categories, three of which are merged in order to tag b-jets in physics analyses.
+The three merged categories focus on jets with at least two b hadrons, exactly one b hadron decaying hadronically, and exactly one b hadron decaying leptonically.
 
 #+NAME: tab:bTagWPs
 #+CAPTION: Thresholds for different years with associated \acp{WP} and efficiencies to be considered with \run{2} \ac{UL} datasets for the =DeepJet= and mass decorrelated \ac{PNet} \xbb{} taggers. LP, MP and HP refer to Low, Medium and High purities, respectively.
@@ -217,45 +192,44 @@ The thresholds on the =DeepJet= discriminator value corresponding to the =Loose=
     \end{tabular}
 \end{table}
 
-As mentioned before, AK8 jets originating from merged \hbb{} decays are tagged using the \ac{PNet} algorithm.
+AK8 jets originating from merged \hbb{} decays are instead tagged by the \ac{PNet} algorithm.
 This algorithm is able to identify hadronic decays of highly Lorentz-boosted top quarks and W, Z, and Higgs bosons, and classify different decay modes, such as $\bbbar$, $\ccbar$ or $\qqbar$ pairs.
-The tagger is trained with \xbb{}, \xcc{} and \xqq{} signal jets, and with \ac{QCD} multijet background samples, where X is a \spin{0} scalar, and accordingly outputs four scores, each representing the probability for one of the four processes: $\text{P}(\text{X}\rightarrow \text{b}\bar{\text{b}})$, $\text{P}(\text{X}\rightarrow \text{c}\bar{\text{c}})$, $\text{P}(\text{X}\rightarrow \text{q}\bar{\text{q}})$ and $\text{P}(\text{QCD})$.
-We use a mass-decorrelated version, which is achieved by reweighting the training samples into uniform jet \ac{pt} and jet =SoftDrop= mass distributions.
-The \xbb{} discriminant is defined as:
-
+The tagger is trained with \xbb{}, \xcc{} and \xqq{} signal jets, where X is a \spin{0} scalar, and with \ac{QCD} multijet background samples.
+It accordingly outputs four discriminant scores, each representing the probability P for one of the four following processes to occur: \xbb{}, \xcc{}, \xqq{} and \ac{QCD}.
+We use a mass-decorrelated version of \ac{PNet}.
+The decorrelation is achieved by reweighting the training samples into uniform jet \ac{pt} and jet =SoftDrop= mass distributions.
+The \xbb{} discriminant is given by:
 #+NAME: eq:pnet
 \begin{equation}
   \frac{\text{P}(\text{X}\rightarrow \text{b}\bar{\text{b}})}{\text{P}(\text{X} \rightarrow \text{b}\bar{\text{b}}) + \text{P}(\text{QCD})} \: .
 \end{equation} 
-
 \noindent Three \acp{WP} are defined with \hbb{} signal jets at efficiencies of 40%, 60%, and 80%: \ac{LP}, \ac{MP}, and \ac{HP}, respectively.
-The final exclusion limits are run once per \ac{WP}, and the LP \ac{WP} is found to lead to the most stringent results.
-The discriminator thresholds these purities correspond to are listed in [[tab:bTagWPs]] (right).
-Finally, data/\ac{MC} discrepancies require the application of dedicated \acp{SF} to all jets passing the \ac{PNet} \acp{WP}.
+In order to select the most performant \ac{WP}, the full analysis workflow is run once per \ac{WP}, and the LP \ac{WP} is found to provide the most stringent results.
+It is however important to note that discrepancies between data and \ac{MC} require the application of dedicated \acp{SF} to all jets passing the \ac{PNet} \acp{WP}.
 AK8 analysis jets must thus be corrected, in a procedure described in [[#sec:pnet_sfs]].
+The thresholds on the =DeepJet= and \ac{PNet} discriminator values, and corresponding efficiencies, are listed in [[tab:bTagWPs]].
 
-** Jet scale and resolution corrections
+** Jet Energy Scale and Resolution Corrections
 :PROPERTIES:
 :CUSTOM_ID: sec:jets_corrections
 :END:
 
-The measured jet energy can significantly differ from the underlying true hadron energy it represents.
+The measured jet energy can significantly differ from the underlying true hadron energy.
 Differences can arise due to detector noise, \ac{PU} or a non-linear calorimetric response.
-The precise understanding of jet energy scales and momentum resolutions is of crucial importance for multiple analyses, also entering as an important component of their systematic uncertainties.
-The energy of jets must therefore be corrected with appropriate corrections, in order to match the true particle-level deposited energy [[cite:&jet_corr1;&jet_corr2]].
-In [[fig:jerc]] we show an illustration for the approach adopted by \ac{CMS} in \run{2}.
+The precise understanding of \acp{JEC}, scales and resolutions, is of crucial importance for multiple analyses, also entering as an important component in their systematic uncertainties.
+The energy of jets must therefore be appropriately corrected, in order to match the true particle-level deposited energy [[cite:&jet_corr1;&jet_corr2]].
+In [[fig:jerc]] we illustrate the approach adopted by \ac{CMS} in \run{2}.
 It consists on a sequential series of steps, where each step is responsible to independently correct a different effect.
 Each data-taking period has its own set of corrections.
 The first step addresses the spurious energy deposits from \ac{PU} interactions.
-The correction chain begins with a PU correction, which accounts for the spurious energy contribution from PU interactions.
 For each type of \ac{PF} candidate an offset energy is subtracted from the jet energy.
-Next, detector response corrections are applied, in order to fix its non-uniformity across the jet \ac{pt} and \ac{eta}.
-In the following step, still remaining data/MC differences are further corrected; they originate from \ac{PU} effects that also depend on the jet \ac{pt} and \ac{eta}.
-Finally, optional flavour dependet corrections can be applied.
+In the second step, detector response corrections are applied, in order to fix its non-uniformity across the jet \ac{pt} and \ac{eta} phase-space.
+Next, remaining differences between data and \ac{MC} are corrected by accounting for \ac{PU} effects, which also depend on the \ac{pt} and \ac{eta} of jets.
+Finally, optional flavour dependent corrections can be applied.
 For all jet types, the energy scale uncertainties are smaller than 3% for $\pt > 50\,\si{\GeV}$ in the $|\eta| < 3.0$ region, increasing to 5% for $3.0 < |\eta| < 5.0$.
 
 #+NAME: fig:jerc
-#+CAPTION:  Flow of jet energy corrections to sequentially apply to obtain a calibrated jet, as done for \run{2} within \ac{CMS}. Taken from [[cite:&jet_corr2]].
+#+CAPTION: Illustration of the jet energy correction stages that must be sequentially applied in order to obtain a calibrated jet, as done for \run{2} in \ac{CMS}. Taken from [[cite:&jet_corr2]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/Run2-JERC.pdf]]
@@ -263,51 +237,45 @@ For all jet types, the energy scale uncertainties are smaller than 3% for $\pt >
 
 Since measurements show that the jet energy resolution in data is worse than in the simulation, resolution corrections must be applied to \ac{MC} jets.
 The latter are smeared to describe the data.
-The smearing procedure applied using a ``hybrid'' approach recommended within \ac{CMS}, and composed of two methods.
-If a matched generator-level jet exists, then the four-momentum of the corresponding reconstructed jet is rescaled with the following factor, dependent on jet the \ac{pt}:
-
+The smearing procedure uses a ``hybrid'' approach recommended by \ac{CMS} BTV \ac{POG}, and composed of two methods.
+If a matched generator-level jet exists, then the four-momentum of the corresponding reconstructed jet is rescaled, with a factor which depends on the \ac{pt} of the reconstructed and generated jet:
 #+NAME: fig:hybrid1
 \begin{equation}
 	c_{\text{JER}} = 1+(s_{\text{JER}}-1)\,\frac{\pt-\pt^{\text{Gen.}}}{\pt}
 \end{equation}
-
 \noindent where $s_{\text{JER}}$ is the data-to-simulation core resolution scale factor.
-If the jet was not matched (and $\pt^{\text{Gen.}}$ is not available), then a stochastic smearing is applied, performing the four-momentum rescaling using a different factor:
-
+If the jet was not matched (and thus $\pt^{\text{Gen.}}$ is not available), then a stochastic smearing is applied, performing the four-momentum rescaling using a different factor:
 #+NAME: fig:hybrid2
 \begin{equation}
 	c_{\text{JER}} = 1+\mathcal{N}(0, \sigma_{\text{JER}})\sqrt{\max(s^2_{\text{JER}}-1, 0)}
 \end{equation}
-
 \noindent where $\sigma_{\text{JER}}$ is the relative \ac{pt} resolution in simulation, and $\mathcal{N}(0, \sigma)$ denotes a random number sampled from a normal distribution with zero mean and standard deviation $\sigma$.
 The resolution corrections are computed after applying the above jet energy corrections.
 The data/MC \acp{SF} usually vary between 1 and 1.2, but are larger in the transition region between the endcaps and the forward detectors.
-No significant dependences on the \ac{pt} and \ac{eta} of the jets are observed, except for the transition region [[cite:&jec_jer_performance]].
+No significant dependencies on the \ac{pt} and \ac{eta} of the jets are observed, except in the transition region [[cite:&jec_jer_performance]].
 
-* Missing transverse energy
-As discussed in [[#sec:offline_reco_met]], the \ac{MET} is the negative vector sum of all reconstructed particles in an event.
+* Missing Transverse Energy
+As discussed in [[#sec:offline_reco_met]], \ac{MET} is the negative vector sum of all \ac{PF} reconstructed particles in an event.
 Despite being well defined, the "raw", uncorrected \ac{MET} is systematically different from the transverse momentum actually carried by invisible particles.
-This happens due to a variety of detector effects, most notably the non-compensating nature of the \ac{CMS} calorimeters, as discussed in and the detector misalignment.
-In this analysis, we apply corrections as instructed by the \ac{CMS} =JetMET= \ac{POG}, to make the measured $\ptmiss$ a better estimate of the ``true'' \ac{MET}.
-We consider the so-called event-by-event "Type-1 corrections", where jet energy corrections are propagated to \ac{MET}.
-The corrections replace the vector sum of transverse momenta of particles clustered as jets by the vector sum of the transverse momenta of the jets to which \acp{JEC} is applied.
-Corrections are applied to \ac{PF} \ac{CHS} AK4 jets.
+This happens due to a variety of detector effects, most notably the non-compensating nature of the \ac{CMS} calorimeters, which was explained in [[#sec:offline_reco_pf]], and due to detector misalignments.
+In this analysis, we apply corrections as instructed by the \ac{CMS} JetMET \ac{POG}, turning the measured $\ptmiss$ into a better estimate of the ``true'' \ac{MET}.
 
 Measurements show that the \ac{JER} in data is worse than in the simulation.
 As discussed in [[#sec:jets_corrections]], jets in simulation should thus be smeared to achieve a better agreement with data.
-Given that jets are one of the \ac{MET}'s building blocks, their smearing should be propagated to the \ac{MET}.}
-To do so, the vector sum of transverse momenta of particles clustered as jets is replaced by the vector sum of the transverse momenta of the jets to which smearing is applied.
+Given that jets are one of the building blocks of \ac{MET}, their smearing should be propagated to the \ac{MET}.
+The corrections replace the vector sum of transverse momenta of particles clustered as jets by the vector sum of the transverse momenta of the jets to which \acp{JEC} are applied.
+Corrections are applied to AK4 jets.
 
 It has been observed that uncorrected \ac{MET} features a modulation in the azimuthal \ac{phi} coordinate.
 The modulation roughly follows a sinusoidal curve with a $2\pi$ period.
 The distribution of true \ac{MET} should instead be independent of \ac{phi} because of the collisions' rotational symmetry along the transverse axis.
-The modulation can be due to anisotropic detector responses, to inactive calorimeter cells and/or tracking regions, to the detector misalignment, and to the displacement of the beam spot. 
-The amplitude of the modulation increases roughly linearly with the number of pile-up interactions. 
-In this analysis, we reduce the amplitude of the \ac{phi} modulation by shifting the origin of the $x$ and $y$ coordinates in the transverse momentum plane, as a function of the run number and of the number of primary vertices, as recommended by the =JetMET= \ac{POG}.
+The modulation can be due to anisotropic detector responses, to inactive calorimeter cells and/or tracking regions, to the detector misalignment, and even to the displacement of the beam spot. 
+The amplitude of the modulation increases roughly linearly with the number of \ac{PU} interactions. 
+In this analysis, we reduce the amplitude of the \ac{phi} modulation by shifting the origin of the $x$ and $y$ coordinates in the transverse momentum plane, as a function of the run number and of the number of \acp{PV}.
 
-We also applied \ac{MET} filters, again following the instructions of the =JetMET= \ac{POG}, in order to ensure a good quality of the reconstructed \ac{MET}.
-Events where the primary hard interaction vertex is not of good quality are rejected.
-A beam halo filter is used to reduce the non negligible probability of the high energy halo muons to interact in the calorimeters by creating clusters of up to several hundreds of \si{\GeV}.
-Additional filters are applied to reject events with high \ac{HCAL} or \ac{ECAL} noise.
-Events with problematic dead cell \ac{TP} energy recovery are removed.
-Finally, a filter rejects events where a large unphysical \ac{MET} is erroneously reconstructed due to the presence of additional muons.  
+We also apply \ac{MET} quality filters provided by the JetMET \ac{POG}, in order to improve the quality of the reconstructed \ac{MET}:
++ Events where the \ac{PV} is not of good quality are rejected.
++ A beam halo filter is used, to reduce the non negligible probability of high-energy halo muons to interact in the calorimeters. Such interactions can create clusters of up to several hundreds of \si{\GeV}.
++ Events with problematic dead cell \ac{TP} energy recovery are removed.
++ Events where a large unphysical \ac{MET} is erroneously reconstructed due to the presence of additional muons are rejected.
++ Additional filters are applied to reject events with high \ac{HCAL} or \ac{ECAL} noise.

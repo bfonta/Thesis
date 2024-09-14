@@ -12,7 +12,6 @@
 #+LATEX: \fontsize{12pt}{12pt}\selectfont
 #+LATEX: \input{start/dedication_page}
 
-
 * Summary
 :PROPERTIES:
 :UNNUMBERED: t
@@ -145,7 +144,7 @@
 #+INCLUDE: "chapters/4_analysis1/additional_triggers.org"
 *** Analysis Trigger Regions
 #+INCLUDE: "chapters/4_analysis1/trigger_regions.org"
-*** Discussion on the Inclusion Method
+*** The Inclusion Method: an Idea for the Future
 #+INCLUDE: "chapters/4_analysis1/inclusion_method.org"
 ** Physics Objects
 #+INCLUDE: "chapters/4_analysis1/physics_objects.org"
@@ -157,7 +156,7 @@
 #+INCLUDE: "chapters/4_analysis1/backgrounds.org"
 ** Monte Carlo Corrections
 #+INCLUDE: "chapters/4_analysis1/mc_corrections.org"
-** Control Regions
+** Binned Distributions
 #+INCLUDE: "chapters/4_analysis1/binned_distributions.org"
 
 
@@ -217,13 +216,16 @@
 
 
 * Appendix
-** Summary of ATLAS results on Higgs boson pair production
+** Summary of ATLAS Results on Higgs Boson Pair Production
 #+INCLUDE: "chapters/appendixes/atlas_results.org"
 #+LATEX: \clearpage
-** Final results in table format
+** Final Results in Table Format
 #+INCLUDE: "chapters/appendixes/table_results.org"
 #+LATEX: \clearpage
-** MET SF control distributions
+** Fraction of High-\ac{pt} Muons
+#+INCLUDE: "chapters/appendixes/highpt_muons.org"
+#+LATEX: \clearpage 
+** MET SF Control Distributions
 #+INCLUDE: "chapters/appendixes/met_sf_controlregions.org"
 #+LATEX: \clearpage
 

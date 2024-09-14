@@ -99,7 +99,7 @@ The uncertainties are dependent on the two decay modes mentioned above, and are 
 The muon energy scales were added for completeness only, as th erecommended approach is to simply assign a 1% flat uncertainty.
 
 * Jet energy scales and resolutions
-Uncertainties on the \acp{JES} and \acp{JER} are provided by the =JetMET= \ac{POG}.
+Uncertainties on the \acp{JES} and \acp{JER} are provided by the JetMET \ac{POG}.
 Concerning the \acp{JES}, a reduced set of 11 sources is used, as recommended.
 The sources take into consideration dependence effects on \ac{ISR}, \ac{FSR}, jet flavour, kinematics, detector regions and miscalibrations.
 The uncertainties are the same for AK4 and AK8 jets.
@@ -145,7 +145,7 @@ The uncertainties arising from the application of the trigger \acp{SF} do not mo
   For the single-$\tau$ trigger, we use as uncertainties the ones listed in [[tab:singleTauSFs]], which are centrally provided.
 
 * B-tagging scale factors
-Uncertainties on \btag{} \acp{SF} are provided by the \ac{CMS} =BTV= \ac{POG}.
+Uncertainties on \btag{} \acp{SF} are provided by the \ac{CMS} BTV \ac{POG}.
 The impact on the purity of b-jets is estimated by varying the contamination from udsg+c and b+c jets in heavy and light flavor regions, respectively, by $\pm 20\%$.
 Additionally, statistical fluctuations are accounted for by providing weights where statistical uncertainties in each bin of the \btag{} discriminant are multiplied by linear and quadratic functions.
 Finally, a dedicated statistical uncertainty is also considered for charm-initated jets.
@@ -154,7 +154,7 @@ In total, 8 systematic uncertainties are considered,per data-takin period.
 These uncertainty does not modify single objects, but rather overall event weight.
 
 * Pile-up jet identification
-Uncertainties on the \ac{PU} jet identification \acp{SF} are provided by the =JetMET= \ac{POG} as a function of jet \ac{pt} and \ac{eta}, being applied on an event-by-event base.
+Uncertainties on the \ac{PU} jet identification \acp{SF} are provided by the JetMET \ac{POG} as a function of jet \ac{pt} and \ac{eta}, being applied on an event-by-event base.
 This uncertainty does not modify the single objects, but only the overall event weights.
 
 * Monte Carlo finite sample size

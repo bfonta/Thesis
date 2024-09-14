@@ -328,13 +328,12 @@ Additional jet identification criteria can be introduced to target specific jet 
 A detailed description of such criteria is discussed in [[#sec:physics_objects]], in the context of the \xhhbbtt{} analysis.
 Required corrections such as jet energy scales and resolutions are also covered there.
 
-* Missing transverse energy
+* Missing Transverse Energy
 :PROPERTIES:
 :CUSTOM_ID: sec:offline_reco_met
 :END:
-
 Due to the extremely low cross-sections involved, neutrinos are not detected by the \ac{CMS} experiment or any of other four large \ac{LHC} experiments.
-In an event, the presence of a transverse momentum imbalance, which could be naively seen as the violation of momentum conservation, can therefore be attributed to neutrinos, neglecting other effects arising to due imperfect efficiencies and acceptances for other objects.
+In a collision event, the presence of a transverse momentum imbalance, which could be naively seen as the violation of momentum conservation, can therefore be attributed to neutrinos, neglecting other effects arising to due imperfect efficiencies and acceptances for other objects.
 Another source for the imbalance might instead come from hypothetical \ac{BSM} particles interacting very weakly with the detector.
 These effects lead to /missing transverse momentum/, or MET, which is defined as the negative vector sum of all N reconstructed \ac{PF} particles in an event:
 #+NAME: eq:met

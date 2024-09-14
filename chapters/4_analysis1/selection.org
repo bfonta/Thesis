@@ -2,6 +2,8 @@
 :CUSTOM_ID: sec:selection
 :END:
 
++ define "baseline selection" somewhere
+  
 In this section we cover the various selection stages performed on the events collected by the analysis triggers.
 Given the rarity of HH processes, it is imperative to measure as many \hhbbtt{} events as possible.
 The selection is achieved by targeting the topologies of interest, focusing first on single physics objects, such as b-jets and tau lepton decay products in the \bbtt{} case, and later on pairs of such quantities, reconstructing the decays of the two Higgs bosons.
@@ -21,7 +23,6 @@ Finally, binned distributions of the event distributions are used to train the d
 :END:
 Instead, all events lying above the minimum accepted $\pt$ ($|\eta|$) values are considered: \SI{10}{\GeV} (2.5) for electrons, \SI{15}{\GeV} (2.4) for muons and \SI{20}{\GeV} (2.3) for \tauhs{}.
 The values originate from hard limits imposed by the isolation and identification trigger \acp{SF} used in the analysis.
-
 
 This step aims at identifying the visible decay products of one of the \SI{125}{\GeV} Higgs boson decaying into a $\tau$ pair.
 Selected signal events are required to have at least one $\tau$ candidate that decays hadronically and has been reconstructed by the \ac{HPS} algorithm.  
@@ -69,17 +70,17 @@ In addition, the following is required:
 :CUSTOM_ID: sec:mutau_sel
 :END:
 
-+ A muon with $|\eta_{\mu}| < 2.4$ passing tight particle--flow muon and track muon identification criteria plus the relative particle-flow and track isolation requirements $I_{\text{rel}}^{\text{track-}\mu} < 0.15$ and $I_{\text{rel}}^{\text{PF-}\mu} < 0.15$.
++ A muon with $|\eta_{\mu}| < 2.4$ passing tight particle--flow muon and track muon identification criteria plus the relative particle-flow and track isolation requirements $\mathcal{I}_{\text{rel}}^{\text{track-}\mu} < 0.15$ and $\mathcal{I}_{\text{rel}}^{\text{PF-}\mu} < 0.15$.
   The reconstructed muon production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$;
 + A hadronic tau of $|\eta_{\tau_{\text{h}}}| \leq 2.3$ ($2.1$ for events firing only the cross-$\mu\tau$ trigger). The same $\Delta_{z}$ requirement as in the case of the muon is applied. The \ac{pt} threshold on the hadronic tau depends on the \ac{HLT} trigger path fired.
 + Muon and hadronic tau are required to have opposite electric charge and a $\Delta \text{R} (\mu, \tau_{\text{h}}) > 0.4$ spatial separation.
-
+  
 ** \eletau{} channel
 :PROPERTIES:
 :CUSTOM_ID: sec:eletau_sel
 :END:
 
-+ An electron of $\left| \eta_{e} \right| < 2.5$ passing the \logicand{} between the =Tight= \ac{MVA} non-iso-identification criteria (80% efficiency \ac{WP}), and the relative isolation requirement $I_{\text{rel}}^{e} < 0.1$.
++ An electron of $\left| \eta_{e} \right| < 2.5$ passing the \logicand{} between the =Tight= \ac{MVA} non-iso-identification criteria (80% efficiency \ac{WP}), and the relative isolation requirement $\mathcal{I}_{\text{rel}}^{e} < 0.1$.
   The reconstructed electron production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$.
   The \ac{pt} threshold on the electron depends on the fired \ac{HLT} trigger path.
 + A hadronic tau of $|\eta_{\tau_{h}}| \leq 2.3$. The same $\Delta_{z}$ requirement as in the case of the electron is applied. The \ac{pt} threshold on the hadronic tau depends on the fired \ac{HLT} trigger paths
@@ -106,10 +107,10 @@ However, nothing forbids an event to include, on top of a hadronic tau, two muon
 For those cases, there would be multiple ways to choose the "correct" lepton, \ie{} the lepton truly coming from the relevant Higgs boson decay.
 To simplify the selection and avoid taking the wrong decision, events with a third lepton are rejected.
 Additionally, the following conditions must be true for the event to be rejected:
-+ An electron of $|\eta_{e}| < 2.5$ and $p_T > 10\,\si{\GeV}$. The electron passes the \logicand{} between the =Medium= \ac{MVA} non-iso-identification criteria and the relative isolation requirement $I_{\text{rel}}^{e} < 0.3$. The reconstructed electron production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$;
-+ A muon of $|\eta_{\mu}| < 2.4$ and $p_T > 10\,\si{\GeV}$ and passing the =Medium= particle--flow muon and \texttt{HighPt} track muon identification criteria, plus the relative particle--flow and track isolation requirements, $I_{\text{rel}}^{\text{track-}\mu} < 0.3$ and $I_{\text{rel}}^{\text{PF-}\mu} < 0.3$, respectively. The reconstructed muon production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$.
++ An electron of $|\eta_{e}| < 2.5$ and $p_T > 10\,\si{\GeV}$. The electron passes the \logicand{} between the =Medium= \ac{MVA} non-iso-identification criteria and the relative isolation requirement $\mathcal{I}_{\text{rel}}^{e} < 0.3$. The reconstructed electron production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$;
++ A muon of $|\eta_{\mu}| < 2.4$ and $p_T > 10\,\si{\GeV}$ and passing the =Medium= particle--flow muon and \texttt{HighPt} track muon identification criteria, plus the relative particle--flow and track isolation requirements, $\mathcal{I}_{\text{rel}}^{\text{track-}\mu} < 0.3$ and $\mathcal{I}_{\text{rel}}^{\text{PF-}\mu} < 0.3$, respectively. The reconstructed muon production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$.
 This veto also helps removing background events with two leptons and a fake \tauh{}, as for instance diboson processes, or fully leptonic decays of $\ttbar{}$.
-  
+
 * B Quark Pair
 :PROPERTIES:
 :CUSTOM_ID: sec:b_pair_sel

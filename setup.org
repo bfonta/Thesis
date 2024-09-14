@@ -97,7 +97,7 @@
 #+LATEX_HEADER: \makeatother
 #+LATEX_HEADER: \specialterms{foo}
 
-#+LATEX_HEADER: \usepackage[nohyperlinks,printonlyused]{acronym}
+#+LATEX_HEADER: \usepackage[nohyperlinks,printonlyused,withpage]{acronym}
 
 #+LATEX_HEADER: \usepackage{cleveref}
 #+LATEX_HEADER: \crefname{figure}{Fig.}{Figs.}
