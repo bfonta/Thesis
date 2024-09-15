@@ -1,0 +1,42 @@
+\documentclass[crop,tikz]{standalone}
+\usetikzlibrary{shapes,arrows,arrows.meta}
+
+\begin{document}
+
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+\definecolor{darkpastelred}{rgb}{0.76, 0.23, 0.13}
+
+% Define block styles
+\tikzset{
+  block1/.style = {draw, rectangle, fill=brandeisblue!60, text width=6em, text centered, rounded corners, minimum height=2.8em},
+  block2/.style = {draw, rectangle, fill=brandeisblue!60, text width=8em, text centered, rounded corners, minimum height=2.8em},
+  class/.style = {draw, thick, rectangle, fill=darkpastelgreen!80},
+  disc/.style = {draw, rectangle, fill=darkpastelred!80},
+}
+
+\begin{tikzpicture}
+    % Place nodes
+    \node [block1] at (3.5,8) (top)   {Number of AK4 b-jets};
+    \node [class] at (1.7,6.05) (res2b) {\textbf{res2b}};
+    \node [block1] at (4.5,6) (ak8)   {Is an AK8 jet present?};
+    \node [block2] at (2,4) (pnet)  {Passes the PNet Loose WP?};
+    \node [block1] at (5,4) (ak4)   {Number of AK4 b-jets};
+    \node [class] at (1,2) (boost) {\textbf{boosted}};
+    \node [disc]  at (3.5,2) (disc)  {discard};
+    \node [class] at (6,2) (res1b) {\textbf{res1b}};
+    
+    % Draw edges
+    \draw [-{Latex[length=2mm]}] (top) -- (res2b) node[midway, left]  {$\geq 2$};
+    \draw [-{Latex[length=2mm]}] (top) -- (ak8)   node[midway, right] {$< 2$};
+    \draw [-{Latex[length=2mm]}] (ak8) -- (pnet)  node[midway, left] {yes};
+    \draw [-{Latex[length=2mm]}] (ak8) -- (ak4)   node[midway, right] {no};
+    \draw [-{Latex[length=2mm]}] (pnet) -- (boost)   node[midway, left] {yes};
+    \draw [-{Latex[length=2mm]}] (pnet) -- (disc)   node[midway, right] {no};
+    \draw [-{Latex[length=2mm]}] (ak4) -- (disc)   node[midway, left] {0};
+    \draw [-{Latex[length=2mm]}] (ak4) -- (res1b)   node[midway, right] {1};
+
+    
+\end{tikzpicture}
+
+\end{document}

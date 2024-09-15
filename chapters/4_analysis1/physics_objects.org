@@ -41,7 +41,7 @@ A correction factor is applied to \ac{MC} simulations to take into account diffe
 These factors are derived from \zmumu{} events selected with a Tag & Probe technique (see the note below), and are provided by the \ac{CMS} Muon \ac{POG}.
 For vetoed muons, $\mathcal{I}_{\text{rel}}^{\ell} < 0.3$ is required separately for the \logicor{} for two \acp{WP}, =Medium= and =Tight=.
 The \logicor{} because since =Tight= is not a subset of the =Medium=, and therefore there will be a small number of events that fail =Medium= and pass =Tight=.
-The veto selection on leptons is described in [[#sec:third_lepton_sel]].
+The veto selection on leptons is described in [[#sec:tau_pair_sel]].
 
 # high pt WP
 An additional \ac{WP} is available, dedicated to muons with a \ac{pt} above \SI{120}{\GeV}.
@@ -72,7 +72,7 @@ The discriminator is based on a \ac{BDT} [[cite:&tmva]] combining several observ
 The \ac{MVA} is trained on all electrons, regardless of whether they pass the trigger requirements or not, and is then tuned for electrons with $\pt>10\,\si{\GeV}$
 Three categories are defined based on electron \ac{eta}: two in the barrel and one in the endcap.
 Signal electrons require the =Tight= \ac{WP}, which has a \SI{\sim 70}{\percent} signal efficiency, while veto electrons must pass the =Medium= \ac{WP}, which has a \SI{\sim 80}{\percent} efficiency [[cite:&performance_muon_electron]].
-The full veto selection is described in [[#sec:third_lepton_sel]].
+The full veto selection is described in [[#sec:tau_pair_sel]].
 A correction factor is applied to the \ac{MC} to take into account differences with respect to data in \ac{ID} efficiencies of electrons.
 These factors are derived from \zee{} events, also selected with a Tag & Probe technique.
 

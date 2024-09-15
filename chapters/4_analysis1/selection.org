@@ -41,96 +41,82 @@ The reasoning is to use corrections as close to POG recommendations as possible,
 |------------+--------------------------+-------------|
 | *Object*     | $\pmb{\pt\,[\si{\GeV}]}$ | $\pmb{\vert\eta\vert}$ |
 |------------+--------------------------+-------------|
-| Electron   |                       10 |         2.5 |
-| Muon       |                       15 |         2.4 |
-| Tau lepton |                       20 |         2.3 |
+| Electron   | $>10$                    | $<2.5$      |
+| Muon       | $>15$                    | $<2.4$      |
+| Tau lepton | $>20$                    | $<2.3$      |
 |------------+--------------------------+-------------|
 
-All events lying above the minimum $\pt$ or below the maximum $|\eta|$ values reported in [[tab:max_min_cuts]] are considered.
-The values come from hard limits imposed by the isolation and \ac{ID} trigger \acp{SF} used in the analysis.
-Importantly, the limits are not driven by \ac{HLT} cuts, since such a choice would defeat the purpose of the $\metnomu$ trigger.
-We look for lepton candidates passing simple kinematical, isolation and \ac{ID} criteria, as described in [[tab:chn_sel]].
-After all lepton candidates have been inspected, the analysis channels are defined according to specific priority rules.
-An event is classified as \mutau{} if a single muon candidate passes all criteria.
-If two muons pass the criteria, the event becomes \mumu{}
-In case no muon is selected, we check whether any electron was selected.
-In a similar way, in case a single electron candidate is present, the event is associated the \eletau{} channel.
-If two electrons are present, the event would be assigned the \eleele{} channel, but it is instead discarded, as we are not taking this channel into consideration.
-If neither muons or electrons are found, the event is classified as \tautau{}, as long as a two \tauhs{} are present.
-Within each pair, leptons are ordered as follows, depending on the channel:
-+ $\pmb{\tau_{e}\tau_{\text{h}}}$ *and* $\pmb{\tau_{\mu}\tau_{\text{h}}}$: \mutau{} and \eletau{}: the first position is assigned to the leptonic leg, either a muon or an electron.
-+ $\pmb{\tau_{\text{h}}\tau_{\text{h}}}$:
-  The pairs are first sorted according to the =DeepTau= score of the first lepton.
-  If the two first legs have the same isolation, the highest \ac{pt} of first leg is used to order the pair.
-  If the \ac{pt} is also identical, \ie{} the pairs share the same first leg, the pair with the most isolated second leg is preferred.
-  If ambiguity is still present, priority is given to the pair with the highest \ac{pt} of the second leg.
-
-\noindent This channel classification strategy was chosen because it maximizes event purity while removing event overlaps among the three different final states.
-Finally, as described in [[#sec:third_lepton_sel]], a third lepton veto is applied to all events.
-Any event where an electron or muon is present, on top of the 2 leptons used to build the \ditau{} pair, is discarded.
-
-#+NAME: tab:chn_sel
-#+CAPTION: Selections defining the analysis channels. Besides the ones noted in the table, opposite charges are requested between the two leptons, and the \ac{pt} thresholds follow [[eq:ptTreshold]], except when the the leptons fired only \ac{MET}, in which case no specific cuts are requested, and [[tab:max_min_cuts]] is followed. The $|\eta|$ cut on the second lepton in \eletau{} and \mutau{} can be 2.1 if the event only fires the cross trigger. With the exception of not applying a $\Delta_{xy}$ cut on \tauhs{}, the $\Delta_{xy}$ and $\Delta_{z}$ cuts below are equal for the two pair objects, are are provided in \si{\mm}.
-#+ATTR_LATEX: :placement [!h] :center t :align lccccccccc :environment mytablewiderrows
-|-----------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
-| *Chn.*      | $\pmb{\vert\eta_1\vert}$ | $\pmb{\text{ID}_1}$ | $\pmb{\text{Iso}_1}$ | $\pmb{\vert\eta_2\vert}$ | $\pmb{\text{ID}_2}$ | $\pmb{\text{Iso}_2}$ | $\pmb{\Delta_{xy}}$ | $\pmb{\Delta_{z}}$ | $\pmb{\Delta\text{R}(\ell_1,\ell_2)}$ |
-|-----------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
-| \eletau{} |           2.5 | \texttt{Tight}      |                  0.1 |           2.3 | \texttt{DeepTau}    | \texttt{DeepTau}     |           0.45 |           2.0 |                        0.4 |
-| \mutau{}  |           2.4 | \texttt{Tight}      |                 0.15 |           2.3 | \texttt{DeepTau}    | \texttt{DeepTau}     |           0.45 |           2.0 |                        0.4 |
-| \tautau{} |           2.3 | \texttt{DeepTau}    |     \texttt{DeepTau} |           2.3 | \texttt{DeepTau}    | \texttt{DeepTau}     |             -- |           2.0 |                        0.4 |
-| \mumu{}   |           2.4 | \texttt{Tight}      |                 0.15 |           2.4 | \texttt{Tight}      | 0.30                 |           0.45 |           2.0 |                        0.4 |
-|-----------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
-
-+ add table caption to main text as well
-  
-A subsequent check that the event is firing the trigger path associated to the selected final states and that the selected offline leptons are geometrically matched to the online ones is performed.
-With respect to the 2016 data analysis, the use of cross-triggers allows for a much lower threshold on the $\pt$ of the $\tau$ leptons, hence the request of a fixed cut on the lepton $\pt$ is dropped from the \ditau{} pair selection.
-Instead, each reconstructed offline lepton is required to pass a \ac{pt} threshold depending on the \ac{HLT} trigger path fired by the event:
+All events lying above the minimum $\pt$ or below the maximum $|\eta|$ values reported in [[tab:max_min_cuts]] are considered, as long as they satisfy the triggers described in [[#sec:triggers]], and as long as the offline objects are geometrically matched to the online \ac{HLT} paths.
+The values in [[tab:max_min_cuts]] come from hard limits imposed by the isolation and \ac{ID} trigger \acp{SF} used in the analysis.
+We look for lepton candidates passing simple kinematic, isolation and \ac{ID} criteria, as summarized in [[tab:chn_sel]].
+Additionally, the two objects in a pair should have opposite charges, and should pass \ac{pt} thresholds based on the triggers they fired.
+An exception occurs for the $\metnomu$ trigger, since it imposes no \ac{pt} cut, and can thus explore the full phase-space presented in [[tab:max_min_cuts]].
+The \ac{pt} thresholds depend on the \ac{HLT} trigger path fired by the event:
 #+NAME: eq:ptTreshold
 \begin{equation}
   \pt^{\text{offline}} \, \geq \, \pt^{\text{HLT}}\ + \, \text{threshold}\:,
 \end{equation}
-
-\noindent where $\pt^{\text{offline}}$ is the transverse momentum of the offline selected lepton, $\pt^{\text{HLT}}$ is the \ac{pt} threshold applied at trigger level and ``threshold'' is a variable depending on the lepton type: \SI{1}{\GeV} for electron trigger legs, \SI{2}{\GeV} for muon trigger legs, \SI{5}{\GeV} for the \ditau{} trigger, and \SI{10}{\GeV} for the \stau{} trigger.
+\noindent where $\pt^{\text{offline}}$ is the transverse momentum of the offline selected lepton, $\pt^{\text{HLT}}$ is the \ac{pt} threshold applied at \ac{HLT} level, and ``threshold'' depends on the lepton type: \SI{1}{\GeV} for electrons, \SI{2}{\GeV} for muons, \SI{5}{\GeV} for tau leptons firing the \ditau{} trigger, and \SI{10}{\GeV} for tau leptons firing the \stau{} trigger.
 The thresholds are chosen to be conservative with respect to the trigger turn-on curves.
-For events passing a given kind of trigger (\sele{}, \smu{}, \celetau{}, \cmutau{}, \stau{}, \ditau{}, $\metnomu$), the \ac{pt} selection is determined by the loosest threshold on the object at trigger level among those available for that kind of trigger, with the exception of the \ac{MET} trigger.
-When the \ac{MET} trigger fires, no explicit \ac{pt} or \ac{eta} cuts are applied to the objects, as described in [[#sec:trigger_regions]].
+For events passing more than one trigger, the loosest thresholds among those two triggers are applied.
 
-We remind the reader that the phase-space is always divided into three regions, according to the triggers being used.
-For a visualization of the kinematic trigger region cuts, refer once more to the middle column of [[fig:kinTriggerRegions]].
-Events are required to pass any of the triggers described in [[#sec:triggers]] and the offline leptons are required to match the \ac{HLT} ones.
-In addition, the following is required:
+The analysis channels are defined according to specific priority rules.
+An event is classified as \mutau{} if a single muon candidate passes all criteria.
+If two muons pass the criteria, the event becomes \mumu{}.
+In case no muon is selected, we check whether any electron passing the criteria was found.
+In case a single electron candidate is present, the event is associated the \eletau{} channel.
+If two electrons are present, the event would be assigned the \eleele{} channel, but it is instead discarded, as we are not taking this channel into consideration.
+If neither muons or electrons are found, the event is classified as \tautau{}, as long as a two \tauhs{} are present, and all pair candidates are kept.
+Within each pair, leptons are ordered as follows, depending on the channel:
++ $\pmb{\tau_{e}\tau_{\text{h}}}$ *and* $\pmb{\tau_{\mu}\tau_{\text{h}}}$:
+  The first position is assigned to the leptonic leg, either a muon or an electron.
++ $\pmb{\tau_{\text{h}}\tau_{\text{h}}}$:
+  All selected pairs are first sorted according to the =DeepTau= score of the first lepton.
+  If the two first legs have the same isolation, the highest \ac{pt} leg is used to order the pairs.
+  If the \ac{pt} is also identical, \ie{} the pairs share the same first leg, then the pair with the most isolated second leg is preferred.
+  If ambiguity is still present, priority is given to the pair with the highest \ac{pt} of the second leg.
+\noindent This channel classification strategy was chosen because it was seen to maximize event purity, while removing event overlaps among the three different final states.
 
-** Third lepton veto
-:PROPERTIES:
-:CUSTOM_ID: sec:third_lepton_sel
-:END:
-
-Some events can include multiple leptons, and their choice becomes a matter of some ambiguity.
-I mentioned above \mutau{} events take precedence over \eletau{} events, and therefore at the decay channel level no ambiguity is present.
-However, nothing forbids an event to include, on top of a hadronic tau, two muons, or two electrons, as long as they satisfy the requirements in [[tab:chn_sel]].
-For those cases, there would be multiple ways to choose the "correct" lepton, \ie{} the lepton truly coming from the relevant Higgs boson decay.
-To simplify the selection and avoid taking the wrong decision, events with a third lepton are rejected.
-Additionally, the following conditions must be true for the event to be rejected:
-+ An electron of $|\eta_{e}| < 2.5$ and $p_T > 10\,\si{\GeV}$. The electron passes the \logicand{} between the =Medium= \ac{MVA} non-iso-identification criteria and the relative isolation requirement $\mathcal{I}_{\text{rel}}^{e} < 0.3$. The reconstructed electron production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$;
-+ A muon of $|\eta_{\mu}| < 2.4$ and $p_T > 10\,\si{\GeV}$ and passing the =Medium= particle--flow muon and \texttt{HighPt} track muon identification criteria, plus the relative particle--flow and track isolation requirements, $\mathcal{I}_{\text{rel}}^{\text{track-}\mu} < 0.3$ and $\mathcal{I}_{\text{rel}}^{\text{PF-}\mu} < 0.3$, respectively. The reconstructed muon production vertex must be close to the main primary vertex within a distance $\Delta_{xy} < 0.045\,\si{\cm}$ and $\Delta_{z} < 0.2\,\si{\cm}$.
+Some events can include multiple leptons of the same kind, and their choice becomes a matter of some ambiguity.
+We mentioned above that \mutau{} events take precedence over \eletau{} events; no ambiguity is present at the decay channel level.
+However, nothing forbids an event to include, on top of a \tauh{}, two muons or two electrons, as long as they satisfy the requirements in [[tab:chn_sel]].
+For those cases, there would be multiple ways to choose the "correct" lepton, \ie{} the lepton truly associated to the Higgs boson decay.
+To simplify the selection and avoid taking the wrong decision, the /third lepton veto/ is implemented, were events with a third lepton are rejected.
 This veto also helps removing background events with two leptons and a fake \tauh{}, as for instance diboson processes, or fully leptonic decays of $\ttbar{}$.
+The third lepton selection criteria are very similar to the ones for the "standard" leptons, just slightly looser, in order to remove most situations where ambiguity migh tbe present.
+
+#+NAME: tab:chn_sel
+#+CAPTION: Selections defining the analysis channels, including the third lepton vetos. Besides the cuts listed in the table, opposite charges are requested between any two leptons, and the \ac{pt} thresholds follow [[eq:ptTreshold]], except when the the leptons fired only \ac{MET}, in which case no specific cuts are requested, and [[tab:max_min_cuts]] is instead considered. The $|\eta|$ cut on the second lepton in \eletau{} and \mutau{} can be 2.1 if the event only fires the cross trigger. With the exception of not applying a $\Delta_{xy}$ cut on \tauhs{}, the $\Delta_{xy}$ and $\Delta_{z}$ cuts below are identical for any two objects in a pair, are are provided in \si{\mm}. The isolation cuts marked with $\dagger$ are applied to the isolation considering all \ac{PF} muon candidates, but also to an isolation considering only muon tracks.
+#+ATTR_LATEX: :placement [!h] :center t :align lccccccccc :environment mytablewiderrows
+|---------------------------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
+| *Chn.*                      | $\pmb{\vert\eta_1\vert}$ | $\pmb{\text{ID}_1}$ | $\pmb{\text{Iso}_1}$ | $\pmb{\vert\eta_2\vert}$ | $\pmb{\text{ID}_2}$ | $\pmb{\text{Iso}_2}$ | $\pmb{\Delta_{xy}}$ | $\pmb{\Delta_{z}}$ | $\pmb{\Delta\text{R}(\ell_1,\ell_2)}$ |
+|---------------------------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
+| \eletau{}                 | $<2.5$        | \texttt{Tight}      | $<0.1$               | $<2.3$        | \texttt{DeepTau}    | \texttt{DeepTau}     | $<0.45$        | $<2.0$        | $>0.4$                     |
+| \mutau{}                  | $<2.4$        | \texttt{Tight}      | $<0.15^{\dagger}$          | $<2.3$        | \texttt{DeepTau}    | \texttt{DeepTau}     | $<0.45$        | $<2.0$        | $>0.4$                     |
+| \tautau{}                 | $<2.3$        | \texttt{DeepTau}    | \texttt{DeepTau}     | $<2.3$        | \texttt{DeepTau}    | \texttt{DeepTau}     | --             | $<2.0$        | $>0.4$                     |
+| \mumu{}                   | $<2.4$        | \texttt{Tight}      | $<0.15^{\dagger}$          | $<2.4$        | \texttt{Tight}      | $<0.30$              | $<0.45$        | $<2.0$        | $>0.4$                     |
+|---------------------------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
+| 3\textsuperscript{rd} $e$ | $<2.5$        | \texttt{Medium}     | $<0.3$               | --            | --                  | --                   | $<0.45$        | $<2.0$        | --                         |
+| 3\textsuperscript{rd} $\mu$ | $<2.4$        | \texttt{Medium}     | $<0.3^{\dagger}$           | --            | --                  | --                   | $<0.45$        | $<2.0$        | --                         |
+|---------------------------+---------------+---------------------+----------------------+---------------+---------------------+----------------------+----------------+---------------+----------------------------|
+
+We remind the reader that the phase-space is always divided into three regions, according to the triggers being used, as described in [[#sec:trigger_regions]].
 
 * B Quark Pair
 :PROPERTIES:
 :CUSTOM_ID: sec:b_pair_sel
 :END:
 
-This step of the analysis is aimed at selecting jets from the decay of the second \SI{125}{\GeV} Higgs boson in a $\bbbar$ pair.
-For events to be selected, one of the following must occur:
-+ two jets with $\pt > 20\,\si{\GeV}$ and $|\eta| < 2.5$ ($|\eta| < 2.4$) for 2017 and 2018 (2016), with a $\Delta \text{R} > 0.5$ distance between each jet and both selected $\tau$ candidates;
-+ one boosted jet, with the distance between the jet and both selected $\tau$ candidates of $\Delta \text{R} > 0.8$.
+We now turn to the \hbb{} process, where jets issued from a Higgs boson must be selected.
+The jet selection criteria are as follows:
++ two AK4 jets with $\pt > 20\,\si{\GeV}$ and $|\eta| < 2.5$ ($|\eta| < 2.4$) for 2017 and 2018 (2016), with a $\Delta \text{R} > 0.5$ distance between each jet and each selected $\tau$ candidate;
++ one AK8 boosted jet, with the distance between the jet and both selected $\tau$ candidates of $\Delta \text{R} > 0.8$.
 
-On top, and based on studies done for Ref. [[cite:&cms_hh_bbtt]], the $H \rightarrow bb$ selection was improved by developing a new algorithm to identify b-jets, dubbed \hhbtag{}.
+\noindent On top, and based on studies done for Ref. [[cite:&cms_hh_bbtt]], the $H \rightarrow bb$ selection was improved by developing a new algorithm to identify b-jets, dubbed \hhbtag{}.
 This algorithm is based on a neural network architecture and it is described in [[#sec:hh_btag]].
 For each event belonging to one of the resolved categories, all possible b-jet candidates are assigned a score by the \hhbtag{} algorithm.
 The two jets with the highest score are taken to be the two b-jets originating from the decay of the Higgs boson.
-In the boosted category the \hhbtag{} algorithm is not employed; the \ac{PNet} discriminant [[cite:&particle_net]] is used instead, as explained in [[#sec:sig_extraction]].
+In the boosted category the \hhbtag{} algorithm is not employed; the \ac{PNet} discriminant [[cite:&particle_net]] is used instead, as explained in [[#sec:categorization]].
 
 ** HH b-tagging network
 :PROPERTIES:
@@ -144,27 +130,11 @@ The performance of the algorithm is evaluated and compared with respect to the p
 
 @continues in the AN HH_Btag.tex@
 
-** Signal extraction
+
+* Invariant Mass Cut
 :PROPERTIES:
-:CUSTOM_ID: sec:sig_extraction
+:CUSTOM_ID: sec:mass_cut
 :END:
-
-Events are split in three orthogonal categories: *res1b*, *res2b* and *boosted*.
-This categorization scheme arises naturally from the reconstruction of jets within the \ac{CMS} framework.
-The latter is based on the radial separation between the the two b-quarks:
-+ $\Delta \text{R}(\text{b},\text{b})\,> \,0.8$: each b--quark is reconstructed as a jet applying the AK4 algorithm (resolved jet);
-+ $0.4 \, < \, \Delta \text{R}(\text{b},\text{b})\,< \,0.8$: the two b--quarks are reconstructed both as two separated AK4 jets and as a large--radius jet (fatjet) using the AK8 algorithm;
-+ $\Delta \text{R}(\text{b},\text{b})\,< \,0.4$: the two b--quarks are reconstructed only as an AK8 jet.
-The resolved categories target the first scenario ($\Delta \text{R} \, (\text{b},\text{b})\,> \,0.4$) while the boosted category targets the other two scenarios.
-Events with a reconstructed fatjet having $m_{\text{SoftDrop}} > 30\,\si{\GeV}$, $\pt > 250\,\si{\GeV}$, $\Delta \text{R}(\text{jet},\tau)\,> \,0.8$ for both \taus{} and \ac{PNet} discriminant passing the \ac{LP} \ac{WP} fall in the \textbf{boosted} category.
-Events without an AK8 jet are assigned to the resolved categories.
-They are further categorised based on the AK4 jet =DeepJet= score:
-+ Resolved 2jet--1tag, *res1b*:
-Events in this category are such that only one of the two b-jet candidates passes the =Medium= \ac{WP} for all the final states.
-+ Resolved 2jet--2tag, *res2b*:
-Events in this category are such that both b-jet candidates pass the =Medium= \ac{WP} for all the final states.
-The *res2b* category provides the most sensitive measurements for resonance masses below \SI{700}{\GeV} while the *boosted* category drives the analysis sensitivity for resonance masses above \SI{700}{\GeV}.
-
 Events classified as resolved are required to have reconstructed visibile masses of the b and $\tau$ pairs within a rectangular window.
 In order to define the mass window interval, gluon-fusion \spin{0} and \spin{2} signal samples are utilized.
 The samples cover a range of masses spanning from \SI{250}{\GeV} to \SI{3}{\TeV}, and involve the production of resonance particles that subsequently decay into pairs of Higgs bosons and $\tau$ leptons.
@@ -214,26 +184,6 @@ It has been shown that a more discriminant mass cut, altough providing a larger 
 Given that the signal events are better discriminated by the parameterised DNN put in place for this analysis,
 the goal of applying the mass window is instead to remove significantly outlying background events in regions where no signal overlap is expected.
 
-[[fig:categories_scheme]] describes schematically how events are split into different categories and the discriminating variable used for signal extraction in each category.
-The final limit extraction is performed fitting the distributions of the score of a \ac{pDNN} in the three analysis categories.
-The network aims at discriminating \xhhbbtt{} signal events from background, and is described [[fig:categories_scheme]].
-
-#+NAME: fig:categories_scheme
-#+CAPTION: Descriptive scheme of the event categorization.
-#+BEGIN_figure
-\centering
-#+ATTR_LATEX: :width .6\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/AnalysisFlowDiagram.pdf]]
-#+END_figure
-
-** Resolved jets
-** Boosted jets
-
-* Invariant Mass Cut
-:PROPERTIES:
-:CUSTOM_ID: sec:mass_cut
-:END:
-
 * Categorization
 :PROPERTIES:
 :CUSTOM_ID: sec:categorization
@@ -246,6 +196,50 @@ It also allow to define control regions with low signal contamination, useful to
 
 In the extraction of the final results, each category is fitted separately.
 Differences in categories can help constrain the likelihood fit.
+
+Events are split in three orthogonal categories: *res1b*, *res2b* and *boosted*.
+This categorization scheme arises naturally from the reconstruction of jets within the \ac{CMS} framework.
+The latter is based on the radial separation between the the two b-quarks:
++ $\Delta \text{R}(\text{b},\text{b})\,> \,0.8$: each b--quark is reconstructed as a jet applying the AK4 algorithm (resolved jet);
++ $0.4 \, < \, \Delta \text{R}(\text{b},\text{b})\,< \,0.8$: the two b--quarks are reconstructed both as two separated AK4 jets and as a large--radius jet (fatjet) using the AK8 algorithm;
++ $\Delta \text{R}(\text{b},\text{b})\,< \,0.4$: the two b--quarks are reconstructed only as an AK8 jet.
+The resolved categories target the first scenario ($\Delta \text{R} \, (\text{b},\text{b})\,> \,0.4$) while the boosted category targets the other two scenarios.
+Events with a reconstructed fatjet having $m_{\text{SoftDrop}} > 30\,\si{\GeV}$, $\pt > 250\,\si{\GeV}$, $\Delta \text{R}(\text{jet},\tau)\,> \,0.8$ for both \taus{} and \ac{PNet} discriminant passing the \ac{LP} \ac{WP} fall in the \textbf{boosted} category.
+Events without an AK8 jet are assigned to the resolved categories.
+They are further categorised based on the AK4 jet =DeepJet= score:
++ Resolved 2jet--1tag, *res1b*:
+Events in this category are such that only one of the two b-jet candidates passes the =Medium= \ac{WP} for all the final states.
++ Resolved 2jet--2tag, *res2b*:
+Events in this category are such that both b-jet candidates pass the =Medium= \ac{WP} for all the final states.
+The *res2b* category provides the most sensitive measurements for resonance masses below \SI{700}{\GeV} while the *boosted* category drives the analysis sensitivity for resonance masses above \SI{700}{\GeV}.
+
+#+NAME: fig:QCDregions
+#+CAPTION: Flowchart of the analysis categorization. Three categories are defined: \rescat{1}, \rescat{2} and \boostcat{}, based on the number of AK4 and AK8 jets, and on the =Loose= \ac{WP} of the \ac{PNet} discriminant.
+#+BEGIN_figure
+\centering
+\begin{tikzpicture}[scale=1.4, every node/.style={scale=1.4}]
+    % Place nodes
+    \node [block1] at (3.5,8) (top)   {Number of AK4 b-jets};
+    \node [class] at (1.7,6.05) (res2b) {\textbf{res2b}};
+    \node [block1] at (4.5,6) (ak8)   {Is an AK8 jet present?};
+    \node [block2] at (2,4) (pnet)  {Passes the PNet Loose WP?};
+    \node [block1] at (5,4) (ak4)   {Number of AK4 b-jets};
+    \node [class] at (1,2) (boost) {\textbf{boosted}};
+    \node [disc]  at (3.5,2) (disc)  {discard};
+    \node [class] at (6,2) (res1b) {\textbf{res1b}};
+    
+    % Draw edges
+    \draw [-{Latex[length=2mm]}] (top) -- (res2b) node[midway, left]  {$\geq 2$};
+    \draw [-{Latex[length=2mm]}] (top) -- (ak8)   node[midway, right] {$< 2$};
+    \draw [-{Latex[length=2mm]}] (ak8) -- (pnet)  node[midway, left] {yes};
+    \draw [-{Latex[length=2mm]}] (ak8) -- (ak4)   node[midway, right] {no};
+    \draw [-{Latex[length=2mm]}] (pnet) -- (boost)   node[midway, left] {yes};
+    \draw [-{Latex[length=2mm]}] (pnet) -- (disc)   node[midway, right] {no};
+    \draw [-{Latex[length=2mm]}] (ak4) -- (disc)   node[midway, left] {0};
+    \draw [-{Latex[length=2mm]}] (ak4) -- (res1b)   node[midway, right] {1};
+    
+\end{tikzpicture}
+#+END_figure
 
 * Control Regions
 :PROPERTIES:
