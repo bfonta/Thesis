@@ -15,7 +15,7 @@ In the following, we describe the modeling of all background sources, given emph
 :END:
 
 Collision events produce large numbers of jets, mostly coming from gluons or light jets.
-Such jets can be ocasionally misreconstructed as \tauh{} particles, or also as jets issued from heavier quarks.
+Such jets can be occasionally misreconstructed as \tauh{} particles, or also as jets issued from heavier quarks.
 The \bbtt{} topology can thus be faked whenever one or two jets are misidentified as \tauh{} candidates, and two additional jet candidates are present.
 The multijet background affects in particular the \tautau{} channel, where no lepton can be used as a background-suppressing handle.
 The modeling of \ac{QCD} background from simulations presents two major challenges.
@@ -113,8 +113,8 @@ By adding an "E" and "F" regions, one can leverage the additional information fr
 This method is appropriately called "alphabet", and has been extended into higher-dimensionality spaces [[cite:&corcodilos_thesis]].
 Furthermore, the transfer factors can be learned by \acp{DNN} or \acp{BDT}, such as in the resolved \ac{CMS} \hhbbbb{} analysis [[cite:&bbbb_resolved_cms]].
 Despite all possible improvements, it is important to state that the main drive for the proposals above is the possibility to obtain a very precise estimate, leading to smaller systematic uncertainties.
-However, the \xhhbbtt{} measurement is currently limited by statistical uncertainties, and so the reduction of systematic uncertanties is not as important as for other analysis with larger cross sections times \acp{BR}.
-On top, the definition of additional phase-space regions tends to increase statistical uncertanties.
+However, the \xhhbbtt{} measurement is currently limited by statistical uncertainties, and so the reduction of systematic uncertainties is not as important as for other analysis with larger cross sections times \acp{BR}.
+On top, the definition of additional phase-space regions tends to increase statistical uncertainties.
 Overall, taking also into account the systematics discussed in [[#sec:syst_norm]], the ABCD method is deemed sufficient for the analysis here reported.
 
 * Drell-Yan
@@ -150,7 +150,7 @@ A good data/MC agreement is obtained.
 * Top/anti-top pairs
 The contribution of the $\ttbar$ background is modeled using \ac{MC} simulations.
 Virtually all top quarks decay to a b quark and a W boson, which can in turn decay leptonically or hadronically.
-Samples are thus devided into fully-hadronic, semi-leptonic (or, equivalently, semi-hadronic), and fully-leptonic samples.
+Samples are thus divided into fully-hadronic, semi-leptonic (or, equivalently, semi-hadronic), and fully-leptonic samples.
 The agreement with data is found to be sufficient.
 
 For completeness, we analyzed the purity of $\ttbar$ samples in terms of the presence of at least one fake \tauh{}.
@@ -182,7 +182,7 @@ Finally, we note the additional requirement on the b jet of the \rescat{2} categ
 #+END_figure
 
 ** MC Mismodeling
-Contrary to what is observed at the time of writing, during the initial stages of the PhD work a $\ttbar$ \ac{MC} mismodelling was observed.
+Contrary to what is observed at the time of writing, during the initial stages of the PhD work a $\ttbar$ \ac{MC} mismodeling was observed.
 The issue was predominant in the \eletau{} and \mutau{} channels, just as it had been observed in the previous nonresonant iteration of the \bbtt{} analysis.
 The discrepancies did at some point disappear, likely due to the implementation of several corrections that were missing at the time.
 Still, we here report a method to fix such issues, following \newcite{higgs_bbtautau_nonres}, since it might become useful in case residual mismodelings appear in future iterations. 
@@ -196,7 +196,7 @@ In [[fig:ttbar_mismodel]] we show how the method worked when it was needed.
 The data selection there performed is outdated.
 
 #+NAME: fig:ttbar_mismodel
-#+CAPTION: Example of the $\ttbar$ mismodeling correction in the \mutau{} channel, in 2018. The $\ttbar$ background appears in yellow. (LEft) $\pt$ of the b-jet with the highest \hhbtag{} score before applying the $\ttbar$ \ac{SF}. (Middle) $\pt$ of the same b-jet in the $\ttbar$ \ac{CR}. (Right) $\pt$ of the same b-jet after applying the $\ttbar$ \ac{SF}.
+#+CAPTION: Example of the $\ttbar$ mismodeling correction in the \mutau{} channel, in 2018. The $\ttbar$ background appears in yellow. (Left) $\pt$ of the b-jet with the highest \hhbtag{} score before applying the $\ttbar$ \ac{SF}. (Middle) $\pt$ of the same b-jet in the $\ttbar$ \ac{CR}. (Right) $\pt$ of the same b-jet after applying the $\ttbar$ \ac{SF}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .325\textwidth :center

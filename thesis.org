@@ -226,10 +226,6 @@
 ** Fraction of High-\ac{pt} Muons
 #+INCLUDE: "chapters/appendixes/highpt_muons.org"
 #+LATEX: \clearpage 
-** MET SF Control Distributions
-#+INCLUDE: "chapters/appendixes/met_sf_controlregions.org"
-#+LATEX: \clearpage
-
 
 * List of acronyms
 #+LATEX: \input{acro_list}

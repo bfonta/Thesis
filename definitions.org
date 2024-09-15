@@ -12,7 +12,6 @@
 #+LATEX_HEADER: \newcommand{\gf}{G_{F}}
 #+LATEX_HEADER: \newcommand{\gh}{\Gamma_{\text{H}}}
 #+LATEX_HEADER: \newcommand{\gx}{\Gamma_{\text{X}}}
-#+LATEX_HEADER: \newcommand{\httt}{H_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\htvar}{\text{H}_{\text{T}}}
 #+LATEX_HEADER: \newcommand{\kl}{\kappa_{\lambda}}
 #+LATEX_HEADER: \newcommand{\ktalgo}{k_{\text{T}}}

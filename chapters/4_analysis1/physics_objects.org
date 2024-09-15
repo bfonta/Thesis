@@ -10,6 +10,10 @@ In the context of our analysis, we had interactions with the EGamma, Tau, Muon, 
 We follow \ac{POG} recommendations whenever possible.
 
 * Muons
+:PROPERTIES:
+:CUSTOM_ID: sec:physics_objects_muons
+:END:
+
 The muon selections applied in this work were originally based on the selections used by the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]], but have evolved according to updated analysis needs, further corrections, and sample updates.
 Muons are required to be reconstructed by the Tracker or the Global muon reconstruction algorithms, which were described in [[#sec:offline_reco_muons]].
 The muon selections later presented in [[tab:max_min_cuts]] apply kinematic, isolation and \ac{ID} thresholds.
