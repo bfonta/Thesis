@@ -22,3 +22,13 @@
 | $\mtautau$   | Invariant mass of the \htt{} candidate                          |
 | $\mbb$       | Invariant mass of the \hbb{} candidate                          |
 |--------------+-----------------------------------------------------------------|
+
+#+NAME: fig:reg_tautau
+#+CAPTION: Regression.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/reg_H_m.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/reg_HH_m_signals.pdf]]
+#+END_figure

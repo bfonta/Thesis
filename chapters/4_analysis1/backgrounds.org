@@ -2,6 +2,13 @@
 :CUSTOM_ID: sec:backgrounds
 :END:
 
+A complete understanding of all backgrounds that could mimic the signal of interest is a complex but essential step, and the only way to observe rare phenomena and make precise measurements.
+If a given \ac{MC} sample is accurate enough, /\ac{MC}-driven/ methods are used to perform background estimates.
+If instead, despite all efforts, significant discrepancies are known to exist between simulation and data, the analysts might resort to /data-driven/ methods, where real data outside the \ac{SR} is instead exploited, as long as it is kinematically similar to the \ac{SR}.
+In this work, we consider the first approach for all background sources except for the multijet background, where the data-driven ABCD method is employed.
+Residual discrepancies are corrected /a posteriori/, via dedicated \acp{SF}, detailed in [[#sec:mc_corrections]].
+In the following, we describe the modeling of all background sources, given emphasis to multijet, \ac{DY} and $\ttbar$, which are the dominant background processes in the \xhhbbtt{} analysis.
+
 * Multijet
 :PROPERTIES:
 :CUSTOM_ID: sec:multijet_bckg
@@ -9,27 +16,27 @@
 
 Collision events produce large numbers of jets, mostly coming from gluons or light jets.
 Such jets can be ocasionally misreconstructed as \tauh{} particles, or also as jets issued from heavier quarks.
-The \bbtt{} topology can thus be faked whenever one or two jets are misidentified as \tauh{} candidates, and two additional b-jet candidates are present.
-The multijet background affects in particular the \tautau{} channel, where no lepton can be used to constrain such background.
-The modelling of \ac{QCD} background from simulations presents two major challenges.
-Firstly, large samples are needed, especially in the distribution tails of the \ac{SR}, given the relatively low probability (\num{e-2} to \num{e-3}) for a quark or gluon jet to be identified as a \tauh{} candidate, plus the additional requirement of two jets passing the b-jet selections.
-Secondly, the misidentification of quark and gluon jets as \tauh{} candidates suffers from imperfect modelling, since detector effects are hard to quantify.
+The \bbtt{} topology can thus be faked whenever one or two jets are misidentified as \tauh{} candidates, and two additional jet candidates are present.
+The multijet background affects in particular the \tautau{} channel, where no lepton can be used as a background-suppressing handle.
+The modeling of \ac{QCD} background from simulations presents two major challenges.
+Firstly, large samples are needed, especially in the distribution tails of the \ac{SR}, given the relatively low probability (\num{e-2} to \num{e-3}) for a quark or gluon jet to be identified as a \tauh{} candidate, together with the presence of two jets passing the b jet selections.
+Secondly, the misidentification of quark and gluon jets as \tauh{} candidates suffers from imperfect modeling, given that detector effects are hard to quantify.
 As a consequence, the \ac{QCD} multijet background is estimated via a data-driven method, exploiting jet-enriched regions.
 
-The basic idea is to find fully uncorrelated variables upon which the \ac{SR} selection depends on, and invert the cuts to obtain signal-free regions.
-The latter can be used to estimate both the shape and the normalization of the \ac{QCD} background in the \ac{SR}, without using it directly.
-The method is dubbed ABCD, and explicitly divides the analysis phase-space into four regions, based on the isolation of the tau lepton and on the electric charges of the lepton pairs.
-One of the regions is the \ac{SR}, as defined in [[#sec:selection]] for each category, while the others are sidebands used to estimate the background in the \ac{SR}.
-The tau pairs are classified as SS when they have the same charge sign, or OS, when the signs are opposite.
-In [[fig:QCDregions]] we illustrate how the phase-space is divided, where region A denotes the \ac{SR}.
+The basic idea is to find fully uncorrelated variables upon which the \ac{SR} selection depends on, and invert their selection cuts to obtain signal-free regions.
+Those can be used to estimate both the shape and the normalization of the \ac{QCD} background in the \ac{SR}, without using the \ac{SR} directly.
+The method is dubbed ABCD, since it explicitly divides the analysis phase-space into four regions: A, B, C and D.
+In our analysis, the regions are based on the isolation of the \tauh{} lepton and on the electric charges of the lepton pairs.
+The A region corresponds to the \ac{SR}, as defined in [[#sec:selection]] for each category, while the B, C and D regions are sidebands used to estimate the background in the \ac{SR}.
+In [[fig:QCDregions]] we illustrate how the phase-space is divided.
+The tau pairs are classified as SS when they have the same charge sign, or OS, when they have opposite charge signs.
 In region B, the pair charge requirement is inverted, thus including SS pairs of isolated leptons.
-In regions C (OS) and D (SS), the =DeepTau= selection is inverted by requiring the \tauh{} candidate to fail the =Medium= \ac{WP} of the =DeepTauVSjet= discriminator, but still passing the =VVVLoose= one.
+In regions C (OS) and D (SS), the =DeepTau= selection is inverted by requiring the \tauh{} candidate to fail the =Medium= \ac{WP} of the =DeepTauVSjet= discriminator, but still pass the =VVVLoose= threshold (see [[tab:deeptau_wps]]).
 These regions thus include non-isolated leptons.
-A list of =DeepTau= \acp{WP} is given in [[tab:deeptau_wps]].
 In the \tautau{} final state, only the =DeepTau= selection of the \tauh{} candidate with the lowest $\pt$ is inverted.
 
 #+NAME: fig:QCDregions
-#+CAPTION: Sketch of the four ABCD regions used to estimate the multijet \ac{QCD} background.
+#+CAPTION: Sketch of the four ABCD regions used to estimate the multijet background. Region A corresponds to the \ac{SR}, while the other regions are sidebands used to estimate the multijet background in the \ac{SR}. The phase-space division is based on the isolation of the \tauh{} and on the relative sign of the $\tau$ lepton charges. More details are provided in the text.
 #+BEGIN_figure
 \centering
 \begin{tikzpicture}[scale=2, every node/.style={scale=1.5}]
@@ -58,45 +65,44 @@ In the \tautau{} final state, only the =DeepTau= selection of the \tauh{} candid
   \node [black, anchor = north west] at (2.05,3.85) {SS};
   \node [black, anchor = north west] at (2.05,3.55) {non-isolated};
 
-  \node [black, rotate=30, anchor = east] at (-0.02,3.05) {\textbf{iso}};
-  \node [black, rotate=30, anchor = east] at (-0.02,1.15) {\textbf{anti-iso}};
+  \node [black, rotate=30, anchor = east] at (-0.02,3.05) {\textbf{anti-iso}};
+  \node [black, rotate=30, anchor = east] at (-0.02,1.15) {\textbf{iso}};
   \node [black, anchor = north] at (1.15,-0.01) {\textbf{OS}};
   \node [black, anchor = north] at (3.05,-0.01) {\textbf{SS}};
 
 \end{tikzpicture}
 #+END_figure
 
-The distribution shape of the multijet \ac{QCD} contribution in any given variable can be estimated from the B or C regions.
+The shape of the multijet \ac{QCD} contribution in any given variable can be estimated from the B or C regions.
 Yields from all other \ac{MC}-based backgrounds are subtracted from the data.
 Given some inevitable correlations between the lepton pair charge and the $\tau$ isolation, the remaining number of events has to be corrected by a multiplicative factor given by the ratio between the two control regions left.
-Hence, if region B is chosen to define the shape of the \ac{QCD} background, the correction to its yield will be given by the C/D ratio.
-Equivalently, if the region C is chosen, the yield will be corrected by B/D:
+Hence, if region B is chosen to define the shape of the \ac{QCD} background, the correction to its yield will be given by the C/D ratio, or /transfer factor/.
+Equivalently, if region C is chosen, the yield will be corrected by B/D:
 
 #+NAME: eq:abcd_products
 \begin{equation}
-\text{N}_{\text{A}} = \text{N}_{\text{B}} \times \frac{\text{N}_{\text{C}}}{\text{N}_{\text{D}}} \:\:\: \text{or} \:\:\: \text{N}_{\text{A}} = \text{N}_{\text{C}} \times \frac{\text{N}_{\text{B}}}{\text{N}_{\text{D}}}
+\text{N}_{\text{A}} = \text{N}_{\text{B}} \times \frac{\text{N}_{\text{C}}}{\text{N}_{\text{D}}} \:\:\: \text{or} \:\:\: \text{N}_{\text{A}} = \text{N}_{\text{C}} \times \frac{\text{N}_{\text{B}}}{\text{N}_{\text{D}}} \: ,
 \end{equation}
 
-\noindent where, despite being identical, the two expressions are experimentally obtained in a different way, and are thus explicitly written.
-The ratios are calculated after the subtraction of the other \ac{MC}-based backgrounds, just like for the shape region.
-The ABCD method can be therefore described as an estimation of the \ac{QCD} contribution in the signal region, where the estimated \ac{QCD} shape in any given distribution is obtained from the shape of the \ac{MC}-subtracted data distribution in regions B or C, and the estimation of the \ac{QCD} yield in the signal region is obtained from \ac{MC}-subtracted data yields as given by B $\times$ C/D or C $\times$ B/D.
+\noindent where, despite being identical, the two expressions are experimentally obtained in a different way, as one component (the ratio) provides the event yield and the other provides the shape of the \ac{SR}.
+Both the shape and the ratios are calculated after subtracting all other \ac{MC}-based backgrounds.
 The two alternative shapes, from regions C and B, are used as the upper and lower templates for the \ac{QCD} shape uncertainty, and the nominal value is obtained by averaging the two options in [[eq:abcd_products]].
 This effectively symmetrizes systematic uncertainties, discussed in [[#sec:systematics]], ensuring the nominal value always lies between the up and down variations.
 
 Several tests are performed to evaluate the validity of the ABCD method for \ac{QCD} estimation. 
-In the first test, the stability of the estimated \ac{QCD} normalization has been evaluated by modifying the definition of the C and D regions by using four different =DeepTau= \acp{WP}.
-The C and D regions are then defined as events where the \tauh{} candidate passes a \ac{WP} $\mathcal{A}$ =DeepTauVSjet= discriminator, but not a \ac{WP} $\mathcal{B}$, where $\mathcal{B}$ is looser than $\mathcal{A}$.
+In the first test, the stability of the estimated yield is evaluated by modifying the definition of the C and D regions, using four different =DeepTau= \acp{WP}.
+The C and D regions are then defined as regions where the \tauh{} candidate passes a \ac{WP} $\mathcal{A}$ from the =DeepTauVSjet= discriminator, but not a \ac{WP} $\mathcal{B}$, where $\mathcal{B}$ is tighter than $\mathcal{A}$.
 Four alternatives are tested:
 + $\mathcal{A}: \text{\texttt{VVVLoose}}$, $\mathcal{B}: \text{\texttt{VVLoose}}$
 + $\mathcal{A}: \text{\texttt{VVLoose}}$, $\mathcal{B}: \text{\texttt{VLoose}}$
 + $\mathcal{A}: \text{\texttt{VLoose}}$, $\mathcal{B}: \text{\texttt{Loose}}$
 + $\mathcal{A}: \text{\texttt{Loose}}$, $\mathcal{B}: \text{\texttt{Medium}}$  
-In these four regions, the ratio of C/D yields is computed and compared to the value of the C/D yield ratio obtained with the standard definition of C and D regions. 
+In these four regions, the ratio of C/D yields is computed and compared to the value of the C/D yield ratio obtained with the standard definitions of the C and D regions. 
 The level of compatibility between the measurements is satisfactory.
-In the second test, the \ac{QCD} estimation obtained from the ABCD method is compared with a direct \ac{MC}-subtracted data sideband region where signal presence is negligible.
-This sideband region has been defined by inverting the $\mtt$ and $\mbb$ mass cuts from the *res1b* category.
-Again, the \ac{QCD} estimation obtained with the ABCD method was found to be in good agreement with the \ac{MC}-subtracted data in this sideband, validating the \ac{QCD} estimations obtained in the analysis.
-In the third and final test, it is verified that the shapes extracted from the B and C regions are indeed compatible.
+In the second test, the ABCD estimation is compared to a direct \ac{MC}-subtracted data sideband region where signal presence is negligible.
+This sideband region has been defined by inverting the $\mtautau$ and $\mbb$ mass cuts from the \rescat{1} category.
+Again, the \ac{QCD} estimation obtained with the ABCD method is found to be in good agreement with the \ac{MC}-subtracted data in this sideband, validating the \ac{QCD} estimations obtained in the analysis.
+In the third and final test, it is verified that the shapes extracted from the B and C regions are compatible.
 Being all tests successful, the ABCD method is used for estimating the multijet background in the \xhhbbtt{} analysis, as it had already been the case with previous analysis iterations.
 
 Some alternative methods have historically been explored for multijet estimation.
@@ -105,10 +111,9 @@ Some variations of the ABCD method have instead been explored, adopting more tha
 The idea is that some residual correlations can exist between the two variables defining the ABCD phase-space.
 By adding an "E" and "F" regions, one can leverage the additional information from the added sidebands to better estimate the multijet background.
 This method is appropriately called "alphabet", and has been extended into higher-dimensionality spaces [[cite:&corcodilos_thesis]].
-Additionally, the transfer factors can be learned by \acp{DNN} or \acp{BDT}, such as in the resolved \ac{CMS} \hhbbbb{} analysis [[cite:&bbbb_resolved_cms]].
-Despite all possible improvements, it is important to state that the main drive for the proposals above is the possibility to obtain a very precise estimate leading to smaller related systematic uncertainties.
-However, the \xhhbbtt{} measurement is currently limited by statistical uncertainties, and so the reduction of systematic uncertanties is not as important as for other analysis with larger cross-sections.
-We think for instance about the \hgg{} process [[cite:&higgs_mass_cms]], where the mass of the Higgs has currently similar contributions from statistical and systematic uncertainty sources.
+Furthermore, the transfer factors can be learned by \acp{DNN} or \acp{BDT}, such as in the resolved \ac{CMS} \hhbbbb{} analysis [[cite:&bbbb_resolved_cms]].
+Despite all possible improvements, it is important to state that the main drive for the proposals above is the possibility to obtain a very precise estimate, leading to smaller systematic uncertainties.
+However, the \xhhbbtt{} measurement is currently limited by statistical uncertainties, and so the reduction of systematic uncertanties is not as important as for other analysis with larger cross sections times \acp{BR}.
 On top, the definition of additional phase-space regions tends to increase statistical uncertanties.
 Overall, taking also into account the systematics discussed in [[#sec:syst_norm]], the ABCD method is deemed sufficient for the analysis here reported.
 
@@ -117,27 +122,23 @@ Overall, taking also into account the systematics discussed in [[#sec:syst_norm]
 :CUSTOM_ID: sec:drellyan_bckg
 :END:
 
-The contribution of the \drellyan{} \ac{DY} + jets events is estimated using \ac{MC} simulations. 
+The contribution of the \ac{DY} \drellyan{} plus jets events is estimated using \ac{MC} simulations. 
 \Ac{NLO} samples are used to model it.
 Within the \ac{CMS} Collaboration, \ac{DY} samples are generated in three separate ways:
 + as an inclusive sample;
-+ in slices of $\pt^{\text{Z},\,\text{Gen}}$: ]0; 50], ]50;100], ]100, 250], ]250;400], ]400,650], ]650;$\infty$[.
++ in slices of $\pt^{\text{Z},\,\text{Gen}}$ (\si{\GeV} units): ]0; 50], ]50;100], ]100, 250], ]250;400], ]400,650], ]650;$\infty$[;
 + in slices of the number of jets $N_{\text{jet}}$: 0, 1 and 2 jets.
 In order to maximize the number of available \ac{MC} events for such a significant background, all three types are added together, using a simple technique called /stitching/.
-There, the samples being added are scaled back down to the total \ac{DY} inclusive cross-section, listed in [[tab:background_xsecs1]].
+There, the samples being added are scaled back down to the total \ac{DY} inclusive cross section, listed in [[tab:background_xsecs1]].
 
 A /stitching weight/ of 1/3 is applied to all \ac{DY} events, given the three sample types above, to avoid event duplication.
-There is however an exception, in which events with $\pt^{\text{Z},\,\text{Gen}}=0\,\si{\GeV}$ are weighted by 1/2, since the first bin of the \ac{pt}-sliced samples does not include the events zero generated Z boson \ac{pt}.
-The quality of the \ac{DY} \ac{MC} simulation is checked in a dedicated \mumu{} \ac{CR} defined by requiring the presence of two muons, one of them firing the \smu{} triggers described in [[#sec:legacy_triggers]], plus the selections of the *res1b* category, as introduced in [[#sec:categorization]].
-The following additional selections are applied to ensure a \ac{DY} background fraction larger than 95%:
-+ $\Delta R(\mu,\mu)$ larger than 0.1;
-+ muon pair invariant mass between \num{80} and \SI{100}{\GeV};
-+ \ac{MET} below \SI{45}{\GeV}.
-[[fig:DY_CR_plots]] shows the distribution of two kinematic variables in the \mumu{} channel for the 2018 data-taking era, namely the \ac{pt} of the first b-jet and the \ac{eta} of the first lepton.
+There is however an exception, in which events with $\pt^{\text{Z},\,\text{Gen}}=0\,\si{\GeV}$ are weighted by 1/2, since the first bin of the \ac{pt}-sliced samples does not include events with zero generated Z \ac{pt}.
+The quality of the \ac{DY} \ac{MC} simulation is checked in the \rescat{1}-like \ac{DY} \ac{CR}, defined in [[#sec:control_regions]].
+[[fig:DY_CR_plots]] shows the distribution of two kinematic variables in the \mumu{} channel for the 2018 data-taking era, namely the \ac{pt} of the first b jet and the \ac{eta} of the first lepton.
 A good data/MC agreement is obtained.
 
 #+NAME: fig:DY_CR_plots
-#+CAPTION: Distribution of the \ac{pt} of the first b-jet (left) and the \ac{eta} of the first lepton (a muon) in the \mumu{} channel for the 2018 data-taking period.
+#+CAPTION: Distribution of the \ac{pt} of the first b jet (left) and the \ac{eta} of the first lepton (a muon) in the \mumu{} channel for the 2018 data-taking period.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -147,16 +148,17 @@ A good data/MC agreement is obtained.
 #+END_figure
 
 * Top/anti-top pairs
-The contribution of the $\ttbar$ background is modelled using \ac{MC} simulations, split according to the decays of the top quarks, but added back together after processing.
-Each top decay to a b quark an a W boson, which can in turn decay leptonically or hadronically.
+The contribution of the $\ttbar$ background is modeled using \ac{MC} simulations.
+Virtually all top quarks decay to a b quark and a W boson, which can in turn decay leptonically or hadronically.
 Samples are thus devided into fully-hadronic, semi-leptonic (or, equivalently, semi-hadronic), and fully-leptonic samples.
+The agreement with data is found to be sufficient.
 
 For completeness, we analyzed the purity of $\ttbar$ samples in terms of the presence of at least one fake \tauh{}.
 The results can be seen in [[tab:ttbar_fake_tau_purity]].
 The more modest presence of fakes in the leptonic channels comes from the requirement of an electron or a muon, which removes the fakes present in fully-hadronic $\ttbar$ events.
-There is also a higher fraction of fakes in the boosted category with respect to the resolved categories.
+There is also a higher fraction of fakes in the \boostcat{} category with respect to the resolved categories.
 This happens because $\tau$ reconstruction algorithms perform worse in boosted regimes.
-Finally, we note the additional requirement on the b-jet of the res2b category slightly improves the purity, as expected.
+Finally, we note the additional requirement on the b jet of the \rescat{2} category slightly improves the purity, as expected.
 
 #+NAME: tab:ttbar_fake_tau_purity
 #+CAPTION: Fraction of $\ttbar$ events with at least one fake \tauh{}, in all analysis channels and categories. The numbers between parenthesis refer to the total number of weighted events across fully-leptonic, semi-leptonic and fully-hadronic $\ttbar$ samples. The baseline selection refers to [[#sec:selection]] before applying any categorization. Categories are defined in [[#sec:categorization]].
@@ -170,7 +172,7 @@ Finally, we note the additional requirement on the b-jet of the res2b category s
 |-----------+------------------+-----------------+-----------------+---------------|
 
 #+NAME: fig:ttbar_CR_plots
-#+CAPTION: Distribution of the \ac{pt} of the second b-jet (left) and the \ac{eta} of the first lepton (a muon) in the \mutau{} channel for the 2018 data-taking period.
+#+CAPTION: Distribution of the \ac{pt} of the second b jet (left) and the \ac{eta} of the first lepton (a muon) in the \mutau{} channel for the 2018 data-taking period.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -179,14 +181,44 @@ Finally, we note the additional requirement on the b-jet of the res2b category s
 [[~/org/PhD/Thesis/figures/analysis1/control_plots/plot_ttbarCR_SR_MuTau_2018_dau1_eta.pdf]]
 #+END_figure
 
-* Others
-All remaining processes are modelled, in shape and normalization, using solely \ac{MC} samples.
+** MC Mismodeling
+Contrary to what is observed at the time of writing, during the initial stages of the PhD work a $\ttbar$ \ac{MC} mismodelling was observed.
+The issue was predominant in the \eletau{} and \mutau{} channels, just as it had been observed in the previous nonresonant iteration of the \bbtt{} analysis.
+The discrepancies did at some point disappear, likely due to the implementation of several corrections that were missing at the time.
+Still, we here report a method to fix such issues, following \newcite{higgs_bbtautau_nonres}, since it might become useful in case residual mismodelings appear in future iterations. 
+
+We set to fix the discrepancy by rescaling the normalization of the $\ttbar$ background to the data.
+The $\ttbar$ \ac{CR} is used.
+Assuming the region has no signal, we fit the CR by setting the normalization of $\ttbar$ as a free-floating parameter.
+No systematics are introduced, as they can partially encode the $\ttbar$ normalization.
+The result of the fit provides a constant factor which can be used to multiply the $\ttbar$ yield in the \ac{SR}.
+In [[fig:ttbar_mismodel]] we show how the method worked when it was needed.
+The data selection there performed is outdated.
+
+#+NAME: fig:ttbar_mismodel
+#+CAPTION: Example of the $\ttbar$ mismodeling correction in the \mutau{} channel, in 2018. The $\ttbar$ background appears in yellow. (LEft) $\pt$ of the b-jet with the highest \hhbtag{} score before applying the $\ttbar$ \ac{SF}. (Middle) $\pt$ of the same b-jet in the $\ttbar$ \ac{CR}. (Right) $\pt$ of the same b-jet after applying the $\ttbar$ \ac{SF}.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/ttSF1.png]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/ttSF2.png]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/ttSF3.png]]
+#+END_figure
+
+The result of the fit can be validated by repeating it on the \ac{CR} and \ac{SR} put together, where a cut is applied to the analysis' final discriminant, so that only background-like events are used, avoiding biases from looking at the signal-sensitive region.
+The cut ensures the usage of a signal depleted region, avoiding biases.
+The result of the \ac{CR} and \ac{CR}+\ac{SR} fits should match.
+
+* Other backgrounds
+All remaining processes are modeled, in shape and normalization, using solely \ac{MC} samples.
 Cross sections can be inspected in [[#sec:samples_bckg]].
 Processes involving the presence of two or three vector bosons, like ZZ or WWZ, are modeled, in shape and normalization,
 through inclusive samples.
-For the contributions arising from \ac{EW} processes with one V boson plus 2 jets, from single top both in the s- and t-channels, or from $\ttbar$ pairs produced in association with a single boson or a pair of vector bosons, the cross sections are extremely small, but are nevertheless taken into account.
-In the case of the W + jets background, the same happens after requiring b-tagged jets, especially in the res2b category.
-The single Higgs production cross section is also tiny compared to the dominant backgrounds.
-However, \ac{ggF} and \ac{VBF} production of single Higgs, also in association with a vector boson or a pair of top quarks (ttH), have similar decay products when compared to the \hhbbtt{} signal, and are therefore considered as backgrounds too.
-Backgrounds with a Higgs consider $\mh = 125\,\si{\GeV}$.
-Finally, the nonresonant Higgs boson pair production is also considered as a background source, assuming $\lh{3} = 1$.
+For the contributions arising from \ac{EW} processes with one W or Z boson plus 2 jets, from single top both in the s- and t-channels, or from $\ttbar$ pairs produced in association with a single boson or a pair of vector bosons, the cross sections are extremely small, but are nevertheless taken into account.
+In the case of the W + jets background, the impact in the analysis becomes very small once b-tagged jets are required, especially in the \rescat{2} category.
+The single Higgs production cross section is also tiny, when compared to the dominant backgrounds.
+However, such processes have the potential to have very similar $\mhh$ topologies as the signals of interest, and are also considered.
+This is the case for \ac{ggF} and \ac{VBF} Higgs production, but also when a Higgs boson is produced in association with a vector boson or a pair of top quarks.
+Finally, the nonresonant \ac{SM} Higgs boson pair production is also added as a background source, assuming $\lh{3} = 1$.

@@ -96,11 +96,11 @@ For \eletau{} and \mutau{}, the lepton is by definition considered the first lep
 #+CAPTION: Comparison of the weighted number of signal events obtained after applying two scenarios for the trigger regions, for the three analysis channels. In all channels, the region giving precedence to the legacy triggers provides an improvement for intermediate masses. Equivalently, the legacy triggers are more signal efficient than the \stau{} trigger. This unexpected result can be due to a \ac{pt} cut on the tau track, not present in the legacy triggers. The plots refer to the \spin{2} hypothesis, but the results for \spin{0} are nearly identical.
 #+BEGIN_figure
 \centering
-#+ATTR_LATEX: :width .40\textwidth :center
+#+ATTR_LATEX: :width .325\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/etau_test_compare_gains.pdf]]
-#+ATTR_LATEX: :width .40\textwidth :center
+#+ATTR_LATEX: :width .325\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/mutau_test_compare_gains.pdf]]
-#+ATTR_LATEX: :width .40\textwidth :center
+#+ATTR_LATEX: :width .325\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/tautau_test_compare_gains.pdf]]
 #+END_figure
 
@@ -112,6 +112,18 @@ The $\mx$ region at \SI{\sim 1}{\TeV} is particularly relevant, given the \bbtt{
 The results imply that the \stau{} trigger is less efficient than the legacy triggers, for the three channels.
 This is surprising for the \tautau{} channel, where the legacy trigger is a double $\tau$ trigger.
 We believe the difference is due to the additional track \ac{pt} cut at \SI{50}{\GeV} present only in the \stau{} \ac{HLT} path.
+
+#+NAME: fig:trigger_acceff
+#+CAPTION: Acceptance times efficiency for the trigger selections, in the four analysis channels, considering only events in the trigger regions of the analysis. The denominator refers to the loosest possible kinematic cuts, before performing any of the selection steps detailed in [[#sec:selection]]. The improvement brought by the new triggers is clear.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/AccEff_ETau.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/AccEff_MuTau.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/AccEff_TauTau.pdf]]
+#+END_figure
 
 #+NAME: fig:trigger_improvement
 #+CAPTION: Trigger acceptance gain for 2018 in the \eletau{} (top), \mutau{} (middle) and \tautau{} channels, with respect to the legacy triggers, in percentage, when considering the addition of the $\metnomu$ and \stau{} triggers. The analysis trigger regions are taken into account. The expected statistics improvement is significant, especially for high $\mx$ values. We show the \spin{0} hypothesis, but the result with the \spin{2} hypothesis is very similar.
@@ -125,8 +137,9 @@ We believe the difference is due to the additional track \ac{pt} cut at \SI{50}{
 [[~/org/PhD/Thesis/figures/analysis1/trigger_acceptance_gains_tautau.pdf]]
 #+END_figure
 
-The expected relative signal acceptance gain from adding the $\metnomu$ and \stau{} triggers is shown in [[fig:trigger_improvement]] for the three analysis channels, after applying the analysis selection detailed in [[#sec:selection]].
-Analysis weights are taken into account, also for the displayed uncertainties.
+The acceptance times efficiency gains from adding the $\metnomu$ and \stau{} triggers are displayed in [[fig:trigger_acceff]], for the three channels, using the \spin{0} samples, and without applying any selection, except for requiring the trigger regions described above.
+The improvement is obvious, and larger in the \tautau{} channel.
+Similarly, the expected relative signal acceptance gains with the new triggers are shown in [[fig:trigger_improvement]] for the three analysis channels, after applying the analysis selection detailed in [[#sec:selection]], and after taking into account the analysis weights.
 The graphs show the impact on the \spin{0} signal, as a function of $\mx$. 
 The results are observed to be comparable for \spin{2} samples.
 We require the \taus{} to be matched with generated objects, identified based on their leptonic or hadronic $\tau$ decays.

@@ -2,20 +2,21 @@
 :CUSTOM_ID: sec:selection
 :END:
 
-The observation of \xhhbbtt{} naturally requires the capability to precisely reconstruct the two pairs of b-jets and tau leptons.
+The observation of \xhhbbtt{} naturally requires the capability to precisely reconstruct the two pairs of b jets and tau leptons.
 Having introduced all single physics objects included in the \bbtt{} topology, we can now describe in detail the full event selection, which aims at providing the subset of events processed that match the signal of interest.
 However, the selection should not be too strict, or equivalently lead to a very high \bbtt{} purity; that could hinder analysis steps to come, and specifically affect the final discriminator, by reducing its training data size.
 Given the rarity of HH processes, it is imperative to measure as many \hhbbtt{} events as possible; the goal of the selection is to maximize signal acceptance.
 
 The selection starts from the data passing the analysis triggers, and is performed in various stages, as also highlighted in [[fig:analysis_flow]].
-The stages proceed in order, by targeting single objects first, such as b-jets, leptons and \tauhs{}, and later pairs of such quantities, as defined by the decays of the two Higgs bosons.
+The stages proceed in order, by targeting single objects first, such as b jets, leptons and \tauhs{}, and later pairs of such quantities, as defined by the decays of the two Higgs bosons.
 Once the two H candidates have been found, an additional two-dimensional invariant mass cut is applied on the $\mbb$ and $\mtautau$ plane, to further restrict the phase-space of interest, removing potential outliers, and to provide validation \acp{CR}.
 A categorization step immediately follows, where /categories/ are defined.
 This step separates events according to the topology of the b-quark pair, creating two resolved and one boosted category.
 The categories are created in order to boost the sensitivity of a dedicated /discriminant variable/, which is described in the next Chapter.
 
-In the following, we detail the selection cuts applied to leptons and b-jets in [[ref:sec:tau_pair_sel,sec:b_pair_sel]], and mention the invariant mass cut in [[#sec:mass_cut]].
-We then proceed by describing the categorization in [[#sec:categorization]].
+In the following, we detail the selection cuts applied to leptons and b jets in [[ref:sec:tau_pair_sel,sec:b_pair_sel]].
+All events that satisfy the selection on tau leptons and b-quark pairs are said to belong to the \basecat{} selection.
+We then proceed by introducing the invariant mass cut in [[#sec:mass_cut]] and the categorization step in [[#sec:categorization]].
 Finally, we provide the definitions of the two \acp{CR} used in the analysis, which are used to train the discriminant and are visualized in [[#sec:control_regions]].
 
 * Tau Lepton Pair
@@ -48,7 +49,7 @@ The reasoning is to use corrections as close to POG recommendations as possible,
 
 All events lying above the minimum $\pt$ or below the maximum $|\eta|$ values reported in [[tab:max_min_cuts]] are considered, as long as they satisfy the triggers described in [[#sec:triggers]], and as long as the offline objects are geometrically matched to the online \ac{HLT} paths.
 The values in [[tab:max_min_cuts]] come from hard limits imposed by the isolation and \ac{ID} trigger \acp{SF} used in the analysis.
-We look for lepton candidates passing simple kinematic, isolation and \ac{ID} criteria, as summarized in [[tab:chn_sel]].
+We look for lepton candidates passing simple kinematic, isolation and \ac{ID} criteria, as summarized in [[tab:chn_sel]], where the $\Delta_{xy}$ and $\Delta_{z}$ distances are also taken into account, measuring the compatibility with the \ac{PV}.
 Additionally, the two objects in a pair should have opposite charges, and should pass \ac{pt} thresholds based on the triggers they fired.
 An exception occurs for the $\metnomu$ trigger, since it imposes no \ac{pt} cut, and can thus explore the full phase-space presented in [[tab:max_min_cuts]].
 The \ac{pt} thresholds depend on the \ac{HLT} trigger path fired by the event:
@@ -83,7 +84,7 @@ However, nothing forbids an event to include, on top of a \tauh{}, two muons or 
 For those cases, there would be multiple ways to choose the "correct" lepton, \ie{} the lepton truly associated to the Higgs boson decay.
 To simplify the selection and avoid taking the wrong decision, the /third lepton veto/ is implemented, were events with a third lepton are rejected.
 This veto also helps removing background events with two leptons and a fake \tauh{}, as for instance diboson processes, or fully leptonic decays of $\ttbar{}$.
-The third lepton selection criteria are very similar to the ones for the "standard" leptons, just slightly looser, in order to remove most situations where ambiguity migh tbe present.
+The third lepton selection criteria are very similar to the ones for the "standard" leptons, just slightly looser, in order to remove most situations where ambiguity might be present.
 
 #+NAME: tab:chn_sel
 #+CAPTION: Selections defining the analysis channels, including the third lepton vetos. Besides the cuts listed in the table, opposite charges are requested between any two leptons, and the \ac{pt} thresholds follow [[eq:ptTreshold]], except when the the leptons fired only \ac{MET}, in which case no specific cuts are requested, and [[tab:max_min_cuts]] is instead considered. The $|\eta|$ cut on the second lepton in \eletau{} and \mutau{} can be 2.1 if the event only fires the cross trigger. With the exception of not applying a $\Delta_{xy}$ cut on \tauhs{}, the $\Delta_{xy}$ and $\Delta_{z}$ cuts below are identical for any two objects in a pair, are are provided in \si{\mm}. The isolation cuts marked with $\dagger$ are applied to the isolation considering all \ac{PF} muon candidates, but also to an isolation considering only muon tracks.
@@ -107,123 +108,81 @@ We remind the reader that the phase-space is always divided into three regions, 
 :CUSTOM_ID: sec:b_pair_sel
 :END:
 
-We now turn to the \hbb{} process, where jets issued from a Higgs boson must be selected.
-The jet selection criteria are as follows:
-+ two AK4 jets with $\pt > 20\,\si{\GeV}$ and $|\eta| < 2.5$ ($|\eta| < 2.4$) for 2017 and 2018 (2016), with a $\Delta \text{R} > 0.5$ distance between each jet and each selected $\tau$ candidate;
-+ one AK8 boosted jet, with the distance between the jet and both selected $\tau$ candidates of $\Delta \text{R} > 0.8$.
+We now turn to the \hbb{} process, where jets coming from a Higgs boson must be selected, following at least one of the below criteria:
++ Two AK4 jets with $\pt > 20\,\si{\GeV}$ and $|\eta| < 2.5$ for 2017 and 2018, with a $\Delta \text{R} > 0.5$ distance between each jet and each selected $\tau$ candidate.
+  For 2016 the $|\eta| < 2.4$ is instead used.
++ One AK8 boosted jet, with the distance between the jet and both selected $\tau$ candidates of $\Delta \text{R} > 0.8$.
 
-\noindent On top, and based on studies done for Ref. [[cite:&cms_hh_bbtt]], the $H \rightarrow bb$ selection was improved by developing a new algorithm to identify b-jets, dubbed \hhbtag{}.
-This algorithm is based on a neural network architecture and it is described in [[#sec:hh_btag]].
-For each event belonging to one of the resolved categories, all possible b-jet candidates are assigned a score by the \hhbtag{} algorithm.
-The two jets with the highest score are taken to be the two b-jets originating from the decay of the Higgs boson.
-In the boosted category the \hhbtag{} algorithm is not employed; the \ac{PNet} discriminant [[cite:&particle_net]] is used instead, as explained in [[#sec:categorization]].
+Additionally, the \hbb{} selection is improved by applying a discrimination algorithm to identify b jets, dubbed \hhbtag{}.
+The algorithm is based on studies done in the context of \newcite{cms_hh_bbtt}.
+At its core, a \ac{DNN} architecture assigns a score between 0 and 1 to all possible AK4 b jet candidates, and the two jets with the highest score are selected.
+The score stands for on how confident the model is that a particular b jet originated from a \hbb{} decay.
+The architecture of the model is characterized by the following elements:
++ Five concatenated \ac{LSTM} layers [[cite:&lstm]], using a sigmoid activation function. After each layer, a batch normalization step is applied.
++ Ten \ac{TDD} layers [[cite:&keras]], with sigmoid as activation function. A batch normalization step is also applied between each layer.
++ Binary cross-entropy as the loss function [[cite:&cross_entropy]], minimized with the =AdamW= algorithm [[cite:&adam]].
++ A final \ac{TDD} layer with only one unit and with a sigmoid as activation function, providing the final score.
 
-** HH b-tagging network
-:PROPERTIES:
-:CUSTOM_ID: sec:hh_btag
-:END:
+\noindent The algorithm has been retrained with \ac{UL} data, using both nonresonant and resonant \ac{ggF} \bbtt{} signal samples, in order to provide the best performance possible.
+The algorithm is trained via cross-validation with two folds, a procedure described in [[#sec:pdnn]].
+A total of 14 input features are considered, including the score of =DeepJet=, several kinematic variables, \ac{MET}.
+Categorical variables are also used, such as the data-taking year and decay channel.
+The performance of the algorithm is evaluated and compared to the previous version, and also to other b jet \ac{ID} algorithms, as shown in [[fig:hhbtag_comp]].
+The retrained version provides better results than all alternatives, across the full probed $\mx$ range.
+The so-called /purity/ is used as comparison metric:
+#+NAME: eq:purity
+\begin{equation}
+    \text{purity}^{\text{classifier}} = \frac{\text{N}^{\text{classifier}}_{\text{true}}}{\text{N}^{\text{classifier}}} \: ,
+\end{equation}
+\noindent where $\text{N}^{\text{classifier}}_{\text{true}}$ is the number of events in which the selection of the b jet pair candidate matched the ground truth's definition, and $\text{N}^{\text{classifier}}$ represents the total number of events where a candidate is reconstructed.
+The matching uses a $\Delta\text{R}<0.5$ cut around the direction of the reconstructed b jet.
 
-The introduction of deep learning techniques on the identification of jet, b-jet and hadronic tau decays has already been demonstrated to be well suited for improving the discovery significance within \ac{CMS}. 
-This section describes the \hhbtag{} algorithm, meant to improve the selection of b-jets in \hhbbtt{} events in CMS, and introduced in the nonresonant analysis [[cite:&higgs_bbtautau_nonres]].
-The same algorithm has been retrained with \ac{UL} data, using both nonresonant and resonant \bbtt{} samples, in order to provide the best performance possible.
-The performance of the algorithm is evaluated and compared with respect to the previous version and to the b-0jet identification algorithms already used in our analysis to the select the \hbb{} Higgs boson candidate: =DeepTau= and \ac{PNet}.
-
-@continues in the AN HH_Btag.tex@
-
-
-* Invariant Mass Cut
-:PROPERTIES:
-:CUSTOM_ID: sec:mass_cut
-:END:
-Events classified as resolved are required to have reconstructed visibile masses of the b and $\tau$ pairs within a rectangular window.
-In order to define the mass window interval, gluon-fusion \spin{0} and \spin{2} signal samples are utilized.
-The samples cover a range of masses spanning from \SI{250}{\GeV} to \SI{3}{\TeV}, and involve the production of resonance particles that subsequently decay into pairs of Higgs bosons and $\tau$ leptons.
-The samples were merged, considering all mass and spin configurations at once. 
-The three \mutau{}, \eletau{} and \tautau{} analysis channels have been considered to estimate the rectangular cuts.
-The event selection, in addition to the baseline requirements, includes the following conditions:
-
-+ presence of two resolved b-jet candidates for the \hbb{} candidate reconstruction, passing the loose bTag working point;
-+ b-jet hadron flavour equals 5, corresponding to the PDG code of the $b$ quark;
-+ $\tau$ leptons with opposite charge.
-
-\noindent The maximum and minimum values of the $\mbb$ and $\mtt$ visible masses are calculated from their 99.5% and 0.5% quantiles, and are estimated to be:
-
-+ $\mtt$ visible mass between \SI{20}{\GeV} and \SI{130}{\GeV};
-+ $\mbb$ between \SI{40}{\GeV} and \SI{270}{\GeV}.
-
-\noindent The cuts ensures a very high signal efficiency.
-To define the mass window interval, the limits for $\mbb$ are calculated first. 
-An additional requirement is then added while computing the limits for $\mtt$: to consider $\mbb$ only within the limits calculated in the previous step.
-The two-dimensional distribution of $\mbb$ versus $\mtt$ is displayed in [[fig:windowMassRegions]], where a red rectangle highlights the computed mass interval.
-We note that the visible mass signal distributions are similar for all mass points.
-
-#+NAME: fig:windowMassRegions
-#+CAPTION: Illustration of the rectangular window mass cut (in red) on top of signal (\SI{700}{\GeV} and \SI{1}{\TeV} for, respectively, the top and middle rows) and background (bottom row). The three analysis channels are represented in the left, middle and right columns.
+#+NAME: fig:hhbtag_comp
+#+CAPTION: Comparison of the purity for the \spin{0} \bbtt{} resonant signal, as a function of $\mx$, between the original (=v1=) and retrained (=v2=) \hhbtag{} versions, and two other \ac{CMS} algorithms, namely \ac{PNet} and =DeepJet= (also known as =DeepFlavour=). Purity is defined in [[eq:purity]]. The retrained algorithm clearly provides the best performance across the entire mass range.
 #+BEGIN_figure
-#+ATTR_LATEX: :width .325\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-700-GeV_etau_baseline_2018.pdf]]
-#+ATTR_LATEX: :width .325\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-700-GeV_mutau_baseline_2018.pdf]]
-#+ATTR_LATEX: :width .325\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-700-GeV_tautau_baseline_2018.pdf]]
-#+ATTR_LATEX: :width .325\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-1000-GeV_etau_baseline_2018.pdf]]
-#+ATTR_LATEX: :width .325\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-1000-GeV_mutau_baseline_2018.pdf]]
-#+ATTR_LATEX: :width .325\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-1000-GeV_tautau_baseline_2018.pdf]]
-#+ATTR_LATEX: :width .325\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/draw_mass_TT-DY_etau_baseline_2018.pdf]]
-#+ATTR_LATEX: :width .325\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/draw_mass_TT-DY_mutau_baseline_2018.pdf]]
-#+ATTR_LATEX: :width .325\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/draw_mass_TT-DY_tautau_baseline_2018.pdf]]
+\centering
+#+ATTR_LATEX: :width .9\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/purity_ggF_spin0_2018.pdf]]
 #+END_figure
 
-It has been shown that a more discriminant mass cut, altough providing a larger S/B ratio, results in a poorer limit when compared to the limit obtained with a \ac{DNN} discriminator [[cite:&higgs_bbtautau_nonres]].
-Given that the signal events are better discriminated by the parameterised DNN put in place for this analysis,
-the goal of applying the mass window is instead to remove significantly outlying background events in regions where no signal overlap is expected.
+For AK8 jets, the \hhbtag{} algorithm is not employed; the \ac{PNet} discriminant [[cite:&particle_net]] is used instead, as explained in [[#sec:categorization]].
 
 * Categorization
 :PROPERTIES:
 :CUSTOM_ID: sec:categorization
-:END:
+:END:    
+With the selection fully defined, we proceed to split selected events in orthogonal categories.
+The categories are meant to boost the analysis' sensitivity.
+That happens because, during the extraction of the final results, each category is separately fitted.
+In the limit where all categories have identical event topologies, the result of the fit should be equal to a fit performed on the selected events taken together.
+If the categories possess some distinguishing features, as is the case in our analysis, a per-category fit improves the result, since individual background sources can be better constrained.
 
-@ define "baseline selection" somewhere @
+The categorization scheme follows the angular radius parameters adopted in the reconstruction of jets within \ac{CMS}.
++ $\Delta \text{R}(\text{b},\text{b})\,> \,0.8$: each b-quark is reconstructed as a AK4 jet;
++ $0.4 \, < \, \Delta \text{R}(\text{b},\text{b})\,< \,0.8$: the two b-quarks are reconstructed both as two AK4 jets and as one large AK8 jet;
++ $\Delta \text{R}(\text{b},\text{b})\,< \,0.4$: the two b-quarks are reconstructed as an AK8 jet only.
+\noindent The so-called /resolved/ topologies refer to the first scenario, while /boosted/ topologies refer to the other two.
+In this analysis two resolved categories and one boosted category are defined, as follows:
++ Events with a reconstructed AK8 jet having $m_{\text{SoftDrop}} > 30\,\si{\GeV}$, $\pt > 250\,\si{\GeV}$, $\Delta \text{R}(\text{jet},\tau)\,> \,0.8$ for both \taus{}, and a \ac{PNet} discriminant score passing the \ac{LP} \ac{WP} are assigned to the \boostcat{} category.
+  The score was introduced in [[eq:pnet]].
++ Events with two AK4 jets and no AK8 jets, where only one of its b jet candidates passes the =Medium= \ac{WP} of =DeepJet,= are assigned to the \rescat{1} category.
++ Events with two AK4 jets and no AK8 jets, where both its b jet candidates pass the =Medium= \ac{WP} of =DeepJet=, are assigned to the \rescat{2} category.
+\noindent The \rescat{2} category provides the most sensitive measurements for resonance masses below \SI{\sim 700}{\GeV}, while the \boostcat{} category drives the analysis sensitivity for resonance masses above \SI{\sim 700}{\GeV}.
 
-These cuts remove the tails of the mass spectrum, and outliers in these regimes, easing the task of discriminators further down in the analysis chain.
-It also allow to define control regions with low signal contamination, useful to assess the proper modelling of some of the main analysis' backgrounds.
+The categories are attributed following a specific order of precedence, as illustrated in [[fig:cat_flowchart]], where \rescat{} has precedence over the other categories.
+Other possibilities were tried, namely giving the top precedence to the \boostcat{} category, but the choice used here provided the best final results.
 
-In the extraction of the final results, each category is fitted separately.
-Differences in categories can help constrain the likelihood fit.
-
-Events are split in three orthogonal categories: *res1b*, *res2b* and *boosted*.
-This categorization scheme arises naturally from the reconstruction of jets within the \ac{CMS} framework.
-The latter is based on the radial separation between the the two b-quarks:
-+ $\Delta \text{R}(\text{b},\text{b})\,> \,0.8$: each b--quark is reconstructed as a jet applying the AK4 algorithm (resolved jet);
-+ $0.4 \, < \, \Delta \text{R}(\text{b},\text{b})\,< \,0.8$: the two b--quarks are reconstructed both as two separated AK4 jets and as a large--radius jet (fatjet) using the AK8 algorithm;
-+ $\Delta \text{R}(\text{b},\text{b})\,< \,0.4$: the two b--quarks are reconstructed only as an AK8 jet.
-The resolved categories target the first scenario ($\Delta \text{R} \, (\text{b},\text{b})\,> \,0.4$) while the boosted category targets the other two scenarios.
-Events with a reconstructed fatjet having $m_{\text{SoftDrop}} > 30\,\si{\GeV}$, $\pt > 250\,\si{\GeV}$, $\Delta \text{R}(\text{jet},\tau)\,> \,0.8$ for both \taus{} and \ac{PNet} discriminant passing the \ac{LP} \ac{WP} fall in the \textbf{boosted} category.
-Events without an AK8 jet are assigned to the resolved categories.
-They are further categorised based on the AK4 jet =DeepJet= score:
-+ Resolved 2jet--1tag, *res1b*:
-Events in this category are such that only one of the two b-jet candidates passes the =Medium= \ac{WP} for all the final states.
-+ Resolved 2jet--2tag, *res2b*:
-Events in this category are such that both b-jet candidates pass the =Medium= \ac{WP} for all the final states.
-The *res2b* category provides the most sensitive measurements for resonance masses below \SI{700}{\GeV} while the *boosted* category drives the analysis sensitivity for resonance masses above \SI{700}{\GeV}.
-
-#+NAME: fig:QCDregions
+#+NAME: fig:cat_flowchart
 #+CAPTION: Flowchart of the analysis categorization. Three categories are defined: \rescat{1}, \rescat{2} and \boostcat{}, based on the number of AK4 and AK8 jets, and on the =Loose= \ac{WP} of the \ac{PNet} discriminant.
 #+BEGIN_figure
 \centering
 \begin{tikzpicture}[scale=1.4, every node/.style={scale=1.4}]
     % Place nodes
-    \node [block1] at (3.5,8) (top)   {Number of AK4 b-jets};
+    \node [block1] at (3.5,8) (top)   {Number of AK4 b jets};
     \node [class] at (1.7,6.05) (res2b) {\textbf{res2b}};
     \node [block1] at (4.5,6) (ak8)   {Is an AK8 jet present?};
     \node [block2] at (2,4) (pnet)  {Passes the PNet Loose WP?};
-    \node [block1] at (5,4) (ak4)   {Number of AK4 b-jets};
+    \node [block1] at (5,4) (ak4)   {Number of AK4 b jets};
     \node [class] at (1,2) (boost) {\textbf{boosted}};
     \node [disc]  at (3.5,2) (disc)  {discard};
     \node [class] at (6,2) (res1b) {\textbf{res1b}};
@@ -241,10 +200,80 @@ The *res2b* category provides the most sensitive measurements for resonance mass
 \end{tikzpicture}
 #+END_figure
 
+* Invariant Mass Cut
+:PROPERTIES:
+:CUSTOM_ID: sec:mass_cut
+:END:
+Events classified as resolved are required to have reconstructed visible masses of the b and $\tau$ pairs within a rectangular window.
+The goal is to maximize signal acceptance, requiring at least 98% of signal presence.
+These cuts remove the tails of the mass spectrum, and potential outliers, easing the task of discriminators further down in the analysis chain.
+The mass cut also allows to define \acp{CR} with low signal contamination, useful to assess the proper modeling of some of the main analysis' backgrounds.
+
+In order to define the mass window interval, the \ac{ggF} \spin{0} and \spin{2} signal samples are utilized.
+The samples are merged, considering all mass and spin configurations at once. 
+The \eletau{}, \mutau{} and \tautau{} channels have been separately considered to estimate the rectangular cuts.
+The event selection, in addition to the \basecat{} requirements, includes the following conditions:
++ presence of two resolved b jet candidates passing the =Loose= b-tag \ac{WP};
++ b jets matched to a generated b quark.
+\noindent The maximum and minimum values of the $\mbb$ and $\mtautau$ visible masses are calculated from their 99.5% and 0.5% quantiles.
+To define the mass window interval, the limits for $\mbb$ are calculated first. 
+An additional requirement is then added while computing the limits for $\mtautau$: to consider $\mbb$ only within the limits calculated in the previous step.
+The values obtained are:
++ visible $\mtautau$ between \SI{20}{\GeV} and \SI{130}{\GeV};
++ $\mbb$ between \SI{40}{\GeV} and \SI{270}{\GeV}.
+\noindent The cuts ensure a very high signal efficiency.
+It has been shown that tighter cuts, although providing a larger S/B ratio, result in a poorer limit when compared to a \ac{DNN} discriminant [[cite:&higgs_bbtautau_nonres]].
+The boundaries of the cut are thus kept very loose, focusing on acceptance and not purity.
+The two-dimensional distribution of $\mbb$ versus $\mtautau$ is displayed in [[fig:windowMassRegions]], where a red rectangle highlights the computed mass interval.
+We note that the visible mass signal distributions are similar for all mass points, including the ones not displayed.
+
+#+NAME: fig:windowMassRegions
+#+CAPTION: Illustration of the rectangular window mass cut (in red) on top of signal (\SI{700}{\GeV} and \SI{1}{\TeV} for, respectively, the top and middle rows) and background (bottom row). The three analysis channels are represented in the left, middle and right columns.
+#+BEGIN_figure
+#+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
+[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-700-GeV_etau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
+[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-700-GeV_mutau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
+[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-700-GeV_tautau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
+[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-1000-GeV_etau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
+[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-1000-GeV_mutau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
+[[~/org/PhD/Thesis/figures/analysis1/draw_mass_Radion-1000-GeV_tautau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
+[[~/org/PhD/Thesis/figures/analysis1/draw_mass_TT-DY_etau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
+[[~/org/PhD/Thesis/figures/analysis1/draw_mass_TT-DY_mutau_baseline_2018.pdf]]
+#+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
+[[~/org/PhD/Thesis/figures/analysis1/draw_mass_TT-DY_tautau_baseline_2018.pdf]]
+#+END_figure
+
 * Control Regions
 :PROPERTIES:
 :CUSTOM_ID: sec:control_regions
 :END:
-As we can see in @insert figure reference@ for the \ac{DY} \ac{CR}, the data/MC agreement improves significantly when requiring a strong b-tag identification \ac{WP}.
-This is due to bad modelization of the light jets coming with the \ac{DY} simulation, which has also been observed in the nonresonant \bbtt{} analysis [[cite:&higgs_bbtautau_nonres]].
-Ultimately, the categories which matter are the ones being fitted, here the one where the ~DeepJet~ requirement is applied.
+
+It is often useful to understand if single background sources are being correctly modeled.
+Additionally, one often wants to perform cross-checks on data outside the \ac{SR}, to avoid creating biases, but with a similar topology.
+An example would be to determine correction weights using a data-driven approach.
+\Acp{CR} are thus introduced, one centered on $\ttbar$ and another designed to be \ac{DY}-dominated:
++ $\pmb{\ttbar}$ *CR*:
+  Events satisfy the \basecat{} selection, and must be associated to the \eletau{} or \mutau{} channels.
+  They additionally do not include any AK8 jets, thus having a resolved topology.
+  The two AK4 jets must pass the =Medium= =DeepJet= \ac{WP}, just like events in the \rescat{2} category.
+  This requirements increases the fraction of $\ttbar$ events, compared to other backgrounds associated with lighter jets.
+  Finally, the mass of the $\tau\tau$ system must lie above \SI{130}{\GeV}, in order for the \ac{CR} to be orthogonal to the rectangular mass cut introduced in [[#sec:mass_cut]].
++ *DY CR*:
+  Events satisfy the \basecat{} selection, and must be associated to the \mumu{} channel.
+  They additionally do not include any AK8 jets, thus having a resolved topology.
+  Either one or two AK4 jets must pass the =Medium= =DeepJet= \ac{WP}, mimicking the \rescat{1} or \rescat{2} categories, depending on the use case.
+  The fraction of \ac{DY} events decreases with \rescat{2} cuts, as $\ttbar$ increases.
+  Finally, an invariant mass cut is requested around the mass of the Z boson, to remove any non-\ac{DY} background source.
+  Notice that there is no need to ensure orthogonality with respect to the rectangular mass cut, since the \mumu{} channel is not added to the final analysis fit.
+
+In the \xhhbbtt{} analysis, \acp{CR} regions are used to inspect the agreement of data and \ac{MC} in different kinematic and categorical distributions.
+In particular, they are quite useful to determine whether additional corrections are required for specific background sources.
+
+

@@ -66,7 +66,7 @@
 #+LATEX_HEADER: \newcommand{\bspsiphi}{\text{B}_{\text{s}} \rightarrow J/\psi \phi}
 #+LATEX_HEADER: \newcommand{\bszero}{\text{B}_{\text{s}}^{0}}
 #+LATEX_HEADER: \newcommand{\ccbar}{\text{c}\bar{\text{c}}}
-#+LATEX_HEADER: \newcommand{\drellyan}{$\mathrm{Z}\gamma^{*} \rightarrow \ell\ell$}
+#+LATEX_HEADER: \newcommand{\drellyan}{$\mathrm{Z}/\gamma^{*} \rightarrow \ell\ell$}
 #+LATEX_HEADER: \newcommand{\dzero}{\text{D}^{0}}
 #+LATEX_HEADER: \newcommand{\ggtt}{$\gamma\gamma\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hbb}{H $\rightarrow$ bb}
@@ -141,6 +141,7 @@
 #+LATEX_HEADER: \newcommand{\Smu}{$\text{Single-}\mu$}
 #+LATEX_HEADER: \newcommand{\Stau}{$\text{Single-}\tau$}
 #+LATEX_HEADER: \newcommand{\boostcat}{\textbf{boosted}}
+#+LATEX_HEADER: \newcommand{\basecat}{\textbf{baseline}}
 #+LATEX_HEADER: \newcommand{\bphys}{B-Physics}
 #+LATEX_HEADER: \newcommand{\btag}{b-tag}
 #+LATEX_HEADER: \newcommand{\celetau}{$\text{cross-}e\tau$}
