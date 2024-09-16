@@ -50,7 +50,7 @@ To achieve a better match, a standard reweighting procedure is applied to \ac{MC
 The provided \ac{PU} weights use a nominal Minimum Bias, inelastic \ac{pp} cross section equal to \SI{69.2}{\milli\barn}, which is used as an input to produce the correction weights.
 The \acp{SF} are centrally provided.
 The cross section includes a 4.6% uncertainty, which must be taken into account when computing systematic uncertainties.
-This is discussed in [[#sec:syst_pu]].
+This is discussed in [[#sec:syst_shape]].
 
 * Level-1 Trigger Prefiring
 The time measurement of \ac{ECAL} was observed to shift in 2016 and 2017, leading to \ac{ECAL} \acp{TP} being associated to the wrong \ac{BX}.

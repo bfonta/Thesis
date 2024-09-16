@@ -133,32 +133,32 @@
 
 
 * Resonant Search for \hhbbtt{}: Setting the Stage
-#+INCLUDE: "chapters/4_analysis1/analysis1_intro.org"
+#+INCLUDE: "chapters/4_analysis1/0_analysis1_intro.org"
 ** Samples
-#+INCLUDE: "chapters/4_analysis1/samples.org"
+#+INCLUDE: "chapters/4_analysis1/1_samples.org"
 
 ** Triggers
-#+INCLUDE: "chapters/4_analysis1/triggers.org"
+#+INCLUDE: "chapters/4_analysis1/2_triggers.org"
 *** Legacy Triggers
-#+INCLUDE: "chapters/4_analysis1/legacy_triggers.org"
+#+INCLUDE: "chapters/4_analysis1/2p1_legacy_triggers.org"
 *** Additional Triggers
-#+INCLUDE: "chapters/4_analysis1/additional_triggers.org"
+#+INCLUDE: "chapters/4_analysis1/2p2_additional_triggers.org"
 *** Analysis Trigger Regions
-#+INCLUDE: "chapters/4_analysis1/trigger_regions.org"
+#+INCLUDE: "chapters/4_analysis1/2p3_trigger_regions.org"
 *** The Inclusion Method: an Idea for the Future
-#+INCLUDE: "chapters/4_analysis1/inclusion_method.org"
+#+INCLUDE: "chapters/4_analysis1/2p4_inclusion_method.org"
 ** Physics Objects
-#+INCLUDE: "chapters/4_analysis1/physics_objects.org"
+#+INCLUDE: "chapters/4_analysis1/3_physics_objects.org"
 ** Selection and Categorization
-#+INCLUDE: "chapters/4_analysis1/selection.org"
+#+INCLUDE: "chapters/4_analysis1/4_selection.org"
 ** Mass Regression of the Tau Lepton Pair
-#+INCLUDE: "chapters/4_analysis1/tautau_regression.org"
+#+INCLUDE: "chapters/4_analysis1/5_tautau_regression.org"
 ** Modelling of Background Processes
-#+INCLUDE: "chapters/4_analysis1/backgrounds.org"
+#+INCLUDE: "chapters/4_analysis1/6_backgrounds.org"
 ** Monte Carlo Corrections
-#+INCLUDE: "chapters/4_analysis1/mc_corrections.org"
+#+INCLUDE: "chapters/4_analysis1/7_mc_corrections.org"
 ** Binned Distributions
-#+INCLUDE: "chapters/4_analysis1/binned_distributions.org"
+#+INCLUDE: "chapters/4_analysis1/8_binned_distributions.org"
 
 
 * Resonant Search for \hhbbtt{}: Extracting the Limits

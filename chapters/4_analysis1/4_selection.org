@@ -120,7 +120,7 @@ The score stands for on how confident the model is that a particular b jet origi
 The architecture of the model is characterized by the following elements:
 + Five concatenated \ac{LSTM} layers [[cite:&lstm]], using a sigmoid activation function. After each layer, a batch normalization step is applied.
 + Ten \ac{TDD} layers [[cite:&keras]], with sigmoid as activation function. A batch normalization step is also applied between each layer.
-+ Binary cross-entropy as the loss function [[cite:&cross_entropy]], minimized with the =AdamW= algorithm [[cite:&adam]].
++ Binary cross-entropy as the loss function [[cite:&cross_entropy]], minimized with the =AdamW= algorithm [[cite:&adamw]].
 + A final \ac{TDD} layer with only one unit and with a sigmoid as activation function, providing the final score.
 
 \noindent The algorithm has been retrained with \ac{UL} data, using both nonresonant and resonant \ac{ggF} \bbtt{} signal samples, in order to provide the best performance possible.

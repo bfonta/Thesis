@@ -64,18 +64,18 @@ The efficiency is measured by computing the ratio between passing probes and all
 Just like for muons, the electron selections applied in this work were originally based on the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]].
 The standard \ac{CMS} electron reconstruction algorithm is used [[cite:&performance_muon_electron]], combining \ac{ECAL} and tracker information.
 Electron candidates are reconstructed from clusters of energy deposits in the \ac{ECAL}, which are then matched to tracks in the inner silicon tracker, as discussed in [[#sec:offline_reco_electrons]].
-Given that the electron reconstruction heavily relies on the deposits in the \ac{ECAL}, electrons in the the $1.44 < |\eta| < 1.57$ transition region between the barrel and endcaps of the \ac{ECAL} are excluded from this analysis, as they are typically of low reconstruction quality.
+Given that the electron reconstruction heavily relies on the deposits in the \ac{ECAL}, electrons in the the $1.44 < |\eta| < 1.57$ transition region between the \ac{ECAL} barrel and endcaps are excluded from this analysis, as they are typically of low reconstruction quality.
 
 # isolation
 When defining the isolation for electrons, a $\Delta\text{R} < 0.3$ cone is defined around the electron, with respect to the electron direction, and [[eq:pf_iso]] is used.
-In this analysis, we required $\mathcal{I}_{\text{rel}}^{e} < 0.1$ for electrons in the \eletau{} channel, and $\mathcal{I}_{\text{rel}}^{e} < 0.3$ for vetoed electrons.
+In this analysis, we require $\mathcal{I}_{\text{rel}}^{e} < 0.1$ for electrons in the \eletau{} channel, and $\mathcal{I}_{\text{rel}}^{e} < 0.3$ for vetoed electrons.
 
 # identification
 The electron \ac{ID} uses a \ac{MVA} which has been updated and improved for \ac{CMS} \run{2} analyses.
-The discriminator is based on a \ac{BDT} [[cite:&tmva]] combining several observables sensitive to bremsstrahlung along the trajectory of the electron, to \ac{PF} isolation components and the energy density within the isolation cone, to shower-shape variables, to variables related to electron conversion, and to the matching between the trajectory of the electron and its related clusters.
-The \ac{MVA} is trained on all electrons, regardless of whether they pass the trigger requirements or not, and is then tuned for electrons with $\pt>10\,\si{\GeV}$
+The discriminator is based on a \ac{BDT} [[cite:&tmva]], combining several observables sensitive to bremsstrahlung along the trajectory of the electron, to \ac{PF} isolation components and the energy density within the isolation cone, to shower-shape variables, to variables related to electron conversion, and to the matching between the trajectory of the electron and its related clusters.
+The \ac{MVA} is trained on all electrons, regardless of whether they pass the trigger requirements or not, and is then tuned for electrons with $\pt>10\,\si{\GeV}$.
 Three categories are defined based on electron \ac{eta}: two in the barrel and one in the endcap.
-Signal electrons require the =Tight= \ac{WP}, which has a \SI{\sim 70}{\percent} signal efficiency, while veto electrons must pass the =Medium= \ac{WP}, which has a \SI{\sim 80}{\percent} efficiency [[cite:&performance_muon_electron]].
+Signal electrons require the =Tight= \ac{WP}, which has a \SI{\sim 80}{\percent} signal efficiency, while veto electrons must pass the =Medium= \ac{WP}, which has a \SI{\sim 90}{\percent} efficiency.
 The full veto selection is described in [[#sec:tau_pair_sel]].
 A correction factor is applied to the \ac{MC} to take into account differences with respect to data in \ac{ID} efficiencies of electrons.
 These factors are derived from \zee{} events, also selected with a Tag & Probe technique.
@@ -84,7 +84,7 @@ These factors are derived from \zee{} events, also selected with a Tag & Probe t
 Energy scaling and smearing corrections are applied to genuine electrons, following the recommendations of the E/Gamma \ac{POG}.
 The correction is applied to \ac{MC} using a variable which represents the combined \ac{ECAL} and tracker electron energy after applying scale and smearing corrections.
 The corrections are taken into account both in the selection of genuine electrons and in their veto.
-They also lead to several systematic shape uncertainties, as described in [[#sec:syst_shape_genuine_electrons]].
+They also lead to several systematic shape uncertainties, as described in [[#sec:syst_shape]].
 
 * Hadronic Tau Leptons
 :PROPERTIES:

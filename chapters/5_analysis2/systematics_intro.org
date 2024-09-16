@@ -2,29 +2,29 @@
 :CUSTOM_ID: sec:systematics
 :END:
 
-Measurements in all branches of sciences consist of estimating one or more unknown parameters from the observed data, to be later compared to the models at hand.
+Measurements in all branches of Science consist of estimating one or more unknown parameters from observed data, which are later compared to existing models.
 This process is called /statistical inference/, or just inference for short [[cite:&lista]].
 The parameters one wishes to access can be categorized in two classes:
 + *Parameters of Interest*:
-  Representing the end goal of the experiments, \acp{POI} define the underlying probability distributions a particular analysis wishes to measure.
-  In the case of the \xhhbbtt{} analysis, one wants to know whether the \spin{0} and \spin{2} models can describe the observed data, on top of the expected background.
+  Representing the end goal of the experiments, \acp{POI} define the underlying probability distributions analyses wish to measure.
+  In our case, we want to know whether the observed data can be described by the \spin{0} or \spin{2} models, on top of the expected background.
   This corresponds to the definition of a single \ac{POI} which scales the signal, the /signal strength modifier/ $\mu \equiv \sigma_{\text{obs.}}/\sigma_{\text{signal}}$.
-  The signal is normalized to an arbitrary value, $\sigma\times\mathcal{B}=1\,\si{\femto\barn}$ in our case.
+  The signal is normalized to an arbitrary value, $\sigma\times\mathcal{B}=1\,\si{\pico\barn}$ in our case.
   Measuring $\mu \ne 0$ would indicate the presence of a \ac{BSM} signal.
   In [[#sec:likelihood]] we explain how this \ac{POI} is encoded in the maximum likelihood approach to extract the final results.
 + *Nuisance parameters*:
-  The probability distributions connected to the observed data often depend on various effects not directly related to the parameters one is interested about, the \acp{POI}.
-  The effects arise from the experimental apparatuses being used, such as for instance the limited resolution of a detector, miscalibrations, the existence of discrepancies between background models and real data, or the lack of sufficient event in simulations or data sidebands.
-  The \acp{POI} can also depend on rleated theoretical predictions lacking sufficient precision.
+  The probability distributions connected to the observed data often depend on various effects not directly related to the \acp{POI}.
+  The effects arise from the experimental apparatuses being used, such as for instance the limited resolution of a detector, miscalibrations, the existence of discrepancies between background models and real data, or the lack of sufficient events in simulations or data sidebands.
+  The \acp{POI} can also depend on related theoretical predictions lacking sufficient precision.
   In order to measure the \acp{POI}, one has therefore to also measure additional unknown parameters, appropriately called /nuisances/.
   The integration of nuisances on the final result is also done with a dedicated statistical treatment based on the maximum likelihood approach.
   
 Uncertainties related to the \acp{POI} caused by data fluctuations alone are denoted /statistical uncertainties/.
-Instead, the propagation of the imperfect knowledge of the analysis' nuisance parameters adds /systematic uncertainties/ to the final measurement.
-The careful measurement of systematics plays a central role in any physics analysis, as they can dramatically affect the sensitivity of the result.
-In this section, we list the many sources of systematic uncertainties considered in the \xhhbbtt{} analysis that are included in the limit extraction described in [[#sec:final_limits]].
-Systematic uncertainties affecting only the yield of a given signal or background process are detailed in [[#sec:syst_norm]], and systematics additionally affecting the shape of the final discriminating variable are listed in [[#sec:syst_shape]].
-They are summarized in [[tab:summary_systs]].
+Instead, the propagation of the imperfect knowledge of the analysis' nuisance parameters leads to /systematic uncertainties/.
+The careful measurement of systematics plays a central role in any physics analysis, since systematics can dramatically affect the sensitivity of the result.
+In this section, we list the many sources of systematic uncertainties considered in our analysis, and which are included in the limit extraction.
+Systematic uncertainties affecting only the yield of a given signal or background process are detailed in [[#sec:syst_norm]], and systematics also affecting the shape of the final discriminant variable are listed in [[#sec:syst_shape]].
+For convenience, they are listed in [[tab:summary_systs]].
 
 #+NAME: tab:summary_systs
 #+CAPTION: Summary of all normalization and shape systematic uncertainties considered in this work, described in [[#sec:syst_norm]] and [[#sec:syst_shape]]. respectively.
@@ -36,8 +36,8 @@ They are summarized in [[tab:summary_systs]].
     \textbf{Uncertainty Type} & \textbf{Uncertainty List} \\ [+0.3em]\hline \\[-.8em]
 
     \multirow{3}{*}{\textbf{Normalization}} & Luminosity, electron and muon isolation and \ac{ID} efficiencies, \\
-                                            & QCD estimation uncertainty, theoretical HH cross section, \\
-                                            & final state \acp{BR}, cross sections of simulated processes \\[+0.3em]\hline \\[-.8em]
+                                            & QCD estimation uncertainty, final state \acp{BR}, \\
+                                            & cross sections of simulated processes \\[+0.3em]\hline \\[-.8em]
 
     \multirow{5}{*}{\textbf{Shape}} & L1 prefiring, \ac{PU} reweighting uncertainty, \tauh{} energy scale, \\
                                     & energy \acp{SF} for prompt electrons, energy \acp{SF} for $e/\mu \rightarrow \tau$ fakes, \\
