@@ -162,32 +162,33 @@
 
 
 * Resonant Search for \hhbbtt{}: Extracting the Limits
-#+INCLUDE: "chapters/5_analysis2/intro.org"
+#+INCLUDE: "chapters/5_analysis2/0_intro.org"
 ** Signal Extraction
-#+INCLUDE: "chapters/5_analysis2/pdnn.org"
+#+INCLUDE: "chapters/5_analysis2/1_pdnn.org"
 ** Systematic Uncertainties
-#+INCLUDE: "chapters/5_analysis2/systematics_intro.org"
+#+INCLUDE: "chapters/5_analysis2/2_systematics_intro.org"
 *** Normalization Uncertainties
-#+INCLUDE: "chapters/5_analysis2/systematics_normalization.org"
+#+INCLUDE: "chapters/5_analysis2/2p1_systematics_normalization.org"
 *** Shape Uncertainties
-#+INCLUDE: "chapters/5_analysis2/systematics_shape.org"
+#+INCLUDE: "chapters/5_analysis2/2p2_systematics_shape.org"
 ** Statistical Treatment
-#+INCLUDE: "chapters/5_analysis2/stats_intro.org"
+#+INCLUDE: "chapters/5_analysis2/3_stats_intro.org"
 *** Hypothesis Testing
-#+INCLUDE: "chapters/5_analysis2/hypothesis.org"
+#+INCLUDE: "chapters/5_analysis2/3p1_hypothesis.org"
 *** The Neyman-Pearson Lemma
-#+INCLUDE: "chapters/5_analysis2/lemma.org"
+#+INCLUDE: "chapters/5_analysis2/3p2_lemma.org"
 *** The Maximum Likelihood Method
-#+INCLUDE: "chapters/5_analysis2/likelihood.org"
+#+INCLUDE: "chapters/5_analysis2/3p3_likelihood.org"
 *** Finding a Signal in HEP Experiments
-#+INCLUDE: "chapters/5_analysis2/cls.org"
+#+INCLUDE: "chapters/5_analysis2/3p4_cls.org"
 *** Expected and Observed Limits
-#+INCLUDE: "chapters/5_analysis2/exp_vs_obs.org"
+#+INCLUDE: "chapters/5_analysis2/3p5_exp_vs_obs.org"
 ** Results
-#+INCLUDE: "chapters/5_analysis2/results_intro.org"
+#+INCLUDE: "chapters/5_analysis2/4_results_intro.org"
 *** Exclusion Limits
-#+INCLUDE: "chapters/5_analysis2/final_limits.org"
+#+INCLUDE: "chapters/5_analysis2/4p1_final_limits.org"
 *** Comparison with Other Results
+#+INCLUDE: "chapters/5_analysis2/4p1_results_comparison.org"
 ** Prospects for HH Searches
 #+INCLUDE: "chapters/5_analysis2/prospects.org"
 
