@@ -188,10 +188,9 @@
 *** Exclusion Limits
 #+INCLUDE: "chapters/5_analysis2/4p1_final_limits.org"
 *** Comparison with Other Results
-#+INCLUDE: "chapters/5_analysis2/4p1_results_comparison.org"
+#+INCLUDE: "chapters/5_analysis2/4p2_results_comparison.org"
 ** Prospects for HH Searches
-#+INCLUDE: "chapters/5_analysis2/prospects.org"
-
+#+INCLUDE: "chapters/5_analysis2/5_prospects.org"
 
 * Going Beyond the Narrow Width Approximation in HH Resonant Searches
 #+INCLUDE: "chapters/6_interf_studies/0_intro.org"

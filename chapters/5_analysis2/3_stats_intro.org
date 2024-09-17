@@ -2,6 +2,9 @@
 :CUSTOM_ID: sec:stats_intro
 :END:
 
-The search reported in this thesis makes use of the /modified frequentist approach/, a statistical method originally developed for Higgs boson searches at \ac{LEP} [[cite:&cls1]].
-Since then, it has been extensively used by searches and combinations from the \ac{LHC} experiments, notably for the combination paper reporting the observation of the Higgs [[cite:&asimov;&stat_procedure_comb_higgs]].
-We start by introducing the idea of hypothesis testing in [[#sec:hypotheses]] and describe the in ...
+Having defined a final discriminant and the systematic uncertainties that might impact the analysis, all ingredients are in place to extract the final result.
+This is the task of the statistical treatment, which in this Thesis is the now standard /modified frequentist approach/, a statistical method originally developed for Higgs boson searches at \ac{LEP} [[cite:&cls1]].
+Since then, it has been extensively used by searches and combinations from the \ac{LHC} experiments, notably for the combination paper reporting the observation of the Higgs boson [[cite:&asimov;&stat_procedure_comb_higgs]].
+Central to the approach is the much older concept of /hypothesis testing/, which is introduced in [[#sec:hypotheses]].
+It follows a short description of the Neyman-Pearson Lemma in [[#sec:lemma]] which, together, with the concept of likelihood maximization described in [[#sec:likelihood]], forms the basis of the definition of the test statistics used in \ac{HEP}, and which is described in [[#sec:cls]].
+We conclude by explaining in [[#sec:exp_vs_obs]] why the most sensitive data region is not analyzed until well into the final stages of a \ac{HEP} study.

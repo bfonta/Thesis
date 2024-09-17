@@ -1,3 +1,15 @@
++ hgcal:
+  + promising algorithms for tp reconstruction
+  + framework for the future including geometry; already used by other students
++ analysis:
+  + In particular, we are almost a factor of 2 more sensitive at \SI{1}{\TeV}, and can thus conclude that the analysis should be able to confirm or reject the tension observed by \ac{ATLAS}.
+  + best sensitivity ever for \xhhbbtt{}, driving sensitivity for \ac{CMS} combination at $450 \leq \mx \leq 800 \,\si{\GeV}$ range
+  + improvement much above naive lumi scaling
+  + CMS HL-LHC projection wiill improve with our result
++ interference: conclude on the impact of the NWA
+
+
+
 After the discovery of the Higgs boson particle, the first ten years of experimental measurements of this particle and searches for
 other such scalar particles has revolutionized the field of particle physics.
 Regardless of theory, the Higgs boson remains a singular particle that exhibits couplings to both fermions and bosons as long as they have mass.

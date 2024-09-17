@@ -1,3 +1,35 @@
 :PROPERTIES:
 :CUSTOM_ID: sec:results_comparison
 :END:
+
+We perform a comparison of the \run{2} \spin{0} results obtained in the previous Section with the most stringent \ac{ATLAS} and \ac{CMS} results to date.
+The expected upper limits are shown in [[fig:result_comparison]] (top).
+The limits from \ac{ATLAS} were published in \newcite{atlas_bbtt_res}, where a small tension is observed at $\mx\sim 1\,\si{\TeV}$, with a local (global) significance of \SI{3.1}{\sigma} (\SI{2.0}{\sigma}).
+The \ac{CMS} result comes instead from a \xyh{} analysis [[cite:&higgs_bbtautau_hy]], where $\my=\mh\,\si{\GeV}$ was not considered.
+We thus compare our result to their $\my=120\,\si{\GeV}$ limit, which was shown to be compatible with their $\my=130\,\si{\GeV}$ result.
+This same analysis was made part of the combination results presented in [[#sec:direct_searches]].
+The results are available in numerical format in [[#sec:table_limits]].
+
+#+NAME: fig:result_comparison
+#+CAPTION: Comparison of the expected \xhh{} cross section 95% \ac{CL} upper limits for \spin{0} in this work with other results. (Top) Comparison with equivalent expected limits from \ac{ATLAS}, and with the most stringent \ac{CMS} \xhhbbtt{} upper limits to date. (Bottom) Comparison with the full HH \ac{CMS} combination. The results in this Thesis should drive the sensitivity of HH upper limits in \ac{CMS} in the $450 \leq \mx \leq 800 \,\si{\GeV}$ range.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .85\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/spin0_vs_Atlas_CMSHY.pdf]]
+#+ATTR_LATEX: :width .85\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/spin0_vs_CMScomb.pdf]]
+#+END_figure
+
+Our result improves the previous best \ac{CMS} result across the entire $\mx$ range by a very significant margin.
+This is expected, given that we are targeting a specific topology, while the \xyh{} work covers a much larger mass phase-space.
+Concerning the \ac{ATLAS} result, we achieve a better expected performance across most of the $\mx$ range.
+In particular, we are almost a factor of 2 more sensitive at \SI{1}{\TeV}, and can thus conclude that the analysis should be able to confirm or reject the tension observed by \ac{ATLAS}.
+
+It is also extremely relevant to compare our result with the current best \ac{CMS} combination of resonant HH analyses.
+We show such comparison in [[fig:result_comparison]] (bottom).
+Given the results, we expect our analysis to drive the \ac{CMS} HH sensitivity in the $450 \leq \mx \leq 800 \,\si{\GeV}$ range. 
+
+We start by quantifying the sensitivity improvement within \ac{CMS} over the years.
+Comparing the full \run{2} luminosity with the luminosity used by \newcite{cms_hh_bbtt}, which used 2016 data only, our analysis has access to \num{\sim 4} times more data, which would naively correspond to an improvement of a factor of \num{\sim 2}.
+Looking at the limits obtained for the \spin{0} hypothesis, we can instead report an improvement of \num{\sim 8.5} at $\mx=300\,\si{\GeV}$, \num{\sim 15} at $\mx=500\,\si{\GeV}$, and \num{\sim 10} at $\mx=900\,\si{\GeV}$ (only $\mx \leq 900\,\si{\GeV}$ values were considered).
+This once more demonstrates the excellent performances obtained by \ac{CMS}, which continue to improve over past results by exploiting novel techniques spanning all the steps of a physics analysis.

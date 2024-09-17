@@ -72,7 +72,7 @@ For simplicity, we are currently exploiting the signal score only.
 The architecture is illustrated in [[fig:combined_model]].
 
 #+NAME: fig:combined_model
-#+CAPTION: Architecture of the \xhhbbtt{} final discriminant. The layout corresponds to a combination of the $\mtautau$ regression network, the \ac{LBN} and a densely connected \ac{DNN}. The weights of the regression network are left initialize fixed, and are slowly activated as training time passes, which we refer to as "fade-in". "BN" stands for batch-normalization, and "ACT" stands for activation function.
+#+CAPTION: Architecture of the \xhhbbtt{} final discriminant. The layout corresponds to a combination of the $\mtautau$ regression network, the \ac{LBN} and a densely connected \ac{DNN}. The weights of the regression network are left initialize fixed, and are slowly activated as training time passes, which we refer to as "fade-in". "BN" stands for batch-normalization, and "ACT" stands for activation function. Courtesy from Marcel Rieger.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width 1.\textwidth :center

@@ -2,4 +2,6 @@
 :CUSTOM_ID: sec:results_intro
 :END:
 
-+ intro
+We are finally able to condense all the work so far presented into quantifiable results.
+They follow from a binned maximum likelihood fit of the analysis' final discriminant, including systematic uncertainties.
+We show the results in [[#sec:final_limits]], and establish comparisons with related \ac{CMS} and \ac{ATLAS} results in [[#sec:results_comparison]].

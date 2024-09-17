@@ -2,22 +2,27 @@
 :CUSTOM_ID: sec:exp_vs_obs
 :END:
 
-The statistical treatment so far described is centered around the usage of a (hopefully discriminant) test statistic, ultimately defining how sensitivity analyses become.
-A potentially minor adjustement in the analysis' selection, or a slight change in the training of the final discriminant, for instance, might very well modify the test statistic, and thus affect the final limits.
-What would then happen after producing limits over and over again, each time iterating on the analysis strategy and obtaining better performances?
-The final result would become biased, since decisions would be made given the final results, potentially leading to the appearance of spurious excesses, like the $\gamma\gamma$ bump seen in 2015 at \SI{750}{\GeV}.
-Instead, \ac{HEP} analyses start /blinded/: the data in the \ac{SR} is not looked at until the analysis strategy is considered stable.
-Data in \acp{CR} can be used, together with all \ac{MC} samples.
+The statistical treatment is centered around the usage of a (hopefully discriminant) test statistic, ultimately defining how much sensitive analyses become.
+A potentially minor adjustement in the analysis' selection, or a slight change in the training of the final discriminant, for instance, might very well modify the test statistic, and thus affect the final upper limits.
+What would happen if one would compute limits over and over again, each time iterating on the analysis strategy to obtain tighter limits?
+The final result would become biased, since decisions would be made given the final results.
+This might in turn lead to the appearance of spurious excesses, like the $\gamma\gamma$ bump seen in 2015 at \SI{750}{\GeV}.
+Instead, \ac{HEP} analyses start /blinded/: the data in the \ac{SR} is not looked at until the analysis strategy has been considered stable.
+Data in \acp{CR} can be used, together with \ac{MC} samples.
 
 During the blinded stage, the analysis' sensitivity is assessed via /expected results/.
-However, computing the median significance of a dataset is a computationally-intensive task, requiring the generation of large quantities of pseudo-data.
-A different approach is possible, by exploiting the asymptotic limit of the \ac{PRL}.
+Such results are determined thanks to a /Asimov dataset/ [[cite:&asimov]], a representative dataset where all observed quantities, \ac{POI} and nuisances, are set to their expected values, and statistical fluctuations are not considered.
+The data thus derived can be used to define an "Asimov likelihood" $L_{\text{A}}$, and the \ac{PRL} becomes:
+#+NAME: eq:asimov_likelihood
+\begin{equation}
+\lambda_{\text{A}}(\mu) \equiv \frac{L_{\text{A}}(\mu,\hat{\theta}_{\mu})}{L_{\text{A}}(\hat{\mu},\hat{\theta})} =
+\frac{L_{\text{A}}(\mu,\hat{\theta}_{\mu})}{L_{\text{A}}(\mu^{\prime},\theta^{\prime})} \: ,
+\end{equation}
 
-+ introduce Wilk's theorem: when a large dataset is available, assuming some regularity conditions on the likelihood, any test statistic based on the \ac{PRL} can be approximated by a $\chi^{2}$ distribution with $k$ degrees of freedom, being $k$ given by the number of \acp{POI} [[cite:&Wilks:1938dza]]
-  
-Such properties enable the definition of the Asimov dataset [[cite:&asimov]], a representative dataset where all observed quantities (\ac{POI} and nuisances) are set to their expected values, and statistical fluctuations are not considered.
-
+\noindent where $\mu^{\prime}$ and $\theta^{\prime}$ represent the expected values of the \ac{POI} and nuisances.
 Once all possible issues in the analysis have been addressed and understood, the /unblinding/ step can proceed, in which the maximum likelihood fit provides the /observed/ result.
 
+Given the timeline of our analysis, in the next Section we present expected \xhhbbtt{} upper limits.
+The current publication plan has been defined so that the unblinded analysis can be presented at the "59\textsuperscript{th} Rencontres de Moriond" conference, which takes places in March 2025.
 
 

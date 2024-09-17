@@ -2,9 +2,9 @@
 :CUSTOM_ID: sec:likelihood
 :END:
 
-A common task in statistics arises when, given a finite data sample $x = (x_1, x_2, \dots , x_n)$, being $n$ the number of measurements, we wish to estimate the parameters $\varphi = (\varphi_1, \varphi_2, \dots , \varphi_n)$ that define the underlying $f(x;\varphi)$ \ac{PDF} hypothesis.
+Given a finite data sample $x = (x_1, x_2, \dots , x_n)$, being $n$ the number of measurements, one often wishes to estimate the parameters $\varphi = (\varphi_1, \varphi_2, \dots , \varphi_n)$ defining the underlying $f(x;\varphi)$ \ac{PDF} hypothesis.
 Assuming the hypothesis to be true, the probability to find the first measurement in the interval $[x_1, x_1 + dx_1]$ is simply given by the product between $f(x;\varphi)$ and the interval $dx_1$.
-If all measurements $x$ are independent, the probability to find all measurements $i$ in a $[x_i, x_i + dx_i]$ interval is given by the product of all individual probabilities.
+If all measurements $x$ are independent, the probability to find each measurement $i$ in a $[x_i, x_i + dx_i]$ interval is given by the product of all individual probabilities.
 If $f(x;\varphi)$ truly describes the underlying data, a high probability is expected for the data to be measured where the \ac{PDF} predicts it to be.
 In other words, we can define the /likelihood function/ $L$:
 #+NAME: eq:likelihood
@@ -12,10 +12,11 @@ In other words, we can define the /likelihood function/ $L$:
 L(\varphi) = \prod_{i=1}^{n} f(x_i;\varphi) \: ,
 \end{equation}
 
-\noindent where the dependence on the intervals was removed since $dx_i$ do not depend on the parameters, and $L$ does not depend on the data $x$, which is treated as fixed, or equivalently, the data collection is over.
+\noindent where the dependence on the intervals was removed since $dx_i$ do not depend on the parameters.
+Note that $L$ does not depend on the data $x$, which is treated as fixed, or equivalently, the data collection is assumed to be over.
 The likelihood can be seen as the probability of observing the data, given a set of (unknown) model parameters, where we set $L(\varphi) \equiv L(x|\varphi)$ for brevity.
 Therefore, the parameters that maximize such probability are the ones which maximize $L(\varphi)$.
-We can thus search for the /maximum likelihood estimator/, by finding the highest maximum of the likelihood.
+We can thus search for the /maximum likelihood estimators/ of the parameters, by finding the highest maximum of the likelihood.
 
 It is often the case that $n$ is itself a Poisson random variable with mean $\nu$.
 This is true in \ac{HEP}, given the stochastic nature of any given physics process.
@@ -35,15 +36,15 @@ L(\nu,\varphi) = \frac{e^{-\nu}}{n!} \prod_{i=1}^{n} \nu \, f(x_i;\varphi) \: .
 As the logarithm is a monotonically increasing function, the maxima of $L$ will also maximize $\log L$.
 
 # binned data
-The analysis reported in this thesis uses binned distributions, and thus one can see the \acp{PDF} as vectors, representing the event yield in all the bins of the distributions satisfying all analysis' selections and categories.
+The analysis reported in this Thesis uses binned distributions, and thus one can see the \acp{PDF} as vectors, representing the event yield in all the bins of the distributions satisfying the analysis' selections.
 A binned approach is here preferred for simplicity and computation efficiency.
-For $n_\text{tot}$ observations, the expectation values $\nu = (\nu_1, \nu_2, \dots, v_N)$ of the number of entries $n = (n_1, n_2, \dots, n_N)$ in the $N$ bins is given by:
+For $n_\text{tot}$ observations, the expectation values $\nu = (\nu_1, \nu_2, \dots, \nu_N)$ of the number of entries $n = (n_1, n_2, \dots, n_N)$ in $N$ bins is given by:
 #+NAME: eq:expectation_bins
 \begin{equation}
 \nu_{i}(\varphi) = n_\text{tot} \int_{x_i^{\text{min}}}^{x_i^{\text{max}}} f(x; \varphi) dx \: ,
 \end{equation}
 
-\noindent where $x_i^{\text{min}}$ and $x_i^{\text{max}}$ represent the bin limits.
+\noindent where $x_i^{\text{min}}$ and $x_i^{\text{max}}$ represent the edges of bin $i$.
 
 # nuisances
 Following the parameter classification discussed in [[#sec:systematics]], in \ac{HEP} the parameters $\varphi$ are usually split into the \ac{POI} $\mu$ and nuisances $\theta$.
@@ -66,12 +67,13 @@ This enables to explicitly encode a dependence on the signal strength modifier $
 \nu_{i}(\mu,\theta) = \mu \, s_i(\theta) + b_i(\theta) \: ,
 \end{equation}
 
-\noindent where $\nu_{i}$ refers to the expected values of the bin entries in [[eq:expectation_bins]].
+\noindent where $\nu_{i}$ refers to the expected bin counts in [[eq:expectation_bins]].
 Often, the null hypothesis corresponds to $\mu = 0$, while the alternative hypothesis stands for the presence of a \ac{BSM} signal with $\mu \neq 0$.
-Putting together all ingredients above, one can write the full expression of the likelihood in [[eq:ext_likelihood]], as considered for the binned \xhhbbtt{} analysis with systematic uncertainties:
+Putting together all ingredients above, one can write the full expression of the likelihood in [[eq:ext_likelihood]], as considered for the binned \xhhbbtt{} analysis, including systematic uncertainties:
 #+NAME: eq:ext_likelihood_final
 \begin{equation}
-L(\mu,\theta) = \prod_{i=1}^{n} \frac{e^{-\left[ \mu \, s_i(\theta) + b_i(\theta) \right] }}{n_i!}  \left[ \mu \, s_i(\theta) + b_i(\theta) \right] \, p(\tilde{\theta}_i | \theta_i)
+L(\mu,\theta) = \prod_{i=1}^{n} \frac{e^{-\left[ \mu \, s_i(\theta) + b_i(\theta) \right] }}{n_i!}  \left[ \mu \, s_i(\theta) + b_i(\theta) \right] \, p(\tilde{\theta}_i | \theta_i) \: ,
 \end{equation}
 
 \noindent where the last term can be determined using [[eq:log_normal]].
+Note that nuisance parameters make the likelihood broader, reflecting the information lost due to systematic uncertainties.

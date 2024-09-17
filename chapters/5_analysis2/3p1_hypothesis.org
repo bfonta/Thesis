@@ -2,30 +2,47 @@
 :CUSTOM_ID: sec:hypotheses
 :END:
   
-In statistics, the term /hypothesis/ refers to a statement one can make based on the agreement of the observed data with a given predictive model [[cite:&glen_cowan]].
-The hypothesis being assessed is traditionally called the /null hypothesis/, or $H_{0}$, against which a series of /atlernative/ hypotheses can be compared: $H_{1}$, $H_{2}$, $H_{3}$, ...
-Hypothesis denote \acp{PDF} $f(x;\theta)$ which depend on the measured data $x = (x_1,x_2,x_3,...)$ and potentially on free parameters $\theta = (\theta_1,\theta_2,\theta_3,...)$ which are estimated from data.
-To measure the agreement between a given hypothesis and the data being measured, one constructs a function of the variables being measured, called /test statistic/, or $t(x;\theta)$.
-Each hypothesis implies a different \ac{PDF} for the test statistic, denoted as $g(t|H_0)$, $g(t|H_1)$, $g(t|H_2)$, ...
+In statistics, the term /hypothesis/ refers to a statement concerning the agreement of the observed data with a given predictive model [[cite:&glen_cowan]].
+The hypothesis being assessed is traditionally called the /null hypothesis/, or $H_{0}$, against which a series of /alternative/ hypotheses can be compared: $H_{1}$, $H_{2}$, $H_{3}$, and so on.
+Hypotheses denote \acp{PDF} $f(x;\theta)$ which depend on the measured data $x = (x_1,x_2,x_3,...)$ and potentially on free parameters $\theta = (\theta_1,\theta_2,\theta_3,...)$ which are estimated from data.
+To measure the agreement between a given hypothesis and the data, one constructs a function of the variables being measured, called /test statistic/, or $t(x;\theta)$.
+Each hypothesis implies a different \ac{PDF} for the test statistic, denoted as $g(t|H_0)$, $g(t|H_1)$, $g(t|H_2)$, etc.
 One usually tries to construct the simplest test statistic enabling the largest discrimination possible between the hypotheses being compared.
-In order to accept or reject a given $H_0$, one has to define a test statistic /cut/ $\tcut$ establishing an acceptance and a rejection region.
-The decision is then made by comparing the observed value of $t(x;\theta)$ with the $\tcut$ previously defined.
-When the value of $t(x;\theta)$ is within the acceptance region, the null hypothesis is said to be /accepted/; otherwise, it is /rejected/.
+In order to accept or reject a given $H_0$, one has to define a test statistic /cut/ $\tcut$, establishing an acceptance and a rejection region.
+The decision is made by comparing the observed value $t^{\text{obs.}}$ with the $\tcut$ defined beforehand.
+When $t^{\text{obs.}}$ is within the acceptance region, the null hypothesis is said to be /accepted/; otherwise, it is /rejected/.
 Naturally, $\tcut$ can be arbitrarily chosen, affecting the sizes of the acceptance and rejection regions.
-In general, $\tcut$ is defined so to provide a significance level $\alpha$ according to some common threshold, oftentimes 5% or 10%:
+In general, it is defined as to provide a significance level $\alpha$ according to some common threshold, oftentimes 5% or 10%:
 
 #+NAME: eq:significance_level
 \begin{equation}
 \alpha = \int_{\tcut}^{\infty} g(t|H_{0})dt \: .
 \end{equation}
 
-\noindent The larger $\alpha$, the harder it becomes to reject $H_0$, and the smaller become /false negatives/, where $H_0$ is rejected despite being true.
-Conversely, the probability for the $H_0$ to be accepted given that $H_1$ is true is called a /false positive/, and is given by:
+\noindent The larger $\alpha$ is, the harder it is to reject $H_0$, and the less frequent /false negatives/ become, where $H_0$ is rejected despite being true.
+Conversely, the probability for $H_0$ to be accepted given that $H_1$ is true is called a /false positive/, and is given by:
 
 #+NAME: eq:inverse_power
 \begin{equation}
 \beta = \int_{-\infty}^{\tcut} g(t|H_{1})dt \: ,
 \end{equation}
 
-\noindent where $1-\beta$ is called the /power/ of the test.
+\noindent where $1-\beta$ is referred as the /power/ of the test.
 The smaller $\tcut$ is, the smaller $\beta$ will become, creating a "powerful" test in what concerns the discrimination against alternative hypotheses.
+
+The level of agreement between the data and $H_0$ can be expressed by the /p-value/.
+The p-value represents the probability, under the assumption of the null hypothesis, of obtaining a result equal to or more extreme (less compatible) than the one observed, given the measured value of a particular test statistic $t^{\text{obs.}}$.
+The formal definition is given by:
+#+NAME: eq:pvalue_limit
+\begin{equation}
+p = \int_{t^{\text{obs.}}}^{\infty} f(t | H_0) \, dt \: ,
+\end{equation}
+
+\noindent which can be converted into a significance Z, using a one-sided Gaussian integral, often used to report results in \ac{HEP} publications:
+#+NAME: eq:significance
+\begin{equation}
+  p = \int_{\text{Z}}^{+\infty} \frac{1}{\sqrt{2\pi}}e^{-x^2/2}dx \: .
+\end{equation}
+
+\noindent Two levels of significance are traditionally defined.
+An /evidence/ corresponds to $\text{Z}=3$, or equivalently $p=1.3\times10^{-3}$, while an /observation/ sets the bar higher at $\text{Z}=5$, or $p=2.8\times10^{-7}$.

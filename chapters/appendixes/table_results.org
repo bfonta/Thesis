@@ -1,5 +1,9 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:table_limits
+:END:
+
 #+NAME: tab:final_limits
-#+CAPTION: Nominal values of the cross section 95% \ac{CL} upper limits shown in [[ref:fig:result1,fig:result2]], in \si{\femto\barn}. The errors correspond to \SI{1}{\sigma} intervals. The combination (\ac{ATLAS} result) was taken from Ref. [[cite:&interf_studies]] ([[cite:&atlas_bbtt_res]]). Both refer to \spin{0} hypotheses. The \bbtt{} result in the combination comes from Ref.[[cite:&higgs_bbtautau_hy]]. The first row refers to \SI{250}{\GeV} for all measurements except for \ac{ATLAS}, which considered \SI{251}{\GeV}. All values in bold show regions where our analysis demonstrates an improvement with respect to other analyses.
+#+CAPTION: Nominal values of the cross section 95% \ac{CL} upper limits shown in [[#sec:final_limits]], in \si{\femto\barn}. The errors correspond to \SI{1}{\sigma} intervals. The combination (\ac{ATLAS} result) was taken from Ref. [[cite:&interf_studies]] ([[cite:&atlas_bbtt_res]]). Both refer to \spin{0} hypotheses. The \bbtt{} result in the combination comes from Ref.[[cite:&higgs_bbtautau_hy]]. The first row refers to \SI{250}{\GeV} for all measurements except for \ac{ATLAS}, which considered \SI{251}{\GeV}. All values in bold show regions where our analysis demonstrates an improvement with respect to other analyses.
 #+ATTR_LATEX: :font \footnotesize :placement [!h] :center t :align c|cccc|cc :environment mytablewiderrows
 |---------------------------+--------------------------------+------------------------------+----------------------------------+---------------------------------+---------------------------------------+---------------------------------------|
 | $\pmb{\mx\, [\si{\GeV}]}$ | *\spin{0}* $\pmb{(\mathcal{X})}$ | *\spin{2}*                     | *\ac{ATLAS}* $\pmb{(\mathcal{Y})}$ | *CMS Comb.* $\pmb{(\mathcal{Z})}$ | $\pmb{\mathcal{Y}}/\pmb{\mathcal{X}}$ | $\pmb{\mathcal{Z}}/\pmb{\mathcal{X}}$ |

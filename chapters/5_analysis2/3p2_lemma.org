@@ -3,22 +3,21 @@
 :END:
 
 When associating an event to a particular null hypothesis, the /efficiency/ $1-\alpha$ of such selection is controlled by $\tcut$.
-A larger $\tcut$ value will imply a larger probed phase-space, and in the $\tcut \rightarrow \infty$ limit, all events are associated to $H_0$.
-However, the more events are associated to $H_0$, the less are assigned to an alternative $H_1$.
-It therefore exists a compromise between the efficiency and the amount of contamination in a sample, or /purity/, defined as the fraction of the number of truth-matched events in a subset.
+A larger $\tcut$ implies a larger probed phase-space, and in the $\tcut \rightarrow \infty$ limit, all events will be associated to $H_0$.
+At the same time, less events will be assigned to an alternative $H_1$.
+It therefore exists a compromise between the efficiency and the amount of contamination in a sample, or /purity/, defined as the fraction of the number of truth-matched events.
 By construction, a scenario with the highest purity corresponds to a scenario with the highest power.
 
-Defining the optimal balance as the one providing the maximum purity for a given efficiency, the /Neyman-Pearson lemma/ states that the highest purity for a given selection efficiency, in the space of the test statistic $t$, is given by:
+Defining the optimal balance as the one providing the maximum purity for a given selection efficiency, the /Neyman-Pearson lemma/ states that such balance, in the space of the test statistic $t$, is given by:
 
 #+NAME: eq:neyman_pearson
 \begin{equation}
-\frac{g(t|H_0)}{g(t|H_1)} > c
+\frac{g(t|H_0)}{g(t|H_1)} > c \: ,
 \end{equation}
 
 \noindent where $c$ can be defined based on the efficiency one wishes to obtain.
 While [[eq:neyman_pearson]] is rather obvious for a one-dimensional test statistic, the lemma works for multi-dimensional test statistics too.
 The functions $g$ are not always simple to compute.
-Methods have been devised to provide good estimates for those functions, such as the Fisher discriminant for linear test statistics, or even \acp{NN} for nonlinear scenarios.
-
+Methods have nevertheless been devised to provide good estimates, such as the Fisher discriminant for linear test statistics, and \acp{NN} for nonlinear scenarios.
 The left hand-side of [[eq:neyman_pearson]] gives a ratio that is guaranteed to provide the highest possible power, with an acceptance region corresponding to values above $c$.
-The quantity is known as the /likelihood ratio/; the nomenclature should become clear in the next Section.
+The quantity is known as the /likelihood ratio/, and is described in the next Section.

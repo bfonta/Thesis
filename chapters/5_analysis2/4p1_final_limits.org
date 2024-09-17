@@ -2,65 +2,71 @@
 :CUSTOM_ID: sec:final_limits
 :END:
 
-+ compare also to HY analysis [[cite:&higgs_bbtautau_hy]]
-+ Importantly, the results of this work hint at a the strongest limit than the one in [[fig:res_comb_xhh]], opening a window for further improvements in the combination, still with \run{2} data.
-+ at \SI{1}{\TeV}, our result is a factor of 2 better than the result of \ac{ATLAS} ("resonant HH production at a mass of 1 TeV and corresponding to a local (global) significance of \SI{3.1}{\sigma} (\SI{2}{\sigma})"
-  
-#+NAME: fig:result1
-#+CAPTION: Final limits for \spin{0} and \spin{2}.
+We extract expected 95% \ac{CL} upper limits on the cross section of the \xhh{} process, assuming \spin{0} and \spin{2} hypotheses.
+The result is obtained by rescaling the \xhhbbtt{} upper limits to the inclusive cross section.
+The limits are shown in [[fig:limits_per_era]], split per data-taking period and combined, and in [[fig:final_result]], for the full \run{2} data with \SI{1}{\sigma} and \SI{2}{\sigma} bands.
+The combination is also available in tabular format in [[#sec:table_limits]].
+The results are similar between the two spin hypothesis.
+The overall trend of the curves shows a maximum sensitivity close to $\mx=1\,\si{\TeV}$.
+We recall that one of the goals of the analysis is to assess the tension observed by \ac{ATLAS} at precisely \SI{1}{\TeV}.
+
+#+NAME: fig:limits_per_era
+#+CAPTION: Expected \xhh{} cross section 95% \ac{CL} median upper limits, for \spin{0} (left) and \spin{2} (right). The full \run{2} combination is shown in purple, while the other curves represent separate contributions for all data-taking periods, scaled to the total \run{2} luminosity. The markers refer to the probed mass points, while the lines are the result of an interpolation.
 #+BEGIN_figure
 \centering
-#+ATTR_LATEX: :width .85\textwidth :center
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/spin0_eras.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis2/spin0_eras.pdf]]
+#+END_figure
+
+#+NAME: fig:final_result
+#+CAPTION: Expected \xhh{} cross section 95% \ac{CL} upper limits, for \spin{0} (left) and \spin{2} (right), using full \run{2} data. The dashed line refers to the median result, while \SI{1}{\sigma} and \SI{2}{\sigma} bands are show in yellow and blue, respectively. The black points refer to the probed mass points.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis2/spin0_no_legend_box.pdf]]
-#+ATTR_LATEX: :width .85\textwidth :center
+#+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis2/spin2_no_legend_box.pdf]]
 #+END_figure
 
-#+NAME: fig:limits_per_era
-#+CAPTION: Final limits per era.
-#+BEGIN_figure
-\centering
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis2/spin0_eras.pdf]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis2/spin0_eras.pdf]]
-#+END_figure
+At larger masses, the topology of the event becomes extremely boosted, both for b quarks and tau leptons.
+Our analysis uses the \ac{HPS} algorithm to reconstruct the tau leptons, and such algorithm is unable to reconstruct boosted taus.
+This leads to the loss of many events.
+The effect becomes progressively worse, as more and more tau leptons merge into a single boosted object.
+This issue can be addressed by using dedicated $\tau$ reconstruction algorithms at high $\mx$.
+Such analysis improvement lies outside the scope of this Thesis, since a different \ac{CMS} analysis is currently looking at such topologies, following the work performed in \newcite{high_mass_bbtt}.
 
-#+NAME: fig:result2
-#+CAPTION: Final limits for \spin{2}.
-#+BEGIN_figure
-\centering
-#+ATTR_LATEX: :width .85\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis2/spin0_vs_Atlas_CMSHY.pdf]]
-#+ATTR_LATEX: :width .85\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis2/spin0_vs_CMScomb.pdf]]
-#+END_figure
+At lower $\mx$, we observe two effects.
+Firstly, the notorious sensitivity drop is due to the increasing presence of the sum of all backgrounds.
+Secondly, the peak at \SI{\sim 280}{\GeV} is a consequence of the $\ttbar$ background shape, which features a peak at that location.
+The same overall trends were present in the previous iteration of the resonant analysis [[cite:&cms_hh_bbtt]].
 
-+ the decrease in efficiency for high $\mx$ values is due to the topology of the tau leptons, which get extremely boosted, and are thuis not reconstructed by \ac{HPS}
-+ at lower masses, instead, the sensitivity progressively gets worse due to the increase of backgrounds
-+ the particular sensitivity reduction at around $\mx = 280\,\si{\GeV}$ is a consequence of the shape of the $\ttbar$ background, which peaks at about this value,
-+ see cadamuro
-+ explain the observed trends in the limits (backgrounds, boosted taus)
-+ mention the combination plots in [[fig:res_comb_xhh]]
-+ ask Tobias per channel and poer category limits
-+ compare result also with 2016 result, mentioning scaling with lumi (lumi increased by a factor of 2, so we should expect an naive improvement of the order of 2, but we got around 10 instead)  
-+ results shown in tabular format in [[tab:final_limits]]
-+ mention Moriond 2025
+We draw attention for the relative importance of the different data-taking periods.
+Assuming the standard naive $s/\sqrt{b}$ scaling, where the number of signal events $s$ stands above the background Poisson noise $\sqrt{b}$, the sensitivity increases with $\sqrt{L}$, being $L$ the integrated luminosity.
+For upper limits on the cross section of interest, in the absence of a signal, the scaling will be inversely proportional to the statistical uncertainty of the background.
+Upper limits are thus expected to scale with $1/\sqrt{L}$.
+The \run{2} luminosities were measured to be \SI{16.8}{\invfb} for 2016, \SI{19.5}{\invfb} for 2016 APV, \SI{41.5}{\invfb} for 2017 and \SI{59.8}{\invfb} for 2018.
+The analysis strategy is identical for different periods, and the selections are quite similar, modulo some differences for specific thresholds and triggers.
+A $1/\sqrt{L}$ scaling indeed matches the differences between results from different periods.
 
-* Pulls (maybe a different section??)
-(copiado do Jona)
-An important check to be performed is the control of the impact of the nuisance parameters on the result of the analysis by evaluating the so-called /pulls/ and /impacts/.
-The pull is defined as the deviation of the value of $\hat{\theta}$ (ML estimator) with respect to its nominal value, divided by its uncertainty.
-The impact is defined as the shift $\Delta\mu$ induced on the \ac{POI} when each nuisance is fixed to $\hat{\theta} \pm 1\,\sigma$, while all other nuisances are fixed to their maximum profiled likelihood estimate $\hat{\theta}$.
-Show plot here if available.
+The robustness of the statistical approach must be verified.
+Analysis usually monitor the impact that nuisance parameters have on the results with the calculation of /pulls/ and /impacts/.
+The pull is defined as the difference between the nominal value of a parameter $\theta$ before the fit, and its estimated value after the fit, divided by the $\theta\text{'s}$ uncertainty.
+Its distribution is expected to follow a Gaussian centered around zero, with a standard deviation of one, according to the Central Limit Theorem.
+If the width of the pull is smaller than one, then the analysis is able to constrain that particular nuisance, which indicates that enough sensitivity is available, or equivalently, that the nominal values of the nuisances are too conservative.
+The impact is instead defined as the variation induced on the \ac{POI} when a nuisance is fixed to $\hat{\theta}\, \pm \,1\,\si{\sigma}$, keeping all other nuisances fixed to their maximum profiled likelihood estimate $\hat{\theta}$.
 
-(Davide)
-if the pull is constrained it means that the uncertainty we retrieve from the fit is lower that what was given in input to the fit so we have enough sensitivity to obtain a better number than the one that was estimated
+We show a preliminary version of the pulls and impacts for the 25 leading nuisances in [[fig:pulls_impacts]], for $\mx=300\,\si{\GeV}$.
+The pulls are all centered at zero since, for expected limits, the difference is computed with respect to the Asimov dataset.
 
 #+NAME: fig:pulls_impacts
-#+CAPTION: Figure caption.
+#+CAPTION: Leading 25 systematic uncertainties of the \xhhbbtt{} analysis. The pulls are indicated by the black points and the black horizontal error bars, which indicate the median and the \SI{1}{\sigma} bands, respectively. The pulls are centered at zero because an Asimov dataset is being used. The "pre" and "post" labels refer to the maximum likelihood fits. The red and blue bars indicate the impacts on the \ac{POI}, and its direction. The plot was obtained for $\mx=300\,\si{\GeV}$.
 #+BEGIN_figure
 \centering
-#+ATTR_LATEX: :width 1.\textwidth :center
+#+ATTR_LATEX: :width .8\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis2/pulls_impacts_m300.pdf]]
 #+END_figure
+
+* Biblio :noexport:
++ [[https://github.com/root-project/root/blob/master/hist/histpainter/src/TGraphPainter.cxx#L4938][implementation]] of the interpolation

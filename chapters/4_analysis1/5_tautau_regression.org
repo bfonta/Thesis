@@ -2,87 +2,103 @@
 :CUSTOM_ID: sec:tautau_regression
 :END:
 
-+ introduce svfit:
-  the invariant mass of the $\tau\tau$ pair is reconstructed using the SVfit algorithm [[cite:&svfit]] that is based on a likelihood function which quantifies the level of compatibility between a Higgs mass hypothesis and the measured momenta of the visible $\tau$ decay products plus the missing transverse energy reconstructed in the event.
-  The SVfit algorithm improves the invariant mass reconstruction so that it is closer to 125 GeV for \htt{} events, when compared to the simple visible mass of the taus (or even the visible mass plus the missing transverse energy), therefore allowing a better identification of the signal events.
-
-+ a brief description of how the training procedure of a \ac{DNN} works is available in [[#sec:pdnn]].
-+ show one distribution with peaking \tth{}
-
-+ SVFit is computationally expensive and has problems reconstructing the Higgs at low masses
-    
-#+NAME: tab:input_features
-#+CAPTION: Lists of input variables used by the deep neural network for signal extraction. The first part of the table reports input variables in descending order of importance evaluated random forest models. The second part of the table reports the additional six categorical input features with no specific ordering criterion.
-#+ATTR_LATEX: :placement [!h] :center t :align cc :environment mytablewiderrows
-|--------------+-----------------------------------------------------------------|
-| Variable     | Description                                                     |
-|--------------+-----------------------------------------------------------------|
-| =DeepJetCvsB=  | Charm versus bottom \textsc{DeepJet} discriminator score        |
-| =DeepJetCvL=   | Charm versus light flavour \textsc{DeepJet} discriminator score |
-| $\mtautau$   | Invariant mass of the \htt{} candidate                          |
-| $\mbb$       | Invariant mass of the \hbb{} candidate                          |
-|--------------+-----------------------------------------------------------------|
-
 A sizable fraction of the energy of the \htt{} system is lost due to the neutrinos resulting from the $\tau$ decays.
 These are not measured and only show up in the detector as missing transverse energy.
 Reconstructing the complete \htt{} system, however, is important for two reasons: 
 + Separating signal events from background events by reconstructing the mass of the \htt{} system, which already proved to be an important variable (using the =SVfit= algorithm) for the \ac{DNN} discriminator in \newcite{higgs_bbtautau_nonres};
 + Reconstructing the mass of the heavy resonance (the HH system) at the correct scale for which a good estimation of the momentum of the \htt{} system is needed.
 
+  
++ introduce svfit:
+  the invariant mass of the $\tau\tau$ pair is reconstructed using the SVfit algorithm [[cite:&svfit]] that is based on a likelihood function which quantifies the level of compatibility between a Higgs mass hypothesis and the measured momenta of the visible $\tau$ decay products plus the missing transverse energy reconstructed in the event.
+  The SVfit algorithm improves the invariant mass reconstruction so that it is closer to 125 GeV for \htt{} events, when compared to the simple visible mass of the taus (or even the visible mass plus the missing transverse energy), therefore allowing a better identification of the signal events.
++ \Ac{SVFit} is computationally expensive and has problems reconstructing the Higgs at low masses
+
 A neural network was trained with the target of reconstructing the momenta of the neutrinos.
 In addition to the regression output (the neutrino momenta) a second "head" simultaneously classifies the events into signal and different background processes in order to improve the regression results during training.
 
-* Samples
-For each of the eras (2016APV, 2016, 2017, 2018) the following classes of samples are used in the training:
+# Samples
+For each of the four data-taking periods, the following samples are used in the training:
 + \ac{ggF} \spin{0} and \spin{2} signals in the mass range of \SI{250}{\GeV} to \SI{3}{\TeV}
-+ DY (samples binned in $\pt$ of the Z)
-+ $\ttbar$ (fully-hadronic, semi-leptonic and fully-leptonic samples)
-+ $\ttbar$ (\htt{})
-These make up the signal samples as well as the dominant backgrounds by cross section ($\ttbar$ and \ac{DY}) as well as the \tth{} process which is expected to have the same final state objects as the signal.
-More details on the samples can be found in Section \ref{sec:}.
++ \ac{DY} samples binned in the $\pt$ of the Z;
++ $\ttbar$: fully-hadronic, semi-leptonic and fully-leptonic;
++ \tth{} (\htt{}).
+\noindent The background choices cover the two dominant background sources, namely \ac{DY} and $\ttbar$.
+The \tth{} process is also considered, since it is expected to have the same final state objects as the signal, with a peaking structure.
 
-* Input features
-There are two types of input features: the categorical and the continuous input features.
-The categorical input features are integer values that represent flags for the events, where the actual numerical value does not have a physical meaning.
-One example for this is whether an event is in the $e\tau$ (0), $\mu\tau$ (1) or $\tau\tau$ (2) channel.
-The numbers 0, 1, 2 in this case have no physical meaning and neither has the fact that 0 is closer to 1 than 2.
-These categorical features are passed through an embedding layer (with output dimension 10) before being concatenated with the continuous features to be passed to the first layer.
-The continuous features are passed through a normalization layer shifting and scaling them in a way that the mean is 0 and the standard deviation is 1.
-The features are the following:
-+ *Categorical features*: decay channel, $\tau$ decay mode, $\tau$ charge, presence of an AK8 jet, presence of a pair of AK4 jets, data-taking period, spin hypothesis;
-+ *Continuous features*: XXXXXXXXXXX;
-For background samples, the spin hypothesis is randomly chosen from the 2 possible hypotheses.
+# Input features
+The used input features can be continuous or categorical, and are described in [[tab:input_features]].
+The continuous features are passed through a normalization layer ensuring zero mean and unitary standard deviation.
+The categorical features are encoded in integers, deprived of physical meaning, which are passed through an embedding layer, with output dimension 10, before being concatenated with the continuous features.
+Some categorical features are occasionally set to a default value depending if the topology of the event is resolved or boosted.
+categorical values are set to 0 if no pair of AK4 jets or no AK8 is present) and two variants of the HH system (the sum of the \ditau{} and di-b systems and the sum of the di-$\tau$ system and the AK8 jet, again setting the respective values to 0 if no pair of AK4 jets or no AK8 jet is present)
+The concatenation is used as input to the first layer of the network.
 
-* Network and training
+#+NAME: tab:input_features
+#+CAPTION: Lists of continuous and categorical input variables used by the \ac{DNN}. The items marked with a $\dagger$ correspond to vectors that were rotated in the transverse plane with respect to the visible \ditau{} system.
+#+ATTR_LATEX: :placement [!h] :center t :align cl :environment mytablewiderrows
+|-------------+-------------------------------------------------------------------------|
+| *Type*        | *Variable*                                                                |
+|-------------+-------------------------------------------------------------------------|
+| *Continuous*  | \texttt{DeepJetCvsB}: Charm versus bottom \texttt{DeepJet} score        |
+|             | \texttt{DeepJetCvL}: Charm versus light flavour \texttt{DeepJet} score  |
+|             | \texttt{DeepJet}: b-tagging score                                       |
+|             | $\mtautau$: Invariant mass of the \htt{} candidate                      |
+|             | $\mbb$: Invariant mass of the \hbb{} candidate                          |
+|             | \hhbtag{}: Custom b-jet score                                           |
+|             | $\text{MET}^{\dagger}$: $x$ and $y$ projections                               |
+|             | $\text{Cov}(\text{MET})$: \ac{MET} covariance matrix                    |
+|             | $\text{4-momenta}^{\dagger}$: 4-momenta of \taus{}, b jets, $\tau\tau$ and $\bbbar$ |
+|-------------+-------------------------------------------------------------------------|
+| *Categorical* | $\tau$ decay channel: \eletau{}, \mutau{}, \tautau{}                       |
+|             | $\tau$ decay mode                                                          |
+|             | Presence of two AK4 jet                                                 |
+|             | Presence of one AK8 jet                                                 |
+|             | Data-taking period                                                      |
+|             | Spin hypothesis                                                         |
+|             | Mass hypothesis                                                         |
+|-------------+-------------------------------------------------------------------------|
+
+# Network and training
 #+NAME: fig:network
-#+CAPTION: Courtesy from Tobias Kramer.
+#+CAPTION: Visual representation of the $\mtautau$ regression network with its two "heads", for regression and classification. The regression estimates the three-momenta $\vec{p} = (p_x, p_y, p_z)$ of the neutrinos $\nu_1$ and $\nu_2$ produced in the \htt{} decay. Depending on the $\tau$ decay channel, the $\nu$ notation can refer to one or two neutrinos. The classification assigns every event a score, representing the probability to belong to one of four classes. Details are provided in the text. Courtesy from Tobias Kramer.
 #+BEGIN_figure
 \centering
-#+ATTR_LATEX: :width .9\textwidth :center
+#+ATTR_LATEX: :width .8\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/tautau_network.pdf]]
 #+END_figure
 
-The network consists of a common part with 5 dense layers and two "heads" (one for regressing the neutrino momenta and one for an additional classification into the processes) with 4 dense layers each.
-Each of these layers has 128 nodes and uses the \ac{ELU} activation function [[cite:&elu]].
-After each layer, a batch normalization is applied.
-The regression head has 6 outputs (3-momenta of 2 neutrinos, one per $\tau$ leg.
-For leptonic tau decays, the 2 neutrinos are summed for that leg), the classification head has 4 outputs.
+The network consists of a common part with 5 dense layers and two "heads".
+One of the heads is used for regressing the neutrino momenta, and the other for an additional classification, with 4 dense layers each.
+Each layer has 128 nodes and uses the \ac{ELU} activation function [[cite:&elu]].
+After each layer, batch normalization [[cite:&batchnorm]] is applied.
+The regression head has 6 outputs, corresponding to the three-momenta of the neutrinos from the two $\tau$ legs.
+For leptonic $\tau$ decays, the two neutrino momenta are summed.
+The classification head has 4 outputs.
 The network architecture is shown in [[tab:network]] and [[fig:network]].
-The loss function is the mean squared error for the regression head and the crossentropy for the classification head.
-Both of theses are added up to the total loss, which also includes a regularization term.
-The regularization term is the sum of the L2 norms of all weights in the network.
-This regularization term is multiplied by a factor that depends on the total number of weights in the network (in order for the factor to be independent of changing the network architecture/size).
-The factor is chosen such that the regularization term makes up roughly 20% of the total loss.
-The events are split into 5 sets based on their event numbers.
-The network is trained 5 times so that each time one of the sets can be left out of the training process and can be used to evaluate the network later without the bias that the network has already seen the events in the training.
-The network is trained with a batch size of 4096 using the =AdamW= optimizer [[cite:&adamw]] with a (starting) learning rate of \num{0.003}.
+
+The loss function includes a mean squared error term for the regression head and a cross-entropy term for the classification head.
+Both terms are added.
+On top, a regularization term is added, including the sum of the L2 norm $\sqrt{\sum^n_i|x_i|^2}$ of all the $n$ weights $i$ in the network.
+This term is multiplied by a factor which depends on $n$, to avoid a dependency on network's size.
+The factor is chosen such that the regularization term makes up \SI{\sim 20}{\percent} of the total loss.
+
+The events are split into 5 /folds/ based on their event numbers. @remove same description from signal extraction@
+The network is trained 5 times, so that each time one of the folds is held out of the training process.
+That fold can then be used to evaluate the network without any bias, since the network has not seen the events in the training.
+The training uses a batch size of 4096 and the =AdamW= optimizer [[cite:&adamw]] with an initial learning rate of \num{0.003}.
 If the validation loss has not improved within 10 epochs, the learning rate is halved.
-Once no effect on the validation loss is observed anymore, this procedure is stopped, and as soon as the validation loss has not improved within 15 epochs, the training ends.
-Instead of applying event weights (to account for different cross sections, selection efficiencies etc. of the individual processes) directly in the calculation of the loss of a batch, the batch composition iteself is chosen based on these weights.
-As a first step, each of the 4 sample classes make up 1/4 of the events of a batch.
-This is done to prevent the samples with much higher Monte Carlo statistics (DY and TT) from completely dominating the batch compared to the samples with much lower statistics like the signal samples.
+Once no effect on the validation loss is observed, this procedure is stopped.
+As soon as the validation loss has not improved within 15 epochs, the training ends.
+
+Event weights should be considered to account for different cross sections, selection efficiencies and other differences between individual processes.
+Instead of applying such weights directly in the calculation of the batch's loss, the batch composition iteself is chosen based on these weights.
+As a first step, each of the 4 sample classes makes up 1/4 of the events of a batch.
+This is done to prevent the samples with large \ac{MC} statistics, such as \ac{DY} and $\ttbar$, from completely dominating the batch compared to samples with less number of events, such as the signal.
 Within the sample classes, two different approaches are chosen: within the signal sample class, each mass/spin hypothesis counts the same, whereas in the background sample classes, the events are distributed based on the event weights.
 The network is implemented using the =Keras= library [[cite:&keras]] with a =Tensorflow= backend [[cite:&tensorflow]].
+
+# For background samples, the spin hypothesis is randomly chosen from the 2 possible hypotheses.
 
 #+NAME: tab:network
 #+CAPTION: Overview of the architecture of the $\mtautau$ regression network. A batch size of 4096 is employed. \Ac{ELU} activations are used throughout. Batch normalization is used after each layer.
@@ -95,8 +111,17 @@ The network is implemented using the =Keras= library [[cite:&keras]] with a =Ten
 | Classification head |      4 |         128 | Cross-Entropy     | 4: HH, \ac{DY}, $\ttbar$ and \tth{} |
 |---------------------+--------+-------------+-------------------+-------------------------------------|
 
+The obtained regression reveals performance significantly superior to what \ac{SVFit} could ever achieve.
+@some numerical comparison looking at old slides from Tobias@
+In the left plot of [[fig:reg_tautau]] we show the result of the $\mtautau$ regression on the relevant backgrounds and on the signal.
+The \ac{DY} and signal peaks can be fully disentangles, which was not the case with \ac{SVFit}.
+This is achieved with minor $\ttbar$ backgrond sculpting.
+In the right plot of the same figure, we can see the result of the regression on the full HH invariant mass, for various resonance masses.
+The peaks are much narrower than previous results.
+We notice that the method here described has the potential to be applied to other decay topologies, given appropriate training data and input features.
+
 #+NAME: fig:reg_tautau
-#+CAPTION: Courtesy from Tobias Kramer.
+#+CAPTION: Distributions after running inference with the trained $\mtautau$ network. (Left) Regressed $\mtautau$, for dominant background sources, peaking \tth{} and HH signal. (Right) Regressed $\mhh$ for signal samples with varied resonance masses. Courtesy from Tobias Kramer.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -104,3 +129,7 @@ The network is implemented using the =Keras= library [[cite:&keras]] with a =Ten
 #+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/reg_HH_m_signals.pdf]]
 #+END_figure
+
+* Biblio :noexport:
++ [[https://indico.cern.ch/event/1319569/contributions/5627455/attachments/2736470/4758946/HLepRare18Oct23.pdf][Tobias' slides]]
++ which H->\tau\tau leg is considered in the right plot?

@@ -46,7 +46,7 @@ Besides the almost four-fold increase in luminosity, the analysis strategy has b
 The current strategy was instead initially based on the recent \ac{CMS} nonresonant \bbtt{} publication [[cite:&higgs_bbtautau_nonres]].
 However, a series of important upgrades has since been implemented, as summarized in [[tab:improvements]].
 It is worth remarking that the resonant and nonresonant studies mutually benefit from each other.
-Just like the work here presented benefited from decisions made in the past, upgrades in the analysis here presented are already being used for \run{3} \bbtt{} analyses to be published in the future.
+Just like the work here presented took advantage from decisions made in the past, upgrades in the analysis here presented are already being used for \run{3} \bbtt{} analyses to be published in the future.
 Our analysis exploits \ac{pp} collision data recorded at a $\sqrt{s}=13\,\si{\TeV}$ center-of-mass energy by the \ac{CMS} experiment during \run{2}, for a total of \SI{138}{\invfb}.
 
 #+NAME: tab:improvements
