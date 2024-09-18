@@ -218,13 +218,16 @@
 
 * Appendix
 ** Summary of ATLAS Results on Higgs Boson Pair Production
-#+INCLUDE: "chapters/appendixes/atlas_results.org"
+#+INCLUDE: "chapters/appendixes/app_atlas_results.org"
 #+LATEX: \clearpage
 ** Final Results in Table Format
-#+INCLUDE: "chapters/appendixes/table_results.org"
+#+INCLUDE: "chapters/appendixes/app_table_results.org"
 #+LATEX: \clearpage
 ** Fraction of High-\ac{pt} Muons
-#+INCLUDE: "chapters/appendixes/highpt_muons.org"
+#+INCLUDE: "chapters/appendixes/app_highpt_muons.org"
+#+LATEX: \clearpage
+** Additional Plots on MET SFs
+#+INCLUDE: "chapters/appendixes/app_met_sfs.org"
 #+LATEX: \clearpage 
 
 * List of acronyms

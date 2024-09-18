@@ -30,7 +30,7 @@ In the following, we provide a list of all shape systematics considered in the \
   We recall that \ac{PU} variations are additionally used to correct the normalization used to weight \ac{MC} samples.
 #
 #+NAME: fig:vertex_discrepancies
-#+CAPTION: Comparison between data and \ac{MC} for the number of \acp{PV}, using 2017 \ac{UL} conditions. The \ac{PV} multiplicity is very sensitive to \ac{PU}. Courtesy of Pedro Silva.
+#+CAPTION: Comparison between data and \ac{MC} for the number of \acp{PV}, using 2017 \ac{UL} conditions. The \ac{PV} multiplicity is very sensitive to \ac{PU}. Produced in the context of \newcite{analysis_pu_reweighting}, featuring \zmumu{} events. Courtesy of Pedro Silva.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .5\textwidth :center
@@ -132,3 +132,6 @@ In the following, we provide a list of all shape systematics considered in the \
 + *Monte Carlo finite sample size*:
   The limited number of simulated events in the bins of the discriminant distributions in the final fit also carry an uncertainty, independent for each bin.
   The Barlow-Beeston approach [[cite:&barlow-beeston]] is used to take such uncertainties into account, introducing a set of nuisance parameters which multiply the expected number of events in each bin, for each background source.
+
+* Biblio :noexport:
++ analise do Pedro [[https://cms.cern.ch/iCMS/analysisadmin/cadilines?line=EXO-19-009&tp=an&id=2234&ancode=EXO-19-009][aqui]]

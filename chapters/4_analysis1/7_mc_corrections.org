@@ -185,23 +185,14 @@ Contrary to what happens for the \stau{} trigger, no \acp{SF} are centrally avai
 The efficiency of \ac{MET} triggers is in general challenging to calculate given that, by construction, \ac{MET} contains all objects present in the event.
 No dataset can therefore be used as an orthogonal reference, or denominator in the efficiency computation, against which to measure the \ac{MET} trigger efficiency.
 However, by removing the contribution of muons in the definition of MET, as shown in [[eq:metnomu]], events triggered by muon triggers become orthogonal to the $\metnomu$ trigger, which is used in this work.
-We thus measure the efficiency $\varepsilon$ of the $\metnomu$ trigger in data and \ac{MC}, independently for the four data periods under consideration (2016, 2016 APV, 2017 and 2018), according to:
+We thus measure the efficiency $\varepsilon$ of the $\metnomu$ trigger in data and \ac{MC}, using a =SingleMuon= \ac{PD}, independently for the four data periods under consideration (2016, 2016 APV, 2017 and 2018):
 #+NAME: eq:met_eff
 \begin{equation}
   \varepsilon(\metnomu) = \frac{\textrm{Analysis}\:\:\textrm{Selection}\:\:\&\&\:\: \textrm{Single-}\mu\:\:\textrm{Trigger} \:\:\&\&\:\: \metnomu\:\:\textrm{Trigger}}{\textrm{Analysis}\:\:\textrm{Selection}\:\:\&\&\:\: \textrm{Single-}\mu\:\:\textrm{Trigger}} \: ,
 \end{equation}
 
-#+NAME: fig:single_muon_eff
-#+CAPTION: \Smu{} data and \ac{MC} trigger efficiencies (top panel) and corresponding \acp{SF} (lower panel), for 2018. By construction, the efficiencies and \acp{SF} are equal to one. This is because the \smu{} trigger is enforced in the definition of the $\metnomu$ efficiency in [[eq:met_eff]]. A similar requirement is applied for all other data-taking periods.
-#+BEGIN_figure
-\centering
-#+ATTR_LATEX: :width .6\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_Canvas1D_Data_Mu_MC_TT_DY_WJets_mumu_metnomu_et_TRG_IsoMu24_CUTS_NoCut_default.pdf]]
-#+END_figure
-
 \noindent where ``Analysis Selection'' refers to the \basecat{} selection described in [[#sec:selection]], plus the presence of two b jet candidates without =DeepFlavour= requirements.
-Note that we explicitly enforce the \smu{} trigger to be fired.
-This requirement defines a robust reference for the efficiency, as can be trivially seen in [[fig:single_muon_eff]], where we show that the efficiency of the \smu{} trigger is, by construction, identical to one.
+We explicitly enforce the \smu{} trigger to be fired, ensuring a robust definition of the efficiency.
 
 We apply a selection similar to the ones detailed in [[#sec:tau_pair_sel]], but considering the \mumu{} channel.
 Since the \mumu{} channel is not part of the three analysis channels, we can use all its events while keeping orthogonality to the analysis.
@@ -218,7 +209,7 @@ The sigmoid function depends on three parameters:
 \end{equation}
 
 #+NAME: fig:metnomu_sf
-#+CAPTION: $\metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for different years. The left (right) plot in each row was obtained in the \mumu{} (\mutau{}) channel, as described in the text. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \acp{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smoothen the \ac{SF}'s distribution. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}. (Top row) 2016. (Middle-top row) 2016 APV. (Middle-bottom row) 2017. (Bottom row) 2018.
+#+CAPTION: $\metnomu$ data and \ac{MC} trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for different years. The left (right) row refers to the \mumu{} (\mutau{}) channel. The \mutau{} channel is used for validation, while \mumu{} is used to extract the analysis \acp{SF}. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smooth out the \ac{SF}'s distribution. The \acp{SF} are taken to be one for $\metnomu$ values above \SI{350}{\GeV}. From the top to the bottom row, we show the 2016, 2016 APV, 2017 and 2018 periods.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center :options trim={0.5cm 0cm 1.5cm 0cm},clip
@@ -243,12 +234,26 @@ The sigmoid function depends on three parameters:
 In order to obtain the best possible fit result, the range of the sigmoid fit is varied, and multiple values are tested.
 We find that a good result is obtained for all data periods by starting the fit at \SI{150}{\GeV} and ending it at \SI{350}{\GeV}.
 Values after \SI{350}{\GeV} can be fit by a horizontal line.
-Multiple starting values are tried and compared, and we find that they do not significantly impact the result, except when using the full $\metnomu$ range, as illustrated in [[fig:compare_ratios_ranges]].
+Multiple starting values are tried and compared, and we find that they do not significantly impact the result, except when using the full $\metnomu$ range, as illustrated in [[fig:compare_ratios]] (left), for 2018.
 For validation purposes, we also derive $\metnomu$ \acp{SF} using the \mutau{} channel, in order to make a comparison with the \mumu{} \acp{SF}, following the selection described in [[ref:tab:max_min_cuts,tab:chn_sel]].
-They are found to be compatible within statistical uncertainties, as shown in [[fig:compare_ratios_channels]].
+They are found to be compatible within statistical uncertainties, as shown in [[fig:compare_ratios]] (right), for 2018.
 For completeness, we also compare the used \mumu{} $\metnomu$ \ac{SF} curves across the four data periods in [[fig:compare_ratios_years]].
 Differences can arise due to changes in data-taking conditions across years.
-In 2017, a $\metnomu$ trigger inefficiency was observed, as reported in [[#sec:met_ineff_2017]].
+Plots for all the periods can be inspected in [[#sec:app_met_sfs]].
+
+#+NAME: fig:lumi_vs_runnumber_2017
+#+CAPTION: Recorded luminosity per run as a function of the unique \ac{LHC} run number, for the 2017 data-taking period. The two $\metnomu$ triggers considered in 2017 are shown. While the trigger with the additional $\htvar$ cut (empty red circles) was not active in the first runs, it collected all available luminosity once it was on. This enables to recover the luminosity lost by the "standard" $\metnomu$ trigger, shown as blue crosses. One should notice the discrepancies in some of the last few runs.
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/lumi_vs_runnumber_2017.pdf]]
+#+END_figure
+
+We observe that, in 2017, the $\metnomu$ trigger does not become fully efficient for high $\metnomu$ values.
+Such inefficiency could be seen as a \SI{\sim 5}{\percent} drop in the efficiency curve, at the plateau.
+This happens because the trigger was not active in the last runs of 2017.
+To recover the missing luminosity, we decided to consider instead, for 2017 only, a \logicor{} between the "standard" $\metnomu$ trigger used for other years, plus a trigger identical to the "standard one", but with an additional $\htvar>60\,\si{\GeV}$ cut.
+We can see in [[fig:lumi_vs_runnumber_2017]] that the new trigger collects more data during some of the last few runs in 2017.
+The additional trigger enables to fully recover the lost efficiency.
 
 The \acp{SF} are used to correct the \ac{MC} event-by-event, only for events within the \ac{MET} region, as discussed in [[#sec:trigger_regions]], and after applying a turn-on cut.
 The cut is set to \SI{180}{\GeV} for all eras.
@@ -259,39 +264,21 @@ The uncertainty values of the sigmoid functions at the upper limit of the fit ra
 The turn-on cut at \SI{180}{\GeV} prevents this from happening for values below the fit validity range.
 Despite the low statistics involved, one can see that the $\metnomu$ \acp{SF} improve the description of the observed data.
 
-#+NAME: fig:compare_ratios_channels
-#+CAPTION: $\metnomu$ data and MC trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2016 (top left), 2016 APV (top right), 2017 (bottom left) and 2018 (bottom right). \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smooth out the \acp{SF}' distributions. The \acp{SF} are observed to be compatible between the \mutau{} and \mumu{} channels, within statistical uncertainties.
+#+NAME: fig:compare_ratios
+#+CAPTION: Data/\ac{MC} \acp{SF} of $\metnomu$ trigger efficiencies. \Acp{SF} are extracted from the ratio of the sigmoid fits of data and \ac{MC} efficiency curves, implemented to smooth out the \acp{SF}' distributions. (Left) Five different fit ranges were tested, and zoomed in the turn-on region to better display differences. All fits are reasonably compatible, except for the full range fit, which cannot describe the data. We decided to use the fit starting at \SI{150}{\GeV}, for all data periods. (Right) The \acp{SF} are observed to be compatible between the \mutau{} and \mumu{} channels, within statistical uncertainties.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2016.pdf]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2016APV.pdf]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2017.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2018.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2018.pdf]]
 #+END_figure
 
-#+NAME: fig:compare_ratios_ranges
-#+CAPTION: $\metnomu$ data and MC trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for the four data periods. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smooth out the \acp{SF}' distributions. We tested five different fit ranges, and zoomed in the turn-on region to better display differences. All fits are reasonably compatible except for the full range fit, which cannot describe the data. We decided to use the fit starting at \SI{150}{\GeV} for all data periods.
-#+BEGIN_figure
-\centering
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2016.pdf]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2016APV.pdf]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2017.pdf]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2018.pdf]]
-#+END_figure
-
 #+NAME: fig:compare_ratios_years
-#+CAPTION: Comparison between the $\metnomu$ \acp{SF} used in the analysis between all data periods. \Acp{SF} are extracted from the ratio of the data and \ac{MC} sigmoid fits, implemented to smooth out the \acp{SF}' distributions. All triggers become fully efficient starting from $\metnomu \sim 300\,\si{\GeV}$.
+#+CAPTION: Comparison of the $\metnomu$ \acp{SF} used in the analysis, for all data periods. \Acp{SF} are extracted from the ratio of the sigmoid fits of data and \ac{MC} efficiency curves, implemented to smooth out the \acp{SF}' distributions. All triggers become fully efficient starting from $\metnomu \sim 300\,\si{\GeV}$.
 #+BEGIN_figure
 \centering
-#+ATTR_LATEX: :width .55\textwidth :center
+#+ATTR_LATEX: :width .65\textwidth :center
 [[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_years.pdf]]
 #+END_figure
 
@@ -347,33 +334,6 @@ Despite the low statistics involved, one can see that the $\metnomu$ \acp{SF} im
 [[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_TauTau_NoSF.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
 [[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_TauTau_WithSF.pdf]]
-#+END_figure
-
-** MET Trigger Inefficiency in 2017
-:PROPERTIES:
-:CUSTOM_ID: sec:met_ineff_2017
-:END:
-
-#+NAME: fig:lumi_vs_runnumber_2017
-#+CAPTION: Recorded luminosity as a function of the unique \ac{LHC} run number, for the 2017 data-taking period. The two $\metnomu$ triggers considered in 2017 are shown. While the trigger with the additional $\htvar$ cut (empty red circles) was not active in the first runs, it collected all available luminosity once it was on. This enables to recover the luminosity lost by the "standard" $\metnomu$ trigger, shown as blue crosses. One should notice the discrepancies in the last few runs.
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/lumi_vs_runnumber_2017.pdf]]
-#+END_figure
-
-It was observed that, in the 2017 data-taking period, the $\metnomu$ trigger does not becomes fully efficient for high $\metnomu$ values.
-This happens because the trigger was not active in the last runs of 2017.
-To recover the missing luminosity, we decided to consider instead, for 2017 only, a \logicor{} between the "standard" $\metnomu$ trigger used for other years, plus an additional trigger in all identical to the "standard one", but with an additional $\htvar>60\,\si{\GeV}$ cut.
-We can see in [[fig:lumi_vs_runnumber_2017]] that the new trigger collects more data during the last few runs in 2017.
-Indeed, looking at the efficiency and \ac{SF} curves in [[fig:eff_mumu_2017]], which considers the \logicor{} above, we can observe a full recovery of the lost efficiency.
-
-#+NAME: fig:eff_mumu_2017
-#+CAPTION: $\metnomu$ data and MC trigger efficiencies (top panels) and corresponding \acp{SF} (lower panels), for 2017. The left (right) plot was obtained in the \mumu (\mutau{}) channel, as described in the text. The \mumu{} channel is used for validation, while \mumu is used to extract the analysis \acp{SF}. \acp{SF} are extracted from the ratio of the data and MC sigmoid fits, implemented to smooth out the \acp{SF}' distributions. They are taken to be one for $\metnomu$ values above \SI{350}{\GeV}.
-#+BEGIN_figure
-#+ATTR_LATEX: :width .49\textwidth :center :options trim={0.5cm 0cm 1.5cm 0cm},clip
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_17_mumu_MET.pdf]]
-#+ATTR_LATEX: :width .49\textwidth :center :options trim={0.5cm 0cm 1.5cm 0cm},clip
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/eff_17_mutau_MET.pdf]]
 #+END_figure
 
 * DeepTau Scale Factors for Hadronic Tau Leptons
@@ -456,7 +416,7 @@ A custom derivation of \acp{SF} for all backgrounds samples is thus necessary.
 
 # background SFs
 The procedure developed to compute background \ac{PNet} \acp{SF} starts from the observation that the analysis is dominated by \ac{DY} and $\ttbar$ backgrounds.
-In \ac{DY} (plus jets), the "fat", or merged bb jet most likely comes from random gluon or quark jets, misidentified as b jets.
+In \ac{DY} (plus jets), the "fat", or merged $\bbbar$ jet most likely comes from random gluon or quark jets, misidentified as b jets.
 The \acp{SF} are derived in the \ac{DY} \ac{CR}, within a \boostcat{} topology.
 For the case of $\ttbar$, one of the b quarks most likely comes from a top decay, and the second jet has a combinatorial origin.
 To derive the $\ttbar$ \acp{SF}, the \eletau{} and \mutau{} \acp{SR} are combined in a region of high $\ttbar$ purity, by considering events with a \ditau{} mass above \SI{130}{\GeV}.

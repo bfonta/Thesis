@@ -34,7 +34,7 @@ Additionally, using the \acp{HF} will extend the \ac{eta} coverage up to $\eta=5
 The \ac{GCT} assembles all \acp{TP} and builds calorimeter-only objects, such as hadronically decaying taus, $e/\gamma$ candidates, jets and energy sums.
 The data is then sent to the correlators with a \SI{5}{\micro\second} latency, which also corresponds to the \ac{HGCAL} allowed latency, of which \SI{1}{\micro\second} is used only for transferring the data from the \ac{BE} to the \ac{GCT}.
 Some global calorimetric quantities are sent directly to the \ac{GT}, within \SI{9}{\micro\second} maximum.
-A detailed description of the reconstruction of trigger primitives in the future \ac{HGCAL} will be provided in [[#sec:hgcal_trigger_primitives]], as it is closely related to part of the work developed in the context of this thesis.
+A detailed description of the reconstruction of trigger primitives in the future \ac{HGCAL} will be provided in [[#sec:hgcal_trigger_primitives]], as it is closely related to part of the work developed in the context of this Thesis.
 
 * Track Trigger
 For the first time in \ac{CMS}, it will be possible to reconstruct charged particle tracks in the tracker at \SI{40}{\mega\hertz}.

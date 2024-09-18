@@ -20,7 +20,7 @@ In addition to the regression output (the neutrino momenta) a second "head" simu
 # Samples
 For each of the four data-taking periods, the following samples are used in the training:
 + \ac{ggF} \spin{0} and \spin{2} signals in the mass range of \SI{250}{\GeV} to \SI{3}{\TeV}
-+ \ac{DY} samples binned in the $\pt$ of the Z;
++ \ac{DY} samples binned in the $\pt$ of the Z boson;
 + $\ttbar$: fully-hadronic, semi-leptonic and fully-leptonic;
 + \tth{} (\htt{}).
 \noindent The background choices cover the two dominant background sources, namely \ac{DY} and $\ttbar$.
@@ -43,8 +43,6 @@ The concatenation is used as input to the first layer of the network.
 | *Continuous*  | \texttt{DeepJetCvsB}: Charm versus bottom \texttt{DeepJet} score        |
 |             | \texttt{DeepJetCvL}: Charm versus light flavour \texttt{DeepJet} score  |
 |             | \texttt{DeepJet}: b-tagging score                                       |
-|             | $\mtautau$: Invariant mass of the \htt{} candidate                      |
-|             | $\mbb$: Invariant mass of the \hbb{} candidate                          |
 |             | \hhbtag{}: Custom b-jet score                                           |
 |             | $\text{MET}^{\dagger}$: $x$ and $y$ projections                               |
 |             | $\text{Cov}(\text{MET})$: \ac{MET} covariance matrix                    |

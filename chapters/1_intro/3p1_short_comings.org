@@ -51,5 +51,5 @@ That high-energy collider physics has the potential to look for answers in many 
   Indeed, quantum corrections from Higgs interactions with other particles should place $\mh$ at the level of the Planck scale, \ie{} 17 orders of magnitude larger than its measured value.
 
 Regardless of what may lie ahead, we are confident in saying that sometime, somewhere, the \ac{SM}'s resilience will crack, hinting at what lies beyond.
-In this thesis we took the experimental risk of assuming the answer can be found in double Higgs production.
+In this Thesis we took the experimental risk of assuming the answer can be found in double Higgs production.
 Even if proved wrong, our choice will allow future work to get closer to the next big discovery.

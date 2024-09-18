@@ -22,7 +22,7 @@ They are collectively referred as "silver bullets", since their combined measure
 + \hhbbgg{}: just like for the \hgg{} process, a subpercent branching fraction is here compensated by a pure, low background final state.
   The irreducible di-photon background can be mitigated by applying a selection on the photon pair invariant mass.
 + \hhbbtt{}: represents an ideal compromise between a sizeable branching fraction at 7.3% and a background benefitting from the presence of a relatively pure $\tau\tau$ pair.
-  It is the channel considered for the analysis later described in this thesis.
+  It is the channel considered for the analysis later described in this Thesis.
 \noindent The remaining channels have a limited impact on the final sensitivity, but are nevertheless explored.
 They potentiate the development of new techniques that can be later transferred to other analyses, they can be sensitive to very particular and unexpected \ac{BSM} signatures, and they can provide the combined additional small gain required to observe a new process.
 The available final states are illustrated in [[fig:HH_final_states]].

@@ -49,7 +49,7 @@ The veto selection on leptons is described in [[#sec:tau_pair_sel]].
 
 # high pt WP
 An additional \ac{WP} is available, dedicated to muons with a \ac{pt} above \SI{120}{\GeV}.
-Given the fraction of such muons in our analysis, as listed in [[#sec:highpt_muons]], a decision was made not to consider \acp{SF} for the high-\ac{pt} \ac{WP}.
+Given the fraction of such muons in our analysis, as listed in [[#sec:app_highpt_muons]], a decision was made not to consider \acp{SF} for the high-\ac{pt} \ac{WP}.
 Moreover, binned distributions indicate a good agreement between muon data and \ac{MC}.
 Such distributions are shown at the end of this Chapter, in [[#sec:binned_distributions]].
 

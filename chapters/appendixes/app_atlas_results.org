@@ -1,5 +1,5 @@
 :PROPERTIES:
-:CUSTOM_ID: sec:atlas_results
+:CUSTOM_ID: sec:app_atlas_results
 :END:
 
 #+NAME: fig:limits_comb_atlas

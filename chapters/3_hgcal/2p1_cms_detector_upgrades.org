@@ -3,7 +3,7 @@
 :END:
 
 The extreme radiation levels and high \acp{PU} mandate extensive updates of most \ac{LHC} detector systems, and \ac{CMS} is no exception.
-For the scope of this thesis, the drastic upgrades put forward in the trigger system and endcap calorimeters take precedence, and will be described in [[ref:sec:phase2_trigger_system,sec:hgcal_intro]], respectively.
+For the scope of this Thesis, the drastic upgrades put forward in the trigger system and endcap calorimeters take precedence, and will be described in [[ref:sec:phase2_trigger_system,sec:hgcal_intro]], respectively.
 However, given the intricacies of the online trigger chain, and the ideas behind \ac{PF} reconstruction, considering subdetectors as independent elements is naive and ultimately wrong.
 We therefore provide a brief summary of all other subdetector upgrades, which can put into perspective all recent and substantial efforts of the \ac{CMS} Collaboration [[cite:&cms_run3_developments]].
 
@@ -50,7 +50,7 @@ Indeed, the primary vertex has to be disentangled from all \ac{PU} vertices, and
 The \ac{MTD} will have the ability to measure the production time of \acp{MIP} for vertex location at a \SI{30}{\pico\second} level, although a deterioration of a factor of \num{2} is expected by the end of the \ac{HL-LHC}.
 This is to be compared with the average \SI{\sim 200}{\pico\second} root mean square of individual interactions in a \ac{BX}.
 The synergy between the tracker and the \ac{MTD} will enable the association of tracks to the right vertices more often, even for scenarios with closely packed vertices, helping in \ac{LLP} reconstruction, charged hadron identification and b-jet identification.
-The latter is tightly connected with the di-Higgs measurement performed in this thesis, as detailed in [[#sec:analysis1_intro]], where precision timing can bring an additional \SI{\sim 20}{\percent} signal yield.
+The latter is tightly connected with the di-Higgs measurement performed in this Thesis, as detailed in [[#sec:analysis1_intro]], where precision timing can bring an additional \SI{\sim 20}{\percent} signal yield.
 Another interesting cooperation strategy can be envisaged with the calorimeters, especially \ac{HGCAL} (introduced in [[#sec:hgcal_intro]]), which will also provide timing measurements with a similar precision, and can thus be used to ensure compatibility with \ac{MTD} measurements.
 To be noted that, contrary to \ac{HGCAL}, the \ac{MTD} will not impose energy thresholds, and so should be able to give meaningful timing measurements for lower momentum charged particles.
 Other benefits are foreseen, like better measurements of $\tau$ lepton decays due to the improved \ac{MET} reconstruction quality, or improved \ac{VBF} tagging.

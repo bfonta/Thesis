@@ -20,5 +20,5 @@ This quantity is profoundly connected to the internals of \ac{EWSB} and the stab
 This Chapter introduces the \ac{SM}, giving special emphasis to the Higgs particle.
 The first section sets the tone, by detailing the underlying mechanisms of the \ac{SM}, including a description of the Higgs mechanism.
 Next, we devote our attention to Higgs phenomenology, most notably HH production and decay.
-We then present the reasons that lead us to believe something lies beyond the current theory, specifically discussing resonant and nonresonant HH analyses, just like the one presented in this thesis.
+We then present the reasons that lead us to believe something lies beyond the current theory, specifically discussing resonant and nonresonant HH analyses, just like the one presented in this Thesis.
 We conclude by summarizing the experimental status of HH physics, highlighting both direct and indirect searches, and a combination of the two.

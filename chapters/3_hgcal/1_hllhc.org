@@ -24,7 +24,7 @@ Given past delays and current unknowns, it is still soon to definitely confirm c
 #+END_figure
 
 #+NAME: fig:lumi_plans_hllhc
-#+CAPTION: Planned peak and integrated luminosities during the \ac{HL-LHC}. Three data-taking runs are foreseen, interspersed by three \acp{LS}. Two scenarios with different \ac{YETS} durations are shown, where shorter stops have the potential for significant integrated luminosity increases. The schedule was last updated on January 2022. Taken from [[cite:&hllhc_evolution_paper2]].
+#+CAPTION: Planned peak and integrated luminosities during the \ac{HL-LHC}. Three data-taking runs are foreseen, interspersed by three \acp{LS}. Two scenarios with different \ac{YETS} durations are shown, where shorter stops have the potential for significant integrated luminosity increases. The schedule was updated on January 2022. Taken from [[cite:&hllhc_evolution_paper2]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/lhc/lumi_evolution_hllhc.pdf]]
@@ -39,7 +39,7 @@ A detailed description is out of the scope of this work.
 * EW Processes
 The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
 This notably applies to W mass $\mw$ and weak mixing angle $\thw$ measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
-\num{\sim 2e6} W boson events will be collected per week, leading to a statistical sensitivity of about \SI{10}{\MeV} for the W mass, and significantly lower for cross-section measurements.
+\num{\sim 2e6} W boson events will be collected per week, leading to an increased statistical sensitivity for the W mass, and more precise cross-section measurements.
 The added luminosity might also help solving the tension between old $\theta_{W}$ measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result [[cite:&weak_mixing_angle_cms]], which agrees with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
 Concerning \ac{VBF} and \ac{VBS} processes, despite the overall lower cross-section, of about one order of magnitude with respect to the \ac{ggF} production, the presence of additional hard and forward jets enables a very significant reduction of the multi-jet background.
 This is particularly true for large rapidity separations $\Delta \dijetrap \gtrsim 4.5$ and di-jet invariant masses
@@ -66,11 +66,12 @@ This brings an improvement in \ac{DPS} modeling, which has been so far very limi
 
 * Top Physics
 The heaviest particle in the \ac{SM} plays an important role in \ac{EWSB} and in \ac{BSM} searches.
-With the \ac{HL-LHC} we will be able to improve the precision of the $\mt$ measurement, and to study $t\bar{t}$ differential distributions in more detail, reaching $\mtt\sim 7\,\si{\TeV}$ and $\pt\sim 2.5\,\si{\TeV}$.
-This will provide benefits for \ac{PDF} measurements.
+With the \ac{HL-LHC}, it will be possible to improve the precision of the $\mt$ measurement, which plays a role in understanding the stability of the \ac{EW} vacuum, as discussed in [[#sec:interf_intro]].
+The $t\bar{t}$ differential distributions will also be studied in more detail, reaching $\mtt\sim 7\,\si{\TeV}$ and $\pt\sim 2.5\,\si{\TeV}$.
+These will benefit \ac{PDF} measurements.
 One will also be able to explore \ac{BSM} for $\mtt > 7\,\si{\TeV}$ due to the low \ac{SM} background.
 An interesting link might be drawn between the results of \ac{LHCb} and \ac{ATLAS}/\ac{CMS}, given the increase in $\eta$ reach up to \num{\sim 4}.
-There will be as well the possibility to observe the rare $t\bar{t}t\bar{t}$ production for the first time, despite its small cross-section of $\mathcal{O}(10)\,\si{\per\femto\barn}$.
+Further studies will be possible on the rare $t\bar{t}t\bar{t}$ production, despite its $\mathcal{O}(10)\,\si{\per\femto\barn}$ cross-section, following its recent observation [[cite:&tttt_cms;&tttt_atlas]].
 $t\bar{t}t\bar{t}$ can be used to constrain some of the Wilson coefficients associated to \ac{EFT} dimension-6 operators, to further study the top Yukawa coupling constrain, including its magnitude and \ac{CP} properties, since it can occur via the mediation of a Higgs boson [[cite:&tttt]], and even to assess the presence of the non-\ac{SM} top quark dipole moment.
 
 * Forward Physics

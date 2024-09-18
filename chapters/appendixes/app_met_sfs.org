@@ -1,0 +1,39 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:app_met_sfs
+:END:
+
+In [[ref:fig:compare_ratios_ranges,fig:compare_ratios_channels]], we show the data/\ac{MC} curves coming from the $\metnomu$ trigger efficiency fits, for the four \run{2} data-taking periods.
+The $\metnomu$ \acp{SF} are explained in [[#sec:met_trigger_sfs]].
+[[fig:compare_ratios_ranges]] shows the result of testing five different fits in order to find the ideal fitting range.
+We tried to reach a balance between domain size and fit quality.
+We chose the fit starting at \SI{150}{\GeV}.
+[[fig:compare_ratios_channels]] shows a comparison of the same quantity between the \mutau{} and \mumu{} channels, for all \run{2} data-taking years.
+The pairs of distributions are always found to be compatible, validating the \mumu{} channel in this context.
+
+#+NAME: fig:compare_ratios_ranges
+#+CAPTION: Data/\ac{MC} \acp{SF} of $\metnomu$ trigger efficiencies, for the four \run{2} data-taking periods. \Acp{SF} are extracted from the ratio of the sigmoid fits of data and \ac{MC} efficiency curves, implemented to smooth out the \acp{SF}' distributions. Five different fit ranges were tested, and zoomed in the turn-on region to better display differences. All fits are reasonably compatible except for the full range fit, which cannot describe the data. We decided to use the fit starting at \SI{150}{\GeV} for all data periods.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2016.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2016APV.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2017.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2018.pdf]]
+#+END_figure
+
+#+NAME: fig:compare_ratios_channels
+#+CAPTION: Data/\ac{MC} \acp{SF} of $\metnomu$ trigger efficiencies, for the four \run{2} data-taking periods. \Acp{SF} are extracted from the ratio of the sigmoid fits of data and \ac{MC} efficiency curves, implemented to smooth out the \acp{SF}' distributions. The \acp{SF} are observed to be compatible between the \mutau{} and \mumu{} channels, within statistical uncertainties.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2016.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2016APV.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2017.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2018.pdf]]
+#+END_figure

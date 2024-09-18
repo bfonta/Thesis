@@ -1,5 +1,5 @@
 :PROPERTIES:
-:CUSTOM_ID: sec:table_limits
+:CUSTOM_ID: sec:app_table_limits
 :END:
 
 #+NAME: tab:final_limits

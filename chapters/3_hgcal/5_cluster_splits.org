@@ -3,7 +3,7 @@
 :END:
 
 The framework described in [[#sec:event_geom_developments]] is put to use in a concrete scenario.
-Before the start of the thesis here described, it had been observed that the \ac{L1} \ac{S2} chain, for unconverted photon events, occasionally identified more clusters than the number of unconverted photons originally generated in the detector.
+Before the start of the Thesis here described, it had been observed that the \ac{L1} \ac{S2} chain, for unconverted photon events, occasionally identified more clusters than the number of unconverted photons originally generated in the detector.
 For a single photon, this corresponds to measuring two energy clusters from just one generated particle.
 We say that the cluster that should have been measured was "split", hence the term /cluster splits/.
 At the \ac{TPG} level of the reconstruction, each cluster should ideally correspond to a single particle.
@@ -16,7 +16,7 @@ When studying cluster splits we require the following additional selections:
 + $(E_{\text{Cluster}}-E_{\text{Gen}})/E_{\text{Gen}} < -0.35$, which only selects events where a split very likely happened, since on average the energy is equally split across the two clusters;
 + $\eta \in \left[1.7, 2.8\right]$, to avoid unwanted reconstruction effects at \ac{HGCAL} boundaries, where showers might be transversally cut.
 With these selections, we observe cluster splits in \SI{\sim 1}{\percent} of single unconverted photon events.
-In the remainder of this section we explain the causes for cluster splits, and detail the techniques developed in the context of this thesis to mitigate or remove it.
+In the remainder of this section we explain the causes for cluster splits, and detail the techniques developed in the context of this Thesis to mitigate or remove it.
 
 * The origin of cluster splits
 :PROPERTIES:
@@ -58,7 +58,7 @@ In what follows, we propose a solution which does not impact hardware resources.
 Cluster splits are mostly located in the high-\rapidity{} region, where bins are smaller in the Cartesian space and \ac{TC} counts are less homogeneous along adjacent bins.
 Splits are also present virtually along \ac{phi} only, since \rz{} bins are larger, and thus less subject to \ac{TC} multiplicity fluctuations.
 In other words, \ac{TC} non-uniformity is much more prominent along \ac{phi}.
-For the purpose of this thesis, I have developed the \bsplits{} algorithm, which aims at reducing the variance of \ac{TC} across all \ac{phi} bins for a constant \rz{} value.
+For the purpose of this Thesis, I have developed the \bsplits{} algorithm, which aims at reducing the variance of \ac{TC} across all \ac{phi} bins for a constant \rz{} value.
 The algorithm modifies the mapping of \acp{TC} to \coordsa{} bins, and is run offline, fully decoupled from the online reconstruction.
 Its \ac{TC}-to-bin output mapping can be known in advance, and therefore encoded in a \ac{LUT}.
 No impact on firmware resources is thus expected, which represents a striking advantage over all sorts of more complex algorithms that could be included in the \acp{FPGA}.
@@ -182,7 +182,7 @@ Three methods are tested, and they all reduce cluster splits dramatically.
 + *Energy prioritization*: Instead of applying the default =min_distance= clustering algorithm, we test the greedy =max_energy= algorithm (recall [[fig:clustering_algos]]). Cluster splits are by construction removed, as long as the matching \ac{TC}-to-seed distance is large enough, since the method concentrates \acp{TC} into the same cluster. Given that seeds issued by a cluster split are generally very close, the =max_energy= algorithm effectively removes all splits.
 
 \noindent The final choice of the algorithm(s) to use will be strongly dependent on available resources and latency constraints.
-This thesis provides however a variety of choices to consider for a \ac{L1} performance improvement.
+This Thesis provides however a variety of choices to consider for a \ac{L1} performance improvement.
 
 To optimize \bsplits{} and simplify its output \ac{LUT}, the algorithm was also run considering smaller regions of the detector only, namely \ac{CE-E} only and the region around which the \ac{EM} shower energy maxima is expected to be found, specifically between layers \num{8} and \num{15}.
 It was observed that \acp{TC} in \ac{CE-H} are irrelevant for the performance of \bsplits{} with single photon guns, and that the maximum energy region clearly dominates the performance.
@@ -266,7 +266,7 @@ The brown and cyan colors of [[fig:hexag_coords]] represent the central modules 
 These considerations become relevant if the seeding is run in parallel for multiple modules in the firmware.
 The algorithm itself can be easily parallelized at \ac{TC} level, where each brown bin would correspond to a separate instance.
 The dashed lines contain the bins in a square-grid which would have to be kept in memory if running all instances in parallel, using some kind of shared memory in a naive implementation.
-Further considerations about firmware implementation are outside the scope of this thesis.
+Further considerations about firmware implementation are outside the scope of this Thesis.
 An additional advantage of the alternative seeding step is that it allows to replace the current \ac{S2} histogramming step by a simple accumulation step across layers, potentially reducing \ac{S2}'s latency.
 The smearing might also become redundant, since its main purpose was to remove cluster splits.
 This is indeed the case in all performed tests, but further validation would be required, as discussed in [[#sec:hgcal_discussion]].

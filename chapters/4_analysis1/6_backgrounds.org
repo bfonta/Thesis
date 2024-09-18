@@ -2,6 +2,8 @@
 :CUSTOM_ID: sec:backgrounds
 :END:
 
+#+MACRO: cr_distr Distribution of the \ac{pt} of the first b jet (left) and the \ac{eta} of the first lepton (a muon) in the $1 channel, for the 2018 data-taking period. The shaded gray bars represent the statistical uncertainty of the background samples. The statistical uncertainties of the data are shown as black vertical error bars.
+
 A complete understanding of all backgrounds that could mimic the signal of interest is a complex but essential step, and the only way to observe rare phenomena and make precise measurements.
 If a given \ac{MC} sample is accurate enough, /\ac{MC}-driven/ methods are used to perform background estimates.
 If instead, despite all efforts, significant discrepancies are known to exist between simulation and data, the analysts might resort to /data-driven/ methods, where real data outside the \ac{SR} is instead exploited, as long as it is kinematically similar to the \ac{SR}.
@@ -122,7 +124,7 @@ Overall, taking also into account the systematics discussed in [[#sec:syst_norm]
 :CUSTOM_ID: sec:drellyan_bckg
 :END:
 
-The contribution of the \ac{DY} \drellyan{} plus jets events is estimated using \ac{MC} simulations. 
+The contribution of the \ac{DY} \drellyan{} plus jets events is estimated using \ac{MC} simulations.
 \Ac{NLO} samples are used to model it.
 Within the \ac{CMS} Collaboration, \ac{DY} samples are generated in three separate ways:
 + as an inclusive sample;
@@ -134,11 +136,12 @@ There, the samples being added are scaled back down to the total \ac{DY} inclusi
 A /stitching weight/ of 1/3 is applied to all \ac{DY} events, given the three sample types above, to avoid event duplication.
 There is however an exception, in which events with $\pt^{\text{Z},\,\text{Gen}}=0\,\si{\GeV}$ are weighted by 1/2, since the first bin of the \ac{pt}-sliced samples does not include events with zero generated Z \ac{pt}.
 The quality of the \ac{DY} \ac{MC} simulation is checked in the \rescat{1}-like \ac{DY} \ac{CR}, defined in [[#sec:control_regions]].
-[[fig:DY_CR_plots]] shows the distribution of two kinematic variables in the \mumu{} channel for the 2018 data-taking era, namely the \ac{pt} of the first b jet and the \ac{eta} of the first lepton.
+[[fig:DY_CR_plots]] shows the distribution of two kinematic variables in the \mumu{} channel for the 2018 data-taking period, namely the \ac{pt} of the first b jet and the \ac{eta} of the first lepton.
+There, the shaded gray bars represent the statistical uncertainty of the background samples, and the statistical uncertainties of the data are too small to be seen.
 A good data/MC agreement is obtained.
 
 #+NAME: fig:DY_CR_plots
-#+CAPTION: Distribution of the \ac{pt} of the first b jet (left) and the \ac{eta} of the first lepton (a muon) in the \mumu{} channel for the 2018 data-taking period.
+#+CAPTION: #+CAPTION: {{{cr_distr(\mumu{})}}}
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -151,7 +154,19 @@ A good data/MC agreement is obtained.
 The contribution of the $\ttbar$ background is modeled using \ac{MC} simulations.
 Virtually all top quarks decay to a b quark and a W boson, which can in turn decay leptonically or hadronically.
 Samples are thus divided into fully-hadronic, semi-leptonic (or, equivalently, semi-hadronic), and fully-leptonic samples.
+[[fig:ttbar_CR_plots]] shows the distribution of two kinematic variables in the \mutau{} channel for the 2018 data-taking period, namely the \ac{pt} of the first b jet and the \ac{eta} of the first lepton.
+There, the shaded gray bars represent the statistical uncertainty of the background samples, and the statistical uncertainties of the data are too small to be seen.
 The agreement with data is found to be sufficient.
+
+#+NAME: fig:ttbar_CR_plots
+#+CAPTION: {{{cr_distr(\mutau{})}}}
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/control_plots/plot_ttbarCR_SR_MuTau_2018_bjet1_pt.pdf]]
+#+ATTR_LATEX: :width .49\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/control_plots/plot_ttbarCR_SR_MuTau_2018_dau1_eta.pdf]]
+#+END_figure
 
 For completeness, we analyzed the purity of $\ttbar$ samples in terms of the presence of at least one fake \tauh{}.
 The results can be seen in [[tab:ttbar_fake_tau_purity]].
@@ -170,16 +185,6 @@ Finally, we note the additional requirement on the b jet of the \rescat{2} categ
 | \mutau{}  | 0.332 [115723.8] | 0.379 [35168.1] | 0.310 [30247.2] | 0.597 [134.2] |
 | \tautau{} | 0.422 [2509.0]   | 0.477 [522.2]   | 0.415 [408.1]   | 0.79 [9.7]    |
 |-----------+------------------+-----------------+-----------------+---------------|
-
-#+NAME: fig:ttbar_CR_plots
-#+CAPTION: Distribution of the \ac{pt} of the second b jet (left) and the \ac{eta} of the first lepton (a muon) in the \mutau{} channel for the 2018 data-taking period.
-#+BEGIN_figure
-\centering
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/control_plots/plot_ttbarCR_SR_MuTau_2018_bjet2_pt.pdf]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/control_plots/plot_ttbarCR_SR_MuTau_2018_dau1_eta.pdf]]
-#+END_figure
 
 ** MC Mismodeling
 Contrary to what is observed at the time of writing, during the initial stages of the PhD work a $\ttbar$ \ac{MC} mismodeling was observed.

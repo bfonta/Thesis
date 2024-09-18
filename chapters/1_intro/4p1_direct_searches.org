@@ -3,12 +3,12 @@
 :END:
 
 The $\kl$ modifier is currently one of the least constrained properties of the \ac{SM}.
-While mentioning some results from the \ac{ATLAS} Collaboration in [[#sec:atlas_results]], in the following we provide an overview of the most up-to-date resonant and nonresonant \ac{CMS} results involving the direct production of two Higgs bosons.
+While mentioning some results from the \ac{ATLAS} Collaboration in [[#sec:app_atlas_results]], in the following we provide an overview of the most up-to-date resonant and nonresonant \ac{CMS} results involving the direct production of two Higgs bosons.
 Refer to [[fig:HH_final_states]] for a glimpse of all results so far produced, with the many explored final states.
 All results are compatible with the \ac{SM}.
 
 * Resonant searches
-The \ac{CMS} Collaboration has very recently performed a combination of multiple \run{2} resonant analyses [[cite:&interf_studies]][fn:: This is the same study which incldes the material presented in [[#sec:interf_intro]], and which I helped reviewing during my thesis.], considering both the \xhh{} and the \xyh{} topologies, with X and Y being \ac{BSM} scalars which could reflect the theories described in [[#sec:res_BSM_hh]].
+The \ac{CMS} Collaboration has very recently performed a combination of multiple \run{2} resonant analyses [[cite:&interf_studies]][fn:: This is the same study which incldes the material presented in [[#sec:interf_intro]], and which I helped reviewing during my Thesis.], considering both the \xhh{} and the \xyh{} topologies, with X and Y being \ac{BSM} scalars which could reflect the theories described in [[#sec:res_BSM_hh]].
 In the same work, interpretations are done for different theories, establishing exclusion limits on the model's parameters.
 Individual analyses extract 95% \ac{CL} upper limits on the resonant HH production as a function of the resonance mass $\mx$.
 When YH limits are drawn, an additional dependence on $\my$ is included.
@@ -59,7 +59,7 @@ The exclusion upper limits tend to be of around \num{50}, \num{5}, and \SI{0.3}{
 \hspace{.9cm} [[~/org/PhD/Thesis/figures/intro/XHY_Comb_HighMass.pdf]]
 #+END_figure
 
-The \xhhbbtt{} result obtained in this thesis represents an enormous improvement over the first of such studies in \ac{CMS}, which used only 2016 data [[cite:&cms_hh_bbtt]].
+The \xhhbbtt{} result obtained in this Thesis represents an enormous improvement over the first of such studies in \ac{CMS}, which used only 2016 data [[cite:&cms_hh_bbtt]].
 This work also improves on the techniques of its nonresonant counterpart [[cite:&higgs_bbtautau_nonres]].
 As reported in [[#sec:final_limits]], the expected results are even better than the most recent \ac{CMS} resonant combination at an intermediate mass range.
 A \xyhbbtt{} has also been published by \ac{CMS} [[cite:&cms_hh_bbtt]], not obtaining limits for a \SI{125}{\GeV} Higgs boson.

@@ -148,7 +148,7 @@ To conclude, Higgs physics comes with an extremely rich programme, and all produ
 A summary is shown in [[fig:higgs_modifiers]], where the two panels report the agreement of \ac{CMS} measurements with the \ac{SM} using signal strength modifiers $\mu$, defined as $\mu_{i} \equiv \sigma_{i}/(\sigma_{{i}})_{\text{SM}}$ for the production modes $i$ on the left and as $\mu^{f} \equiv \mathcal{B}^{f}/(\mathcal{B}^{f})_{\text{SM}}$ for the decay channels $f$ on the right.
 Additionally, and as already discussed in [[#sec:higgs_mechanism]] and illustrated in [[fig:linear_fermions_bosons]], the predicted proportionality between the Higgs couplings and the fermion and gauge boson masses is remarkable, being confirmed by both \ac{CMS} and \ac{ATLAS}.
 Finally, the phenomenology of cubic and quartic interactions of the Higgs boson, as introduced by [[eq:sm_potential]], is still left to be discussed.
-Given its tight connection with this thesis' subject, it receives a dedicate treatment in the next Section.
+Given its tight connection with this Thesis' subject, it receives a dedicate treatment in the next Section.
 
 #+NAME: fig:higgs_modifiers
 #+CAPTION: Signal strength parameters extracted for various production modes $\mu_i$, assuming $\mathcal{B}^f=\mathcal{B}^f_{\text{SM}}$ (left), and decay channels $\mu^f$, assuming $\sigma_i=(\sigma_i)_{\text{SM}}$ (right). The thick (thin) black lines indicate the 1 (2) standard deviation (s.d.) \acp{CL}, with the systematic and statistical components of the 1 s.d. interval indicated by the red and blue bands, respectively. The vertical dashed line at unity represents the values of $\mu_i$ and $\mu^f$ in the \ac{SM} [[cite:&higgs_10_years]].

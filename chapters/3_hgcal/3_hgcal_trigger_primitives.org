@@ -33,7 +33,7 @@ The number of \acp{TC} and \acp{elink} associated to the \ac{Sci} section increa
 
 \Acp{TP} clearly are the basis for most of the physics analyses that can be done at \ac{CMS}, both now and in the future.
 They stem from a complex interplay of advanced software and hardware approaches, with extremely tight bandwidth and latency budgets, forming the seed for all downstream decisions.
-My thesis work is deeply connected to the definition and processing of \ac{HGCAL} \acp{TP}, and will hopefully grant others the basis for important extensions, with the final goal of providing robust information to enhance the sensitivity to \ac{SM} and \ac{BSM} physics.
+My Thesis work is deeply connected to the definition and processing of \ac{HGCAL} \acp{TP}, and will hopefully grant others the basis for important extensions, with the final goal of providing robust information to enhance the sensitivity to \ac{SM} and \ac{BSM} physics.
  
 #+NAME: fig:tcs_geometry
 #+CAPTION: Illustration of the three-fold diamond configuration of an hexagonal \SI{8}{\inch} module, used to associate single \ac{Si} cells to \acp{TC}. Low density modules (left) associate four sensors to each trigger cell, while high density modules (right) create \acp{TC} with nine channels each. All modules have exactly \num{48} \acp{TC}, effectively removing a layer of complexity when processing \acp{TC}. The actual physical dimensions of the \acp{TC} vary given the boundaries of the hexagonal modules. 
@@ -278,10 +278,10 @@ Partial tower energies are accumulated into (\ac{eta}, \ac{phi}) bins and cluste
   If no \ac{TC} is left for the lowest-energy seeds, then no cluster is formed.
 
 #+NAME: fig:clustering_algos
-#+CAPTION: Illustration of the two clustering algorithms considered in the \ac{HGCAL} \ac{TPG}. Black dots represent \acp{TC}. The crosses refer to the position of the seeds, order by color from the highest to the lowest energy: red, yellow and green. The respective colored bins corresponds to the bins where the seeds are located. The black circles represent the region of influence of a particular seed on its neighboring \acp{TC}. The two \acp{TC} in red are associated to different seeds depending on the algorithm used. The matching radii can be different for different seeds. \Acp{TC} outside the three circles are not associated to any seed. (Left) The =min_distance= algorithm associates \acp{TC} based on distance. The black dashed lines represent the border between the regions where a particular seed gathers all \acp{TC}. The brown \ac{TC} serves as an example: the distance to the three seeds is shown with brown lines, where the solid line shows the closest seed to that \ac{TC}. (Right) The =max_energy= algorithm prioritizes instead the association based on the energy of the seeds.
+#+CAPTION: Illustration of the two clustering algorithms considered in the \ac{HGCAL} \ac{TPG}. The grid represents the \coordsa{} bins. Black dots represent \acp{TC}. The crosses refer to the position of the seeds, ordered by color from the highest to the lowest energy: red, yellow and green. The respective colored bins corresponds to the bins where the seeds are located. The black circles represent the region of influence of a particular seed on its neighboring \acp{TC}. The two \acp{TC} in red are associated to different seeds depending on the used algorithm. The matching radii can be different for different seeds. \Acp{TC} outside the three circles are not associated to any seed. (Left) The =min_distance= algorithm associates \acp{TC} based on distance. The black dashed lines represent the border between the regions where a particular seed gathers all \acp{TC}. The brown \ac{TC} serves as an example: the distance to the three seeds is shown with brown lines, where the solid line shows the closest seed to that \ac{TC}. (Right) The =max_energy= algorithm prioritizes instead the association based on the energy of the seeds.
 #+BEGIN_figure
 \centering
-#+ATTR_LATEX: :width .9\textwidth :center
+#+ATTR_LATEX: :width .95\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/ClusteringAlgos.pdf]]
 #+END_figure
 

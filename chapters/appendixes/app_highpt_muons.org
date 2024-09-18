@@ -1,5 +1,5 @@
 :PROPERTIES:
-:CUSTOM_ID: sec:highpt_muons
+:CUSTOM_ID: sec:app_highpt_muons
 :END:
 
 In [[tab:highPt_fractions]] we present the fractions of \mutau{} events with $\pt(\mu)>120\,\si{\GeV}$.

@@ -17,9 +17,9 @@ I have started by designing and implementing mitigation techniques for the split
 These developments have in turn lead to the introduction of promising new reconstruction approaches, for instance considering different coordinate systems.
 Future improvements are now straightforward, given the software infrastructure put in place.
 
-We start by introducing the \ac{HL-LHC}, giving a strong focus on the physics reasons motivating its installation, ultimately providing a meaning for all the efforts reported in this Chapter.
-We proceed with a detailed description of \ac{HGCAL}, a fantastic detector bound to revolutionize calorimetry.
+We start by introducing the \ac{HL-LHC} in [[#sec:hllhc]], giving a strong focus on the physics reasons motivating its installation, ultimately providing a meaning for all the efforts reported in this Chapter.
+We proceed with a detailed description of \ac{HGCAL} in [[#sec:cms_detector_upgrades]], a fantastic detector bound to revolutionize calorimetry.
 We cannot stress enough how \ac{HGCAL} breaks the frontiers of what can be done with a calorimeter, paving the way for exciting physics-inspired software and firmware developments.
-In Section [[#sec:hgcal_trigger_primitives]], we detail how the reconstruction is currently defined.
+In [[#sec:hgcal_trigger_primitives]], we detail how the reconstruction is currently defined.
 Such knowledge is useful to conceptualize the framework described in [[#sec:event_geom_developments]], which is then exploited in [[#sec:cluster_splitting]] to produce a series of results related to cluster splitting and beyond.
 We conclude the Chapter by discussing possible future steps.

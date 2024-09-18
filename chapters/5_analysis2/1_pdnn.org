@@ -51,7 +51,7 @@ This means that $\text{N}$ predictions must be generated per event.
 Before describing in detail the architecture and training of the model in [[ref:sec:architecture,sec:training]], we briefly mention the challenges introduced by the parameterized approach in the determination of systematic uncertainties.
 Given that $\text{N} = 50$, and that each of those predictions has an independent set of associated systematic uncertainties, the total number of systematic uncertainties to be considered increases enormously.
 For each variation affecting the input features of the \ac{pDNN}, a corresponding systematic uncertainty must be computed for all 50 combinations.
-A significant part of this thesis was devoted to process, distribute and store all the data necessary to correctly compute systematic uncertainties within a parameterized approach.
+A significant part of this Thesis was devoted to process, distribute and store all the data necessary to correctly compute systematic uncertainties within a parameterized approach.
 
 * Architecture
 :PROPERTIES:

@@ -8,7 +8,7 @@ The limits from \ac{ATLAS} were published in \newcite{atlas_bbtt_res}, where a s
 The \ac{CMS} result comes instead from a \xyh{} analysis [[cite:&higgs_bbtautau_hy]], where $\my=\mh\,\si{\GeV}$ was not considered.
 We thus compare our result to their $\my=120\,\si{\GeV}$ limit, which was shown to be compatible with their $\my=130\,\si{\GeV}$ result.
 This same analysis was made part of the combination results presented in [[#sec:direct_searches]].
-The results are available in numerical format in [[#sec:table_limits]].
+The results are available in numerical format in [[#sec:app_table_limits]].
 
 #+NAME: fig:result_comparison
 #+CAPTION: Comparison of the expected \xhh{} cross section 95% \ac{CL} upper limits for \spin{0} in this work with other results. (Top) Comparison with equivalent expected limits from \ac{ATLAS}, and with the most stringent \ac{CMS} \xhhbbtt{} upper limits to date. (Bottom) Comparison with the full HH \ac{CMS} combination. The results in this Thesis should drive the sensitivity of HH upper limits in \ac{CMS} in the $450 \leq \mx \leq 800 \,\si{\GeV}$ range.

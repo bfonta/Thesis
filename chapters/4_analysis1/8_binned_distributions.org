@@ -2,7 +2,7 @@
 :CUSTOM_ID: sec:binned_distributions
 :END:
 
-#+MACRO: caption_distr Binned distributions for the $1 channel in 2018. The top panel shows the \ac{pt} of the first jet on the left column, the \ac{eta} of the second lepton in the middle column, and the \ac{MET} in the right column. The three categories are shown: \rescat{1}, \rescat{2} and \boostcat{} in the top, middle, and bottom rows, respectively. The bottom panel shows the invariant mass of the $\bbbar$ pair for the three categories, from left to right: \rescat{1}, \rescat{2} and \boostcat{}. Minor backgrounds are grouped together as "others".
+#+MACRO: caption_distr Binned distributions for the $1 channel in 2018. The four rows show, from top to bottom, the \ac{pt} of the first jet, the \ac{eta} of the second lepton, the \ac{MET}, and the mass of the $\bbbar{}$ coming from one of the Higgs bosons. The three categories are shown, \rescat{1}, \rescat{2} and \boostcat{} in the left, middle, and right columns, respectively. Minor backgrounds are grouped together as "others". The shaded gray bars represent the statistical uncertainty of the background samples. The statistical uncertainties of the data are shown as black vertical error bars.
 
 #+NAME: fig:etau_distributions
 #+CAPTION: {{{caption_distr(\eletau{})}}}
@@ -11,24 +11,21 @@
 #+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_ETau_2018_bjet1_pt.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_ETau_2018_dau2_eta.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_ETau_2018_met_et.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_ETau_2018_bjet1_pt.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_ETau_2018_dau2_eta.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_ETau_2018_met_et.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_boostedL_pnet_SR_ETau_2018_bjet1_pt.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_ETau_2018_dau2_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_ETau_2018_dau2_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_boostedL_pnet_SR_ETau_2018_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_ETau_2018_met_et.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_ETau_2018_met_et.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_boostedL_pnet_SR_ETau_2018_met_et.pdf]]
-\vspace{.2cm}
-\hrule
-\vspace{.5cm}
 #+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_ETau_2018_bH_mass.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
@@ -51,24 +48,21 @@ The statistical procedure for extracting the final results uses instead a parame
 #+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_MuTau_2018_bjet1_pt.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_MuTau_2018_dau2_eta.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_MuTau_2018_met_et.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_MuTau_2018_bjet1_pt.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_MuTau_2018_dau2_eta.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_MuTau_2018_met_et.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_boostedL_pnet_SR_MuTau_2018_bjet1_pt.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_MuTau_2018_dau2_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_MuTau_2018_dau2_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_boostedL_pnet_SR_MuTau_2018_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_MuTau_2018_met_et.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_MuTau_2018_met_et.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_boostedL_pnet_SR_MuTau_2018_met_et.pdf]]
-\vspace{.2cm}
-\hrule
-\vspace{.5cm}
 #+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_MuTau_2018_bH_mass.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
@@ -84,24 +78,21 @@ The statistical procedure for extracting the final results uses instead a parame
 #+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_TauTau_2018_bjet1_pt.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_TauTau_2018_dau2_eta.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_TauTau_2018_met_et.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_TauTau_2018_bjet1_pt.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_TauTau_2018_dau2_eta.pdf]]
-#+ATTR_LATEX: :width .32\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_TauTau_2018_met_et.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_boostedL_pnet_SR_TauTau_2018_bjet1_pt.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_TauTau_2018_dau2_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_TauTau_2018_dau2_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_boostedL_pnet_SR_TauTau_2018_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_TauTau_2018_met_et.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res2b_SR_TauTau_2018_met_et.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_boostedL_pnet_SR_TauTau_2018_met_et.pdf]]
-\vspace{.2cm}
-\hrule
-\vspace{.5cm}
 #+ATTR_LATEX: :width .32\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/distributions/plot_res1b_SR_TauTau_2018_bH_mass.pdf]]
 #+ATTR_LATEX: :width .32\textwidth :center
@@ -111,7 +102,7 @@ The statistical procedure for extracting the final results uses instead a parame
 #+END_figure
 
 #+NAME: fig:cr_distributions
-#+CAPTION: Binned distributions for the \ac{DY} (top panel) and $\ttbar$ (bottom panel) \acp{CR}, in 2018. For each \ac{CR} we show, from left to right and top to bottom, the \ac{pt} of the first jet, the \ac{eta} of the second lepton, the \ac{MET}, the $\Delta\text{R}$ between the two b-jets, the =DeepJet= discriminant (also known as =DeepFlavour=) for the second jet, and the invariant mass of the $\bbbar$ pair. The categories are defined in [[#sec:control_regions]]. Minor backgrounds are grouped together as "others".
+#+CAPTION: Binned distributions for the \ac{DY} (top panel) and $\ttbar$ (bottom panel) \acp{CR}, in 2018. For each \ac{CR} we show, from left to right and top to bottom, the \ac{pt} of the first jet, the \ac{eta} of the second lepton, the \ac{MET}, the $\Delta\text{R}$ between the two b-jets, the =DeepJet= discriminant (also known as =DeepFlavour=) for the second jet, and the invariant mass of the $\bbbar$ pair. The categories are defined in [[#sec:control_regions]]. Minor backgrounds are grouped together as "others". The shaded gray bars represent the statistical uncertainty of the background samples. The statistical uncertainties of the data are shown as black vertical error bars.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .32\textwidth :center

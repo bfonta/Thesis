@@ -2,7 +2,7 @@
 :CUSTOM_ID: sec:higgs_mechanism
 :END:
 
-The Higgs mechanism revolutionized Particle Physics, and has driven \ac{HEP} experiments and studies for the past \num{\sim 50} years, of which this thesis is a good illustration.
+The Higgs mechanism revolutionized Particle Physics, and has driven \ac{HEP} experiments and studies for the past \num{\sim 50} years, of which this Thesis is a good illustration.
 The mechanism is responsible for generating the masses of the W and Z gauge bosons, and for explaining the masses of fermions.
 It is deeply connected to the stability of the \ac{EW} vacuum, and thus possibly the fate of our Universe, it can have a role in baryogenesis [[cite:&electroweak_baryogenesis]], and its homonymous particle might even be identified as the possible inflaton of the primordial Universe [[cite:&inflaton]].
 Despite its central role in modern particle physics, the Higgs mechanism is at its core based on a relatively simple phenomenon, that of symmetry breaking, which is widely present in Nature (see [[fig:symmetries]], left).
@@ -82,7 +82,9 @@ Using the definition of covariant derivative in [[eq:ew_covariant]] plus the uni
 \mw = 80.3692 \pm 0.0133 \,\si{\GeV} \: , \:\:\:\: \mz = 91.1880 \pm 0.0020 \,\si{\GeV} \: .
 \end{equation}
 
-\noindent The unitary gauge effectively removed the Goldstone bosons $\theta^{i}$, which were absorbed as additional degrees of freedom of the weak gauge bosons, corresponding to their longitudinal polarizations.
+\noindent We must here mention the recent and precise \ac{CMS} measurement of $\mw = 80.3602 \pm 0.0099\,\si{\MeV}$ [[cite:&wmass_cms]], which is not yet part of the PDG combination above.
+
+The unitary gauge effectively removed the Goldstone bosons $\theta^{i}$, which were absorbed as additional degrees of freedom of the weak gauge bosons, corresponding to their longitudinal polarizations.
 We can finally introduce the Higgs potential $\text{V}_{\text{H}}$ as it is usually presented:
 #+NAME: eq:sm_potential
 \begin{equation}

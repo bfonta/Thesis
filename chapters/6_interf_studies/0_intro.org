@@ -7,8 +7,8 @@ This is usually motivated by simplicity, also taking into account that the predi
 The most up-to-date measurements are performed with the \hzzfourl{} and \hgg{} high resolution channels [[cite:&higgs_width_cms]].
 However, when considering processes with two Higgs bosons, one cannot /a priori/ argue that the detector resolution will always be lower than the width of any \ac{BSM} resonance \xhh{}.
 Instead, and especially for large resonance masses, $\gx$ values are expected to be large, potentially leading to the inapplicability of the \ac{NWA}.
-Despite the above, the \ac{NWA} has been repeatedly used in past \ac{CMS} HH resonant analyses, including the analysis presented in this thesis.
-A sizeable signal width can create /interferences/ between the resonant and nonresonant components of the signal, which are absent under the \ac{NWA}.
+Despite the above, the \ac{NWA} has been repeatedly used in past \ac{CMS} HH resonant analyses, including the analysis presented in this Thesis.
+A sizable signal width can create /interferences/ between the resonant and nonresonant components of the signal, which are absent under the \ac{NWA}.
 The interference could be either destructive or constructive, respectively reducing or enhancing the HH production rate [[cite:&CarenaWidthEnhancement]].
 The change can be significant, both overall and as a function of $\mhh$, altering the di-Higgs /lineshapes/.
 Some examples are shown in [[ref:fig:interf_lineshapes_280,fig:interf_lineshapes_500]].

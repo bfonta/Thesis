@@ -5,7 +5,7 @@
 We extract expected 95% \ac{CL} upper limits on the cross section of the \xhh{} process, assuming \spin{0} and \spin{2} hypotheses.
 The result is obtained by rescaling the \xhhbbtt{} upper limits to the inclusive cross section.
 The limits are shown in [[fig:limits_per_era]], split per data-taking period and combined, and in [[fig:final_result]], for the full \run{2} data with \SI{1}{\sigma} and \SI{2}{\sigma} bands.
-The combination is also available in tabular format in [[#sec:table_limits]].
+The combination is also available in tabular format in [[#sec:app_table_limits]].
 The results are similar between the two spin hypothesis.
 The overall trend of the curves shows a maximum sensitivity close to $\mx=1\,\si{\TeV}$.
 We recall that one of the goals of the analysis is to assess the tension observed by \ac{ATLAS} at precisely \SI{1}{\TeV}.
@@ -61,7 +61,7 @@ We show a preliminary version of the pulls and impacts for the 25 leading nuisan
 The pulls are all centered at zero since, for expected limits, the difference is computed with respect to the Asimov dataset.
 
 #+NAME: fig:pulls_impacts
-#+CAPTION: Leading 25 systematic uncertainties of the \xhhbbtt{} analysis. The pulls are indicated by the black points and the black horizontal error bars, which indicate the median and the \SI{1}{\sigma} bands, respectively. The pulls are centered at zero because an Asimov dataset is being used. The "pre" and "post" labels refer to the maximum likelihood fits. The red and blue bars indicate the impacts on the \ac{POI}, and its direction. The plot was obtained for $\mx=300\,\si{\GeV}$.
+#+CAPTION: Leading 25 systematic uncertainties of the \xhhbbtt{} analysis. The pulls are shown by the black points and the black horizontal error bars, which indicate the median and the \SI{1}{\sigma} bands, respectively. The pulls are centered at zero because an Asimov dataset is being used. The "pre" and "post" labels refer to the maximum likelihood fits. The red and blue bars indicate the impacts on the \ac{POI}, and its direction. The plot was obtained for $\mx=300\,\si{\GeV}$. The signal was inkected with a cross section of \SI{1}{\pico\barn}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .8\textwidth :center
