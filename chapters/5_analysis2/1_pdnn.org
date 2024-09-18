@@ -2,15 +2,6 @@
 :CUSTOM_ID: sec:pdnn
 :END:
 
-A generic classification \ac{DNN} represents a function with a given, usually large number of parameters, mapping a vector of input features into a vector of class probabilities.
-Its goal is to perform /inference/, which corresponds to the estimate of some unknown quantity or quantities, based on observed data [[cite:&lista]].
-The parameters of the network are optimized, or learned, so that the network is better able to discriminate between different classes.
-This is achieved via a /training/ procedure, which is in this case /supervised/, \ie{} it uses labeled data.
-In a nutshell, the optimization procedure is performed via /back-propagation/ [[cite:&backprop]], where the parameters of the network are iteratively adjusted.
-The procedure minimizes a /loss function/, which quantifies the difference between predicted class probabilities and true class labels.
-The parameters are adjusted by calculating the derivative of the loss function with respect to the network parameters. 
-Each parameter is updated in the direction of the negative gradient of the loss function, scaled by a factor called /learning rate/.
-
 The adoption of \ac{DL} in the \xhhbbtt{} analysis naturally arises from the wish to extract the best possible limits with current technology.
 The latest nonresonant \hhbbtt{} analysis [[cite:&higgs_bbtautau_nonres]] has already exploited such techniques, following the approach introduced in \newcite{prospects_hh_hllhc_2018}, achieving significant improvements with respect to previous publications.
 However, while in the nonresonant analysis one wished to extract the \ac{SM} HH signal alone, in the resonant analysis here presented such discrimination must be done for each signal sample, associated to a given mass and spin hypothesis.
@@ -18,7 +9,7 @@ In order to create an optimal discriminant for N signal samples, one could defin
 This approach is however highly impractical with $\text{N} = 50$, as in our case, leading to an unsustainable complexity in data processing, and to prohibitively large resource needs.
 Instead, using a single network is more convenient, encodes all the information for different hypotheses in the same location and, if needed, enables the properties of under-populated signal samples to be extrapolated from other samples.
 
-A parameterized network [[cite:&parameterised_nn]] is exploited in this Thesis, where the parameters refer to the hypotheses being tested, namely the mass and spin values.
+A \ac{pDNN} [[cite:&parameterised_nn]] is exploited in this Thesis, where the parameters refer to the hypotheses being tested, namely the mass and spin values.
 Parameterized learning has already been tested with the \hhbbtt{} topology, and was found to be useful in \newcite{angelas_thesis}.
 Additionally, we have observed that the \ac{pDNN} here developed is more performant than a non-parameterized version with similar architecture and size.
 Despite the performance improvement, the parameterized approach introduces some complexities.
@@ -48,7 +39,7 @@ This means that $\text{N}$ predictions must be generated per event.
 \end{tabular}
 \end{table}
 
-Before describing in detail the architecture and training of the model in [[ref:sec:architecture,sec:training]], we briefly mention the challenges introduced by the parameterized approach in the determination of systematic uncertainties.
+The parameterized approach also introduces some challenges in the determination of systematic uncertainties.
 Given that $\text{N} = 50$, and that each of those predictions has an independent set of associated systematic uncertainties, the total number of systematic uncertainties to be considered increases enormously.
 For each variation affecting the input features of the \ac{pDNN}, a corresponding systematic uncertainty must be computed for all 50 combinations.
 A significant part of this Thesis was devoted to process, distribute and store all the data necessary to correctly compute systematic uncertainties within a parameterized approach.
@@ -58,9 +49,10 @@ A significant part of this Thesis was devoted to process, distribute and store a
 :CUSTOM_ID: sec:architecture
 :END:
 
-The network follows a densely connected structure [[cite:&huang2018densely]], prepended by a \ac{LBN} [[cite:&Erdmann_2019]] and the regression head of the network described in [[#sec:tautau_regression]].
+The network's architecture is illustrated in [[fig:combined_model]].
+It has a densely connected structure [[cite:&huang2018densely]], prepended by a \ac{LBN} [[cite:&Erdmann_2019]] and the regression head of the network described in [[#sec:tautau_regression]].
 The total set of input features is split into the subset of features for the $\mtautau$ regression network and the subset of features fed into the \ac{LBN}, which receives all four-momenta of the two reconstructed leptons and of the two reconstructed b-jets in the event.
-In the \boostcat{} category some input nodes are left with a default value, but the architecture remains unchanged.
+Depending on the resolved or boosted topology of an event, default values are assigned to some input nodes.
 The outputs of these two networks are concatenated in an intermediate layer and fed into a densely connected \ac{DNN}, which consists of 8 hidden layers, each containing 128 nodes.
 This architecture has shown to smooth out the surface of the loss function [[cite:&li2018visualizing]], helping the training procedure when using large networks [[cite:&he2015deep]].
 A dropout [[cite:&dropout]] of 5% is considered.
@@ -69,10 +61,9 @@ Swish-1 activation functions are used for hidden layers [[cite:&swish]].
 For both the $\mtautau$ regression network and the LBN, categorical features are embedded using entity embeddings [[cite:&cat_embed]].
 At the end of the network, each event is categorized according to one of three possible classes: resonant \ac{ggF} \bbtt{} signal, \ac{DY} background or $\ttbar$ background.
 For simplicity, we are currently exploiting the signal score only.
-The architecture is illustrated in [[fig:combined_model]].
 
 #+NAME: fig:combined_model
-#+CAPTION: Architecture of the \xhhbbtt{} final discriminant. The layout corresponds to a combination of the $\mtautau$ regression network, the \ac{LBN} and a densely connected \ac{DNN}. The weights of the regression network are left initialize fixed, and are slowly activated as training time passes, which we refer to as "fade-in". "BN" stands for batch-normalization, and "ACT" stands for activation function. Courtesy from Marcel Rieger.
+#+CAPTION: Architecture of the \xhhbbtt{} final discriminant. The layout corresponds to a combination of the $\mtautau$ regression network, the \ac{LBN} and a densely connected \ac{DNN}. The weights of the regression network are left initialize fixed, and are slowly activated as training time passes, which we refer to as "fade-in". "BN" stands for batch-normalization, and "ACT" stands for activation function. Courtesy of Marcel Rieger.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width 1.\textwidth :center
@@ -84,17 +75,7 @@ The architecture is illustrated in [[fig:combined_model]].
 :CUSTOM_ID: sec:training
 :END:
 
-When training a \ac{DNN}, one should ensure that the network can generalize to unseen data.
-This is crucial, as \acp{DNN} can suffer from /overfitting/, a phenomenon in which sufficiently large networks, after enough time, perfectly describe the data they were trained on, but cannot make correct predictions on different datasets.
-This is a consequence of also fitting the dataset's variance, or noise, which is inevitably present, in addition to the relevant model structures.
-The noise is usually irrelevant for the understanding of a particular system and, due to its stochastic nature, is detrimental in the algorithm's capacity for generalization.
-In our analysis, in order to avoid overfitting, the available samples are divided into two subsets.
-The first is used for training, and the second for /validation/, \ie{} for evaluating the performance of the network in an unbiased way, using data it has never seen.
-This procedure is sound, but has the disadvantage of holding out a portion of the data, leading to an increase of the statistical uncertainty associated to each prediction.
-A strategy was therefore chosen such that all samples can be used, in a procedure where $k$ \ac{DNN} discriminants are associated to $k$ subsets of the full dataset, or /folds/.
-Each \ac{DNN} is trained on $k-1$ folds, with the remaining fold being held out for validation.
-No two \acp{DNN} are validated with the same fold.
-The full data is used.
+In our analysis, in order to avoid overfitting, the available samples are divided into five folds, using the same cross-validation technique that was described in [[#sec:tautau_regression]].
 Each \ac{DNN} is initialized with an independent "He-Uniform" weight-initialization scheme [[cite:&he2015weights]]. 
 After the training, the predictions are averaged out across all discriminants.
 
@@ -105,7 +86,6 @@ Three classes of input features are considered:
 + *parameterized*: the mass and spin values representing the hypotheses being tested.
         
 # training loop
-One step of the training loop is generally referred to as an /epoch/, which corresponds to one full pass of the training data through the network.
 The data is processed in /batches/, each with a size of 4096 events.
 The =Adam= optimizer [[cite:&adam]] is considered, starting with a learning rate of 0.003.
 As the training progresses, the learning rate is reduced so that the minimum of the loss function is not overshoot.
@@ -123,8 +103,6 @@ This is required to prevent the discriminant to ignore signal events, given the 
 Within each fraction, the $\ttbar$ and \ac{DY} samples are distributed according to \ac{MC} weights, to reflect the true background source composition.
 
 * DNN Score Distributions
-
-We finally the show the result of the inference step on all background samples.
 The distributions can be seen in [[fig:pdnn_distributions]], where a signal sample is also included for reference.
 The cross section of the signal is arbitrary, and in the plot it is scaled for visualization purposes to the final upper limits, shown in [[#sec:final_limits]], multiplied by the \bbtt{} \ac{BR}.
 Some data points are shown to assess compatibility.
@@ -133,11 +111,12 @@ The chosen region has a \ac{DNN} score below 0.8, to avoid biasing the results b
 Occasionally, the \ac{QCD} background contribution is so small that statistical fluctuations with the ABCD method can lead to a negative bin content.
 In such cases, the \ac{QCD} contribution is removed from the histograms.
 
-The binning follows a "flat-signal" approach, where the number of signal events per bin is required to be, as much as possible, the same, and certain requirements are imposed on the number N of background events in each bin:
+The binning follows a "flat-signal" approach, where the number of signal events per bin is, as much as possible, required to be the same, and certain requirements are imposed on the number N of background events in each bin:
 + $\text{N}_{\text{DY}}>1$;
 + $\text{N}_{\ttbar}>1$;
-+ $\text{N}_{\text{DY}}+\text{N}_{\text{DY}}>4$.
-\noindent For simplicity, the bin with the lowest \ac{DNN} score is left with less signal events, due to the termination conditions of the binning algorithm.
++ $\text{N}_{\text{DY}}+\text{N}_{\text{DY}}>4$;
+\noindent where the goal is to avoid bins with too little background, while ensuring that the two most dominant background sources are always present.
+For simplicity, the bin with the lowest \ac{DNN} score is left with less signal events, due to the termination conditions of the binning algorithm.
 It does not affect the final results, since that bin provides no sensitivity.
   
 #+NAME: fig:pdnn_distributions

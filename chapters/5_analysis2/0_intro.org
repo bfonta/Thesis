@@ -6,10 +6,10 @@ We have so far described in detail what in simple words amounts to a complex dat
 Techniques that have been repeated and refined over the years were covered, including selections, estimates and related validations, with one goal only: increase the analysis sensitivity.
 The material presented in this Chapter finally substantiates all efforts into a quantifiable measurement.
 We want to be able to state whether the observed data matches the backgrounds, and thus the \ac{SM}, or if it can alternatively accommodate one or more signal excesses.
-To draw such conclusion, we make use of a /discriminant variable/, sensitive to the underlying probability distributions of data and backgrounds, and which optimally encodes the analysis information so far discussed.
+To draw such conclusion, we make use of a /discriminating variable/, sensitive to the underlying probability distributions of data and backgrounds, and which optimally encodes the analysis information so far discussed.
 The higher the discrimination power of such observable is, the more sensitive the analysis becomes, equating to measurements of smaller and smaller \ac{BSM} cross sections.
-Conversely, would such observable be poorly defined, and the analysis would not be able to detect \ac{NP}, even if abundant.
-Therefore, the design of a discriminant variable is of dramatic importance, representing the nexus of all analysis decisions so far taken.
+Conversely, would such observable be poorly defined, the analysis would not be able to detect \ac{NP}, even if abundant.
+Therefore, the design of a discriminating variable is of dramatic importance, representing the nexus of all analysis decisions so far taken.
 
 Historically, \ac{HEP} discriminants were built from kinematical and topological variables related to the events, as these are expected to encode the most information regarding the processes under study[fn:: Matrix element discriminants are occasionally employed, as they have been shown to provide the maximal information for the description of the underlying physics processes. They can only be successfully applied for "clean" backgrounds, without jets, for instance. The approach is applied via the MELA package [[cite:&mela1;&mela2;&mela3;&mela4;&mela5]].].
 Similarly, for many resonant analysis, as was the case for the analysis here reported, the combined invariant mass of the final state particles, or a modified version thereof, was usually considered.
@@ -21,7 +21,7 @@ The main reasons that lead to such a technological shift were the increased comp
 \Ac{HEP} has accompanied the trend, exploiting such algorithms to improve the analyses' performances.
 Even triggers have been included in the process, achieving improvements that surpass all expectations.
 
-In [[#sec:pdnn]], we start by explaining how \ac{DL} techniques are leveraged to define a robust discriminant variable.
+In [[#sec:pdnn]], we start by explaining how \ac{DL} techniques are leveraged to define a robust discriminating variable.
 We then proceed, in [[#sec:systematics]], with a description of all systematic uncertainties taken into account, both arising from variations to the inputs of the \ac{DL} procedure, and also to shifts to the several \ac{MC} correction weights taken into account in our analysis.
 The quantification of the differences between two alternative scenarios is the task of the statistical treatment presented in [[#sec:stats_intro]].
 Specifically, we formulate the hypothesis that the data is not described by the \ac{SM}, and verify if the measurements agree with such a claim.

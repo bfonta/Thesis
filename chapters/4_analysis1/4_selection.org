@@ -12,7 +12,7 @@ The stages proceed in order, by targeting single objects first, such as b jets, 
 Once the two H candidates have been found, an additional two-dimensional invariant mass cut is applied on the $\mbb$ and $\mtautau$ plane, to further restrict the phase-space of interest, removing potential outliers, and to provide validation \acp{CR}.
 A categorization step immediately follows, where /categories/ are defined.
 This step separates events according to the topology of the b-quark pair, creating two resolved and one boosted category.
-The categories are created in order to boost the sensitivity of a dedicated /discriminant variable/, which is described in the next Chapter.
+The categories are created in order to boost the sensitivity of a dedicated /discriminating variable/, which is described in the next Chapter.
 
 In the following, we detail the selection cuts applied to leptons and b jets in [[ref:sec:tau_pair_sel,sec:b_pair_sel]].
 All events that satisfy the selection on tau leptons and b-quark pairs are said to belong to the \basecat{} selection.

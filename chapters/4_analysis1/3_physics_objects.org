@@ -168,8 +168,12 @@ Further improvements, particularly the widespread adoption of \acp{GNN}, have le
 
 In our analysis, AK4 jets originating from b quarks are identified using the =DeepJet= algorithm.
 In order to separate b-jets from other jets, =DeepJet= combines secondary vertex properties, track-based variables and \ac{PF} jet constituents (neutral and charged candidates) in a \ac{DNN}.
-It then classifies jets into six different categories, three of which are merged in order to tag b-jets in physics analyses.
-The three merged categories focus on jets with at least two b hadrons, exactly one b hadron decaying hadronically, and exactly one b hadron decaying leptonically.
+It then classifies jets into three main categories: light, charm or b jets.
+Bottom jets are further categorized into jets with at least two b hadrons, jets with exactly one b hadron decaying hadronically, and jets with exactly one b hadron decaying leptonically.
+Light jets are also split into quark and gluon jets.
+In this Thesis, whenever we refer to =DeepJet=, we imply its b jet discrimination capabilities compared to all other jet classes.
+Comparisons between other specific jet types are referred to as =DeepJetCvsB= and =DeepJetCvL=, when discriminating c jets against b jets, and c jets against light jets, respectively.
+The latter are used as input features for the $\mtautau$ regression in [[#sec:tautau_regression]].
 
 #+NAME: tab:bTagWPs
 #+CAPTION: Thresholds for different years with associated \acp{WP} and efficiencies to be considered with \run{2} \ac{UL} datasets for the =DeepJet= and mass decorrelated \ac{PNet} \xbb{} taggers. LP, MP and HP refer to Low, Medium and High purities, respectively.

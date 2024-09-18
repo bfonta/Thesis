@@ -2,40 +2,54 @@
 :CUSTOM_ID: sec:tautau_regression
 :END:
 
-A sizable fraction of the energy of the \htt{} system is lost due to the neutrinos resulting from the $\tau$ decays.
-These are not measured and only show up in the detector as missing transverse energy.
-Reconstructing the complete \htt{} system, however, is important for two reasons: 
-+ Separating signal events from background events by reconstructing the mass of the \htt{} system, which already proved to be an important variable (using the =SVfit= algorithm) for the \ac{DNN} discriminator in \newcite{higgs_bbtautau_nonres};
-+ Reconstructing the mass of the heavy resonance (the HH system) at the correct scale for which a good estimation of the momentum of the \htt{} system is needed.
+A sizable fraction of the energy in the \htt{} system is lost from a detector's point of view, due to the neutrinos in the decays of the tau lepton.
+Experimentally, the neutrinos are measured as \ac{MET}.
+Such a signature severely limits the reconstruction of the invariant mass of the \ditau{} system, $\mtautau$, which has an impact in the sensitivity of any analysis relying on tau lepton pairs.
+In our analysis, the correct reconstruction of the full \htt{} leg is essential for separating signal from background events.
+Additionally, in order to obtain the correct energy scale for the full HH system, a good estimate of the \htt{} momentum is necessary.
 
-  
-+ introduce svfit:
-  the invariant mass of the $\tau\tau$ pair is reconstructed using the SVfit algorithm [[cite:&svfit]] that is based on a likelihood function which quantifies the level of compatibility between a Higgs mass hypothesis and the measured momenta of the visible $\tau$ decay products plus the missing transverse energy reconstructed in the event.
-  The SVfit algorithm improves the invariant mass reconstruction so that it is closer to 125 GeV for \htt{} events, when compared to the simple visible mass of the taus (or even the visible mass plus the missing transverse energy), therefore allowing a better identification of the signal events.
-+ \Ac{SVFit} is computationally expensive and has problems reconstructing the Higgs at low masses
+# SVFit intro
+In order to reconstruct the energy carried by the neutrinos, \ac{CMS} analyses with the \htt{} topology were so far using the \ac{SVFit} algorithm [[cite:&svfit]], including the previous \bbtt{} iteration [[cite:&higgs_bbtautau_nonres]].
+This algorithm reconstructs $\mtautau$ based on a likelihood function.
+The function quantifies the level of compatibility between reconstructing a Higgs boson mass hypothesis, and reconstructing the visible momenta of the decay products of the $\tau$ plus the \ac{MET} in the event.
+As a consequence, the \ac{SVFit} algorithm improves the $\mtautau$ reconstruction, so that the \htt{} system lies closer to the expected \SI{125}{\GeV} mass, with an improved resolution.
 
-A neural network was trained with the target of reconstructing the momenta of the neutrinos.
-In addition to the regression output (the neutrino momenta) a second "head" simultaneously classifies the events into signal and different background processes in order to improve the regression results during training.
+# SVFit issues
+However, \ac{SVFit} faces two important issues.
+Firstly, it is a computationally expensive approach, leading to bottlenecks in the analysis workflow.
+Secondly, it does not work optimally when the \ac{MET} is close to zero, which happens for HH systems at low masses, since the two \taus{} tend to be emitted back-to-back.
+In this work, we introduce an alternative approach to fix such issues.
+A \ac{DNN} has been trained in order to /regress/ the neutrino momenta.
+
+# Intro to DNNs
+A generic \ac{DNN} represents a function with a given, usually large number of parameters, mapping input features into a set of continuous variables, in the case of regression, or into class probabilities, in the case of /classification/.
+Its goal is to perform /inference/, which corresponds to the estimate of some unknown quantity or quantities, based on the observed data [[cite:&lista]].
+The parameters of the network are optimized, or learned, such that the network is better able to predict the ground truth.
+This is achieved via a /training/ procedure, which is in this case /supervised/, \ie{} it uses labeled data.
+In a nutshell, the optimization procedure is performed via /back-propagation/ [[cite:&backprop]], where the parameters of the network are iteratively adjusted.
+The procedure minimizes a /loss function/, which quantifies the difference between the target prediction and true values.
+In this context, the target corresponds to neutrino momenta, and the true values are obtained with simulated samples.
+The parameters of the network are updated in the direction of the negative gradient of the loss function.
+A factor called /learning rate/ scales the magnitude of the adjustments, influencing the time the algorithm takes to converge.
 
 # Samples
-For each of the four data-taking periods, the following samples are used in the training:
-+ \ac{ggF} \spin{0} and \spin{2} signals in the mass range of \SI{250}{\GeV} to \SI{3}{\TeV}
+For each of the four data-taking periods, the following samples are used for the training:
++ \ac{ggF} \spin{0} and \spin{2} signals in the mass range of \SI{250}{\GeV} to \SI{3}{\TeV};
 + \ac{DY} samples binned in the $\pt$ of the Z boson;
 + $\ttbar$: fully-hadronic, semi-leptonic and fully-leptonic;
 + \tth{} (\htt{}).
-\noindent The background choices cover the two dominant background sources, namely \ac{DY} and $\ttbar$.
-The \tth{} process is also considered, since it is expected to have the same final state objects as the signal, with a peaking structure.
+\noindent The backgrounds above cover the two dominant background sources, namely \ac{DY} and $\ttbar$.
+The \tth{} process is also considered, since it has the same final state as the signal, including a peaking structure.
 
 # Input features
-The used input features can be continuous or categorical, and are described in [[tab:input_features]].
+The input features used to train the network can be continuous or categorical, and are described in [[tab:input_features]].
 The continuous features are passed through a normalization layer ensuring zero mean and unitary standard deviation.
-The categorical features are encoded in integers, deprived of physical meaning, which are passed through an embedding layer, with output dimension 10, before being concatenated with the continuous features.
-Some categorical features are occasionally set to a default value depending if the topology of the event is resolved or boosted.
-categorical values are set to 0 if no pair of AK4 jets or no AK8 is present) and two variants of the HH system (the sum of the \ditau{} and di-b systems and the sum of the di-$\tau$ system and the AK8 jet, again setting the respective values to 0 if no pair of AK4 jets or no AK8 jet is present)
-The concatenation is used as input to the first layer of the network.
+The categorical features are encoded as integers, deprived of physical meaning, which are passed through an embedding layer, with output dimension 10, before being concatenated with the continuous features.
+Some categorical features are occasionally set to a default value depending on the resolved or boosted topology of an event.
+The concatenation is used as an input to the first layer of the network.
 
 #+NAME: tab:input_features
-#+CAPTION: Lists of continuous and categorical input variables used by the \ac{DNN}. The items marked with a $\dagger$ correspond to vectors that were rotated in the transverse plane with respect to the visible \ditau{} system.
+#+CAPTION: Lists of continuous and categorical input variables used by the \ac{DNN}. The items marked with a $\dagger$ correspond to vectors that were rotated in the transverse plane with respect to the visible \ditau{} system. The rotation is performed to establish a common reference, which helps the training.
 #+ATTR_LATEX: :placement [!h] :center t :align cl :environment mytablewiderrows
 |-------------+-------------------------------------------------------------------------|
 | *Type*        | *Variable*                                                                |
@@ -44,12 +58,12 @@ The concatenation is used as input to the first layer of the network.
 |             | \texttt{DeepJetCvL}: Charm versus light flavour \texttt{DeepJet} score  |
 |             | \texttt{DeepJet}: b-tagging score                                       |
 |             | \hhbtag{}: Custom b-jet score                                           |
-|             | $\text{MET}^{\dagger}$: $x$ and $y$ projections                               |
+|             | $\text{MET}^{\dagger}$: $x$ and $y$ \ac{MET} projections                      |
 |             | $\text{Cov}(\text{MET})$: \ac{MET} covariance matrix                    |
 |             | $\text{4-momenta}^{\dagger}$: 4-momenta of \taus{}, b jets, $\tau\tau$ and $\bbbar$ |
 |-------------+-------------------------------------------------------------------------|
 | *Categorical* | $\tau$ decay channel: \eletau{}, \mutau{}, \tautau{}                       |
-|             | $\tau$ decay mode                                                          |
+|             | \tauh{} decay mode                                                      |
 |             | Presence of two AK4 jet                                                 |
 |             | Presence of one AK8 jet                                                 |
 |             | Data-taking period                                                      |
@@ -59,47 +73,58 @@ The concatenation is used as input to the first layer of the network.
 
 # Network and training
 #+NAME: fig:network
-#+CAPTION: Visual representation of the $\mtautau$ regression network with its two "heads", for regression and classification. The regression estimates the three-momenta $\vec{p} = (p_x, p_y, p_z)$ of the neutrinos $\nu_1$ and $\nu_2$ produced in the \htt{} decay. Depending on the $\tau$ decay channel, the $\nu$ notation can refer to one or two neutrinos. The classification assigns every event a score, representing the probability to belong to one of four classes. Details are provided in the text. Courtesy from Tobias Kramer.
+#+CAPTION: Visual representation of the $\mtautau$ regression network with its two "heads", for regression and classification. The regression estimates the three-momenta $\vec{p} = (p_x, p_y, p_z)$ of the neutrinos $\nu_1$ and $\nu_2$ produced in the \htt{} decay. Depending on the $\tau$ decay channel, the $\nu$ notation can refer to one or two neutrinos. The classification assigns every event a score, representing the probability to belong to one of four classes. Details are provided in the text. Courtesy of Tobias Kramer.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .8\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis1/tautau_network.pdf]]
 #+END_figure
 
-The network consists of a common part with 5 dense layers and two "heads".
-One of the heads is used for regressing the neutrino momenta, and the other for an additional classification, with 4 dense layers each.
+The network consists of a common part with 5 dense layers and two "heads", as illustrated in [[fig:network]].
 Each layer has 128 nodes and uses the \ac{ELU} activation function [[cite:&elu]].
 After each layer, batch normalization [[cite:&batchnorm]] is applied.
+One of the heads is used for regressing the neutrino momenta, and the other performs classification, with 4 dense layers each.
 The regression head has 6 outputs, corresponding to the three-momenta of the neutrinos from the two $\tau$ legs.
 For leptonic $\tau$ decays, the two neutrino momenta are summed.
 The classification head has 4 outputs.
-The network architecture is shown in [[tab:network]] and [[fig:network]].
+The elements of the architecture are listed in [[tab:network]].
 
-The loss function includes a mean squared error term for the regression head and a cross-entropy term for the classification head.
+The loss function includes a mean squared error term for the regression head, and a cross-entropy term for the classification head.
 Both terms are added.
-On top, a regularization term is added, including the sum of the L2 norm $\sqrt{\sum^n_i|x_i|^2}$ of all the $n$ weights $i$ in the network.
-This term is multiplied by a factor which depends on $n$, to avoid a dependency on network's size.
+On top, a regularization term is included, with the sum of the L2 norm $(\sum^n_i|x_i|^2)^{1/2}$ of all the $n$ weights $i$ in the network.
+This term is multiplied by a factor which depends on $n$, to avoid a dependency on the network's size.
 The factor is chosen such that the regularization term makes up \SI{\sim 20}{\percent} of the total loss.
 
-The events are split into 5 /folds/ based on their event numbers. @remove same description from signal extraction@
-The network is trained 5 times, so that each time one of the folds is held out of the training process.
-That fold can then be used to evaluate the network without any bias, since the network has not seen the events in the training.
+# cross-validation
+When training a \ac{DNN}, one should ensure that the network can generalize to unseen data.
+This is crucial, as \acp{DNN} can suffer from /overfitting/, a phenomenon in which sufficiently large networks, after enough time, perfectly describe the data they were trained on, but cannot make correct predictions on different datasets.
+This is a consequence of fitting the dataset's variance, or noise, which is inevitably present, in addition to the relevant model structures.
+The noise is usually irrelevant for the understanding of a particular system and, due to its stochastic nature, is detrimental to the algorithm's capacity for generalization.
+To counteract such effects, the dataset is split into training and /validation/ subsets.
+The latter is used for evaluating the performance of the network in an unbiased way, using data it has never seen, thus preventing overfitting.
+In turn, the introduction of a validation subset has the disadvantage of holding out a portion of the data from the training, leading to an increase of the statistical uncertainty associated to each prediction.
+A strategy is therefore chosen such that all samples can be used, called /cross-validation/.
+This procedure defines $k$ \ac{DNN} discriminants associated to $k$ subsets of the full dataset, or /folds/.
+Each \ac{DNN} is trained on $k-1$ folds, with the remaining fold being held out for validation.
+No two \acp{DNN} are validated with the same fold, and the full data is exploited.
+In the end, the predictions of the $k$ discriminants are averaged.
+For this work, we use five folds ($k=5$).
+
 The training uses a batch size of 4096 and the =AdamW= optimizer [[cite:&adamw]] with an initial learning rate of \num{0.003}.
-If the validation loss has not improved within 10 epochs, the learning rate is halved.
-Once no effect on the validation loss is observed, this procedure is stopped.
+If the validation loss does not improve within 10 epochs, the learning rate is halved.
+Once no effect on the validation loss is observed, the adaptation of the learning rate is stopped.
 As soon as the validation loss has not improved within 15 epochs, the training ends.
 
-Event weights should be considered to account for different cross sections, selection efficiencies and other differences between individual processes.
-Instead of applying such weights directly in the calculation of the batch's loss, the batch composition iteself is chosen based on these weights.
-As a first step, each of the 4 sample classes makes up 1/4 of the events of a batch.
-This is done to prevent the samples with large \ac{MC} statistics, such as \ac{DY} and $\ttbar$, from completely dominating the batch compared to samples with less number of events, such as the signal.
-Within the sample classes, two different approaches are chosen: within the signal sample class, each mass/spin hypothesis counts the same, whereas in the background sample classes, the events are distributed based on the event weights.
+Event weights are considered, to account for different cross sections, selection efficiencies and other differences between individual processes.
+Instead of applying such weights directly in the calculation of the loss of each batch, the batch composition directly depends on the weights.
+As a first step, the events of the 4 classes are distributed across a batch in equal proportions.
+This is done to prevent the samples with large \ac{MC} statistics, such as \ac{DY} and $\ttbar$, from driving the learning in the batch, when compared to samples with less events, such as the signal.
+Within the sample classes, two different approaches are chosen.
+For the signal class, each mass or spin hypothesis is equally weighted, whereas for the background classes, the events are distributed based on the event weights.
 The network is implemented using the =Keras= library [[cite:&keras]] with a =Tensorflow= backend [[cite:&tensorflow]].
 
-# For background samples, the spin hypothesis is randomly chosen from the 2 possible hypotheses.
-
 #+NAME: tab:network
-#+CAPTION: Overview of the architecture of the $\mtautau$ regression network. A batch size of 4096 is employed. \Ac{ELU} activations are used throughout. Batch normalization is used after each layer.
+#+CAPTION: Overview of the architecture of the $\mtautau$ regression network. A batch size of 4096 is employed. \Ac{ELU} activations and batch normalization are applied after each layer.
 #+ATTR_LATEX: :placement [!h] :center t :align ccccc :environment mytablewiderrows
 |---------------------+--------+-------------+-------------------+-------------------------------------|
 | *\ac{DNN} section*    | *Layers* | *Nodes/layer* | *Loss function*     | *Number of Outputs*                   |
@@ -109,17 +134,18 @@ The network is implemented using the =Keras= library [[cite:&keras]] with a =Ten
 | Classification head |      4 |         128 | Cross-Entropy     | 4: HH, \ac{DY}, $\ttbar$ and \tth{} |
 |---------------------+--------+-------------+-------------------+-------------------------------------|
 
-The obtained regression reveals performance significantly superior to what \ac{SVFit} could ever achieve.
-@some numerical comparison looking at old slides from Tobias@
-In the left plot of [[fig:reg_tautau]] we show the result of the $\mtautau$ regression on the relevant backgrounds and on the signal.
-The \ac{DY} and signal peaks can be fully disentangles, which was not the case with \ac{SVFit}.
-This is achieved with minor $\ttbar$ backgrond sculpting.
+The performance of the regression is dramatically superior to what \ac{SVFit} achieves.
+Results vary depending on the class being probed, but lead to $\mtautau$ widths at least two times narrower, occasionally more.
+In the left plot of [[fig:reg_tautau]], we show the result of the $\mtautau$ regression on the relevant backgrounds, and on the signal.
+The \ac{DY} and signal peaks can be fully disentangled, contrary to what happens with \ac{SVFit}.
+These results are achieved with only a minor $\ttbar$ background sculpting.
 In the right plot of the same figure, we can see the result of the regression on the full HH invariant mass, for various resonance masses.
 The peaks are much narrower than previous results.
 We notice that the method here described has the potential to be applied to other decay topologies, given appropriate training data and input features.
+The network is further exploited in the definition of the final discriminant, detailed in [[#sec:pdnn]].
 
 #+NAME: fig:reg_tautau
-#+CAPTION: Distributions after running inference with the trained $\mtautau$ network. (Left) Regressed $\mtautau$, for dominant background sources, peaking \tth{} and HH signal. (Right) Regressed $\mhh$ for signal samples with varied resonance masses. Courtesy from Tobias Kramer.
+#+CAPTION: Binned distributions after running the inference step with the trained $\mtautau$ network. (Left) Regressed $\mtautau$, for dominant \ac{DY} and $\ttbar$ background sources, peaking \tth{} and HH signal. $\ttbar$ is split into fully-leptonic ("dl") and semi-leptonic ("sl") samples. (Right) Regressed $\mhh$ for various signal samples. Courtesy of Tobias Kramer.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center

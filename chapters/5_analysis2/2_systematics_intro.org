@@ -23,7 +23,7 @@ Uncertainties related to the \acp{POI} caused by data fluctuations alone are den
 Instead, the propagation of the imperfect knowledge of the analysis' nuisance parameters leads to /systematic uncertainties/.
 The careful measurement of systematics plays a central role in any physics analysis, since systematics can dramatically affect the sensitivity of the result.
 In this section, we list the many sources of systematic uncertainties considered in our analysis, and which are included in the limit extraction.
-Systematic uncertainties affecting only the yield of a given signal or background process are detailed in [[#sec:syst_norm]], and systematics also affecting the shape of the final discriminant variable are listed in [[#sec:syst_shape]].
+Systematic uncertainties affecting only the yield of a given signal or background process are detailed in [[#sec:syst_norm]], and systematics also affecting the shape of the final discriminating variable are listed in [[#sec:syst_shape]].
 For convenience, they are listed in [[tab:summary_systs]].
 
 #+NAME: tab:summary_systs
