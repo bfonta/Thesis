@@ -2,7 +2,7 @@
 :CUSTOM_ID: sec:prospects
 :END:
 
-The results presented in the previous section used the full \ac{CMS} \run{2} data.
+The results presented in the previous Section used the full \ac{CMS} \run{2} data.
 We here discuss the future of Higgs boson pair production, considering future data-taking periods at the \ac{LHC} and \ac{HL-LHC}.
 
 * Run 3
@@ -10,7 +10,7 @@ At the time of writing, \run{3} has already collected more data than \run{2} eve
 Multiple analyses are being prepared.
 Concerning the \bbtt{} channel, both nonresonant and resonant searches are being explored, and should be published within the next few years.
 The sensitivity of HH analyses is expected to increase significantly.
-Firstly, the center-of-mass energy will slightly increase, leading to a HH cross-section increase of \SI{\sim 10}{\percent}.
+Firstly, the center-of-mass energy will slightly increase, leading to a HH cross section increase of \SI{\sim 10}{\percent}.
 Secondly, and most importantly, the luminosity will increase by a factor of \num{\sim 3}.
 Using the naive luminosity scaling, we would expect an improvement of the order of 70%.
 We should however realistically expect larger improvements [[cite:&lumi_scaling]].

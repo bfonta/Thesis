@@ -4,7 +4,7 @@
 
 The importance of the \ac{L1} and High-level \ac{CMS} trigger systems was already highlighted in [[#sec:cms_trigger_system]].
 The \Ac{HGCAL} will be integrated with the online firmware trigger system put in place by \ac{CMS}, the \ac{L1} [[cite:&l1TDR]], which precedes the \ac{HLT} running on commercial servers.
-In this section we detail the hardware and software infrastructure powering the \ac{HGCAL} \ac{DAQ} and \ac{L1} \ac{TPG} systems.
+In this Section we detail the hardware and software infrastructure powering the \ac{HGCAL} \ac{DAQ} and \ac{L1} \ac{TPG} systems.
 The \ac{TPG} produces \acp{TP} which are physical quantities built to encapsulate the most discriminative information in an event.
 \Acp{TP} are used as building blocks for \ac{L1} decisions.
 In \ac{HGCAL}, \acp{TP} consist of (\ac{eta}, \ac{phi}) towers and cluster-related variables, such as energy, positions and shapes.
@@ -210,7 +210,7 @@ Partial tower energies are accumulated into (\ac{eta}, \ac{phi}) bins and cluste
   The coordinates are "projective", since 3D deposits are mapped to a 2D space.
   Energy deposits of neutral particles originating from the center of the detector and spanning several layers will thus lie in a single \rz{} bin.
   The binning further reduces the spatial granularity and, due to its grid-like structure, facilitates vectorized and hence parallel processing in the firmware.
-  Each bin contains the energy sum of all its \acp{TC}, together with their \tmip[fn:: The algorithms and data flow of the trigger reconstruction chain are in constant evolution. After the work related in this chapter had been finalized, it was decided to perform the calibration to energy values ($\si{\GeV}$) directly in the \ac{ECON-T}. This means that energy is now measured in transverse energy units, not in \tmip{} units.]-weighted $x/z$ and $y/z$ positions, where \tmip{} is defined as $\text{MIP}/\cos(\theta)$, with one \ac{MIP} being the energy deposited by a minimum ionizing particle [[cite:&PDG \S34.2.3]], and $\theta$ the polar angle introduced in [[#sec:coordinate_system]].
+  Each bin contains the energy sum of all its \acp{TC}, together with their \tmip[fn:: The algorithms and data flow of the trigger reconstruction chain are in constant evolution. After the work related in this Chapter had been finalized, it was decided to perform the calibration to energy values ($\si{\GeV}$) directly in the \ac{ECON-T}. This means that energy is now measured in transverse energy units, not in \tmip{} units.]-weighted $x/z$ and $y/z$ positions, where \tmip{} is defined as $\text{MIP}/\cos(\theta)$, with one \ac{MIP} being the energy deposited by a minimum ionizing particle [[cite:&PDG \S34.2.3]], and $\theta$ the polar angle introduced in [[#sec:coordinate_system]].
   The weighted positions are defined as follows:
 
   #+NAME: eq:weighted_position

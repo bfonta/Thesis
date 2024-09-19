@@ -7,7 +7,7 @@ Despite the remarkable success of the \ac{SM} so far, many \ac{BSM} physics pred
 These extensions typically come with additional \ac{BSM} particles.
 Such models nevertheless have to obey the constraints set from both theory and experiments [[cite:&singlet_model_robens]].
 
-In this chapter we focus on the \ac{SM} extended by a real singlet scalar field S.
+In this Chapter we focus on the \ac{SM} extended by a real singlet scalar field S.
 This corresponds to the simplest possible extension to the \ac{SM}, with the smallest addition of new free parameters, and thus serves as an ideal test case against which to validate ideas and new techniques.
 The singlet model also has no direct gauge interactions, making it harder to detect experimentally. 
 Despite its simplicity, the model can generate a \ac{SFO-EWPT} sufficient to explain \ac{EW} baryogenesis, and provides a complementary approach with respect to using exotic Higgs decays [[cite:&CarenaExotic]].
@@ -20,13 +20,13 @@ V(\text{H}, \text{S}) = \mu^{2} (\text{H}^{\dagger} \text{H}) + \frac{1}{2} (\te
 
 \noindent where the constants $c_{1}$ and $c_{2}$ represent the connection between the \ac{SM} and the new singlet scalar.
 At this point, some authors impose a \ztwo{} symmetry on the real singlet field, which is then softly broken by the \ac{VEV} of the singlet field, leading to the mixing of the eigenstates of the H and S fields.
-This has the advantage of reducing the number of free parameters to only \num{3}, usually parameterised as the mixing angle, the ratio of \ac{VEV}'s, and the mass of the new resonance.
+This has the advantage of reducing the number of free parameters to only \num{3}, usually parameterized as the mixing angle, the ratio of \ac{VEV}'s, and the mass of the new resonance.
 For this specific study, we consider instead a version of the singlet model where no \ztwo{} symmetry $S \rightarrow -S$ is imposed on the scalar field.
 This is motivated by the fact that the \ztwo{} symmetry precludes terms of odd powers of the additional singlet scalar field S,
 such as the ones multiplied by $c_{1}$ and $\kappa$ in [[eq:singlet_couplings]].
 The odd terms in S are known to be often responsible for a \ac{SFO-EWPT} [[cite:&papa1;&papa2]], as discussed in [[#sec:ewpt]].
 
-Exploiting \ac{EW} symmetry breaking, both H and S aquire a \ac{VEV}, where the Higgs \ac{VEV} $v_{0}$ is measured to be \SI{\sim 246}{\GeV}, using Fermi's constant (see [[eq:self_couplings]]), and the new S \ac{VEV} $x_{0}$ is unknown.
+Exploiting \ac{EW} symmetry breaking, both H and S acquire a \ac{VEV}, where the Higgs \ac{VEV} $v_{0}$ is measured to be \SI{\sim 246}{\GeV}, using Fermi's constant (see [[eq:self_couplings]]), and the new S \ac{VEV} $x_{0}$ is unknown.
 Following the same procedure as for the Higgs mechanism ([[#sec:higgs_mechanism]]), we expand around the two fields: $\text{H} \rightarrow (v_{0}+h)/\sqrt{2}$ and $\text{S} \rightarrow x_{0} + s$.
 To obtain physical states, the mass matrix is again diagonalized, leading to[fn:: To simplify the notation, we are using the same letter H to refer to both the particle and the field.]:
 
@@ -51,7 +51,7 @@ g_{\text{H} kk} = g^{\text{SM}}_{\text{H} kk}\cos\alpha \quad \text{and} \quad g
 
 \noindent where the angle $\alpha$ is the parameter that enables an indirect connection of the new scalar with the gauge and fermionic sectors of the \ac{SM}.
 When $\sin(\alpha)=0$, $\cos(\alpha)=1$ and the \ac{SM} is recovered.
-The hardest constraints on the singlet model usually come from searches for diboson final states, single Higgs combinations, and the measurements of the W mass [[cite:&singlet_model_robens_proceedings]].
+The hardest constraints on the singlet model usually come from searches for di-boson final states, single Higgs combinations, and the measurements of the W mass [[cite:&singlet_model_robens_proceedings]].
 
-In the next sections, we use the real singlet model for a dedicated study of interference effects arising from a non-zero X resonance width.
+In the next Sections, we use the real singlet model for a dedicated study of interference effects arising from a non-zero X resonance width.
 We are particularly interested in knowing whether the \ac{NWA} holds everywhere and, if not, in which regions of the phase space.

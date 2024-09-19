@@ -6,7 +6,7 @@ Reconstruction is the operation of constructing physics quantities from the raw 
 in the experiment.
 Following what is described in [[#sec:cms_detector]], and similarly to other \ac{HEP} experiments, \ac{CMS} consists on consecutive barrel and endcap detector layers surrounding the \ac{pp} \ac{IP}.
 As depicted in [[fig:muon_system_slice]], the design includes a tracker, calorimeters, the solenoid and muon chambers, with different detector elements establishing a synergy to detect distinct particle types.
-Charged particles, such as electrons[fn::In this section, whenever we mention electrons we also mean their anti-particles, positrons, for brevity. The same logic is used for other particle types, when applicable.], muons or charged hadrons, leave energy deposits, or /hits/, in the tracker.
+Charged particles, such as electrons[fn:: In this Section, whenever we mention electrons we also mean their anti-particles, positrons, for brevity. The same logic is used for other particle types, when applicable.], muons or charged hadrons, leave energy deposits, or /hits/, in the tracker.
 The relative bending of their trajectories in the solenoid's magnetic field conveys information on their charge and momentum.
 Most particles, either charged or neutral, deposit all their remaining energy in the calorimeters.
 Calorimeter deposits separated from the extrapolated position of tracker hits constitute a clear signature of neutral particles, such as photons.
@@ -231,7 +231,7 @@ After the calibration, whenever the track momenta does not match the calorimetri
 If no mismatch is found, no additional neutral particle is identified, and the estimate for the charged hadron momenta is improved by performing a $\chi^{2}$ fit to the associated tracks and clusters.
 The fit is particularly helpful for situations with low resolution tracks, usually at high energies or large \ac{eta} values, and ensures a gradual shift between tracker-dominated low energy and cluster-dominated high energy measurements.
 Additional muons are searched for if the calibrated cluster energy is much smaller than the sum of the track momenta, but this rarely happens.
-The description in this section serves as the basis for the complex algorithms that reconstruct hadronic tau decays, and which are briefly described in [[#sec:physics_objects]], proving essential for the \xhhbbtt{} analysis.
+The description in this Section serves as the basis for the complex algorithms that reconstruct hadronic tau decays, and which are briefly described in [[#sec:physics_objects]], proving essential for the \xhhbbtt{} analysis.
 
 * Tau Leptons
 :PROPERTIES:
@@ -354,5 +354,5 @@ These usually correspond to genuine cosmic muons that traverse \ac{CMS} in coinc
 Other reasons include a completely wrong muon momentum estimate due to a wrong inner track association, a decay in flight, significant synchrotron radiation, or interactions in the steel yoke.
 For all the above, a dedicated event post-processing is employed in the \ac{PF} approach, as mentioned at the end of [[#sec:offline_reco_pf]].
 
-We finalize this section by noting that the measured MET is systematically different from the true MET.
+We finalize this Section by noting that the measured MET is systematically different from the true MET.
 Applied corrections are described in the Chapters where the \xhhbbtt{} is discussed, namely in [[#sec:physics_objects]].

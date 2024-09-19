@@ -66,7 +66,7 @@ The limits are obtained on the \ac{POI} $\mu$, but are rescaled to the cross sec
 When looking for resonances as a function of multiple hypothesis, as done for \xhhbbtt{} in terms of the resonance masses $\mx$, the p-value underestimates the chances of observing fluctuations when jointly considering all signals being probed.
 In other words, the /local/ significance, as computed for a fixed value of a parameter, systematically overestimates the more correct, /global/ significance, in a phenomenon dubbed the /look-elsewhere effect/.
 This effect takes place because $q$ depends on several hypotheses $m = (m_1,m_2,m_3,...)$, and not just on a single $m_i$, and thus one has to take into account background fluctuations at any hypothesis value in the relevant domain.
-The local p-value is thus converted into a global one through a new test statistic, computed by taking the maximum value of test statistics over the hypothese's domain [[cite:&stat_procedure_comb_higgs]]:
+The local p-value is thus converted into a global one through a new test statistic, computed by taking the maximum value of test statistics over the hypotheses' domain [[cite:&stat_procedure_comb_higgs]]:
 #+NAME: eq:global_pvalue
 \begin{equation}
 q(\mu) = \max_{i} q(\mu; m_i) \: .

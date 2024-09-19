@@ -12,7 +12,7 @@ The correction is done with the application of \acp{SF}, often defined as the ra
 The \acp{SF} can also be applied to particular objects.
 Residual differences are handled by the addition of systematic uncertainties, covered in the next Chapter.
 
-In this section, we detail all \ac{MC} corrections applied in our analysis.
+In this Section, we detail all \ac{MC} corrections applied in our analysis.
 Some corrections are centrally provided by the \ac{CMS} Collaboration, so that multiple analyses can benefit from them, while other corrections have to be computed specifically in the \xhhbbtt{} context.
 We mention here the corrections that are straightforward to describe:
 

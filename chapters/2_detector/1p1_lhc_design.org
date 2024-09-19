@@ -3,7 +3,7 @@
 :END:
 
 The record-breaking \SI{13.6}{\TeV} proton center-of-mass energies at the \ac{LHC} cannot be achieved without a complex chain of injection.
-The chain starts with the extraction of protons from a simple hydrogen bottle[fn::Around three \SI{1.5}{\meter}-tall bottles are used per year of operation.], within \ac{Linac4}, and continues in accelerator rings of progressively higher energies, going first to the Booster, then to the \ac{PS}, and finally into the \ac{SPS}, before being injected into the \ac{LHC}.
+The chain starts with the extraction of protons from a simple hydrogen bottle[fn:: Around three \SI{1.5}{\meter}-tall bottles are used per year of operation.], within \ac{Linac4}, and continues in accelerator rings of progressively higher energies, going first to the Booster, then to the \ac{PS}, and finally into the \ac{SPS}, before being injected into the \ac{LHC}.
 The complete accelerator complex is illustrated in [[fig:cern_acc_complex]].
 
 #+NAME: fig:cern_acc_complex

@@ -1,12 +1,44 @@
+The work presented in this Thesis covered some of the central axes of Experimental Particle Physics.
+By exploiting current and future capabilities of the \ac{CMS} detector at CERN's \ac{LHC}, we provided original contributions to the field, on a range of topics.
+New algorithms were developed within a custom software framework, in the context of the future \ac{HGCAL}.
+\Ac{CMS} \run{2} datasets were analyzed to search for the resonant production of a Higgs bosons pairs.
+A simulation study was for the first time performed, in order to probe the impact that resonance effects have on the upper limits extracted for \ac{NP} models.
+The above subjects are all linked, by the need and the wish to provide measurements of ever increasing precision, which might one day lead to the next revolution.
+
 + hgcal:
   + promising algorithms for tp reconstruction
   + framework for the future including geometry; already used by other students
+
 + analysis:
   + In particular, we are almost a factor of 2 more sensitive at \SI{1}{\TeV}, and can thus conclude that the analysis should be able to confirm or reject the tension observed by \ac{ATLAS}.
   + best sensitivity ever for \xhhbbtt{}, driving sensitivity for \ac{CMS} combination at $450 \leq \mx \leq 800 \,\si{\GeV}$ range
   + improvement much above naive lumi scaling
   + CMS HL-LHC projection wiill improve with our result
-+ interference: conclude on the impact of the NWA
+
+
+Going Beyond the Narrow Width Approximation in HH Resonant Searches
+novel study with the Singlet Model
+interference effects between resonances and continuous \ac{SM} background
+take the detector's resolution into account, comopare with the latest \ac{CMS} combination [[cite:&interf_studies]]
+
+For most of the studied mass points, sizable interference ratios occur only in parameter regions to which the current measurements are not yet sensitive, or at too large values of sin α.
+In particular, for large resonance masses, with mX above 600 GeV, where interference effects tend to grow, measurements are far below the current sensitivity and might only play a role when the full data set from the HL-LHC becomes available.
+However, there are regions at intermediate mX where the interpretation of NWA-based limits for HH derived in the singlet model would solicit some care already in the Run 2 combination (for example mX = 500 GeV, sin α = 0.2 and λHHX = 400 GeV).
+It is important to note that such interpretations are generally model dependent.
+
+Still, the signature develops a peak-dip structure for a negative interference ratio, and a shoulder-like enhancement towards large masses for a positive interference ratio. 
+For a precision measurement, which is not yet in our reach, a distortion of the signal shape would have to be taken into account.
+
+conclude on the impact of the NWA
+The study had to make a reasonable choice of parameter thresholds. Notwidthstanding, the study represents the first dedicated interference study within CMS,
+hinting already at the necessity of avoiding the NWA in future HH analyses.
+
+projections, where we clearly show that the \ac{HL-LHC} will dramatically expand the exclusion region of the singlet model.
+Intereference effects will be become more and more significant.
+
+
+We express our sincere wish that this work can, ...
+
 
 
 

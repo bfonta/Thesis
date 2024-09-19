@@ -6,7 +6,7 @@ The analysis uses \SI{138}{\invfb} of \run{2} \ac{UL} data[fn:: The concept of U
 It also makes use of dozens of \ac{MC} samples.
 These are used to model the many processes faking the final decay topology of interest, called /backgrounds/.
 \Ac{MC} samples are also employed to simulate \ppxhh{} processes with different spin and masses, representing the analysis' /signals/.
-In this section we provide details on all the above, obtained via the data processing chain described in [[#sec:mc_gen]].
+In this Section we provide details on all the above, obtained via the data processing chain described in [[#sec:mc_gen]].
 
 * Data
 :PROPERTIES:

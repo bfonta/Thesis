@@ -20,7 +20,7 @@ In the following, we provide a more detailed description of each production mode
 #+END_figure
 
 #+NAME: tab:HH_production_xsec
-#+CAPTION: Relative abundances and inclusive cross-sections plus uncertainties for the most significant HH production modes at $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$ in the \ac{NNLO} \ac{FT} approximation for $\mh = 125\,\si{\GeV}$. Taken from [[cite:&lhc_wg4_twiki]].
+#+CAPTION: Relative abundances and inclusive cross sections plus uncertainties for the most significant HH production modes at $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$ in the \ac{NNLO} \ac{FT} approximation for $\mh = 125\,\si{\GeV}$. Taken from [[cite:&lhc_wg4_twiki]].
 #+ATTR_LATEX: :placement [!h] :center t :align ccl :environment mytablewiderrows
 |--------------------------------+----------------------+---------------------------------------------------------------------------------------------------|
 | Production mode                | Approx. fraction [%] | Cross section [$\si{\femto\barn}$]                                                                |
@@ -98,8 +98,8 @@ This behaviour is very different from what happens for single Higgs processes, w
 
 ** Single top associated production
 The single top $\text{q}\text{q}^{\prime} \rightarrow \text{t}\text{q}^{\prime\prime}\,\text{H}\text{H}$ process can proceed via a multitude of t- or s-channels, as shown in [[fig:HH_production_diagrams_thh]], where s-channels are around one order of magnitude rarer.
-The cross-sections are so small that it can be hardly investigated at the \ac{LHC}.
-Future colliders can nevertheless open a window on this production mode, because the cross-section increases faster with energy than the associated production, and reaches the same value at $\sqrt{s} \approx 100\,\si{\GeV}$.
+The cross sections are so small that it can be hardly investigated at the \ac{LHC}.
+Future colliders can nevertheless open a window on this production mode, because the cross section increases faster with energy than the associated production, and reaches the same value at $\sqrt{s} \approx 100\,\si{\GeV}$.
 Additionally, the two jets will provide background reduction capabilities.
 The interest resides from being able to probe HH couplings to vector bosons and top quarks simultaneously.
 

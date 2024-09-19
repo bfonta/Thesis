@@ -24,7 +24,7 @@ Instead, the approach usually followed, including in this Thesis, is to define a
 Results can be subsequently reinterpreted in phenomenological studies, in the context of more specific models.
 This enables a single Physics analysis to explore a broad class of models at once.
 The simplest model possible is the singlet model, which is covered in [[#sec:singlet_model]], since it is directly connected with the work discussed in [[#sec:interf_intro]].
-In this Section we instead discuss other options, which serve as a strong motivation to perform the HH searches described in further chapters.
+In this Section we instead discuss other options, which serve as a strong motivation to perform the HH searches described in further Chapters.
 
 * Warped Extra Dimensions
 Generations of physicists have tried to incorporate quantum gravity in the \ac{SM} without much success so far.

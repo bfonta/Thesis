@@ -3,7 +3,7 @@
 :END:
 
 Despite its success, intriguing observations or fully unexplained phenomena blatantly highlight the limitations of the \ac{SM}.
-In this section, we list the most prominent challenges a successfull future theory should ideally address [[cite:&griffiths;&thomson]].
+In this Section, we list the most prominent challenges a successfull future theory should ideally address [[cite:&griffiths;&thomson]].
 That high-energy collider physics has the potential to look for answers in many of the following topics is a statement for the relevance \ac{HEP} experiments still have in the general experimental landscape.
 
 + *Dark Matter*:

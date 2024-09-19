@@ -7,7 +7,7 @@ Such locations, numbered \ac{IP} 1, 2, 5 and 8, are located in underground exper
 They are part of CERN's North Area, where \ac{SPS} provides proton beams.
 Other \acp{IP} were used by the \ac{LEP} experiments: ALEPH[fn:: Apparatus for LEP PHysics], at \ip{4}, and OPAL[fn:: Omni-Purpose Apparatus for LEP], at \ip{6}.
 The \acp{IP} for DELPHI[fn:: DEtector with Lepton Photon and Hadron Identification], at \ip{8}, and L3[fn:: Third LEP Experiment], at \ip{2}, were reused by the \ac{LHCb} and the \ac{ALICE} detectors, respectively [[cite:&lhc_operation]].
-In this section, we provide a summary for some of the physics experiments exploiting \ac{LHC} beams, before describing the \ac{CMS} detector at length in [[#sec:cms_detector]].
+In this Section, we provide a summary for some of the physics experiments exploiting \ac{LHC} beams, before describing the \ac{CMS} detector at length in [[#sec:cms_detector]].
 
 * ATLAS
 The \ac{ATLAS} detector [[cite:&atlas_collab]] is, along with \ac{CMS}, one of the two general-purpose detectors at the \ac{LHC}.

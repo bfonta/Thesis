@@ -3,7 +3,7 @@
 :END:
 
 The majority of Higgs analyses considers the \ac{NWA} for the final analysis fit, where the Higgs boson width $\gh$ is set to zero or to an arbitrarily small value.
-This is usually motivated by simplicity, also taking into account that the predicted \ac{SM} $\gh$ of \SI{\sim 4.1}{\MeV} [[cite:&YellowReport4 App.A]] at $\mh=125.08 \pm 0.12\,\si{\GeV}$[fn:: The value of the PDG average [[cite:&PDG]] at the time of writing is slightly different, and based on older \ac{CMS} and \ac{ATLAS} measurements: [[cite:&higgs_mass_cms;&higgs_mass_atlas;&higgs_mass_atlas_cms]]] [[cite:&higgs_mass_cms_run2]], compatible with measurements [[cite:&higgs_width_cms;&higgs_width_atlas]], is around two order of magnitude smaller than what the \ac{CMS} detector resolution can currently provide [[cite:&higgs_mass_cms_run2;&higgs_mass_cms]].
+This is usually motivated by simplicity, also taking into account that the predicted \ac{SM} $\gh$ of \SI{\sim 4.1}{\MeV} [[cite:&YellowReport4 App.A]] at $\mh=125.08 \pm 0.12\,\si{\GeV}$[fn:: The value of the PDG average [[cite:&PDG]] at the time of writing is slightly different, and based on older \ac{CMS} and \ac{ATLAS} measurements: [[cite:&higgs_mass_cms;&higgs_mass_atlas;&higgs_mass_atlas_cms]]] [[cite:&higgs_mass_cms_run2]], compatible with measurements [[cite:&higgs_width_cms;&higgs_width_atlas]], is around two orders of magnitude smaller than what the \ac{CMS} detector resolution can currently provide [[cite:&higgs_mass_cms_run2;&higgs_mass_cms]].
 The most up-to-date measurements are performed with the \hzzfourl{} and \hgg{} high resolution channels [[cite:&higgs_width_cms]].
 However, when considering processes with two Higgs bosons, one cannot /a priori/ argue that the detector resolution will always be lower than the width of any \ac{BSM} resonance \xhh{}.
 Instead, and especially for large resonance masses, $\gx$ values are expected to be large, potentially leading to the inapplicability of the \ac{NWA}.
@@ -21,4 +21,4 @@ The ongoing \run{3} should see the first appearances of non-\ac{NWA} results, si
 For simplicity, we here consider the resonant model with the smallest number of additional free parameters: the singlet model [[cite:&papa1]].
 Similar studies could be repeated with other, more complex models, such as models containing two singlets [[cite:&papa3]].
 As a future step, we would like to extend the same study to the \bbtt{} channel, namely measuring the impact of the \ac{NWA} on the final limits of the analysis.
-The content of this chapter was published as part of a review paper covering the Higgs boson production searches through decays of heavy resonances [[cite:&interf_studies]].
+The content of this Chapter was published as part of a review paper covering the Higgs boson production searches through decays of heavy resonances [[cite:&interf_studies]].

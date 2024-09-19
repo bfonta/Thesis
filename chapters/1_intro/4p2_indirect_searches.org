@@ -20,7 +20,7 @@ On top of the already mentioned HH direct searches, $\kl$ can be alternatively c
 Indeed, despite not depending on $\lh{3}$ at \ac{LO} or at higher orders in \ac{QCD}, single Higgs production does depend on $\kl$ in \ac{EW} interactions at \ac{NLO}.
 We display some of those dependencies in [[fig:single_higgs_indirect_production]], for production, and [[fig:single_higgs_indirect_decay]], for decays [[cite:&indirect_searches1]].
 Searches probing the Higgs self-coupling with higher-order loops are denoted /indirect/.
-Single Higgs cross-sections can be quite sensitive to $\kl$ variations, especially in the \vh{} and \tth{} production modes, where up to 10% differences are expected [[cite:&indirect_searches2]].
+Single Higgs cross sections can be quite sensitive to $\kl$ variations, especially in the \vh{} and \tth{} production modes, where up to 10% differences are expected [[cite:&indirect_searches2]].
 The fact that a higher loop order is needed is in part counterbalanced by the much higher single Higgs cross section, leading to competitive limits with respect to HH production.
 Having the same goal in mind, there has been an additional proposal, consisting on using processes with higher-order \ac{EW} diagrams, such as the ones used in $\mw$ and $\sint$ measurements [[cite:&indirect_searches_ew]].
 

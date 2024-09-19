@@ -37,16 +37,16 @@ In the following we provide a brief and necessarily incomplete overview of some 
 A detailed description is out of the scope of this work.
 
 * EW Processes
-The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross-section processes.
+The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross section processes.
 This notably applies to W mass $\mw$ and weak mixing angle $\thw$ measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
-\num{\sim 2e6} W boson events will be collected per week, leading to an increased statistical sensitivity for the W mass, and more precise cross-section measurements.
+\num{\sim 2e6} W boson events will be collected per week, leading to an increased statistical sensitivity for the W mass, and more precise cross section measurements.
 The added luminosity might also help solving the tension between old $\theta_{W}$ measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result [[cite:&weak_mixing_angle_cms]], which agrees with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
-Concerning \ac{VBF} and \ac{VBS} processes, despite the overall lower cross-section, of about one order of magnitude with respect to the \ac{ggF} production, the presence of additional hard and forward jets enables a very significant reduction of the multi-jet background.
+Concerning \ac{VBF} and \ac{VBS} processes, despite the overall lower cross section, of about one order of magnitude with respect to the \ac{ggF} production, the presence of additional hard and forward jets enables a very significant reduction of the multi-jet background.
 This is particularly true for large rapidity separations $\Delta \dijetrap \gtrsim 4.5$ and di-jet invariant masses
 $\dijetmass \gtrsim \SI{700}{\GeV}$, where \ac{VBF} production dominates over \ac{ggF}.
 In \ac{VBS}, measurements of longitudinal scattering of two Vs ($\text{V}=\text{W},\,\text{Z}$) is particularly enticing, as it is still unknown whether the Higgs alone can avoid a divergent behavior of the scattering amplitude at high energies, violating unitarity [[cite:&vbs2]].
 The longitudinal component of the $V$ bosons is in particular tightly connected to the Higgs mechanism and \ac{EWSB}, since massless particles only have transversal components.
-However, differential measurements of gauge boson polarization is harder given the reduced cross-section of the longitudinal-only components.
+However, differential measurements of gauge boson polarization is harder given the reduced cross section of the longitudinal-only components.
 Would unitarity be violated, particle probability would no longer be conserved: the calculated number of $V$ pairs produced in the interaction would exceed the incident flux [[cite:&thomson]].
 There is also the possibility for the longitudinal components of the $V$ bosons to be strongly coupled at \SI{\sim 1}{\TeV} center-of-mass energies [[cite:&vbs1]], allowing for instance the formation of resonance states in technicolor models.
 \ac{VBS} also forms the ideal field for anomalous gauge couplings measurements, especially quartic couplings.
@@ -59,7 +59,7 @@ High-$\pt$ b-jets are sensitive to higher-order corrections, parton shower model
 Therefore, investigating the b-jet contribution to the total jet cross section enables to test the available theoretical predictions.
 The shape of the distributions of jets of various flavors will also be known with a higher precision, especially in the tails.
 On the photon side, di-photons with high invariant mass are ideal probes to test the \ac{SM} and search for \ac{BSM}. In particular, prompt photons do not interact with other final state particles, enabling a precise study of \ac{QCD} [[cite:&diphoton_cdf]].
-The \ac{HL-LHC} will enable a more precise knowledge of photon related cross-sections.
+The \ac{HL-LHC} will enable a more precise knowledge of photon related cross sections.
 For the first time, the \ac{HL-LHC} will make possible the measurement of quantum correlations between partons in the proton by precisely studying differential distributions.
 This brings an improvement in \ac{DPS} modeling, which has been so far very limited.
 \ac{DPS} can be as relevant as the single proton scattering for same-sign WW final states involving $\bbbar$ or $\ccbar$ quark pairs.
@@ -71,7 +71,7 @@ The $t\bar{t}$ differential distributions will also be studied in more detail, r
 These will benefit \ac{PDF} measurements.
 One will also be able to explore \ac{BSM} for $\mtt > 7\,\si{\TeV}$ due to the low \ac{SM} background.
 An interesting link might be drawn between the results of \ac{LHCb} and \ac{ATLAS}/\ac{CMS}, given the increase in $\eta$ reach up to \num{\sim 4}.
-Further studies will be possible on the rare $t\bar{t}t\bar{t}$ production, despite its $\mathcal{O}(10)\,\si{\per\femto\barn}$ cross-section, following its recent observation [[cite:&tttt_cms;&tttt_atlas]].
+Further studies will be possible on the rare $t\bar{t}t\bar{t}$ production, despite its $\mathcal{O}(10)\,\si{\per\femto\barn}$ cross section, following its recent observation [[cite:&tttt_cms;&tttt_atlas]].
 $t\bar{t}t\bar{t}$ can be used to constrain some of the Wilson coefficients associated to \ac{EFT} dimension-6 operators, to further study the top Yukawa coupling constrain, including its magnitude and \ac{CP} properties, since it can occur via the mediation of a Higgs boson [[cite:&tttt]], and even to assess the presence of the non-\ac{SM} top quark dipole moment.
 
 * Forward Physics
@@ -79,11 +79,11 @@ Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the 
 Other processes include, for instance, $\text{X} = \mu\mu,\,\tau\tau,\,Z,\,H,\,WW,\,ZZ$, and enable the study of anomalous gauge couplings and the magnetic moment of the $\tau$, among other studies [[cite:&ctpps_varela;&ctpps_pitt]].
 \ac{CEP} processes carry particular interest since they bring production of charged particles initiated only by photons, into what amounts to using the \ac{LHC} as a $\gamma\gamma$ collider.
 In parallel, a whole plethora of \ac{QCD}-related measurements can be performed in \acp{CEP}.
-The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross-sections, increasing their discovery potential.
+The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross sections, increasing their discovery potential.
 
 * Higgs Physics
 #+NAME: fig:hh_nonres_projections
-#+CAPTION: Evolution of the expected and observed upper limits on the HH production cross-section. The figure compares results from early \ac{LHC} \run{2} data (\SI{35.9}{\invfb}) with full \ac{LHC} \run{2} data (\SI{138}{\invfb}), and \ac{HL-LHC} projections (\SI{3000}{\invfb}). At the end of the \ac{HL-LHC} it should be possible to challenge the \ac{SM} prediction (red line) with the result of the analysis of multiple final states, possibly in combination with \ac{ATLAS}. Taken from [[cite:&higgs_10_years]].
+#+CAPTION: Evolution of the expected and observed upper limits on the HH production cross section. The figure compares results from early \ac{LHC} \run{2} data (\SI{35.9}{\invfb}) with full \ac{LHC} \run{2} data (\SI{138}{\invfb}), and \ac{HL-LHC} projections (\SI{3000}{\invfb}). At the end of the \ac{HL-LHC} it should be possible to challenge the \ac{SM} prediction (red line) with the result of the analysis of multiple final states, possibly in combination with \ac{ATLAS}. Taken from [[cite:&higgs_10_years]].
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .6\textwidth
@@ -95,7 +95,7 @@ The precision of the Higgs couplings will improve by a factor of \num{\sim 4}, w
 After the expected observation of $H \rightarrow \mu\mu$ already at \run{3}, the $H \rightarrow Z\gamma$ channel will share the same fate during \phase{2} [[cite:&higgs_10_years]], despite its uncertainty remaining statistically driven.
 However, the long-awaited flagship measurement of \ac{HL-LHC} concerns di-Higgs production.
 Indeed, current projections (see ref:fig:hh_nonres_projections) suggest that the combined analysis of multiple final states and experiments might challenge the \ac{SM} prediction of the Higgs boson self-coupling.
-Comparing \run{2} results with current full \run{2} upper cross-section limits, we see that an improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
+Comparing \run{2} results with current full \run{2} upper cross section limits, we see that an improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
 The improvement over the luminosity baseline is due to multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels [[cite:&andre_david_higgs_ten_years]].
 Past results have consistently surpassed initial estimates, and thus provide an optimistic view on future triple and quartic Higgs coupling measurements, which will surely be the most precise ever.
 A series of new techniques should provide significant improvements, starting from \run{3} and extending into the \ac{HL-LHC}, including new machine learning approaches or better estimates of \ac{QCD} multi-jet background.

@@ -8,7 +8,7 @@ Discoveries followed at great pace: Chadwick's neutrons, Planck's and Einstein's
 Theoretical and experimental developments continued for half a century, facing frequent obstacles, but eventually reaching a surprisingly effective framework, capable of describing wildly diverse natural phenomena: from the core of an atom to interstellar space.
 This overarching theory is known as the \ac{SM} of Particle Physics, which serves as the foundation of modern \ac{HEP}.
 
-This section provides a standard description of the \ac{SM}, covering its major aspects, focusing on the items most relevant for later sections.
+This Section provides a standard description of the \ac{SM}, covering its major aspects, focusing on the items most relevant for later sections.
 The building blocks of the \ac{SM} are listed, hopefully providing a terse but clear picture of what is currently known at the most fundamental level.
 It immediately follows a description of the far-reaching relationship between abstract symmetries and measurable interactions, and its impact on the development of the \ac{SM} as we know it.
 Inconsistencies are elegantly solved with the Higgs mechanism, discussed in [[#sec:higgs_mechanism]]; a revolutionary idea defining the modern understanding of Particle Physics.

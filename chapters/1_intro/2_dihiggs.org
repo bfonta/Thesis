@@ -14,7 +14,7 @@ Occasionally, simultaneous fits of multiple couplings are performed, when a part
 Furthermore, HH events are some of the rarest processes probed at the \ac{LHC}, carrying a very small cross section, three orders of magnitude lower than the already rare single Higgs processes.
 Finally, challenges can also be found in the final states explored, being often complex, including decay products with jets and/or \ac{MET}, as discussed in [[#sec:offline_reco]].
 
-In this section we discuss the phenomenology of HH physics, looking at its production in [[#sec:production]] and its final states in [[#sec:final_states]].
+In this Section we discuss the phenomenology of HH physics, looking at its production in [[#sec:production]] and its final states in [[#sec:final_states]].
 
 * Additional bibliography :noexport:
 + [[https://github.com/bfonta/HHStatAnalysis/blob/master/AnalyticalModels/python/plot_differential.py][Produce differential BSM distributions]] (using ~HHReweightingPlots~ folder in =lxplus9=, release ~CMSSW_14_1_0_pre2~)

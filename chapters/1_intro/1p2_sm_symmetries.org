@@ -7,7 +7,7 @@ Geometrical patterns had been observed from ancient times; greeks for instance b
 Newton instead transferred the idea of symmetries to the equations describing the motion, rather than focusing on the solutions of those same equations.
 In 1915, the synergy between symmetries and Nature became firmly established in Noether's famous theorem [[cite:&noether]], stating that for each continuous symmetry a conservation law ensues or that, conversely, every conservation law reflects an underlying symmetry.
 Energy conservation follows from the invariance of the laws of Physics under translations in time, the invariance under space translations leads to momentum conservation, and so forth.
-In this section, the profound ideas that cement the \ac{SM} are described, covering the surprising way in which symmetries lead to all known forces and particle interactions [[cite:&halzen_martin;&griffiths]].
+In this Section, the profound ideas that cement the \ac{SM} are described, covering the surprising way in which symmetries lead to all known forces and particle interactions [[cite:&halzen_martin;&griffiths]].
 
 * Yang-Mills theory
 Interactions are dictated by symmetry principles.
@@ -280,7 +280,7 @@ Charged currents can change the particle's flavour, and connect only left-chiral
 Once the last two kinematic terms in [[eq:ew_lagrangian_long_kin]] are developed, a rich structure of gauge boson interactions is revealed.
 The theory thus predicts cubic and quartic gauge couplings: ZWW, $\gamma\text{W}\text{W}$, ZZWW, $\gamma\gamma\text{W}\text{W}$, $\gamma\text{Z}\text{W}\text{W}$ and WWWW.
 
-The model presented in this section does manage to integrate the \ac{EM} and weak forces into the same framework, into what represented a resounding success.
+The model presented in this Section does manage to integrate the \ac{EM} and weak forces into the same framework, into what represented a resounding success.
 However, while photons and gluons are massless, vector bosons are known to be massive, but Dirac mass terms are not gauge invariant to the symmetries so far explored.
 We could add those terms anyways, but unrenormalizable divergences would appear, getting more severe at each additional loop order, making the theory unpredictive and ultimately meaningless.
 Fortunately, an alternative procedure was found.

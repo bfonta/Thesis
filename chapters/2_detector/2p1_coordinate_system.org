@@ -64,7 +64,7 @@ A new quantity is thus defined, dependent solely on the angle $\theta$ and illus
 \noindent In the limit of large momenta, the rapidity and pseudorapidity become equal, but $y<\eta$ is always verified.
 Differences of \ac{eta} are thus also Lorentz invariant for $p \gg m$.
 Note that, despite the rapidity being finite, \ac{eta} can be infinite for particles produced at $\theta=0\si{\degree}$ or $\theta=180\si{\degree}$.
-One can also use the above to define a Lorentz-invariant spatial separation between two particles, which will be often used in later chapters:
+One can also use the above to define a Lorentz-invariant spatial separation between two particles, which will be often used in later Chapters:
 #+NAME: eq:deltar
 \begin{equation}
 \Delta\text{R} = \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}

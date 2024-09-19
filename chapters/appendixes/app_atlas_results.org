@@ -12,7 +12,7 @@
 [[~/org/PhD/Thesis/figures/intro/limits_VBF_HH_SM_atlas.pdf]]
 #+END_figure
 
-In this section we provide a brief overview on the most up-to-date results obtained by \ac{ATLAS} on Higgs boson pair production.
+In this Section we provide a brief overview on the most up-to-date results obtained by \ac{ATLAS} on Higgs boson pair production.
 Results can be compared with the \ac{CMS} ones presented in [[ref:sec:direct_searches,sec:indirect_searches]].
 Many of the results presented are also used for the \ac{CMS} and \ac{ATLAS} combinations in [[#sec:combinations]].
 The channels covered are virtually the same covered by \ac{CMS}, but ocasionally differently organized: \hhbbbb{} resolved [[cite:&atlas_hh_bbbb_res]] and boosted [[cite:&atlas_hh_bbbb_boost]], \hhbbtt{} [[cite:&atlas_hh_bbtt]], \hhbbgg{} [[cite:&atlas_hh_bbgg]], \hhbbll{} [[cite:&atlas_hh_bbll]] and combined multileptonic decays [[cite:&atlas_hh_multileptons]].

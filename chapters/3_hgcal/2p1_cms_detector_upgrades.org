@@ -84,7 +84,7 @@ All in all, the \ac{MTD} will help \ac{CMS} maintaining its current performances
 By far the most important upgrade in the \ac{CMS} calorimeters will happen in the endcaps, namely the \ac{HGCAL}.
 This revolutionary calorimeter is described in full in [[#sec:hgcal_intro]], and we here focus on the remaining updates, most of them happening in the barrel section [[cite:&calo_barrel_upgrade]]. \Ac{ECAL} control and safety systems will also be completely replaced cite:&barrel_upgrade_safety.
 
-Unlike for most \ac{CMS} subdetectors discussed in this section, the changes are not directly driven by the increase in radiation levels.
+Unlike for most \ac{CMS} subdetectors discussed in this Section, the changes are not directly driven by the increase in radiation levels.
 Contrary to what happens in the endcaps, the crystals in the barrel region are capable of handling the environment of \phase{2}, especially when cooled from a nominal \phase{1} temperature of \SI{18}{\celsius} down to \SI{9}{\celsius}, as it is currently planned.
 Indirectly, however, the higher luminosities and \acp{PU}, lead to modifications at the \ac{L1} trigger level, namely the latency and rate increase to \SI{12.5}{\micro\second} and \SI{750}{\kilo\hertz}, respectively.
 Both the \ac{FE} and \ac{BE} of the \ac{EB} will be fully replaced, as illustrated in [[fig:ecalupgrade]] (left).
@@ -130,7 +130,7 @@ Finally, the addition of the \acp{GEM} will be complemented by the installation 
 These new \acp{RPC} have been specifically designed to handle high hit rates.
  
 #+NAME: fig:muonupgrade
-#+CAPTION: Schematic longitudinal view of a quadrant of the R-z cross-section of the \ac{CMS} detector during the \ac{HL-LHC}, to be compared with [[fig:cms_muon_slice]]. All muon subdetector are shown, including future additions: \acp{DT} (yellow), \acp{CSC} (green), \acp{RPC} and \acp{GEM}. Additions on the muon side feature the GE2/1 and \ac{ME0} superchambers, which are part of \acp{GEM}, and the \acp{iRPC}. \ac{ME0} will be installed on the back of \ac{HGCAL}. Pseudorapidity values are given with dashed lines. Taken from [[cite:&gem_tdr]].
+#+CAPTION: Schematic longitudinal view of a quadrant of the R-z cross section of the \ac{CMS} detector during the \ac{HL-LHC}, to be compared with [[fig:cms_muon_slice]]. All muon subdetector are shown, including future additions: \acp{DT} (yellow), \acp{CSC} (green), \acp{RPC} and \acp{GEM}. Additions on the muon side feature the GE2/1 and \ac{ME0} superchambers, which are part of \acp{GEM}, and the \acp{iRPC}. \ac{ME0} will be installed on the back of \ac{HGCAL}. Pseudorapidity values are given with dashed lines. Taken from [[cite:&gem_tdr]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/hgcal/MuonSystemNew.pdf]]
@@ -141,6 +141,6 @@ These new \acp{RPC} have been specifically designed to handle high hit rates.
 The existing \ac{BRIL} project is responsible for \num{14} technical systems.
 They monitor beam losses and radiation in the \ac{CMS} cavern, provide beam timing, enable the abortion of the beam to protect individual detector components, and measure the beam-induced background and luminosity values.
 For the \ac{HL-LHC}, \ac{BRIL} aims at measuring the luminosity within a \SI{1}{\percent} uncertainty, against the \SI{1.4}{\percent} obtained in 2022.
-The improvement is for instance required by multiple single Higgs cross-section measurements [[cite:&cms_upgrade_phase2]].
+The improvement is for instance required by multiple single Higgs cross section measurements [[cite:&cms_upgrade_phase2]].
 The precision increase will be achieved thanks to the new bunch-by-bunch Fast Beam Condition Monitor luminometer, which will be independent from central \ac{CMS} services and will be able to provide measurements also when \ac{LHC} beams will not be stable.
 Providing \ac{CMS} with a fast feedback on \ac{LHC} beam conditions is crucial, since a continuous beam assessment can protect the sensitive \ac{CMS} subdetectors.

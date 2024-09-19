@@ -15,7 +15,7 @@ For the Higgs self-coupling, the definition of the modifier is $\kl~\equiv~\lh{3
 A variable constraining power is associated to each production mode, depending on the phase-space region being studied.
 Other coupling modifiers are similarly defined, namely $\kv~\equiv~\cv/\cv^{\text{SM}}$, for the coupling between two Higgs bosons and one vector boson, and $\kvv~\equiv~\cvv/\cvv^{\text{SM}}$, a quartic coupling between two Higgs bosons and two vector bosons, which at first order can only be studied with \ac{VBF}.
 #+NAME: fig:HH_prod_kl
-#+CAPTION: HH production cross section as a function of the coupling modifier $\kl$ for several production mechanisms. The dashed and solid lines denote respectively the \ac{LO} and \ac{NLO} predictions and the bands indicate the \ac{PDF} and scale uncertainties added linearly. The interference minima are not aligned for different production modes. For \ac{ggF} the cross-section is now known at \ac{NNLO} level with finite tio quark mass effects, while the figure displays the values for the \ac{NLO} FTapprox calculation. The figure is taken from [[cite:&HH_xsec_running]].
+#+CAPTION: HH production cross section as a function of the coupling modifier $\kl$ for several production mechanisms. The dashed and solid lines denote respectively the \ac{LO} and \ac{NLO} predictions and the bands indicate the \ac{PDF} and scale uncertainties added linearly. The interference minima are not aligned for different production modes. For \ac{ggF} the cross section is now known at \ac{NNLO} level with finite tio quark mass effects, while the figure displays the values for the \ac{NLO} FTapprox calculation. The figure is taken from [[cite:&HH_xsec_running]].
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .8\textwidth
@@ -54,7 +54,7 @@ Gluon fusion HH cross section deviations can be parameterised as a function of $
 \end{alignat}
 
 \noindent where $\mathcal{A}_{\triangle}$ and $\mathcal{A}_{\square}$ are the amplitudes of the triangle and box \ac{ggF} diagrams, respectively, and $\mathcal{I}_{\triangle\square}$ represents the interference term.
-We consider gluon fusion due to its dominant cross-section, but other production modes can be parameterised in similar ways using their corresponding coupling modifiers.
+We consider gluon fusion due to its dominant cross section, but other production modes can be parameterised in similar ways using their corresponding coupling modifiers.
 
 Variations of the coupling modifiers can have a enormous impact on the shape of kinematic distributions.
 Taking the mass of the HH system in [[fig:kl_c_EFT]] (left) as an example, we can see that the $\kl=1$ configuration is characterized by a broad peak at \SI{\approx 390}{\GeV}, with a large high-energy tail.
@@ -65,7 +65,7 @@ Despite the focus on \ac{ggF}, it is worth noting that other production modes al
 The consequence is clear: kinematic deviations represent a smoking gun for the presence of anomalous couplings.
 
 #+NAME: fig:kl_c_EFT
-#+CAPTION: Differential HH cross-sections as a function of the HH system mass, for different values of coupling modifiers. (Left) Multiple $\kl$ values, including \ac{SM} ($\kl=1$) and maximum interference ($\kl=2.45$), highlighting the strong impact of a deviation from the expected SM values. Larger $|\kl|$ values correspond to scenarios where the HH "triangle" diagram dominates. (Right) Some EFT couplings, absent from the \ac{SM}, compared to the \ac{SM} scenario. Both overall rate and shapes are modified.
+#+CAPTION: Differential HH cross sections as a function of the HH system mass, for different values of coupling modifiers. (Left) Multiple $\kl$ values, including \ac{SM} ($\kl=1$) and maximum interference ($\kl=2.45$), highlighting the strong impact of a deviation from the expected SM values. Larger $|\kl|$ values correspond to scenarios where the HH "triangle" diagram dominates. (Right) Some EFT couplings, absent from the \ac{SM}, compared to the \ac{SM} scenario. Both overall rate and shapes are modified.
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/kl.pdf]]
@@ -77,7 +77,7 @@ While the $\kappa\text{-framework}$ has been so far effective in quantifying dif
 + The involved theoretical calculations are rather complex, and become impractical for high loop orders. At same time, uncertainties below \SI{\sim 10}{\percent} require \ac{NLO} calculations.
 + The $\lh{3}$ is fully determined in the \ac{SM}, and the modification of the \ac{SM} with a ratio introduces an inconsistency in the theory.
 + The framework cannot be used to interface results from the \ac{LHC} and the \ac{LEP}, given the different energies involved.
-+ It cannot be straightforwardly extended to the more consistent and general approach we present in the following section.
++ It cannot be straightforwardly extended to the more consistent and general approach we present in the following Section.
 
 * Effective field theories
 No resonance has so far been found in the energy range covered by the \ac{LHC}, \ie{} up to a few TeVs.

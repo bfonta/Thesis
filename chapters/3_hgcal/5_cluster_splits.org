@@ -16,7 +16,7 @@ When studying cluster splits we require the following additional selections:
 + $(E_{\text{Cluster}}-E_{\text{Gen}})/E_{\text{Gen}} < -0.35$, which only selects events where a split very likely happened, since on average the energy is equally split across the two clusters;
 + $\eta \in \left[1.7, 2.8\right]$, to avoid unwanted reconstruction effects at \ac{HGCAL} boundaries, where showers might be transversally cut.
 With these selections, we observe cluster splits in \SI{\sim 1}{\percent} of single unconverted photon events.
-In the remainder of this section we explain the causes for cluster splits, and detail the techniques developed in the context of this Thesis to mitigate or remove it.
+In the remainder of this Section we explain the causes for cluster splits, and detail the techniques developed in the context of this Thesis to mitigate or remove it.
 
 * The origin of cluster splits
 :PROPERTIES:

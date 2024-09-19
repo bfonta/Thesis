@@ -62,7 +62,7 @@ Given the flat-top and pointy-top relative orientations of the hexagons within t
 This further complicates /navigation/ in such a coordinate system, which is by default more complex than a Cartesian system.
 Each \ac{TC} (or cell) within a module is uniquely identified by a set of $u$ and $v$ indexes, and each module within a layer is uniquely identified by a set of $U$ and $V$ indexes.
 Multiple module orientations are possible, affecting the direction of the $(u,v)$ eigenvectors.
-In the remainder of this section we consider a single orientation for simplicity, as the logic is kept unchanged.
+In the remainder of this Section we consider a single orientation for simplicity, as the logic is kept unchanged.
 Hexagonal coordinates in \ac{HGCAL} are further explored in [[#sec:using_detector_coordinates]].
 
 ** Scintillator coordinates

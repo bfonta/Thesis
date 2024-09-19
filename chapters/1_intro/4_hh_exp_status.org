@@ -15,7 +15,7 @@ We briefly mention that some analyses are starting to probe $\lh{4}$, which can 
 There is no experimental guarantee that $\lh{3}=\lh{4}$, with vital consequences for the shape of the Higgs potential in [[eq:sm_potential]], and ultimately for our Universe, as covered in [[#sec:ewpt]].
 The shape of the Higgs potential can really be only fully determined from a combined measurement of both HH and HHH processes.
 Given the correlations between $\lh{3}$ and $\lh{4}$, any hypothetical $\kl$ deviation will provide information on the quartic coupling [[cite:&Stylianou_2024]].
-Despite the vanishingly small cross-section at \SI{\sim 0.1}{\pico\barn} and smaller branching ratios ($\mathcal{B}(\text{HH}\rightarrow\text{bbbb})\approx0.33$ while $\mathcal{B}(\text{HHHH}\rightarrow\text{bbbbbb})\approx0.19$, for instance), triple production can add some constraining power to $\kl$ without requiring the quartic Higgs coupling modifier to be set to one in HH + HHH combinations.
+Despite the vanishingly small cross section at \SI{\sim 0.1}{\pico\barn} and smaller branching ratios ($\mathcal{B}(\text{HH}\rightarrow\text{bbbb})\approx0.33$ while $\mathcal{B}(\text{HHHH}\rightarrow\text{bbbbbb})\approx0.19$, for instance), triple production can add some constraining power to $\kl$ without requiring the quartic Higgs coupling modifier to be set to one in HH + HHH combinations.
 \Ac{CMS} is currently initiating studies with the \bbbbbb{} and \bbbbgg{} final states.
 However, given current sensitivity constraints, HHH analyses can become relevant in future colliders only.
 

@@ -224,7 +224,7 @@ The redundancy also plays a role in reducing the impact from acceptance blind sp
 The structure of the muon chambers, including future upgrades, is shown in [[fig:cms_muon_slice]].
 
 #+NAME: fig:cms_muon_slice
-#+CAPTION: Schematic longitudinal view of a quadrant of the R-z cross-section of the \ac{CMS} detector during \run{2}, when the \ac{GEM} detector was not yet present. All muon subdetector are shown: \acp{DT} (yellow), \acp{CSC} (green) and \acp{RPC} pseudorapidity values are given with dashed lines. Taken from [[cite:&muon_upgrade]].
+#+CAPTION: Schematic longitudinal view of a quadrant of the R-z cross section of the \ac{CMS} detector during \run{2}, when the \ac{GEM} detector was not yet present. All muon subdetector are shown: \acp{DT} (yellow), \acp{CSC} (green) and \acp{RPC} pseudorapidity values are given with dashed lines. Taken from [[cite:&muon_upgrade]].
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .9\textwidth
