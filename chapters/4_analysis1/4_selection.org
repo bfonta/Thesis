@@ -4,16 +4,10 @@
 
 The observation of \xhhbbtt{} naturally requires the capability to precisely reconstruct the two pairs of b jets and tau leptons.
 Having introduced all single physics objects included in the \bbtt{} topology, we can now describe in detail the full event selection, which aims at providing the subset of events processed that match the signal of interest.
-However, the selection should not be too strict, or equivalently lead to a very high \bbtt{} purity; that could hinder analysis steps to come, and specifically affect the final discriminator, by reducing its training data size.
+However, the selection should not be too strict, or equivalently lead to a very high \bbtt{} purity; that could hinder analysis steps to come, and specifically affect the final discriminant, by reducing its training data size.
 Given the rarity of HH processes, it is imperative to measure as many \hhbbtt{} events as possible; the goal of the selection is to maximize signal acceptance.
 
-The selection starts from the data passing the analysis triggers, and is performed in various stages, as also highlighted in [[fig:analysis_flow]].
-The stages proceed in order, by targeting single objects first, such as b jets, leptons and \tauhs{}, and later pairs of such quantities, as defined by the decays of the two Higgs bosons.
-Once the two H candidates have been found, an additional two-dimensional invariant mass cut is applied on the $\mbb$ and $\mtautau$ plane, to further restrict the phase-space of interest, removing potential outliers, and to provide validation \acp{CR}.
-A categorization step immediately follows, where /categories/ are defined.
-This step separates events according to the topology of the b-quark pair, creating two resolved and one boosted category.
-The categories are created in order to boost the sensitivity of a dedicated /discriminating variable/, which is described in the next Chapter.
-
+The selection starts from the data passing the analysis triggers, and is performed in various stages, as illustrated in [[fig:analysis_flow]].
 In the following, we detail the selection cuts applied to leptons and b jets in [[ref:sec:tau_pair_sel,sec:b_pair_sel]].
 All events that satisfy the selection on tau leptons and b-quark pairs are said to belong to the \basecat{} selection.
 We then proceed by introducing the invariant mass cut in [[#sec:mass_cut]] and the categorization step in [[#sec:categorization]].
@@ -26,13 +20,12 @@ Finally, we provide the definitions of the two \acp{CR} used in the analysis, wh
 
 This step aims at identifying the visible decay products of one of the \SI{125}{\GeV} Higgs bosons decaying to a $\tau$ pair.
 Selected signal events are required to have at least one $\tau$ candidate decaying hadronically and that has been reconstructed by the \ac{HPS} algorithm.  
-The =DeepTau= discriminator [[cite:&deeptau]] identifies \tauhs{}, distinguishing them from jets, electrons and muons.
+The =DeepTau= discriminant [[cite:&deeptau]] identifies \tauhs{}, distinguishing them from jets, electrons and muons.
 Due to charge conservation, \ac{HPS} decay modes with two prongs are explicitly rejected.
 Furthermore, all events assigned the $\text{h}^{\pm}\pi^{0}\pi^{0}\nu_{\tau}$ topology are analyzed as though they were $\text{h}^{\pm}\pi^{0}\nu_{\tau}$.
 This happens because the former is much rarer than the latter, and the \ac{HPS} algorithm is not tuned to reconstruct decays containing two $\pi^0\text{s}$.
 This same assignment is also taken into account when applying =DeepTau= \acp{SF}, as described in [[#sec:deep_tau_sfs]]
-The identification requirement applied to \tauhs{} is the =Medium= \ac{WP} of the =DeepTauVSjet= algorithm, the =Tight= =DeepTauVSmu= \ac{WP}, and the =VVLoose= =DeepTauVSe= discriminator.
-Their efficiencies are listed in [[tab:deeptau_wps]].
+The identification requirement applied to \tauhs{} is the =Medium= \ac{WP} of the =DeepTauVSjet= algorithm, the =Tight= =DeepTauVSmu= \ac{WP}, and the =VVLoose= =DeepTauVSe= \ac{WP}.
 The choice of \acp{WP} is related to the \acp{WP} used by the Tau \ac{POG} to derive \acp{SF} for genuine \tauhs{}, which have a dependency on =DeepTauVSmu= and =DeepTauVSe=.
 The reasoning is to use corrections as close to POG recommendations as possible, in order to reach a good data/MC agreement in all relevant parts of the parameter space.
 
@@ -47,23 +40,15 @@ The reasoning is to use corrections as close to POG recommendations as possible,
 | Tau lepton | $>20$                    | $<2.3$      |
 |------------+--------------------------+-------------|
 
-All events lying above the minimum $\pt$ or below the maximum $|\eta|$ values reported in [[tab:max_min_cuts]] are considered, as long as they satisfy the triggers described in [[#sec:triggers]], and as long as the offline objects are geometrically matched to the online \ac{HLT} paths.
+All events lying above the minimum $\pt$ or below the maximum $|\eta|$ values reported in [[tab:max_min_cuts]] are considered, as long as they satisfy the triggers described in [[#sec:triggers]], and as long as the offline objects are geometrically matched to the online \ac{HLT} objects firing the paths.
 The values in [[tab:max_min_cuts]] come from hard limits imposed by the isolation and \ac{ID} trigger \acp{SF} used in the analysis.
 We look for lepton candidates passing simple kinematic, isolation and \ac{ID} criteria, as summarized in [[tab:chn_sel]], where the $\Delta_{xy}$ and $\Delta_{z}$ distances are also taken into account, measuring the compatibility with the \ac{PV}.
 Additionally, the two objects in a pair should have opposite charges, and should pass \ac{pt} thresholds based on the triggers they fired.
 An exception occurs for the $\metnomu$ trigger, since it imposes no \ac{pt} cut, and can thus explore the full phase-space presented in [[tab:max_min_cuts]].
-The \ac{pt} thresholds depend on the \ac{HLT} trigger path fired by the event:
-#+NAME: eq:ptTreshold
-\begin{equation}
-  \pt^{\text{offline}} \, \geq \, \pt^{\text{HLT}}\ + \, \text{threshold}\:,
-\end{equation}
-\noindent where $\pt^{\text{offline}}$ is the transverse momentum of the offline selected lepton, $\pt^{\text{HLT}}$ is the \ac{pt} threshold applied at \ac{HLT} level, and ``threshold'' depends on the lepton type: \SI{1}{\GeV} for electrons, \SI{2}{\GeV} for muons, \SI{5}{\GeV} for tau leptons firing the \ditau{} trigger, and \SI{10}{\GeV} for tau leptons firing the \stau{} trigger.
-The thresholds are chosen to be conservative with respect to the trigger turn-on curves.
-For events passing more than one trigger, the loosest thresholds among those two triggers are applied.
 
 The analysis channels are defined according to specific priority rules.
 An event is classified as \mutau{} if a single muon candidate passes all criteria.
-If two muons pass the criteria, the event becomes \mumu{}.
+If two muons pass the criteria, where the second muon can have a looser isolation than the first, the event becomes \mumu{}.
 In case no muon is selected, we check whether any electron passing the criteria was found.
 In case a single electron candidate is present, the event is associated the \eletau{} channel.
 If two electrons are present, the event would be assigned the \eleele{} channel, but it is instead discarded, as we are not taking this channel into consideration.
@@ -76,14 +61,14 @@ Within each pair, leptons are ordered as follows, depending on the channel:
   If the two first legs have the same isolation, the highest \ac{pt} leg is used to order the pairs.
   If the \ac{pt} is also identical, \ie{} the pairs share the same first leg, then the pair with the most isolated second leg is preferred.
   If ambiguity is still present, priority is given to the pair with the highest \ac{pt} of the second leg.
-\noindent This channel classification strategy was chosen because it was seen to maximize event purity, while removing event overlaps among the three different final states.
+\noindent This channel classification strategy was chosen because it was seen to maximize signal purity, while removing event overlaps among the three different final states.
 
 Some events can include multiple leptons of the same kind, and their choice becomes a matter of some ambiguity.
 We mentioned above that \mutau{} events take precedence over \eletau{} events; no ambiguity is present at the decay channel level.
 However, nothing forbids an event to include, on top of a \tauh{}, two muons or two electrons, as long as they satisfy the requirements in [[tab:chn_sel]].
 For those cases, there would be multiple ways to choose the "correct" lepton, \ie{} the lepton truly associated to the Higgs boson decay.
 To simplify the selection and avoid taking the wrong decision, the /third lepton veto/ is implemented, were events with a third lepton are rejected.
-This veto also helps removing background events with two leptons and a fake \tauh{}, as for instance diboson processes, or fully leptonic decays of $\ttbar{}$.
+This veto also helps removing background events with two leptons and a fake \tauh{}, as for instance di-boson processes, or fully leptonic decays of $\ttbar{}$.
 The third lepton selection criteria are very similar to the ones for the "standard" leptons, just slightly looser, in order to remove most situations where ambiguity might be present.
 
 #+NAME: tab:chn_sel
@@ -110,7 +95,7 @@ We remind the reader that the phase-space is always divided into three regions, 
 
 We now turn to the \hbb{} process, where jets coming from a Higgs boson must be selected, following at least one of the below criteria:
 + Two AK4 jets with $\pt > 20\,\si{\GeV}$ and $|\eta| < 2.5$ for 2017 and 2018, with a $\Delta \text{R} > 0.5$ distance between each jet and each selected $\tau$ candidate.
-  For 2016 the $|\eta| < 2.4$ is instead used.
+  For 2016, $|\eta| < 2.4$ is instead used.
 + One AK8 boosted jet, with the distance between the jet and both selected $\tau$ candidates of $\Delta \text{R} > 0.8$.
 
 Additionally, the \hbb{} selection is improved by applying a discrimination algorithm to identify b jets, dubbed \hhbtag{}.
@@ -161,15 +146,14 @@ The categorization scheme follows the angular radius parameters adopted in the r
 + $\Delta \text{R}(\text{b},\text{b})\,> \,0.8$: each b-quark is reconstructed as a AK4 jet;
 + $0.4 \, < \, \Delta \text{R}(\text{b},\text{b})\,< \,0.8$: the two b-quarks are reconstructed both as two AK4 jets and as one large AK8 jet;
 + $\Delta \text{R}(\text{b},\text{b})\,< \,0.4$: the two b-quarks are reconstructed as an AK8 jet only.
-\noindent The so-called /resolved/ topologies refer to the first scenario, while /boosted/ topologies refer to the other two.
-In this analysis two resolved categories and one boosted category are defined, as follows:
+\noindent The so-called /resolved/ topologies refer to the first scenario, while /boosted/ topologies refer to the third.
+The events matching the second scenario can be classified as one or the other, depending on the analysis' strategy.
+In this work, two resolved categories and one boosted category are defined, as follows:
 + Events with a reconstructed AK8 jet having $m_{\text{SoftDrop}} > 30\,\si{\GeV}$, $\pt > 250\,\si{\GeV}$, $\Delta \text{R}(\text{jet},\tau)\,> \,0.8$ for both \taus{}, and a \ac{PNet} discriminant score passing the \ac{LP} \ac{WP} are assigned to the \boostcat{} category.
-  The score was introduced in [[eq:pnet]].
 + Events with two AK4 jets and no AK8 jets, where only one of its b jet candidates passes the =Medium= \ac{WP} of =DeepJet,= are assigned to the \rescat{1} category.
 + Events with two AK4 jets and no AK8 jets, where both its b jet candidates pass the =Medium= \ac{WP} of =DeepJet=, are assigned to the \rescat{2} category.
 \noindent The \rescat{2} category provides the most sensitive measurements for resonance masses below \SI{\sim 700}{\GeV}, while the \boostcat{} category drives the analysis sensitivity for resonance masses above \SI{\sim 700}{\GeV}.
-
-The categories are attributed following a specific order of precedence, as illustrated in [[fig:cat_flowchart]], where \rescat{} has precedence over the other categories.
+The categories are attributed following a specific precedence order, as illustrated in [[fig:cat_flowchart]], where \rescat{2} has precedence over the other categories.
 Other possibilities were tried, namely giving the top precedence to the \boostcat{} category, but the choice used here provided the best final results.
 
 #+NAME: fig:cat_flowchart
@@ -206,7 +190,7 @@ Other possibilities were tried, namely giving the top precedence to the \boostca
 :END:
 Events classified as resolved are required to have reconstructed visible masses of the b and $\tau$ pairs within a rectangular window.
 The goal is to maximize signal acceptance, requiring at least 98% of signal presence.
-These cuts remove the tails of the mass spectrum, and potential outliers, easing the task of discriminators further down in the analysis chain.
+These cuts remove the tails of the mass spectrum, and potential outliers, easing the task of discriminants further down in the analysis chain.
 The mass cut also allows to define \acp{CR} with low signal contamination, useful to assess the proper modeling of some of the main analysis' backgrounds.
 
 In order to define the mass window interval, the \ac{ggF} \spin{0} and \spin{2} signal samples are utilized.
@@ -264,7 +248,7 @@ An example would be to determine correction weights using a data-driven approach
   They additionally do not include any AK8 jets, thus having a resolved topology.
   The two AK4 jets must pass the =Medium= =DeepJet= \ac{WP}, just like events in the \rescat{2} category.
   This requirements increases the fraction of $\ttbar$ events, compared to other backgrounds associated with lighter jets.
-  Finally, the mass of the $\tau\tau$ system must lie above \SI{130}{\GeV}, in order for the \ac{CR} to be orthogonal to the rectangular mass cut introduced in [[#sec:mass_cut]].
+  Finally, the mass of the $\tau\tau$ system must lie above \SI{130}{\GeV}, in order for the \ac{CR} to be orthogonal to the rectangular mass cut, and to remove \ac{DY} events.
 + *DY CR*:
   Events satisfy the \basecat{} selection, and must be associated to the \mumu{} channel.
   They additionally do not include any AK8 jets, thus having a resolved topology.

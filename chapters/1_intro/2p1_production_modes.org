@@ -97,7 +97,7 @@ This behaviour is very different from what happens for single Higgs processes, w
 #+END_figure
 
 ** Single top associated production
-The single top $\text{q}\text{q}^{\prime} \rightarrow \text{t}j\text{H}\text{H}$ process can proceed via a multitude of t- or s-channels, as shown in [[fig:HH_production_diagrams_thh]], where s-channels are around one order of magnitude rarer.
+The single top $\text{q}\text{q}^{\prime} \rightarrow \text{t}\text{q}^{\prime\prime}\,\text{H}\text{H}$ process can proceed via a multitude of t- or s-channels, as shown in [[fig:HH_production_diagrams_thh]], where s-channels are around one order of magnitude rarer.
 The cross-sections are so small that it can be hardly investigated at the \ac{LHC}.
 Future colliders can nevertheless open a window on this production mode, because the cross-section increases faster with energy than the associated production, and reaches the same value at $\sqrt{s} \approx 100\,\si{\GeV}$.
 Additionally, the two jets will provide background reduction capabilities.

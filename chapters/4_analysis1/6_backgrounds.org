@@ -25,17 +25,17 @@ Firstly, large samples are needed, especially in the distribution tails of the \
 Secondly, the misidentification of quark and gluon jets as \tauh{} candidates suffers from imperfect modeling, given that detector effects are hard to quantify.
 As a consequence, the \ac{QCD} multijet background is estimated via a data-driven method, exploiting jet-enriched regions.
 
-The basic idea is to find fully uncorrelated variables upon which the \ac{SR} selection depends on, and invert their selection cuts to obtain signal-free regions.
-Those can be used to estimate both the shape and the normalization of the \ac{QCD} background in the \ac{SR}, without using the \ac{SR} directly.
+The basic idea is to find fully uncorrelated variables upon which the \ac{SR} selection depends on, and define new regions by inverting the variables' selection cuts, removing as much non-multijet processes as possible.
+These regions can be used to estimate both the shape and the normalization of the \ac{QCD} background in the \ac{SR}, without using the \ac{SR} directly.
 The method is dubbed ABCD, since it explicitly divides the analysis phase-space into four regions: A, B, C and D.
 In our analysis, the regions are based on the isolation of the \tauh{} lepton and on the electric charges of the lepton pairs.
 The A region corresponds to the \ac{SR}, as defined in [[#sec:selection]] for each category, while the B, C and D regions are sidebands used to estimate the background in the \ac{SR}.
 In [[fig:QCDregions]] we illustrate how the phase-space is divided.
-The tau pairs are classified as SS when they have the same charge sign, or OS, when they have opposite charge signs.
+The tau pairs are classified as SS when they have the same charge, or OS, when they have opposite charge signs.
 In region B, the pair charge requirement is inverted, thus including SS pairs of isolated leptons.
 In regions C (OS) and D (SS), the =DeepTau= selection is inverted by requiring the \tauh{} candidate to fail the =Medium= \ac{WP} of the =DeepTauVSjet= discriminator, but still pass the =VVVLoose= threshold (see [[tab:deeptau_wps]]).
 These regions thus include non-isolated leptons.
-In the \tautau{} final state, only the =DeepTau= selection of the \tauh{} candidate with the lowest $\pt$ is inverted.
+In the \tautau{} final state, only the =DeepTau= selection of the \tauh{} candidate with the lowest isolation is inverted.
 
 #+NAME: fig:QCDregions
 #+CAPTION: Sketch of the four ABCD regions used to estimate the multijet background. Region A corresponds to the \ac{SR}, while the other regions are sidebands used to estimate the multijet background in the \ac{SR}. The phase-space division is based on the isolation of the \tauh{} and on the relative sign of the $\tau$ lepton charges. More details are provided in the text.
@@ -117,7 +117,7 @@ Furthermore, the transfer factors can be learned by \acp{DNN} or \acp{BDT}, such
 Despite all possible improvements, it is important to state that the main drive for the proposals above is the possibility to obtain a very precise estimate, leading to smaller systematic uncertainties.
 However, the \xhhbbtt{} measurement is currently limited by statistical uncertainties, and so the reduction of systematic uncertainties is not as important as for other analysis with larger cross sections times \acp{BR}.
 On top, the definition of additional phase-space regions tends to increase statistical uncertainties.
-Overall, taking also into account the systematics discussed in [[#sec:syst_norm]], the ABCD method is deemed sufficient for the analysis here reported.
+Overall, taking also into account the systematics discussed in [[#sec:syst_norm]], the ABCD method is deemed appropriate for the analysis here reported.
 
 * Drell-Yan
 :PROPERTIES:
@@ -141,7 +141,7 @@ There, the shaded gray bars represent the statistical uncertainty of the backgro
 A good data/MC agreement is obtained.
 
 #+NAME: fig:DY_CR_plots
-#+CAPTION: #+CAPTION: {{{cr_distr(\mumu{})}}}
+#+CAPTION: {{{cr_distr(\mumu{})}}}
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -189,8 +189,8 @@ Finally, we note the additional requirement on the b jet of the \rescat{2} categ
 ** MC Mismodeling
 Contrary to what is observed at the time of writing, during the initial stages of the PhD work a $\ttbar$ \ac{MC} mismodeling was observed.
 The issue was predominant in the \eletau{} and \mutau{} channels, just as it had been observed in the previous nonresonant iteration of the \bbtt{} analysis.
-The discrepancies did at some point disappear, likely due to the implementation of several corrections that were missing at the time.
-Still, we here report a method to fix such issues, following \newcite{higgs_bbtautau_nonres}, since it might become useful in case residual mismodelings appear in future iterations. 
+The discrepancies did at some point disappear, due to the implementation of several corrections that were missing at the time.
+Still, we here report a method to fix such issues, following \newcite{higgs_bbtautau_nonres}, since it might become useful if residual mismodelings appear in future iterations. 
 
 We set to fix the discrepancy by rescaling the normalization of the $\ttbar$ background to the data.
 The $\ttbar$ \ac{CR} is used.
@@ -219,10 +219,11 @@ The result of the \ac{CR} and \ac{CR}+\ac{SR} fits should match.
 * Other backgrounds
 All remaining processes are modeled, in shape and normalization, using solely \ac{MC} samples.
 Cross sections can be inspected in [[#sec:samples_bckg]].
+The inclusive W + jets sample is used in the $0 \le \htvar < 70\,\si{\GeV}$ only for simplicity, in order to avoid overlaps with the samples binned in $\htvar$.
+The impact of the W + jets sample in the analysis becomes very small once b-tagged jets are required, especially in the \rescat{2} category.
 Processes involving the presence of two or three vector bosons, like ZZ or WWZ, are modeled, in shape and normalization,
 through inclusive samples.
 For the contributions arising from \ac{EW} processes with one W or Z boson plus 2 jets, from single top both in the s- and t-channels, or from $\ttbar$ pairs produced in association with a single boson or a pair of vector bosons, the cross sections are extremely small, but are nevertheless taken into account.
-In the case of the W + jets background, the impact in the analysis becomes very small once b-tagged jets are required, especially in the \rescat{2} category.
 The single Higgs production cross section is also tiny, when compared to the dominant backgrounds.
 However, such processes have the potential to have very similar $\mhh$ topologies as the signals of interest, and are also considered.
 This is the case for \ac{ggF} and \ac{VBF} Higgs production, but also when a Higgs boson is produced in association with a vector boson or a pair of top quarks.

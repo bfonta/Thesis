@@ -115,7 +115,7 @@ The binning follows a "flat-signal" approach, where the number of signal events 
 + $\text{N}_{\text{DY}}>1$;
 + $\text{N}_{\ttbar}>1$;
 + $\text{N}_{\text{DY}}+\text{N}_{\text{DY}}>4$;
-\noindent where the goal is to avoid bins with too little background, while ensuring that the two most dominant background sources are always present.
+\noindent where the goal is to avoid bins with too little background, preventing fit instabilities, while ensuring that the two most dominant background sources are always present.
 For simplicity, the bin with the lowest \ac{DNN} score is left with less signal events, due to the termination conditions of the binning algorithm.
 It does not affect the final results, since that bin provides no sensitivity.
   

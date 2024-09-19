@@ -2,14 +2,17 @@
 :CUSTOM_ID: sec:samples
 :END:
 
-The analysis uses \SI{138}{\invfb} of \run{2} \ac{UL} data recorded by \ac{CMS} at $\sqrt{s}=13\,\si{\TeV}$.
+The analysis uses \SI{138}{\invfb} of \run{2} \ac{UL} data[fn:: The concept of Ultra-Legacy data was first introduced in [[#sec:mc_gen]].] recorded by \ac{CMS} at $\sqrt{s}=13\,\si{\TeV}$.
 It also makes use of dozens of \ac{MC} samples.
-These are used to model the many \bbtt{} processes faking the final decay topology of interest, called /backgrounds/.
-\Ac{MC} samples are also employed to simulate the spin and mass hypotheses being probed, representing the analysis' /signals/.
+These are used to model the many processes faking the final decay topology of interest, called /backgrounds/.
+\Ac{MC} samples are also employed to simulate \ppxhh{} processes with different spin and masses, representing the analysis' /signals/.
 In this section we provide details on all the above, obtained via the data processing chain described in [[#sec:mc_gen]].
 
 * Data
-As seen in [[#sec:hlt]], \ac{CMS} data is structured in \acp{PD}, each defined by a unique set of \ac{HLT}, or "soup of triggers".
+:PROPERTIES:
+:CUSTOM_ID: sec:samples_data
+:END:
+As seen in [[#sec:hlt]], \ac{CMS} data is structured in \acp{PD}, each defined by a unique set of \ac{HLT} trigger paths.
 Every event belonging to a \ac{PD} fired at least one of the \ac{HLT} paths defining that same \ac{PD}.
 Each \ac{PD} usually focuses on a particular type of physics object.
 The \acp{PD} used in the analysis are chosen based on the final leptonic products: electrons from the =EGamma= \ac{PD}, muons from the =SingleMuon= \ac{PD}, and tau leptons from the =Tau= \ac{PD}.
@@ -19,9 +22,9 @@ There are occasionally some mismatches; the =SingleMuon= \ac{PD}, for instance, 
 The usage of multiple \acp{PD} can lead to event overlaps.
 Their mitigation is discussed at the end of [[#sec:trigger_regions]].
 
-\Ac{UL} data are used in the three data-taking years.
+\Ac{UL} data are used across the three data-taking years.
 The 2016 data samples are split into two periods.
-This is because in the late 2015 and 2016 the \ac{Si} strip tracker experienced issues with the pre-amplifier of one of its (APV series) readout chips, leading to a loss of hits in the first period of 2016.
+This is because, in the late 2015 and early 2016 periods, the \ac{Si} strip tracker experienced issues with the pre-amplifier of one of its (APV series) readout chips, leading to a loss of hits in the first period of 2016.
 In the remainder of this Thesis the period with issues is denoted 2016 APV, or "pre-VFP"[fn:: VFP refers to "Preamplifier Feedback Voltage Bias"], while the remaining 2016 data is referred as 2016 "post-VFP", or simply 2016.
 The recorded luminosity for different data-taking periods at \ac{CMS} is measured to be \SI{16.8}{\invfb} for 2016 and \SI{19.5}{\invfb} for 2016 APV, for a total of \SI{36.3}{\invfb} during 2016, \SI{41.5}{\invfb} for 2017 and \SI{59.8}{\invfb} for 2018.
 
@@ -29,9 +32,9 @@ The recorded luminosity for different data-taking periods at \ac{CMS} is measure
 :PROPERTIES:
 :CUSTOM_ID: sec:samples_bckg
 :END:
-The more data one collects, the more sensitive the analysis becomes.
+The more data one collects, the more sensitive an analysis tends to become.
 A sensitivity improvement can also be achieved by improving the efficiency and/or acceptance of the experiment to the signals being studied.
-In this work, we want to make sure all hypothetically \xhhbbtt{} events present in our samples are used.
+In this work, we want to maximize the used number of hypothetical \xhhbbtt{} events present in our samples.
 However, by increasing the signal efficiency, the presence of backgrounds mimicking the topology of the signal will become more significant.
 If the backgrounds are incorrectly estimated, a part of the measured data might be wrongly classified, leading to incorrect conclusions.
 For instance, a missing background source can lead to the observation of a non-existing \ac{BSM} signal.
@@ -41,7 +44,7 @@ In particular, the \xhhbbtt{} analysis is affected by numerous sources of backgr
 The reducible backgrounds are those with final states which can in theory be distinguished from the final states of the signal.
 In practice, however, no experiment has a perfect object efficiency and identification, and some inefficiencies are present.
 This becomes particularly noticeable when the backgrounds have cross sections several orders of magnitude larger than the signal being studied.
-By far the most important reducible background in the \xhhbbtt{} analysis is multijet production,
+One of the important reducible background sources in the \xhhbbtt{} analysis is multijet production,
 where gluon- or quark-initiated jets are misidentified as $\tau$ or b candidates.
 It mostly affects the \tautau{} channel, since the leptonic selections in the other two channels, as described in [[#sec:selection]], suppress the multijet contribution.
 In what follows, we also refer to this source as "\ac{QCD}" background.
@@ -53,11 +56,9 @@ This background affects all analysis channels.
 To give an idea, as stated in [[tab:background_xsecs1]], the $\ttbar$ cross section amounts to \SI{84.1}{\pico\barn} in the fully-leptonic channel only, against the expected \ac{SM} HH cross section of \SI{\sim 31}{\femto\barn}.
 The second most prominent irreducible background is again \ac{DY} lepton pair production, this time with additional b-jets: $\text{Z}/\gamma^{*} + \bbbar \rightarrow \ell\ell + \bbbar$.
 The inclusive \ac{DY} cross section is 5 orders of magnitude larger than the \ac{SM} HH cross section.
-Finally, backgrounds with a W boson and jets are substantial for the baseline selection described in [[#sec:selection]], and have a cross section even larger than the backgrounds above.
+Finally, backgrounds with a W boson and jets are substantial for the baseline selection described in [[#sec:selection]], and have a cross section even larger than the above backgrounds.
 However, this source is strongly suppressed by the categorization step, specifically by b-jet tagger requirements.
 The categorization is discussed in [[#sec:categorization]].
-Note that the inclusive W + jets sample is used in the $0 \le \htvar < 70\,\si{\GeV}$ only for simplicity, in order to avoid overlaps with the samples binned in $\htvar$.
-The \ac{DY}, instead, exploits the full available event multiplicity, and all \ac{DY} samples must therefore be appropriately weighted, as described in [[#sec:drellyan_bckg]].
 
 On top of the major sources above, several minor backgrounds are also taken into account.
 All sources are listed in [[ref:tab:background_xsecs1,tab:background_xsecs2]], together with their generators and cross sections.
@@ -73,68 +74,68 @@ The samples are further normalized to \ac{NNLO}, shape differences being negligi
 #+NAME: tab:background_xsecs1
 #+CAPTION: List of background samples used in the \xhhbbtt{} analysis (part 1), together with their generators and cross sections at \SI{13}{\TeV}. The \ac{DY} and W + jets samples are stitched together and rescaled to the cross section of the inclusive sample.
 #+ATTR_LATEX: :placement [!h] :center t :align lccc :environment mytablewiderrows
-|-----------------------------------------------+---------------------+---------------------------------------|
-| *Process*                                       | *MC generator*        | $\pmb{\sigma\,[}\text{\textbf{pb}}\pmb{]}$ |
-|-----------------------------------------------+---------------------+---------------------------------------|
-| W + jets: inclusive                           | LO =MadGraph v2.6.5=  |                              59375.00 |
-| W + jets: binned in $\htvar$                  | LO =MadGraph v2.6.5=  |                                    -- |
-|-----------------------------------------------+---------------------+---------------------------------------|
-| DY + jets: inclusive                          | NLO =MadGraph v2.6.5= |                               6077.22 |
-| DY + jets: binned in $\pt^{\text{Z}}$         | NLO =MadGraph v2.6.5= |                                    -- |
-| DY + jets: binned in jet multiplicity         | NLO =MadGraph v2.6.5= |                                    -- |
-|-----------------------------------------------+---------------------+---------------------------------------|
-| EWK $\text{W}^{-}$ + 2 jets, $\text{W} \rightarrow \ell\nu$ | LO =MadGraph v2.6.5=  |                                 20.25 |
-| EWK $\text{W}^{+}$ + 2 jets, $\text{W} \rightarrow \ell\nu$ | LO =MadGraph v2.6.5=  |                                 25.62 |
-| EWK Z + 2 jets, $\text{Z} \rightarrow \ell\ell$              | LO =MadGraph v2.6.5=  |                                 3.987 |
-|-----------------------------------------------+---------------------+---------------------------------------|
-| $\ttbar$: fully-leptonic                      | NLO =Powheg 2.0=      |                                  84.1 |
-| $\ttbar$: semi-leptonic                       | NLO =Powheg 2.0=      |                                347.55 |
-| $\ttbar$: semi-hadronic                       | NLO =Powheg 2.0=      |                                359.44 |
-|-----------------------------------------------+---------------------+---------------------------------------|
-| single top: tW channel + antitop              | NLO =Powheg 2.0=      |                                 35.85 |
-| single top: tW channel + top                  | NLO =Powheg 2.0=      |                                 35.85 |
-| single top: t-channel + antitop               | NLO =Powheg 2.0=      |                                 80.95 |
-| single top: t-channel + top                   | NLO =Powheg 2.0=      |                                136.02 |
-| single top: s-channel + antitop               | NLO =Powheg 2.0=      |                                 7.104 |
-| single top: s-channel + top                   | NLO =Powheg 2.0=      |                                 3.549 |
-|-----------------------------------------------+---------------------+---------------------------------------|
+|-----------------------------------------------+---------------------+---------------------------------------+------------------------|
+| *Process*                                       | *MC generator*        | $\pmb{\sigma\,[}\text{\textbf{pb}}\pmb{]}$ | *Ref.*                   |
+|-----------------------------------------------+---------------------+---------------------------------------+------------------------|
+| W + jets: inclusive                           | LO =MadGraph v2.6.5=  |                              59375.00 | [[cite:&twiki:VVxsec]]     |
+| W + jets: binned in $\htvar$                  | LO =MadGraph v2.6.5=  |                                    -- | --                     |
+|-----------------------------------------------+---------------------+---------------------------------------+------------------------|
+| DY + jets: inclusive                          | NLO =MadGraph v2.6.5= |                               6077.22 | [[cite:&twiki:SMxsec]]     |
+| DY + jets: binned in $\pt^{\text{Z}}$         | NLO =MadGraph v2.6.5= |                                    -- | --                     |
+| DY + jets: binned in jet multiplicity         | NLO =MadGraph v2.6.5= |                                    -- | --                     |
+|-----------------------------------------------+---------------------+---------------------------------------+------------------------|
+| EWK $\text{W}^{-}$ + 2 jets, $\text{W} \rightarrow \ell\nu$ | LO =MadGraph v2.6.5=  |                                 20.25 | [[cite:&twiki:genxsecana]] |
+| EWK $\text{W}^{+}$ + 2 jets, $\text{W} \rightarrow \ell\nu$ | LO =MadGraph v2.6.5=  |                                 25.62 | [[cite:&twiki:genxsecana]] |
+| EWK Z + 2 jets, $\text{Z} \rightarrow \ell\ell$              | LO =MadGraph v2.6.5=  |                                 3.987 | [[cite:&twiki:genxsecana]] |
+|-----------------------------------------------+---------------------+---------------------------------------+------------------------|
+| $\ttbar$: fully-leptonic                      | NLO =Powheg 2.0=      |                                  84.1 | [[cite:&paper:ttbarxsec]]  |
+| $\ttbar$: semi-leptonic                       | NLO =Powheg 2.0=      |                                347.55 | [[cite:&paper:ttbarxsec]]  |
+| $\ttbar$: semi-hadronic                       | NLO =Powheg 2.0=      |                                359.44 | [[cite:&paper:ttbarxsec]]  |
+|-----------------------------------------------+---------------------+---------------------------------------+------------------------|
+| single top: tW channel + antitop              | NLO =Powheg 2.0=      |                                 35.85 | [[cite:&twiki:genxsecana]] |
+| single top: tW channel + top                  | NLO =Powheg 2.0=      |                                 35.85 | [[cite:&twiki:genxsecana]] |
+| single top: t-channel + antitop               | NLO =Powheg 2.0=      |                                 80.95 | [[cite:&twiki:genxsecana]] |
+| single top: t-channel + top                   | NLO =Powheg 2.0=      |                                136.02 | [[cite:&twiki:genxsecana]] |
+| single top: s-channel + antitop               | NLO =Powheg 2.0=      |                                 7.104 | [[cite:&twiki:genxsecana]] |
+| single top: s-channel + top                   | NLO =Powheg 2.0=      |                                 3.549 | [[cite:&twiki:genxsecana]] |
+|-----------------------------------------------+---------------------+---------------------------------------+------------------------|
 
 #+NAME: tab:background_xsecs2
 #+CAPTION: List of background samples used in the \xhhbbtt{} analysis (part 2), together with their cross sections at \SI{13}{\TeV} and generators.
 #+ATTR_LATEX: :placement [!h] :center t :align lccc :environment mytablewiderrows
-|---------------------------------------------------------+---------------------+---------------------------------------|
-| *Process*                                                 | *MC generator*        | $\pmb{\sigma\,[}\text{\textbf{pb}}\pmb{]}$ |
-|---------------------------------------------------------+---------------------+---------------------------------------|
-| ZZ                                                      | LO =Pythia8=          |                                16.523 |
-| WW                                                      | LO =Pythia8=          |                                 118.7 |
-| WZ                                                      | LO =Pythia8=          |                                 47.13 |
-| WWW                                                     | NLO =MadGraph v2.6.5= |                                 0.209 |
-| WWZ                                                     | NLO =MadGraph v2.6.5= |                                 0.168 |
-| WZZ                                                     | NLO =MadGraph v2.6.5= |                                 0.057 |
-| ZZZ                                                     | NLO =MadGraph v2.6.5= |                                0.0147 |
-|---------------------------------------------------------+---------------------+---------------------------------------|
-| $\ttbar\text{WH}$                                       | LO =MadGraph v2.6.5=  |                               0.00114 |
-| $\ttbar\text{ZH}$                                       | LO =MadGraph v2.6.5=  |                               0.00113 |
-| $\ttbar\text{W}$ + jets, $\text{W} \rightarrow \ell\nu$               | NLO =MadGraph v2.6.5= |                                0.2043 |
-| $\ttbar\text{W}$ + jets, $\text{W} \rightarrow \text{q}\text{q}$ | NLO =MadGraph v2.6.5= |                                0.4062 |
-| $\ttbar\text{Z}$ + jets                                 | NLO =MadGraph v2.6.5= |                                0.2529 |
-| $\ttbar\text{WW}$                                       | LO =MadGraph v2.6.5=  |                              0.006967 |
-| $\ttbar\text{ZZ}$                                       | LO =MadGraph v2.6.5=  |                              0.001386 |
-| $\ttbar\text{WZ}$                                       | LO =MadGraph v2.6.5=  |                               0.00158 |
-|---------------------------------------------------------+---------------------+---------------------------------------|
-| ZH, \hbb{}, \zll{}                                      | NLO =Powheg 2.0=      |                                 0.052 |
-| ZH, \hbb{}, \zqq{}                                      | NLO =Powheg 2.0=      |                                  0.36 |
-| ZH, \htt{}                                              | NLO =Powheg 2.0=      |                                0.0554 |
-| $\text{W}^{+}\text{H}$, \htt{}                          | NLO =Powheg 2.0=      |                               0.05268 |
-| $\text{W}^{-}\text{H}$, \htt{}                          | NLO =Powheg 2.0=      |                                0.0334 |
-| $\text{q}\bar{\text{q}} \rightarrow \text{H}$, \htt{}            | NLO =Powheg 2.0=      |                                 0.237 |
-| $\text{g}\bar{\text{g}} \rightarrow \text{H}$, \htt{}            | NLO =Powheg 2.0=      |                                3.0469 |
-| $\ttbar\text{H}$ + jet, \hnotbb{}                       | LO =MadGraph v2.6.5=  |                               0.17996 |
-| $\ttbar\text{H}$ + jet, \hbb{}                          | LO =MadGraph v2.6.5=  |                                0.2953 |
-| $\ttbar\text{W}$ + jets, $\text{W} \rightarrow \ell\nu$               | LO =MadGraph v2.6.5=  |                                0.2161 |
-|---------------------------------------------------------+---------------------+---------------------------------------|
-| \ac{SM} \hhbbtt{}                                       | LO =MadGraph v2.6.5=  |                                0.0031 |
-|---------------------------------------------------------+---------------------+---------------------------------------|
+|---------------------------------------------------------+---------------------+---------------------------------------+------------------------|
+| *Process*                                                 | *MC generator*        | $\pmb{\sigma\,[}\text{\textbf{pb}}\pmb{]}$ | *Ref.*                   |
+|---------------------------------------------------------+---------------------+---------------------------------------+------------------------|
+| ZZ                                                      | LO =Pythia8=          |                                16.523 | [[cite:&twiki:VVxsec]]     |
+| WW                                                      | LO =Pythia8=          |                                 118.7 | [[cite:&twiki:VVxsec]]     |
+| WZ                                                      | LO =Pythia8=          |                                 47.13 | [[cite:&twiki:VVxsec]]     |
+| WWW                                                     | NLO =MadGraph v2.6.5= |                                 0.209 | [[cite:&twiki:genxsecana]] |
+| WWZ                                                     | NLO =MadGraph v2.6.5= |                                 0.168 | [[cite:&twiki:genxsecana]] |
+| WZZ                                                     | NLO =MadGraph v2.6.5= |                                 0.057 | [[cite:&twiki:genxsecana]] |
+| ZZZ                                                     | NLO =MadGraph v2.6.5= |                                0.0147 | [[cite:&twiki:genxsecana]] |
+|---------------------------------------------------------+---------------------+---------------------------------------+------------------------|
+| $\ttbar\text{WH}$                                       | LO =MadGraph v2.6.5=  |                               0.00114 | [[cite:&twiki:genxsecana]] |
+| $\ttbar\text{ZH}$                                       | LO =MadGraph v2.6.5=  |                               0.00113 | [[cite:&twiki:genxsecana]] |
+| $\ttbar\text{W}$ + jets, $\text{W} \rightarrow \ell\nu$               | NLO =MadGraph v2.6.5= |                                0.2043 | [[cite:&twiki:genxsecana]] |
+| $\ttbar\text{W}$ + jets, $\text{W} \rightarrow \text{q}\text{q}$ | NLO =MadGraph v2.6.5= |                                0.4062 | [[cite:&twiki:genxsecana]] |
+| $\ttbar\text{Z}$ + jets                                 | NLO =MadGraph v2.6.5= |                                0.2529 | [[cite:&twiki:genxsecana]] |
+| $\ttbar\text{WW}$                                       | LO =MadGraph v2.6.5=  |                              0.006967 | [[cite:&twiki:genxsecana]] |
+| $\ttbar\text{ZZ}$                                       | LO =MadGraph v2.6.5=  |                              0.001386 | [[cite:&twiki:genxsecana]] |
+| $\ttbar\text{WZ}$                                       | LO =MadGraph v2.6.5=  |                               0.00158 | [[cite:&twiki:genxsecana]] |
+|---------------------------------------------------------+---------------------+---------------------------------------+------------------------|
+| ZH, \hbb{}, \zll{}                                      | NLO =Powheg 2.0=      |                                 0.052 | [[cite:&twiki:HXSWG]]      |
+| ZH, \hbb{}, \zqq{}                                      | NLO =Powheg 2.0=      |                                  0.36 | [[cite:&twiki:HXSWG]]      |
+| ZH, \htt{}                                              | NLO =Powheg 2.0=      |                                0.0554 | [[cite:&twiki:HXSWG]]      |
+| $\text{W}^{+}\text{H}$, \htt{}                          | NLO =Powheg 2.0=      |                               0.05268 | [[cite:&twiki:HXSWG]]      |
+| $\text{W}^{-}\text{H}$, \htt{}                          | NLO =Powheg 2.0=      |                                0.0334 | [[cite:&twiki:HXSWG]]      |
+| $\text{q}\bar{\text{q}} \rightarrow \text{H}$, \htt{}            | NLO =Powheg 2.0=      |                                 0.237 | [[cite:&twiki:HXSWG]]      |
+| $\text{g}\bar{\text{g}} \rightarrow \text{H}$, \htt{}            | NLO =Powheg 2.0=      |                                3.0469 | [[cite:&twiki:HXSWG]]      |
+| $\ttbar\text{H}$ + jet, \hnotbb{}                       | LO =MadGraph v2.6.5=  |                               0.17996 | [[cite:&twiki:HXSWG]]      |
+| $\ttbar\text{H}$ + jet, \hbb{}                          | LO =MadGraph v2.6.5=  |                                0.2953 | [[cite:&twiki:HXSWG]]      |
+| $\ttbar\text{W}$ + jets, $\text{W} \rightarrow \ell\nu$               | LO =MadGraph v2.6.5=  |                                0.2161 | [[cite:&twiki:HXSWG]]      |
+|---------------------------------------------------------+---------------------+---------------------------------------+------------------------|
+| \ac{SM} \hhbbtt{}                                       | LO =MadGraph v2.6.5=  |                                0.0031 | [[cite:&lhc_wg4_twiki]]    |
+|---------------------------------------------------------+---------------------+---------------------------------------+------------------------|
 
 * Signal
 The \xhhbbtt{} signal samples refer to the \ac{ggF} radion and graviton models, corresponding to \spin{0} and \spin{2} processes, respectively, where the Higgs bosons are forced to decay into a pair of b quarks and a pair of $\tau$ leptons.
@@ -144,29 +145,27 @@ Analyses within the \ac{ATLAS} Collaboration also use the same \spin{2} model.
 The model employed for \spin{0} is instead different, but equivalent when the \ac{NWA} approach is considered, which is so far the case for the vast majority of \ac{HEP} analyses.
 In [[#sec:interf_intro]] we discuss an alternative approach to the \ac{NWA}.
 
-The signal samples are generated at \ac{LO} with =MadGraph v2.6.5=, and =Pythia8= is used for the hadronization, assuming the \ac{NWA}.
+The signal samples are generated at \ac{LO} with =MadGraph v2.6.5=, assuming the \ac{NWA}, and =Pythia8= is used for the hadronization.
 The samples usually have on the order of \num{e5} events, depending on spin, mass, and data-taking period.
 The mass range considered for both spin hypotheses is identical: \num{250}, \num{260}, \num{270}, \num{280}, \num{300}, \num{320}, \num{350}, \num{400}, \num{450}, \num{500}, \num{550}, \num{600}, \num{650}, \num{700}, \num{750}, \num{800}, \num{850}, \num{900}, \num{1000}, \num{1250}, \num{1500}, \num{1750}, \num{2000}, \num{2500} and \SI{3000}{\GeV}.
-We do not consider masses below \SI{250}{\GeV} since that would imply a virtual Higgs.
+We do not consider lower masses to avoid the presence of extremely virtual Higgs bosons.
 There is no fundamental principle against it, but the width of the Higgs boson is so small as to make such a process experimentally unobservable.
-On the large mass side, we stop at \SI{3}{\TeV} since higher mass points are not expected to provide a better sensitivity, due to presence of boosted \taus{}, for which our analysis is not optimized.
-This supposition is confirmed by the results shown in [[#sec:final_limits]].
-Additionally, a dedicated \ac{CMS} high mass analysis with the same final state is currently being worked on by a different analysis team.
+On the large mass side, we stop at \SI{3}{\TeV} since a dedicated \ac{CMS} high mass analysis with the same final state is currently being developed by a different analysis team.
+Additionally, higher mass points are not expected to provide a better sensitivity, due to presence of boosted \taus{}, for which our analysis is not optimized.
 
 * MC reweighting
 :PROPERTIES:
 :CUSTOM_ID: sec:mc_reweighting
 :END:
-
 The reweighting and normalization of \ac{MC} background samples is essential to accurately model the processes and to establish a sound comparison with data.
-The same is true for signal samples, except into what concerns the overall normalization, since the cross section of resonant processes is arbitrarily defined.
+The same is true for signal samples, except into what concerns the overall normalization since, when a model independent analysis is performed, the cross section of resonant processes is arbitrarily defined.
 \Ac{MC} samples are weighted as follows, depending on the sample and data-taking period:
 #+NAME: eq:mc_weight
 \begin{equation}
 N^{\text{period}}_{\text{sample}} = \frac{ \mathcal{L}^{\text{period}} \times \left( \sigma \times \mathcal{B} \right)^{\text{theory}}_{\text{sample}} \times N_{\text{sample}}^{\text{gen}} \times \prod_{j \in \Theta^{\text{gen}}} w_{j,\,\text{sample}}^{\text{gen}} \times \prod_{i \notin \Theta^{\text{gen}}} w_{i,\,\text{sample}} } { \sum_{j,\,\text{sample}} w_j^{\text{gen}} } \: , 
 \end{equation}
 
-\noindent where $\mathcal{L}^{\text{period}}$ is the luminosity in a \run{2} data-taking period, $\sigma$ and $\mathcal{B}$ represent, respectively, the process cross section and decay \ac{BR}, $N^{\text{gen}}$ is the number of generated events, $w_j^{\text{gen}}$ stands for the generation-related weight $j$, and $w_i$ represents a weight $i$ applied in addition to the generation weights or, in other words, a weight $w_i$ not belonging to the set of generated weights $\Theta^{\text{gen}}$.
+\noindent where $\mathcal{L}^{\text{period}}$ is the luminosity in a \run{2} data-taking period, $\sigma$ and $\mathcal{B}$ represent, respectively, the process cross section and decay \ac{BR}, $N^{\text{gen}}$ is the number of generated events, $w_j^{\text{gen}}$ stands for weight $j$ of the \ac{MC} generator, and $w_i$ represents a weight $i$ applied in addition to the generation weights or, in other words, a weight $w_i$ not belonging to the set of generated weights $\Theta^{\text{gen}}$.
 Different data-taking periods can have different sets of weights.
 Weights $w_i$ appear due to discrepancies between data and \ac{MC}, and can be expanded or reduced for different data-taking periods depending on the detector's evolving conditions.
 In our analysis, the $w_i$ weights consist on stitching weights for \ac{DY} samples, \ac{L1} prefiring weights, trigger \ac{SF} weights, weights for objects faking taus, \ac{PU} jet identification weights, reshaping b-tagging weights and b-jet discriminator weights.

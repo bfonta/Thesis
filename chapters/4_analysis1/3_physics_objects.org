@@ -13,11 +13,9 @@ We follow \ac{POG} recommendations whenever possible.
 :PROPERTIES:
 :CUSTOM_ID: sec:physics_objects_muons
 :END:
-
 The muon selections applied in this work were originally based on the selections used by the \ac{CMS} \htt{} analyses [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]], but have evolved according to updated analysis needs, further corrections, and sample updates.
 Muons are required to be reconstructed by the Tracker or the Global muon reconstruction algorithms, which were described in [[#sec:offline_reco_muons]].
 The muon selections later presented in [[tab:max_min_cuts]] apply kinematic, isolation and \ac{ID} thresholds.
-In the following we define both isolation and \ac{ID}.
 
 # isolation
 One of the most efficient ways to reject backgrounds for lepton candidates is the usage of isolation quantities, a generic class of discriminating variables that are constructed
@@ -72,7 +70,7 @@ In this analysis, we require $\mathcal{I}_{\text{rel}}^{e} < 0.1$ for electrons 
 
 # identification
 The electron \ac{ID} uses a \ac{MVA} which has been updated and improved for \ac{CMS} \run{2} analyses.
-The discriminator is based on a \ac{BDT} [[cite:&tmva]], combining several observables sensitive to bremsstrahlung along the trajectory of the electron, to \ac{PF} isolation components and the energy density within the isolation cone, to shower-shape variables, to variables related to electron conversion, and to the matching between the trajectory of the electron and its related clusters.
+The discriminant is based on a \ac{BDT} [[cite:&tmva]], combining several observables sensitive to bremsstrahlung along the trajectory of the electron, to \ac{PF} isolation components and the energy density within the isolation cone, to shower-shape variables, to variables related to electron conversion, and to the matching between the trajectory of the electron and its related clusters.
 The \ac{MVA} is trained on all electrons, regardless of whether they pass the trigger requirements or not, and is then tuned for electrons with $\pt>10\,\si{\GeV}$.
 Three categories are defined based on electron \ac{eta}: two in the barrel and one in the endcap.
 Signal electrons require the =Tight= \ac{WP}, which has a \SI{\sim 80}{\percent} signal efficiency, while veto electrons must pass the =Medium= \ac{WP}, which has a \SI{\sim 90}{\percent} efficiency.
@@ -90,8 +88,7 @@ They also lead to several systematic shape uncertainties, as described in [[#sec
 :PROPERTIES:
 :CUSTOM_ID: sec:hadronic_taus
 :END:
-Hadronically-decaying tau leptons are reconstructed by the \ac{HPS} algorithm, which targets multiple decay modes, as was described in [[#sec:offline_reco_taus]].
-Its goal is to combined \ac{PF} information in jets to discriminate between $\tau$ jets and other jets, usually light jets from quarks and gluons.
+Hadronically-decaying tau leptons are reconstructed using the \ac{HPS} algorithm, which was described in [[#sec:offline_reco_taus]].
 In our analysis, as well as in others, hadronically-decaying \taus{} are the most important $\tau$ decays, given their large \ac{BR}.
 There is thus a strong interest in improving the $\tau$ reconstruction performance, leading to the implementation of dedicated algorithms.
 In \run{2}, =DeepTau= [[cite:&deeptau]] has demonstrated good performances, and is used in our analysis on top of \ac{HPS}.
@@ -99,15 +96,13 @@ As a consequence, there is no need to use more traditional quantities, like the 
 The goal of the =DeepTau= algorithm is to disentangle \tauhs{} from quark- and gluon-initiated jets, and also from electrons and muons, which can occasionally mimic a hadronic tau lepton decay. 
 It uses information from all \ac{CMS} subdetectors, including variables used by \ac{HPS}.
 It also considers information on candidates reconstructed within the \ac{HPS} tau signal and isolation cones, such as track and cluster properties and kinematics.
-A multi-layered \ac{CNN}-based architecture is employed.
-In total, the algorithm is trained with 140 million \tauh{} candidates, and validated with 10 million.
-The final discriminators $D$ against electrons, muons and jets are the result of a softmax activation function, and are computed as follows:
+The algorithm exploits a \ac{DNN} architecture, where the final discriminants $D$, against electrons, muons and jets, are computed as follows:
 #+NAME: eq:deeptau
 \begin{equation}
 y_{\alpha} = \frac{e^{x_{\alpha}}}{\sum_{\beta}e^{x_{\beta}}} \:\:\: , \:\:\: D_{\alpha} = \frac{y_{\tau}}{y_{\tau} + y_{\alpha}}
 \end{equation}
 \noindent with $\alpha \in {\text{jet}, \mu, e}$, and $x$ representing the four output nodes: $x_{\text{jet}}$, $x_{\mu}$, $x_{e}$ and $x_{\tau_{\text{h}}}$.
-The discriminators are also known as =DeepTauVSjet=, =DeepTauVSe= and =DeepTauVSmu= for $D_{\text{jet}}$, $D_{\mu}$ and $D_{e}$, respectively.
+The discriminants are also known as =DeepTauVSjet=, =DeepTauVSe= and =DeepTauVSmu= for $D_{\text{jet}}$, $D_{\mu}$ and $D_{e}$, respectively.
 The expected \tauh{} \ac{ID} efficiencies are obtained with validation samples.
 The efficiencies for a particular =DeepJet= \ac{WP} are defined using genuine \tauhs{} in a \htt{} sample, where the \taus{} are reconstructed as \tauhs{} in a $30 < \pt < 170 \,\si{\GeV}$ range, and have passed that same \ac{WP}.
 As shown in [[tab:deeptau_wps]], the efficiencies range from 40 to 98% for jets, from 60 to 99.5% for electrons, and from 99.5 to 99.95% for muons, depending on the \ac{WP}.
@@ -145,10 +140,10 @@ A \ac{PF} jet \ac{ID} criterion is available to \ac{CMS} analyzers, and all AK4 
 The criterion is based on many jet observables, including the multiplicity of charged hadrons, the energy fraction deposited in \ac{ECAL} by hadrons, and the fraction of hadrons clustered within the jet.
 The efficiency is around 98/99% or more for all \ac{eta} values, with a background rejection above 98% at $|\eta|<2.7$.
 
-Jets are also often produced by \ac{PU}, being unrelated to the \ac{PV}.
+Jets are also frequently produced by \ac{PU}, being unrelated to the \ac{PV}.
 These jets often result from the overlap of many low-energy jets, being thus broader than \ac{PV} jets.
-To avoid such background jets, AK4 jets satisfying $\pt < 50\,\si{\GeV}$ are required to pass the =Loose= \ac{WP} of the discriminant.
-The discriminant uses a \ac{BDT} to find an optimized decision boundary using information related to jet shape, object multiplicity and compatibility with the \ac{PV}.
+To avoid such background jets, AK4 jets satisfying $\pt < 50\,\si{\GeV}$ are required to pass the =Loose= \ac{WP} of a dedicated \ac{PU} jet discriminant.
+The discriminant uses a \ac{BDT} to find an optimized decision boundary, using information related to jet shape, object multiplicity and compatibility with the \ac{PV}.
 
 Jets from b-quarks originating from the decay of high \ac{pt} Higgs bosons are often close enough to be merged into a single large radius jet by the anti-$\ktalgo$ algorithm, forming an AK8 jet.
 In our analysis, the \ac{GNN}-based \ac{PNet} algorithm [[cite:&particle_net]] is used to discriminate \hbb{} decays from the multijet background, as detailed below.
@@ -157,14 +152,15 @@ The jets must also have a =SoftDrop= mass above \SI{30}{\GeV}, where =SoftDrop= 
 
 ** Identification of B-jets
 Jets originated by the hadronization of b quarks distinguish themselves from other jets, inasmuch as they contain particles known to be relatively long-lived.
-Such b mesons and hadrons can thus decay with a displacement of a few millimeters with respect to the \ac{PV}, defining the so-called /secondary vertex/.
+Such b mesons and hadrons can thus decay with a displacement of a few millimeters with respect to the \ac{PV}, defining the so-called /secondary vertices/.
 Additionally, b hadrons decay into electrons or muons with a probability of \SI{\sim 20}{\percent}.
 Distance parameters and displaced leptons can thus be exploited for discriminative purposes [[cite:&btag_performance]].
 
 During \run{1}, the b-jet reconstruction algorithms available within \ac{CMS} worked by manually building discriminative variables.
 The most advanced, the Combined Secondary Vertex (CSV) algorithm, used the secondary vertex mass and the number of tracks in a jet, among other variables.
 Deep learning techniques first appeared in \run{2}, starting with =DeepCSV= [[cite:&deep_csv]], and later =DeepJet= [[cite:&deepjet;&deepjet_performance]], which is based on \acp{CNN} and \acp{RNN}.
-Further improvements, particularly the widespread adoption of \acp{GNN}, have lead to \ac{PNet} [[cite:&particle_net]], and finally to \ac{ParT} [[cite:&transformer]], which exploits the state-of-the-art transformer technology [[cite:&transformers]], and should start being used in \run{3}.
+Further improvements, particularly the widespread adoption of \acp{GNN}, have lead to \ac{PNet} [[cite:&particle_net]], and finally to \ac{ParT} [[cite:&transformer]].
+The latter exploits state-of-the-art transformer technology [[cite:&transformers]], and should start being used in \run{3}.
 
 In our analysis, AK4 jets originating from b quarks are identified using the =DeepJet= algorithm.
 In order to separate b-jets from other jets, =DeepJet= combines secondary vertex properties, track-based variables and \ac{PF} jet constituents (neutral and charged candidates) in a \ac{DNN}.
@@ -176,7 +172,7 @@ Comparisons between other specific jet types are referred to as =DeepJetCvsB= an
 The latter are used as input features for the $\mtautau$ regression in [[#sec:tautau_regression]].
 
 #+NAME: tab:bTagWPs
-#+CAPTION: Thresholds for different years with associated \acp{WP} and efficiencies to be considered with \run{2} \ac{UL} datasets for the =DeepJet= and mass decorrelated \ac{PNet} \xbb{} taggers. LP, MP and HP refer to Low, Medium and High purities, respectively.
+#+CAPTION: =DeepJet= and mass decorrelated \ac{PNet} \xbb{} thresholds for different data-taking periods, with associated \acp{WP} and \run{2} \hbb{} signal jet efficiencies. LP, MP and HP refer to Low, Medium and High purities, respectively.
 \begin{table}[htbp]
 \hspace{1cm}
     \setlength{\tabcolsep}{10pt}
@@ -184,19 +180,19 @@ The latter are used as input features for the $\mtautau$ regression in [[#sec:ta
     \begin{tabular}{c|ccc|ccc}
         \hline
         \multirow{2}{*}{\textbf{Year}} &  & \textbf{DeepJet} &  &  & \textbf{PNet} &  \\
-                              & \ac{WP} & Eff. [\%] & Cut & \ac{WP} & Eff. [\%] & Cut \\ \hline
-        \multirow{3}{*}{2016} & \texttt{Loose}  & 86.3 & 0.0408 & \texttt{LP} & 40 & 0.9137  \\
+                               & \ac{WP} & Eff. [\%] & Cut & \ac{WP} & Eff. [\%] & Cut \\ \hline
+        \multirow{3}{*}{2016}  & \texttt{Loose}  & 86.3 & 0.0408 & \texttt{LP} & 80 & 0.9137  \\
                                & \texttt{Medium} & 71.4 & 0.2489 & \texttt{MP} & 60 & 0.9735  \\
-                               & \texttt{Tight}  & 54.7 & 0.8819 & \texttt{HP} & 80 & 0.9883  \\ \hline
-        \multirow{3}{*}{2016APV} & \texttt{Loose}  & 87.3 & 0.0508 & \texttt{LP} & 40 & 0.9088  \\
+                               & \texttt{Tight}  & 54.7 & 0.8819 & \texttt{HP} & 40 & 0.9883  \\ \hline
+        \multirow{3}{*}{2016APV} & \texttt{Loose}  & 87.3 & 0.0508 & \texttt{LP} & 80 & 0.9088  \\
                                   & \texttt{Medium} & 73.3 & 0.2598 & \texttt{MP} & 60 & 0.9737  \\
-                                  & \texttt{Tight}  & 57.5 & 0.8819 & \texttt{HP} & 80 & 0.9883  \\ \hline
-        \multirow{3}{*}{2017} & \texttt{Loose}  & 91.0 & 0.0532 & \texttt{LP} & 40 & 0.9105  \\
+                                  & \texttt{Tight}  & 57.5 & 0.8819 & \texttt{HP} & 40 & 0.9883  \\ \hline
+        \multirow{3}{*}{2017} & \texttt{Loose}  & 91.0 & 0.0532 & \texttt{LP} & 80 & 0.9105  \\
                                & \texttt{Medium} & 79.1 & 0.3040 & \texttt{MP} & 60 & 0.9714  \\
-                               & \texttt{Tight}  & 61.6 & 0.7476 & \texttt{HP} & 80 & 0.987   \\ \hline
-        \multirow{3}{*}{2018} & \texttt{Loose}  & 91.5 & 0.0490 & \texttt{LP} & 40 & 0.9172  \\
+                               & \texttt{Tight}  & 61.6 & 0.7476 & \texttt{HP} & 30 & 0.987   \\ \hline
+        \multirow{3}{*}{2018} & \texttt{Loose}  & 91.5 & 0.0490 & \texttt{LP} & 80 & 0.9172  \\
                                & \texttt{Medium} & 80.7 & 0.2783 & \texttt{MP} & 60 & 0.9734  \\
-                               & \texttt{Tight}  & 65.1 & 0.7100 & \texttt{HP} & 80 & 0.988   \\ \hline
+                               & \texttt{Tight}  & 65.1 & 0.7100 & \texttt{HP} & 40 & 0.988   \\ \hline
     \end{tabular}
 \end{table}
 
@@ -215,7 +211,7 @@ The \xbb{} discriminant is given by:
 In order to select the most performant \ac{WP}, the full analysis workflow is run once per \ac{WP}, and the LP \ac{WP} is found to provide the most stringent results.
 It is however important to note that discrepancies between data and \ac{MC} require the application of dedicated \acp{SF} to all jets passing the \ac{PNet} \acp{WP}.
 AK8 analysis jets must thus be corrected, in a procedure described in [[#sec:pnet_sfs]].
-The thresholds on the =DeepJet= and \ac{PNet} discriminator values, and corresponding efficiencies, are listed in [[tab:bTagWPs]].
+The thresholds on the =DeepJet= and \ac{PNet} discriminant values, and corresponding efficiencies, are listed in [[tab:bTagWPs]].
 
 ** Jet Energy Scale and Resolution Corrections
 :PROPERTIES:
@@ -227,7 +223,7 @@ Differences can arise due to detector noise, \ac{PU} or a non-linear calorimetri
 The precise understanding of \acp{JEC}, scales and resolutions, is of crucial importance for multiple analyses, also entering as an important component in their systematic uncertainties.
 The energy of jets must therefore be appropriately corrected, in order to match the true particle-level deposited energy [[cite:&jet_corr1;&jet_corr2]].
 In [[fig:jerc]] we illustrate the approach adopted by \ac{CMS} in \run{2}.
-It consists on a sequential series of steps, where each step is responsible to independently correct a different effect.
+It consists on a sequential steps, where each step is responsible to independently correct a different effect.
 Each data-taking period has its own set of corrections.
 The first step addresses the spurious energy deposits from \ac{PU} interactions.
 For each type of \ac{PF} candidate an offset energy is subtracted from the jet energy.
@@ -245,7 +241,7 @@ For all jet types, the energy scale uncertainties are smaller than 3% for $\pt >
 
 Since measurements show that the jet energy resolution in data is worse than in the simulation, resolution corrections must be applied to \ac{MC} jets.
 The latter are smeared to describe the data.
-The smearing procedure uses a ``hybrid'' approach recommended by \ac{CMS} BTV \ac{POG}, and composed of two methods.
+The smearing procedure uses a ``hybrid'' approach, recommended to all \ac{CMS} analyses, and composed of two methods.
 If a matched generator-level jet exists, then the four-momentum of the corresponding reconstructed jet is rescaled, with a factor which depends on the \ac{pt} of the reconstructed and generated jet:
 #+NAME: fig:hybrid1
 \begin{equation}

@@ -58,7 +58,7 @@ Furthermore, the correct definition of possibly multi-dimensional bins for each 
 Additionally, the project was experimental, and there was no guarantee the final result would converge into robust and usable corrections.
 For all the reasons above, we decided to create a trigger strategy with non-overlapping regions, as described in [[#sec:trigger_regions]], so that the \logicor{} between all triggers would not have to be considered.
 However, the developed framework was not left unused.
-Firstly, given its flexibility, it was utilised with one single trigger, namely the \ac{MET} trigger studies presented in [[#sec:met_trigger_sfs]].
-Secondly, it is now serving as the basis for a similar endeavour, which will hopefully be used for \run{3} \bbtt{} work.
+Given its flexibility, it was utilized with one single trigger, namely the \ac{MET} trigger studies presented in [[#sec:met_trigger_sfs]].
+It was also used for on-going discussions concerning the definition of the \run{3} \bbtt{} trigger strategy.
 Estimates have shown an expected acceptance gain of the order of \SI{\sim 10}{\percent} when using the full \logicor{} for the \run{3} nonresonant \hhbbtt{} analysis, compared to the trigger strategy employed in this work.
 Exploiting the \logicor{} of multiple trigger is thus one of many possible approaches to increase the performance of future HH searches.

@@ -3,7 +3,7 @@
 :END:
 
 #+NAME: fig:kinTriggerRegions
-#+CAPTION: Lepton-\ac{pt} kinematic regions where different triggers of the analysis are applied, for 2018. The regions are defined based on the triggers' \ac{HLT} cuts plus thresholds, and the colored thick lines represent the boundaries of those regions. The three $\tau\tau$ decay channels are represented by the left, middle and right columns. Single-$e$($\mu$) and cross-$e\tau$($\mu\tau$) triggers are used for high-\ac{pt} leptons in the \eletau{} (\mutau{}) channels, associated to the black region. The $\metnomu$ trigger covers low-\ac{pt} leptons, in the blue region. The \stau{} trigger covers the red regions where one of the leptons has high-\ac{pt}, and the other \ac{pt} lower than the single- and cross-trigger thresholds. The three regions are explicitly defined in the text. The two top rows represent a signal radion with masses of \num{700} and \SI{1000}{\GeV}, while the bottom row shows the distribution of the two most important components of MC-derived background: \ac{DY} and $\ttbar$.
+#+CAPTION: Lepton-\ac{pt} kinematic regions where different triggers of the analysis are applied, for 2018. The regions are defined based on the triggers' \ac{HLT} cuts plus thresholds, and the colored thick lines represent the boundaries of those regions. The three $\tau\tau$ decay channels are represented by the left, middle and right columns. Single-$e$($\mu$) and cross-$e\tau$($\mu\tau$) triggers are used for high-\ac{pt} leptons in the \eletau{} (\mutau{}) channels, associated to the black region. The $\metnomu$ trigger covers low-\ac{pt} leptons, in the blue region. The \stau{} trigger covers the red regions where one of the leptons has high-\ac{pt}, and the other \ac{pt} is lower than the single- and cross-trigger thresholds. The three regions are explicitly defined in the text. The two top rows represent a signal radion with masses of \num{700} and \SI{1000}{\GeV}, while the bottom row shows the distribution of the two most important background components: \ac{DY} and $\ttbar$.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .325\textwidth :center :options trim={2cm 2cm 2cm 2cm},clip
@@ -32,20 +32,20 @@ The definition of the regions does not depend on the trigger being fired, but on
 The full \logicor{} is not explored for reasons discussed in [[#sec:inclusion_method]].
 The regions have a very similar structure for all years and channels, and are illustrated in [[fig:kinTriggerRegions]] for 2018, showing only \ac{pt} cuts for simplicity.
 The \eletau{} channel in 2016 represents an exception, as no cross trigger was available.
-There, the legacy region is defined by $\pt^e > 26\,\si{\GeV}$ and $|\eta|<2.5$ only.
-The latter cut comes from hard limits coming from the definition of electron \acp{SF}.
+There, the legacy region is defined by $\pt > 26\,\si{\GeV}$ and $|\eta|<2.5$ only.
+The $|\eta|$ cut comes from hard limits from the definition of trigger \acp{SF}.
 
-The \ac{pt} and $|\eta|$ cuts defining the regions are based on the corresponding \ac{HLT} thresholds in [[tab:trigger_mutau]], plus additional standard thresholds applied on top of \ac{pt} cuts: \SI{1}{\GeV} for electrons, \SI{2}{\GeV} for muons and \SI{5}{\GeV} for taus.
-Such cuts are meant to avoid the turn-on curve of the respective triggers.
-The legacy region takes precedence over all other regions, since it is the region where the triggers more closely target the analysis topology and cover a larger signal acceptance.
-Taking as an example the \eletau{} channel in 2018 (top left plot in [[fig:kinTriggerRegions]]), the legacy region is defined with the following \ac{pt} cuts:
-#+NAME: eq:region_condition
-\begin{equation*}
-\underbrace{ \pt^{e}>33\,\si{\GeV} }_{\text{single lepton trigger}} \:\: \mid\mid \:\:
-\underbrace{ \left( \pt^{e}>25\,\si{\GeV} \:\: \&\& \:\: \pt^{\tau}>35\,\si{\GeV} \right) }_{\text{cross trigger}}
-\end{equation*}
-\noindent The second region to be defined is the one associated to the \stau{} trigger.
-Using the same example, a cut at $\pt(\tau)>190\,\si{\GeV}$ is applied, including a \SI{10}{\GeV} threshold, standard for \stau{} triggers.
+The \ac{pt} and $|\eta|$ cuts defining the regions are based on the corresponding \ac{HLT} thresholds in [[tab:trigger_mutau]], plus additional standard thresholds applied on top of \ac{pt} cuts:
+#+NAME: eq:ptTreshold
+\begin{equation}
+  \pt^{\text{offline}} \, \geq \, \pt^{\text{HLT}}\ + \, \text{threshold}\:,
+\end{equation}
+\noindent where $\pt^{\text{offline}}$ is the transverse momentum of the offline selected lepton, $\pt^{\text{HLT}}$ is the \ac{pt} threshold applied at \ac{HLT} level, and ``threshold'' depends on the lepton type: \SI{1}{\GeV} for electrons, \SI{2}{\GeV} for muons, \SI{5}{\GeV} for tau leptons firing the \ditau{} trigger, and \SI{10}{\GeV} for tau leptons firing the \stau{} trigger.
+The thresholds are chosen to be conservative with respect to the trigger turn-on curves.
+For events passing more than one trigger, the loosest thresholds among those two triggers are applied.
+
+The legacy region takes precedence over all other regions, since it is where the triggers more closely target the analysis topology and cover a larger signal acceptance.
+The second region to be defined is the one associated to the \stau{} trigger.
 In the \tautau{} channel, the \stau{} region is actually composed of two disjoint regions, one for each tau lepton.
 Finally, all events not belonging to the two kinematic regions above are associated to the $\metnomu$ region, on the condition that they meet the $\metnomu$ trigger requirements.
 The complete selections are shown in [[tab:triggerRegions]], where their five-dimensional nature becomes clear.
@@ -82,7 +82,7 @@ For \eletau{} and \mutau{}, the lepton is by definition considered the first lep
                                                                                                             
         \multirow{3}{*}{\tautau{}} & Legacy                 & \ditau{}   & $\pt > 40/40/40$, $|\eta| \leq 2.1$     & \&\&       & $\pt > 40/40/40$, $|\eta| \leq 2.1$    & --                 \\[.15cm]
 
-                                  & Tau                     & \stau{}   & $\pt > 130/190/190$, $|\eta| \leq 2.1$  & $\mid\mid$ & $p_T > 130/190/190$, $|\eta| \leq 2.1$ & --                 \\[.15cm]
+                                  & Tau                     & \stau{}   & $\pt > 130/190/190$, $|\eta| \leq 2.1$  & $\mid\mid$ & $\pt > 130/190/190$, $|\eta| \leq 2.1$ & --                 \\[.15cm]
 
                                   & MET                     & $\metnomu$ & --                                & --         & --                              & $> 150/150/150$    \\[.15cm]
 
@@ -126,7 +126,7 @@ We believe the difference is due to the additional track \ac{pt} cut at \SI{50}{
 #+END_figure
 
 #+NAME: fig:trigger_improvement
-#+CAPTION: Trigger acceptance gain for 2018 in the \eletau{} (top), \mutau{} (middle) and \tautau{} channels, with respect to the legacy triggers, in percentage, when considering the addition of the $\metnomu$ and \stau{} triggers. The analysis trigger regions are taken into account. The expected statistics improvement is significant, especially for high $\mx$ values. We show the \spin{0} hypothesis, but the result with the \spin{2} hypothesis is very similar.
+#+CAPTION: Trigger acceptance gain for 2018 in the \eletau{} (top), \mutau{} (middle) and \tautau{} (bottom) channels, with respect to the legacy triggers, in percentage, when considering the addition of the $\metnomu$ and \stau{} triggers. The analysis trigger regions are taken into account. The expected statistics improvement is significant, especially for high $\mx$ values. We show the \spin{0} hypothesis, but the result with the \spin{2} hypothesis is very similar.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width 0.95\textwidth :center
@@ -168,10 +168,3 @@ Take a \mutau{} event with large enough $\metnomu$.
 Such event would be present in both =SingleMuon= and =MET= datasets.
 Given certain \ac{pt} and \ac{eta} values of the two leptons, it could be assigned to the $\metnomu$ trigger region (blue region in [[fig:kinTriggerRegions]]).
 The rules above guarantee that only the event present in the =MET= dataset would be selected, avoiding event duplication.
-
-For completeness, it can be noted that those same rules lead however to a (very small) loss of events.
-For instance, the analysis will not consider a \mutau{} event in the =SingleMuon= \ac{PD} if it only fires the $\metnomu$ trigger, and if the same event is not present in the =MET= dataset.
-Similar scenarios can be envisaged with other combinations of regions and \acp{PD}.
-Such occurrences are clearly unexpected and very rare.
-This has been verified by comparing the \ac{ID} of all selected events coming from different \acp{PD}; less than a handful were duplicated.
-We decided to ignore those events for the sake of simplicity.

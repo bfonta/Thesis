@@ -233,7 +233,7 @@ The fit is particularly helpful for situations with low resolution tracks, usual
 Additional muons are searched for if the calibrated cluster energy is much smaller than the sum of the track momenta, but this rarely happens.
 The description in this section serves as the basis for the complex algorithms that reconstruct hadronic tau decays, and which are briefly described in [[#sec:physics_objects]], proving essential for the \xhhbbtt{} analysis.
 
-* Taus
+* Tau Leptons
 :PROPERTIES:
 :CUSTOM_ID: sec:offline_reco_taus
 :END:
@@ -271,7 +271,7 @@ The individual particles reconstructed by \ac{PF} are fed into the \ac{CMS}-spec
 The task is rather complex, since a plethora of decay particles exists.
 Neutral hadrons, on one hand, decay to photons ($\pi^{0}\rightarrow\gamma\gamma$) which quickly convert to electron-positron pairs in the material of the tracker.
 Charged hadrons, instead, amount to kaons and pions, and can be produced with different multiplicities.
-The algorithm starts by reconstructing neutral hadrons, which consists of collecting energy deposits in /strips/, \ie{} dynamically-sized regions along (\ac{eta}, \ac{phi}) which are created by the magnetic bending of electrons and positrons.
+The algorithm starts by reconstructing neutral hadrons by collecting energy deposits in /strips/, \ie{} dynamically-sized regions along (\ac{eta}, \ac{phi}) which are created by the magnetic bending of electrons and positrons.
 The momenta of the strips amounts to the vectorial sum of all its components.
 Next, charged hadrons satisfying $\pt>0.5\,\si{\GeV}$ and coming from the \ac{PV} are reconstructed.
 They can fit into multiple topologies, as shown in [[tab:tau_decays]], and when appropriate, the combination of charged hadrons with strips is required to be compatible with the masses of the $\rho$ or $a_{1}$ resonances.

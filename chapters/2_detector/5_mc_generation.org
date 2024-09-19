@@ -83,12 +83,12 @@ From the DIGI format the offline /reconstruction/ begins, being explained in det
 The output of the reconstruction is called RECO, containing detailed information on the physics objects that were reconstructed, and is reprocessed a few times per data collection period.
 When using =FastSim=, the same reconstruction is used except for the tracker, where a simplified version aims at reducing \ac{CPU} time [[cite:&fastsim]].
 The first processing iteration is called =PromptReco= and occurs within \num{\sim 48} hours of data collection, and a second named =ReReco= follows at the end of the yearly data-taking period.
-During the \acp{LS}, additional reprocessing iterations can be requested, called first Legacy and then Ultra-Legacy.
+During the \acp{LS}, additional reprocessing iterations can be requested, called first Legacy and then \ac{UL}.
 Every new iteration improves on the detector calibration with respect to previous iterations.
 However, analyses usually do not need all the detail provided by the RECO format, which is large ($\sim 3\,\si{\mega\byte}/\text{event}$) and thus inefficient.
 Instead, smaller and less detailed formats are available with progressively less information and reduced precision, focusing on the quantities most analyses use
 The data formats are called AOD, MiniAOD [[cite:&miniaod]] and NanoAOD [[cite:&nanoaod]].
-The \xhhbbtt{} analysis reported in this Thesis used the Ultra-Legacy MiniAOD data format.
+The \xhhbbtt{} analysis reported in this Thesis used the \ac{UL} MiniAOD data format.
 Future iterations of the same analysis in \run{3} will upgrade to NanoAOD, which should provide faster processing times.
 Central processing tools are naturally compatible with the MiniAOD and NanoAOD data formats.
 
