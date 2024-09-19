@@ -6,17 +6,19 @@ The results presented in the previous section used the full \ac{CMS} \run{2} dat
 We here discuss the future of Higgs boson pair production, considering future data-taking periods at the \ac{LHC} and \ac{HL-LHC}.
 
 * Run 3
-At the time of writing, \run{3} has already collected more data than \run{2} ever did, and should reach \SI{\sim 250}{\invfb} until the end of 2025.
-Multiple analyses are being prepared, with \hhbbbb{} studies being quite advanced.
-Concerning the \bbtt{} channel, both nonresonant and resonant searches are being explored, including the \ac{EFT} approach, and should be published within the next few years.
-What is clear is that the luminosity increase will necessarily bring more sensitivity.
-Using the naive luminosity scaling, we would expect an improvement of the order of 30% when doubling the luminosity.
+At the time of writing, \run{3} has already collected more data than \run{2} ever did, and should reach \SI{\sim 250}{\invfb} by the end of 2025.
+Multiple analyses are being prepared.
+Concerning the \bbtt{} channel, both nonresonant and resonant searches are being explored, and should be published within the next few years.
+The sensitivity of HH analyses is expected to increase significantly.
+Firstly, the center-of-mass energy will slightly increase, leading to a HH cross-section increase of \SI{\sim 10}{\percent}.
+Secondly, and most importantly, the luminosity will increase by a factor of \num{\sim 3}.
+Using the naive luminosity scaling, we would expect an improvement of the order of 70%.
 We should however realistically expect larger improvements [[cite:&lumi_scaling]].
-On one hand, the increase in luminosity, besides adding more events in known regions, opens up the way to observables that were not previously available.
+On one hand, the increase in luminosity, besides adding more events in known regions, opens up a way to observables that were not previously available.
 Examples are final state regions with large invariant mass or \ac{pt}.
-New and dedicated reconstruction techniques can thus enhance analysis' sensitivities via signatures which were previously absent.
+On the other hand, new reconstruction techniques have the potential to enhance analyses' sensitivities, as recent years show.
 Furthermore, the data increase often also enables to better control systematic uncertainties.
-This fact is however likely not to be important for HH studies, which will still remain statistically dominated.
+The significance of such a fact will depend on the relative importance of all uncertainties, knowing that HH studies will still remain statistically dominated.
 To recap, we should expect reasonably larger improvements than what the naive scaling may provide, without any modification on current analysis strategies.
 
 On top, one has to consider improvements stemming from improved methods.
@@ -27,7 +29,7 @@ As an example, \ac{PNet} has already been used for energy regression in the cont
 Additionally, based on performance measurements, it is likely that some top or boson tagging with \ac{PNet} will be slowly replaced by updated versions based on the state-of-the-art transformer technology [[cite:&transformer]].
 Needless to say, the impact on HH analyses, including \bbtt{} topologies, is expected to be serious.
 
-Improvements due to novel trigger strategies are also to be expected, delivered both by the new data scouting and parking streams cite:&parking_scouting_run3_cms, and also by the implementation of \ac{PNet} b-tagging directly at \ac{HLT}.
+Improvements due to novel trigger strategies are also to be expected, delivered both by improved data scouting and parking streams cite:&parking_scouting_run3_cms, and also by the implementation of \ac{PNet} b-tagging directly at \ac{HLT}.
 The improved tagger enables to lower \hhbbbb{} and \hhbbtt{} jet \ac{pt} thresholds and $\htvar$ selections.
 Completely new triggers have also been added; for the \bbtt{} analysis we can mention new 4j+2b and 4j+1b+1\tauh{} paths, the latter only from 2024 onward.
 Using a different approach, the introduction of \ac{VBF} and HH parking streams has already been shown to massively impact HH studies (see [[fig:hh_parking_improv]]).
@@ -38,10 +40,8 @@ Further improvements on \bbtt{} topologies are also certainly conceivable.
 There is currently an on-going effort to explore extremely boosted \bbtt{} topologies, considering $\mx$ values of at least \SI{1}{\TeV}.
 Such topologies require significantly different analysis strategies.
 The analysis is dominated by the presence of \ac{MET}, given the large Higgs boson boosts.
-Importantly, the $\tau$ pair is also extremely boosted, and the conventional \ac{HPS} algorithm fails; different tools must thus be developed, being \ac{PNet} a possibility.
+Importantly, the $\tau$ pair is also extremely boosted, and the conventional \ac{HPS} algorithm fails; different tools must thus be developed, \ac{PNet} being a possibility.
 A future combination between the results produced in this Thesis and potential high mass results should improve the limits at large $\mx$ values.
-In the meantime, \run{3} \bbtt{} analyses are already exploring the possible addition of boosted $\tau$ leptons.
-Finally, the results obtained in this Thesis will certainly improve the exclusion limits of a future \ac{CMS} combination at intermediate mass values.
 
 We also draw a quick note on ZZ and ZH processes, since they represent standard candles to validate HH analyses, given their cross sections 31 and 8 times larger than the \ac{SM} cross section, respectively, and their similar decay topologies.
 A recently published resolved \zzzhbbbb{} analysis [[cite:&zz_zh_bbbb]] uses a series of advanced background estimation techniques that might be useful in future HH studies.
@@ -61,29 +61,19 @@ On top of the recent $\kvv=0$ exclusion, and assuming $\kl=1$, we believe nonres
 
 Strong prospects are also envisaged for future resonant HH results.
 We here describe an overview for their projections at the \ac{HL-LHC} [[cite:&interf_studies]].
-The studies, based on the \ac{CMS} full \run{2} resonant HH and YH searches, focus on the most sensitive HH decay channels, namely \bbgg{}, \bbtt{}, and \bbbb{}, as listed in [[tab:hh_res_refs]].
+The studies, based on the \ac{CMS} full \run{2} resonant HH and YH searches, focus on the most sensitive HH decay channels, namely \bbgg{}  [[cite:&higgs_bbgg_hy]], \bbtt{} [[cite:&higgs_bbtautau_hy]], and boosted \bbbb{} [[cite:&higgs_bbbb_hy]].
 Individual channels are statistically combined to take advantage of their complementary sensitivity to different \ac{BSM} phase-space regions. 
 The expected cross section upper limits at \SI{95}{\percent} \ac{CL} are provided as a function of the masses of the \ac{BSM} scalars, $\mx$ and $\my$.
 Where appropriate, the signal cross sections are scaled to the \ac{HL-LHC} \SI{14}{\TeV} center-of-mass energy.
 The efficiency in the reconstruction and identification of photons, leptons, jets and b-jets, as well as the resolution of their energy and momentum measurements, are assumed to remain unchanged with respect to \phase{1}.
 The experimental sensitivity expected at the \ac{HL-LHC} is derived using three systematic uncertainty scenarios, detailed in \newcite{interf_studies}.
-Ordered from the most to the least conservative, they are called "S1", "S2" and "statistical only". 
+Ordered from the most to the least conservative, they are called "S1", "S2" and "statistical only".
+Given constant updates in analyses, it is reasonable to believe the three scenarios are very conservative.
 For the \bbtt{} channel, 95% \ac{CL} cross section upper limits are derived for $\mx$ within \num{300} and \SI{1000}{\GeV}.
 The expected upper limits at 95% \ac{CL} on the \xhhbbtt{} cross section, projected to \SI{3000}{\invfb}, are shown for \bbtt{} channel and for the combination of the three most sensitive HH channels in [[fig:prospects_combination]], for \spin{0}.
 
-#+NAME: tab:hh_res_refs
-#+CAPTION: References for the resonant HH and YH production analyses considered in the combinations discussed in the text and shown in [[fig:prospects_combination]], where results have been projected to \ac{HL-LHC} luminosities.
-#+ATTR_LATEX: :placement [!h] :center t :align c|c :environment mytablewiderrows
-|----------------------+-------------------------|
-| Final state          | Reference               |
-|----------------------+-------------------------|
-| \bbtt{}              | [[cite:&higgs_bbtautau_hy]] |
-| \bbgg{}              | [[cite:&higgs_bbgg_hy]]     |
-| \bbbb{} (merged-jet) | [[cite:&higgs_bbbb_hy]]     |
-|----------------------+-------------------------|
-
 #+NAME: fig:prospects_combination
-#+CAPTION: Expected upper limits at 95% \ac{CL} on the product of the cross section for the production of a \spin{0} resonance X and the branching fraction $\mathcal{B}(\text{X} \rightarrow \text{HH})$, as a function of $\mx$, for an integrated luminosity of \SI{3000}{\invfb}. Shown are the effects of different systematic uncertainty scenarios. (Left) \bbtt{} decay channel [[cite:&higgs_bbtautau_hy]]. (Right) Combination of the three analysis shown in [[tab:hh_res_refs]], including \bbtt{}. Taken from [[cite:&interf_studies]].
+#+CAPTION: Expected upper limits at 95% \ac{CL} on the product of the cross section for the production of a \spin{0} resonance X and the branching fraction $\mathcal{B}(\text{X} \rightarrow \text{HH})$, as a function of $\mx$, for an integrated luminosity of \SI{3000}{\invfb}. Shown are the effects of different systematic uncertainty scenarios. (Left) \bbtt{} decay channel [[cite:&higgs_bbtautau_hy]]. (Right) Combination of the three analyses, including \bbtt{}. Taken from [[cite:&interf_studies]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/analysis2/prospects_bbtt.pdf]]

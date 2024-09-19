@@ -13,14 +13,15 @@ A \ac{pDNN} [[cite:&parameterised_nn]] is exploited in this Thesis, where the pa
 Parameterized learning has already been tested with the \hhbbtt{} topology, and was found to be useful in \newcite{angelas_thesis}.
 Additionally, we have observed that the \ac{pDNN} here developed is more performant than a non-parameterized version with similar architecture and size.
 Despite the performance improvement, the parameterized approach introduces some complexities.
-During the training of the model, covered in [[#sec:training]], the signal events are passed to the network together with their mass and spin values.
+During the training of the model, the signal events are passed to the network together with their mass and spin values.
 For the background, the mass and spin are randomly sampled from all hypothesis being tested.
-During inference, for data and background, the mass and spin features are fixed to one combination, such that the network's scores are given for one specific hypothesis.
-This means that $\text{N}$ predictions must be generated per event.
+During inference, for the signal, a prediction is generated for the sample's mass and spin values.
+Instead, for data and background, the mass and spin are fixed to all possible combinations, such that to each specific hypothesis a score is attributed.
+This equates to generating N predictions per event.
 [[tab:training_inference]] summarizes the approach.
 
 #+NAME: tab:training_inference
-#+CAPTION: Treatment of resonance mass and spin values during training and inference with the \ac{pDNN}. $\text{N}=50$ stands for the number of signal hypotheses, the combination of 25 mass values and 2 spin values. $m$ and $s$ refer to specific mass and spin values, respectively.
+#+CAPTION: Treatment of resonance mass and spin values during the \ac{pDNN} training and inference steps. $\text{N}=50$ stands for the number of signal hypotheses, a combination of 25 mass values and 2 spin values, while $m$ and $s$ refer to specific mass and spin values, respectively.
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{10pt}
@@ -31,8 +32,7 @@ This means that $\text{N}$ predictions must be generated per event.
     \multirow{2}{*}{\textbf{Training}} & Background & Randomly sample $m$ and $s$ from all possible values. \\[+0.3em]
                                        & Signal     & Use the $m$ and $s$ the signal sample was generated with. \\ [+0.3em]\hline \\[-.8em]
 
-    \multirow{4}{*}{\textbf{Inference}} & Data  & Generate a prediction for each event $\text{N}$ times. \\[+0.3em]
-                                        & Background & Generate a prediction for each event $\text{N}$ times. \\[+0.3em]
+    \multirow{4}{*}{\textbf{Inference}} & Data and Background & Generate a prediction for each event $\text{N}$ times. \\[+0.3em]
 
                                         & \multirow{2}{*}{Signal} & Generate a prediction using the $m$ and $s$ \\
                                         &                         &  the signal was made with. \\ [+0.3em]\hline \\[-1em]
@@ -120,7 +120,7 @@ For simplicity, the bin with the lowest \ac{DNN} score is left with less signal 
 It does not affect the final results, since that bin provides no sensitivity.
   
 #+NAME: fig:pdnn_distributions
-#+CAPTION: Distribution of the \ac{pDNN} score for the \eletau{} (top row), \mutau{} (middle row) and \tautau{} (bottom row) channels, in 2018. The three analysis categories are also shown, namely \rescat{1} (left column), \rescat{2} (middle column) and \boostcat{} (right column). The signal distribution is mostly flat, and is scaled for visualization to the product of the \bbtt{} \ac{BR} with the expected limits shown in [[#sec:final_limits]]. The plots are partially unblinded, for all background dominated bins lying below 0.8. Details are provided in the text.
+#+CAPTION: Distribution of the \ac{pDNN} score for the \eletau{} (top row), \mutau{} (middle row) and \tautau{} (bottom row) channels, in 2018. The three columns refer to the \rescat{1} (left), \rescat{2} (middle) and \boostcat{} (right) categories. The signal distribution is mostly flat, and is scaled for visualization to the product of the \bbtt{} \ac{BR} with the expected limits shown in [[#sec:final_limits]]. The plots are partially unblinded (see [[#sec:exp_vs_obs]]), for all background dominated bins with a \ac{pDNN} score below 0.8. Details are provided in the text. Minor backgrounds are grouped together as "others". The shaded gray bars represent the statistical uncertainty of the background samples. The statistical uncertainties of the data are shown as black vertical error bars.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .325\textwidth :center

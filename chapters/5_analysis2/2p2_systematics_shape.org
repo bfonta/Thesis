@@ -2,45 +2,30 @@
 :CUSTOM_ID: sec:syst_shape
 :END:
 
-For many systematic variations, it is not possible to guarantee /a priori/ that the shape of their distributions will not be affected.
-On the contrary, the existence of significant shape dependencies is often observed.
-Whenever such correlations are found, the full binned shape is taken into account for the systematic uncertainties.
+Significant shape dependencies might exist between the final discriminant and some of the variables for which uncertainties are defined.
+Whenever such correlations exist, a single normalization factor is not sufficient, and the full binned shape is taken into account.
 The evaluation of a single uncertainty is achieved by shifting its template up and down, \ie{} by estimating an upward or downward variation for what can be reasonably expected to cover the most common values.
 For continuous variables, this can for instance correspond to \SI{1}{\sigma} intervals around the nominal value.
-Objects depending on those variations must also be accordingly shifted.
-For instance, when \tauhs{} are shifted due to \ac{JES} or \ac{JER} corrections, the \ac{MET} in the event must also take the energy shifts into account.
+The kinematic properties of objects depending on those variations must also be accordingly shifted.
+For instance, when the energies of \tauhs{} are shifted due to \ac{JES} or \ac{JER} corrections, the \ac{MET} in the event must also take the changes in energy into account.
 
 Concerning the final discriminant, all input features must also be shifted up and down, independently for each systematic source, leading to numerous \ac{pDNN} evaluations.
 If the same systematic source shifts multiple distributions, those variations are considered together during the \ac{pDNN} inference, leading to a single up or down template.
 For example, when shifting the energy scale of resolved jets, we shift the energy of the two AK4 jets together, and also propagate the shift to the \ac{MET}.
 In the following, we provide a list of all shape systematics considered in the \xhhbbtt{} analysis.
-#
+
 + *L1 prefiring*:
-  The prefiring issue described in [[#sec:mc_corrections]] is addressed via two independent sets of shape uncertanties, for the \ac{ECAL} and Muon Chambers.
+  The prefiring issue described in [[#sec:mc_corrections]] is addressed via two independent shape uncertainties, for the \ac{ECAL} and Muon Chambers.
   The \ac{ECAL} uncertainty contains a fixed 20% contribution, to which one adds in quadrature a statistical uncertainty dependent on \ac{eta} and \ac{pt}.
   The uncertainty of the Muon Chambers is very similarly defined, but its statistical component also includes a dependence on \ac{phi}.
   While the \ac{ECAL} prefiring uncertainty is applied to 2016 and 2017 \ac{MC} simulations only, the muon one is applied to all years.
-#
+
 + *Pileup reweighting uncertainty*:
-  The per-event \ac{PU} distribution follows a Poisson distribution with the average at its expected value $\langle\mu\rangle$, according to [[eq:pileup]]
-  The inelastic \ac{pp} cross section value is $69.2\,\si{\milli\barn}$ for \run{2}.
-  Given the \SI{\sim 30}{\percent} inefficiencies present in the \ac{CMS} vertex reconstruction, $\langle\mu\rangle$ does not necessarily agree with the number of reconstructed \acp{PV} in each event, as shown in [[fig:vertex_discrepancies]].
   The systematic uncertainty on the \ac{PU} reweighting technique is estimated by applying up and down variations on the \ac{PU} weights.
-  The variations correspond to using an inelastic \ac{pp} cross section shifted by 4.6%, leading to $66\,\si{\milli\barn}$ for the downward variation and to $72.4\,\si{\milli\barn}$ for the upward variation.
+  The variations correspond to using an inelastic \ac{pp} cross section shifted by 4.6%, leading to $66\,\si{\milli\barn}$ for the downward variation and to $72.4\,\si{\milli\barn}$ for the upward variation, compared to the nominal cross section value of $69.2\,\si{\milli\barn}$, for \run{2}.
   We recall that \ac{PU} variations are additionally used to correct the normalization used to weight \ac{MC} samples.
-#
-#+NAME: fig:vertex_discrepancies
-#+CAPTION: Comparison between data and \ac{MC} for the number of \acp{PV}, using 2017 \ac{UL} conditions. The \ac{PV} multiplicity is very sensitive to \ac{PU}. Produced in the context of \newcite{analysis_pu_reweighting}, featuring \zmumu{} events. Courtesy of Pedro Silva.
-#+BEGIN_figure
-\centering
-#+ATTR_LATEX: :width .5\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis2/nvtx_mm_log.pdf]]
-# #+ATTR_LATEX: :width .45\textwidth :center
-# [[~/org/PhD/Thesis/figures/analysis2/rho_mm.png]]
-#+END_figure
-#
+
 + *Energy scale of hadronic tau leptons*:
-  The uncertainty on the energy measurement of \tauhs{} can lead to a change in the distribution of the variables used to search for a \ac{BSM} signature.
   The uncertainties are derived by combining two different measurements: the low and high-$\pt$ measurements of \ztt{} and off-shell $\text{q}\bar{\text{q}} \rightarrow \text{W}^{*} \rightarrow \tau\nu$ events[fn:: The $\text{q}\bar{\text{q}} \rightarrow \text{W}^{*} \rightarrow \tau\nu$ process produces high-\ac{pt} \taus{} via highly virtual W bosons with little hadronic activity.], respectively.
   The following \ac{pt}-binned scheme is applied:
   + $\pt(\tau) \leq 34\,\si{\GeV}$: from the low-$\pt$ measurement;
@@ -50,15 +35,10 @@ In the following, we provide a list of all shape systematics considered in the \
 
   Four different uncertainties are provided by the Tau \ac{POG} to take into account the different $\tau$ decay modes in this analysis.
   When considering the uncertainty for a particular decay mode, the shift is applied only to the truth-matched \tauh{} candidates that are reconstructed with that particular decay mode; all other \tauh{} candidates are left unchanged.
-  The uncertainty sources are considered to be decorrelated between data-taking years and tau decay modes or \tauh{} \ac{pt} ranges.
-#
-+ *Energy corrections for prompt electrons*:
-  The energy of prompt electrons in data does not match what the simulations provide.
-  This is addressed by shifting the energy scale of the data to match the \ac{MC} scale, and to smear the \ac{MC} electron resolution to match the resolution in data, as centrally recommended.
-  This corrections are applied before any selection stage in the analysis.
-  Corrections are only applied to genuine electrons reconstructed as such.
+  The uncertainty sources are considered to be decorrelated between data-taking years and tau decay modes.
 
-  A set of uncertainties is associated to the corrections being applied, as a change in electron energy can affect the final result in several ways.
++ *Energy corrections for prompt electrons*:
+  A set of uncertainties is associated to the electron energy corrections, as a change in electron energy can affect the final result in several ways.
   Some events with electrons can for instance be excluded if they were previously part of the analysis, or vice-versa, based on some kinematic cut.
   The energy scaling and smearing are considered separately, leading to four variations in total.
   In practice, the energy of the electrons are corrected by applying the variations on the original, uncorrected electron four-momenta.
@@ -67,10 +47,9 @@ In the following, we provide a list of all shape systematics considered in the \
 
   Equivalent shape uncertainties for muons are known to be negligible and are not implemented.
   If they were included, they would be structured in the same way as described for electrons.
-#
+
 + *Energy scale corrections for electrons and muons faking taus*:
-  The \ac{HPS} algorithm identifies hadronically decaying \taus{}.
-  Occasionally, both electrons and muons are misidentified as \tauhs{}.
+  Occasionally, electrons and muons are misidentified as \tauhs{}.
   For electrons, this might happen when there is one charged hadron and zero or none neutral hadrons.
   When only one charged hadron is present, with a \ac{BR} of 11.5%, the electron can be misidentified as the charged hadron.
   When a neutral hadron is additionally present, with a \ac{BR} of 26.0%, the fake electron can be wrongly reconstructed with additional bremsstrahlung photons.
@@ -80,7 +59,7 @@ In the following, we provide a list of all shape systematics considered in the \
   They are treated as uncorrelated across different decay modes and data-taking years.
   They depend on the two decay modes mentioned above, and are only applied to truth-matched electrons and muons.
   The muon energy scales were added for completeness only, as the recommended approach is to simply assign a 1% flat uncertainty.
-#
+
 + *Jet energy scales and resolutions*:
   For the \acp{JES}, a reduced set of 11 sources is used, as recommended.
   The sources take into consideration dependence effects on \ac{ISR}, \ac{FSR}, jet flavour, kinematics, detector regions and miscalibrations.
@@ -89,7 +68,7 @@ In the following, we provide a list of all shape systematics considered in the \
   This is repeated 11 times, leading to 22 variation templates.
   Concerning the \acp{JER}, up and down variations are centrally provided for all jets, taking into account their clustering radii (AK4 or AK8).
   The corrections are then applied before performing any selection on the jets and \ac{MET}.
-#
+
 + *Scale factors for $\tau$ identification*:
   The uncertainties arising from the application of the =DeepTau= tau lepton \ac{ID} \acp{SF} do not modify single objects, but rather the overall event weight.
   All \acp{SF} are centrally provided.
@@ -105,7 +84,7 @@ In the following, we provide a list of all shape systematics considered in the \
     Two different uncertainties are identified per data-taking period, one for the \ac{CMS} barrel and one for the endcaps.
   + *Discrimination against muons*:
     The uncertainties are provided in five $|\eta|$ bins, but are found to be negligible, and are thus not considered.
-#
+
 + *Trigger scale factors*:
   The uncertainties arising from the application of the trigger \acp{SF} do not modify single objects, but only the overall weight of each event.
   + *Legacy triggers*:
@@ -113,22 +92,21 @@ In the following, we provide a list of all shape systematics considered in the \
     Two more trigger uncertainties are used to cover the lepton legs in the \eletau{} and \mutau{} channels.
   + *MET trigger*:
     $\metnomu$ \acp{SF} are extracted from the fitted parameters of the sigmoid function in [[eq:sigmoid]], and propagated using the error propagation of a ratio.
-    The maximum and minimum allowed values of the sigmoid functions are used whenever the event has a $\metnomu$ value beyond the fit validity range.
-    This can only happen for $\metnomu > 350\,\si{\GeV}$, since values below the minimum \ac{MET} threshold are removed when defining the \ac{MET} trigger region in [[#sec:trigger_regions]].
+    The maximum allowed value of the sigmoid function is used whenever the event has a $\metnomu$ value beyond the fit validity range.
   + *Single tau trigger*:
     For the single-$\tau$ trigger, we use as uncertainties the ones listed in [[tab:singleTauSFs]], which are centrally provided.
-#
+
 + *B-tagging scale factors*:
   Uncertainties on \btag{} \acp{SF} are centrally provided.
   The impact on the purity of b-jets is estimated by varying the contamination from light + c jets and b + c jets in heavy and light flavor regions, respectively, by $\pm 20\%$.
   Multiple statistical uncertainties are also taken into account.
   In total, 8 systematic uncertainties are considered, per data-taking period.
-  These uncertainty does not modify single objects, but rather the overall event weight.
-#
+  These uncertainties do not modify single objects, but rather the overall event weight.
+
 + *Pile-up jet identification*:
   Uncertainties on the \ac{PU} jet identification \acp{SF} are centrally provided as a function of jet \ac{pt} and \ac{eta}, being applied on an event-by-event base.
   This uncertainty does not modify the single objects, but only the overall event weights.
-#
+
 + *Monte Carlo finite sample size*:
   The limited number of simulated events in the bins of the discriminant distributions in the final fit also carry an uncertainty, independent for each bin.
   The Barlow-Beeston approach [[cite:&barlow-beeston]] is used to take such uncertainties into account, introducing a set of nuisance parameters which multiply the expected number of events in each bin, for each background source.

@@ -6,14 +6,13 @@ All systematic uncertainties should be assumed to have an impact on the shape of
 However, if for a specific systematic source it is verified that shape modifications are negligible when compared to the expected sensitivity of the analysis, downgrading an uncertainty to be normalization-only has two important advantages.
 The first relates to the much lower analysis complexity involved.
 For each additional shape systematic, an extra set of variables representing the corresponding variations must be computed, processed and stored.
-This is also valid for the inference step of the final discriminant, as long as the distributions being varied are a \ac{pDNN} input.
-In that case, one must assess how much changes in the input affect the discriminant output, for each mass point and spin hypothesis.
+This is also valid for the inference step of the final discriminant, as long as the distributions being varied are used as a \ac{pDNN} input.
+In that case, one must assess how much the input's changes affect the discriminant output, for each mass point and spin hypothesis.
 The second advantage comes from the time taken to run the binned maximum likelihood fit.
-A shape systematic is naturally more time-consuming, given that the binned distributions include more parameters than one single rate.
+A shape systematic is naturally more time-consuming, given that the binned distributions include more parameters than one single rate parameter.
 
-In this Section we list the normalization uncertainties used by our analysis to describe systematic variations.
-They affect the number of expected events associated to a given physics process.
 The specific uncertainties are often centrally recommended, or are instead devised by the analysts themselves, and then approved by the Collaboration during the many review steps the work is subject to.
+We list them in what follows:
 
 + *Luminosity*:
   The uncertainty on the luminosity measurement is estimated by the \ac{CMS} Lumi \ac{POG}.
@@ -26,25 +25,25 @@ The specific uncertainties are often centrally recommended, or are instead devis
   #+CAPTION: Luminosity uncertainties for all data-taking years, in percentage, explicitly separating correlated and uncorrelated sources. The uncertainties are centrally recommended by the \ac{CMS} Collaboration, and are used by all physics analyses.
   #+ATTR_LATEX: :placement [!h] :center t :align lccc :environment mytablewiderrows
   |----------------------------+------+------+------|
-  | Uncertainty                | 2016 | 2017 | 2018 |
+  | *Uncertainty [%]*            | *2016* | *2017* | *2018* |
   |----------------------------+------+------+------|
   | 2016, uncorrelated         |  1.0 |  0.0 |  0.0 |
   | 2017, uncorrelated         |  0.0 |  2.0 |  0.0 |
   | 2018, uncorrelated         |  0.0 |  0.0 |  1.5 |
   |----------------------------+------+------+------|
-  | 2017,2018, correlated      |  0.6 |  0.9 |  2.0 |
-  | 2016,2017,2018, correlated |  0.0 |  0.6 |  0.2 |
+  | 2017-2018, correlated      |  0.6 |  0.9 |  2.0 |
+  | 2016-2017-2018, correlated |  0.0 |  0.6 |  0.2 |
   |----------------------------+------+------+------|
 
-+ *Electron and muon isolation and identificaton efficiencies*:
++ *Electron and muon isolation and identification efficiencies*:
   The uncertainties on electron and muon \ac{ID} and isolation efficiencies are determined from the uncertainties on the \acp{SF} describing data/\ac{MC} discrepancies.
   A value of 1% for both electrons and muons is obtained.
 
 + *QCD estimation uncertainty*:
   The \ac{QCD} background, which is estimated from data using the ABCD method, can be affected by different sources of systematics.
-  Assuming that the contribution of the \ac{QCD} background is constant in all 4 regions, one can define three uncertainties sources:
+  We define three uncertainty sources:
   + *Shape*:
-    Since the shape of the \ac{QCD} contribution can be estimated from two regions, B and C, a shape uncertainty can be obtained by comparing the shapes issued from the two choices.
+    Since the shape of the \ac{QCD} contribution can be estimated from two regions, B and C, a normalization uncertainty can be obtained by comparing the two shapes.
   + *Yield correction factor*:
     The statistical uncertainty on the B/D and C/D correction factors is defined as the sum in quadrature of the statistical uncertainties on the event yields in the concerned regions.
     The value of this uncertainty ranges from 5% to 100% depending on the category, channel and year considered.

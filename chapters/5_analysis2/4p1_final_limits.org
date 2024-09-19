@@ -31,14 +31,14 @@ We recall that one of the goals of the analysis is to assess the tension observe
 #+END_figure
 
 At larger masses, the topology of the event becomes extremely boosted, both for b quarks and tau leptons.
-Our analysis uses the \ac{HPS} algorithm to reconstruct the tau leptons, and such algorithm is unable to reconstruct boosted taus.
+\Ac{HPS} is not optimized to reconstruct boosted tau leptons.
 This leads to the loss of many events.
 The effect becomes progressively worse, as more and more tau leptons merge into a single boosted object.
 This issue can be addressed by using dedicated $\tau$ reconstruction algorithms at high $\mx$.
 Such analysis improvement lies outside the scope of this Thesis, since a different \ac{CMS} analysis is currently looking at such topologies, following the work performed in \newcite{high_mass_bbtt}.
 
 At lower $\mx$, we observe two effects.
-Firstly, the notorious sensitivity drop is due to the increasing presence of the sum of all backgrounds.
+Firstly, the sensitivity decrease is due to the increasing presence of the sum of all backgrounds.
 Secondly, the peak at \SI{\sim 280}{\GeV} is a consequence of the $\ttbar$ background shape, which features a peak at that location.
 The same overall trends were present in the previous iteration of the resonant analysis [[cite:&cms_hh_bbtt]].
 
@@ -47,8 +47,8 @@ Assuming the standard naive $s/\sqrt{b}$ scaling, where the number of signal eve
 For upper limits on the cross section of interest, in the absence of a signal, the scaling will be inversely proportional to the statistical uncertainty of the background.
 Upper limits are thus expected to scale with $1/\sqrt{L}$.
 The \run{2} luminosities were measured to be \SI{16.8}{\invfb} for 2016, \SI{19.5}{\invfb} for 2016 APV, \SI{41.5}{\invfb} for 2017 and \SI{59.8}{\invfb} for 2018.
-The analysis strategy is identical for different periods, and the selections are quite similar, modulo some differences for specific thresholds and triggers.
-A $1/\sqrt{L}$ scaling indeed matches the differences between results from different periods.
+The analysis strategy is identical for different periods, but some exception exist for specific thresholds and triggers.
+The differences between results from different periods roughly follows a $1/\sqrt{L}$ scaling, but some fluctuations are present.
 
 The robustness of the statistical approach must be verified.
 Analysis usually monitor the impact that nuisance parameters have on the results with the calculation of /pulls/ and /impacts/.

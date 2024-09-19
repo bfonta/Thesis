@@ -3,10 +3,10 @@
 :END:
 
 The statistical treatment is centered around the usage of a (hopefully discriminant) test statistic, ultimately defining how much sensitive analyses become.
-A potentially minor adjustement in the analysis' selection, or a slight change in the training of the final discriminant, for instance, might very well modify the test statistic, and thus affect the final upper limits.
+A potentially minor adjustment in the analysis' selection, or a slight change in the training of the final discriminant, for instance, might very well modify the test statistic, and thus affect the final upper limits.
 What would happen if one would compute limits over and over again, each time iterating on the analysis strategy to obtain tighter limits?
 The final result would become biased, since decisions would be made given the final results.
-This might in turn lead to the appearance of spurious excesses, like the $\gamma\gamma$ bump seen in 2015 at \SI{750}{\GeV}.
+This might in turn lead to the appearance of spurious excesses.
 Instead, \ac{HEP} analyses start /blinded/: the data in the \ac{SR} is not looked at until the analysis strategy has been considered stable.
 Data in \acp{CR} can be used, together with \ac{MC} samples.
 
@@ -22,7 +22,7 @@ The data thus derived can be used to define an "Asimov likelihood" $L_{\text{A}}
 \noindent where $\mu^{\prime}$ and $\theta^{\prime}$ represent the expected values of the \ac{POI} and nuisances.
 Once all possible issues in the analysis have been addressed and understood, the /unblinding/ step can proceed, in which the maximum likelihood fit provides the /observed/ result.
 
-Given the timeline of our analysis, in the next Section we present expected \xhhbbtt{} upper limits.
+Given the timeline of our analysis, we present expected \xhhbbtt{} upper limits in the next Section.
 The current publication plan has been defined so that the unblinded analysis can be presented at the "59\textsuperscript{th} Rencontres de Moriond" conference, which takes places in March 2025.
 
 

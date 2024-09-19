@@ -6,7 +6,7 @@ We perform a comparison of the \run{2} \spin{0} results obtained in the previous
 The expected upper limits are shown in [[fig:result_comparison]] (top).
 The limits from \ac{ATLAS} were published in \newcite{atlas_bbtt_res}, where a small tension is observed at $\mx\sim 1\,\si{\TeV}$, with a local (global) significance of \SI{3.1}{\sigma} (\SI{2.0}{\sigma}).
 The \ac{CMS} result comes instead from a \xyh{} analysis [[cite:&higgs_bbtautau_hy]], where $\my=\mh\,\si{\GeV}$ was not considered.
-We thus compare our result to their $\my=120\,\si{\GeV}$ limit, which was shown to be compatible with their $\my=130\,\si{\GeV}$ result.
+We thus compare our result to their $\my=120\,\si{\GeV}$ limit, which was shown to be comparable to their $\my=130\,\si{\GeV}$ result.
 This same analysis was made part of the combination results presented in [[#sec:direct_searches]].
 The results are available in numerical format in [[#sec:app_table_limits]].
 
@@ -27,7 +27,7 @@ In particular, we are almost a factor of 2 more sensitive at \SI{1}{\TeV}, and c
 
 It is also extremely relevant to compare our result with the current best \ac{CMS} combination of resonant HH analyses.
 We show such comparison in [[fig:result_comparison]] (bottom).
-Given the results, we expect our analysis to drive the \ac{CMS} HH sensitivity in the $450 \leq \mx \leq 800 \,\si{\GeV}$ range. 
+Given the results, we expect our analysis to drive the \ac{CMS} HH sensitivity in the $450 \leq \mx \lesssim 800 \,\si{\GeV}$ range. 
 
 We start by quantifying the sensitivity improvement within \ac{CMS} over the years.
 Comparing the full \run{2} luminosity with the luminosity used by \newcite{cms_hh_bbtt}, which used 2016 data only, our analysis has access to \num{\sim 4} times more data, which would naively correspond to an improvement of a factor of \num{\sim 2}.

@@ -7,7 +7,7 @@ This process is called /statistical inference/, or just inference for short [[ci
 The parameters one wishes to access can be categorized in two classes:
 + *Parameters of Interest*:
   Representing the end goal of the experiments, \acp{POI} define the underlying probability distributions analyses wish to measure.
-  In our case, we want to know whether the observed data can be described by the \spin{0} or \spin{2} models, on top of the expected background.
+  In our case, we want to know whether the observed data can be described by our signal models, on top of the expected background.
   This corresponds to the definition of a single \ac{POI} which scales the signal, the /signal strength modifier/ $\mu \equiv \sigma_{\text{obs.}}/\sigma_{\text{signal}}$.
   The signal is normalized to an arbitrary value, $\sigma\times\mathcal{B}=1\,\si{\pico\barn}$ in our case.
   Measuring $\mu \ne 0$ would indicate the presence of a \ac{BSM} signal.
@@ -20,32 +20,7 @@ The parameters one wishes to access can be categorized in two classes:
   The integration of nuisances on the final result is also done with a dedicated statistical treatment based on the maximum likelihood approach.
   
 Uncertainties related to the \acp{POI} caused by data fluctuations alone are denoted /statistical uncertainties/.
-Instead, the propagation of the imperfect knowledge of the analysis' nuisance parameters leads to /systematic uncertainties/.
+Instead, the propagation of the imperfect knowledge of all the elements of an analysis to the final result corresponds to /systematic uncertainties/, which are encoded via nuisances.
 The careful measurement of systematics plays a central role in any physics analysis, since systematics can dramatically affect the sensitivity of the result.
-In this section, we list the many sources of systematic uncertainties considered in our analysis, and which are included in the limit extraction.
+In this section, we list the many sources of systematics considered.
 Systematic uncertainties affecting only the yield of a given signal or background process are detailed in [[#sec:syst_norm]], and systematics also affecting the shape of the final discriminating variable are listed in [[#sec:syst_shape]].
-For convenience, they are listed in [[tab:summary_systs]].
-
-#+NAME: tab:summary_systs
-#+CAPTION: Summary of all normalization and shape systematic uncertainties considered in this work, described in [[#sec:syst_norm]] and [[#sec:syst_shape]]. respectively.
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{10pt}
-\begin{tabular}{cl}
-    \hline \\[-1em]
-    \textbf{Uncertainty Type} & \textbf{Uncertainty List} \\ [+0.3em]\hline \\[-.8em]
-
-    \multirow{3}{*}{\textbf{Normalization}} & Luminosity, electron and muon isolation and \ac{ID} efficiencies, \\
-                                            & QCD estimation uncertainty, final state \acp{BR}, \\
-                                            & cross sections of simulated processes \\[+0.3em]\hline \\[-.8em]
-
-    \multirow{5}{*}{\textbf{Shape}} & L1 prefiring, \ac{PU} reweighting uncertainty, \tauh{} energy scale, \\
-                                    & energy \acp{SF} for prompt electrons, energy \acp{SF} for $e/\mu \rightarrow \tau$ fakes, \\
-                                    & jet energy scales and resolutions, \acp{SF} for tau \ac{ID}, \\
-                                    & trigger \acp{SF}, b-tagging \acp{SF}, \ac{PU} jet \ac{ID}, \\
-                                    & \ac{MC} finite sample size \\[+0.3em]\hline \\[-.8em]
-
-
-\end{tabular}
-\end{table}
-

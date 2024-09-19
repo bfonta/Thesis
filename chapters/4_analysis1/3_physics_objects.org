@@ -79,6 +79,7 @@ A correction factor is applied to the \ac{MC} to take into account differences w
 These factors are derived from \zee{} events, also selected with a Tag & Probe technique.
 
 # scaling and smearing
+The energy of prompt electrons in data does not match what the simulations provide.
 Energy scaling and smearing corrections are applied to genuine electrons, following the recommendations of the E/Gamma \ac{POG}.
 The correction is applied to \ac{MC} using a variable which represents the combined \ac{ECAL} and tracker electron energy after applying scale and smearing corrections.
 The corrections are taken into account both in the selection of genuine electrons and in their veto.
