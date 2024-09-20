@@ -75,15 +75,15 @@ Further studies will be possible on the rare $t\bar{t}t\bar{t}$ production, desp
 $t\bar{t}t\bar{t}$ can be used to constrain some of the Wilson coefficients associated to \ac{EFT} dimension-6 operators, to further study the top Yukawa coupling constrain, including its magnitude and \ac{CP} properties, since it can occur via the mediation of a Higgs boson [[cite:&tttt]], and even to assess the presence of the non-\ac{SM} top quark dipole moment.
 
 * Forward Physics
-Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the \ac{AFP} [[cite:&afp_tdr]] are extended in the \ac{HL-LHC} phase, \ac{CEP} $pp \rightarrow p\,(\gamma\gamma\rightarrow \text{X})\,p$ phenomena, among which light-by-light scattering ($\text{X} = \gamma\gamma$), will be further explored \ac{CEP}.
-Other processes include, for instance, $\text{X} = \mu\mu,\,\tau\tau,\,Z,\,H,\,WW,\,ZZ$, and enable the study of anomalous gauge couplings and the magnetic moment of the $\tau$, among other studies [[cite:&ctpps_varela;&ctpps_pitt]].
+Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the \ac{AFP} [[cite:&afp_tdr]] are extended in the \ac{HL-LHC} phase, \ac{CEP} $\text{pp}\,{\rightarrow}\,p\,(\gamma\gamma\,{\rightarrow}\,\text{X})\,\text{p}$ phenomena, among which light-by-light scattering ($\text{X} = \gamma\gamma$), will be further explored \ac{CEP}.
+Other processes include, for instance, $\text{X} = \mu\mu,\,\tau\tau,\,\text{Z},\,\text{H},\,\text{WW},\,\text{ZZ}$, and enable the study of anomalous gauge couplings and the magnetic moment of the $\tau$, among other studies [[cite:&ctpps_varela;&ctpps_pitt]].
 \ac{CEP} processes carry particular interest since they bring production of charged particles initiated only by photons, into what amounts to using the \ac{LHC} as a $\gamma\gamma$ collider.
 In parallel, a whole plethora of \ac{QCD}-related measurements can be performed in \acp{CEP}.
 The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross sections, increasing their discovery potential.
 
 * Higgs Physics
 #+NAME: fig:hh_nonres_projections
-#+CAPTION: Evolution of the expected and observed upper limits on the HH production cross section. The figure compares results from early \ac{LHC} \run{2} data (\SI{35.9}{\invfb}) with full \ac{LHC} \run{2} data (\SI{138}{\invfb}), and \ac{HL-LHC} projections (\SI{3000}{\invfb}). At the end of the \ac{HL-LHC} it should be possible to challenge the \ac{SM} prediction (red line) with the result of the analysis of multiple final states, possibly in combination with \ac{ATLAS}. Taken from [[cite:&higgs_10_years]].
+#+CAPTION: Evolution of the expected and observed 95% \ac{CL} upper limits on the HH production cross section, with the \ac{CMS} detector. The figure compares results from early \ac{LHC} \run{2} data (\SI{35.9}{\invfb}) with full \ac{LHC} \run{2} data (\SI{138}{\invfb}), and \ac{HL-LHC} projections (\SI{3000}{\invfb}). At the end of the \ac{HL-LHC} it should be possible to challenge the \ac{SM} prediction (red line) with the result of the analysis of multiple final states, possibly in combination with \ac{ATLAS}. Taken from [[cite:&higgs_10_years]].
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .6\textwidth
@@ -92,7 +92,7 @@ The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross se
 
 The Higgs boson programme will remain at the forefront of \ac{CMS} research, with the \num{150} million Higgs bosons and \num{120} thousand Higgs boson pairs expected to be produced at the end of the \ac{HL-LHC} phase.
 The precision of the Higgs couplings will improve by a factor of \num{\sim 4}, with most couplings measured to a \SI{2}{\percent} precision.
-After the expected observation of $H \rightarrow \mu\mu$ already at \run{3}, the $H \rightarrow Z\gamma$ channel will share the same fate during \phase{2} [[cite:&higgs_10_years]], despite its uncertainty remaining statistically driven.
+After the expected observation of \hmumu{} already at \run{3}, the \hzg{} channel will share the same fate during \phase{2} [[cite:&higgs_10_years]], despite its uncertainty remaining statistically driven.
 However, the long-awaited flagship measurement of \ac{HL-LHC} concerns di-Higgs production.
 Indeed, current projections (see ref:fig:hh_nonres_projections) suggest that the combined analysis of multiple final states and experiments might challenge the \ac{SM} prediction of the Higgs boson self-coupling.
 Comparing \run{2} results with current full \run{2} upper cross section limits, we see that an improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.

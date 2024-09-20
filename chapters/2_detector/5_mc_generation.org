@@ -99,7 +99,7 @@ We should expect some developments along the directions of a precision increase 
 * Activities as Monte Carlo contact
 I started my currently on-going activities as \ac{CMS} ttH+HH \ac{MC} contact on June 2023, as part of the Higgs \ac{MC} group.
 During this time I generated more than \num{1000} samples, covering mostly nonresonant HH \run{3} \ac{MC} requests, for 2022 and 2023, and contributed to the common Higgs \ac{MC} software tools.
-The requests cover the vast majority of HH samples that will be used for \run{3} nonresonant HH analyses, including \ac{ggF}, \ac{VBF} and \ac{BSM} samples with $\kl \ne 1$, for \num{\sim 15} final states.
+The requests cover the vast majority of HH samples that will be used for \run{3} nonresonant HH analyses, including \ac{ggF}, \ac{VBF} and \ac{BSM} samples, for \num{\sim 15} final states.
 Besides sample generation, the contact position also requires following requests closely, request submission priority updates, and serve as an intermediary between users, who request the samples, and overall \ac{MC} contacts and \ac{CMS} Higgs conveners, who approve requests and priority changes.
 
 

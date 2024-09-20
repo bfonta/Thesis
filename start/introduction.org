@@ -1,3 +1,5 @@
+
+
 More than ten years have passed since the observation of the Higgs boson by the CMS and ATLAS Collaborations at the CERN Large Hadron Collider (LHC).
 What seemed the first of a series of discoveries bound to reshape the field of Particle Physics, surprisingly turned into an impressive statement of the solid foundations upon which the Standard Model (SM) of Particle Physics is built.
 Despite its success, the SM cannot be the ultimate answer to all mysteries the Universe still conceals; multiple theoretical issues and cosmological observations show otherwise.
@@ -6,6 +8,31 @@ The work reported in this Thesis provides a contribution to the search for signs
 the bbtt channel has historically provided the best performances, being one of the three "silver bullets" of double Higgs boson physics.
 
 
+# interferences
+a novel study on interference effects by BSM particles on the continuous HH background is presented.
+The study is framed in the context of the singlet model,
 
 
-The Thesis begins with a description
+
+- SM, BSM
++ LHC, CMS
+
++ hgcal: published proceedings [[cite:&bruno_chep23]] and citable software presentation at PyHEP [[cite:&bruno_pyhep23]], software being used by multiple students
++ conference talk on SMEFT [[cite:&bruno_smeft_fits]]
++ physics analysis to be made public by Moriond 2025; proceedings accepted for publication at Proceedings of Science "Di-Higgs searches at CMS" [[cite:&bruno_dihiggs_grenoble]]
++ review paper accepted for publication at Physics Reports, first CMS study ever with interference effects "Searches for Higgs boson production through decays of heavy resonances" [[cite:&interf_studies]]
+  
+
+# Summary
+[[#sec:intro_intro]] begins with a portray of the theoretical, phenomenological and experimental landscape surrounding Higgs boson physics.
+The underlying fundamentals of the SM are provided, together with its noticeable shortcomings, unambiguosly stating the clear motivations to pursue studies on the Higgs boson, and especially on processes involving Higgs boson pairs.
+I also contextualize the resonant \bbtt{} channel with the profusion of both single and double Higgs boson phenomena which have been measured since the discovery of the Higgs boson took place, 12 years ago.
+These discoveries would not have been possible without the CMS detector at the LHC, presented in [[#sec:cern]].
+Besides the detector itself, I provide a succinct description of its trigger system and offline reconstruction, giving special emphasis on the Particle Flow algorithm, so that every physics object used throughout the Thesis is well defined.
+The processing of data and \ac{MC} samples within the \ac{CMS} software is also covered.
+[[#sec:intro_tps]] contains my first original contribution, connected to the HL-LHC and the new HGCAL that CMS will exploit.
+There, contributions to the reconstruction of Trigger Primitives in the L1 trigger of CMS are described in great detail.
+The analysis of \ac{CMS} datasets is then depicted, specifically the search for resonant HH production in the \bbtt{} channel.
+I detail the analysis' triggering, selection and correction steps in [[#sec:analysis1_intro]], and proceed to obtain the results in [[#sec:analysis2_intro]], where a description of the final discriminant, systematic uncertainties and statistical methodology is included, and where future prospects are delineated.
+The Thesis concludes in [[#sec:interf_intro]], where the study on interference effects is presented.
+There, we can deduce the unfolding of a paradigm shift regarding Higgs boson resonant searches.

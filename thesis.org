@@ -27,7 +27,7 @@
 #+INCLUDE: "start/summary_fr.org"
 
 
-* Acknowledgements
+* Acknowledgments
 :PROPERTIES:
 :UNNUMBERED: t
 :END:
@@ -81,7 +81,7 @@
 #+INCLUDE: "chapters/1_intro/4p1_direct_searches.org"
 *** Indirect Searches
 #+INCLUDE: "chapters/1_intro/4p2_indirect_searches.org"
-*** Combining Direct with Indirect Dearches
+*** Combining Direct with Indirect Searches
 #+INCLUDE: "chapters/1_intro/4p3_combinations.org"
 
 
@@ -153,7 +153,7 @@
 #+INCLUDE: "chapters/4_analysis1/4_selection.org"
 ** Mass Regression of the Tau Lepton Pair
 #+INCLUDE: "chapters/4_analysis1/5_tautau_regression.org"
-** Modelling of Background Processes
+** Modeling of Background Processes
 #+INCLUDE: "chapters/4_analysis1/6_backgrounds.org"
 ** Monte Carlo Corrections
 #+INCLUDE: "chapters/4_analysis1/7_mc_corrections.org"

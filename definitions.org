@@ -71,6 +71,7 @@
 #+LATEX_HEADER: \newcommand{\hbb}{$\mathrm{H}\,{\rightarrow}\,\mathrm{bb}$}
 #+LATEX_HEADER: \newcommand{\hcc}{$\mathrm{H}\,{\rightarrow}\,\mathrm{cc}$}
 #+LATEX_HEADER: \newcommand{\hgg}{$\mathrm{H}\,{\rightarrow}\,\gamma\gamma$}
+#+LATEX_HEADER: \newcommand{\hzg}{$\mathrm{H}\,{\rightarrow}\,\text{Z}\gamma$}
 #+LATEX_HEADER: \newcommand{\hhbbbbtt}{$\mathrm{HH}\,{\rightarrow}\,\mathrm{bbbb}\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hhbbbb}{$\mathrm{HH}\,{\rightarrow}\,\mathrm{bbbb}$}
 #+LATEX_HEADER: \newcommand{\hhbbgg}{$\mathrm{HH}\,{\rightarrow}\,\mathrm{bb}\gamma\gamma$}
