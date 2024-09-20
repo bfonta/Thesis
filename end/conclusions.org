@@ -1,60 +1,46 @@
-The work presented in this Thesis covered some of the central axes of Experimental Particle Physics.
-By exploiting current and future capabilities of the \ac{CMS} detector at CERN's \ac{LHC}, we provided original contributions to the field, on a range of topics.
-New algorithms were developed within a custom software framework, in the context of the future \ac{HGCAL}.
-\Ac{CMS} \run{2} datasets were analyzed to search for the resonant production of a Higgs bosons pairs.
-A simulation study was for the first time performed, in order to probe the impact that resonance effects have on the upper limits extracted for \ac{NP} models.
-The above subjects are all linked, by the need and the wish to provide measurements of ever increasing precision, which might one day lead to the next revolution.
+# Intro
+The work presented in this Thesis covers some of the central axes of Experimental Particle Physics.
+By exploiting the current and future capabilities of the \ac{CMS} detector at CERN's \ac{LHC}, original findings have been provided to the field, across a range of topics.
+The contributions span developments for the reconstruction of Trigger Primitives in the future High Granularity Calorimeter (HGCAL), and studies related to the production of Higgs boson pairs.
+The latter is approached from the perspective of a physics analysis, through the resonant production of the \bbtt{} final state, and from a phenomenological angle, by investigating the impact of removing the Narrow Width Approximation from HH interpretations, namely on double Higgs production cross section upper limits.
 
-+ hgcal:
-  + promising algorithms for tp reconstruction
-  + framework for the future including geometry; already used by other students
+# HGCAL
+The upcoming High-Luminosity LHC (HL-LHC) phase promises to bring a ten-fold increase in the integrated luminosity delivered to the experiments, with a center-of-mass energy of \SI{14}{\TeV}.
+This additional data will strongly benefit the sensitivity of physics measurements, especially for rare processes, which in turn leads to more precise theoretical calculations.
+However, the HL-LHC also brings major challenges.
+The expected huge increase of radiation levels requires the complete hardware refurbishment of many \ac{CMS} detectors, especially when located close to the beamline.
+Large upgrades are furthermore required in the triggering and reconstruction of physics objects, in order to sustain the tremendous data rates to be processed, and to disentangle the \num{\sim 200} pile-up proton interactions at each bunch-crossing.
+In particular, the HGCAL is bound to become a flagship detector for \ac{CMS}.
+It will bring impressive spatial and timing resolutions, within a lateral and longitudinal granularity never before seen in a High Energy Physics experiment.
+The successful reconstruction in such a crowded environment starts from an effective trigger strategy, in which Trigger Primitives play a major role.
+This Thesis proposed new algorithms for the reconstruction of Trigger Primitives, focusing on the mitigation of cluster splits during the clustering reconstruction stage.
+Such a task was achieved through a software framework which was developed from scratch, includes a simplified version of HGCAL's geometry, and serves as a basis for further studies.
+The algorithms have the potential to be implemented in the firmware, and improve HGCAL's capabilities.
+Importantly, cluster splitting is shown to be almost fully removed, using techniques that will not require additional firmware resources.
 
-+ analysis:
-  + In particular, we are almost a factor of 2 more sensitive at \SI{1}{\TeV}, and can thus conclude that the analysis should be able to confirm or reject the tension observed by \ac{ATLAS}.
-  + best sensitivity ever for \xhhbbtt{}, driving sensitivity for \ac{CMS} combination at $450 \leq \mx \leq 800 \,\si{\GeV}$ range
-  + improvement much above naive lumi scaling
-  + CMS HL-LHC projection wiill improve with our result
+# bbtt
+On the physics analysis side, \ac{CMS} is strongly engaged on studying the production of Higgs boson pairs, exploiting both nonresonant and resonant processes as a gateway to New Physics.
+These studies are deeply motivated by the intrinsic structure of the Standard Model (SM) of Particle Physics, which contains a yet unmeasured coupling of the Higgs boson with itself, and by a wide range of Beyond the SM (BSM) frameworks, where new particles couple to the Higgs sector and can profoundly alter the understanding of fundamental particle interactions.
+In this work, a search for the resonant production of a pair of Higgs bosons decaying into a pair of b quarks and a pair of $\tau$ leptons is performed, using \ac{CMS} \run{2} data collected at \SI{13}{\TeV}.
+95% \ac{CL} upper limits on the production cross section of \spin{0} and \spin{2} BSM particles are computed, for masses from \SI{250}{\GeV} to \SI{3}{\TeV}.
+When comparing the expected limits obtained to the first 2016-only \ac{CMS} results, an improvement much larger than a simple luminosity scaling is observed.
+The performance increase comes from updated samples, an extended trigger strategy and analysis phase-space, the optimization of many selection stages, and the development and implementation of powerful discriminants.
+This work provides the tightest limits ever obtained in the \bbtt{} channel for most of the scanned mass range, and demonstrates that this channel will drive \ac{CMS}' sensitivity at intermediate mass values.
+The results should thus be included in a future \xhh{} combination.
+Moreover, for some mass points, the \run{2} results reach and surpass the most recent projection of \xhhbbtt{} results for the HL-LHC.
+The techniques employed in the analysis are already serving as a starting point for future \bbtt{} studies, which will further test the consistency of the SM and beyond.
 
+# interferences
+The above resonant analysis was complemented by a phenomenological study, which probed the impact that resonance effects have on HH cross section upper limits.
+For the first time in \ac{CMS}, the Narrow Width Approximation was not used, in order to assess interference effects between \ac{BSM} particles decaying to a Higgs boson pair, and the continuous \ac{SM} HH background.
+The study is performed using the singlet model.
+For most of the studied mass points, the effects are sizable only in parameter regions to which current measurements are not yet sensitive.
+However, there are regions at intermediate $\mx$ values where the interpretation of NWA-based limits requires some care already in the \run{2} combination.
+Such concerns will definitely play a role when the full HL-LHC dataset becomes available.
+Additionally,  clear distortions in the $\mhh$ lineshapes are observed, which will have to be taken into account as soon as HH processes can be precisely measured.
+It is important to note that such interpretations are generally model dependent, and that a reasonable choice of parameter thresholds had to be made.
+Notwithstanding such limitations, the study hints at the necessity of avoiding the NWA in future HH analyses.
+Finally, this Thesis provides the most recent projections of singlet model upper limits, for a variety of resonance masses, to HL-LHC luminosity values.
 
-Going Beyond the Narrow Width Approximation in HH Resonant Searches
-novel study with the Singlet Model
-interference effects between resonances and continuous \ac{SM} background
-take the detector's resolution into account, comopare with the latest \ac{CMS} combination [[cite:&interf_studies]]
-
-For most of the studied mass points, sizable interference ratios occur only in parameter regions to which the current measurements are not yet sensitive, or at too large values of sin α.
-In particular, for large resonance masses, with mX above 600 GeV, where interference effects tend to grow, measurements are far below the current sensitivity and might only play a role when the full data set from the HL-LHC becomes available.
-However, there are regions at intermediate mX where the interpretation of NWA-based limits for HH derived in the singlet model would solicit some care already in the Run 2 combination (for example mX = 500 GeV, sin α = 0.2 and λHHX = 400 GeV).
-It is important to note that such interpretations are generally model dependent.
-
-Still, the signature develops a peak-dip structure for a negative interference ratio, and a shoulder-like enhancement towards large masses for a positive interference ratio. 
-For a precision measurement, which is not yet in our reach, a distortion of the signal shape would have to be taken into account.
-
-conclude on the impact of the NWA
-The study had to make a reasonable choice of parameter thresholds. Notwidthstanding, the study represents the first dedicated interference study within CMS,
-hinting already at the necessity of avoiding the NWA in future HH analyses.
-
-projections, where we clearly show that the \ac{HL-LHC} will dramatically expand the exclusion region of the singlet model.
-Intereference effects will be become more and more significant.
-
-
-We express our sincere wish that this work can, ...
-
-
-
-
-After the discovery of the Higgs boson particle, the first ten years of experimental measurements of this particle and searches for
-other such scalar particles has revolutionized the field of particle physics.
-Regardless of theory, the Higgs boson remains a singular particle that exhibits couplings to both fermions and bosons as long as they have mass.
-To date, all its properties remain compatible with those predicted by the Standard Model of particle physics.
-This does not mean that the Higgs boson particle is the SM Higgs boson; it only reflects the fact that more precise measurements
-of the Higgs boson and new, different, Higgs boson measurements are needed, as it is a promising gateway to phenomena beyond the
-Standard Model.
-The great strides made in one decade of experimental physics with the Higgs boson particle would not have been possible without continued improvements and upgrades to the detectors, be it their tracking systems, their trigger systems, or the calibration and reconstruction software algorithms.
-These have enabled us to peer into the interaction of the Higgs boson particle with second generation particles and produce spectacular results coming from the study of the production of Higgs boson pairs.
-The Higgs boson particle is a new tool in the toolbox of fundamental physics.
-While it remains the sole representative of what could be a host of scalar particles, the Higgs boson particle has been seen to have a broad reach and the coming decades and future accelerators are needed to understand its role in nature and whether it can provide hints for a theory that overcomes the shortcoming of the Standard Model, perhaps through a
-global interpretation in the framework of an effective field theory that can capture deviations from large classes of concrete
-alternatives to the Standard Model.
-Experimentalists and theorists alike stand ready to take on the challenge.
-They only require the resources to produce large numbers of Higgs bosons, detect them, and analyze and interpret those data.
-[[cite:&andre_david_higgs_ten_years]]
+# wrap-up
+I conclude this Thesis by expressing my sincere wish that the contributions here discussed will, first and foremost, be useful, and that might hopefully provide a modest basis for the next groundbreaking discovery we all wish to witness.

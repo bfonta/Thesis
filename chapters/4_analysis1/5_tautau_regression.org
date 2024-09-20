@@ -6,12 +6,12 @@ A sizable fraction of the energy in the \htt{} system is lost from a detector's 
 Experimentally, the neutrinos are measured as \ac{MET}.
 Such a signature severely limits the reconstruction of the invariant mass of the \ditau{} system, $\mtautau$, which has an impact in the sensitivity of any analysis relying on tau lepton pairs.
 In our analysis, the correct reconstruction of the full \htt{} leg is essential for separating signal from background events.
-Additionally, in order to obtain the correct energy scale for the full HH system, a good estimate of the \htt{} momentum is necessary.
+Additionally, in order to obtain an accurate assessment of the properties of the HH system, a good estimate of the \htt{} momentum is necessary.
 
 # SVFit intro
-In order to reconstruct the energy carried by the neutrinos, \ac{CMS} analyses with the \htt{} topology were so far using the \ac{SVFit} algorithm [[cite:&svfit]], including the previous \bbtt{} iteration [[cite:&higgs_bbtautau_nonres]].
+In order to reconstruct the energy carried by the neutrinos, \ac{CMS} analyses with the \htt{} topology, including the previous \bbtt{} iteration [[cite:&higgs_bbtautau_nonres]], were so far using the \ac{SVFit} algorithm [[cite:&svfit]].
 This algorithm reconstructs $\mtautau$ based on a likelihood function.
-The function quantifies the level of compatibility between reconstructing a Higgs boson mass hypothesis, and reconstructing the visible momenta of the decay products of the $\tau$ plus the \ac{MET} in the event.
+The function optimizes the reconstruction of the visible momenta of the $\tau$ decay products plus the \ac{MET} in the event.
 As a consequence, the \ac{SVFit} algorithm improves the $\mtautau$ reconstruction, so that the \htt{} system lies closer to the expected \SI{125}{\GeV} mass, with an improved resolution.
 
 # SVFit issues
@@ -19,10 +19,10 @@ However, \ac{SVFit} faces two important issues.
 Firstly, it is a computationally expensive approach, leading to bottlenecks in the analysis workflow.
 Secondly, it does not work optimally when the \ac{MET} is close to zero, which happens for HH systems at low masses, since the two \taus{} tend to be emitted back-to-back.
 In this work, we introduce an alternative approach to fix such issues.
-A \ac{DNN} has been trained in order to /regress/ the neutrino momenta.
 
 # Intro to DNNs
-A generic \ac{DNN} represents a function with a given, usually large number of parameters, mapping input features into a set of continuous variables, in the case of regression, or into class probabilities, in the case of /classification/.
+A \ac{DNN} is trained in order to /regress/ the neutrino momenta.
+A generic \ac{DNN} represents a function with a given, usually large number of parameters, mapping input features into a set of continuous variables, in the case of /regression/, or into class probabilities, in the case of /classification/.
 Its goal is to perform /inference/, which corresponds to the estimate of some unknown quantity or quantities, based on the observed data [[cite:&lista]].
 The parameters of the network are optimized, or learned, such that the network is better able to predict the ground truth.
 This is achieved via a /training/ procedure, which is in this case /supervised/, \ie{} it uses labeled data.
@@ -51,25 +51,25 @@ The concatenation is used as an input to the first layer of the network.
 #+NAME: tab:input_features
 #+CAPTION: Lists of continuous and categorical input variables used by the \ac{DNN}. The items marked with a $\dagger$ correspond to vectors that were rotated in the transverse plane with respect to the visible \ditau{} system. The rotation is performed to establish a common reference, which helps the training.
 #+ATTR_LATEX: :placement [!h] :center t :align cl :environment mytablewiderrows
-|-------------+-------------------------------------------------------------------------|
-| *Type*        | *Variable*                                                                |
-|-------------+-------------------------------------------------------------------------|
-| *Continuous*  | \texttt{DeepJetCvsB}: Charm versus bottom \texttt{DeepJet} score        |
-|             | \texttt{DeepJetCvL}: Charm versus light flavour \texttt{DeepJet} score  |
-|             | \texttt{DeepJet}: b-tagging score                                       |
-|             | \hhbtag{}: Custom b-jet score                                           |
-|             | $\text{MET}^{\dagger}$: $x$ and $y$ \ac{MET} projections                      |
-|             | $\text{Cov}(\text{MET})$: \ac{MET} covariance matrix                    |
-|             | $\text{4-momenta}^{\dagger}$: 4-momenta of \taus{}, b jets, $\tau\tau$ and $\bbbar$ |
-|-------------+-------------------------------------------------------------------------|
-| *Categorical* | $\tau$ decay channel: \eletau{}, \mutau{}, \tautau{}                       |
-|             | \tauh{} decay mode                                                      |
-|             | Presence of two AK4 jet                                                 |
-|             | Presence of one AK8 jet                                                 |
-|             | Data-taking period                                                      |
-|             | Spin hypothesis                                                         |
-|             | Mass hypothesis                                                         |
-|-------------+-------------------------------------------------------------------------|
+|-------------+---------------------------------------------------------------------------------|
+| *Type*        | *Variable*                                                                        |
+|-------------+---------------------------------------------------------------------------------|
+| *Continuous*  | \texttt{DeepJetCvsB}: Charm versus bottom \texttt{DeepJet} score                |
+|             | \texttt{DeepJetCvL}: Charm versus light flavour \texttt{DeepJet} score          |
+|             | \texttt{DeepJet}: b-tagging score                                               |
+|             | \hhbtag{}: Prob. that the jets come from a \hbb{} decay                         |
+|             | $\text{MET}^{\dagger}$: $x$ and $y$ \ac{MET} projections                              |
+|             | $\text{Cov}(\text{MET})$: \ac{MET} covariance matrix                            |
+|             | $\text{4-momenta}^{\dagger}$: visible 4-momenta of \taus{}, b jets, $\tau\tau$ and $\bbbar$ |
+|-------------+---------------------------------------------------------------------------------|
+| *Categorical* | $\tau$ decay channel: \eletau{}, \mutau{}, \tautau{}                               |
+|             | \tauh{} decay mode                                                              |
+|             | Presence of two AK4 jet                                                         |
+|             | Presence of one AK8 jet                                                         |
+|             | Data-taking period                                                              |
+|             | Spin hypothesis                                                                 |
+|             | Mass hypothesis                                                                 |
+|-------------+---------------------------------------------------------------------------------|
 
 # Network and training
 #+NAME: fig:network
@@ -80,10 +80,12 @@ The concatenation is used as an input to the first layer of the network.
 [[~/org/PhD/Thesis/figures/analysis1/tautau_network.pdf]]
 #+END_figure
 
-The network consists of a common part with 5 dense layers and two "heads", as illustrated in [[fig:network]].
+The network consists of a common block with 5 dense layers and two "heads", as illustrated in [[fig:network]].
 Each layer has 128 nodes and uses the \ac{ELU} activation function [[cite:&elu]].
 After each layer, batch normalization [[cite:&batchnorm]] is applied.
 One of the heads is used for regressing the neutrino momenta, and the other performs classification, with 4 dense layers each.
+The classification head is not actively used, but was added since it improved the performance of the regression network.
+We can intuitively reason that the classification loss forces the network's weights to better extract the underlying properties of the input samples, which in turn affects the regression head, given the significant sharing of weights in the inital common block.
 The regression head has 6 outputs, corresponding to the three-momenta of the neutrinos from the two $\tau$ legs.
 For leptonic $\tau$ decays, the two neutrino momenta are summed.
 The classification head has 4 outputs.
@@ -110,7 +112,7 @@ No two \acp{DNN} are validated with the same fold, and the full data is exploite
 In the end, the predictions of the $k$ discriminants are averaged.
 For this work, we use five folds ($k=5$).
 
-The training uses a batch size of 4096 and the =AdamW= optimizer [[cite:&adamw]] with an initial learning rate of \num{0.003}.
+The training is performed in /batches/, with a size of 4096, and exploits the =AdamW= optimizer [[cite:&adamw]] with an initial learning rate of \num{0.003}.
 If the validation loss does not improve within 10 epochs, the learning rate is halved.
 Once no effect on the validation loss is observed, the adaptation of the learning rate is stopped.
 As soon as the validation loss has not improved within 15 epochs, the training ends.
@@ -135,23 +137,20 @@ The network is implemented using the =Keras= library [[cite:&keras]] with a =Ten
 |---------------------+--------+-------------+-------------------+-------------------------------------|
 
 The performance of the regression is dramatically superior to what \ac{SVFit} achieves.
-Results vary depending on the class being probed, but lead to $\mtautau$ widths at least two times narrower, occasionally more.
-In the left plot of [[fig:reg_tautau]], we show the result of the $\mtautau$ regression on the relevant backgrounds, and on the signal.
+Results vary depending on the class being probed, but lead to $\mtautau$ widths at least two times narrower.
+The width of the \ac{DY} peak is reduced by a factor of 5.
+The regressions are shown in [[fig:reg_tautau]], both for the sum of all HH signal samples and for the three backgrounds considered in the classification head.
 The \ac{DY} and signal peaks can be fully disentangled, contrary to what happens with \ac{SVFit}.
 These results are achieved with only a minor $\ttbar$ background sculpting.
-In the right plot of the same figure, we can see the result of the regression on the full HH invariant mass, for various resonance masses.
-The peaks are much narrower than previous results.
 We notice that the method here described has the potential to be applied to other decay topologies, given appropriate training data and input features.
 The network is further exploited in the definition of the final discriminant, detailed in [[#sec:pdnn]].
 
 #+NAME: fig:reg_tautau
-#+CAPTION: Binned distributions after running the inference step with the trained $\mtautau$ network. (Left) Regressed $\mtautau$, for dominant \ac{DY} and $\ttbar$ background sources, peaking \tth{} and HH signal. $\ttbar$ is split into fully-leptonic ("dl") and semi-leptonic ("sl") samples. (Right) Regressed $\mhh$ for various signal samples. Courtesy of Tobias Kramer.
+#+CAPTION: Comparison of the binned $\mtautau$ distribution after regressing $\mtautau$ with \ac{SVFit} (left) and the new \ac{DNN} algorithm (right). The distributions are shown for the four samples which are encoded as a class by the network: HH, \ac{DY}, $\ttbar$ and \tth{}. $\ttbar$ is split into fully-leptonic ("dl") and semi-leptonic ("sl") samples. The HH signal represents a merged sample with all signal hypotheses. The resolution improvement is very large. The HH and DY peaks become clearly separate. Courtesy of Tobias Kramer.
 #+BEGIN_figure
 \centering
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/reg_H_m.pdf]]
-#+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/analysis1/reg_HH_m_signals.pdf]]
+#+ATTR_LATEX: :width 1.\textwidth :center
+[[~/org/PhD/Thesis/figures/analysis1/mtautau_perf.pdf]]
 #+END_figure
 
 * Biblio :noexport:

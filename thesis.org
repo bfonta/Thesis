@@ -53,19 +53,19 @@
 #+INCLUDE: "chapters/1_intro/0_intro.org"
 ** The Standard Model of Particle Physics
 #+INCLUDE: "chapters/1_intro/1_sm_intro.org"
-*** The building blocks of the SM
+*** The Building Blocks of the SM
 #+INCLUDE: "chapters/1_intro/1p1_sm_structure.org"
-*** From symmetries to interactions
+*** From Symmetries to Interactions
 #+INCLUDE: "chapters/1_intro/1p2_sm_symmetries.org"
 *** The Higgs Mechanism
 #+INCLUDE: "chapters/1_intro/1p3_higgs_mechanism.org"
-*** Phenomenology and experimental status of Higgs boson physics
+*** Phenomenology and Experimental Status of Higgs Boson Physics
 #+INCLUDE: "chapters/1_intro/1p4_higgs_exp_status.org"
 ** Higgs Boson Pair Phenomenology in the SM
 #+INCLUDE: "chapters/1_intro/2_dihiggs.org"
-*** Production modes
+*** Production Modes
 #+INCLUDE: "chapters/1_intro/2p1_production_modes.org"
-*** Final states
+*** Final States
 #+INCLUDE: "chapters/1_intro/2p2_final_states.org"
 ** Going Beyond the SM
 #+INCLUDE: "chapters/1_intro/3_bsm_intro.org"
@@ -77,11 +77,11 @@
 #+INCLUDE: "chapters/1_intro/3p3_res_BSM_hh.org"
 ** Experimental Status of HH Physics
 #+INCLUDE: "chapters/1_intro/4_hh_exp_status.org"
-*** Direct searches
+*** Direct Searches
 #+INCLUDE: "chapters/1_intro/4p1_direct_searches.org"
-*** Indirect searches
+*** Indirect Searches
 #+INCLUDE: "chapters/1_intro/4p2_indirect_searches.org"
-*** Combining direct with indirect searches
+*** Combining Direct with Indirect Dearches
 #+INCLUDE: "chapters/1_intro/4p3_combinations.org"
 
 
@@ -120,7 +120,7 @@
 #+INCLUDE: "chapters/3_hgcal/2p2_phase2_trigger_system.org"
 *** The High Granularity Calorimeter
 #+INCLUDE: "chapters/3_hgcal/2p3_hgcal_introduction.org"
-*** Detector upgrades in other LHC experiments
+*** Detector Upgrades in Other LHC Experiments
 #+INCLUDE: "chapters/3_hgcal/2p4_hllhc_detector_upgrades.org"
 ** The Reconstruction of Trigger Primitives in HGCAL
 #+INCLUDE: "chapters/3_hgcal/3_hgcal_trigger_primitives.org"
@@ -143,9 +143,9 @@
 #+INCLUDE: "chapters/4_analysis1/2p1_legacy_triggers.org"
 *** Additional Triggers
 #+INCLUDE: "chapters/4_analysis1/2p2_additional_triggers.org"
-*** Analysis Trigger Regions
+*** Trigger Regions
 #+INCLUDE: "chapters/4_analysis1/2p3_trigger_regions.org"
-*** The Inclusion Method: an Idea for the Future
+*** A Note on the Inclusion Method
 #+INCLUDE: "chapters/4_analysis1/2p4_inclusion_method.org"
 ** Physics Objects
 #+INCLUDE: "chapters/4_analysis1/3_physics_objects.org"
@@ -204,11 +204,12 @@
 #+INCLUDE: "chapters/6_interf_studies/4_interf_results.org"
 
 
-* Conclusions
+* Conclusion
 :PROPERTIES:
 :UNNUMBERED: t
 :END:
 #+LATEX: \addcontentsline{toc}{chapter}{Conclusions}
+# ###########+LATEX: \thispagestyle{empty}
 #+INCLUDE: "end/conclusions.org"
 #+LATEX: \clearpage
 

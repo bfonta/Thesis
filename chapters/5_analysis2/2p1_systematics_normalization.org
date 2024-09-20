@@ -91,7 +91,7 @@ We list them in what follows:
 \setlength{\tabcolsep}{10pt}
 \scriptsize
 \begin{tabular}{ccc}
-    \hline \\[-1em]
+    \hline \\[-0.2cm]
     \textbf{Process} & \textbf{Uncertainty} & \textbf{Value [\%]} \\ [+0.2em]\hline \\[-1em]
 
     \multirow{3}{*}{ZH} & QCD scale  & $+3.8$/$-3.0$ \\

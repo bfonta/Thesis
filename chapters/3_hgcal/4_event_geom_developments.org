@@ -35,7 +35,7 @@ The framework is conceptually split across two independent axis: geometry and ev
 Users, or clients, can develop their own algorithms transparently, \ie{} without understanding the framework's internals.
 We start by describing \ac{HGCAL}'s coordinate system, which is a prerequisite for understanding the implementation of the framework.
 
-* HGCAL coordinates
+* HGCAL Coordinates
 :PROPERTIES:
 :CUSTOM_ID: sec:hgcal_coordinates
 :END:
@@ -53,7 +53,7 @@ Each detector element is uniquely identified by a set of two coordinates, plus t
 [[~/org/PhD/Thesis/figures/hgcal/HexagCoordsHGCAL.pdf]]
 #+END_figure
 
-** Silicon coordinates
+** Silicon Coordinates
 
 The \ac{Si} region is characterized by hexagonal-shaped modules and detector cells.
 There are thus two sets of /axial coordinates/ [[cite:&red_blob_games]] applied at the level of one full layer, where one coordinate point corresponds to one module, and at the level of the module, where one coordinate point corresponds to a single \ac{TC} (or \ac{Si} cell).
@@ -65,13 +65,13 @@ Multiple module orientations are possible, affecting the direction of the $(u,v)
 In the remainder of this Section we consider a single orientation for simplicity, as the logic is kept unchanged.
 Hexagonal coordinates in \ac{HGCAL} are further explored in [[#sec:using_detector_coordinates]].
 
-** Scintillator coordinates
+** Scintillator Coordinates
 
 The regions in the detector covered by scintillator material follow a simpler polar-like coordinate system, defined in terms of \ac{eta} and \ac{phi} rings in the transversal plane.
 The indexes do not linearly map to a physical distance, given the gradual increase of the tile sizes with increased distance from the layer center.
 \Acp{TC} comprise $2\times2$ groups of \ac{Sci} tiles, which follow the same (adapted) coordinate system.
 
-* Geometry implementation
+* Geometry Implementation
 
 A simplified geometry was implemented, including both \ch{Si} and \ac{Sci} sections.
 The geometry is based on the \ac{CMSSW} =V11= geometry.
@@ -124,7 +124,7 @@ The geometries can be compared in [[fig:si_sci_custom_geoms]].
 [[~/org/PhD/Thesis/figures/hgcal/SiSciGeometries.pdf]]
 #+END_figure
 
-* Event implementation
+* Event Implementation
 
 The processing of event data starts in \ac{CMSSW}, where the full reconstruction is run for different /single particle guns/, which correspond to simulations shooting single particles through \ac{HGCAL}, simulating all physical interactions with the detector's material.
 This step produces all required \ac{TC} and cluster information later required to validate the local =Python= framework.

@@ -3,7 +3,7 @@
 :END:
 
 In [[ref:fig:compare_ratios_ranges,fig:compare_ratios_channels]], we show the data/\ac{MC} curves coming from the $\metnomu$ trigger efficiency fits, for the four \run{2} data-taking periods.
-The $\metnomu$ \acp{SF} are explained in [[#sec:met_trigger_sfs]].
+The methods to derive the $\metnomu$ \acp{SF} are explained in [[#sec:met_trigger_sfs]].
 [[fig:compare_ratios_ranges]] shows the result of testing five different fits in order to find the ideal fitting range.
 We tried to reach a balance between domain size and fit quality.
 We chose the fit starting at \SI{150}{\GeV}.

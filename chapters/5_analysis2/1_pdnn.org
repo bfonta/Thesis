@@ -32,8 +32,10 @@ This equates to generating N predictions per event.
     \multirow{2}{*}{\textbf{Training}} & Background & Randomly sample $m$ and $s$ from all possible values. \\[+0.3em]
                                        & Signal     & Use the $m$ and $s$ the signal sample was generated with. \\ [+0.3em]\hline \\[-.8em]
 
-    \multirow{4}{*}{\textbf{Inference}} & Data and Background & Generate a prediction for each event $\text{N}$ times. \\[+0.3em]
+    \multirow{4}{*}{\textbf{Inference}}
 
+                                        & Data and & \multirow{2}{*}{Generate a prediction for each event $\text{N}$ times.} \\
+                                        & Background &  \\[+0.3em]
                                         & \multirow{2}{*}{Signal} & Generate a prediction using the $m$ and $s$ \\
                                         &                         &  the signal was made with. \\ [+0.3em]\hline \\[-1em]
 \end{tabular}
@@ -63,7 +65,7 @@ At the end of the network, each event is categorized according to one of three p
 For simplicity, we are currently exploiting the signal score only.
 
 #+NAME: fig:combined_model
-#+CAPTION: Architecture of the \xhhbbtt{} final discriminant. The layout corresponds to a combination of the $\mtautau$ regression network, the \ac{LBN} and a densely connected \ac{DNN}. The weights of the regression network are left initialize fixed, and are slowly activated as training time passes, which we refer to as "fade-in". "BN" stands for batch-normalization, and "ACT" stands for activation function. Courtesy of Marcel Rieger.
+#+CAPTION: Architecture of the \xhhbbtt{} final discriminant. The layout corresponds to a combination of the $\mtautau$ regression network, the \ac{LBN} and a densely connected \ac{DNN}. The weights of the regression network are initially fixed to the values from previous independent trainings, and are slowly activated as the training time passes, which we refer to as "fade-in". "BN" stands for batch-normalization, and "ACT" stands for activation function. Courtesy of Marcel Rieger.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width 1.\textwidth :center
@@ -86,7 +88,7 @@ Three classes of input features are considered:
 + *parameterized*: the mass and spin values representing the hypotheses being tested.
         
 # training loop
-The data is processed in /batches/, each with a size of 4096 events.
+The data is processed in batches, each with a size of 4096 events.
 The =Adam= optimizer [[cite:&adam]] is considered, starting with a learning rate of 0.003.
 As the training progresses, the learning rate is reduced so that the minimum of the loss function is not overshoot.
 A dynamic learning rate scheduler steadily decreases the learning rate based on the validation loss.

@@ -163,13 +163,13 @@ The corrections are applied only to events within the \stau{} region, as detaile
 #+NAME: tab:singleTauSFs
 #+CAPTION: \Stau{} trigger \acp{SF} as recommended by the \ac{CMS} Tau \ac{POG}. The corresponding \ac{HLT} paths are defined in [[tab:trigger_met_stau]].
 #+ATTR_LATEX: :placement [!h] :center t :align cc :environment mytablewiderrows
-|------+-----------------|
-| Year | \Stau{} \ac{SF} |
-|------+-----------------|
-| 2016 | $0.88 \pm 0.08$   |
-| 2017 | $1.08 \pm 0.10$   |
-| 2018 | $0.87 \pm 0.11$   |
-|------+-----------------|
+|------+----------------------------|
+| *Year* | $\pmb{\text{Single-}\tau}$ *SF* |
+|------+----------------------------|
+| 2016 | $0.88 \pm 0.08$              |
+| 2017 | $1.08 \pm 0.10$              |
+| 2018 | $0.87 \pm 0.11$              |
+|------+----------------------------|
 
 * MET Trigger Scale Factors
 :PROPERTIES:

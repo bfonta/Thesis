@@ -32,7 +32,7 @@ In the second level, the \ac{HLT}, a further reduction down to \SI{1}{\kilo\hert
 Latency here refers to the time taken for the data to be processed in a particular trigger system.
 It includes the time taken to read the data from the detectors, the algorithmic time, the \ac{L1A} signal distribution time, and further delays introduced by potential limitations at the level of buffer capacity [[cite:&trigger_tdr_phase1_vol1;&l1TDR;&trigger_tdr_phase1_vol2;&l1_performance;&hlt_performance;&zabi]].
 
-* The Level-1 trigger
+* The Level-1 Trigger
 :PROPERTIES:
 :CUSTOM_ID: sec:l1
 :END:

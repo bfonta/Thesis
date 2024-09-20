@@ -153,7 +153,7 @@ There is no fundamental principle against it, but the width of the Higgs boson i
 On the large mass side, we stop at \SI{3}{\TeV} since a dedicated \ac{CMS} high mass analysis with the same final state is currently being developed by a different analysis team.
 Additionally, higher mass points are not expected to provide a better sensitivity, due to presence of boosted \taus{}, for which our analysis is not optimized.
 
-* MC reweighting
+* MC Reweighting
 :PROPERTIES:
 :CUSTOM_ID: sec:mc_reweighting
 :END:

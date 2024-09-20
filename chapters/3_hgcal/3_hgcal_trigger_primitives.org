@@ -42,7 +42,7 @@ My Thesis work is deeply connected to the definition and processing of \ac{HGCAL
 [[~/org/PhD/Thesis/figures/hgcal/TCs_geometry.pdf]]
 #+END_figure
 
-* The infrastructure of the backend trigger and data acquisition systems
+* The Infrastructure of the Backend Trigger and Data Acquisition Systems
 
 The \ac{HGCAL} \ac{BE} electronics consist on the \ac{DAQ}, \ac{TPG}, \ac{DCS} and \ac{DSS}.
 The first two form the so-called \ac{TDAQ}.
@@ -78,7 +78,7 @@ The \ac{BE} electronics will be located in the \ac{CMS} \ac{USC}, where space is
 The \ac{HGCAL} \ac{TDAQ} \ac{BE} has been assigned \num{8} racks, split into \num{3} and \num{5} to \ac{DAQ} and \ac{TPG}, respectively.
 Each rack fits two \ac{ATCA} crates, and sufficient power is provided to the \ac{ATCA} boards.
 
-* Frontend electronics
+* Frontend Electronics
 :PROPERTIES:
 :CUSTOM_ID: sec:frontend_electronics
 :END:
@@ -160,7 +160,7 @@ Each motherboard is connected with up to \num{6} \acp{ECON-T} and \acp{ECON-D}.
 The \acp{ASIC} serialize the \ac{ECON} data to \SI{10.24}{\giga\bit\per\second}, and send it to the \ac{VTRx+} interface, which in turn distributes it to the off-detector \ac{BE} via fiber optics.
 In total, \SI{\sim 90}{\tera\byte\per\second} are transferred to the \ac{BE} [[cite:&econ]].
 
-* Backend electronics
+* Backend Electronics
 
 The \ac{BE}, located at \SI{\sim 100}{\meter} from the detector, receives \ac{FE} data with the goal of building cluster-shape variables within a \SI{\sim 2.5}{\micro\second} latency budget.
 Clusters, together with simpler \acp{TT} built out of \acp{STC} and of module sums along the longitudinal direction, amount to the final \ac{HGCAL} \acp{TP} to be transmitted to \ac{L1}.

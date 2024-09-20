@@ -58,8 +58,8 @@ For \eletau{} and \mutau{}, the lepton is by definition considered the first lep
     {
       \scriptsize
       \begin{tabular}{lcccccc}
-        \hline \\[+.05cm]
-        Chn.  & Region & Trigs. & First Lepton &    & Second Lepton & $\metnomu$ \\
+        \hline \\[-.2cm]
+        \textbf{Chn.}  & \textbf{Region} & \textbf{Trigs.} & \textbf{First Lepton} &    & \textbf{Second Lepton} & $\pmb{\metnomu}$ \\
         \hline \\[-.05cm]
 
         \multirow{4}{*}{\eletau{}} & \multirow{2}{*}{Legacy} & \celetau{} & $\pt > -/25/25$, $|\eta| \leq 2.1$      & \&\&       & $\pt > -/35/35 $, $|\eta| \leq 2.1$    & \multirow{2}{*}{--} \\
