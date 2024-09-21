@@ -23,7 +23,7 @@ In the remainder of this Section we explain the causes for cluster splits, and d
 :CUSTOM_ID: sec:origin_cluster_splits
 :END:
 
-As seen in [[#sec:hgcal_trigger_primitives]], the first step of the \ac{S2} consists on reducing the detector's granularity by mapping \acp{TC} into projective \coordsa{} bins.
+As seen in [[#sec:hgcal_trigger_primitives]], the first step of the \ac{S2} consists in reducing the detector's granularity by mapping \acp{TC} into projective \coordsa{} bins.
 The physical dimensions of the bins are strongly dependent on their location: bins closer to the beamline (low \rz{}) will be much smaller than bins closer to the outer boundary of the \ac{Si} layers (high \rz{}).
 Given \num{42} \rz{} bins and \num{216} \ac{phi} bins in a \ac{CE-E} layer starting at $\text{R}=\,30\si{\cm}$ and ending at $\text{R}=150\,\si{\cm}$, the ratio of the physical areas of two far-away bins can reach a factor of \num{5}.
 In spite of the varying bin area, the distribution of \acp{TC} across \ac{HGCAL} is uniform.

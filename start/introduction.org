@@ -1,14 +1,13 @@
 More than ten years have passed since the observation of the Higgs boson by the CMS and ATLAS Collaborations at the CERN Large Hadron Collider (LHC) [[cite:&ATLAS_Higgs_discovery;&CMS_Higgs_discovery1;&CMS_Higgs_discovery2]].
 What seemed the first of a series of discoveries bound to reshape the field of High Energy Physics, surprisingly turned into an impressive statement of the solid foundations upon which the Standard Model (SM) of Particle Physics is built.
-Despite its success, the SM cannot be the ultimate answer to all mysteries the Universe still conceals; multiple theoretical issues and cosmological observations show otherwise.
-The seed for the next big discovery can nonetheless lie where the SM was completed: the Higgs boson might still hide many surprises, and represent the gateway to a new understanding of fundamental interactions.
-Unfortunately, given the remarkable predictive power of the SM, few are expecting a revolution in the near future.
-The Higgs boson tri-linear coupling is still left unmeasured, but who does really believe anything else than yet another agreement will be obtained?
-Many motivated models introduce new particles addressing the known drawbacks of the SM; but would there be any physicist betting that such resonances will be found in the next two decades?
-This Thesis instead proposes a more positive view, where measurements are done not based on hopes but on certainties: the High Energy Physics community has access to some of the most complex pieces of engineering ever built, and measurements should be performed on every conceivable physical quantity, since Nature does not follow human speculation[fn:: "Talk is cheap. Show me the code."].
+Despite its success, the SM cannot be the ultimate answer to all mysteries the Universe still conceals; multiple theoretical puzzles and cosmological observations show otherwise.
+The seed for the next big discovery might lie where the SM was completed; the Higgs boson can still hide many surprises, and represent the gateway to a new understanding of fundamental interactions.
 One century ago, no one thought that ordinary matter was about five times less common than a mysterious "dark" form of matter.
 Before the 50's, every scientist would have sworn that Nature follows a left-right symmetry.
-Revolutions are found where one least expects them, and this Thesis pursues such noble goals by providing contributions on detector and analysis work, to be added to the stack of human knowledge which will inevitably lift the veil on Nature's next revelation.
+Revolutions are found where one least expects them, and the next one might be waiting just around the corner.
+In the meantime, as physicists, we ought to study everything at our disposal!
+The High Energy Physics community has access to some of the most complex machinery ever built, representing unmissable opportunities to measure every conceivable physical quantity.
+This Thesis proposes to pursue such goals by providing contributions on detector and analysis work, to be added to the stack of human knowledge which will inevitably lift the veil on Nature's next revelation.
 
 # HH work
 Are there particles decaying to a pair of Higgs bosons?

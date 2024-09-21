@@ -232,7 +232,7 @@ The structure of the muon chambers, including future upgrades, is shown in [[fig
 #+END_figure
 
 + *Drift Tubes:*
-  Present in the barrel section, they consist on drift chambers aiming at providing position resolutions of the order of \SI{100}{\um} and time resolutions lower than \SI{6}{\nano\second}.
+  Present in the barrel section, they consist of drift chambers aiming at providing position resolutions of the order of \SI{100}{\um} and time resolutions lower than \SI{6}{\nano\second}.
   A single \SI{4}{\cm}-wide tube contains a stretched wire within a gas volume.
   When a charged particle passes through the gas, it knocks electrons off the gas atoms.
   The electrons drift along the electric field's direction, reaching the anode and producing a signal.

@@ -28,7 +28,7 @@ Failures can only be addressed if caught, and this requires systematic tests wit
 
 Eventually all algorithms must be implemented and tested in the firmware before deployment.
 This becomes increasingly crucial as the \ac{HGCAL} installation deadline approaches.
-A logical and much awaited extension of this Chapter's work consists on using modern tools to include the new seeding algorithm in \acp{FPGA}.
+A logical and much awaited extension of this Chapter's work consists in using modern tools to include the new seeding algorithm in \acp{FPGA}.
 The idea is to rewrite the current implementations in a pragma-enriched \texttt{C++} version, which can be converted to \ac{RTL} via =Vitis= / =Vivado= \ac{HLS} [[cite:&vitis_hls]].
 \Ac{RTL} can be converted to a bit-stream by =Vivado=, which is used as configuration data to program the \acp{FPGA}.
 One of the challenges lies on writing the \ac{RTL} interface between the modules processed by the \ac{ECON-T} and the \ac{BE} algorithms.

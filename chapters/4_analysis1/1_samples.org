@@ -168,6 +168,6 @@ N^{\text{period}}_{\text{sample}} = \frac{ \mathcal{L}^{\text{period}} \times \l
 \noindent where $\mathcal{L}^{\text{period}}$ is the luminosity in a \run{2} data-taking period, $\sigma$ and $\mathcal{B}$ represent, respectively, the process cross section and decay \ac{BR}, $N^{\text{gen}}$ is the number of generated events, $w_j^{\text{gen}}$ stands for weight $j$ of the \ac{MC} generator, and $w_i$ represents a weight $i$ applied in addition to the generation weights or, in other words, a weight $w_i$ not belonging to the set of generated weights $\Theta^{\text{gen}}$.
 Different data-taking periods can have different sets of weights.
 Weights $w_i$ appear due to discrepancies between data and \ac{MC}, and can be expanded or reduced for different data-taking periods depending on the detector's evolving conditions.
-In our analysis, the $w_i$ weights consist on stitching weights for \ac{DY} samples, \ac{L1} prefiring weights, trigger \ac{SF} weights, weights for objects faking taus, \ac{PU} jet identification weights, reshaping b-tagging weights and b-jet discriminator weights.
+In our analysis, the $w_i$ weights consist of stitching weights for \ac{DY} samples, \ac{L1} prefiring weights, trigger \ac{SF} weights, weights for objects faking taus, \ac{PU} jet identification weights, reshaping b-tagging weights and b-jet discriminator weights.
 In $\Theta^{\text{gen}}$ we include the \ac{PU} reweighting and the \ac{NLO} reweighting.
 All \ac{MC} weights described in [[#sec:mc_corrections]].

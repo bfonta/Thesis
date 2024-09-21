@@ -3,6 +3,9 @@
 #+EXPORT_FILE_NAME: thesis
 #+SETUPFILE: setup.org
 #+SETUPFILE: definitions.org
+#+LATEX_HEADER: \input{cover_setup}
+#+LATEX_HEADER: \input{start/setup_dedication}
+#+LATEX_HEADER: \input{back_options}
 #+EXCLUDE_TAGS: noexport
 #+OPTIONS: H:4 toc:nil
 
@@ -233,7 +236,6 @@
 
 * List of acronyms
 #+LATEX: \input{acro_list}
-
 
 * Bibliography :ignore:
 [[bibliographystyle:thesis_custom]]

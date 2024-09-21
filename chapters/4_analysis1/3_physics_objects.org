@@ -224,7 +224,7 @@ Differences can arise due to detector noise, \ac{PU} or a non-linear calorimetri
 The precise understanding of \acp{JEC}, scales and resolutions, is of crucial importance for multiple analyses, also entering as an important component in their systematic uncertainties.
 The energy of jets must therefore be appropriately corrected, in order to match the true particle-level deposited energy [[cite:&jet_corr1;&jet_corr2]].
 In [[fig:jerc]] we illustrate the approach adopted by \ac{CMS} in \run{2}.
-It consists on a sequential steps, where each step is responsible to independently correct a different effect.
+It consists of sequential steps, where each step is responsible to independently correct a different effect.
 Each data-taking period has its own set of corrections.
 The first step addresses the spurious energy deposits from \ac{PU} interactions.
 For each type of \ac{PF} candidate an offset energy is subtracted from the jet energy.

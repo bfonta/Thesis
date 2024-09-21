@@ -2,9 +2,8 @@
 :CUSTOM_ID: sec:offline_reco
 :END:
 
-Reconstruction is the operation of constructing physics quantities from the raw data collected
-in the experiment.
-Following what is described in [[#sec:cms_detector]], and similarly to other \ac{HEP} experiments, \ac{CMS} consists on consecutive barrel and endcap detector layers surrounding the \ac{pp} \ac{IP}.
+Reconstruction is the operation of building physical quantities from the raw data collected in the experiment.
+Similarly to other \ac{HEP} experiments, \ac{CMS} consists of consecutive barrel and endcap detector layers surrounding the \ac{pp} \ac{IP}.
 As depicted in [[fig:muon_system_slice]], the design includes a tracker, calorimeters, the solenoid and muon chambers, with different detector elements establishing a synergy to detect distinct particle types.
 Charged particles, such as electrons[fn:: In this Section, whenever we mention electrons we also mean their anti-particles, positrons, for brevity. The same logic is used for other particle types, when applicable.], muons or charged hadrons, leave energy deposits, or /hits/, in the tracker.
 The relative bending of their trajectories in the solenoid's magnetic field conveys information on their charge and momentum.
@@ -67,7 +66,7 @@ The latter correspond to the building blocks of all physics objects used in \ac{
 #+END_figure
 
 ** PF Tracks
-Reconstructing charged particles consists on recreating their trajectories from individual hits, and extracting particle properties from those trajectories.
+Reconstructing charged particles consists in recreating their trajectories from individual hits, and extracting particle properties from those trajectories.
 At \ac{CMS}, an iterative tracking algorithm was devised, where a combinatorial track finder procedure based on \acp{KF} [[cite:&tracker_kf]] is sequentially applied \num{\sim 10} times.
 The algorithm is particularly suited to provide a high tracking efficiency without affecting the misreconstructed track rate, which is generally challenging.
 Indeed, the increase in misreconstructed tracks reaches \SI{\sim 80}{\percent} when the track $\pt$ threshold is reduced from \num{900} to \SI{300}{\MeV} and the total number of hits to build a track is decreased from 8 to 5.

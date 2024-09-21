@@ -112,7 +112,7 @@ We conclude by mentioning two very recent results, produced after the combinatio
 The first refers to the \hhbbvv{} analysis [[cite:&cms_hh_bbvv_hadr]], which covers so far unexplored all-hadronic final states, with a 13% \ac{BR}.
 Despite the absence of a relevant $\kl$ constrain, the analysis focus on the boosted regime to better constrain $\kvv$, almost excluding $\kvv=0$ by itself.
 The analysis represents the first use of the novel Particle Transformer algorithm [[cite:&transformer]], briefly covered in [[#sec:prospects]], to tag a merged $\text{H}\rightarrow\text{V}\text{V} \rightarrow 4\text{q}$ jet.
-The second result consists on using \ac{VBS} production of $\text{W}^{\pm}\text{W}^{\pm}\text{H}(\rightarrow \text{b}\bar{\text{b}})$ to constrain HHWW couplings, considering only W leptonic channels [[cite:&wwh_kvv_cms_theory;&wwh_kvv_cms]].
+The second result consists of using \ac{VBS} production of $\text{W}^{\pm}\text{W}^{\pm}\text{H}(\rightarrow \text{b}\bar{\text{b}})$ to constrain HHWW couplings, considering only W leptonic channels [[cite:&wwh_kvv_cms_theory;&wwh_kvv_cms]].
 The diagrams also include $\lh{3}$, but given the experimental sensitivity the analysis focuses instead on $\kvv$, being mostly sensitive to $\text{V}=\text{W}$ due to the lepton selection.
 The final constraints are competitive with other subleading channels.
 These new ideas show the potential for a continued deliver of high-quality results in the years to come, always hoping for larger improvements than anticipated.

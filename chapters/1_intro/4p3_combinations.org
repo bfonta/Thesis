@@ -10,7 +10,7 @@ Global fits also further validate individual studies, mostly at the level of the
 
 \Ac{CMS} has recently performed a combination of single and double Higgs production analyses [[cite:&CMSHplusHHcomb]].
 The analyses with the most sensitive production modes are included.
-The main challenge consists on estimating and efficiently removing overlaps between signal regions of different analysis.
+The main challenge consists in estimating and efficiently removing overlaps between signal regions of different analysis.
 Whenever overlaps exist, one of two approaches is taken: either additional selections are applied, or the least sensitive category or analysis is removed.
 As an example, the \bbzz{} analysis is removed in favour of \hzzfourl{} due to the former's relatively low $\kl$ sensitivity.
 Concerning systematics, their modelling in HH processes is generally simpler when compared to single H, due to the limited number of HH events.
