@@ -26,7 +26,7 @@ The general procedure is illustrated in [[fig:simulation]], and described in wha
 The first step involves the /generation/ (GEN) of the physics processes of interest from theoretical principles [[cite:&cms_offline_computing]].
 Generated processes, handled by an event generator, exhibit an enormous variety.
 \Ac{CMS} relies on a rich set of event generators such as =Herwig= [[cite:&herwig1;&herwig2;&herwig3]], =Sherpa= [[cite:&sherpa1]], =Pythia= [[cite:&pythia1;&pythia2]], =PowHeg= [[cite:&powheg]] or =MadGraph= [[cite:&madgraph]].
-The analysis discussed in this Thesis most often uses the last three generators, as described in [[#sec:samples]].
+The analysis discussed in this Thesis most often uses the last three.
 Event generators try to accurately describe the intrinsically random nature of \ac{HEP} collisions or particle decays, using a set of probability distributions to model the subatomic particles produced, along with many of their properties, storing intermediate stages of the event modeling along the way [[cite:&pythia2]].
 Generators aim at describing what an event looks like before interacting with detector elements.
 A generic \ac{pp} collision is usually generated with separate components for practical purposes, namely the hard scattering of two partons, radiative corrections, parton showering (initial and final state radiation), \acp{MPI}, \acp{BBR} and hadronisation.
@@ -37,7 +37,9 @@ To further complicate matters, the \ac{UE} activity is not constant on an event-
 The \ac{MC} modeling can however be tuned by leveraging measurements sensitive to \ac{UE} activity.
 In fact, the full properties of an event cannot be calculated from first principles only.
 A set of \ac{QCD} parameters is thus derived to precisely describe the \ac{UE}.
-These parameters are known as /tunes/, resulting from a complex fitting procedure which, at least in the case of =Pythia=, uses data from \ac{CDF} and \ac{CMS} at different energies.
+These parameters are known as /tunes/, resulting from a complex fitting procedure which, at least in the case of =Pythia=, uses data from the \ac{CDF} and \ac{CMS} at different energies.
+[[fig:event_gen]] illustrates the many pieces in the generation of an event in =Pythia=, for the case of $\ttbar$ production.
+
 #+NAME: fig:event_gen
 #+CAPTION: Simplified illustration of the structure of a $\ttbar$ event, as modeled by =Pythia=. Incoming momenta are depicted as crossed ($p\rightarrow -p$) in order to avoid \acp{BBR} and outgoing \ac{ISR} emissions to criss-cross the central part of the diagram. Taken from [[cite:&pythia_manual]].
 #+BEGIN_figure

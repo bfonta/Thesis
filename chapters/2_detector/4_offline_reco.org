@@ -3,8 +3,8 @@
 :END:
 
 Reconstruction is the operation of building physical quantities from the raw data collected in the experiment.
-Similarly to other \ac{HEP} experiments, \ac{CMS} consists of consecutive barrel and endcap detector layers surrounding the \ac{pp} \ac{IP}.
-As depicted in [[fig:muon_system_slice]], the design includes a tracker, calorimeters, the solenoid and muon chambers, with different detector elements establishing a synergy to detect distinct particle types.
+Similarly to other \ac{HEP} detectors, \ac{CMS} consists of consecutive barrel and endcap detector layers surrounding the \ac{pp} \ac{IP}.
+As depicted in [[fig:muon_system_slice]], the design includes a tracker, calorimeters, the solenoid and muon chambers, with different detector elements establishing a synergy to measure distinct particle types.
 Charged particles, such as electrons[fn:: In this Section, whenever we mention electrons we also mean their anti-particles, positrons, for brevity. The same logic is used for other particle types, when applicable.], muons or charged hadrons, leave energy deposits, or /hits/, in the tracker.
 The relative bending of their trajectories in the solenoid's magnetic field conveys information on their charge and momentum.
 Most particles, either charged or neutral, deposit all their remaining energy in the calorimeters.
@@ -15,11 +15,11 @@ Combining all information above, it should be possible to distinguish many parti
 
 Historically, the first steps in reconstruction at \ac{CMS} foresaw a somewhat rigid structure, where the focus went to localized information in each subdetector [[cite:&old_cms_performance]].
 One would, for instance, reconstruct jets using solely their calorimetric energy deposits, while the identification of individual particles within jets was not pursued.
-Ideas on how to perform reconstruction, based on the layered-structure present in all \ac{HEP} experiments, targeted single physics objects, identified by their subdetector counterparts:
-+ muons are identified mostly based on information from the muon chambers;
-+ electrons and isolated photons are measured by the \ac{ECAL};
-+ jets, \ac{MET} and their properties are all measured in the \ac{ECAL} and \ac{HCAL};
-+ $\tau$ and b jet tagging exploits information from the tracker.
+Ideas on how to perform reconstruction, based on the layered-structure present in all \ac{HEP} experiments, targeted single physics objects, identified by specific subdetectors:
++ muons were identified mostly based on information from the muon chambers;
++ electrons and isolated photons were measured by the \ac{ECAL};
++ jets, \ac{MET} and their properties were all measured in the \ac{ECAL} and \ac{HCAL};
++ $\tau$ and b jet tagging exploited information from the tracker.
 
 It is now clear that a reconstruction relying only on a few subdetectors per particle necessarily provides a lower performance than a holistic approach.
 As an example, the energy resolution of the \ac{CMS} \ac{HCAL} is $\sim 100\%/\sqrt{E}$, which leads to a poor offline resolution if unaccompanied by information from other subdetectors.
@@ -42,11 +42,11 @@ Despite not being designed with \ac{PF} in mind, \ac{CMS} seriously benefited fr
 Among the features that enable a successful \ac{PF} reconstruction at \ac{CMS}, we find:
 
 + a highly-segmented tracker, producing trajectories of charged particles up to $\pt\sim 1\,\si{\TeV}$, and with an efficiency of \SI{\sim 90}{\percent}, down to \SI{\sim 500}{\MeV};
-+ a granular \ac{EM} calorimeter, providing a clear separation between neighboring particles, the capability of matching calorimetric deposits with tracks, and the discrimination of different particles in jets, namely charged hadrons, neutral hadrons and photons, up to $\pt\sim\!1\,\si{\TeV}$;
++ a granular \ac{EM} calorimeter, providing a clear separation between neighboring particles, the capability of matching calorimetric deposits with tracks, and the discrimination between different particles in jets, namely charged hadrons, neutral hadrons and photons, up to $\pt\sim\!1\,\si{\TeV}$;
 + a strong magnetic field, disentangling contributions from charged and neutral particles; the \SI{4.9}{\tesla\meter} bending power can be favorably compared to \ac{ATLAS}, ALEPH, or to Tevatron experiments, all with less than \SI{3}{\tesla\meter}.
 + very precise muon detectors.
 
-Some limitations are nevertheless present, and historically caused concern on the successful implementation of \ac{PF}, especially given the complex \ac{pp} and \ch{Pb}\ch{Pb} environments.
+Some limitations are nevertheless present, and historically caused concern on the successful implementation of \ac{PF}, especially given the complex \ac{pp} and heavy ion environments.
 The existence of a significant amount of tracker material in front of the calorimeters represents a limitation, inasmuch as it increases the probability for a charged particle to preshower, making the matching between tracks and energy deposits in the calorimeter harder to accomplish.
 This is the case in spite of the placement of the calorimeters inside the solenoid, which is meant to improve the matching.
 Additionally, the \ac{HCAL} is known to have a relatively poor energy and position resolutions.
@@ -66,7 +66,7 @@ The latter correspond to the building blocks of all physics objects used in \ac{
 #+END_figure
 
 ** PF Tracks
-Reconstructing charged particles consists in recreating their trajectories from individual hits, and extracting particle properties from those trajectories.
+Reconstructing tracks consists in recreating their trajectories from individual hits, and extracting physical properties from those trajectories.
 At \ac{CMS}, an iterative tracking algorithm was devised, where a combinatorial track finder procedure based on \acp{KF} [[cite:&tracker_kf]] is sequentially applied \num{\sim 10} times.
 The algorithm is particularly suited to provide a high tracking efficiency without affecting the misreconstructed track rate, which is generally challenging.
 Indeed, the increase in misreconstructed tracks reaches \SI{\sim 80}{\percent} when the track $\pt$ threshold is reduced from \num{900} to \SI{300}{\MeV} and the total number of hits to build a track is decreased from 8 to 5.
@@ -81,11 +81,11 @@ The iterations separately target tracks with low hit multiplicity, displaced tra
 The last iterations specifically focus on the reconstruction of muon tracks, by exploiting hits in the muon detectors.
 
 ** PF Clusters
-The \ac{PF} clustering algorithm runs separately in most calorimeter subdetectors: barrel and endcaps for the \ac{ECAL} and \ac{HCAL}, and the two preshower layers.
+The \ac{PF} clustering algorithm runs separately in most subdetectors of the calorimeter: barrel and endcaps for the \ac{ECAL} and \ac{HCAL}, and the two preshower layers.
 The task is particularly challenging given constant overlaps between photons, neutral and charged hadrons, and electrons with their bremsstrahlung energy deposits.
-Clustering also plays an essential role in cases where the tracker underperforms, which happens for low track efficiencies or high track $\pt$ values.
+Clustering also plays an essential role in cases where the tracker underperforms, which happens for low quality and high $\pt$ tracks.
 The algorithm starts by defining /seeds/, which correspond to detector elements with an energy larger than its neighbors and larger than a predefined threshold.
-Topological clusters are then built, centered on the seeds, based on the physical connection of neighboring cells with energies larger than a given S/N threshold.
+Topological clusters are then built, centered on the seeds, based on the physical connection of neighboring cells with energies larger than a given S/N[fn:: Signal over noise.] threshold.
 An iterative algorithm based on a Gaussian mixing model is used to reconstruct clusters within the topological clusters.
 The algorithm postulates a fixed number of seeds, and associates a Gaussian function to each, allowing some room for energy sharing across clusters.
 The positions and energies of the clusters are obtained via a maximum likelihood fit.
@@ -95,10 +95,10 @@ Once computed, clusters need to be calibrated to obtain the correct energy scale
 A precise calibration of the calorimetric response facilitates \ac{PID} by removing calorimetric overlaps, such as the ones between photons and hadrons.
 A first and generic calibration step exploits cosmic rays, radioactive decays and testbeam data to improve the energy scale in the calorimeters.
 The raw energy measured by the detector is expected to be lower than the real energy due to inefficiencies and acceptance "holes", and given the numerous threshold cuts applied in the clustering steps.
-A more detailed calibration is first performed on \ac{ECAL}, also taking into account the two preshower layers.
+A more detailed calibration is first performed at \ac{ECAL}, also taking into account the two preshower layers.
 The calibration estimates the \ac{ECAL} response to electrons and hadrons with a $\chi^{2}$ minimization fit.
 For low energies, the corrections can be as large as \SI{\sim 20}{\percent}.
-A second, similar calibration step is run on \ac{HCAL}, on top of the \ac{ECAL} calibration.
+A second, similar calibration step is run at \ac{HCAL}, on top of the \ac{ECAL} calibration.
 Separate calibrations are needed given the different responses of calorimeters to hadrons, as explained in the next paragraph.
 Both calibrations are done as a function of cluster energy and \ac{eta}.
 The \ac{HAD} calibration is also done separately for \ac{HAD} showers leaving energy in both calorimeters or in the \ac{HAD} section alone.
@@ -115,14 +115,15 @@ However, the \ac{EM} fraction increases significantly with energy, mainly due to
 The observed dependence, coupled with the invisible energy phenomenon, implies that all homogeneous and most sampling calorimeters are non-linear in what concerns their energy response.
 Whenever the response to the \ac{EM} component is different than the response to the non-\ac{EM} component, the calorimeter is said to be /non-compensating/.
 The \ac{CMS} calorimeter, in particular, /undercompensates/, since its non-\ac{EM} response is always lower than the \ac{EM} one.
-
-Would the invisible energy fraction be the same for every event, and no resolution degradation would be expected.
+Would the invisible energy fraction be the same for every event, and it would be possible to fix the resolution degradation.
 Unfortunately, \ac{HAD} showers are prone to very large event-to-event fluctuations, caused by the large variety of strong interactions that can occur during the shower's development.
 Because of these fluctuations, the energy resolution of hadron calorimeters is usually significantly worse than the \ac{EM} energy resolution [[cite:&wigmans]].
 All this justifies the existence of separate calibration steps.
 Additionally, barrel and endcap regions are calibrated separately to deal with different cell sizes and thresholds.
 
 ** PF Linking
+When a particle crosses CMS, it usually produces many \ac{PF} elements in various subdetectors, namely \ac{PF} tracks and \ac{PF} clusters.
+As an example, at least one \ac{PF} track in the inner tracker and one \ac{PF} cluster in the \ac{ECAL} are expected to be formed by an electron.
 A linking algorithm proceeds to connect \ac{PF} elements coming from different subdetectors into /\ac{PF} blocks/, using only its $(\eta,\phi)$ nearest neighbors to reduce time complexity.
 Once a link is found, depending on selection criteria associated to the particles being linked, a distance or quality metric is associated to it.
 Links are established in a detector- and particle-dependent way.
@@ -136,8 +137,8 @@ In total, five link types exist, connecting the individual \ac{PF} tracks and \a
 ** Identification and reconstruction
 Once \ac{PF} blocks are formed, the identification and reconstruction sequence follows a fixed order:
 1. muon candidates are identified and reconstructed, and their \ac{PF} tracks and \ac{PF} clusters are removed from the block;
-2. electrons, including the collection of all bremsstrahlung photons, plus energetic and isolated photons are also identified, and all corresponding \ac{PF} elements are masked;
-3. remaining tracks with a large uncertainties are masked, decreasing the track misreconstruction rate, but increasing the inefficiency for some high-$\pt$ charged hadrons, which are anyways more precisely measured in the calorimeters;
+2. electrons, including the collection of all bremsstrahlung photons, plus energetic and isolated photons, are also identified, and all corresponding \ac{PF} elements are masked;
+3. remaining tracks with large uncertainties are masked, decreasing the track misreconstruction rate, but increasing the inefficiency for some high-$\pt$ charged hadrons, which are anyways more precisely measured in the calorimeters;
 4. the \ac{PF} elements still left in the block are reconstructed as photons and as charged and neutral hadrons, including hadrons interacting strongly in the tracker.
 When the above has been run for all \ac{PF} blocks, a final post-processing, or cleaning step corrects residual identification and reconstruction inefficiencies.
 The particles produced by \ac{PF} can be directly used in physics analyses.
@@ -211,7 +212,7 @@ The benefits arising from the all-encompassing \ac{PF} approach can be appreciat
 The improvement in the association of converted bremsstrahlung photons to their parent electron also minimizes double counting in later \ac{PF} steps.
 
 #+NAME: fig:pflow_gains
-#+CAPTION: \Ac{PF} performance. Taken from [[cite:&particle_flow]]. (Left) Electron seeding efficiency for electrons (triangles) and pions (circles) as a function of $\pt$, from a simulated event sample enriched in b quark jets with $\si{80} < \pt < 170\,\si{\GeV}$, and with at least one semi-leptonic b hadron decay. One can compare the efficiencies between the \ac{ECAL} based seeding with (solid symbols) and without (hollow symbols) the tracker-based seeding. (Right) Jet energy response of Calo and \ac{PF} jets, as a function of the momentum of the reference jet, $p_{\text{T}}^{\text{Ref}}$, using the anti-$\ktalgo$ algorithm with $R=0.4$ (see [[eq:jet_antikt]]). The reference jet is defined as the result of the jet algorithm applied to all stable particles produced by the event generator, excluding neutrinos.
+#+CAPTION: \Ac{PF} performance. Taken from [[cite:&particle_flow]]. (Left) Electron seeding efficiency for electrons (triangles) and pions (circles) as a function of $\pt$, from a simulated event sample enriched in b quark jets with $\si{80} < \pt < 170\,\si{\GeV}$, and with at least one semi-leptonic b hadron decay. One can compare the efficiencies between the \ac{ECAL} based seeding with (solid symbols) and without (hollow symbols) the tracker-based seeding. (Right) Jet energy response of Calo and \ac{PF} jets, as a function of the momentum of the reference jet, $p_{\text{T}}^{\text{Ref}}$, using the anti-$\ktalgo$ algorithm with $\text{R}=0.4$ (see [[eq:jet_antikt]]). The reference jet is defined as the result of the jet algorithm applied to all stable particles produced by the event generator, excluding neutrinos.
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/detector/PFElectronSeedingGain.pdf]]
