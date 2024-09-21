@@ -1,38 +1,62 @@
-
-
-More than ten years have passed since the observation of the Higgs boson by the CMS and ATLAS Collaborations at the CERN Large Hadron Collider (LHC).
-What seemed the first of a series of discoveries bound to reshape the field of Particle Physics, surprisingly turned into an impressive statement of the solid foundations upon which the Standard Model (SM) of Particle Physics is built.
+More than ten years have passed since the observation of the Higgs boson by the CMS and ATLAS Collaborations at the CERN Large Hadron Collider (LHC) [[cite:&ATLAS_Higgs_discovery;&CMS_Higgs_discovery1;&CMS_Higgs_discovery2]].
+What seemed the first of a series of discoveries bound to reshape the field of High Energy Physics, surprisingly turned into an impressive statement of the solid foundations upon which the Standard Model (SM) of Particle Physics is built.
 Despite its success, the SM cannot be the ultimate answer to all mysteries the Universe still conceals; multiple theoretical issues and cosmological observations show otherwise.
-The work reported in this Thesis provides a contribution to the search for signs of New Physics (NP), via the analysis of computer simulations and data collected by the CMS experiment, and through studies and software developments for the future High Granularity Calorimeter (HGCAL), one of the major upgrades that CMS will soon encounter with the coming of the High-Luminosity LHC (HL-LHC).
+The seed for the next big discovery can nonetheless lie where the SM was completed: the Higgs boson might still hide many surprises, and represent the gateway to a new understanding of fundamental interactions.
+Unfortunately, given the remarkable predictive power of the SM, few are expecting a revolution in the near future.
+The Higgs boson tri-linear coupling is still left unmeasured, but who does really believe anything else than yet another agreement will be obtained?
+Many motivated models introduce new particles addressing the known drawbacks of the SM; but would there be any physicist betting that such resonances will be found in the next two decades?
+This Thesis instead proposes a more positive view, where measurements are done not based on hopes but on certainties: the High Energy Physics community has access to some of the most complex pieces of engineering ever built, and measurements should be performed on every conceivable physical quantity, since Nature does not follow human speculation[fn:: "Talk is cheap. Show me the code."].
+One century ago, no one thought that ordinary matter was about five times less common than a mysterious "dark" form of matter.
+Before the 50's, every scientist would have sworn that Nature follows a left-right symmetry.
+Revolutions are found where one least expects them, and this Thesis pursues such noble goals by providing contributions on detector and analysis work, to be added to the stack of human knowledge which will inevitably lift the veil on Nature's next revelation.
 
-the bbtt channel has historically provided the best performances, being one of the three "silver bullets" of double Higgs boson physics.
-
+# HH work
+Are there particles decaying to a pair of Higgs bosons?
+This apparently simple question has been the source of innumerous studies in the last few years, of ever increasing complexity.
+The measurement of such processes would provide a clear evidence for physics Beyond the Standard Model (BSM).
+With a measurement of the resonant production of Higgs boson pairs (HH), this Thesis aims at providing the most precise answer ever obtained to that question, using the \bbtt{} decay channel, and exploiting CMS \run{2} proton-proton data obtained at a center-of-massy energy of \SI{13}{\TeV}.
+Results drawn from searches for New Physics (NP) always benefit the scientific community.
+Even if no excess is found, the parameter phase-space allowing NP is reduced, forcing theoretical physicists to come up with innovative solutions to the still unresolved inconsistencies.
+The results here expounded should also take advantage from a statistical combination with similar analyses in other decay channels, to provide the most performant results possible, demonstrating the necessity of joining efforts to push fundamental laws to the limit.
+This work also serves as a starting point for future endeavours, much like past results provided the inspiration for the manuscript you are now reading.
+The analysis work is planned to be publicly presented at the "59th Rencontres de Moriond 2025" conference.
+During the three years of my PhD, I have given several presentations on Higgs physics at multiple CMS internal meetings, in a LHC-wide workshop [[cite:&lhc_wg_workshop_bruno]], and in the "31st International Workshop on Deep Inelastic Scattering", leading to a publication in /Proceedings of Science/ [[cite:&bruno_dihiggs_grenoble]].
+An unrelated talk on "Techniques for SMEFT fit" was also given at the "QCD@LHC 2022" conference [[cite:&bruno_smeft_fits]].
 
 # interferences
-a novel study on interference effects by BSM particles on the continuous HH background is presented.
-The study is framed in the context of the singlet model,
+The work in the previous paragraph adopts a widespread simplification, namely the usage of the Narrow Width Approximation (NWA), which states that the widths of the probed BSM resonances are much smaller than the resolution of our detectors, thus having no effect on measured quantities.
+In practice, the signal models against which the data is compared are defined with a negligible width.
+Recent sensitivity improvements have questioned whether the veracity of such claim still holds.
+In this Thesis, I exploit the simplest extension of the SM, the singlet model, to probe the relevant phase-space, compare it with current state-of-the-art HH upper limits, and conclude on whether the NWA is still valid, or if the interference between the resonances and the SM background can no longer be ignored.
+For completeness, singlet model projections at higher luminosity values are produced.
+This represents the first time the impact of the NWA is assessed at CMS.
+The work was included as part of CMS review paper title "Searches for Higgs boson production through decays of heavy resonances", which has been accepted for publication at /Physics Reports/.
 
-
-
-- SM, BSM
-+ LHC, CMS
-
-+ hgcal: published proceedings [[cite:&bruno_chep23]] and citable software presentation at PyHEP [[cite:&bruno_pyhep23]], software being used by multiple students
-+ conference talk on SMEFT [[cite:&bruno_smeft_fits]]
-+ physics analysis to be made public by Moriond 2025; proceedings accepted for publication at Proceedings of Science "Di-Higgs searches at CMS" [[cite:&bruno_dihiggs_grenoble]]
-+ review paper accepted for publication at Physics Reports, first CMS study ever with interference effects "Searches for Higgs boson production through decays of heavy resonances" [[cite:&interf_studies]]
-  
+# HGCAL
+One should never forget that all the interesting studies above are fully dependent on the workings of accelerators and detectors, made possible by the joint effort of thousands of physicists and engineers.
+From the point of view of someone doing a physics analysis, I think it is quite humbling to realize that a poor analysis leads to a weak result, but a poor detector leads to no result at all.
+As experimental apparatuses get more and more complex, contributions must come from all sides to establish a sound hardware and software infrastructure, ultimately leading to an improved reconstruction.
+I am naturally considering the future High Luminosity LHC (HL-LHC), an accelerator meant to push the boundaries of what the LHC has so far provided, leading to a plethora of possible improvements of the measurements performed by related experiments, including Higgs physics.
+The CMS detector will be forced to undergo a major upgrade, at all levels, to preserve its capabilities, and possibly extend them, while facing the harshest particle environment ever sustained by any collider experiment.
+Particularly interesting in the context of this work is the High Granularity Calorimeter (HGCAL), one of the most ambitious projects to have ever been undertaken at CERN.
+It consists of an endcap calorimeter with unprecedented transversal and longitudinal granularities, designed with a mixed silicon and scintillator technology, and capable of tolerating the expected extreme radiation levels.
+I have developed algorithms within a new reconstruction framework, thus contributing to the reconstruction of Trigger Primitives (TPs) in HGCAL.
+TPs constitute a foundational element of the first level of the online CMS trigger, for it to make an informed decision on which events to keep, among the colossal data rates provided by the HL-LHC.
+The work consists of providing a convenient TP reconstruction framework to be used by several people, and the development of mitigation techniques to address inefficiencies in the clustering stage.
+The framework also includes a simplified version of HGCAL's geometry.
+The work has been presented at the "26th International Conference on Computing in High Energy and Nuclear Physics (CHEP)" conference, leading to a publication at /EPJ Web of Conferences/ [[cite:&bruno_chep23]].
+The developed software further lead to a citable presentation at the "PyHEP 2023 Workshop" [[cite:&bruno_pyhep23]].
 
 # Summary
 [[#sec:intro_intro]] begins with a portray of the theoretical, phenomenological and experimental landscape surrounding Higgs boson physics.
-The underlying fundamentals of the SM are provided, together with its noticeable shortcomings, unambiguosly stating the clear motivations to pursue studies on the Higgs boson, and especially on processes involving Higgs boson pairs.
-I also contextualize the resonant \bbtt{} channel with the profusion of both single and double Higgs boson phenomena which have been measured since the discovery of the Higgs boson took place, 12 years ago.
+The underlying SM fundamentals are provided, together with its noticeable shortcomings, unambiguously stating the clear motivations to pursue studies on the Higgs boson, and especially on processes involving Higgs boson pairs.
+I also contextualize the resonant \bbtt{} channel within the profusion of both single and double Higgs boson phenomena, which have been measured since the discovery of the Higgs boson, 12 years ago.
 These discoveries would not have been possible without the CMS detector at the LHC, presented in [[#sec:cern]].
-Besides the detector itself, I provide a succinct description of its trigger system and offline reconstruction, giving special emphasis on the Particle Flow algorithm, so that every physics object used throughout the Thesis is well defined.
-The processing of data and \ac{MC} samples within the \ac{CMS} software is also covered.
-[[#sec:intro_tps]] contains my first original contribution, connected to the HL-LHC and the new HGCAL that CMS will exploit.
-There, contributions to the reconstruction of Trigger Primitives in the L1 trigger of CMS are described in great detail.
-The analysis of \ac{CMS} datasets is then depicted, specifically the search for resonant HH production in the \bbtt{} channel.
+Besides the detector itself, I provide a succinct description of its trigger system and offline reconstruction, giving special emphasis to the Particle Flow algorithm, so that every physics object used throughout the Thesis is well defined.
+The processing of data and Monte Carlo samples within the CMS software is also covered.
+[[#sec:intro_tps]] contains my first original contribution, connected to the HL-LHC and the new HGCAL calorimeter that CMS will exploit.
+There, contributions to the reconstruction of Trigger Primitives in the L1 trigger of CMS are exhaustively described.
+The analysis of CMS datasets is then depicted, specifically the search for resonant HH production in the \bbtt{} channel.
 I detail the analysis' triggering, selection and correction steps in [[#sec:analysis1_intro]], and proceed to obtain the results in [[#sec:analysis2_intro]], where a description of the final discriminant, systematic uncertainties and statistical methodology is included, and where future prospects are delineated.
 The Thesis concludes in [[#sec:interf_intro]], where the study on interference effects is presented.
-There, we can deduce the unfolding of a paradigm shift regarding Higgs boson resonant searches.
+There, we can deduce the unfolding of a paradigm shift concerning Higgs boson resonant searches.
