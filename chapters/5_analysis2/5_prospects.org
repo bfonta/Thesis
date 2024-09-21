@@ -81,8 +81,8 @@ The expected upper limits at 95% \ac{CL} on the \xhhbbtt{} cross section, projec
 [[~/org/PhD/Thesis/figures/analysis2/prospects_combination.pdf]]
 #+END_figure
 
-Comparing the combination result with this Thesis' \spin{0} result, one can unsurprisingly conclude that improvements are expected for the \ac{HL-LHC} period.
-However, for some $\mx$ values, the comparison is actually favorable to our result, which has \num{\sim 22} times less luminosity that what will be available at the \ac{HL-LHC}.
+Comparing the combination result with this Thesis' \spin{0} result, one can unsurprisingly conclude that significant improvements are expected for the \ac{HL-LHC} period.
+However, for some $\mx$ values in the \bbtt{} channel, the comparison shows similar results, despite our analysis having \num{\sim 22} times less luminosity that what will be available at the \ac{HL-LHC}.
 Including our limits in the next \ac{CMS} projection studies should thus improve limits by a good margin, in principle similar to the increased sensitivity in the $450 \leq \mx \leq 800 \,\si{\GeV}$ range for the current combination.
 In parallel, \xyh{} analyses, where the Y scalar decays to $\bbbar$, are also projected into the future, considering the same three scenarios.
 Interestingly, the \bbtt{} final state is shown to drive the sensitivity when both X and Y scalar have a low mass, and also when they both have a high mass, for the reasons discussed in [[#sec:direct_searches]].

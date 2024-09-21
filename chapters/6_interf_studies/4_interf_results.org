@@ -82,6 +82,29 @@ Compared to the present limits, the largest improvement is observed for large ma
 [[~/org/PhD/Thesis/figures/interferences/prospects.pdf]]
 #+END_figure
 
+We can also inspect the impact the expected limits obtained in [[#sec:analysis2_intro]] have on singlet model and its interference with the SM.
+The results are shown in [[fig:interf_maps_priv]], where two things become clear.
+Firstly, the \bbtt{} results obtained in this Thesis, as had been discussed before, clearly drive the sensitivity of the \ac{CMS} combination for intermediate masses.
+Secondly, the validity of the NWA becomes less evident for $\mx=500/600\,\si{\GeV}$, still using \run{2} data.
+Our result is also overlayed with the combined HH projections, as shown in [[fig:interf_maps_proj_priv]].
+We perform better than the full combination at the end of \run{3}, using the \bbtt{} channel only.
+
+#+NAME: fig:interf_maps_priv
+#+CAPTION: This Figure is identical to [[fig:interf_maps]], except for the addition of the black contours, referring to the results obtained in [[#sec:analysis2_intro]]. The validity of the NWA is put into question more strongly, especially at $\mx=500/600\,\si{\GeV}$.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width 1.\textwidth :center :options trim={1cm 1cm 1cm 1cm},clip
+[[~/org/PhD/Thesis/figures/interferences/bbtt_private.pdf]]
+#+END_figure
+
+#+NAME: fig:interf_maps_proj_priv
+#+CAPTION: This Figure is identical to [[fig:interf_prospects]], except for the addition of the black contours, referring to the results obtained in [[#sec:analysis2_intro]]. Our \run{2} result outperforms the combined projections for the end of \run{3}, starting at $\mx=400\,\si{\GeV}$ mass points.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width 1.\textwidth :center :options trim={1cm 1cm 1cm 1cm},clip
+[[~/org/PhD/Thesis/figures/interferences/bbtt_proj_private.pdf]]
+#+END_figure
+
 We finalize this Chapter by noting that all conclusions drawn above are model dependent, and may well be different for other \ac{BSM} scenarios.
 This means that distortions could be stronger and affected parameter regions could be larger.
 We also recall that a (reasonable) choice of parameter thresholds had to be made, and which could have been different.
