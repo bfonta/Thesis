@@ -254,7 +254,7 @@ The additional trigger enables to fully recover the lost efficiency.
 
 The \acp{SF} are used to correct the \ac{MC} event-by-event, only for events within the \ac{MET} region, as discussed in [[#sec:trigger_regions]], and after applying a turn-on cut.
 The cut is set to \SI{180}{\GeV} for all eras.
-The value is chosen based on the control distributions shown in [[ref:fig:met_sf_control_etau_2018,fig:met_sf_control_mutau_2018,fig:met_sf_control_tautau_2018]].
+The value is chosen based on the control distributions shown in [[ref:fig:met_sf_control_etau_2017,fig:met_sf_control_mutau_2017,fig:met_sf_control_tautau_2017]].
 Whenever an event has a $\metnomu$ value above \SI{350}{\GeV}, the \ac{SF} is taken to be exactly 1 for all eras.
 Uncertainties are calculated using the uncertainties from the sigmoid fit and applying error-propagation for the ratio.
 The uncertainty values of the sigmoid functions at the upper limit of the fit range are used whenever the event has a $\metnomu$ value lying above the fit validity range.
@@ -262,13 +262,13 @@ The turn-on cut at \SI{180}{\GeV} prevents this from happening for values below 
 Despite the low statistics involved, one can see that the $\metnomu$ \acp{SF} improve the description of the observed data.
 
 #+NAME: fig:compare_ratios
-#+CAPTION: Data/\ac{MC} \acp{SF} of $\metnomu$ trigger efficiencies. \Acp{SF} are extracted from the ratio of the sigmoid fits of data and \ac{MC} efficiency curves, implemented to smooth out the \acp{SF}' distributions. (Left) Five different fit ranges were tested, and zoomed in the turn-on region to better display differences. All fits are reasonably compatible, except for the full range fit, which cannot describe the data. We decided to use the fit starting at \SI{150}{\GeV}, for all data periods. (Right) The \acp{SF} are observed to be compatible between the \mutau{} and \mumu{} channels, within statistical uncertainties.
+#+CAPTION: Data/\ac{MC} \acp{SF} of $\metnomu$ trigger efficiencies, in 2017. \Acp{SF} are extracted from the ratio of the sigmoid fits of data and \ac{MC} efficiency curves, implemented to smooth out the \acp{SF}' distributions. (Left) Five different fit ranges were tested, and zoomed in the turn-on region to better display differences. All fits are reasonably compatible, except for the full range fit, which cannot describe the data. We decided to use the fit starting at \SI{150}{\GeV}, for all data periods. (Right) The \acp{SF} are observed to be compatible between the \mutau{} and \mumu{} channels, within statistical uncertainties.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2018.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_ranges_2017.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2018.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_channels_2017.pdf]]
 #+END_figure
 
 #+NAME: fig:compare_ratios_years
@@ -279,58 +279,58 @@ Despite the low statistics involved, one can see that the $\metnomu$ \acp{SF} im
 [[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/compare_ratios_years.pdf]]
 #+END_figure
 
-#+NAME: fig:met_sf_control_etau_2018
-#+CAPTION: Comparison of chosen distributions without (left) and with (right) $\metnomu$ \acp{SF}, for events triggered only by the $\metnomu$ trigger, in 2018. We display the $\tau(\pt)$ (top), $\tau(|\eta|)$ (middle) and $\metnomu$ (bottom) for the \eletau{} channel. The $\metnomu$ \acp{SF} decrease the data to \ac{MC} mismatch. Events triggered by \ac{MET} with $\metnomu$ below \SI{180}{\GeV} are removed from the \ac{SR}.
+#+NAME: fig:met_sf_control_etau_2017
+#+CAPTION: Comparison of chosen distributions without (left) and with (right) $\metnomu$ \acp{SF}, for events triggered only by the $\metnomu$ trigger, in 2017. We display the $\tau(\pt)$ (top), $\tau(|\eta|)$ (middle) and $\metnomu$ (bottom) for the \eletau{} channel. The $\metnomu$ \acp{SF} decrease the data to \ac{MC} mismatch. Events triggered by \ac{MET} with $\metnomu$ below \SI{180}{\GeV} are removed from the \ac{SR}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_ETau_2018_dau2_pt.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_ETau_2017_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_ETau_2018_dau2_pt.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_ETau_2017_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_ETau_2018_dau2_eta.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_ETau_2017_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_ETau_2018_dau2_eta.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_ETau_2017_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_ETau_2018_metnomu_et.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_ETau_2017_metnomu_et.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_ETau_2018_metnomu_et.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_ETau_2017_metnomu_et.pdf]]
 #+END_figure
 
-#+NAME: fig:met_sf_control_mutau_2018
-#+CAPTION: Comparison of chosen distributions without (left) and with (right) $\metnomu$ \acp{SF}, for events triggered only by the $\metnomu$ trigger, in 2018. We display the $\tau(\pt)$ (top), $\tau(|\eta|)$ (middle) and $\metnomu$ (bottom) for the \mutau{} channel. The $\metnomu$ \acp{SF} decrease the data to \ac{MC} mismatch. Events triggered by \ac{MET} with $\metnomu$ below \SI{180}{\GeV} are removed from the \ac{SR}.
+#+NAME: fig:met_sf_control_mutau_2017
+#+CAPTION: Comparison of chosen distributions without (left) and with (right) $\metnomu$ \acp{SF}, for events triggered only by the $\metnomu$ trigger, in 2017. We display the $\tau(\pt)$ (top), $\tau(|\eta|)$ (middle) and $\metnomu$ (bottom) for the \mutau{} channel. The $\metnomu$ \acp{SF} decrease the data to \ac{MC} mismatch. Events triggered by \ac{MET} with $\metnomu$ below \SI{180}{\GeV} are removed from the \ac{SR}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_MuTau_2018_dau2_pt.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_MuTau_2017_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_MuTau_2018_dau2_pt.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_MuTau_2017_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_MuTau_2018_dau2_eta.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_MuTau_2017_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_MuTau_2018_dau2_eta.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_MuTau_2017_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_MuTau_2018_metnomu_et.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_MuTau_2017_metnomu_et.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_MuTau_2018_metnomu_et.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_MuTau_2017_metnomu_et.pdf]]
 #+END_figure
 
-#+NAME: fig:met_sf_control_tautau_2018
-#+CAPTION: Comparison of chosen distributions without (left) and with (right) $\metnomu$ \acp{SF}, for events triggered only by the $\metnomu$ trigger, in 2018. We display the $\tau(\pt)$ (top), $\tau(|\eta|)$ (middle) and $\metnomu$ (bottom) for the \tautau{} channel. The $\metnomu$ \acp{SF} decrease the data to \ac{MC} mismatch. Events triggered by \ac{MET} with $\metnomu$ below \SI{180}{\GeV} are removed from the \ac{SR}.
+#+NAME: fig:met_sf_control_tautau_2017
+#+CAPTION: Comparison of chosen distributions without (left) and with (right) $\metnomu$ \acp{SF}, for events triggered only by the $\metnomu$ trigger, in 2017. We display the $\tau(\pt)$ (top), $\tau(|\eta|)$ (middle) and $\metnomu$ (bottom) for the \tautau{} channel. The $\metnomu$ \acp{SF} decrease the data to \ac{MC} mismatch. Events triggered by \ac{MET} with $\metnomu$ below \SI{180}{\GeV} are removed from the \ac{SR}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_TauTau_2018_dau2_pt.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_TauTau_2017_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_TauTau_2018_dau2_pt.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_TauTau_2017_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_TauTau_2018_dau2_eta.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_TauTau_2017_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_TauTau_2018_dau2_eta.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_TauTau_2017_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_TauTau_2018_metnomu_et.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_TauTau_2017_metnomu_et.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_TauTau_2018_metnomu_et.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_TauTau_2017_metnomu_et.pdf]]
 #+END_figure
 
 * DeepTau Scale Factors for Hadronic Tau Leptons
