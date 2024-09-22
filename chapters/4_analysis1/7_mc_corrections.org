@@ -284,17 +284,17 @@ Despite the low statistics involved, one can see that the $\metnomu$ \acp{SF} im
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_ETau_NoSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_ETau_2018_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_ETau_WithSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_ETau_2018_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_ETau_NoSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_ETau_2018_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_ETau_WithSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_ETau_2018_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_ETau_NoSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_ETau_2018_metnomu_et.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_ETau_WithSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_ETau_2018_metnomu_et.pdf]]
 #+END_figure
 
 #+NAME: fig:met_sf_control_mutau_2018
@@ -302,17 +302,17 @@ Despite the low statistics involved, one can see that the $\metnomu$ \acp{SF} im
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_MuTau_NoSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_MuTau_2018_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_MuTau_WithSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_MuTau_2018_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_MuTau_NoSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_MuTau_2018_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_MuTau_WithSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_MuTau_2018_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_MuTau_NoSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_MuTau_2018_metnomu_et.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_MuTau_WithSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_MuTau_2018_metnomu_et.pdf]]
 #+END_figure
 
 #+NAME: fig:met_sf_control_tautau_2018
@@ -320,17 +320,17 @@ Despite the low statistics involved, one can see that the $\metnomu$ \acp{SF} im
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_TauTau_NoSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_TauTau_2018_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_pt_baseline_SR_TauTau_WithSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_TauTau_2018_dau2_pt.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_TauTau_NoSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_TauTau_2018_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_dau2_eta_baseline_SR_TauTau_WithSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_TauTau_2018_dau2_eta.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_TauTau_NoSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/no_met_sf/plot_baseline_SR_TauTau_2018_metnomu_et.pdf]]
 #+ATTR_LATEX: :width .49\textwidth :center
-[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/controlplots/2018/plot_metnomu_et_baseline_SR_TauTau_WithSF.pdf]]
+[[~/org/PhD/Thesis/figures/mc_corrections/met_scalefactors/with_met_sf/plot_baseline_SR_TauTau_2018_metnomu_et.pdf]]
 #+END_figure
 
 * DeepTau Scale Factors for Hadronic Tau Leptons
