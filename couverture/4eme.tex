@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Modèle pour la 4ème de couverture des thèses préparées à l'Institut Polytechnique de Paris, basé sur le modèle produit par Nikolas STOTT / Template for back cover of thesis made at Institut Polytechnique de Paris, based on the template made by Nikolas STOTT
+%%% Mis à jour par Aurélien ARNOUX (École polytechnique)/ Updated by Aurélien ARNOUX (École polytechnique)
+%%% Les instructions concernant chaque donnée à remplir sont données en bloc de commentaire / Rules to fill this file are given in comment blocks
+%%% ATTENTION Ces informations doivent tenir sur une seule page une fois compilées / WARNING These informations must contain in no more than one page once compiled
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Version du 28 avril 2020 : utilisation de .png au lieu de .jpg pour les logos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[fontsize=8.95pt]{fontsize}
+\usepackage{geometry}
+\geometry{
+left=5mm, %16
+top=30mm,
+right=5mm, %16
+bottom=30mm %30
+}
+\usepackage{xcolor}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{multicol}
+\setlength{\columnseprule}{0pt}
+\setlength\columnsep{8pt} %10
+
+\usepackage[french]{babel}
+
+\label{form}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Formulaire / Form
+%%% Remplacer les paramètres des \newcommand par les informations demandées / Replace \newcommand parameters by asked informations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\logoEd}{EDIPP}																		%% Logo de l'école doctorale. Indiquer le sigle (EDIPP, EDMH) / Doctoral school logo. Indicate the acronym : EDMH, EDIPP
+\newcommand{\PhDTitleFR}{Recherche de production résonante de paires de bosons de Higgs dans le canal de désintégration bb$\tau\tau$ et développements dans la reconstruction des primitives de déclenchement du Calorimètre à Haute Granularité avec le détecteur CMS au LHC}													%% Titre de la thèse en français / Thesis title in french
+\newcommand{\keywordsFR}{Higgs, HGCAL, CMS, LHC, Primitives de Déclenchement}														%% Mots clés en français, séprarés par des , / Keywords in french, separated by ,
+\newcommand{\abstractFR}{Nous presentons une analyse de la production résonante de paires de bosons de Higgs (HH), se désintégrant en quarks b et en leptons $\tau$, avec l'expérience CMS au Grand Collisionneur de Hadrons (LHC) du CERN.
+L'analyse exploite les 138 fb$^{-1}$ de données de collisions proton-proton collectés entre 2016 et 2018 à une énergie au centre de masse de 13$\,$TeV.
+Ce processus résonant est fortement motivé par un grand nombre de théories capables de répondre aux lacunes actuelles du Modèle Standard (SM).
+Le canal de désintégration étudié présente plusieurs avantages expérimentaux, à savoir une signature de l'état final relativement pure, équilibrée par un rapport d’embranchement modérée de 7.3\%.
+Les résultats d'une étude similaire ont été récemment publiés par la collaboration ATLAS, rapportant une tension avec le SM pour une masse invariante du système HH d'environ 1$\,$TeV.
+L'analyse effectuée ici vise donc à confirmer ou à rejeter un tel excès.
+Les limites supérieures attendues, avec un niveau de confiance de 95\%, sont fixées sur la production de signatures de nouvelle physique, et représentent une amélioration considérable par rapport aux résultats antérieurs de CMS et d'ATLAS.
+Par ailleurs, ces travaux s'attaquent à une simplification majeure exploitée par les recherches résonantes en physique des hautes énergies, à savoir l'Approximation de Faible Largeur (NWA), qui suppose que la largeur des nouvelles résonances est négligeable par rapport à la résolution du détecteur, ignorant les effets d'interférence potentiels.
+Nous montrons que le niveau de sensibilité actuel des analyses HH est tel qu'il remet en question la validité de la NWA, ce qui laisse présager la nécessité d'éviter complètement cette approximation dans des analyses futures.
+
+Les travaux décrits portent également sur l'amélioration de la sensibilité des détecteurs.
+Le futur LHC à haute luminosité (HL-LHC) apportera un grand nombre de collisions par croisement de paquets de protons et des niveaux de radiation extrêmement élevés, qui ne pourront être soutenus que par un programme très important de mise à niveau des détecteurs au sein de CMS.
+L'une des sections modernisées sera celle des bouchons, où le nouveau calorimètre à haute granularité (HGCAL) sera installé.
+Le HGCAL offre de nombreuses possibilités d'études et d'optimisations, et deviendra certainement une pierre angulaire de la prochaine phase HL-LHC de CMS, en fournissant des résolutions spatiales et temporelles élevées pour améliorer la reconstruction en ligne et hors ligne des données de physique.
+Le système de déclenchement de CMS, qui devra supporter les flux de données importants attendus du HL-LHC, sera critique pour le HGCAL.
+Nous avons spécifiquement développé de nouveaux algorithmes pour permettre la reconstruction robuste des primitives de déclenchement, les éléments constitutifs du premier niveau du système de déclenchement en ligne de CMS.
+Ces algorithmes comprennent des techniques permettant d'atténuer la création erronée de plusieurs groupes d'énergie à partir de particules individuelles, et le calcul de quantités calorimétriques dans un système de coordonnées modifié.
+Ces développements font partie d'outils de reconstruction, mis en œuvre à partir de zéro, qui fournissent également une version simplifiée de la géométrie de HGCAL.
+Les efforts futurs bénéficieront de ces outils.}															%% Résumé en français / abstract in french
+
+\newcommand{\PhDTitleEN}{Search for resonant Higgs boson pair production in the bb$\tau\tau$ decay channel and developments in the reconstruction of High Granularity Calorimeter trigger primitives with the CMS detector at the LHC}													%% Titre de la thèse en anglais / Thesis title in english
+\newcommand{\keywordsEN}{Higgs, HGCAL, CMS, LHC, Trigger Primitives}														%% Mots clés en anglais, séprarés par des , / Keywords in english, separated by ,
+\newcommand{\abstractEN}{We perform a search for the resonant production of a pair of Higgs bosons (HH), decaying into a pair of b quarks and a pair of $\tau$ leptons, with the CMS experiment at the CERN Large Hadron Collider (LHC).
+The analysis exploits proton-proton collisions at a center-of-mass energy of 13$\,$TeV, for a total of 138$\,$fb$^{-1}$ collected during the 2016, 2017 and 2018 data-taking years.
+The gluon-fusion production mode is considered, together with spin-0 and spin-2 hypotheses.
+This resonant process is strongly motivated by a series of theories able to address current shortcomings of the SM.
+The decay channel is instead known for its experimental benefits, namely a relatively clean final state signature, balanced by a moderate branching fraction of 7.3\%.
+Additionally, the results of a similar search have been recently reported by the ATLAS Collaboration, where a small tension with the SM was recorded at a resonance mass of 1$\,$TeV.
+The physics analysis here performed thus aims at confirming or rejecting such an excess.
+Expected upper limits at a 95\% confidence level are set on the production of New Physics signatures, showcasing a compelling improvement over past CMS and ATLAS results.
+Furthermore, this work tackles a major simplification exploited by resonant searches in High Energy Physics, namely the Narrow Width Approximation (NWA), which assumes that the width of new resonances is negligible when compared to the detector's resolution, ignoring potential interference effects.
+We show that the current sensitivity level of double Higgs boson analyses is such as to put into question the correctness of the NWA, hinting at the necessity of altogether avoiding such approximation in future HH analyses.
+
+This work is also concerned with sensitivity improvements from a detector perspective.
+The upcoming High-Luminosity LHC (HL-LHC) will bring large numbers of collisions per proton bunch crossing and extremely high radiation levels, which can only be sustained by a very significant detector upgrade programme within CMS.
+One of the upgraded sections will be the endcaps, where the novel High Granularity Calorimeter (HGCAL) will be installed.
+The HGCAL provides ample opportunities for studies and optimizations, and will certainly become a cornerstone of the upcoming CMS HL-LHC phase, providing high spatial and timing resolutions to improve the online and offline reconstruction of physics data.
+Central to the HGCAL will be the CMS trigger system, which will have to withstand the large rates expected from the HL-LHC.
+We have specifically developed new algorithms to enable the robust reconstruction of Trigger Primitives, the building blocks of the first level of the online trigger system in CMS.
+The algorithms include techniques to mitigate the wrongful creation of several energy clusters from single particles, and the computation of calorimetric quantities within a modified coordinate system.
+These developments are part of a reconstruction framework, implemented from scratch, which also provides a simplified version of HGCAL's geometry.
+Future efforts will benefit from such tools.}															%% Résumé en anglais / abstract in english
+
+\label{layout}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Mise en page / Page layout      
+%%% NE RIEN MODIFIER / DO NOT MODIFY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+%%% Logo de l'école doctorale. Le nom du fichier correspond au sigle de l'ED / Doctoral school logo. Filename correspond to doctoral school acronym
+%%% Les noms valides sont / Valid names are : EDMH, (EDIPP)
+\begin{textblock*}{61mm}(16mm,3mm)
+\noindent\includegraphics[height=24mm]{~/org/PhD/Thesis/figures/extra/ed/\logoEd.png}
+\end{textblock*}
+
+
+
+%%%Titre de la thèse en français / Thesis title in french
+\begin{center}
+\fcolorbox{black}{white}{\parbox{0.95\textwidth}{
+\textbf{Titre:} \PhDTitleFR 
+\medskip
+
+%%%Mots clés en français, séprarés par des ; / Keywords in french, separated by ;
+\textbf{Mots clés:} \keywordsFR 
+\vspace{-2mm}
+
+%%% Résumé en français / abstract in french
+\begin{multicols}{2}
+\textbf{Résumé:} 
+\abstractFR 
+\end{multicols}
+}}
+\end{center}
+
+\vspace*{-3mm}
+
+%%%Titre de la thèse en anglais / Thesis title in english
+\begin{center}
+\fcolorbox{black}{white}{\parbox{0.95\textwidth}{
+\textbf{Title:} \PhDTitleEN 
+
+\medskip
+
+%%%Mots clés en anglais, séprarés par des ; / Keywords in english, separated by ;
+\textbf{Keywords:}  \keywordsEN %%3 à 6 mots clés%%
+\vspace{-2mm}
+\begin{multicols}{2}
+
+%%% Résumé en anglais / abstract in english
+\textbf{Abstract:} 
+\abstractEN
+\end{multicols}
+}}
+\end{center}
+
+
+\begin{textblock*}{161mm}(10mm,278mm)
+\color{black}
+\noindent\textbf{Institut Polytechnique de Paris}
+
+\noindent
+\noindent 91120 Palaiseau, France 
+\end{textblock*}
+
+\begin{textblock*}{20mm}(175mm,273mm)
+\includegraphics[width=20mm]{~/org/PhD/Thesis/figures/extra/IPPARIS-petit}
+\end{textblock*}
+
+
+\end{document}
