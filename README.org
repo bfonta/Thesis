@@ -1,7 +1,10 @@
-PhD thesis with Emacs org-mode.
-
 [[pain.jpg]]
 
-*** Notes
+PhD thesis with Emacs org-mode.
+To obtain the Thesis manuscript names ```thesis.pdf```, one must run ```M-x org-latex-export-to-pdf``` or similar from within an Emacs session.
+This commands first exports the ```.org``` files into ```LaTeX```, and then launches a standard ```pdflatex``` command, or similar, to generate a PDF.
 
+*** Notes
 + The bibliographic file =unsrt.bst= was modified following the approach detailed [[https://tex.stackexchange.com/questions/26575/bibtex-how-to-reduce-long-author-lists-to-firstauthor-et-al][here]], and named =thesis_custom.bst=. The modification limits the number of authors displayed to 4.
++ Due to issues with the integration of the cover and back official scripts with the ```mimosis``` class, those pages are merged after the Thesis has been generated, using ```bash scripts/merge_pdfs.sh```, which creates a file named ```thesis_final.pdf```.
+  The ```thesis.pdf``` file does have a cover and a back, but they do not exhibit the correct format.
