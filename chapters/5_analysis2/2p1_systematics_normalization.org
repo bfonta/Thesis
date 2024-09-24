@@ -67,7 +67,7 @@ We list them in what follows:
                              & \eletau{} & -- & --   & 44.6 &      \\ [+0.3em]\hline \\[-1em]
 
     \multirow{3}{*}{\rescat{1}}   & \tautau{} & 8.8   & 6.7 & 6.4  & 4.8  \\
-                             & \mutau{}  & 7.4   & 5.4 & 6.3  & 3.8  \\
+                             & \mutau{}  & 7.4   & 5.3 & 6.3  & 3.8  \\
                              & \eletau{} & 17.2  & 9.2 & 10.9 & 11.2 \\ [+0.3em]\hline \\[-1em]
 
     \multirow{3}{*}{\rescat{2}}   & \tautau{} & 55.5 & 35.0 & 36.2 & 25.6 \\
