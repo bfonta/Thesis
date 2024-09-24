@@ -155,7 +155,7 @@ This happens in light of the low probability for a particle, other than a muon, 
 The interplay between tracker and muon chambers leads to three different muon signatures:
 - *Standalone Muons:* \ac{DT} and \ac{CSC} hits are clustered into tracks, which serve as seeds for pattern recognition algorithms that also exploit the \acp{RPC}; \acp{GEM} are not used, since the benefit outside the tracker acceptance is minor, except for calibrations.
 - *Global Muons:* If geometrically compatible, standalone muons are matched to tracks in the inner tracker, increasing the momentum resolution for tracks with $\pt \gtrsim 200\,\si{\GeV}$.
-- *Tracker Muons:* Tracks satisfying $\pt > 0.5\,\si{\GeV}$ and $p > 2.5\,\si{\GeV}$ in the inner tracker where a geometrical match exists with at least one muon segment in the muon chambers.
+- *Tracker Muons:* Tracks satisfying $\pt > 0.5\,\si{\GeV}$ and $p > 2.5\,\si{\GeV}$ in the inner tracker, where a geometrical match exists with at least one muon segment in the muon chambers.
 The tracker muon reconstruction is more efficient than the global one when muon segments are present in a single muon detector plane.
 This happens more often for muons with $\pt \lesssim 10\,\si{\GeV}$, due to scattering on the steel return yoke.
 Only \SI{\sim 1}{\percent} of muons within the acceptance of the muon detectors is reconstructed as a standalone muon, and they consistently have the worse resolution.
@@ -165,13 +165,12 @@ A balance must thus be established between muon identification efficiency and pu
 The obtained muon $\pt$ resolution ranges between 1% and 6% for $\pt < 100\,\si{\GeV}$ muons and is of around 10% for central muons of $\pt \sim 1\,\si{\TeV}$.
 
 # Particle identification and reconstruction
-The identification of muons is based on a set of selections driven by the properties of global and tracker muons.
-We can mention variables such as the track fit $\chi^{2}$, the number of hits per track in the inner tracker and/or in the muon system, the degree of compatibility between tracker tracks and muon tracks, or the compatibility with the \ac{PV} [[cite:&performance_muon_cms]].
+The identification of muons is based on a set of selections driven by the properties of global and tracker muons, such as the track fit $\chi^{2}$, the number of hits per track in the inner tracker and/or in the muon system, the degree of compatibility between tracker tracks and muon tracks, or the compatibility with the \ac{PV} [[cite:&performance_muon_cms]].
 Firstly, isolated global muons are identified using criteria based on the inner tracks and calorimetric deposits within a certain distance from the muon direction.
 Concerning muons inside jets, tighter criteria are required, since \ac{PF} tends to create spurious neutral particles whenever charged hadrons are identified as muons.
 On the reverse side, when muons are identified as charged hadrons, neutral particles will have their energy "eaten out" by the algorithm.
 Finally, non-isolated global muons are selected using criteria which aim at suppressing muons from in-flight decays and hadronic longitudinal leaks.
-The full selection is rather complex and detailed, and is fully explained in [[cite:&performance_muon_cms]].
+The full selection is rather complex and detailed, and is fully explained in \newcite{performance_muon_cms}.
 At the level of the analyses, the criteria above are encoded in so-called \acp{WP}, to be discussed in [[#sec:selection]].
 We note that the muon reconstruction and identification steps can be revisited if significant mismatches are found for charged hadrons between their measured tracker momenta and calorimetric energies.
 

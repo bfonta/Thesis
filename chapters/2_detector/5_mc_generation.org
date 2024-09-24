@@ -98,7 +98,7 @@ From now up to the end of the \ac{HL-LHC} program, we can anticipate a virtuous 
 Updates will be also driven by the need to generate larger and larger samples for the most common processes, and to efficiently manage parameter scans for uncertainty studies.
 We should expect some developments along the directions of a precision increase for inclusive observables, technical improvements for fast and efficient generation of events, and improvements in the modeling of the hadronization and \acp{UE} [[cite:&hllhc_physics]].
 
-* Activities as Monte Carlo contact
+* Activities as CMS Monte Carlo Contact
 I started my currently on-going activities as \ac{CMS} ttH+HH \ac{MC} contact on June 2023, as part of the Higgs \ac{MC} group.
 During this time I generated more than \num{1000} samples, covering mostly nonresonant HH \run{3} \ac{MC} requests, for 2022 and 2023, and contributed to the common Higgs \ac{MC} software tools.
 The requests cover the vast majority of HH samples that will be used for \run{3} nonresonant HH analyses, including \ac{ggF}, \ac{VBF} and \ac{BSM} samples, for \num{\sim 15} final states.

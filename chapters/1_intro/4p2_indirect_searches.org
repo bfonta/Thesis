@@ -24,7 +24,7 @@ Single Higgs cross sections can be quite sensitive to $\kl$ variations, especial
 The fact that a higher loop order is needed is in part counterbalanced by the much higher single Higgs cross section, leading to competitive limits with respect to HH production.
 Having the same goal in mind, there has been an additional proposal, consisting on using processes with higher-order \ac{EW} diagrams, such as the ones used in $\mw$ and $\sint$ measurements [[cite:&indirect_searches_ew]].
 
-Modifications of the Higgs self-coupling are parameterised with the $\kappa\text{-framework}$ presented in [[#sec:nonres_BSM_hh]], which is known to be equivalent to an \ac{EFT} approach with the introduction of higher-dimensional operators only affecting $\lh{3}$.
+Modifications of the Higgs self-coupling are parameterized with the $\kappa\text{-framework}$ presented in [[#sec:nonres_BSM_hh]], which is known to be equivalent to an \ac{EFT} approach with the introduction of higher-dimensional operators only affecting $\lh{3}$.
 Additional sensitivity can be obtained by measuring differential cross sections, which do not have a flat dependence on $\kl$.
 The transverse momentum \ac{pt} of the Higgs boson is found to be the most sensitive observable to detect \ac{BSM} effects on the trilinear coupling [[cite:&indirect_searches2;&modelling_single_h]].
 The bounds obtained from indirect searches are competitive with the ones from double Higgs boson production [[cite:&indirect_searches3]], as shown in [[fig:direct_vs_indirect_cms]], and provide additional constraints for single Higgs couplings.

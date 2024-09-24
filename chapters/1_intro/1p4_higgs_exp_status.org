@@ -4,7 +4,7 @@
 
 The measurements of Higgs properties at the LHC are in general challenging, given the low cross sections involved.
 The most sensitive analyses to single Higgs boson processes are the ones featuring the \hgg{} and \hzzfourl{} decay channels.
-Both are quite rare in the \ac{SM}, with the diphoton channel not even being allowed at tree level, since the Higgs boson couples to massive particles.
+Both are quite rare in the \ac{SM}, with the di-photon channel not even being allowed at tree level, since the Higgs boson couples to massive particles.
 They however possess extremely clean photonic or leptonic signatures, with relatively few competing background processes.
 The two channels have been responsible for increasingly precise measurements of the properties of the Higgs boson, namely its spin-parity $J^{P} = 0^{+}$ [[cite:&CMS_Hparity;&ATLAS_Hparity]], and its mass, here shown for the \hzzfourl{} channel in \run{1} + \run{2} combinations [[cite:&higgs_mass_cms_run2;&atlas_higgs_4l_mass]]:
 #+NAME: eq:mass_higgs_4l
@@ -35,7 +35,7 @@ Since the on-shell to off-shell cross section ratio is proportional to the width
 \end{align}
 
 #+NAME: fig:H_production_diagrams
-#+CAPTION: Feynman diagrams for the leading Higgs boson production processes. Top row, from left to right: gluon fusion, vector boson fusion and associated production with a W or Z (V) boson. Bottom row, from left to right: associated production with a top or bottom quark pair, associated production with a single top quark, in the t-channel (two diagrams). Yukawa coupling modifers are highlighted.
+#+CAPTION: Feynman diagrams for the leading Higgs boson production processes. Top row, from left to right: gluon fusion, vector boson fusion and associated production with a W or Z (V) boson. Bottom row, from left to right: associated production with a top or bottom quark pair, associated production with a single top quark, in the t-channel (two diagrams). Yukawa coupling modifiers are highlighted.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .30\textwidth :center
@@ -53,7 +53,7 @@ Since the on-shell to off-shell cross section ratio is proportional to the width
 #+END_figure
 
 #+NAME: tab:higgs_production_xsecs
-#+CAPTION: Relative abudnaces and cross sections plus corresponding uncertainties for the most significant Higgs boson production modes, at $\sqrt{s}=13\,\text{TeV}$, for $\mh = 125.09\,\si{\GeV}$ [[cite:&YellowReport4]].
+#+CAPTION: Relative abundances and cross sections plus corresponding uncertainties for the most significant Higgs boson production modes, at $\sqrt{s}=13\,\text{TeV}$, for $\mh = 125.09\,\si{\GeV}$ [[cite:&YellowReport4]].
 #+ATTR_LATEX: :placement [!h] :center t :align ccl :environment mytablewiderrows
 |-----------------+----------------------+---------------------------------------------------------------------------------------------------|
 | Production mode | Approx. fraction [%] | Cross section [$\si{\pico\barn}$]                                                                 |
@@ -71,13 +71,13 @@ The Higgs boson is created via a series of production modes, the most important 
 Looking at [[fig:single_higgs_xsec_br]] (left), we can expect a cross section increase for higher energies.
 By far the most dominant production mode is \ac{ggF}, which as a consequence is also the most targeted by physics analyses at \ac{LHC} experiments.
 One order of magnitude below, the \ac{VBF} and VH "Higgs-strahlung" associated production modes follow, the latter split into WH and ZH, where WH includes processes with the two charged W bosons.
-The \ac{VBF} production mode, despite its small cross section, has a striking experimental signature with its two additional jets, which usually have a large dijet invariant mass, and are produced back-to-back.
+The \ac{VBF} production mode, despite its small cross section, has a striking experimental signature with its two additional jets, which usually have a large di-jet invariant mass, and are produced back-to-back.
 \Ac{VBF} and VH also enable to probe the Higgs coupling to vector bosons, which is not present in \ac{ggF}.
 The ttH and tH channels have an even smaller cross section, but can provide additional information on the top quark Yukawa coupling.
 Among the listed production modes, only bbH and tH have not yet been measured at the \ac{LHC}.
 The former recently had a dedicated \ac{CMS} search observing a 95% \ac{CL} upper limit of 3.7 times the expected \ac{SM} cross section value [[cite:&cms_bbh]].
 Once measured, it will serve as a further test for the Higgs coupling to bottom quarks.
-Facts worth noting are the absolute and relative dependences of the various production modes with the Higgs boson \ac{pt} shown in [[fig:single_higgs_xsec_br]].
+Facts worth noting are the absolute and relative dependencies of the various production modes with the Higgs boson \ac{pt} shown in [[fig:single_higgs_xsec_br]].
 As the energy of the Higgs boson increases, the relationship between production modes is drastically effected.
 Above $\pt^{\text{H}} \approx 550\,\si{\GeV}$ VH becomes the second most common production mode, and it even surpasses \ac{ggF} at the admittedly very high $\pt^{\text{H}} \approx 1250\,\si{\GeV}$ value.
 This illustrates the dynamic nature of Higgs physics.
@@ -90,7 +90,7 @@ This illustrates the dynamic nature of Higgs physics.
 #+END_figure
 
 #+NAME: fig:single_higgs_xsec_br
-#+CAPTION: (Left) Higgs boson production cross section for several production modes, as a function of the $\sqrt{s}$ centre-of-mass energy. (Right) Branching fractions of Higgs boson decays, as a function of $\mh$. Taken from [[cite:&YellowReport4]].
+#+CAPTION: (Left) Higgs boson production cross section for several production modes, as a function of the $\sqrt{s}$ center-of-mass energy. (Right) Branching fractions of Higgs boson decays, as a function of $\mh$. Taken from [[cite:&YellowReport4]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/higgs_cross_sections.pdf]]
@@ -121,7 +121,7 @@ Instead, associated VH production is used, since the additional boson can decay 
 The multijet background is even larger for \hcc{}, given the lower masses involved.
 Again, its production in association with vector bosons decaying leptonically is explored, imposing constraints on its cross section and on the charm Yukawa coupling [[cite:&higgs_to_charm_atlas]].
 It is important to note that such a decay channel would have seemed impossible to measure just a few years ago.
-Less surprinsingly, the "golden channels" \hgg{} and mostly \hzzfourl{} continue to provide excellent results, despite their very small couplings, but relying on their experimentally clean signature.
+Less surprisingly, the "golden channels" \hgg{} and mostly \hzzfourl{} continue to provide excellent results, despite their very small couplings, but relying on their experimentally clean signature.
 The very rare $\text{H} \rightarrow \text{Z}\gamma$ process has been recently combined between \ac{CMS} and \ac{ATLAS}, leading to an evidence (\SI{3.4}{\sigma}) for the first time [[cite:&cms_higgs_zgamma]].
 Notice that most decays with particles lighter than muons, such as light quarks or electrons, are extremely hard to measure in current or future detectors unless \ac{BSM} effects come into play.
 These final states have extremely small predicted couplings to the Higgs boson.
@@ -131,7 +131,7 @@ The two experiments have also been probing \ac{LFV} processes such as $\text{H} 
 Of particular relevance for \ac{CMS} are the observation of \htt{} [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]] and the first evidence for $\text{H} \rightarrow \mu\mu$ [[cite:&H2mumu]].
 
 #+NAME: fig:HH_decay_diagrams
-#+CAPTION: Feynman diagrams for the leading Higgs boson decay channels. Top left: decay to two vector bosons. Top right: decay to two fermions. Bottom: decay to two photons or a photon and a Z boson, via vector bosons (left) or (fermions) right. Yukawa coupling modifers are highlighted.
+#+CAPTION: Feynman diagrams for the leading Higgs boson decay channels. Top left: decay to two vector bosons. Top right: decay to two fermions. Bottom: decay to two photons or a photon and a Z boson, via vector bosons (left) or (fermions) right. Yukawa coupling modifiers are highlighted.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .35\textwidth :center

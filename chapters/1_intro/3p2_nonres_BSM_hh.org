@@ -6,16 +6,16 @@
 Physicists look for deviations from \ac{SM} predictions.
 Causes for such deviations are substantiated by many proposed \ac{BSM} theories, but experimentally amount to either a change in the HH production rate, and/or the modification of the shape of some kinematical distributions.
 
-# take from Allessandro the assumptions of the k-framework if needed, but it does not seem much relevant for HH processes
+# take from Alessandro the assumptions of the k-framework if needed, but it does not seem much relevant for HH processes
 Often, instead of directly measuring the couplings, results are instead expressed as a function of /coupling modifiers/ $\kappa$.
-The modifiers compare the measured couplings with \ac{SM} expectations, and parameterise \ac{NP} effects.
+The modifiers compare the measured couplings with \ac{SM} expectations, and parameterize \ac{NP} effects.
 This approach is called the $\kappa$ /framework/.
 For the Higgs self-coupling, the definition of the modifier is $\kl~\equiv~\lh{3}/\lh{3}^{\text{SM}}$, where $\lh{3}$ is fully determined in the \ac{SM} once $v$ and $\mh$ are measured.
 \ac{BSM} theories are thus characterized by $\kl \neq 1$.
 A variable constraining power is associated to each production mode, depending on the phase-space region being studied.
 Other coupling modifiers are similarly defined, namely $\kv~\equiv~\cv/\cv^{\text{SM}}$, for the coupling between two Higgs bosons and one vector boson, and $\kvv~\equiv~\cvv/\cvv^{\text{SM}}$, a quartic coupling between two Higgs bosons and two vector bosons, which at first order can only be studied with \ac{VBF}.
 #+NAME: fig:HH_prod_kl
-#+CAPTION: HH production cross section as a function of the coupling modifier $\kl$ for several production mechanisms. The dashed and solid lines denote respectively the \ac{LO} and \ac{NLO} predictions and the bands indicate the \ac{PDF} and scale uncertainties added linearly. The interference minima are not aligned for different production modes. For \ac{ggF} the cross section is now known at \ac{NNLO} level with finite tio quark mass effects, while the figure displays the values for the \ac{NLO} FTapprox calculation. The figure is taken from [[cite:&HH_xsec_running]].
+#+CAPTION: HH production cross section as a function of the coupling modifier $\kl$ for several production mechanisms. The dashed and solid lines denote respectively the \ac{LO} and \ac{NLO} predictions and the bands indicate the \ac{PDF} and scale uncertainties added linearly. The interference minima are not aligned for different production modes. For \ac{ggF} the cross section is now known at \ac{NNLO} level with finite top quark mass effects, while the figure displays the values for the \ac{NLO} FTapprox calculation. The figure is taken from [[cite:&HH_xsec_running]].
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .8\textwidth
@@ -25,13 +25,13 @@ The coupling modifiers alter the relative abundance of production modes and fina
 In [[fig:HH_prod_kl]] we display the running of the HH cross section for several production mechanisms, as a function of $\kl$.
 The minima are due to diagram interferences for each production mode, as discussed in [[#sec:production]].
 Minima notably occur at different $\kl$ values for different production modes; $\kl=2.45$ for \ac{ggF}.
-In [[fig:h_br_dependence]] we show how the cross section of single Higgs production modes (left) and decays (right) are affected by a $\kl$ parameterisation.
+In [[fig:h_br_dependence]] we show how the cross section of single Higgs production modes (left) and decays (right) are affected by a $\kl$ parametrization.
 Then, using the recipe described in [[cite:&indirect_searches1]], we extend the computation to cover the HH \ac{BR} dependence on $\kl$, as displayed in [[fig:hh_br_dependence]] (right).
-The left plot in [[fig:hh_br_dependence]] again refers to single Higgs production and was obtained to validate the procedure; it should be compared to the right plot of [[fig:h_br_dependence]].
+The left plot in [[fig:hh_br_dependence]] again refers to single Higgs production and was obtained to validate the procedure; it should be compared to the right plot in [[fig:h_br_dependence]].
 We used the assumption that the HH \ac{BR} can be obtained as the product of the individual single Higgs boson \acp{BR}, which holds in the $\kappa\text{-framework}$.
 Relative changes $\delta$ in the \ac{BR} are the same for all fermions, which are identified by the letter $f$.
-We can observe that final states of Higgs boson pairs can have a sizeable dependence on $\kl$, at times than 5%.
-However, as we will see in [[#sec:hh_exp_status]], current $\kl$ contraints are often significantly tighter than the range displayed in the plots; the relevant variations thus are of at most \SI{\sim 2}{\percent} given current constraints.
+We can observe that final states of Higgs boson pairs can have a sizable dependence on $\kl$, at times than 5%.
+However, as we will see in [[#sec:hh_exp_status]], current $\kl$ constraints are often significantly tighter than the range displayed in the plots; the relevant variations thus are of at most \SI{\sim 2}{\percent} given current constraints.
 #+NAME: fig:h_br_dependence
 #+CAPTION: (Left) Single Higgs cross section dependence on $\kl$, for the five most common production modes, namely \ac{ggF}, \ac{VBF}, associated production with split contributions from the W and Z boson, and $\ttbar{}\text{H}$. (Right) Single Higgs \ac{BR} dependence on $\kl$, showing the Higgs couplings to fermions ($f\bar{f}$), photons ($\gamma\gamma$) and vector gauge bosons (W and Z). Taken from [[cite:&indirect_searches1]].
 #+BEGIN_figure
@@ -39,14 +39,14 @@ However, as we will see in [[#sec:hh_exp_status]], current $\kl$ contraints are 
 [[~/org/PhD/Thesis/figures/intro/SingleHiggsBRdependence.pdf]]
 #+END_figure
 #+NAME: fig:hh_br_dependence
-#+CAPTION: Branching fraction deviations in percentage of single (left) and double (right) Higgs processes as a function of the HH coupling modifier $\kl$. Different decays are included, where "g" stands for gluon and "f" for fermion. The single Higgs process is included for validation only, and matches the right plot of [[fig:h_br_dependence]]. The deviations are calculated following the procedure detailed in [[cite:&indirect_searches1]].
+#+CAPTION: Branching fraction deviations, in percentage, of single (left) and double (right) Higgs processes as a function of the HH coupling modifier $\kl$. Different decays are included, where "g" stands for gluon and "f" for fermion. The single Higgs process is included for validation only, and matches the right plot of [[fig:h_br_dependence]]. The deviations are calculated following the procedure detailed in [[cite:&indirect_searches1]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/BRdependence_SingleHiggs.pdf]]
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/BRdependence_DoubleHiggs.pdf]]
 #+END_figure
-Gluon fusion HH cross section deviations can be parameterised as a function of $\kl$ and $\kt\equiv y_t/y_t^{\text{SM}}$ as follows:
+Gluon fusion HH cross section deviations can be parameterized as a function of $\kl$ and $\kt\equiv y_t/y_t^{\text{SM}}$ as follows:
 #+NAME: eq:parameterisation_ggf
 \begin{alignat}{6}
 \sigma_{\text{ggF}}/\sigma_{\text{ggF}}^{\text{SM}} &\sim |\mathcal{A}_{\triangle}|^2&\kl^2\kt^2 &+ |\mathcal{A}_{\square}|^2&\kt^4 &+ \mathcal{I}_{\triangle\square}&\kl\kt^3 \nonumber \: , \\[.6cm]
@@ -54,7 +54,7 @@ Gluon fusion HH cross section deviations can be parameterised as a function of $
 \end{alignat}
 
 \noindent where $\mathcal{A}_{\triangle}$ and $\mathcal{A}_{\square}$ are the amplitudes of the triangle and box \ac{ggF} diagrams, respectively, and $\mathcal{I}_{\triangle\square}$ represents the interference term.
-We consider gluon fusion due to its dominant cross section, but other production modes can be parameterised in similar ways using their corresponding coupling modifiers.
+We consider gluon fusion due to its dominant cross section, but other production modes can be parameterized in similar ways using their corresponding coupling modifiers.
 
 Variations of the coupling modifiers can have a enormous impact on the shape of kinematic distributions.
 Taking the mass of the HH system in [[fig:kl_c_EFT]] (left) as an example, we can see that the $\kl=1$ configuration is characterized by a broad peak at \SI{\approx 390}{\GeV}, with a large high-energy tail.
@@ -65,7 +65,7 @@ Despite the focus on \ac{ggF}, it is worth noting that other production modes al
 The consequence is clear: kinematic deviations represent a smoking gun for the presence of anomalous couplings.
 
 #+NAME: fig:kl_c_EFT
-#+CAPTION: Differential HH cross sections as a function of the HH system mass, for different values of coupling modifiers. (Left) Multiple $\kl$ values, including \ac{SM} ($\kl=1$) and maximum interference ($\kl=2.45$), highlighting the strong impact of a deviation from the expected SM values. Larger $|\kl|$ values correspond to scenarios where the HH "triangle" diagram dominates. (Right) Some EFT couplings, absent from the \ac{SM}, compared to the \ac{SM} scenario. Both overall rate and shapes are modified.
+#+CAPTION: Differential HH cross section as a function of the HH system mass, for different values of coupling modifiers. (Left) $\mhh$ shape dependence on $\kl$, including \ac{SM} ($\kl=1$) and maximum interference ($\kl=2.45$), highlighting the strong impact of a deviation from the expected SM values. Larger $|\kl|$ values correspond to scenarios where the HH "triangle" diagram dominates. (Right) Dim-6 \ac{ggF} HH \ac{EFT} couplings set to one, compared to the \ac{SM} scenario. Both the overall rate and shapes are modified.
 #+BEGIN_figure
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/kl.pdf]]
@@ -83,16 +83,16 @@ While the $\kappa\text{-framework}$ has been so far effective in quantifying dif
 No resonance has so far been found in the energy range covered by the \ac{LHC}, \ie{} up to a few TeVs.
 Even assuming that all possible phase-space corners have been exhausted, which is certainly not the case, it would still be possible to imagine the presence of \ac{NP} at higher energies, capable of indirectly influencing the shape of distribution tails which detectors have access to.
 A general and systematic method has been developed to look at high-energy effects from an unknown high-energy theory in a model independent way.
-The idea consists of extending the dimension-4 (dim-4) \ac{SM} Lagrangian with higher order operators.
+The idea consists in extending the dimension-4 (dim-4) \ac{SM} Lagrangian with higher order operators.
 The extra terms are appropriately suppressed by powers of an energy scale $\Lambda$, oftentimes chosen at \SI{1}{\TeV}, constructing an \ac{EFT} Lagrangian:
 #+NAME: eq:eft_lagrangian
 \begin{equation}
 \mathcal{L} = \mathcal{L}_{\text{SM}} + \sum_{i}\frac{c_i}{\Lambda} \mathcal{O}_{i}^{5} + \sum_{i}\frac{c^{\prime}_i}{\Lambda^2} \mathcal{O}_{i}^{6} + \sum_{i}\frac{c^{\prime\prime}_i}{\Lambda^3} \mathcal{O}_{i}^{7} + ... \: ,
 \end{equation}
 
-\noindent where all \ac{BSM} physics are parameterised by the Wilson coefficients $c_i$, $c^{\prime}_i$, $c^{\prime\prime}_i$, etc.
+\noindent where all \ac{BSM} physics are parameterized by the Wilson coefficients $c_i$, $c^{\prime}_i$, $c^{\prime\prime}_i$, etc.
 The scale parameter $\Lambda$ can be interpreted as the energy up to which only \ac{SM} fields propagate, but also as the \ac{BSM} scale itself.
-The additional terms make the theory non-renormalizable, but that is not an issue, since the \ac{EFT} expansion does not represent a complete theory, but rather a low-energy approximation of an unknown, complete and renormalizable theory at a higher energy scale.
+The additional terms make the theory non-renormalizable, but that is not an issue, as the \ac{EFT} expansion does not represent a complete theory, but rather a low-energy approximation of an unknown, complete and renormalizable theory at a higher energy scale.
 
 From an experimental point of view, one has to define the scale up to which to extend the effective theory, knowing that with each additional term a very significant number of coefficients might be added.
 A \ac{BSM} can then be matched to the truncated expansion, so that an expression for each coefficient is found, depending on the parameters of the corresponding model.
@@ -101,11 +101,11 @@ In the most general \ac{EFT} formulation, there is a single dim-5 operator, whic
 Next, approximately 2800 dim-6 operators exist, which reduce to less than 100 by imposing certain restrictions.
 For instance, in \ac{SMEFT}[fn:: As part of my PhD, I gave a talk on \ac{SMEFT} fitting techniques within the ATLAS, CMS and LHCb experiments, at the "QCD@LHC2022" conference, which took place in Orsay, France, from November 28\textsuperscript{th} to December 2\textsuperscript{nd} 2022 [[cite:&bruno_smeft_fits]].], one of the \ac{EFT} approaches often explored, one demands additional flavour symmetries and \ac{CP}-conservation to reduce the number of operators to 59.
 Operators with higher dimensions are very suppressed and usually neglected.
-However, some dedicated studies for dim-8 operators have recently been pursued [[cite:&dim8_alessandra]], since \ac{EW} quartic gauge couplings can be studied via \ac{VBF} processes, where dim-8 operators are used to parameterise deviations from the \ac{SM} prediction [[cite:&dim8_1]].
-Departures from \ac{SM} triple and quartic couplings lead to the growth of scattering amplitudes, signalling \ac{NP} [[cite:&dim8_2]].
+However, some dedicated studies for dim-8 operators have recently been pursued [[cite:&dim8_alessandra]], since \ac{EW} quartic gauge couplings can be studied via \ac{VBF} processes, where dim-8 operators are used to parameterize deviations from the \ac{SM} prediction [[cite:&dim8_1]].
+Departures from \ac{SM} triple and quartic couplings lead to the growth of scattering amplitudes, signaling \ac{NP} [[cite:&dim8_2]].
 
 #+NAME: fig:SMEFTdiagrams
-#+CAPTION: Leading order Feynman diagrams n the \ac{HEFT} description at dimension 6 for \ac{ggF} production mechanism [[cite:&cadamuro_review]].
+#+CAPTION: Leading order Feynman diagrams in the \ac{ggF} HH \ac{EFT} description, at dimension 6, for \ac{ggF} production mechanism [[cite:&cadamuro_review]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/SMEFTdiagrams.pdf]]
@@ -123,7 +123,7 @@ For gluon fusion HH production, a possible \ac{EFT} Lagrangian can be constructe
 
 \noindent where new $\cg$, $\cgg$ and $\ctwo$ \ac{BSM} couplings appear, as illustrated in [[fig:SMEFTdiagrams]].
 To the \ac{SM} box and triangle diagrams a set of three new diagrams is added, displaying couplings between the Higgs and quarks or gluons.
-Just like in [[eq:parameterisation_ggf]], the cross section can be parameterised from the square of the amplitude, which at \ac{LO} takes the form:
+Just like in [[eq:parameterisation_ggf]], the cross section can be parameterized from the square of the amplitude, which at \ac{LO} takes the form:
 #+NAME: eq:eft_parameterization
 \begin{equation}
 \begin{split}

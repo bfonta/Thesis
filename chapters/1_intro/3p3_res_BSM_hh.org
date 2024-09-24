@@ -16,7 +16,7 @@ In the context of HH searches, and in addition to the nonresonant approaches dis
 In that case, given enough experimental sensitivity, we would naively expect to see a "bump" in double Higgs boson mass distributions.
 In practice, admitting such hypothetical particle exists, the excess might only be discernible through variables with a higher discriminative power, such as discriminators built out of \ac{ML} procedures.
 The experimental challenges of such kind of analysis is highlighted in [[#sec:analysis1_intro]].
-Here we instead focus on the very large number of theoretical models which can accomodate \xhh{} or \xyh{} processes, with Y being yet another \ac{BSM} scalar particle.
+Here we instead focus on the very large number of theoretical models which can accommodate \xhh{} or \xyh{} processes, with Y being yet another \ac{BSM} scalar particle.
 It is experimentally unfeasible to address all such models separately.
 If that were the case, each model would require its own set of simulated data with varying parameters, such as the mass or the shapes of every resonance, adding also complications from the storage point of view.
 Furthermore, analysis tools would have to be optimized for each sample type, requiring independent computing-intensive trainings, which take time to process and validate.
@@ -33,7 +33,7 @@ One of the theories that tries to unify the four known forces is string theory, 
 The idea of additional dimensions was first introduced in the Kaluza-Klein model, which sought to extend general relativity to a five (4+1) dimensional space (four space dimensions and one time dimension).
 There, the existence of additional microscopic space dimensions was theorized.
 Those dimensions would be /compactified/, or equivalently "curled up" and hidden from the macroscopic scale.
-Multiple theories use the concept of \acp{ED} to adress the shortcomings of the \ac{SM}.
+Multiple theories use the concept of \acp{ED} to address the shortcomings of the \ac{SM}.
 Whenever those theories are based on distorted space-time geometries, they are referred to as \ac{WED}.
 
 Among \ac{WED} models, one benchmark often used for \ac{LHC} experiments is the Randall-Sundrum model [[cite:&rs_model]].
@@ -93,7 +93,7 @@ Using the minima $v_a$ and $v_b$ of the potential in [[eq:potential_2hdm]]:
 \langle\phi_a\rangle_0 = \frac{1}{\sqrt{2}}\binom{0}{v_{a}} \: , \:\:\:\:\: \langle\phi_b\rangle_0 = \frac{1}{\sqrt{2}}\binom{0}{v_{b}} \: ,
 \end{equation}
 
-\noindent one can write the mass-squared terms of the lagrangian, which for the charged scalars take the following form:
+\noindent one can write the mass-squared terms of the Lagrangian, which for the charged scalars take the following form:
 
 #+NAME: eq:lagrangian_2hdm_1
 \begin{equation}
@@ -107,7 +107,7 @@ Using the minima $v_a$ and $v_b$ of the potential in [[eq:potential_2hdm]]:
 \end{equation}
 
 \noindent where the mass-squared of the additional "charged Higgs" bosons is given by $m_{\text{H}^{\pm}}^2 = [m_{ab}^2/(v_av_b) - \lambda_4 - \lambda_5](v_a^2+v_b^2)$, and the other eigenvalue coming from the diagonalization is zero and corresponds to a charged Goldstone boson, which is eaten by the $\text{W}^{\pm}$.
-The term for the pseudoscalars is given by:
+The term for the pseudo-scalars is given by:
 
 #+NAME: eq:lagrangian_2hdm_2
 \begin{equation}
@@ -121,7 +121,7 @@ The term for the pseudoscalars is given by:
 \end{equation}
 
 \noindent with $m_{\text{A}}^2 = [m_{ab}^2/(v_av_b) - 2\lambda_e](v_a^2 + v_b^2)$.
-The diagonalization also provides a massless pseudoscalar, which is eaten by the Z boson.
+The diagonalization also provides a massless pseudo-scalar, which is eaten by the Z boson.
 Finally, the mass-squared terms for the scalars are given by:
 
 #+NAME: eq:lagrangian_2hdm_3
@@ -137,8 +137,8 @@ Finally, the mass-squared terms for the scalars are given by:
 
 \noindent where $\lambda_{cde} = \lambda_c + \lambda_d + \lambda_e$.
 The mass-squared matrix can also be diagonalized, with an additional parameter $\alpha$ representing the corresponding rotation angle.
-Finally, a second angle $\beta$ can be defined, by diagonalizing together the mass-squared matrices of the charged scalars and pseudoscalars.
-An important relationship with the two \acp{VEV} is defined, often used for parameterisations:
+Finally, a second angle $\beta$ can be defined, by diagonalizing together the mass-squared matrices of the charged scalars and pseudo-scalars.
+An important relationship with the two \acp{VEV} is defined, often used for parameterizations:
 
 #+NAME: eq:vev_ratio
 \begin{equation}
@@ -146,7 +146,7 @@ An important relationship with the two \acp{VEV} is defined, often used for para
 \end{equation}
 
 \noindent The two angles determine all interactions between the five "Higgs" fields and the vector gauge bosons and fermions, the latter by also adding Yukawa-like terms.
-In the end, the model predicts mass-diagonalized H and X \ac{CP}-even neutral bosons (where H corresponds to the \ac{SM} Higgs boson), a \ac{CP}-odd pseudoscalar A, and two charged Higgs bosons $\text{H}^{\pm}$.
+In the end, the model predicts mass-diagonalized H and X \ac{CP}-even neutral bosons (where H corresponds to the \ac{SM} Higgs boson), a \ac{CP}-odd pseudo-scalar A, and two charged Higgs bosons $\text{H}^{\pm}$.
 
 One should not forget that the potential in [[eq:potential_2hdm]] made some assumptions which, if relaxed, reveal even more complexity.
 For instance, \acp{FCNC} become possible at tree-level, despite being strongly constrained by experiments.
@@ -160,7 +160,7 @@ Adding on top the requirement of no \acp{FCNC}, as in the mass terms above, four
 Further types can be defined based on \acp{FCNC}-related requirements.
 
 # Experimental constraints
-Current constraints from \ac{EW} precision data severely limit the allowed phase-space of the six free paramaters.
+Current constraints from \ac{EW} precision data severely limit the allowed phase-space of the six free parameters.
 For one, scenarios with mass degeneracy are preferred, where the masses of at least two of the additional Higgs bosons should be very similar [[cite:&2hdm_mass_degenerate]].
 Flavour observables also lead to strong constraints, in particular to lower bounds on $m_{\text{H}^{\pm}} \sim 600\,\si{\GeV}$ in Type II and Type Y models.
 Measurements of Higgs boson couplings has so far constrained $\cos(\beta - \alpha)$ to small values, where $\cos(\beta - \alpha) \rightarrow 0$ is the /alignment limit/ in which the boson H becomes \ac{SM}-like.

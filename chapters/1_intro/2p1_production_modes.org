@@ -3,10 +3,10 @@
 :END:
 
 The double Higgs production mechanisms are in many ways similar to the production modes of single Higgs physics covered in [[#sec:higgs_exp_status]].
-The main differences consist of the larger number of possible Feynamn diagrams for each production mode at the lowest loop order, the multiplicity increase in the final state decay products, and the dramatic cross section reduction.
+The main differences consist of the larger number of possible Feynman diagrams for each production mode at the lowest loop order, the multiplicity increase in the final state decay products, and the dramatic cross section reduction.
 The five most common production modes are listed in [[tab:HH_production_xsec]], along with their cross sections for $\sqrt{s}=13\,\text{TeV}$ and $\mh=125\,\si{\GeV}$.
-In [[fig:HH_prod_energy]], we show the evolution of those production modes with available centre-of-mass energy.
-Modes with top quarks increase their cross section faster than processes including vector bosons, an observation that might have to be taken into account in future detectors at higher centre-of-mass energies.
+In [[fig:HH_prod_energy]], we show the evolution of those production modes with available center-of-mass energy.
+Modes with top quarks increase their cross section faster than processes including vector bosons, an observation that might have to be taken into account in future detectors at higher center-of-mass energies.
 Gluon fusion will nevertheless remain dominant in any future hadron collider, just as it is at the \ac{LHC}.
 For the same reason, \ac{ggF} is also the production mode considered in the analysis reported in [[ref:sec:analysis1_intro,sec:analysis2_intro]].
 In the following, we provide a more detailed description of each production mode:
@@ -28,7 +28,7 @@ In the following, we provide a more detailed description of each production mode
 | ggHH                           |        90.22 | $30.77^{+2.2\%}_{-5\%}(\text{scale})^{+4.0\%}_{-18.0\%}\%(\mt)\pm1.5\%(\text{PDF})\pm1.7\%(\astrong)$ |
 | VBF HH                         |         4.95 | $1.687_{-0.04\%}^{+0.05\%}(\text{scale})\pm2.7\%(\text{PDF}+\astrong)$                                |
 | ZHH                            |         1.06 | $0.363_{-2.7\%}^{+3.4\%}(\text{scale})\pm1.9\%(\text{PDF}+\astrong)$                                  |
-| $\text{W}^{+}\text{H}\text{H}$ |         0.96 | $0.329_{-0.41\%}^{+0.32\%}(\text{scale})\pm2.2\%(\text{PDF}+\astrong)$                                |
+| $\text{W}^{+}\text{H}\text{H}$  |         0.96 | $0.329_{-0.41\%}^{+0.32\%}(\text{scale})\pm2.2\%(\text{PDF}+\astrong)$                                |
 | $\text{W}^{-}\text{H}\text{H}$ |         0.51 | $0.173_{-1.3\%}^{+1.2\%}(\text{scale})\pm2.8\%(\text{PDF}+\astrong)$                                  |
 | ttHH                           |         2.22 | $0.756_{-15.0\%}^{+4.3\%}(\text{scale})\pm3.3\%(\text{PDF}+\astrong)$                                 |
 | tqHH                           |         0.08 | $0.0289_{-3.6\%}^{+5.5\%}(\text{scale})\pm4.7\%(\text{PDF}+\astrong)$                                 |
@@ -46,7 +46,7 @@ On the other hand, the same effect increases the sensitivity to \ac{NP}, since \
 \ac{BSM} HH studies are thus strongly motivated, as the one presented in [[#sec:analysis1_intro]].
 
 #+NAME: fig:HH_production_diagrams_ggf
-#+CAPTION: Feynman diagrams for double Higgs gluon fusion production. The box (top) and triangle (bottom) diagrams have amplitudes of similar magnitudes, but interfere destructively. The quark loops are dominated by the top quark. The triangle diagram is characterised by the Higgs self-coupling and the coupling of the Higgs to top quarks. Box diagrams include two contributions from Higgs-top couplings.
+#+CAPTION: Feynman diagrams for double Higgs gluon fusion production. The box (top) and triangle (bottom) diagrams have amplitudes of similar magnitudes, but interfere destructively. The quark loops are dominated by the top quark. The triangle diagram is characterized by the Higgs self-coupling and the coupling of the Higgs to top quarks. Box diagrams include two contributions from Higgs-top couplings.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .4\textwidth :center
@@ -74,7 +74,7 @@ Therefore, and despite its cross section more than 18 times smaller than for \ac
 The $\text{q}\text{q}^{\prime} \rightarrow \text{V}\text{H}\text{H}$ process involves the same couplings appearing in the \ac{VBF} HH process, and an additional vector boson is present in the final states, as shown in [[fig:HH_production_diagrams_vhh]].
 The extra boson is used as a powerful handle to discriminate against multijet background, so far tested in analyses where Higgs bosons decay to b quarks [[cite:&vhh_4b_cms;&vhh_4b_atlas]].
 Additionally, and especially in the $4 < \kl < 7$ range of the coupling modifier, the cross sections get closer to the \ac{VBF} and \ac{ggF} ones, creating some complementarity worth exploring.
-The limits become indeed comparable to other subleading searches for those high $\kl$ values.
+The limits become indeed comparable to other sub-leading searches for those high $\kl$ values.
 
 #+NAME: fig:HH_production_diagrams_vhh
 #+CAPTION: Feynman diagrams for double Higgs associated production.
@@ -87,7 +87,7 @@ The limits become indeed comparable to other subleading searches for those high 
 The $\text{q}\text{q}^{\prime}/\text{g}\text{g} \rightarrow \ttbar\text{H}\text{H}$ process can be both gluon- or quark-initiated, and is characterized by the presence of an additional top quark pair.
 In this mode, either two Higgs bosons are radiated from the top quarks, or are otherwise produced from the virtual Higgs particle, as shown in [[fig:HH_production_diagrams_tthh]].
 The ttHH cross section exceeds the \ac{VBF} HH one starting from $\sqrt{s} \approx 70\,\si{\GeV}$.
-This behaviour is very different from what happens for single Higgs processes, where ttH remains very subdominant also for high energies (see [[fig:single_higgs_xsec_br]], left).
+This behavior is very different from what happens for single Higgs processes, where ttH remains very subdominant also for high energies (see [[fig:single_higgs_xsec_br]], left).
 
 #+NAME: fig:HH_production_diagrams_tthh
 #+CAPTION: Feynman diagrams for double Higgs $\ttbar$ associated production.

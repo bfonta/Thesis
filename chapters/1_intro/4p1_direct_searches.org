@@ -8,7 +8,7 @@ Refer to [[fig:HH_final_states]] for a glimpse of all results so far produced, w
 All results are compatible with the \ac{SM}.
 
 * Resonant searches
-The \ac{CMS} Collaboration has very recently performed a combination of multiple \run{2} resonant analyses [[cite:&interf_studies]][fn:: This is the same study which incldes the material presented in [[#sec:interf_intro]], and which I helped reviewing during my Thesis.], considering both the \xhh{} and the \xyh{} topologies, with X and Y being \ac{BSM} scalars which could reflect the theories described in [[#sec:res_BSM_hh]].
+The \ac{CMS} Collaboration has very recently performed a combination of multiple \run{2} resonant analyses [[cite:&interf_studies]][fn:: This is the same study which includes the material presented in [[#sec:interf_intro]], and which I helped reviewing during my Thesis.], considering both the \xhh{} and the \xyh{} topologies, with X and Y being \ac{BSM} scalars which could reflect the theories described in [[#sec:res_BSM_hh]].
 In the same work, interpretations are done for different theories, establishing exclusion limits on the model's parameters.
 Individual analyses extract 95% \ac{CL} upper limits on the resonant HH production as a function of the resonance mass $\mx$.
 When YH limits are drawn, an additional dependence on $\my$ is included.
@@ -83,7 +83,7 @@ Taking into account both \ac{ggF} and \ac{VBF}, \ac{CMS} also has multilepton (H
 #+ATTR_LATEX: :width .8\textwidth
 [[~/org/PhD/Thesis/figures/intro/limits_HH_SM_Mar2023.pdf]]
 #+END_figure
-The most up-to-date Run2 HH combination constrains the observed (expected) HH cross section to $\xshh < 3.4\;(2.5)\;\xshhsm$, as shown in [[fig:HH_nonres_comb_xsec]].
+The most up-to-date \run{2} HH combination constrains the observed (expected) HH cross section to $\xshh < 3.4\;(2.5)\;\xshhsm$, as shown in [[fig:HH_nonres_comb_xsec]].
 The limit is also interpreted as a function of the $\kl$ and $\kvv$ coupling modifiers, observing $-1.24 < \kl < 6.49$ and $0.67 < \kvv < 1.38$, respectively, at 95% \ac{CL}.
 The coupling modifier results are shown for individual channels in [[fig:HH_nonres_comb_c2v]], and compared to the theory prediction in [[fig:scan_comb_cms_nature]].
 Importantly, the $\kvv$ result allows the exclusion of $\kvv=0$ at 6.6 standard deviations.
@@ -114,7 +114,7 @@ Despite the absence of a relevant $\kl$ constrain, the analysis focus on the boo
 The analysis represents the first use of the novel Particle Transformer algorithm [[cite:&transformer]], briefly covered in [[#sec:prospects]], to tag a merged $\text{H}\rightarrow\text{V}\text{V} \rightarrow 4\text{q}$ jet.
 The second result consists of using \ac{VBS} production of $\text{W}^{\pm}\text{W}^{\pm}\text{H}(\rightarrow \text{b}\bar{\text{b}})$ to constrain HHWW couplings, considering only W leptonic channels [[cite:&wwh_kvv_cms_theory;&wwh_kvv_cms]].
 The diagrams also include $\lh{3}$, but given the experimental sensitivity the analysis focuses instead on $\kvv$, being mostly sensitive to $\text{V}=\text{W}$ due to the lepton selection.
-The final constraints are competitive with other subleading channels.
+The final constraints are competitive with other sub-leading channels.
 These new ideas show the potential for a continued deliver of high-quality results in the years to come, always hoping for larger improvements than anticipated.
 
 * Comment from Rainer :noexport:

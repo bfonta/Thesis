@@ -220,17 +220,17 @@
 #+LATEX: \appendix
 
 
-* Appendix
+* Appendices
 ** Summary of ATLAS Results on Higgs Boson Pair Production
 #+INCLUDE: "chapters/appendixes/app_atlas_results.org"
 #+LATEX: \clearpage
 ** Final Results in Table Format
 #+INCLUDE: "chapters/appendixes/app_table_results.org"
 #+LATEX: \clearpage
-** Fraction of High-\ac{pt} Muons
+** Fraction of Muons with Large Transverse Momentum
 #+INCLUDE: "chapters/appendixes/app_highpt_muons.org"
 #+LATEX: \clearpage
-** Additional Plots on MET SFs
+** Additional Plots on MET Scale Factors
 #+INCLUDE: "chapters/appendixes/app_met_sfs.org"
 #+LATEX: \clearpage 
 
@@ -254,5 +254,5 @@
 
 
 * OPTIONS END :ignore:
-#+LATEX: \clearpage
+#+LATEX: \shipout\null
 #+LATEX: \input{back}

@@ -4,10 +4,10 @@
 
 The \ac{SM} of Particle Physics is undoubtedly one of the most successful theoretical frameworks in all of Science.
 Despite colossal experimental efforts, including the most sophisticated particle accelerators and detectors ever built, together with the involvement of thousands of scientists and engineers, most of the hundreds of petabytes of data so far produced match \ac{SM} predictions, in an inspiring demonstration of scientific accomplishment.
-And yet, we know the \ac{SM} to be incomplete, from the surprising behaviour of rotation curves of galaxies, to a mysterious form of energy permeating the entire Universe, or the apparent absence of a charge-mirrored world.
+And yet, we know the \ac{SM} to be incomplete, from the surprising behavior of rotation curves of galaxies, to a mysterious form of energy permeating the entire Universe, or the apparent absence of a charge-mirrored world.
 
 Soon after the Higgs boson was discovered by the \ac{ATLAS} and \ac{CMS} Collaborations at the CERN LHC [[cite:&ATLAS_Higgs_discovery;&CMS_Higgs_discovery1;&CMS_Higgs_discovery2]], studies of its properties followed, in what seemed a natural and quick way to observe \ac{NP}.
-While some of these properties still remain underconstrained by the experiments, none of the highly anticipated new resonances have been discovered, such as the ones predicted by \ac{SUSY}.
+While some of these properties still remain under-constrained by the experiments, none of the highly anticipated new resonances have been discovered, such as the ones predicted by \ac{SUSY}.
 \ac{NP} could unfortunately lie at such high energies to substantiate the dreaded "particle desert" scenario: a vast region between $\si{\TeV}$ and \ac{BSM} scales where no resonances exist.
 Future discoveries would then become impossible in the foreseeable future.
 Notwithstanding, such fears might prove wrong, as a single unexpected discovery would overturn the current state of affairs.

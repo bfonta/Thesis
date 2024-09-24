@@ -23,17 +23,17 @@ Fermions are split across three generations, where each comprises either two lep
 The $e$, $\mu$ and $\tau$ symbols for charged leptons refer to, respectively, electrons, muons and tau leptons.
 They are identical except for their masses, which span multiple orders of magnitude: $m_{e}\approx511\,\si{\keV}$ cite:&electron_mass, $m_{\mu} \approx 105.7 \,\si{\MeV}$ cite:&electron_mass and $m_{\tau} \approx 1.8\,\si{\GeV}$ [[cite:&PDG]].
 Contrary to electrons and muons, tau leptons decay too fast for observation at a collider experiment; we thus measure only their decay products.
-The symbols $\nu_{e/\mu/\tau}$ refer instead to neutrinos and their three flavours, associated to the three leptons we just introduced.
+The symbols $\nu_{e/\mu/\tau}$ refer instead to neutrinos and their three flavors, associated to the three leptons we just introduced.
 Neutrinos do not have an electric or color charge, and thus interact solely via the weak force.
 Their tiny interaction cross sections make them extremely hard to detect.
 The most precise measurements of their near-zero masses set them at values below \SI{1}{\eV}, with their sum constrained to $\lesssim 0.15\,\si{\eV}$ [[cite:&PDG]].
-It is however important to note that the three masses do not correspond to the three flavours, as they mix via the \ac{PMNS} matrix [[cite:&pmns]], leading to neutrino oscillations [[cite:&kamiokanade_neutrinos]].
+It is however important to note that the three masses do not correspond to the three flavors, as they mix via the \ac{PMNS} matrix [[cite:&pmns]], leading to neutrino oscillations [[cite:&kamiokanade_neutrinos]].
 All leptons interact via the \ac{EM} and weak forces, but not strongly.
 On the contrary, quarks "feel" the three forces in the \ac{SM}, and are the internal constituents of /hadrons/.
 Groups of two quarks are called /mesons/ and groups of three quarks are called /baryons/.
 Baryons include protons and neutrons, which are made of up and down quarks in different proportions.
 Hadrons with even more quarks have been observed, but are all unstable.
-Quarks exist in 6 flavours, as represented in [[eq:quarks_and_leptons]]: up, down, charm, strange, top and bottom, all with different masses.
+Quarks exist in 6 flavors, as represented in [[eq:quarks_and_leptons]]: up, down, charm, strange, top and bottom, all with different masses.
 Due to the \ac{QCD} property of confinement, quarks cannot exist independently, and must be associated to other quarks, forming color-neutral bound states.
 This is the basis of /hadronization/, described in [[#sec:offline_reco]] when discussing jets, a type of object measured in collider experiments.
 Only the top quark cannot be part of hadrons, as it decays faster ($\tau_{t} \approx 0.5 \times 10^{-24}\,\si{\second}$ [[cite:&top_lifetime]]) than the time required to form a strong bound state.

@@ -5,7 +5,7 @@ The seed for the next big discovery might lie where the SM was completed; the Hi
 One century ago, no one thought that ordinary matter was about five times less common than a mysterious "dark" form of matter.
 Before the 50's, every scientist would have sworn that Nature follows a left-right symmetry.
 Revolutions are found where one least expects them, and the next one might be waiting just around the corner.
-In the meantime, as physicists, we ought to study everything at our disposal!
+In the meantime, as physicists, we ought to study everything at our disposal.
 The High Energy Physics community has access to some of the most complex machinery ever built, representing unmissable opportunities to measure every conceivable physical quantity.
 This Thesis proposes to pursue such goals by providing contributions on detector and analysis work, to be added to the stack of human knowledge which will inevitably lift the veil on Nature's next revelation.
 
@@ -29,7 +29,7 @@ Recent sensitivity improvements have questioned whether the veracity of such cla
 In this Thesis, I exploit the simplest extension of the SM, the singlet model, to probe the relevant phase-space, compare it with current state-of-the-art HH upper limits, and conclude on whether the NWA is still valid, or if the interference between the resonances and the SM background can no longer be ignored.
 For completeness, singlet model projections at higher luminosity values are produced.
 This represents the first time the impact of the NWA is assessed at CMS.
-The work was included as part of CMS review paper title "Searches for Higgs boson production through decays of heavy resonances", which has been accepted for publication at /Physics Reports/.
+The work was included as part of CMS review paper title "Searches for Higgs boson production through decays of heavy resonances", which has been accepted for publication at /Physics Reports/ [[cite:&interf_studies]].
 
 # HGCAL
 One should never forget that all the interesting studies above are fully dependent on the workings of accelerators and detectors, made possible by the joint effort of thousands of physicists and engineers.

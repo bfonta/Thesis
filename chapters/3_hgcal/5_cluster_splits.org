@@ -18,7 +18,7 @@ When studying cluster splits we require the following additional selections:
 With these selections, we observe cluster splits in \SI{\sim 1}{\percent} of single unconverted photon events.
 In the remainder of this Section we explain the causes for cluster splits, and detail the techniques developed in the context of this Thesis to mitigate or remove it.
 
-* The origin of cluster splits
+* The Origin of Cluster Splits
 :PROPERTIES:
 :CUSTOM_ID: sec:origin_cluster_splits
 :END:
@@ -53,7 +53,7 @@ Specifically, binning schemes with finer bins in the low \rz{} regions improve t
 However, and taking into account the intended final \ac{FPGA} implementation, the added complexity requires additional firmware resources, making it impractical.
 In what follows, we propose a solution which does not impact hardware resources.  
 
-* The bye-splits iterative algorithm
+* The Bye-Splits Iterative Algorithm
 
 Cluster splits are mostly located in the high-\rapidity{} region, where bins are smaller in the Cartesian space and \ac{TC} counts are less homogeneous along adjacent bins.
 Splits are also present virtually along \ac{phi} only, since \rz{} bins are larger, and thus less subject to \ac{TC} multiplicity fluctuations.
@@ -151,7 +151,7 @@ The algorithm is thus a strong candidate for the final design of the reconstruct
 [[~/org/PhD/Thesis/figures/hgcal/ByeSplits.pdf]]
 #+END_figure
 
-* Algorithmic alternatives
+* Algorithmic Alternatives
 :PROPERTIES:
 :CUSTOM_ID: sec:algo_alternatives
 :END:
@@ -189,7 +189,7 @@ It was observed that \acp{TC} in \ac{CE-H} are irrelevant for the performance of
 The latter result is expected, given that most active \acp{TC} will on average lie in that same region.
 These results suggest that the requirements of algorithms needing more resources can be mitigated by focusing on the most sensitive regions of the detector for \ac{EM} showers.
 
-* Using detector coordinates
+* Using Detector Coordinates
 :PROPERTIES:
 :CUSTOM_ID: sec:using_detector_coordinates
 :END:

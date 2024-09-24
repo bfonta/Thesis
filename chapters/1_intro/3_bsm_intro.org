@@ -4,7 +4,7 @@
 
 The \ac{SM} represents a remarkable triumph of modern physics, beautifully explaining all known \ac{EM}, weak and strong interactions, and establishing a profound connection between symmetries and governing equations which precisely predict the entire set of measurements so far performed at collider experiments.
 Precision tests confirm the \ac{SM} validity up to \ac{EW} scale energies, and the observed Higgs boson resembles the theorized one up to great precision.
-Models predicting complex "Higgs families", such as multiple flavours of \ac{SUSY} theories or \ac{2HDM} types, are getting less favoured as more data is collected and analyzed.
+Models predicting complex "Higgs families", such as multiple flavors of \ac{SUSY} theories or \ac{2HDM} types, are getting less favored as more data is collected and analyzed.
 
 It is however striking that some \ac{SM} elements are empirically added to reproduce experimental data.
 Taking the Yukawa couplings as an example, discussed in [[#sec:yukawa]], they are introduced to explain fermion masses, and coincidentally happen to work extremely well with the newly introduced Higgs doublet, but nobody knows /why/ those terms are present in the first place.

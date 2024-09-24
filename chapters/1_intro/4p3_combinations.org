@@ -12,8 +12,8 @@ Global fits also further validate individual studies, mostly at the level of the
 The analyses with the most sensitive production modes are included.
 The main challenge consists in estimating and efficiently removing overlaps between signal regions of different analysis.
 Whenever overlaps exist, one of two approaches is taken: either additional selections are applied, or the least sensitive category or analysis is removed.
-As an example, the \bbzz{} analysis is removed in favour of \hzzfourl{} due to the former's relatively low $\kl$ sensitivity.
-Concerning systematics, their modelling in HH processes is generally simpler when compared to single H, due to the limited number of HH events.
+As an example, the \bbzz{} analysis is removed in favor of \hzzfourl{} due to the former's relatively low $\kl$ sensitivity.
+Concerning systematics, their modeling in HH processes is generally simpler when compared to single H, due to the limited number of HH events.
 
 #+NAME: fig:combination_2d_scans
 #+CAPTION: (Top) Observed two-dimensional likelihood scans of ($\kl$, $\kt$) (left) and ($\kv$, $\kvv$) (right). The strong complementarity between the single and double Higgs processes is well illustrated. The combination slightly improves on HH results. The remaining coupling modifiers are set to their \ac{SM} value. Taken from [[cite:&CMSHplusHHcomb]].

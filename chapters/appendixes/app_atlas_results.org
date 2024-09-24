@@ -14,7 +14,7 @@ In [[fig:scan_comb_atlas]], the Higgs boson self-coupling modifier is constraine
 The limits refer to a 95% \ac{CL}.
 A two dimensional fit is shown in [[fig:kl_vs_k2v_atlas]] (left).
 It is done in order to reduce model dependence, since the uni-dimensional fits are run by fixing all other coupling modifiers to their \ac{SM} values.
-Finally, a \ac{HEFT} interpretation is performed for the three silver bullets, ignoring \ac{VBF} production, as shown in [[fig:kl_vs_k2v_atlas]] (right).
+Finally, a \ac{ggF} HH \ac{EFT} interpretation is performed for the three silver bullets, ignoring \ac{VBF} production, as shown in [[fig:kl_vs_k2v_atlas]] (right).
 Constrains on various \ac{BSM} couplings can be inspected in \newcite{atlas_hh_comb}.
 
 Resonant results are shown in [[fig:resonant_atlas]], were we can emphasize the small excess observed at $\mx=1\,\si{\TeV}$ for \bbtt{}, with a local (global) significance of \SI{3.1}{\sigma} (\SI{2.0}{\sigma}).
@@ -42,7 +42,7 @@ The other channels do not observe any tension.
 #+END_figure
 
 #+NAME: fig:kl_vs_k2v_atlas
-#+CAPTION: (Left) Expected 95% CL contours in the $\kvv{}–\kl{}$ plane, corresponding to the individual decay channels and their combination, are illustrated using dashed lines. The observed contour from the combined results is depicted by a solid black line. The \ac{SM} prediction is marked by a star, and the combined best-fit value is indicated by a cross. (Right) Observed and expected 95% CL combined upper limits on the cross section for the \ac{SM} and seven \ac{BSM} \ac{HEFT} benchmarks in the ggF process, describing representative signal kinematics and $\mhh$ shape features obtained by varying multiple \ac{HEFT} coefficients. The expected limits from the \bbtt{}, \bbgg{} and \bbbb{} decay channels are presented as well. Theoretical predictions, estimated using specific sets of coefficient values defined in the benchmarks, are shown as red cross dots. Taken from [[cite:&atlas_hh_comb]].
+#+CAPTION: (Left) Expected 95% CL contours in the $\kvv{}–\kl{}$ plane, corresponding to the individual decay channels and their combination, are illustrated using dashed lines. The observed contour from the combined results is depicted by a solid black line. The \ac{SM} prediction is marked by a star, and the combined best-fit value is indicated by a cross. (Right) Observed and expected 95% CL combined upper limits on the cross section for the \ac{SM} and seven \ac{BSM} HH \ac{EFT} benchmarks in the ggF process, describing representative signal kinematics and $\mhh$ shape features obtained by varying multiple \ac{EFT} coefficients. The expected limits from the \bbtt{}, \bbgg{} and \bbbb{} decay channels are presented as well. Theoretical predictions, estimated using specific sets of coefficient values defined in the benchmarks, are shown as red cross dots. Taken from [[cite:&atlas_hh_comb]].
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center

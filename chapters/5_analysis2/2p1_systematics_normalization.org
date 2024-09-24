@@ -54,7 +54,7 @@ We list them in what follows:
   The cell is empty if no \ac{QCD} could be estimated (as either regions B, C or D have negative yield). 
 
 #+NAME: tab:QCDUnc
-#+CAPTION: QCD normalization uncertainties, taking into account all uncertainty sources, in percentage. A cell is empty if no \ac{QCD} could be estimated due to negative B, C or D region yields.
+#+CAPTION: QCD normalization uncertainties, taking into account all uncertainty sources, in percentage. A cell is empty if no \ac{QCD} background could be estimated due to negative B, C or D region yields.
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{10pt}

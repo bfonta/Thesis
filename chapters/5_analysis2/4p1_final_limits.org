@@ -61,7 +61,7 @@ We show a preliminary version of the pulls and impacts for the 25 leading nuisan
 The pulls are all centered at zero since, for expected limits, the difference is computed with respect to the Asimov dataset.
 
 #+NAME: fig:pulls_impacts
-#+CAPTION: Leading 25 systematic uncertainties of the \xhhbbtt{} analysis. The pulls are shown by the black points and the black horizontal error bars, which indicate the median and the \SI{1}{\sigma} bands, respectively. The pulls are centered at zero because an Asimov dataset is being used. The "pre" and "post" labels refer to the maximum likelihood fits. The red and blue bars indicate the impacts on the \ac{POI}, and its direction. The plot was obtained for $\mx=300\,\si{\GeV}$. The signal was inkected with a cross section of \SI{1}{\pico\barn}.
+#+CAPTION: Leading 25 systematic uncertainties of the \xhhbbtt{} analysis. The pulls are shown by the black points and the black horizontal error bars, which indicate the median and the \SI{1}{\sigma} bands, respectively. The pulls are centered at zero because an Asimov dataset is being used. The "pre" and "post" labels refer to the maximum likelihood fits. The red and blue bars indicate the impacts on the \ac{POI}, and its direction. The plot was obtained for $\mx=300\,\si{\GeV}$. The signal was injected with a cross section of \SI{1}{\pico\barn}.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .8\textwidth :center

@@ -10,18 +10,18 @@
 #+END_figure
 
 The sensitivity of certain \ac{HEP} processes is occasionally dominated by a single final state.
-In single Higgs physics, for instance, the \hzzfourl{} is often regarded as a "golden channel", since it has a large signal-to-background ratio, with a flatish background under the Higgs boson peak, and possesses an extremely detector-friendly final state, which benefits from the good electron and muons resolution in \ac{CMS} and \ac{ATLAS}.
+In single Higgs physics, for instance, the \hzzfourl{} is often regarded as a "golden channel", since it has a large signal-to-background ratio, with a flattish background under the Higgs boson peak, and possesses an extremely detector-friendly final state, which benefits from the good electron and muons resolution in \ac{CMS} and \ac{ATLAS}.
 Another example can be provided in the context of B-Physics, where the $\bszero \rightarrow \mu\mu$ and $\text{B}^{0} \rightarrow \mu\mu$ decays are equally seen as "golden", taking once again into account the exquisite muon resolutions in \ac{CMS}, and are highly suppressed in the \ac{SM}, making these rare channels particular sensitive to \ac{BSM} effects [[cite:&cms_bs]].
 On the contrary, double Higgs production does not include a single sensitivity-dominating channel.
 Instead, a vast measurement programme has to be established, considering multiple final states, and foreseeing their subsequent combination.
 Three channels are nevertheless more sensitive than the others: \bbbb{}, \bbgg{} and \bbtt{}.
 They are collectively referred as "silver bullets", since their combined measurement drives most of the sensitivity in HH physics:
-+ \hhbbbb{}: characterized by the largest branching ratio at 34%, this decay channel is unfortunately overwhelmend by multijet background, much like \hbb{} and \hcc{} processes discussed in [[#sec:higgs_exp_status]].
++ \hhbbbb{}: characterized by the largest branching ratio at 34%, this decay channel is unfortunately overwhelmed by multijet background, much like \hbb{} and \hcc{} processes discussed in [[#sec:higgs_exp_status]].
   Its relative importance has been increasing, given the recent and very significant improvements in the performance of jet taggers, mostly driven by the exploitation of novel machine learning techniques.
-  It is particulary suited for the high energy boosted regime, when the jets are collimated, but it is successfully used across the entire phase-space.
-+ \hhbbgg{}: just like for the \hgg{} process, a subpercent branching fraction is here compensated by a pure, low background final state.
+  It is particularly suited for the high energy boosted regime, when the jets are collimated, but it is successfully used across the entire phase-space.
++ \hhbbgg{}: just like for the \hgg{} process, a sub-percent branching fraction is here compensated by a pure, low background final state.
   The irreducible di-photon background can be mitigated by applying a selection on the photon pair invariant mass.
-+ \hhbbtt{}: represents an ideal compromise between a sizeable branching fraction at 7.3% and a background benefitting from the presence of a relatively pure $\tau\tau$ pair.
++ \hhbbtt{}: represents an ideal compromise between a sizable branching fraction at 7.3% and a background benefiting from the presence of a relatively pure $\tau\tau$ pair.
   It is the channel considered for the analysis later described in this Thesis.
 \noindent The remaining channels have a limited impact on the final sensitivity, but are nevertheless explored.
 They potentiate the development of new techniques that can be later transferred to other analyses, they can be sensitive to very particular and unexpected \ac{BSM} signatures, and they can provide the combined additional small gain required to observe a new process.

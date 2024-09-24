@@ -2,10 +2,10 @@
 :CUSTOM_ID: sec:interf_intro
 :END:
 
-The majority of Higgs analyses considers the \ac{NWA} for the final analysis fit, where the Higgs boson width $\gh$ is set to zero or to an arbitrarily small value.
-This is usually motivated by simplicity, also taking into account that the predicted \ac{SM} $\gh$ of \SI{\sim 4.1}{\MeV} [[cite:&YellowReport4 App.A]] at $\mh=125.08 \pm 0.12\,\si{\GeV}$[fn:: The value of the PDG average [[cite:&PDG]] at the time of writing is slightly different, and based on older \ac{CMS} and \ac{ATLAS} measurements: [[cite:&higgs_mass_cms;&higgs_mass_atlas;&higgs_mass_atlas_cms]]] [[cite:&higgs_mass_cms_run2]], compatible with measurements [[cite:&higgs_width_cms;&higgs_width_atlas]], is around two orders of magnitude smaller than what the \ac{CMS} detector resolution can currently provide [[cite:&higgs_mass_cms_run2;&higgs_mass_cms]].
-The most up-to-date measurements are performed with the \hzzfourl{} and \hgg{} high resolution channels [[cite:&higgs_width_cms]].
-However, when considering processes with two Higgs bosons, one cannot /a priori/ argue that the detector resolution will always be lower than the width of any \ac{BSM} resonance \xhh{}.
+The majority of studies involving the \ac{SM} Higgs boson or \ac{BSM} particles considers the \ac{NWA}, which equates to setting the particle's width $\Gamma$ to zero or to an arbitrarily small value.
+For \ac{SM} Higgs boson analyses, this is usually motivated by simplicity, also taking into account that the predicted \ac{SM} $\gh$ of \SI{\sim 4.1}{\MeV} [[cite:&YellowReport4 App.A]] at $\mh=125.08 \pm 0.12\,\si{\GeV}$[fn:: The value of the PDG average [[cite:&PDG]] at the time of writing is slightly different, and based on older \ac{CMS} and \ac{ATLAS} measurements: [[cite:&higgs_mass_cms;&higgs_mass_atlas;&higgs_mass_atlas_cms]]] [[cite:&higgs_mass_cms_run2]], compatible with measurements [[cite:&higgs_width_cms;&higgs_width_atlas]], is around two orders of magnitude smaller than what the \ac{CMS} detector resolution can currently provide [[cite:&higgs_mass_cms_run2;&higgs_mass_cms]].
+The most up-to-date measurements of the Higgs boson's width are performed with the \hzzfourl{} and \hgg{} high resolution channels [[cite:&higgs_width_cms]].
+However, when considering resonant processes with two Higgs bosons, one cannot /a priori/ argue that the detector resolution will always be lower than the width of any \ac{BSM} resonance \xhh{}.
 Instead, and especially for large resonance masses, $\gx$ values are expected to be large, potentially leading to the inapplicability of the \ac{NWA}.
 Despite the above, the \ac{NWA} has been repeatedly used in past \ac{CMS} HH resonant analyses, including the analysis presented in this Thesis.
 A sizable signal width can create /interferences/ between the resonant and nonresonant components of the signal, which are absent under the \ac{NWA}.

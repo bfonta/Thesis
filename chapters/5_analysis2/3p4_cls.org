@@ -3,7 +3,7 @@
 :END:
 
 We can now use the Neyman-Pearson lemma to rewrite the optimal test statistic using the likelihood function.
-To test a given value of the signal strenght modifier $\mu$, we define the /\ac{PRL}/ [[cite:&asimov]]:
+To test a given value of the signal strength modifier $\mu$, we define the /\ac{PRL}/ [[cite:&asimov]]:
 
 #+NAME: eq:PRL
 \begin{equation}
@@ -58,12 +58,12 @@ Given $q_{\mu}^{\text{obs.}}$, we calculate the probabilities for $q_{\mu}$ to b
     \text{CL}_{\text{s}}(\mu) \equiv \frac{p_{s+b}}{p_b} < \alpha \: ,
 \end{equation}
 \noindent where $\alpha$ is the significance level.
-The inclusion of the denominator protects against cases where $s \ll b$, for which signal models can be excluded when there is no sensitivity due to underfluctuations of the background.
+The inclusion of the denominator protects against cases where $s \ll b$, for which signal models can be excluded when there is no sensitivity due to under-fluctuations of the background.
 A value of 5% is commonly chosen for the significance level, leading to the 95% \ac{CL} results quoted in this work.
 Would the experiment be repeated a large number of times, we would expect to observe $\mu$ within the \ac{CL} in 95% of cases.
 The limits are obtained on the \ac{POI} $\mu$, but are rescaled to the cross section of the signal process.
 
-When looking for resonances as a function of multiple hypothesis, as done for \xhhbbtt{} in terms of the resonance masses $\mx$, the p-value underestimates the chances of observing fluctuations when jointly considering all signals being probed.
+When looking for resonances as a function of multiple hypotheses, as done for instance for the \xhhbbtt{} analysis in terms of the resonance masses $\mx$, the p-value underestimates the chances of observing fluctuations when jointly considering all signals being probed.
 In other words, the /local/ significance, as computed for a fixed value of a parameter, systematically overestimates the more correct, /global/ significance, in a phenomenon dubbed the /look-elsewhere effect/.
 This effect takes place because $q$ depends on several hypotheses $m = (m_1,m_2,m_3,...)$, and not just on a single $m_i$, and thus one has to take into account background fluctuations at any hypothesis value in the relevant domain.
 The local p-value is thus converted into a global one through a new test statistic, computed by taking the maximum value of test statistics over the hypotheses' domain [[cite:&stat_procedure_comb_higgs]]:

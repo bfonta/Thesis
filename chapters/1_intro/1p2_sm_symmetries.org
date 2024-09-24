@@ -2,8 +2,8 @@
 :CUSTOM_ID: sec:symmetries
 :END:
 
-There has always been a deep connection between the symmetries in the Universe and the laws that dictate its behaviour.
-Geometrical patterns had been observed from ancient times; greeks for instance believed the motion of objects had to follow symmetrical trajectories, despite frequent discrepancies with observed data.
+There has always been a deep connection between the symmetries in the Universe and the laws that dictate its behavior.
+Geometrical patterns had been observed from ancient times; Greeks for instance believed the motion of objects had to follow symmetrical trajectories, despite frequent discrepancies with observed data.
 Newton instead transferred the idea of symmetries to the equations describing the motion, rather than focusing on the solutions of those same equations.
 In 1915, the synergy between symmetries and Nature became firmly established in Noether's famous theorem [[cite:&noether]], stating that for each continuous symmetry a conservation law ensues or that, conversely, every conservation law reflects an underlying symmetry.
 Energy conservation follows from the invariance of the laws of Physics under translations in time, the invariance under space translations leads to momentum conservation, and so forth.
@@ -50,7 +50,7 @@ Without further changes, the Lagrangian in [[eq:yang_mills_lagrangian]] is not i
 \end{equation}
 
 \noindent If we insist on the concept of local invariance, something has to be added to the Lagrangian in order to cancel the new term.
-This can be achieved by replacing the standard derivate $\partial_{\mu}$ by the /covariant derivative/:
+This can be achieved by replacing the standard derivative $\partial_{\mu}$ by the /covariant derivative/:
 
 #+NAME: eq:covariant_derivative
 \begin{equation}
@@ -66,7 +66,7 @@ Keeping only the first-order terms for the case of small $\pmb{\lambda}$, the so
 \pmb{A}_{\mu} \rightarrow \pmb{A}_{\mu} + \partial_{\mu}\pmb{\lambda} - 2g(\pmb{\lambda} \times \pmb{A}_{\mu}) \: .
 \end{equation}
 
-\noindent Finally, without forgeting the additional kinematic term brought by the new field:
+\noindent Finally, without forgetting the additional kinematic term brought by the new field:
 
 #+NAME: eq:kin_term
 \begin{equation}
@@ -85,7 +85,7 @@ Since a term of the form $A_{k}A^{k}$ is not invariant under the gauge transform
 Crucially, it is the insistence on local gauge invariance which leads to three new vector gauge fields.
 
 The original Yang-Mills theory turned out to be of little use, on account of starting from the assumption that there are two elementary half-integer spin particles with exactly the same mass, which were never observed.
-However, the same idea could be generalized to many other non-abelian symmetry groups, and ended up representing the basis of the \symcolor{} color symmetry for strong interactions and of the isospin-hypercharge \symweak{} symmetry for weak interactions.
+However, the same idea could be generalized to many other non-Abelian symmetry groups, and ended up representing the basis of the \symcolor{} color symmetry for strong interactions and of the isospin-hypercharge \symweak{} symmetry for weak interactions.
 
 * Chromodynamics
 According to the \ac{SM}, each quark flavour comes in three colors: red, blue and green.
@@ -242,7 +242,7 @@ Indeed, by replacing the new fields back in [[eq:ew_lagrangian_long_nc]], we get
 g\sin\theta_{\text{W}}I_{3}+g^\prime\cos\theta_{\text{W}}\frac{\mathcal{Y}}{2} = eQ \: .
 \end{equation}
 
-\noindent The hypercharge $\mathcal{Y}$ multiplies the coupling $g^\prime$, and thus leaves space from some arbritariness in its value.
+\noindent The hypercharge $\mathcal{Y}$ multiplies the coupling $g^\prime$, and thus leaves space from some arbitrariness in its value.
 With the appropriate choice of $\mathcal{Y}(\bar{\Psi}_{\text{L}})=-1$, and considering the quantum numbers of the leptons in the up and down components of the doublets in [[eq:quarks_and_leptons]], a set of equations can be obtained:
 
 #+NAME: eq:system_nijishima

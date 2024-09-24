@@ -3,7 +3,7 @@
 :END:
 
 Despite its success, intriguing observations or fully unexplained phenomena blatantly highlight the limitations of the \ac{SM}.
-In this Section, we list the most prominent challenges a successfull future theory should ideally address [[cite:&griffiths;&thomson]].
+In this Section, we list the most prominent challenges a successful future theory should ideally address [[cite:&griffiths;&thomson]].
 That high-energy collider physics has the potential to look for answers in many of the following topics is a statement for the relevance \ac{HEP} experiments still have in the general experimental landscape.
 
 + *Dark Matter*:
@@ -13,7 +13,7 @@ That high-energy collider physics has the potential to look for answers in many 
   Many experiments have provided independent measurements that seem to support the existence of dark matter, like the \ac{CMB} measurements with WMAP [[cite:&wmap]] and Planck [[cite:&planck_exp]], or the observation galaxy clusters, including the famous "bullet cluster" [[cite:&bullet_cluster1;&bullet_cluster2]].
   Some \ac{SM} extensions predict the existence of \acp{WIMP}, as \ac{SUSY}, \ac{WED} and little Higgs theories.
   They should pervade our Universe, and so might be observable directly via dedicated experiments, or produced at the \ac{LHC}.
-  Alternative explanations for the observed discrepancies nevertheless exist, most notably \ac{MOND} theories [[cite:&mond]], but are generally disfavoured by the scientific community.
+  Alternative explanations for the observed discrepancies nevertheless exist, most notably \ac{MOND} theories [[cite:&mond]], but are generally disfavored by the scientific community.
   
 + *Grand unification*:
   At the \ac{EW} scale, the three coupling constants present in the \ac{SM} have a somewhat similar value.
@@ -26,7 +26,7 @@ That high-energy collider physics has the potential to look for answers in many 
 
 + *\Ac{CP} violation and baryogenesis*:
   Sakharov identified three necessary ingredients to explain a process capable of reproducing the observed matter-antimatter asymmetry: /i/) lepton and baryon number violation, /ii/) a Universe was out of thermal equilibrium at some point in time, and /iii/) a \ac{CP}-violating interaction.
-  In the \ac{SM}, the violation of \ac{CP} symmetry can only be accomodated in the parameters of the \ac{CKM} and \ac{PMNS} matrices.
+  In the \ac{SM}, the violation of \ac{CP} symmetry can only be accommodated in the parameters of the \ac{CKM} and \ac{PMNS} matrices.
   \Ac{CP} violation has already been studied in great depth in the quark sector, but the same is not the case for neutrinos.
   However, even assuming the observation of \ac{CP} violation in the \ac{PMNS} matrix, it seems unlikely that the \ac{SM} will be able to explain the full extent of the observed matter/anti-matter asymmetry in the Universe.
   The required \ac{CP} violation could also be hidden in the strong \ac{SM} phase, an issue that can be tackled by introducing axions, which have the advantage of also being dark matter candidates.
@@ -35,7 +35,7 @@ That high-energy collider physics has the potential to look for answers in many 
   There is a striking disparity between neutrino masses and the masses of all other \ac{SM} particles, including other fermions.
   Dirac-type neutrinos imply unnaturally small Yukawa couplings to the Higgs boson, since the latter is proportional to the fermion mass.
   Majorana-particles might circumvent this issue via a seesaw-like mechanism, violating the lepton number [[cite:&seesaw_mech]].
-  The most striking evidence for Majorana-type neutrinos would be the observation of neutrinoless double $\beta\text{-decay}$ $(\text{Z},\text{A}) \rightarrow (\text{Z}+2,\text{A}) + 2e^{-}$, with Z the atomic number and A the mass number, which cannot occur if the neutrinos are of Dirac-type.
+  The most striking evidence for Majorana-type neutrinos would be the observation of neutrino-less double $\beta\text{-decay}$ $(\text{Z},\text{A}) \rightarrow (\text{Z}+2,\text{A}) + 2e^{-}$, with Z the atomic number and A the mass number, which cannot occur if the neutrinos are of Dirac-type.
   The level of required experimental precision is however very high, and no definitive answer was found so far.
   Even the mass ordering of the three know neutrino families is not known.
   Neutrino oscillation experiments have shed light on their non-zero masses, but they are unfortunately sensitive to squared-mass differences only.

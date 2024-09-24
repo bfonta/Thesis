@@ -1,8 +1,8 @@
 # Variables
 #+LATEX_HEADER: \newcommand{\astrong}{\alpha_{\text{S}}}
 #+LATEX_HEADER: \newcommand{\bbll}{bb$\ell\ell$+$E^{\text{miss}}_{\text{T}}$}
-#+LATEX_HEADER: \newcommand{\cgg}{c_{2g}}
-#+LATEX_HEADER: \newcommand{\cg}{c_{g}}
+#+LATEX_HEADER: \newcommand{\cgg}{c_{2\text{g}}}
+#+LATEX_HEADER: \newcommand{\cg}{c_{\text{g}}}
 #+LATEX_HEADER: \newcommand{\ctwo}{c_{2}}
 #+LATEX_HEADER: \newcommand{\cvv}{c_{\text{2V}}}
 #+LATEX_HEADER: \newcommand{\cv}{c_{\text{V}}}

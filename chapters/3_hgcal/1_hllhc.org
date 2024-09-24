@@ -4,13 +4,13 @@
 
 The first phase of the \ac{LHC} has been running since 2010, spanning three data runs, the last of which, \run{3}, is currently approaching its end of life, foreseen in the last quarter of 2025.
 Phase-2 will soon follow with the new \ac{HL-LHC} [[cite:&hllhc]], which is planned to start taking data in 2029, extending \ac{HEP} studies well into the future (see ref:fig:hllhc) [[cite:&hllhc_evolution_paper1;&hllhc_evolution_paper2]].
-An integrated luminosity of up to \SI{\sim 4}{\per\atto\barn} is envisaged to be collected over a period of \num{10} years, corresponding to \SI{90}{\percent} of the total data collected by the \ac{LHC}.
-The \ac{HL-LHC} is designed to operate at a centre-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SI{7.5e34}{\per\cm\squared\per\second}.
+An integrated luminosity of more than \SI{3}{\invab} is envisaged to be collected over a period of \num{10} years, corresponding to \SI{90}{\percent} of the total data collected by the \ac{LHC}.
+The \ac{HL-LHC} is designed to operate at a center-of-mass energy of \SI{14}{\TeV}, achieving unprecedented instantaneous luminosities of \SI{7.5e34}{\per\cm\squared\per\second}.
 This is more than twice the \ac{LHC}’s current value.
 The conditions correspond, in the ultimate HL-LHC configuration, to up to 200 \ac{PU}, \SI{2}{\mega\gray} of total ionizing dose[fn:: One Gray is defined as the absorption of one Joule of radiation energy per kilogram.] and a fluence of up to \SI{e16}{\nequiv}.
 The neutron equivalent fluence, in this context, is defined as the number of \SI{1}{\MeV} neutrons per \si{\per\cm\squared} traversing the detector material, and serves as a measure for potential radiation damage.
 The normalization at \SI{1}{\MeV} is chosen both due to historical reasons and the fact that expected neutron spectra at the \ac{HL-LHC} typically have a probability density peaking in that region. 
-For comparison with the \ac{HL-LHC}, the \ac{LHC} currently brings an average of \num{\sim 50} \ac{PU} interactions [[cite:&pileup_twiki]], a dose of the order of \SI{0.1}{\mega\gray} and a fluence of \SI{\sim e15}{\nequiv} (see [[ref:sec:lhc_design]]) [[cite:&lhc_fluences]].
+For comparison with the \ac{HL-LHC}, the \ac{LHC} currently brings an average of around 50 \ac{PU} interactions [[cite:&pileup_twiki]], a dose of the order of \SI{0.1}{\mega\gray} and a fluence of about \SI{e15}{\nequiv} (see [[ref:sec:lhc_design]]) [[cite:&lhc_fluences]].
 To give an example of how dramatic the changes are expected to be, current \ac{CMS} endcap calorimeters are designed to sustain up to \SI{500}{\per\femto\barn}, \num{8} times less than what the \ac{HL-LHC} may bring.
 Extensive detector upgrades are therefore required for many \ac{LHC} experiments, which will be detailed in [[ref:sec:hllhc_detector_upgrades,sec:cms_detector_upgrades]].
 The operational scenario of the \ac{HL-LHC} is continuously evolving, with some uncertainties still present.
@@ -39,7 +39,7 @@ A detailed description is out of the scope of this work.
 * EW Processes
 The increase in luminosity provided by the \ac{HL-LHC} will provide a significant boost in sensitivity to measurements of (small) electroweak couplings, especially when dealing with low cross section processes.
 This notably applies to W mass $\mw$ and weak mixing angle $\thw$ measurements, but also to \ac{VBF}, \ac{VBS}, and tri-boson production measurements.
-\num{\sim 2e6} W boson events will be collected per week, leading to an increased statistical sensitivity for the W mass, and more precise cross section measurements.
+Circa \num{2e6} W boson events will be collected per week, leading to an increased statistical sensitivity for the W mass, and more precise cross section measurements.
 The added luminosity might also help solving the tension between old $\theta_{W}$ measurements performed by \ac{LEP} and Tevatron, adding to the recent \ac{CMS} result [[cite:&weak_mixing_angle_cms]], which agrees with the \ac{SM}, just as previous \ac{LHC}-hosted measurements.
 Concerning \ac{VBF} and \ac{VBS} processes, despite the overall lower cross section, of about one order of magnitude with respect to the \ac{ggF} production, the presence of additional hard and forward jets enables a very significant reduction of the multi-jet background.
 This is particularly true for large rapidity separations $\Delta \dijetrap \gtrsim 4.5$ and di-jet invariant masses
@@ -48,7 +48,7 @@ In \ac{VBS}, measurements of longitudinal scattering of two Vs ($\text{V}=\text{
 The longitudinal component of the $V$ bosons is in particular tightly connected to the Higgs mechanism and \ac{EWSB}, since massless particles only have transversal components.
 However, differential measurements of gauge boson polarization is harder given the reduced cross section of the longitudinal-only components.
 Would unitarity be violated, particle probability would no longer be conserved: the calculated number of $V$ pairs produced in the interaction would exceed the incident flux [[cite:&thomson]].
-There is also the possibility for the longitudinal components of the $V$ bosons to be strongly coupled at \SI{\sim 1}{\TeV} center-of-mass energies [[cite:&vbs1]], allowing for instance the formation of resonance states in technicolor models.
+There is also the possibility for the longitudinal components of the $V$ bosons to be strongly coupled at around \SI{1}{\TeV} center-of-mass energies [[cite:&vbs1]], allowing for instance the formation of resonance states in technicolor models.
 \ac{VBS} also forms the ideal field for anomalous gauge couplings measurements, especially quartic couplings.
 Finally, even rarer tri-boson processes ($\sigma\sim0.1\,\si{\pico\barn}$) brings an extra handle on \ac{SM} testing.
 
@@ -70,7 +70,7 @@ With the \ac{HL-LHC}, it will be possible to improve the precision of the $\mt$ 
 The $t\bar{t}$ differential distributions will also be studied in more detail, reaching $\mtt\sim 7\,\si{\TeV}$ and $\pt\sim 2.5\,\si{\TeV}$.
 These will benefit \ac{PDF} measurements.
 One will also be able to explore \ac{BSM} for $\mtt > 7\,\si{\TeV}$ due to the low \ac{SM} background.
-An interesting link might be drawn between the results of \ac{LHCb} and \ac{ATLAS}/\ac{CMS}, given the increase in $\eta$ reach up to \num{\sim 4}.
+An interesting link might be drawn between the results of \ac{LHCb} and \ac{ATLAS}/\ac{CMS}, given the increase in $\eta$ reach up to about 4.
 Further studies will be possible on the rare $t\bar{t}t\bar{t}$ production, despite its $\mathcal{O}(10)\,\si{\per\femto\barn}$ cross section, following its recent observation [[cite:&tttt_cms;&tttt_atlas]].
 $t\bar{t}t\bar{t}$ can be used to constrain some of the Wilson coefficients associated to \ac{EFT} dimension-6 operators, to further study the top Yukawa coupling constrain, including its magnitude and \ac{CP} properties, since it can occur via the mediation of a Higgs boson [[cite:&tttt]], and even to assess the presence of the non-\ac{SM} top quark dipole moment.
 
@@ -91,11 +91,11 @@ The \ac{HL-LHC} will push \ac{CEP} processes to higher masses and lower cross se
 #+END_figure
 
 The Higgs boson programme will remain at the forefront of \ac{CMS} research, with the \num{150} million Higgs bosons and \num{120} thousand Higgs boson pairs expected to be produced at the end of the \ac{HL-LHC} phase.
-The precision of the Higgs couplings will improve by a factor of \num{\sim 4}, with most couplings measured to a \SI{2}{\percent} precision.
+The precision of the Higgs couplings will improve by a factor of about 4, with most couplings measured to a \SI{2}{\percent} precision.
 After the expected observation of \hmumu{} already at \run{3}, the \hzg{} channel will share the same fate during \phase{2} [[cite:&higgs_10_years]], despite its uncertainty remaining statistically driven.
 However, the long-awaited flagship measurement of \ac{HL-LHC} concerns di-Higgs production.
 Indeed, current projections (see ref:fig:hh_nonres_projections) suggest that the combined analysis of multiple final states and experiments might challenge the \ac{SM} prediction of the Higgs boson self-coupling.
-Comparing \run{2} results with current full \run{2} upper cross section limits, we see that an improvement of a factor of \num{\sim 7} was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
+Comparing \run{2} results with current full \run{2} upper cross section limits, we see that an improvement of a factor of around 7 was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
 The improvement over the luminosity baseline is due to multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels [[cite:&andre_david_higgs_ten_years]].
 Past results have consistently surpassed initial estimates, and thus provide an optimistic view on future triple and quartic Higgs coupling measurements, which will surely be the most precise ever.
 A series of new techniques should provide significant improvements, starting from \run{3} and extending into the \ac{HL-LHC}, including new machine learning approaches or better estimates of \ac{QCD} multi-jet background.

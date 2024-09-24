@@ -7,7 +7,7 @@ We include all radion signal samples and the two most important backgrounds, \ac
 The fraction is small for most samples, and its maximum value is \SI{\sim 20}{\percent}.
 
 #+NAME: tab:highPt_fractions
-#+CAPTION: Fraction of events in the \mutau{} channel where the first lepton, a muon, has a \ac{pt} above \SI{120}{\GeV}, for the three analysis categories and for the baseline selection. The selections and categories are detailed in [[#sec:selection]]. The signal samples refer to the radion \spin{0} hypothesis.
+#+CAPTION: Fraction of events in the \mutau{} channel where the first lepton, a muon, has a \ac{pt} above \SI{120}{\GeV}, for the three analysis categories and for the \basecat{} selection. The selections and categories are detailed in [[#sec:selection]]. The signal samples refer to the radion \spin{0} hypothesis.
 #+ATTR_LATEX: :placement [!h] :center t :align ccccc :environment mytablewiderrows
 |-----------------+---------------+---------------+---------------+---------------|
 | *Sample*          | *baseline*      | *res1b*         | *res2b*         | *boosted*       |

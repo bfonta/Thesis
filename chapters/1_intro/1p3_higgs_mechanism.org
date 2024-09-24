@@ -6,7 +6,7 @@ The Higgs mechanism revolutionized Particle Physics, and has driven \ac{HEP} exp
 The mechanism is responsible for generating the masses of the W and Z gauge bosons, and for explaining the masses of fermions.
 It is deeply connected to the stability of the \ac{EW} vacuum, and thus possibly the fate of our Universe, it can have a role in baryogenesis [[cite:&electroweak_baryogenesis]], and its homonymous particle might even be identified as the possible inflaton of the primordial Universe [[cite:&inflaton]].
 Despite its central role in modern particle physics, the Higgs mechanism is at its core based on a relatively simple phenomenon, that of symmetry breaking, which is widely present in Nature (see [[fig:symmetries]], left).
-A striking example of symmetry breaking takes place in biology [[cite:&chirality_bio_1;&chirality_bio_2]], where molecules that are central to life have just one out of two possible chiralities: the DNA and RNA are right-handed, while aminoacids and proteins are all left-handed.
+A striking example of symmetry breaking takes place in biology [[cite:&chirality_bio_1;&chirality_bio_2]], where molecules that are central to life have just one out of two possible chiralities: the DNA and RNA are right-handed, while amino acids and proteins are all left-handed.
 Gravity represent yet another example, breaking 3D space symmetry, and establishing a difference between "up" and "down".
 We instead speak of /spontaneous/ symmetry breaking when the states of a system do not possess the same symmetries of the theory that describes them [[cite:&ssb_lecture]].
 The true symmetry of the system is simply hidden by the necessary choice of an asymmetrical lower energy state.
@@ -52,7 +52,7 @@ By defining the \ac{VEV} as $v=\mu/\sqrt{\lambda}$ and expanding around the true
 \noindent where the sum across $j$ is implied.
 [[eq:expand_potential]] is interpreted as the presence of a scalar real massive field H and three massless fields $\theta^{i}$.
 The massless fields follow from Goldstone's theorem [[cite:&goldstone]], which states that whenever a continuous symmetry is not apparent in the ground state, or spontaneously broken, a number of massless bosons will be generated equal to the number of the broken generators of the symmetry, three in this case.
-By applying the /unitary gauge/ transformation on top, we can easily see that the $\theta^{i}$ bosons are unphysical:
+By applying the /unitary gauge/ transformation on top, we can easily see that the $\theta^{i}$ bosons are nonphysical:
 #+NAME: eq:unitary_gauge
 \begin{equation}
 \phi(x) \rightarrow e^{-\frac{i}{v}\sigma_j\theta^j(x)} \phi(x) = \frac{1}{\sqrt{2}} \binom{0}{v+\text{H}(x)} \: .
@@ -185,7 +185,7 @@ The last item is also discussed in [[#sec:ewpt]].
 
 Despite strongly motivated, and serving as the main motivation for building the \ac{LHC}, all the above remained uncertain until very recently.
 Additionally, since the mass of the new boson was a free parameter of the theory, there was no definitive guarantee that a Higgs particle could be produced in a \ac{HEP} experiment. 
-However, some considerations on unitarity and perturbative behaviour conveyed some optimism, implying upper limits of $\mh \lesssim 700\,\si{\GeV}$ [[cite:&higgs_mass_up_bound1;&higgs_mass_up_bound2]], and to lower limits driven by vaccum stability arguments, where the nontrivial minima at $v \neq 0$ would disappear if $\mh$ was too small [[cite:&higgs_mass_down_bound]].
+However, some considerations on unitarity and perturbative behavior conveyed some optimism, implying upper limits of $\mh \lesssim 700\,\si{\GeV}$ [[cite:&higgs_mass_up_bound1;&higgs_mass_up_bound2]], and to lower limits driven by vacuum stability arguments, where the nontrivial minima at $v \neq 0$ would disappear if $\mh$ was too small [[cite:&higgs_mass_down_bound]].
 The Higgs boson was finally jointly discovered by the \ac{CMS} and \ac{ATLAS} experiments, and was announced to the world on July 2012 [[cite:&CMS_Higgs_discovery1;&CMS_Higgs_discovery2;&ATLAS_Higgs_discovery]].
 All measurements so far suggest that the new particle truly is the predicted \ac{SM} scalar Higgs boson, with zero charge and a mass slightly above \SI{125}{\GeV}.
 Interestingly, the value found for $\mh$ almost perfectly maximizes the product of the 14 branching ratios of the \ac{SM} Higgs boson into the known fermion and boson pairs [[cite:&higgs_br_maximum1]].

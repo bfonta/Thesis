@@ -26,13 +26,13 @@ For these cases, the /extended likelihood function/ is employed:
 L(\nu,\varphi) = \frac{e^{-\nu}}{n!} \prod_{i=1}^{n} \nu \, f(x_i;\varphi) \: .
 \end{equation}
 
-\noindent In practice, the /log-likelihood/ $\log L$ is usally considered, since it is mathematically much easier to treat:
+\noindent In practice, the /log-likelihood/ $\log L$ is usually considered, since it is mathematically much easier to treat:
 #+NAME: eq:loglikelihood
 \begin{equation}
 \log L(\nu,\varphi) = - \nu + \sum_{i=1}^{n} \log \left[ \sum_{j=1}^{m} \nu \, \varphi_{j} \, f_j(x_i) \right] \: ,
 \end{equation}
 
-\noindent where it was assummed that $\nu$ does not depend on $\varphi$, and all terms not depending on the parameters were dropped.
+\noindent where it was assumed that $\nu$ does not depend on $\varphi$, and all terms not depending on the parameters were dropped.
 As the logarithm is a monotonically increasing function, the maxima of $L$ will also maximize $\log L$.
 
 # binned data

@@ -6,12 +6,12 @@ The results presented in the previous Section used the full \ac{CMS} \run{2} dat
 We here discuss the future of Higgs boson pair production, considering future data-taking periods at the \ac{LHC} and \ac{HL-LHC}.
 
 * Run 3
-At the time of writing, \run{3} has already collected more data than \run{2} ever did, and should reach \SI{\sim 250}{\invfb} by the end of 2025.
+At the time of writing, \run{3} has already collected more data than \run{2} ever did, and should reach about \SI{300}{\invfb} by the end of 2025.
 Multiple analyses are being prepared.
 Concerning the \bbtt{} channel, both nonresonant and resonant searches are being explored, and should be published within the next few years.
 The sensitivity of HH analyses is expected to increase significantly.
-Firstly, the center-of-mass energy will slightly increase, leading to a HH cross section increase of \SI{\sim 10}{\percent}.
-Secondly, and most importantly, the luminosity will increase by a factor of \num{\sim 3}.
+Firstly, the center-of-mass energy will slightly increase, leading to a HH cross section increase of approx. \SI{10}{\percent}.
+Secondly, and most importantly, the luminosity will increase by a factor of about \num{3}.
 Using the naive luminosity scaling, we would expect an improvement of the order of 70%.
 We should however realistically expect larger improvements [[cite:&lumi_scaling]].
 On one hand, the increase in luminosity, besides adding more events in known regions, opens up a way to observables that were not previously available.
@@ -25,9 +25,9 @@ On top, one has to consider improvements stemming from improved methods.
 New machine learning techniques applied to all sorts of discriminants have the potential to make current results quickly obsolete.
 The most prominent example is the mass-decorrelated \ac{PNet} [[cite:&particle_net]].
 Beyond its current AK4 an AK8 jet-tagging capabilities, notably reconstructing merged $\bbbar$ and $\ccbar$ topologies, \ac{PNet} has been extended with jet flavour classification, jet mass regression, and even $\tau\tau$ tagging.
-As an example, \ac{PNet} has already been used for energy regression in the context of jet energy scale calibrations, improving energy response resolution by \SI{\sim 15}{\percent} [[cite:&pnet_jet_calibration]].
+As an example, \ac{PNet} has already been used for energy regression in the context of jet energy scale calibrations, improving energy response resolution by around \SI{15}{\percent} [[cite:&pnet_jet_calibration]].
 Additionally, based on performance measurements, it is likely that some top or boson tagging with \ac{PNet} will be slowly replaced by updated versions based on the state-of-the-art transformer technology [[cite:&transformer]].
-Needless to say, the impact on HH analyses, including \bbtt{} topologies, is expected to be serious.
+Needless to say, the impact on HH analyses, including \bbtt{} topologies, is expected to be significant.
 
 Improvements due to novel trigger strategies are also to be expected, delivered both by improved data scouting and parking streams cite:&parking_scouting_run3_cms, and also by the implementation of \ac{PNet} b-tagging directly at \ac{HLT}.
 The improved tagger enables to lower \hhbbbb{} and \hhbbtt{} jet \ac{pt} thresholds and $\htvar$ selections.
@@ -53,7 +53,7 @@ Future exchanges between such similar topologies might enrich the field, and ult
 
 * HL-LHC
 The future of HH studies can also be envisaged beyond \run{3}, namely during the next phase planned for the \ac{LHC} [[cite:&hllhc]].
-This gigantic update should commence data-taking in 2029, delivering up to \SI{4000}{\invfb} \ac{pp} collisions, at a center-of-mass energy of \SI{14}{\TeV}.
+This gigantic update should commence data-taking in 2029, delivering more than \SI{3000}{\invfb} \ac{pp} collisions, at a center-of-mass energy of \SI{14}{\TeV}.
 The measurement of the Higgs boson self-coupling will arguably become the nexus of all \ac{HEP} research until the 2040s, should no interesting excess or deviation be measured by then.
 Tighter constraints on $\kl$ and \ac{EFT} couplings will certainly be achieved, also with the help of yet unexplored HH production modes and decay channels.
 However, HH studies will continue to be statistically-dominated, despite a possible increase in the importance of theoretical uncertainties.
@@ -82,7 +82,7 @@ The expected upper limits at 95% \ac{CL} on the \xhhbbtt{} cross section, projec
 #+END_figure
 
 Comparing the combination result with this Thesis' \spin{0} result, one can unsurprisingly conclude that significant improvements are expected for the \ac{HL-LHC} period.
-However, for some $\mx$ values in the \bbtt{} channel, the comparison shows similar results, despite our analysis having \num{\sim 22} times less luminosity that what will be available at the \ac{HL-LHC}.
+However, for some $\mx$ values in the \bbtt{} channel, the comparison shows similar results, despite our analysis having approx. \num{22} times less luminosity that what will be available at the \ac{HL-LHC}.
 Including our limits in the next \ac{CMS} projection studies should thus improve limits by a good margin, in principle similar to the increased sensitivity in the $450 \leq \mx \leq 800 \,\si{\GeV}$ range for the current combination.
 In parallel, \xyh{} analyses, where the Y scalar decays to $\bbbar$, are also projected into the future, considering the same three scenarios.
 Interestingly, the \bbtt{} final state is shown to drive the sensitivity when both X and Y scalar have a low mass, and also when they both have a high mass, for the reasons discussed in [[#sec:direct_searches]].
