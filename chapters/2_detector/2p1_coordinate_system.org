@@ -27,7 +27,7 @@ z = \text{R} \cos \theta
 To characterize particle interactions at the \ac{IP}, another quantity is often considered, namely the /rapidity/ of a particle:
 #+NAME: eq:rapidity
 \begin{equation}
-\text{rapidity} = \frac{1}{2} \ln \left( \frac{E + p_z}{E - p_z} \right)
+\text{rapidity} = \frac{1}{2} \ln \left( \frac{E + p_z}{E - p_z} \right) \: ,
 \end{equation}
 
 \noindent where $E$ is the particle's energy and $p_z$ its longitudinal momentum.
