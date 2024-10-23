@@ -1,3 +1,24 @@
+#+LATEX_HEADER: \usepackage[sorting=none,style=numeric-comp,backend=biber,backref]{biblatex}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/higgs.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/higgs.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/gpu.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/trigger.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/mtd.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/astrophysics.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/mc_generation.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/pure_software.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/physics.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/stats.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/detector.bib}
+#+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/biology.bib}
+
+#+LATEX_HEADER: \usepackage{xurl}
+#+LATEX_HEADER: \usepackage[pdfencoding=auto,linktocpage=true,psdextra,]{hyperref}
+#+LATEX_HEADER: \hypersetup{colorlinks=true,linkcolor={blue!90!black},citecolor={red!70!black},urlcolor={green!60!black}}
+
+#+LATEX_HEADER: \usepackage{bookmark}
+#+LATEX_HEADER: \DefineBibliographyStrings{english}{backrefpage = {cited on page}, backrefpages = {cited on pages},}
+
 #+LATEX_HEADER: \usepackage{hyperref}
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{siunitx}

@@ -241,21 +241,8 @@
 #+LATEX: \input{acro_list}
 
 * Bibliography :ignore:
-[[bibliographystyle:thesis_custom]]
-[[bibliography:
-~/dot-emacs/bibliography/references/higgs.bib,
-~/dot-emacs/bibliography/references/gpu.bib,
-~/dot-emacs/bibliography/references/trigger.bib,
-~/dot-emacs/bibliography/references/mtd.bib,
-~/dot-emacs/bibliography/references/astrophysics.bib,
-~/dot-emacs/bibliography/references/mc_generation.bib,
-~/dot-emacs/bibliography/references/pure_software.bib,
-~/dot-emacs/bibliography/references/physics.bib,
-~/dot-emacs/bibliography/references/stats.bib,
-~/dot-emacs/bibliography/references/detector.bib,
-~/dot-emacs/bibliography/references/biology.bib]]
+\printbibliography[heading=bibintoc]
 
-
-* OPTIONS END :ignore:
-#+LATEX: \shipout\null
-#+LATEX: \input{back}
+# * OPTIONS END :ignore:
+# #+LATEX: \shipout\null
+# #+LATEX: \input{back}
