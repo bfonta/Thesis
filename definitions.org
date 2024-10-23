@@ -89,7 +89,7 @@
 #+LATEX_HEADER: \newcommand{\hnotbb}{$\mathrm{H}\,{\nrightarrow}\,\mathrm{bb}$}
 #+LATEX_HEADER: \newcommand{\htt}{$\mathrm{H}\,{\rightarrow}\,\tau\tau$}
 #+LATEX_HEADER: \newcommand{\hww}{$\mathrm{H}\,{\rightarrow}\,\mathrm{W}^{\pm}\mathrm{W}^{\mp*}$}
-#+LATEX_HEADER: \newcommand{\hzzfourl}{$\mathrm{H}\,{\rightarrow}\,\mathrm{ZZ}^{*} \rightarrow 4\ell$}
+#+LATEX_HEADER: \newcommand{\hzzfourl}{$\mathrm{H}\,{\rightarrow}\,\mathrm{ZZ}^{*}\,{\rightarrow}\,4\ell$}
 #+LATEX_HEADER: \newcommand{\hzz}{$\mathrm{H}\,{\rightarrow}\,\mathrm{ZZ}^{*}$}
 #+LATEX_HEADER: \newcommand{\pphh}{$\mathrm{pp}\,{\rightarrow}\,\mathrm{HH}$}
 #+LATEX_HEADER: \newcommand{\ppx}{$\mathrm{pp}\,{\rightarrow}\,\mathrm{X}$}

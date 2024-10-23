@@ -90,6 +90,7 @@ Equivalently, if region C is chosen, the yield will be corrected by B/D:
 Both the shape and the ratios are calculated after subtracting all other \ac{MC}-based backgrounds.
 The two alternative shapes, from regions C and B, are used as the upper and lower templates for the \ac{QCD} shape uncertainty, and the nominal value is obtained by averaging the two options in [[eq:abcd_products]].
 This effectively symmetrizes systematic uncertainties, discussed in [[#sec:systematics]], ensuring the nominal value always lies between the up and down variations.
+It can be noted that no specific multijet region is defined
 
 Several tests are performed to evaluate the validity of the ABCD method for \ac{QCD} estimation. 
 In the first test, the stability of the estimated yield is evaluated by modifying the definition of the C and D regions, using four different =DeepTau= \acp{WP}.
@@ -106,6 +107,7 @@ This sideband region has been defined by inverting the $\mtautau$ and $\mbb$ mas
 Again, the \ac{QCD} estimation obtained with the ABCD method is found to be in good agreement with the \ac{MC}-subtracted data in this sideband, validating the \ac{QCD} estimations obtained in the analysis.
 In the third and final test, it is verified that the shapes extracted from the B and C regions are compatible.
 Being all tests successful, the ABCD method is used for estimating the multijet background in the \xhhbbtt{} analysis, as it had already been the case with previous analysis iterations.
+Examples of the distributions of some kinematic variables in the B, C and D regions are provided in [[#sec:app_bcd]].
 
 Some alternative methods have historically been explored for multijet estimation.
 Parametric fits of data sidebands are probably the easiest to implement, but require narrow resonances and \ac{QCD}-pure sidebands.
@@ -115,7 +117,7 @@ By adding an "E" and "F" regions, one can leverage the additional information fr
 This method is appropriately called "alphabet", and has been extended into higher-dimensionality spaces [[cite:&corcodilos_thesis]].
 Furthermore, the transfer factors can be learned by \acp{DNN} or \acp{BDT}, such as in the resolved \ac{CMS} \hhbbbb{} analysis [[cite:&bbbb_resolved_cms]].
 Despite all possible improvements, it is important to state that the main drive for the proposals above is the possibility to obtain a very precise estimate, leading to smaller systematic uncertainties.
-However, the \xhhbbtt{} measurement is currently limited by statistical uncertainties, and so the reduction of systematic uncertainties is not as important as for other analysis with larger cross sections times \acp{BR}.
+However, the \xhhbbtt{} measurement is currently limited by statistical uncertainties, and so the reduction of systematic uncertainties is generally not a crucial item.
 On top, the definition of additional phase-space regions tends to increase statistical uncertainties.
 Overall, taking also into account the systematics discussed in [[#sec:syst_norm]], the ABCD method is deemed appropriate for the analysis here reported.
 

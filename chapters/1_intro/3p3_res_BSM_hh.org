@@ -47,12 +47,12 @@ Furthermore, the Higgs mechanism can be added in the same way as in the \ac{SM},
 
 Importantly, the model predicts two new particles [[cite:&xanda_benchmarks_wed]].
 A \spin{2} resonance appears as the mediator of the gravitational force, appropriately named "graviton", and a new scalar is required by the size of the additional dimension, being called "radion".
-Assuming the \ac{NWA}, where the width of the new resonance is assumed to be negligible compared to the detector's energy resolution, the phenomenology of a \ac{ggF}-produced radion is identical to the phenomenology of a heavy Higgs scenario [[cite:&xanda_benchmarks_wed]], which lessens model-related dependencies.
+Assuming the \ac{NWA}, where the width of the new resonance is assumed to be negligible compared to the resonance's mass, the phenomenology of a \ac{ggF}-produced radion is identical to the phenomenology of a heavy Higgs scenario [[cite:&xanda_benchmarks_wed]], which lessens model-related dependencies.
 For certain regions of the model's phase-space, both particles can decay to a pair of Higgs bosons or pairs of W and Z bosons.
 Searches at the \ac{LHC} are thus sensitive to these two hypothetical high mass particles.
 The Thesis here reported explores the resonant \hhbbtt{} decay, where the signal samples in [[#sec:samples]] indeed refer to radion- and graviton-like particles.
 The radion and the Higgs boson can even be allowed to mix, although such scenario is not directly explored at analysis level.
-Related work in the context of a singlet model is covered in [[#sec:interf_intro]].
+Related work in the context of a singlet model is covered in [[#sec:interf_intro]], where the \ac{NWA} is covered in greater detail.
 
 * Two Higgs Doublet Model
 The \ac{2HDM}, as its name indicates, adds a second doublet field to the one already introduced by the Higgs mechanism [[cite:&2hdm_1]].

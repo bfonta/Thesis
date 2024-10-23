@@ -1,0 +1,71 @@
+:PROPERTIES:
+:CUSTOM_ID: sec:app_bcd
+:END:
+
+In [[#sec:multijet_bckg]] the data-driven ABCD method to estimate the multijet background was presented.
+For completeness, we here provide some examples of data and \ac{MC} distributions in the B, C and D regions.
+Those quantities are the \ac{pt} and \ac{eta} of the first tau lepton and of the first b jet.
+The distributions are shown in [[ref:fig:QCD_control_plots_res1b,fig:QCD_control_plots_res2b]], for the \rescat{1} and \rescat{2} categories, respectively.
+We display the \tautau{} channel, where the multijet background is more significant.
+The difference between the data and the total MC distribution corresponds to the multijet background in each of those regions.
+The statistical uncertainties of the C region (middle) are smaller than for the B region (left), indicating that using the C region for the shape in the ABCD method leads to overall smaller statistical uncertainties.
+
+#+NAME: fig:QCD_control_plots_res1b
+#+CAPTION: Control plots for the multijet background, in the \rescat{1} category, for the three regions of the ABCD method used to estimate the multijet normalization and shape in the SR. The B, C, and D regions are shown in the left, middle and right columns, respectively, corresponding to SS/iso, OS/anti-iso and SS/anti-iso. Each row shows the distributions of a different variable, from top to bottom: the \ac{pt} of the first tau lepton, the \ac{eta} of the same lepton, the \ac{pt} of the first b-jet, and the \ac{eta} of the same lepton.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_SStight_TauTau_2018_dau1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_OSinviso_TauTau_2018_dau1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_SSinviso_TauTau_2018_dau1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_SStight_TauTau_2018_dau1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_OSinviso_TauTau_2018_dau1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_SSinviso_TauTau_2018_dau1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_SStight_TauTau_2018_bjet1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_OSinviso_TauTau_2018_bjet1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_SSinviso_TauTau_2018_bjet1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_SStight_TauTau_2018_bjet1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_OSinviso_TauTau_2018_bjet1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res1b_SSinviso_TauTau_2018_bjet1_eta.pdf]]
+#+END_figure
+
+#+NAME: fig:QCD_control_plots_res2b
+#+CAPTION: Control plots for the multijet background, in the \rescat{2} category, for the three regions of the ABCD method used to estimate the multijet normalization and shape in the SR. The B, C, and D regions are shown in the left, middle and right columns, respectively, corresponding to SS/iso, OS/anti-iso and SS/anti-iso. Each row shows the distributions of a different variable, from top to bottom: the \ac{pt} of the first tau lepton, the \ac{eta} of the same lepton, the \ac{pt} of the first b-jet, and the \ac{eta} of the same lepton.
+#+BEGIN_figure
+\centering
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_SStight_TauTau_2018_dau1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_OSinviso_TauTau_2018_dau1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_SSinviso_TauTau_2018_dau1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_SStight_TauTau_2018_dau1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_OSinviso_TauTau_2018_dau1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_SSinviso_TauTau_2018_dau1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_SStight_TauTau_2018_bjet1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_OSinviso_TauTau_2018_bjet1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_SSinviso_TauTau_2018_bjet1_pt.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_SStight_TauTau_2018_bjet1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_OSinviso_TauTau_2018_bjet1_eta.pdf]]
+#+ATTR_LATEX: :width .32\textwidth :center
+[[~/org/PhD/Thesis/figures/appendices/qcd_control_plots/plot_res2b_SSinviso_TauTau_2018_bjet1_eta.pdf]]
+#+END_figure

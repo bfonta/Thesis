@@ -36,7 +36,6 @@
 :END:
 #+INCLUDE: "start/acknowledgements.org"
 
-
 * TOC :ignore:
 #+TOC: headlines 2
 #+LATEX: \clearpage
@@ -233,6 +232,10 @@
 ** Additional Plots on MET Scale Factors
 #+INCLUDE: "chapters/appendixes/app_met_sfs.org"
 #+LATEX: \clearpage 
+** B, C and D distributions for the ABCD Method
+#+INCLUDE: "chapters/appendixes/app_bcd.org"
+#+LATEX: \clearpage 
+
 
 * List of acronyms
 #+LATEX: \input{acro_list}

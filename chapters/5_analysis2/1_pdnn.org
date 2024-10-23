@@ -6,8 +6,8 @@ The adoption of \ac{DL} in the \xhhbbtt{} analysis naturally arises from the wis
 The latest nonresonant \hhbbtt{} analysis [[cite:&higgs_bbtautau_nonres]] has already exploited such techniques, following the approach introduced in \newcite{prospects_hh_hllhc_2018}, achieving significant improvements with respect to previous publications.
 However, while in the nonresonant analysis one wished to extract the \ac{SM} HH signal alone, in the resonant analysis here presented such discrimination must be done for each signal sample, associated to a given mass and spin hypothesis.
 In order to create an optimal discriminant for N signal samples, one could define N separate discriminants, and optimize all of them separately.
-This approach is however highly impractical with $\text{N} = 50$, as in our case, leading to an unsustainable complexity in data processing, and to prohibitively large resource needs.
-Instead, using a single network is more convenient, encodes all the information for different hypotheses in the same location and, if needed, enables the properties of under-populated signal samples to be extrapolated from other samples.
+This approach is however highly impractical with $\text{N} = 50$ (2 spin hypothesis combined with 25 resonance mass points), leading to an unsustainable complexity in data processing, and to prohibitively large resource needs.
+Instead, using a single network is more convenient, as it encodes all the information for different hypotheses in the same location and, if needed, enables the properties of under-populated signal samples to be extrapolated from other samples.
 
 A \ac{pDNN} [[cite:&parameterised_nn]] is exploited in this Thesis, where the parameters refer to the hypotheses being tested, namely the mass and spin values.
 Parameterized learning has already been tested with the \hhbbtt{} topology, and was found to be useful in \newcite{angelas_thesis}.
@@ -30,14 +30,13 @@ This equates to generating N predictions per event.
      & \textbf{Sample Type} & \textbf{Description} \\ [+0.3em]\hline \\[-.8em]
 
     \multirow{2}{*}{\textbf{Training}} & Background & Randomly sample $m$ and $s$ from all possible values. \\[+0.3em]
-                                       & Signal     & Use the $m$ and $s$ the signal sample was generated with. \\ [+0.3em]\hline \\[-.8em]
+                                       & Signal     & Use the $m$ and $s$ of the signal sample. \\ [+0.3em]\hline \\[-.8em]
 
     \multirow{4}{*}{\textbf{Inference}}
 
-                                        & Data and & \multirow{2}{*}{Generate a prediction for each event $\text{N}$ times.} \\
-                                        & Background &  \\[+0.3em]
-                                        & \multirow{2}{*}{Signal} & Generate a prediction using the $m$ and $s$ \\
-                                        &                         &  the signal was made with. \\ [+0.3em]\hline \\[-1em]
+                                        & Data and   & \multirow{2}{*}{Generate a prediction for each event $\text{N}$ times.} \\
+                                        & Background & \\[+0.3em]
+                                        & Signal     & Generate a prediction using the $m$ and $s$ of the signal. \\ [+0.3em]\hline \\[-1em]
 \end{tabular}
 \end{table}
 
@@ -107,8 +106,8 @@ Within each fraction, the $\ttbar$ and \ac{DY} samples are distributed according
 * DNN Score Distributions
 The distributions can be seen in [[fig:pdnn_distributions]], where a signal sample is also included for reference.
 The cross section of the signal is arbitrary, and in the plot it is scaled for visualization purposes to the final upper limits, shown in [[#sec:final_limits]], multiplied by the \bbtt{} \ac{BR}.
-Some data points are shown to assess compatibility.
-The chosen region has a \ac{DNN} score below 0.8, to avoid biasing the results by looking at the data in signal-rich regions.
+Some data points are included, despite belonging to the \ac{SR}, in order to demonstrate compatibility with the \ac{MC}.
+The region being shown has a \ac{DNN} score below 0.8, to avoid biasing the results by looking at the data in a signal-rich region.
 
 Occasionally, the \ac{QCD} background contribution is so small that statistical fluctuations with the ABCD method can lead to a negative bin content.
 In such cases, the \ac{QCD} contribution is removed from the histograms.

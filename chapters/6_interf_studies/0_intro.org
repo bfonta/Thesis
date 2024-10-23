@@ -2,23 +2,34 @@
 :CUSTOM_ID: sec:interf_intro
 :END:
 
-The majority of studies involving the \ac{SM} Higgs boson or \ac{BSM} particles considers the \ac{NWA}, which equates to setting the particle's width $\Gamma$ to zero or to an arbitrarily small value.
+The majority of studies involving the \ac{SM} Higgs boson or \ac{BSM} particles considers the Narrow Width Approximation, where the production via mode $i$ and decay $f$ of a particle P can be factorized as:
+#+NAME: eq:nwa_factorisation
+\begin{equation}
+(\sigma \cdot \mathcal{B})(i \rightarrow \text{P} \rightarrow f) = \frac{\sigma_{i} \cdot \Gamma_{f}}{\Gamma_{\text{P}}} \:\: ,
+\end{equation}
+
+\noindent where $\sigma_{i}$ is the cross section of the production mode $i$, $\mathcal{B}$ is the \ac{BR} defined as $\Gamma_{f}/\Gamma_{\text{P}}$, $\Gamma_{f}$ is the partial decay width into the final state $f$, and $\Gamma_{\text{P}}$ is the total width of particle P.
+The approximation most notably holds when the width $\Gamma$ of a particle is much smaller than its mass $\text{M}$, $\Gamma \ll \text{M}$, hence its name.
+Additionally, four other conditions are required to justify the \ac{NWA} applicability [[cite:&nwa_breakdown]]: /i)/ the mass of the daughter particles is much smaller than the mass of the resonance, /ii)/ the center-of-mass-energy is much larger than the mass of the resonance, /iii)/ at the diagram level, the propagator of the resonance must be separable from the corresponding matrix element, and /iv)/ no significant /interferences/ with nonresonant processes exist.
+The validity of all four points strongly depend on the process being probed.
+The last point is particularly relevant in the work here described, and is later shown not to be applicable in the full probed phase-space.
+
+Experimentally speaking, the \ac{NWA} equates to setting the particle's width $\Gamma$ to zero or to an arbitrarily small value, much smaller than the particle's mass and smaller than the detector's resolution.
 For \ac{SM} Higgs boson analyses, this is usually motivated by simplicity, also taking into account that the predicted \ac{SM} $\gh$ of \SI{\sim 4.1}{\MeV} [[cite:&YellowReport4 App.A]] at $\mh=125.08 \pm 0.12\,\si{\GeV}$[fn:: The value of the PDG average [[cite:&PDG]] at the time of writing is slightly different, and based on older \ac{CMS} and \ac{ATLAS} measurements: [[cite:&higgs_mass_cms;&higgs_mass_atlas;&higgs_mass_atlas_cms]]] [[cite:&higgs_mass_cms_run2]], compatible with measurements [[cite:&higgs_width_cms;&higgs_width_atlas]], is around two orders of magnitude smaller than what the \ac{CMS} detector resolution can currently provide [[cite:&higgs_mass_cms_run2;&higgs_mass_cms]].
-The most up-to-date measurements of the Higgs boson's width are performed with the \hzzfourl{} and \hgg{} high resolution channels [[cite:&higgs_width_cms]].
 However, when considering resonant processes with two Higgs bosons, one cannot /a priori/ argue that the detector resolution will always be lower than the width of any \ac{BSM} resonance \xhh{}.
-Instead, and especially for large resonance masses, $\gx$ values are expected to be large, potentially leading to the inapplicability of the \ac{NWA}.
+Instead, and especially for large resonance masses, $\gx$ values are expected to be large, potentially invalidating the \ac{NWA}.
 Despite the above, the \ac{NWA} has been repeatedly used in past \ac{CMS} HH resonant analyses, including the analysis presented in this Thesis.
-A sizable signal width can create /interferences/ between the resonant and nonresonant components of the signal, which are absent under the \ac{NWA}.
+A sizable signal width can create interferences between the resonant and nonresonant components of the signal, which are absent under the \ac{NWA}.
 The interference could be either destructive or constructive, respectively reducing or enhancing the HH production rate [[cite:&CarenaWidthEnhancement]].
 The change can be significant, both overall and as a function of $\mhh$, altering the di-Higgs /lineshapes/.
 Some examples are shown in [[ref:fig:interf_lineshapes_280,fig:interf_lineshapes_500]].
 
-I have been responsible for a \ac{CMS} phenomenological study that assesses the impact of the \ac{NWA} in different phase-space regions of the inclusive \ac{ggF} \xhh{} process.
+I have been the main responsible for a \ac{CMS} phenomenological study that assesses the impact of the \ac{NWA} in different phase-space regions of the inclusive \ac{ggF} \xhh{} process, and am the sole author of all \ac{CMS} results presented in this Chapter.
 To the best of my knowledge, this is the first time such a complete study on the validity of the \ac{NWA} is performed within the \ac{CMS} Collaboration.
 The study was originally motivated by my involvement in the \run{2} \hhbbtt{} analysis, the latter representing an ideal setup to test new HH models.
 In the end, the work done settled on a more general approach, not specific to any particular decay channel.
 The ongoing \run{3} should see the first appearances of non-\ac{NWA} results, since large deviations with respect to the \ac{NWA} approach have recently drawn a significant interest from the community.
 For simplicity, we here consider the resonant model with the smallest number of additional free parameters: the singlet model [[cite:&papa1]].
 Similar studies could be repeated with other, more complex models, such as models containing two singlets [[cite:&papa3]].
-As a future step, we would like to extend the same study to the \bbtt{} channel, namely measuring the impact of the \ac{NWA} on the final limits of the analysis.
+As a future step, we would like to extend the same study to the \bbtt{} channel, namely measuring the impact of the \ac{NWA} on the final upper limits of the analysis.
 The content of this Chapter was published as part of a review paper covering the Higgs boson production searches through decays of heavy resonances [[cite:&interf_studies]].

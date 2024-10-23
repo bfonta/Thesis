@@ -2,9 +2,9 @@
 :CUSTOM_ID: sec:samples
 :END:
 
-The analysis uses \SI{138}{\invfb} of \run{2} \ac{UL} data[fn:: The concept of Ultra-Legacy data was first introduced in [[#sec:mc_gen]].] recorded by \ac{CMS} at $\sqrt{s}=13\,\si{\TeV}$.
+The analysis uses up to \SI{138}{\invfb} of \run{2} \ac{UL} data[fn:: The concept of Ultra-Legacy data was first introduced in [[#sec:mc_gen]].] recorded by \ac{CMS} at $\sqrt{s}=13\,\si{\TeV}$.
 It also makes use of dozens of \ac{MC} samples.
-These are used to model the many processes faking the final decay topology of interest, called /backgrounds/.
+These are used to model the many processes which replicate or fake the final decay topology of interest, called /backgrounds/.
 \Ac{MC} samples are also employed to simulate \ppxhh{} processes with different spin and masses, representing the analysis' /signals/.
 In this Section we provide details on all the above, obtained via the data processing chain described in [[#sec:mc_gen]].
 
@@ -44,21 +44,20 @@ In particular, the \xhhbbtt{} analysis is affected by numerous sources of backgr
 The reducible backgrounds are those with final states which can in theory be distinguished from the final states of the signal.
 In practice, however, no experiment has a perfect object efficiency and identification, and some inefficiencies are present.
 This becomes particularly noticeable when the backgrounds have cross sections several orders of magnitude larger than the signal being studied.
-One of the important reducible background sources in the \xhhbbtt{} analysis is multijet production,
-where gluon- or quark-initiated jets are misidentified as $\tau$ or b candidates.
+One of the important reducible background sources in the \xhhbbtt{} analysis is multijet production, where gluon- or quark-initiated jets are misidentified as $\tau$ or b candidates.
 It mostly affects the \tautau{} channel, since the leptonic selections in the other two channels, as described in [[#sec:selection]], suppress the multijet contribution.
 In what follows, we also refer to this source as "\ac{QCD}" background.
 Other reducible backgrounds are the \ac{DY} production of a $\tau$ pair in association with a light quark pair, $\ttbar$ production with the decay of at least one of its W bosons to quarks, and the production of W bosons in association with light jets, where the latter are misidentified as either leptons or b jets.
+Backgrounds with a single W boson plus jets are substantial for the baseline selection described in [[#sec:selection]].
+However, this source is strongly suppressed by the categorization step, specifically by b-jet tagger requirements.
+The categorization is discussed in [[#sec:categorization]].
 
 The irreducible backgrounds are instead those with a final state identical to the signal of interest.
-The production of $\ttbar$ pairs dominates, namely when the decay is fully-leptonic, as $\ttbar\to\bbbar\,\text{W}^{\pm} \text{W}^{\mp} \rightarrow  \bbbar\,\ell^{\pm} \bar{\nu_{\ell}} \tau^{\mp} \nu_{\tau}$, where $\ell$ can refer to electrons, muons or taus.
+The production of $\ttbar$ pairs dominates, namely when the decay is fully-leptonic, $\ttbar\to\bbbar\,\text{W}^{\pm} \text{W}^{\mp} \rightarrow  \bbbar\,\ell^{\pm} \bar{\nu_{\ell}} \tau^{\mp} \nu_{\tau}$, where $\ell$ can refer to electrons, muons or tau leptons.
 This background affects all analysis channels.
 To give an idea, as stated in [[tab:background_xsecs1]], the $\ttbar$ cross section amounts to \SI{84.1}{\pico\barn} in the fully-leptonic channel only, against the expected \ac{SM} HH cross section of \SI{\sim 31}{\femto\barn}.
 The second most prominent irreducible background is again \ac{DY} lepton pair production, this time with additional b-jets: $\text{Z}/\gamma^{*} + \bbbar \rightarrow \ell\ell + \bbbar$.
 The inclusive \ac{DY} cross section is 5 orders of magnitude larger than the \ac{SM} HH cross section.
-Finally, backgrounds with a W boson and jets are substantial for the baseline selection described in [[#sec:selection]], and have a cross section even larger than the above backgrounds.
-However, this source is strongly suppressed by the categorization step, specifically by b-jet tagger requirements.
-The categorization is discussed in [[#sec:categorization]].
 
 On top of the major sources above, several minor backgrounds are also taken into account.
 All sources are listed in [[ref:tab:background_xsecs1,tab:background_xsecs2]], together with their generators and cross sections.
@@ -158,16 +157,25 @@ Additionally, higher mass points are not expected to provide a better sensitivit
 :CUSTOM_ID: sec:mc_reweighting
 :END:
 The reweighting and normalization of \ac{MC} background samples is essential to accurately model the processes and to establish a sound comparison with data.
-The same is true for signal samples, except into what concerns the overall normalization since, when a model independent analysis is performed, the cross section of resonant processes is arbitrarily defined.
-\Ac{MC} samples are weighted as follows, depending on the sample and data-taking period:
-#+NAME: eq:mc_weight
+The same is true for signal samples, except in what concerns the overall normalization.
+Indeed, when a model independent analysis is performed, the cross section of resonant signal processes is arbitrarily defined.
+\Ac{MC} samples are weighted per event, using the following factor:
+#+NAME: eq:mc_weight_full
 \begin{equation}
-N^{\text{period}}_{\text{sample}} = \frac{ \mathcal{L}^{\text{period}} \times \left( \sigma \times \mathcal{B} \right)^{\text{theory}}_{\text{sample}} \times N_{\text{sample}}^{\text{gen}} \times \prod_{j \in \Theta^{\text{gen}}} w_{j,\,\text{sample}}^{\text{gen}} \times \prod_{i \notin \Theta^{\text{gen}}} w_{i,\,\text{sample}} } { \sum_{j,\,\text{sample}} w_j^{\text{gen}} } \: , 
+L^{\text{period}} \times \left( \sigma \times \mathcal{B} \right)^{\text{theory}}_{\text{sample}} \times \frac{\prod_{j \in \Theta^{\text{gen}}} w_{j}^{\text{gen}} } { \sum_{\text{events}} \left[ \prod_{j \in \Theta^{\text{gen}}} w_{j}^{\text{gen}} \right ] } \: , 
 \end{equation}
 
-\noindent where $\mathcal{L}^{\text{period}}$ is the luminosity in a \run{2} data-taking period, $\sigma$ and $\mathcal{B}$ represent, respectively, the process cross section and decay \ac{BR}, $N^{\text{gen}}$ is the number of generated events, $w_j^{\text{gen}}$ stands for weight $j$ of the \ac{MC} generator, and $w_i$ represents a weight $i$ applied in addition to the generation weights or, in other words, a weight $w_i$ not belonging to the set of generated weights $\Theta^{\text{gen}}$.
-Different data-taking periods can have different sets of weights.
-Weights $w_i$ appear due to discrepancies between data and \ac{MC}, and can be expanded or reduced for different data-taking periods depending on the detector's evolving conditions.
+\noindent where $L^{\text{period}}$ is the integrated luminosity in a given data-taking period, $\sigma$ and $\mathcal{B}$ represent, respectively, the theoretical process cross section and decay \ac{BR} of a specific sample, and $w_j^{\text{gen}}$ stands for weight $j$ of the \ac{MC} generator, belonging to the set of generator weights $\Theta^{\text{gen}}$.
+
+In practice, additional weights $w_{i}$ must be applied to correct for discrepancies between data and \ac{MC}.
+The full per event weight $w_{\text{event}}$ is thus given by:
+#+NAME: eq:mc_weight_full
+\begin{equation}
+w_{\text{event}} = \frac{L^{\text{period}} \times \left( \sigma \times \mathcal{B} \right)^{\text{theory}}_{\text{sample}} \times \prod_{j \in \Theta^{\text{gen}}} w_{j}^{\text{gen}} \times \prod_{i \notin \Theta^{\text{gen}}} w_{i} } { \sum_{\text{events}} \left[ \prod_{j \in \Theta^{\text{gen}}} w_{j}^{\text{gen}} \right ] } \: .
+\end{equation}
+
+\noindent The total number of events corresponds to the sum of all $w_{\text{event}}$ weights.
+Different data-taking periods can have different sets of weights, depending on the detector's evolving conditions.
 In our analysis, the $w_i$ weights consist of stitching weights for \ac{DY} samples, \ac{L1} prefiring weights, trigger \ac{SF} weights, weights for objects faking taus, \ac{PU} jet identification weights, reshaping b-tagging weights and b-jet discriminator weights.
-In $\Theta^{\text{gen}}$ we include the \ac{PU} reweighting and the \ac{NLO} reweighting.
-All \ac{MC} weights described in [[#sec:mc_corrections]].
+In $\Theta^{\text{gen}}$ we include the \ac{PU} reweighting and the \ac{NLO} reweighting weights.
+All \ac{MC} weights are described in [[#sec:mc_corrections]].

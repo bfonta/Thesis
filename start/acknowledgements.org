@@ -1,4 +1,7 @@
-I am thankful to Rebeca and Aleandro for agreeing to read my Thesis and provide comments.
+I start by thanking Luca, Aleandro, Rebeca, Giovanni, Ilaria and Andrew for taking part on my PhD jury committee, briefly setting their many responsabilities aside to come to the École and evaluate my work.
+I would like to especially acknowledge Rebeca and Aleandro for agreeing to read my Thesis and write an evaluation report, without which I would not have been able to obtain my PhD degree.
+On top, the discussion with Aleandro at CERN on the month that preceded the defense was very enjoyable and useful, improving the correctness and clarity of the manuscript.
+
 # + Louis for *not really* translating the summary
 # + Tobias for the plots
 # + teacher experience

@@ -21,8 +21,12 @@ The main reasons that lead to such a technological shift were the increased comp
 \Ac{HEP} has accompanied the trend, exploiting such algorithms to improve the analyses' performances.
 Even triggers have been included in the process, achieving improvements that surpass all expectations.
 
+The results here presented are shown in the form of expected 95% \ac{CL} upper limits.
+Observed upper limits will be computed once the \ac{CMS} internal analysis review process is completed, which should happen by early 2025 the latest, in preparation for the 2025 Moriond conference.
+Until then, analyzers do not have permission to show real data in the final discriminant's distributions, or to consider real data when extracting limits.
+
 In [[#sec:pdnn]], we start by explaining how \ac{DL} techniques are leveraged to define a robust discriminating variable.
-We then proceed, in [[#sec:systematics]], with a description of all systematic uncertainties taken into account, both arising from variations to the inputs of the \ac{DL} procedure, and also to shifts to the several \ac{MC} correction weights taken into account in our analysis.
+We then proceed, in [[#sec:systematics]], with a description of all systematic uncertainties taken into account, arising from variations to the inputs of the \ac{DL} procedure, and also due to shifts to the several \ac{MC} correction weights considered in our analysis.
 The quantification of the differences between two alternative scenarios is the task of the statistical treatment presented in [[#sec:stats_intro]].
 Specifically, we formulate the hypothesis that the data is not described by the \ac{SM}, and verify if the measurements agree with such a claim.
-The final results are presented in [[#sec:results_intro]].
+The 95% \ac{CL} expected upper limits are presented in [[#sec:results_intro]].
