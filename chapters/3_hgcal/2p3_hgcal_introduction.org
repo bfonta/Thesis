@@ -131,7 +131,7 @@ Timing information is considered one of the very few options to mitigate perform
 In the \ac{HL-LHC} environment, a robust vertex identification becomes possible with a time resolution of \SI{\sim 30}{\pico\second}, with an accuracy of a few \si{\cm}.
 
 #+NAME: fig:dose_fluence_hgcal
-#+CAPTION: $R\text{-}z$ projection of the distribution of the absorbed dose in \si{\gray} (top) and fluence in \si{\nequiv} (bottom) for the positive endcap of the \ac{HGCAL} and half the tracker, after an exposure to \SI{4}{\invab}. Produced with the \ac{BRIL} "Simulation Plotting Tool" [[cite:&bril_tool]]  with \ac{CMS} =FLUKA= geometry, version 3.7.0.0 [[cite:&fluka1;&fluka2]].
+#+CAPTION: $\text{R}\text{-}z$ projection of the distribution of the absorbed dose in \si{\gray} (top) and fluence in \si{\nequiv} (bottom) for the positive endcap of the \ac{HGCAL} and half the tracker, after a \SI{4}{\invab} exposure. Produced with the \ac{BRIL} "Simulation Plotting Tool" [[cite:&bril_tool]]  with \ac{CMS} =FLUKA= geometry, version 3.7.0.0 [[cite:&fluka1;&fluka2]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth
 [[~/org/PhD/Thesis/figures/hgcal/DoseAbsorbedHGCAL.pdf]]

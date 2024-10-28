@@ -44,11 +44,11 @@ The added luminosity might also help solving the tension between old $\theta_{W}
 Concerning \ac{VBF} and \ac{VBS} processes, despite the overall lower cross section, of about one order of magnitude with respect to the \ac{ggF} production, the presence of additional hard and forward jets enables a very significant reduction of the multi-jet background.
 This is particularly true for large rapidity separations $\Delta \dijetrap \gtrsim 4.5$ and di-jet invariant masses
 $\dijetmass \gtrsim \SI{700}{\GeV}$, where \ac{VBF} production dominates over \ac{ggF}.
-In \ac{VBS}, measurements of longitudinal scattering of two Vs ($\text{V}=\text{W},\,\text{Z}$) is particularly enticing, as it is still unknown whether the Higgs alone can avoid a divergent behavior of the scattering amplitude at high energies, violating unitarity [[cite:&vbs2]].
-The longitudinal component of the $V$ bosons is in particular tightly connected to the Higgs mechanism and \ac{EWSB}, since massless particles only have transversal components.
+In \ac{VBS}, measurements of longitudinal scattering of two Vs ($\text{V}=\text{W},\,\text{Z}$) are particularly enticing, as it is still unknown whether the Higgs alone can avoid a divergent behavior of the scattering amplitude at high energies, violating unitarity [[cite:&vbs2]].
+The longitudinal component of the V bosons is in particular tightly connected to the Higgs mechanism and \ac{EWSB}, since massless particles only have transversal components.
 However, differential measurements of gauge boson polarization is harder given the reduced cross section of the longitudinal-only components.
-Would unitarity be violated, particle probability would no longer be conserved: the calculated number of $V$ pairs produced in the interaction would exceed the incident flux [[cite:&thomson]].
-There is also the possibility for the longitudinal components of the $V$ bosons to be strongly coupled at around \SI{1}{\TeV} center-of-mass energies [[cite:&vbs1]], allowing for instance the formation of resonance states in technicolor models.
+Would unitarity be violated, particle probability would no longer be conserved: the calculated number of V pairs produced in the interaction would exceed the incident flux [[cite:&thomson]].
+There is also the possibility for the longitudinal components of the V bosons to be strongly coupled at around \SI{1}{\TeV} center-of-mass energies [[cite:&vbs1]], allowing for instance the formation of resonance states in technicolor models.
 \ac{VBS} also forms the ideal field for anomalous gauge couplings measurements, especially quartic couplings.
 Finally, even rarer tri-boson processes ($\sigma\sim0.1\,\si{\pico\barn}$) brings an extra handle on \ac{SM} testing.
 
@@ -75,7 +75,7 @@ Further studies will be possible on the rare $t\bar{t}t\bar{t}$ production, desp
 $t\bar{t}t\bar{t}$ can be used to constrain some of the Wilson coefficients associated to \ac{EFT} dimension-6 operators, to further study the top Yukawa coupling constrain, including its magnitude and \ac{CP} properties, since it can occur via the mediation of a Higgs boson [[cite:&tttt]], and even to assess the presence of the non-\ac{SM} top quark dipole moment.
 
 * Forward Physics
-Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the \ac{AFP} [[cite:&afp_tdr]] are extended in the \ac{HL-LHC} phase, \ac{CEP} $\text{pp}\,{\rightarrow}\,p\,(\gamma\gamma\,{\rightarrow}\,\text{X})\,\text{p}$ phenomena, among which light-by-light scattering ($\text{X} = \gamma\gamma$), will be further explored \ac{CEP}.
+Assuming concepts similar to the current \ac{CTPPS} [[cite:&ctpps_tdr]] and the \ac{AFP} [[cite:&afp_tdr]] are extended in the \ac{HL-LHC} phase, \ac{CEP} $\text{pp}\,{\rightarrow}\,\text{p}\,(\gamma\gamma\,{\rightarrow}\,\text{X})\,\text{p}$ phenomena, among which light-by-light scattering ($\text{X} = \gamma\gamma$), will be further explored.
 Other processes include, for instance, $\text{X} = \mu\mu,\,\tau\tau,\,\text{Z},\,\text{H},\,\text{WW},\,\text{ZZ}$, and enable the study of anomalous gauge couplings and the magnetic moment of the $\tau$, among other studies [[cite:&ctpps_varela;&ctpps_pitt]].
 \ac{CEP} processes carry particular interest since they bring production of charged particles initiated only by photons, into what amounts to using the \ac{LHC} as a $\gamma\gamma$ collider.
 In parallel, a whole plethora of \ac{QCD}-related measurements can be performed in \acp{CEP}.
@@ -98,10 +98,10 @@ Indeed, current projections (see ref:fig:hh_nonres_projections) suggest that the
 Comparing \run{2} results with current full \run{2} upper cross section limits, we see that an improvement of a factor of around 7 was obtained, much above what a naive luminosity scaling would provide, given the four-fold increase in collected data.
 The improvement over the luminosity baseline is due to multiple areas, such as trigger, identification, and reconstruction algorithms, but also to the increase of explored finals state channels [[cite:&andre_david_higgs_ten_years]].
 Past results have consistently surpassed initial estimates, and thus provide an optimistic view on future triple and quartic Higgs coupling measurements, which will surely be the most precise ever.
-A series of new techniques should provide significant improvements, starting from \run{3} and extending into the \ac{HL-LHC}, including new machine learning approaches or better estimates of \ac{QCD} multi-jet background.
+A series of new techniques should provide significant improvements, starting from \run{3} and extending into the \ac{HL-LHC}, including new machine learning approaches or better estimates of the \ac{QCD} multi-jet background.
 The usage of \ac{PNet} [[cite:&particle_net]] for $\tau\text{-initiated}$ jets and the application of transformer technology to jet tagging [[cite:&transformer]] are expected to boost HH sensitivity.
 Additionally, an improved trigger strategy has been implemented, considering both data scouting and parking cite:&parking_scouting_run3_cms, and including \ac{PNet} b-tagging and $\tau\text{-tagging}$ at trigger level, as discussed in [[#sec:phase2_trigger_system]].
-We also expect some HH analysis to benefit from the inclusion of synthetic datasets [[cite:&zz_zh_bbbb]].
+We also expect some HH analyses to benefit from the inclusion of synthetic datasets [[cite:&zz_zh_bbbb]].
 As discussed in ref:sec:indirect_searches, indirect searches can also add a contribution in the quest for better HH sensitivity.
 The precision of \ac{EFT} couplings will also benefit from the increased number of events.
 Finally, yet unexplored HH production modes and decay channels are expected to be added, given the phase-space extension brought by the \ac{HL-LHC} [[cite:&higgs_10_years]].
