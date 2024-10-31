@@ -51,7 +51,6 @@ Given $q_{\mu}^{\text{obs.}}$, we calculate the probabilities for $q_{\mu}$ to b
   p_{s+b} &= P(q_{\mu} \geq q_{\mu}^{\text{obs.}} | \, s + b) = \int_{q_{\mu}^{\text{obs.}}}^{\infty} f(q_{\mu} | \, s+b) \, dq_{\mu} \: , \nonumber \\
   p_{b} &= P(q_{\mu} \geq q_{\mu}^{\text{obs.}} | \, b) = \int_{q_{\mu}^{\text{obs.}}}^{\infty} f(q_{\mu} | \, b) \, dq_{\mu} \: .
 \end{align}
-
 \noindent A given signal strength $\mu$ is said to be excluded at a confidence level $\text{CL} = 1 - \alpha$ if:
 #+NAME: eq:cls
 \begin{equation}

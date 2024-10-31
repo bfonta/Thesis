@@ -49,16 +49,16 @@ For $n_\text{tot}$ observations, the expectation values $\nu = (\nu_1, \nu_2, \d
 # nuisances
 Following the parameter classification discussed in [[#sec:systematics]], in \ac{HEP} the parameters $\varphi$ are usually split into the \ac{POI} $\mu$ and nuisances $\theta$.
 The estimation of nuisance parameters is denoted $\tilde{\theta}$.
-We express our degree of belief that the real values $\theta$ are correctly represented by the estimates $\tilde{\theta}$ with a Bayesian probability density function $\rho(\theta_i | \tilde{\theta}_i)$.
-Using Bayes' theorem, one can convert $\rho$ into a frequentist probability $p(\tilde{\theta}_i | \theta_i)$, by using a uniform prior \ac{PDF} representing our full ignorance before the experiment takes place.
-For the case of the resonant analysis here reported, the functional form of $\rho(\theta_i | \tilde{\theta}_i)$ is given by the log-normal function:
+We express our degree of belief that the real values $\theta$ are correctly represented by the estimates $\tilde{\theta}$ with a Bayesian probability density function $\rho(\theta_k | \tilde{\theta}_k)$, with $k$ referring to a given nuisance parameter out of all $n_k$.
+Using Bayes' theorem, one can convert $\rho$ into a frequentist probability $p(\tilde{\theta}_k | \theta_k)$, by using a uniform prior \ac{PDF} representing our full ignorance before the experiment takes place.
+For the case of the resonant analysis here reported, the functional form of $\rho(\theta_k | \tilde{\theta}_k)$ is given by the log-normal function:
 #+NAME: eq:log_normal
 \begin{equation}
-\rho(\theta_i|\tilde{\theta}_i ; \kappa) = \frac{1}{\sqrt{2\pi}\ln{\kappa}} \, \exp \left[ -\left( \frac{\ln{(\theta_i)}/\tilde{\theta}_i}{2\ln{\kappa}} \right)^2 \right] \, \frac{1}{\theta_i} \: ,
+\rho(\theta_k|\tilde{\theta}_k ; \kappa) = \frac{1}{\sqrt{2\pi}\ln{\kappa}} \, \exp \left[ -\left( \frac{\ln{(\theta_k)}/\tilde{\theta}_k}{2\ln{\kappa}} \right)^2 \right] \, \frac{1}{\theta_k} \: ,
 \end{equation}
 
 \noindent which is the recommended choice for multiplicative corrections, like all the ones used in \xhhbbtt{}.
-For small uncertainties, [[eq:log_normal]] with $\kappa = 1 + \varepsilon$ is identical to a Gaussian distribution of width $\varepsilon$, but can describe positively defined observables by going to zero at $\theta_i=0$.
+For small uncertainties, [[eq:log_normal]] with $\kappa = 1 + \varepsilon$ is identical to a Gaussian distribution of width $\varepsilon$, but can describe positively defined observables by going to zero at $\theta_k=0$.
 
 In \ac{HEP}, it is customary to write the expected signal event yield as $s$ and the expected background event yield as $b$.
 This enables to explicitly encode a dependence on the signal strength modifier $\mu$ as follows:
@@ -72,8 +72,10 @@ Often, the null hypothesis corresponds to $\mu = 0$, while the alternative hypot
 Putting together all ingredients above, one can write the full expression of the likelihood in [[eq:ext_likelihood]], as considered for the binned \xhhbbtt{} analysis, including systematic uncertainties:
 #+NAME: eq:ext_likelihood_final
 \begin{equation}
-L(\mu,\theta) = \prod_{i=1}^{n} \frac{e^{-\left[ \mu \, s_i(\theta) + b_i(\theta) \right] }}{n_i!}  \left[ \mu \, s_i(\theta) + b_i(\theta) \right] \, p(\tilde{\theta}_i | \theta_i) \: ,
+L(\mu,\theta) = \prod_{i=1}^{n} \frac{e^{-\left[ \mu \, s_i(\theta) + b_i(\theta) \right] }}{n_i!}  \left[ \mu \, s_i(\theta) + b_i(\theta) \right]^{n_i} \,
+\times \, \prod_{k=1}^{n_k} p(\tilde{\theta}_k | \theta_k) \: ,
 \end{equation}
 
 \noindent where the last term can be determined using [[eq:log_normal]].
 Note that nuisance parameters make the likelihood broader, reflecting the information lost due to systematic uncertainties.
+When combining multiple channels, categories or eras, the left side of [[eq:ext_likelihood_final]] can be extended by performing further multiplications with the corresponding poissonian distribution functions.
