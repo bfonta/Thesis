@@ -64,7 +64,7 @@ At the end of the network, each event is categorized according to one of three p
 For simplicity, we are currently exploiting the signal score only.
 
 #+NAME: fig:combined_model
-#+CAPTION: Architecture of the \xhhbbtt{} final discriminant. The layout corresponds to a combination of the $\mtautau$ regression network, the \ac{LBN} and a densely connected \ac{DNN}. The weights of the regression network are initially fixed to the values from previous independent trainings, and are slowly activated as the training time passes, which we refer to as "fade-in". "BN" stands for batch-normalization, and "ACT" stands for activation function. Courtesy of Marcel Rieger.
+#+CAPTION: Architecture of the \xhhbbtt{} final discriminant. The green and purple colors refer to continuous and categorical inputs, respectively. The layout corresponds to a combination of the $\mtautau$ regression network, the \ac{LBN} and a densely connected \ac{DNN}. The weights of the regression network are initially fixed to the values from previous independent trainings, and are slowly activated as the training time passes, which we refer to as "fade-in". "BN" stands for batch-normalization, and "ACT" stands for activation function. Courtesy of Marcel Rieger.
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width 1.\textwidth :center
