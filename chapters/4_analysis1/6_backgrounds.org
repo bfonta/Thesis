@@ -2,7 +2,7 @@
 :CUSTOM_ID: sec:backgrounds
 :END:
 
-#+MACRO: cr_distr Distribution of the \ac{pt} of the first b jet (left) and the \ac{eta} of the first lepton (a muon) in the $1 channel, for the 2018 data-taking period. The shaded gray bars represent the statistical uncertainty of the background samples. The statistical uncertainties of the data are shown as black vertical error bars.
+#+MACRO: cr_distr Distribution of the \ac{pt} of the first b jet (left) and the \ac{eta} of the first lepton (a muon) in the $1 channel, for the 2018 data-taking period, using the $2 \ac{CR}. The shaded gray bars represent the statistical uncertainty of the background samples. The statistical uncertainties of the data are shown as black vertical error bars.
 
 A complete understanding of all backgrounds that could mimic the signal of interest is a complex but essential step, and the only way to observe rare phenomena and make precise measurements.
 If a given \ac{MC} sample is accurate enough, /\ac{MC}-driven/ methods are used to perform background estimates.
@@ -143,7 +143,7 @@ There, the shaded gray bars represent the statistical uncertainty of the backgro
 A good data/MC agreement is obtained.
 
 #+NAME: fig:DY_CR_plots
-#+CAPTION: {{{cr_distr(\mumu{})}}}
+#+CAPTION: {{{cr_distr(\mumu{}, \rescat{1}-like \ac{DY})}}}
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
@@ -156,12 +156,12 @@ A good data/MC agreement is obtained.
 The contribution of the $\ttbar$ background is modeled using \ac{MC} simulations.
 Virtually all top quarks decay to a b quark and a W boson, which can in turn decay leptonically or hadronically.
 Samples are thus divided into fully-hadronic, semi-leptonic (or, equivalently, semi-hadronic), and fully-leptonic samples.
-[[fig:ttbar_CR_plots]] shows the distribution of two kinematic variables in the \mutau{} channel for the 2018 data-taking period, namely the \ac{pt} of the first b jet and the \ac{eta} of the first lepton.
+[[fig:ttbar_CR_plots]] shows the distribution of two kinematic variables in the \mutau{} channel for the 2018 data-taking period, namely the \ac{pt} of the first b jet and the \ac{eta} of the first lepton, using the $\ttbar$ \ac{CR}.
 There, the shaded gray bars represent the statistical uncertainty of the background samples, and the statistical uncertainties of the data are too small to be seen.
 The agreement with data is found to be sufficient.
 
 #+NAME: fig:ttbar_CR_plots
-#+CAPTION: {{{cr_distr(\mutau{})}}}
+#+CAPTION: {{{cr_distr(\mutau{}, $\ttbar$)}}}
 #+BEGIN_figure
 \centering
 #+ATTR_LATEX: :width .49\textwidth :center
