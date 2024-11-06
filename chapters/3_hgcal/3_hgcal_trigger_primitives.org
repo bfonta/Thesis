@@ -71,7 +71,7 @@ Additionally, CERN has developed a custom radiation resistant version of the eas
 The \ac{TCDS} interface is provided by one specialized \ac{ATCA} board per crate, named \ac{DTH400}.
 The \ac{DTH400} also provides an interface to the \ac{cDAQ}, outputting \SI{\sim 400}{\giga\bit\per\second} via Ethernet \ac{D2S} links.
 The data is then transported to the surface into the memory of commercial servers.
-That \ac{DTH400} boards receives the \ac{CMS}-wide clock and control signals and distributes it to the remaining boards in the crate.
+The \ac{DTH400} boards receive the \ac{CMS}-wide clock and control signals and distribute it to the remaining boards in the crate.
 The communication with the \ac{TCDS} is two-way: this notably gives the ability to request a \ac{BE} resynchronization or reset, and to throttle the entire \ac{L1} system.
 Communication between the \ac{BE} and the \ac{cDAQ} is established via \SI{25}{\giga\bit\per\second} fiber optics running the \ac{CMS}-wide =SLinkRocket= protocol, which ensures a strict specification based on \SI{128}{\bit} words [[cite:&hlttdr]].
 The \ac{BE} electronics will be located in the \ac{CMS} \ac{USC}, where space is extremely limited and has to be distributed across all subdetectors.
@@ -87,7 +87,7 @@ The \ac{HGCAL} \ac{L1} reconstruction chain, including the \ac{TPG} reconstructi
 From raw energy deposits to the creation of \acp{TP}, a complex chain of electronic components and data reduction and selection algorithms is in place.
 The architecture surrounding the /on-detector/ steps, i.e., the steps taking place very close to where the raw data is collected, constitutes the \ac{FE} electronics.
 The entry points of the reconstruction chain are the custom chips located on the hexaboards or tileboards, depending on the detector region.
-They are called \acp{HGCROC} [[cite:&hgcroc;&hgcroc_paper]], and are \ac{HGCAL}-specific \acp{ASIC} which collect, amplify and filter the produced ionization or scintillation charged currents at \SI{\sim 300}{\tera\byte\per\second} [[cite:&hgcalTDR]].
+They are called \acp{HGCROC} [[cite:&hgcroc;&hgcroc_paper]], and are \ac{HGCAL}-specific \acp{ASIC} which collect, amplify and filter the produced ionization or scintillation charged currents at \SI{\sim 300}{\tera\bit\per\second} [[cite:&hgcalTDR]].
 The layout of a \ac{HGCROC} chip is shown in [[fig:hgcroc]].
 In addition to a standard \SI{10}{\bit} \ac{ADC} charge measuring mode, the \ac{HGCROC} switches to a \ac{ToT} mode as soon as a threshold on the deposited charge is reached, of the order of the preamplifier saturation threshold of \SI{\sim 100}{\femto\coulomb}.
 The time during which the preamplifier is saturated serves as a proxy for the amount of deposited charge.
@@ -158,7 +158,7 @@ Despite ensuring one sent package per \ac{L1A} signal, the \ac{ECON-D} cannot gu
 The data is finally then sent via \SI{1.28}{\giga\bit\per\second} e-links to \ac{lpGBT} \acp{ASIC} [[cite:&lpgbt]] located in the \ac{FE} motherboards, or engines.
 Each motherboard is connected with up to \num{6} \acp{ECON-T} and \acp{ECON-D}.
 The \acp{ASIC} serialize the \ac{ECON} data to \SI{10.24}{\giga\bit\per\second}, and send it to the \ac{VTRx+} interface, which in turn distributes it to the off-detector \ac{BE} via fiber optics.
-In total, \SI{\sim 90}{\tera\byte\per\second} are transferred to the \ac{BE} [[cite:&econ]].
+In total, \SI{\sim 90}{\tera\bit\per\second} are transferred to the \ac{BE} [[cite:&econ]].
 
 * Backend Electronics
 

@@ -84,7 +84,7 @@ Moreover, the scouting will enable a detailed monitoring of the entire trigger s
 Finally, the scouting will introduce some complementary luminosity measurements based on observed physics processes.
 
 * HLT
-The \phase{2} \ac{HLT} will analyses the full \SI{750}{\kilo\hertz} \ac{L1} output, which translates to a \SI{\sim 50}{\tera\bit\per\second} throughput, with the event size increasing to approximately \SI{8.5}{\mega\byte}.
+The \phase{2} \ac{HLT} will analyse the full \SI{750}{\kilo\hertz} \ac{L1} output, which translates to a \SI{\sim 50}{\tera\bit\per\second} throughput, with the event size increasing to approximately \SI{8.5}{\mega\byte}.
 The \num{30}-fold throughput increase with respect to \phase{1} IS mostly driven by the upgraded tracker and the new \ac{HGCAL}, which bring a tremendous increase in granularity.
 The reconstruction of these high granularity objects will be based on iterative procedures, namely Kalman filter algorithms with deterministic annealing for the tracker, and \ac{TICL} for \ac{HGCAL} [[cite:&hlt_phase2_thiago]].
 The goal of the \ac{HLT} online selection will be to balance the following three key elements [[cite:&hlttdr]]:
