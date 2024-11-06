@@ -1,8 +1,71 @@
-I start by thanking Luca, Aleandro, Rebeca, Giovanni, Ilaria and Andrew for taking part on my PhD jury committee, briefly setting their many responsabilities aside to come to the École and evaluate my work.
-I would like to especially acknowledge Rebeca and Aleandro for agreeing to read my Thesis and write an evaluation report, without which I would not have been able to obtain my PhD degree.
+
+I start by thanking Luca, Aleandro, Rebeca, Giovanni, Ilaria and Andrew for taking part in my PhD jury committee, briefly setting their many responsibilities aside to come to the École and evaluate my work.
+I would especially like to acknowledge Rebeca and Aleandro for agreeing to read my Thesis and write an evaluation report, without which I would not have been able to obtain my PhD.
 On top, the discussion with Aleandro at CERN on the month that preceded the defense was very enjoyable and useful, improving the correctness and clarity of the manuscript.
 
-# + Louis for *not really* translating the summary
-# + Tobias for the plots
-# + teacher experience
-# + Fete de la Science
+Thanks to the lab's structure and funding, and with the support of the lab's secretariat personnel (special thanks to Alimata, Laetitia and Marie-Thérèse), I was able to attend some conferences at various locations, to take part in CMS shifts and to spend three months at CERN, where I could get closer to my analysis team.
+These events surely made me feel more comfortable in such environments, and will surely help in the future, regardless of what I end up doing.
+It was also thanks to the active environment in the lab that I could join multiple "Fête de la Science" events, which were really rewarding, and in the same vein to take part in some occasional guided lab tours to either the general public or young students.
+I should also mention the very positive experience that teaching a course to undergraduates was.
+I had contact with some of the best and worst things a teacher has to endure, and it for sure enriched my perspective on education.
+I occasionally had students that seemed to know more than myself about the subject being taught, in what really was a humbling experience.
+
+I wish to express my gratitude to the senior people at the lab, which in one way or another provided support when needed.
+In particular, I would like to thank Roberto and Yves for expressing interest in my coming to the lab, and for ensuring a place would be there for me even if my application to the PhD programme turned out to be unsuccessful.
+I also thank Roberto for the informal chats we had over the past three years, especially at CERN, where I could get a glimpse of how easy it was for him to discuss any HEP-related topic (except for the "tricky" ones), and where he could always add some dynamic viewing angle to an otherwise static concept.
+Additionally, it was thanks to him that I got the completely unexpected "Bourse Monge", which provided an enormous help.
+I would also like to thank Florian which, despite not being my supervisor, provided the ground for some pleasant Physics-related discussions, supported my conference travels, and had the time to discuss future career options, providing a much needed confidence boost.
+Together with Florian and Roberto, Adinda was also extremely helpful during my Thesis rehearsal and ensuing discussion, and helped improving the final defense presentation.
+I would finally like to thank Jean-Baptiste, for all the guidance and help with the project on HGCAL, and for having an infinite patience with all my questions.
+He carefully read and commented on all my detector-related presentations, as well as the third Chapter of this Thesis.
+
+In addition, I would like to acknowledge Pascal and Giovanni for attending my "mini-soutenance".
+Their kind words were important, at a time where things were rather stressful.
+
+With the frequent comings and goings from CERN, it was really nice to find Fabian there every time, and to share some nice moments.
+It is a tad bit disheartening that that period has come to an end, but I have little doubt that what comes next in his life will turn out great, and I will definitely pay a visit once in a while.
+
+In the three months I was at CERN, I was nicely welcomed by the famous house of Prégnin, and I would like to thank in particular Andrea, Angela, Costanza, Fabio, Gabriella, Marta, and Michelangelo, where I could taste some rare delicacies and precious treats.
+
+Concerning my work on including interference effects in resonant HH processes, I must thank Rainer and Alexandra (abbreviated Xanda, not Xana!) for the guidance and comments.
+The project really was a wonderful addition to my PhD.
+
+Regarding the analysis work, which was made within an international team, I would like to thank Davide, Elvira, Johan, Konstantin, Marcel, Simona, and Valeria for providing help and insights when I was confused, which often happened.
+A special mention goes to Tobias, with which was a pleasure to share impressions, ideas and food with, and which always impressed me by his quick understanding and overall optimism.
+
+A central and essential part of my PhD time was shared with all the junior people at the lab.
+I would like to thank the entire young community, associated to all the groups, thinking about the meals we shared, and the nice "get-together moment" we had at the last "Biennale".
+My time was unevenly spread across people, mostly due to different lines of work and contract timelines, but my thanks extend to everyone.
+I would like to specifically mention Andrés, Andrew, Andro, Axel, Bharadwaj, Florian, Giacomo, Isaac (pronounced A-sick), Lida, Martina, Matthieu, Nico, Théo, Trisha, Uttya and all the nice people from the new generation that I still did not have the time to properly know.
+A special word goes to some of the people I spent the most time with, which shared so many nice moments, and helped during the negative ones.
+Sharing the office with Geliang and Shamik during three years was the perfect setting I could have wished for.
+Unlike other offices, which were /so loud and unprofessional/, we kept an ambiance of pure dedication to the greatest scientific cause.
+I specifically enjoyed some discussions with Shamik in somewhat late hours, which provided the needed distraction from systematics and scale factors (or, god forbid, both).
+Speaking about distractions, it was a pleasure to meet Ana (Šćulac, detta Sculacca) and her relentless positivity.
+I am looking forward to spent some time in the most beautiful city in the world.
+I have also learned to appreciate the shy kindness of Alessandra, and the remarkable resilience on sticking to the academic path, despite some less positive outcomes.
+I wish her the best of luck in the next few years, hoping she will quickly obtain what she so clearly desires.
+As for Marco, despite much initial desperation, everything is now a rebase away from fixing, and that conveys impressive power.
+On top, he is the first person I witnessed going from zero to hero in just one year, and I still see much potential waiting to be unleashed.
+The moments shared outside work were also truly enjoyable, I hope with many yet to come.
+Jona has proven to be an example to follow in what refers to dedication, perseverance and ambition.
+I find it truly remarkable that one can dedicate so much energy to one's work, while somehow still managing to have other interests.
+He surely gave me some additional motivation to perform, when I would have otherwise been less focused.
+I also thank him and Theresa for letting me stay at their place in Geneva, in what would have otherwise been quite a depressing stay at the CERN hostel.
+Into what concerns Alessandro, I truly admire his ability to perfectly balance work with personal life, a goal which I would have otherwise thought to be impossible to achieve during a PhD in our field.
+Together with his natural spontaneity, his easy-going manners made me very confortable during the time we spent together, and I am sure I am not alone in this.
+Both Jona's and Alessandro's Theses were an important source of inspiration for my own Thesis, and I am grateful to both of them for sharing all the material needed to facilitate my writing process.
+I am utterly impressed by Elena's mental resilience and will to succeed, despite the various setbacks that occurred along the way, most notably her Apéro serving skills.
+It definitely helped to have someone which could understand what I was going through, releasing the burden by just the right amount, and with which I could discuss the specifics of the analysis work, from PhD student to PhD student.
+It was a pitty we could not share the same office, as I would have benefited from the clarity with which she frames problems, and the determination she brings to solving them.
+My last words go to Louis, which managed to answer (most of) my questions while we shared the same space, and which, despite having absolutely no obligations in that regard, continued doing so after leaving the lab, serving as a real supervisor, and dedicating countless hours to my scientific insecurities.
+He also made sure this Thesis was, as much as possible, scientifically correct and complete, providing innumerous comments that improved it by a large margin.
+Discussing Science with him was and continues to be an ego-shattering experience, and imagining my analysis work without his support is an undeniable challenge.
+In my honest opinion, Louis embodies what any researcher should strive for, namely a selfless, true and pure passion for the subject at hand.
+It was an immense pleasure.
+
+To conclude, it is always nice to remember the people that wait for us back home.
+I would like to mention my old friends Manuel and Vítor, which are always willing to meet and share pleasant stories whenever I go back, despite the many years that have passed since we were all together in the same place.
+To my parents, a strongly felt thank you, for raising me without dogma, for never forcing a specific path, for encouraging the one I am slowly crafting, and for understanding why I cannot always be there at their side.
+To my brother, Mauro, which is a constant source of pride, for having fought against disease and suffering like a true champion, for being an intelligent and curious person, and for coming out on top after so many setbacks.
+At last, to Ana, the one that erases my deepest sorrows, which soothes me when I am down, which supports me when I am shaky, which balances me when I am inordinate, and provides a never-ending spark that makes my life truly worth it.
