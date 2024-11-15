@@ -166,7 +166,7 @@ The \ac{HB} is complemented by the \ac{HO} for $|\eta| < 1.4$, located just outs
 The \ac{HO} captures the tails of hadronic showers, adding \SI{1}{\nucintl} to the \SI{10}{\nucintl} from the \ac{HB}, which was judged not high enough to fully contain hadronic showers.
 The light produced in the plastic scintillators is wavelength-shifted and captured in fibers.
 The \ac{HCAL} is completed by the \ac{HF}, which is placed at $z=\pm11.2\,\si{\meter}$ from the \ac{IP} and covers up to $|\eta| = 5.2$.
-The \ac{HF} is also a sampling calorimeter, with alternating layers of steel absorber and quarts fibers as active material.
+The \ac{HF} is also a sampling calorimeter, with alternating layers of steel absorber and quartz fibers as active material.
 The fibers produce scintillating light via the Cherenkov effect and send it to \acp{PMT}.
 The relative orientation of some of \ac{ECAL}'s and \ac{HCAL}'s components facilitates the calorimetric trigger processing chain.
 Indeed, both the \ac{HB} and \ac{HE} are segmented into projective towers, aligning, respectively, with the \ac{EB} and \ac{EE}.

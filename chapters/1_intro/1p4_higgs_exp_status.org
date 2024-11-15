@@ -77,17 +77,10 @@ The ttH and tH channels have an even smaller cross section, but can provide addi
 Among the listed production modes, only bbH and tH have not yet been measured at the \ac{LHC}.
 The former recently had a dedicated \ac{CMS} search observing a 95% \ac{CL} upper limit of 3.7 times the expected \ac{SM} cross section value [[cite:&cms_bbh]].
 Once measured, it will serve as a further test for the Higgs coupling to bottom quarks.
-Facts worth noting are the absolute and relative dependencies of the various production modes with the Higgs boson \ac{pt} shown in [[fig:single_higgs_xsec_br]].
-As the energy of the Higgs boson increases, the relationship between production modes is drastically effected.
+Facts worth noting are the absolute and relative dependencies of the various production modes with the Higgs boson \ac{pt} shown in [[fig:HH_prod_kl_b]].
+As the energy of the Higgs boson increases, the relationship between production modes is drastically affected.
 Above $\pt^{\text{H}} \approx 550\,\si{\GeV}$ VH becomes the second most common production mode, and it even surpasses \ac{ggF} at the admittedly very high $\pt^{\text{H}} \approx 1250\,\si{\GeV}$ value.
 This illustrates the dynamic nature of Higgs physics.
-
-#+NAME: fig:HH_prod_kl_b
-#+CAPTION: Cumulative cross section for the production of a Higgs boson as a function of the lowest Higgs boson transverse momentum. The cross section due to \ac{ggF} (green), \ac{VBF} (red), vector boson associated (blue) and top quark pair associated (magenta) production mode are shown in absolute values (left) and relative size (right). Taken from [[cite:&xsec_evolution_pt]].
-#+BEGIN_figure
-#+ATTR_LATEX: :width 1.\textwidth
-[[~/org/PhD/Thesis/figures/intro/hh_xsec_evoluton_pt.pdf]]
-#+END_figure
 
 #+NAME: fig:single_higgs_xsec_br
 #+CAPTION: (Left) Higgs boson production cross section for several production modes, as a function of the $\sqrt{s}$ center-of-mass energy. (Right) Branching fractions of Higgs boson decays, as a function of $\mh$. Taken from [[cite:&YellowReport4]].
@@ -96,6 +89,13 @@ This illustrates the dynamic nature of Higgs physics.
 [[~/org/PhD/Thesis/figures/intro/higgs_cross_sections.pdf]]
 #+ATTR_LATEX: :width .5\textwidth :center
 [[~/org/PhD/Thesis/figures/intro/higgs_branching_ratio.pdf]]
+#+END_figure
+
+#+NAME: fig:HH_prod_kl_b
+#+CAPTION: Cumulative cross section for the production of a Higgs boson as a function of the lowest Higgs boson transverse momentum. The cross section due to \ac{ggF} (green), \ac{VBF} (red), vector boson associated (blue) and top quark pair associated (magenta) production mode are shown in absolute values (left) and relative size (right). Taken from [[cite:&xsec_evolution_pt]].
+#+BEGIN_figure
+#+ATTR_LATEX: :width 1.\textwidth
+[[~/org/PhD/Thesis/figures/intro/hh_xsec_evoluton_pt.pdf]]
 #+END_figure
 
 #+NAME: tab:higgs_decay_br
@@ -127,7 +127,7 @@ Notice that most decays with particles lighter than muons, such as light quarks 
 These final states have extremely small predicted couplings to the Higgs boson.
 To give an example, the $\text{H} \rightarrow e^{+}e^{-}$ decay is predicted to have a branching ratio $\mathcal{B}$ of \num{\sim 5e-9}, but the most recent \ac{CMS} 95% \ac{CL} upper limits excludes \num{3e-4} only [[cite:&higgs_to_electrons]], with similar results by \ac{ATLAS} [[cite:&higgs_to_ee_atlas]].
 However, the measurement of the electron Yukawa coupling at a future electron-positron collider cannot be for the moment completely excluded [[cite:&electron_yukawa]].
-The two experiments have also been probing \ac{LFV} processes such as $\text{H} \rightarrow e\mu$, $\text{H} \rightarrow \tau\mu$ and $\text{H} \rightarrow \tau\mu$, reaching better and better sensitivities up to \num{e-5}, and other rare decays, such as Higgs boson decays to $\text{J}/\psi$ or its excited states.
+The two experiments have also been probing \ac{LFV} processes such as $\text{H} \rightarrow e\mu$, $\text{H} \rightarrow \tau\mu$ and $\text{H} \rightarrow \tau\mu$, reaching better and better sensitivities of up to \num{e-5}, and other rare decays, such as Higgs boson decays to $\text{J}/\psi$ or its excited states.
 Of particular relevance for \ac{CMS} are the observation of \htt{} [[cite:&higgs_tautau1;&higgs_tautau2;&higgs_tautau3]] and the first evidence for $\text{H} \rightarrow \mu\mu$ [[cite:&H2mumu]].
 
 #+NAME: fig:HH_decay_diagrams

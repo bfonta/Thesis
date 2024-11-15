@@ -88,7 +88,7 @@ The first processing iteration is called =PromptReco= and occurs within \num{\si
 During the \acp{LS}, additional reprocessing iterations can be requested, called first Legacy and then \ac{UL}.
 Every new iteration improves on the detector calibration with respect to previous iterations.
 However, analyses usually do not need all the detail provided by the RECO format, which is large ($\sim 3\,\si{\mega\byte}/\text{event}$) and thus inefficient.
-Instead, smaller and less detailed formats are available with progressively less information and reduced precision, focusing on the quantities most analyses use
+Instead, smaller and less detailed formats are available with progressively less information and reduced precision, focusing on the quantities most analyses use.
 The data formats are called AOD, MiniAOD [[cite:&miniaod]] and NanoAOD [[cite:&nanoaod]].
 The \xhhbbtt{} analysis reported in this Thesis used the \ac{UL} MiniAOD data format.
 Future iterations of the same analysis in \run{3} will upgrade to NanoAOD, which should provide faster processing times.

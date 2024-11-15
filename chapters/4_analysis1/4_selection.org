@@ -101,7 +101,7 @@ We now turn to the \hbb{} process, where jets coming from a Higgs boson must be 
 Additionally, the \hbb{} selection is improved by applying a discrimination algorithm to identify b jets, dubbed \hhbtag{}.
 The algorithm is based on studies done in the context of \newcite{cms_hh_bbtt}.
 At its core, a \ac{DNN} architecture assigns a score between 0 and 1 to all possible AK4 b jet candidates, and the two jets with the highest score are selected.
-The score stands for on how confident the model is that a particular b jet originated from a \hbb{} decay.
+The score stands for how confident the model is that a particular b jet originated from a \hbb{} decay.
 The architecture of the model is characterized by the following elements:
 + Five concatenated \ac{LSTM} layers [[cite:&lstm]], using a sigmoid activation function. After each layer, a batch normalization step is applied.
 + Ten \ac{TDD} layers [[cite:&keras]], with sigmoid as activation function. A batch normalization step is also applied between each layer.
@@ -110,7 +110,7 @@ The architecture of the model is characterized by the following elements:
 
 \noindent The algorithm has been retrained with \ac{UL} data, using both nonresonant and resonant \ac{ggF} \bbtt{} signal samples, in order to provide the best performance possible.
 The algorithm is trained via cross-validation with two folds, a procedure described in [[#sec:pdnn]].
-A total of 14 input features are considered, including the score of =DeepJet=, several kinematic variables, \ac{MET}.
+A total of 14 input features are considered, including the score of =DeepJet=, several kinematic variables, and \ac{MET}.
 Categorical variables are also used, such as the data-taking year and decay channel.
 The performance of the algorithm is evaluated and compared to the previous version, and also to other b jet \ac{ID} algorithms, as shown in [[fig:hhbtag_comp]].
 The retrained version provides better results than all alternatives, across the full probed $\mx$ range.

@@ -175,7 +175,7 @@ The used prototype resembles the final calorimeter in the \ac{CE-E} and silicon 
 Beam energies ranging from \num{20} to \SI{300}{\GeV} were tested.
 The \ac{AHCAL} prototype [[cite:&testbeam_ahcal]] is used as a proxy for the future \ac{HGCAL} scintillator layers, and is placed downstream the silicon sections.
 For positrons, the stochastic term of the energy resolution is measured to be $22.1\%/\sqrt{\text{GeV}}$, with a constant term of 0.6% [[cite:&hgcal_testbeam_positrons]].
-The term's meaning has been introduced in [[#sec:detector_structure]].
+The term's meaning has been introduced in [[#sec:detector_structure]], when describing the electromagnetic calorimeter.
 The energy response is shown to be linear within 2.5%.
 At the highest energies, the angular resolution was measured to be \SI{4.5}{\milli\radian}, and the lateral position resolution to be \SI{0.3}{\mm} [[cite:&hgcal_testbeam_positrons]].
 For charged pions, instead, the stochastic term is measured to be $\sim\!130\%/\sqrt{\text{GeV}}$ [[cite:&hgcal_testbeam_pions]], but improvements of a factor of \num{2} were shown to be achievable by employing machine learning techniques [[cite:&hgcal_testbeam_pions_gnn]].
