@@ -1,6 +1,7 @@
 + Title: "Search for resonant Higgs boson pair production in the bbττ decay channel and developments in the reconstruction of High Granularity Calorimeter trigger primitives with the CMS detector at the LHC"
 + Jury: Dr. Luca Malgeri (President), Dr. Aleandro Nisati (Referee), Dr. Rebeca Gonzalez Suarez (Referee), Dr. Giovanni Marchiori (Examiner), Dr. Ilaria Brivio (Examiner), Dr. Andrew Gilbert (Examiner), Dr. Roberto Salerno (Supervisor)
 + Defense date: 12 November 2024
++ Defense slides available under ~Defense.pdf~
 + Done at École polytechnique, Laboratoire Leprince Ringuet (LLR), Paris
 + The Thesis is available under [[https://theses.fr/2024IPPAX098][Thèses.fr]].
 + NNT: 2024IPPAX098
