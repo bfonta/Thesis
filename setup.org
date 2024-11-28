@@ -12,6 +12,8 @@
 #+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/detector.bib}
 #+LATEX_HEADER: \addbibresource{~/dot-emacs/bibliography/references/biology.bib}
 
+#+LATEX_HEADER: \special{pdf:minorversion 7} %set minorversion
+
 #+LATEX_HEADER: \usepackage{xurl}
 #+LATEX_HEADER: \usepackage[pdfencoding=auto,linktocpage=true,psdextra,]{hyperref}
 #+LATEX_HEADER: \hypersetup{colorlinks=true,linkcolor={blue!90!black},citecolor={red!70!black},urlcolor={green!60!black}}
