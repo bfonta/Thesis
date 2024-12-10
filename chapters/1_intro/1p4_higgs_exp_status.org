@@ -154,5 +154,5 @@ Given its tight connection with this Thesis' subject, it receives a dedicate tre
 #+CAPTION: Signal strength parameters extracted for various production modes $\mu_i$, assuming $\mathcal{B}^f=\mathcal{B}^f_{\text{SM}}$ (left), and decay channels $\mu^f$, assuming $\sigma_i=(\sigma_i)_{\text{SM}}$ (right). The thick (thin) black lines indicate the 1 (2) standard deviation (s.d.) \acp{CL}, with the systematic and statistical components of the 1 s.d. interval indicated by the red and blue bands, respectively. The vertical dashed line at unity represents the values of $\mu_i$ and $\mu^f$ in the \ac{SM} [[cite:&higgs_10_years]].
 #+BEGIN_figure
 #+ATTR_LATEX: :width 1.\textwidth :center
-[[~/org/PhD/Thesis/figures/intro/HiggsSignalStrengths.pdf]]
+[[~/org/PhD/Thesis/figures/intro/HiggsSignalStrengths.png]]
 #+END_figure
