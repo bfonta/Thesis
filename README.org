@@ -2,9 +2,9 @@
 + Jury: Dr. Luca Malgeri (President), Dr. Aleandro Nisati (Referee), Dr. Rebeca Gonzalez Suarez (Referee), Dr. Giovanni Marchiori (Examiner), Dr. Ilaria Brivio (Examiner), Dr. Andrew Gilbert (Examiner), Dr. Roberto Salerno (Supervisor)
 + Defense date: 12 November 2024
 + Defense slides available under ~Defense.pdf~
-+ Done at École polytechnique, Laboratoire Leprince Ringuet (LLR), Paris
-+ The Thesis is available under [[https://theses.fr/2024IPPAX098][Thèses.fr]].
++ Done at École Polytechnique, Laboratoire Leprince Ringuet (LLR), Paris
 + NNT: 2024IPPAX098
++ The Thesis is available under [[https://theses.fr/2024IPPAX098][Thèses.fr]] and [[https://cds.cern.ch/record/2919434][CERN CDS]] (=CERN-THESIS-2024-262=).
 
 *** Instructions to produce the PDF
 The thesis was written with Emacs org-mode.
